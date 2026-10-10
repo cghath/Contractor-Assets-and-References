@@ -17,7 +17,7 @@ enum P {
 ## Paint schemes: body colour, darker panels, lighter trim, and markings.
 const SCHEMES := {
 	"army": {"paint": "3e4536", "marking": "1d1f1a"},
-	"marine_gray": {"paint": "68717a", "marking": "2a2e33"},
+	"marine_gray": {"paint": "5a6168", "marking": "2a2e33"},
 	"od": {"paint": "4c5a38", "marking": "1e2318"},
 	"desert": {"paint": "b7a27a", "marking": "5a4c33"},
 	"white": {"paint": "d8d6cf", "marking": "8a2a22"},
@@ -590,94 +590,160 @@ static func _uh60() -> Canvas:
 
 
 
-## AH-1Z Viper: a narrow (about 1 m) fuselage with a stepped tandem canopy (gunner in front
-## and lower), the targeting sight ball on the nose, the three-barrel M197 chin turret,
-## engines high on either side of the transmission with upturned exhausts, stub wings
-## carrying rocket pods, Hellfire racks and wingtip Sidewinder rails, and skids.
+## AH-1Z Viper: a narrow, tall fuselage (under 1 m wide) with avionics bays bulging its lower
+## sides, the target sight turret on the nose, the M197 three-barrel 20 mm turret under the
+## chin, a flat-panelled stepped tandem canopy (gunner in front and lower), engines high on
+## either side of the transmission with IR suppressors turned up, stub wings carrying rocket
+## pods inboard, quad Hellfire racks outboard and Sidewinders on the tips, a slim boom with
+## end-plated elevators, a swept fin with the tail rotor on its right, and high skids.
 static func _ah1z() -> Canvas:
-	var c := Canvas.new(Vector3i(96, 88, 278), 0.05)
-	var fuselage := func(z: float) -> Vector4:
-		var hw := 0.48
-		var bottom := 0.75
-		var top := 1.95
-		if z < 1.5:
-			var k := sqrt(z / 1.5)
-			hw = lerpf(0.22, 0.48, k)
-			bottom = lerpf(1.0, 0.78, k)
-			top = lerpf(1.35, 1.7, k)
-		elif z < 3.4:
-			top = lerpf(1.7, 2.15, sqrt(clampf((z - 1.5) / 0.8, 0.0, 1.0)))  # gunner's canopy
-		elif z < 5.2:
-			top = lerpf(2.15, 2.45, sqrt(clampf((z - 3.4) / 0.6, 0.0, 1.0)))  # pilot sits higher
-			top = lerpf(top, 1.95, clampf((z - 4.7) / 0.5, 0.0, 1.0))
-		elif z > 8.9:
-			var k := clampf((z - 8.9) / 1.5, 0.0, 1.0)
-			hw = lerpf(0.48, 0.26, k)
-			bottom = lerpf(0.75, 1.55, k)
-			top = lerpf(1.95, 2.05, k)
-		return Vector4(0.0, (top + bottom) * 0.5, hw, (top - bottom) * 0.5)
-	c.mloft(0.25, 10.4, fuselage, P.PAINT, 3.0, 0.1)
-	var boom := func(z: float) -> Vector4:
-		var k := clampf((z - 10.3) / 3.0, 0.0, 1.0)
-		return Vector4(0.0, lerpf(1.8, 2.05, k), lerpf(0.26, 0.17, k), lerpf(0.26, 0.18, k))
-	c.mloft(10.3, 13.35, boom, P.PAINT, 2.2)
-	# Canopy glass with frames between the two cockpits.
-	c.mskin(-0.6, 1.55, 1.35, 0.6, 2.5, 5.0, P.GLASS)
-	c.mbox(-0.5, 1.6, 3.3, 0.5, 2.5, 3.42, P.PAINT_DARK)
-	c.mbox(-0.03, 1.9, 1.4, 0.03, 2.5, 5.0, P.PAINT_DARK)
-	# Targeting sight ball on the nose and the M197 turret under the chin.
+	var c := Canvas.new(Vector3i(100, 88, 280), 0.05)
+	var body := func(z: float) -> Section:
+		var bottom := 0.72
+		var top := 2.0
+		var hw := 0.62  # bottom half width (avionics bays)
+		var lean := 0.17
+		if z < 1.6:  # nose under the sight turret
+			var k := clampf((z - 0.45) / 1.15, 0.0, 1.0)
+			bottom = lerpf(0.95, 0.72, k)
+			top = lerpf(1.42, 1.62, sqrt(k))
+			hw = lerpf(0.36, 0.62, sqrt(k))
+			lean = lerpf(0.08, 0.17, k)
+		elif z > 8.8:  # aft body sweeping up into the boom
+			var e := smoothstep(8.8, 10.6, z)
+			var b := clampf((z - 10.6) / 2.9, 0.0, 1.0)
+			bottom = lerpf(0.72, 1.45, e) + 0.25 * b
+			top = lerpf(2.0, 1.98, e) + 0.02 * b
+			hw = lerpf(0.55, 0.3, e) - 0.13 * b
+			lean = lerpf(0.1, 0.03, e)
+		elif z > 6.0:
+			hw = lerpf(0.62, 0.55, clampf((z - 6.0) / 2.8, 0.0, 1.0))
+			lean = lerpf(0.17, 0.1, clampf((z - 6.0) / 2.8, 0.0, 1.0))
+		var s := Section.new(bottom, top, hw, hw - lean, 0.18, 0.12)
+		if z > 13.2:
+			s = s.scaled(maxf(sqrt(1.0 - pow((z - 13.2) / 0.35, 2.0)), 0.2), (top + bottom) * 0.5)
+		return s
+	c.mhull(0.45, 13.55, body, P.PAINT, 0.1)
+	# Stepped tandem canopy: flat panels, gunner in front, pilot raised behind.
+	var canopy := func(z: float) -> Section:
+		var top := 2.0
+		if z < 3.25:
+			top = lerpf(1.62, 2.22, clampf((z - 1.45) / 0.9, 0.0, 1.0))
+		elif z < 4.75:
+			top = lerpf(2.22, 2.48, clampf((z - 3.25) / 0.35, 0.0, 1.0))
+		if z > 4.25:
+			top = lerpf(2.48, 2.08, clampf((z - 4.25) / 0.7, 0.0, 1.0))
+		return Section.new(1.5, top, 0.46, 0.3, 0.0, 0.1)
+	c.mhull(1.45, 5.0, canopy, P.PAINT, 0.08)
+	c.mskin(-0.6, 1.6, 1.45, 0.6, 2.5, 4.55, P.GLASS)
+	c.mskin(-0.6, 1.55, 3.18, 0.6, 2.5, 3.3, P.PAINT_DARK)  # frame between the cockpits
+	c.mskin(-0.6, 1.55, 4.5, 0.6, 2.5, 4.6, P.PAINT_DARK)
+	c.mskin(-0.04, 2.0, 1.45, 0.04, 2.5, 4.6, P.PAINT_DARK)  # spine of the canopy
+	for side: float in [-1.0, 1.0]:
+		c.mskin(minf(side * 0.3, side * 0.6), 1.55, 1.45, maxf(side * 0.3, side * 0.6), 1.62, 4.6, P.PAINT_DARK)  # sill
+		c.mskin(minf(side * 0.3, side * 0.6), 1.55, 2.2, maxf(side * 0.3, side * 0.6), 2.5, 2.27, P.PAINT_DARK)
+	# Target sight turret on the nose, M197 under the chin.
 	var ball := func(z: float) -> Vector4:
-		var k := clampf((z - 0.0) / 0.55, 0.0, 1.0)
-		var r := 0.27 * sin(PI * k)
-		return Vector4(0.0, 1.2, r, r)
-	c.mloft(0.0, 0.55, ball, P.PAINT_DARK, 2.0)
-	c.mskin(-0.15, 1.05, 0.0, 0.15, 1.35, 0.12, P.GLASS)
-	c.mbox(-0.2, 0.45, 0.85, 0.2, 0.82, 1.35, P.PAINT_DARK)
-	for bx: float in [-0.06, 0.0, 0.06]:
-		c.mbox(bx - 0.025, 0.58, 0.05, bx + 0.025, 0.63, 0.9, P.GUN)
-	# Transmission fairing, engines with upturned exhausts, mast and rotors.
-	var fairing := func(z: float) -> Vector4:
-		var k := clampf((z - 4.4) / 3.2, 0.0, 1.0)
-		return Vector4(0.0, 1.95, 0.42 * minf(sin(PI * k) * 1.5, 1.0), 0.55 * minf(sin(PI * k) * 1.5, 1.0))
-	c.mloft(4.4, 7.6, fairing, P.PAINT, 2.6)
+		var k := clampf(z / 0.7, 0.0, 1.0)
+		var r := 0.33 * sqrt(sin(PI * k))
+		return Vector4(0.0, 1.22, r, r)
+	c.mloft(0.0, 0.7, ball, P.PAINT_DARK, 2.0)
+	c.mskin(-0.2, 1.05, 0.0, 0.2, 1.38, 0.15, P.GLASS)
+	c.mskin(-0.06, 1.12, 0.0, 0.06, 1.2, 0.16, P.BLACK)
+	c.mdisc(0.0, 1.15, 0.24, 0.48, 0.75, P.PAINT_DARK)
+	c.mbox(-0.16, 0.42, 0.85, 0.16, 0.62, 1.35, P.GUN)
+	for bx: float in [-0.055, 0.0, 0.055]:
+		c.mbox(bx - 0.022, 0.5, 0.05, bx + 0.022, 0.545, 0.9, P.GUN)
+	c.mbox(-0.08, 0.47, 0.25, 0.08, 0.57, 0.3, P.GUN)  # barrel clamp
+	# Upper deck: transmission fairing, engines on the shoulders with their intakes forward and
+	# IR suppressors turned up at the back, mast and rotor.
+	var deck := func(z: float) -> Section:
+		var k := clampf((z - 4.6) / 0.6, 0.0, 1.0)
+		var top := lerpf(2.0, 2.35, sqrt(k))
+		if z > 8.2:
+			top = lerpf(2.35, 2.0, clampf((z - 8.2) / 1.6, 0.0, 1.0))
+		return Section.new(1.8, top, 0.42, 0.3, 0.0, 0.18)
+	c.mhull(4.6, 9.8, deck, P.PAINT, 0.08)
 	for side: float in [-1.0, 1.0]:
-		var nacelle := func(_z: float) -> Vector4: return Vector4(side * 0.56, 2.08, 0.3, 0.3)
-		c.mloft(5.0, 7.95, nacelle, P.PAINT, 2.2)
-		c.mbox(side * 0.56 - 0.18, 1.9, 4.95, side * 0.56 + 0.18, 2.26, 5.05, P.BLACK)
-		c.mbar(Vector3(side * 0.6, 2.15, 7.9), Vector3(side * 0.85, 2.6, 8.5), 0.26, P.PAINT_DARK)
-		c.mbox(side * 0.85 - 0.1, 2.58, 8.4, side * 0.85 + 0.1, 2.68, 8.6, P.BLACK)
-	var mast := func(_z: float) -> Vector4: return Vector4(0.0, 2.85, 0.16, 0.4)
-	c.mloft(5.6, 5.9, mast, P.METAL, 2.0)
-	c.rotor("MainRotor", Vector3(0.0, 3.3, 5.75), 7.3, 0.58, 4, Vector3.UP)
-	# Fin swept back, tail rotor on its right, horizontal stabiliser with end plates.
-	var y := 1.95
-	while y < 3.6:
-		c.mbox(-0.1, y, 12.45 + (y - 1.95) * 0.45, 0.1, y + 0.05, 13.55 + (y - 1.95) * 0.1, P.PAINT)
-		y += 0.05
-	c.rotor("TailRotor", Vector3(0.28, 3.0, 13.2), 1.45, 0.24, 4, Vector3.RIGHT)
-	c.mbox(0.1, 2.85, 13.05, 0.24, 3.15, 13.35, P.METAL)
-	c.mbox(-1.4, 1.92, 11.0, 1.4, 2.0, 11.65, P.PAINT)
-	c.mbox(-1.45, 1.75, 10.95, -1.35, 2.25, 11.7, P.PAINT)
-	c.mbox(1.35, 1.75, 10.95, 1.45, 2.25, 11.7, P.PAINT)
-	# Stub wings and stores: rocket pods inboard, Hellfire racks outboard, Sidewinder rails.
-	c.mbox(-2.2, 1.22, 5.35, 2.2, 1.34, 6.35, P.PAINT)
+		var nx := side * 0.52
+		var nacelle := func(z: float) -> Vector4:
+			var r := lerpf(0.26, 0.31, clampf((z - 5.0) / 0.4, 0.0, 1.0))
+			return Vector4(nx, 2.12, r, r)
+		c.mloft(5.0, 8.15, nacelle, P.PAINT, 2.0)
+		var intake := func(_z: float) -> Vector4: return Vector4(nx, 2.12, 0.2, 0.2)
+		c.mloft(5.0, 5.06, intake, P.BLACK, 2.0)
+		c.mskin(minf(side * 0.3, side * 0.9), 1.8, 6.55, maxf(side * 0.3, side * 0.9), 2.5, 6.6, P.PAINT_DARK, P.PAINT)
+		# Exhaust: a duct bending up and outwards, its outlet facing the sky.
+		c.mbar(Vector3(side * 0.55, 2.12, 8.0), Vector3(side * 0.72, 2.45, 8.6), 0.3, P.PAINT_DARK)
+		c.mbar(Vector3(side * 0.72, 2.45, 8.6), Vector3(side * 0.8, 2.72, 8.75), 0.28, P.PAINT_DARK)
+		c.mbox(side * 0.8 - 0.1, 2.82, 8.65, side * 0.8 + 0.1, 2.88, 8.85, P.BLACK)
+	c.mdisc(0.0, 5.85, 0.24, 2.3, 2.5, P.PAINT_DARK)
+	c.mdisc(0.0, 5.85, 0.14, 2.5, 3.05, P.METAL)
+	c.mdisc(0.0, 5.85, 0.32, 2.75, 2.82, P.METAL)
+	c.mdisc(0.0, 5.85, 0.26, 3.0, 3.15, P.BLACK)
+	c.rotor("MainRotor", Vector3(0.0, 3.2, 5.85), 7.32, 0.62, 4, Vector3.UP)
+	# Swept fin with the tail rotor gearbox on its right; elevators with end plates.
+	var y := 1.85
+	while y < 3.75:
+		var le := 12.55 + (y - 1.85) * 0.48
+		var te := 13.5 + (y - 1.85) * 0.22
+		c.mbox(-0.09, y, le, 0.09, y + c.vs, te, P.PAINT)
+		y += c.vs
+	c.mbox(0.09, 2.9, 13.15, 0.26, 3.15, 13.45, P.METAL)
+	c.rotor("TailRotor", Vector3(0.32, 3.02, 13.3), 1.45, 0.26, 4, Vector3.RIGHT)
+	c.mbox(-0.06, 3.7, 13.4, 0.06, 3.78, 13.55, P.PAINT_LIGHT)
+	c.mbox(-1.4, 1.83, 10.9, 1.4, 1.91, 11.6, P.PAINT)
 	for side: float in [-1.0, 1.0]:
-		c.mbox(side * 1.1 - 0.05, 1.05, 5.5, side * 1.1 + 0.05, 1.22, 6.1, P.PAINT_DARK)
-		var pod := func(_z: float) -> Vector4: return Vector4(side * 1.1, 0.83, 0.22, 0.22)
-		c.mloft(4.6, 6.3, pod, P.PAINT_DARK, 2.0)
-		c.mbox(side * 1.1 - 0.16, 0.68, 4.58, side * 1.1 + 0.16, 0.98, 4.64, P.BLACK)
-		c.mbox(side * 1.85 - 0.25, 1.1, 5.3, side * 1.85 + 0.25, 1.22, 6.4, P.PAINT_DARK)
-		for hx: float in [-0.12, 0.12]:
-			for hy: float in [0.85, 1.02]:
-				c.mbox(side * 1.85 + hx - 0.05, hy, 4.9, side * 1.85 + hx + 0.05, hy + 0.1, 6.5, P.PAINT_LIGHT)
-		c.mbox(side * 2.25 - 0.04, 1.2, 5.0, side * 2.25 + 0.04, 1.3, 7.0, P.PAINT_LIGHT)
-	# Skids with curved toes and cross tubes.
+		c.mbox(minf(side * 1.36, side * 1.44), 1.62, 10.85, maxf(side * 1.36, side * 1.44), 2.2, 11.65, P.PAINT)
+	c.mbar(Vector3(0.0, 1.6, 12.9), Vector3(0.0, 1.15, 13.4), 0.06, P.METAL)  # tail skid guard
+	# Stub wings: rocket pods inboard, quad Hellfire racks outboard, Sidewinders on the tips.
+	c.mbox(-2.2, 1.18, 5.3, 2.2, 1.32, 6.45, P.PAINT)
+	c.mbox(-2.2, 1.21, 5.25, 2.2, 1.29, 5.3, P.PAINT)
 	for side: float in [-1.0, 1.0]:
-		c.mbar(Vector3(side * 0.95, 0.08, 2.5), Vector3(side * 0.95, 0.08, 8.6), 0.08, P.METAL)
-		c.mbar(Vector3(side * 0.95, 0.08, 2.5), Vector3(side * 0.95, 0.35, 2.0), 0.08, P.METAL)
-		for cz: float in [3.4, 7.3]:
-			c.mbar(Vector3(side * 0.95, 0.1, cz), Vector3(side * 0.42, 0.8, cz), 0.08, P.METAL)
-	c.mskin(-0.6, 1.0, 9.2, 0.6, 2.2, 9.6, P.MARKING, P.PAINT)
+		var px := side * 1.05
+		c.mbox(px - 0.05, 1.0, 5.45, px + 0.05, 1.18, 6.15, P.PAINT_DARK)
+		var pod := func(z: float) -> Vector4:
+			var r := 0.22 if z > 4.75 else lerpf(0.16, 0.22, (z - 4.55) / 0.2)
+			return Vector4(px, 0.78, r, r)
+		c.mloft(4.55, 6.45, pod, P.PAINT_DARK, 2.0)
+		for rx: float in [-0.1, 0.0, 0.1]:
+			for ry: float in [-0.1, 0.0, 0.1]:
+				c.mbox(px + rx - 0.025, 0.78 + ry - 0.025, 4.53, px + rx + 0.025, 0.78 + ry + 0.025, 4.58, P.BLACK)
+		var hx := side * 1.75
+		c.mbox(hx - 0.05, 1.03, 5.4, hx + 0.05, 1.18, 6.3, P.PAINT_DARK)
+		c.mbox(hx - 0.25, 0.95, 5.0, hx + 0.25, 1.03, 6.55, P.PAINT_DARK)  # launcher rail
+		for mx: float in [-0.13, 0.13]:
+			for my: float in [0.72, 0.9]:
+				var missile := func(z: float) -> Vector4:
+					var r := 0.08 if z > 4.95 else lerpf(0.03, 0.08, (z - 4.8) / 0.15)
+					return Vector4(hx + mx, my, r, r)
+				c.mloft(4.8, 6.45, missile, P.PAINT_LIGHT, 2.0)
+		var tx := side * 2.26
+		c.mbox(tx - 0.04, 1.15, 5.1, tx + 0.04, 1.32, 6.6, P.PAINT_DARK)
+		var winder := func(z: float) -> Vector4:
+			var r := 0.065 if z > 4.65 else lerpf(0.02, 0.065, (z - 4.5) / 0.15)
+			return Vector4(tx, 1.05, r, r)
+		c.mloft(4.5, 7.3, winder, P.PAINT_LIGHT, 2.0)
+		c.mbox(tx - 0.2, 1.03, 4.8, tx + 0.2, 1.07, 4.95, P.PAINT_LIGHT)  # canards
+		c.mbox(tx - 0.2, 1.03, 7.0, tx + 0.2, 1.07, 7.25, P.PAINT_LIGHT)
+	# Skids: toes curving up at the front, two cross tubes up to the belly.
+	for side: float in [-1.0, 1.0]:
+		var sx := side * 1.0
+		c.mbar(Vector3(sx, 0.06, 2.4), Vector3(sx, 0.06, 8.7), 0.09, P.METAL)
+		c.mbar(Vector3(sx, 0.06, 2.4), Vector3(sx, 0.22, 2.05), 0.09, P.METAL)
+		c.mbar(Vector3(sx, 0.22, 2.05), Vector3(sx, 0.45, 1.9), 0.09, P.METAL)
+		for cz: float in [3.5, 7.4]:
+			c.mbar(Vector3(sx, 0.08, cz), Vector3(side * 0.75, 0.55, cz), 0.09, P.METAL)
+			c.mbar(Vector3(side * 0.75, 0.55, cz), Vector3(side * 0.4, 0.78, cz), 0.09, P.METAL)
+		# Nav lights on the wing tips' front, steps under the canopy.
+		c.mbox(side * 2.2 - 0.04, 1.2, 5.22, side * 2.2 + 0.04, 1.3, 5.28, P.LIGHT_RED if side < 0.0 else P.LIGHT_GREEN)
+		c.mbox(minf(side * 0.6, side * 0.72), 1.0, 3.6, maxf(side * 0.6, side * 0.72), 1.05, 3.85, P.METAL)
+	# Antennas, the anti-collision beacon, and the boom's seams.
+	c.mbar(Vector3(0.0, 2.32, 8.9), Vector3(0.0, 2.75, 9.4), 0.04, P.METAL)
+	c.mbox(-0.02, 0.48, 6.6, 0.02, 0.72, 6.9, P.PAINT_DARK)
+	c.mbox(-0.05, 2.32, 7.6, 0.05, 2.4, 7.7, P.LIGHT_RED)
+	for seam: float in [10.3, 12.0]:
+		c.mskin(-0.6, 1.3, seam, 0.6, 2.1, seam + 0.05, P.PAINT_DARK, P.PAINT)
 	return c
 
 
