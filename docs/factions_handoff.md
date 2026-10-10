@@ -86,7 +86,7 @@ Answers to the open questions of Jobs 1-3, applied during Job 4. Each one was mo
 
 - **Alliances (Job 4):**
   - Side-lock lasts 2-4 in-game weeks (14-28 days, scaled by contract severity).
-  - NATO members outside the Five Eyes sell to the player at higher thresholds than usa/gbr/can (rep 20/40/60/80). tur does not sell (open question).
+  - NATO members outside the Five Eyes sell to the player at higher thresholds than usa/gbr/can (rep 20/40/60/80). tur does not sell (Captain-confirmed).
   - Reputation spill-over applies only between factions that share an alliance.
   - sau, are and qat sell at high reputation (rep 40/60/80; the unlock lists are proposed). isr hires the player but never sells.
   - Player relations with the rival PMCs (-20 to -45) and the cartels (-60 to -65) stay as written.
@@ -206,7 +206,6 @@ Early-game (terrorist) theatres lean on the existing technicals, Hiluxes, BMP/BT
 - Who fields the AH-1Z, MRAPs, Bradley and Abrams in the game (real-world operators are recorded).
 - Whether hot zones are twice the area (current) or twice the width.
 - Reputation thresholds and prices for buying from the USA, GB and Canada; the values in the files are proposals.
-- Whether tur (a NATO member) should also sell to the player; the other non-Five-Eyes NATO members do (Captain, 2026-10-10).
 
 ## How to resume (current plan, 2026-10-10 09:50 UTC)
 
