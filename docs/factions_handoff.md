@@ -122,27 +122,43 @@ Early-game (terrorist) theatres lean on the existing technicals, Hiluxes, BMP/BT
 - Reputation thresholds and prices for buying from the USA, GB and Canada; the values in the files are proposals.
 - Whether any non-Five-Eyes friendly (for example Poland or France) should also sell to the player.
 
-## Paused state and the plan Captain set (09:00-09:05 UTC)
+## How to resume (current plan, 2026-10-10 09:50 UTC)
 
-Captain asked to use subagents, to enable CI, and to give the worldspaces and the alliances one dedicated subagent each. All of these were started and then paused at Captain's word before they wrote any files. Resume them as separate, parallel jobs:
+Captain paused everything at 09:34 UTC. Resume only when Captain says so. Run **one job at a time**, in this order, with one subagent per job. Every job has its own handoff sheet. Give the agent that sheet as its brief, and tell it to read the sheet first.
 
-1. **Faction blocs still to build:** middle_east_states, me_terror and others. Run one agent per bloc, using CONTEXT and FACTION_SPEC from `tools/factions_workflow.js`.
-2. **Worldspaces agent:** builds all 23 `worldspaces/*.json` and `worldspaces/README.md` from WORLD_SPEC. Start with the Middle East and Africa theatres (the early game).
-3. **Alliances agent:** writes `factions/alliances.json` and `factions/ALLIANCES.md`:
-   - each real 2026 alliance with its id, kind, members (faction ids) and obligations
-   - proposed game rules for side-locking, war joining and reputation spill-over
-   - a full relations matrix over every faction id, including `player`
+| # | Job | Handoff sheet | State |
+|---|---|---|---|
+| 1 | middle_east_states: finish **syr, irq, pse_pa** | This file, plus `middle_east_states` in `BLOCS` in `tools/factions_workflow.js` | 8 of 11 done |
+| 2 | me_terror (11 groups) | [me_terror_handoff.md](me_terror_handoff.md) | Not started |
+| 3 | others: neutrals, cartels, PMCs (14 factions) | [others_handoff.md](others_handoff.md) | Not started |
+| 4 | alliances: `factions/alliances.json`, `ALLIANCES.md`, the relations matrix, and reconciling all 76 files | [alliances_handoff.md](alliances_handoff.md) | Starts after all 76 factions exist |
+| 5 | worldspaces: 23 theatres, Middle East and Africa first | [worldspaces_handoff.md](worldspaces_handoff.md) | Last job |
+| n/a | loadouts | [loadouts_handoff.md](loadouts_handoff.md) | **Owned by the separate loadouts thread.** Not part of this queue; never edit `loadouts/`. |
 
-   It then reconciles each faction file's `relations` and `blocs` fields to the matrix, only after all the blocs are finished.
-4. **CI: done.** `.github/workflows/ci.yml` runs on pull requests and on pushes to main. It has two jobs. The `data` job runs `tools/validate_pack.py`. The `godot` job downloads the Voxel Tools 4.7.2 editor, imports the project, parse-checks every `.gd` file and renders `uh60` under xvfb + opengl3. The render is uploaded as the `uh60-render` artifact. Its first run on PR #2 passed.
+### Job 1 details: finishing the Middle East states
 
-Resume attempt on Captain's desktop (09:08-09:15 UTC): items 1-3 were started as five parallel agents. Captain paused them again before they wrote any files, so they still need a full run. Captain's local clone also holds an older template-script completion of the pack. It is kept on the local-only branch `local-completion-backup`, which has not been pushed.
+- **Write `factions/syr.json`, `factions/irq.json` and `factions/pse_pa.json`.**
+  - Use CONTEXT and FACTION_SPEC from `tools/factions_workflow.js`, with `${REPO}` = `B:\Contractor-Vehicle-Models`.
+  - Follow the `middle_east_states` notes in `BLOCS`:
+    - **syr:** the post-Assad transitional government (since December 2024), described accurately for 2026.
+    - **irq:** the Iraqi Security Forces. Keep the PMF relationship clear against the `iraqi_militias` faction.
+    - **pse_pa:** the Palestinian Authority Security Forces.
+- **Vehicles:** list `reference/vehicles/` first and reuse existing ids, adding operators.
+- **Cross-check the 8 files already written:** irn, isr, tur, sau, are, qat, egy and jor. The agent stopped before it could check them. Look at relations sign agreement within the bloc, at vehicles, and at `theatres`. israel, gaza_west_bank, iran_zagros and persian_gulf_coast should be covered.
+- **Finish up:** update the Status section above.
 
-## How to resume if the run is interrupted
+### Rules for every job
 
-The generator is in `tools/factions_workflow.js`. It is a Claude Code Workflow script with 8 bloc agents, then 2 worldspace agents, then 1 validator.
+- **Agents never run git.** A 10-minute auto-save loop does it. It runs from the session scratchpad on Captain's desktop; if it's gone, recreate it. The loop:
+  - stages only `factions/`, `reference/`, `worldspaces/`, these docs and `tools/validate_pack.py`, and never `loadouts/`
+  - runs the validator
+  - pulls with `git pull --rebase --autostash` (another session pushes `loadouts/` to the same branch)
+  - pushes to `factions-worldspaces` only, never to `main`
+- **Validator:** CI runs `python3 tools/validate_pack.py`. Captain's desktop has no Python, so a Perl port with the same checks lives in the session scratchpad. Keep it at 0 errors.
+- **Don't touch** the local-only branch `local-completion-backup` (e7782a7). It is a thin template backup.
+- **Agents write files as they finish them**, so a usage-limit cutoff loses little. Job 1 was cut off by one at 09:34.
+- **Report** each landed job to the cloud thread: what landed, the commit hash and the counts.
 
-1. Re-run only the blocs whose faction files are missing. Edit the `BLOCS` list to keep those blocs, or drop the finished entries from `ROSTER`.
-2. Then run the Worldspaces and Validate phases.
+### Alternative: the workflow script
 
-Agents write straight into `factions/`, `reference/vehicles/` and `worldspaces/`. Before creating a vehicle file, they list the vehicle folder first so they don't make duplicates.
+`tools/factions_workflow.js` can still run the whole pipeline. It runs 8 bloc agents in parallel, then 2 worldspace agents, then a validator. Captain asked for one job at a time, so prefer the queue above. If you use the script anyway, drop the finished entries from `ROSTER`/`BLOCS`, and change `REPO` to the local path.
