@@ -9,7 +9,8 @@
   "type": "apc",
   "operators": [
     "vnm",
-    "prk"
+    "prk",
+    "sahel_aes"
   ],
   "crew": 2,
   "passengers": 14,

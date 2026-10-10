@@ -24,7 +24,13 @@
     "egy",
     "twn",
     "isr",
-    "sau"
+    "sau",
+    "iraqi_militias",
+    "isis",
+    "isis_k",
+    "mex",
+    "sdf",
+    "krg_peshmerga"
   ],
   "crew": 1,
   "passengers": 3,

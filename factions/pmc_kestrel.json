@@ -1,0 +1,380 @@
+{
+  "id": "pmc_kestrel",
+  "name": "Kestrel Security Group (fictional; 'Pustelga')",
+  "short": "Kestrel",
+  "kind": "pmc",
+  "inspired_by": "Russia-linked Eastern European private military companies of the 2014-2026 era: veterans of the Donbas and Syria, loose links to state security services, shell companies registered abroad, work guarding mines and energy sites and fighting for client regimes, and competition with the Russian state's own expeditionary force for the same contracts. Distinct from the real africa_corps faction. No real company, emblem or person is used.",
+  "flag_colors": [
+    "#2B2B2B",
+    "#7A6A4F",
+    "#A33A2A"
+  ],
+  "blocs": [
+    "rival_pmc"
+  ],
+  "campaign_tier": "mid",
+  "alignment_to_player": "hostile",
+  "player_client": false,
+  "relations": {
+    "player": -45,
+    "rus": 70,
+    "blr": 50,
+    "srb": 20,
+    "africa_corps": 20,
+    "sahel_aes": 40,
+    "syr": -10,
+    "afg_taliban": -20,
+    "ukr": -100,
+    "pol": -80,
+    "geo": -40,
+    "usa": -60,
+    "gbr": -70,
+    "fra": -65,
+    "pmc_halcyon": -60,
+    "pmc_black_sable": -30,
+    "isis": -90,
+    "jnim": -90,
+    "al_qaeda": -85,
+    "cartel_pacifico": -10,
+    "cartel_jalisco_nueva": -10
+  },
+  "theatres": [
+    "eastern_ukraine",
+    "sahel",
+    "levant_syria",
+    "caucasus",
+    "black_sea_coast"
+  ],
+  "languages": [
+    "Russian",
+    "Serbian",
+    "Ukrainian (defectors)",
+    "French (Sahel liaison)"
+  ],
+  "callout_language": "Russian",
+  "doctrine": {
+    "summary": "A mid-size contractor of ex-Russian, Belarusian and Balkan veterans with combat experience from eastern Ukraine, Syria and Africa. It operates under deniable shell companies, takes contracts that state forces cannot (mine and pipeline security, regime protection, sabotage) and competes with africa_corps for client governments. Its men are tough and experienced but unevenly trained: veteran team leaders, assault groups that move under drone observation, heavy use of FPV and grenade-dropping drones, and Russian-pattern kit and vehicles bought or 'borrowed' from state stocks. It is careless about civilians and quick to use force.",
+    "squad_size": 8,
+    "fireteam": "Assault groups of 6-8 in two pairs plus a support pair (PKP and RPG); veteran leader with a drone operator attached.",
+    "tactics": [
+      "Small assault groups advancing under drone observation (Donbas-style)",
+      "FPV and grenade-dropping drones against vehicles and dug-in positions (game hazard)",
+      "Mounted raids in Tigrs and pickups; BTR fire support",
+      "Helicopter-supported quick reaction force (Mi-8)",
+      "Village cordon-and-search for clients (high civilian-harm risk on maps)",
+      "Bounty-hunter ambushes with snipers and mines on likely routes"
+    ],
+    "ai_tuning": {
+      "aggression": 0.75,
+      "discipline": 0.65,
+      "suppression_resistance": 0.75,
+      "flanking": 0.65,
+      "grenade_use": 0.7,
+      "medical_care": 0.55,
+      "night_capability": 0.6,
+      "marksmanship": 0.65,
+      "morale": 0.7
+    }
+  },
+  "camo": [
+    {
+      "name": "Russian EMR-type digital (Tsifra)",
+      "palette": [
+        "#6B6B4A",
+        "#4A4A36",
+        "#8C8A6A",
+        "#2E2E24"
+      ],
+      "use": "Eastern Europe and Caucasus"
+    },
+    {
+      "name": "MultiCam-type and coyote private kit",
+      "palette": [
+        "#9C8B66",
+        "#6F6248",
+        "#C9B98F",
+        "#4B4433"
+      ],
+      "use": "Africa and Levant"
+    },
+    {
+      "name": "Olive Gorka-style suits",
+      "palette": [
+        "#5E6345",
+        "#3B3B2C"
+      ],
+      "use": "Veterans' look"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "AK-12 / AK-74M (5.45x39mm)",
+      "AKM (7.62x39mm, Africa)"
+    ],
+    "autorifleman": [
+      "PKP Pecheneg / PKM (7.62x54R)",
+      "RPK-16 (5.45x39mm)"
+    ],
+    "marksman": [
+      "SVD / SVCh Chukavin (7.62x54R)"
+    ],
+    "grenadier": [
+      "AK-12 with GP-34 (VOG-25)"
+    ],
+    "at": [
+      "RPG-7 [in_game]",
+      "RPG-26 / RShG-2 [not_in_game]"
+    ],
+    "medic": [
+      "AK-74M (5.45x39mm)"
+    ],
+    "squad_leader": [
+      "AK-12 with optic and suppressor"
+    ],
+    "sniper": [
+      "Orsis T-5000 (.338 Lapua Magnum)"
+    ],
+    "sidearm": [
+      "PL-15 / Grach MP-443 (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "RPG-7 with PG-7V / OG-7V [in_game] (also tandem and thermobaric rounds [not_in_game])",
+    "RPG-26 / RShG-2 [not_in_game]",
+    "Kornet ATGM (rare) [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "ceramic",
+    "notes": "6B47-type or commercial helmets (medium); plate carriers with ceramic front/back plates (medium); assault groups sometimes heavy (side plates)."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "gaz_tigr",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": "Tigr and Tigr-M armoured cars, often with anti-drone mesh."
+    },
+    {
+      "vehicle_id": "toyota_hilux",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Pickups bought locally (Africa, Levant)."
+    },
+    {
+      "vehicle_id": "technical_dshk",
+      "role": "technical",
+      "prevalence": "common",
+      "notes": "Gun trucks with DShK/Kord or PKM."
+    },
+    {
+      "vehicle_id": "btr82a",
+      "role": "apc",
+      "prevalence": "uncommon",
+      "notes": "BTR-80/82A with cope cages for fire support (game assignment)."
+    },
+    {
+      "vehicle_id": "mi8",
+      "role": "transport_heli",
+      "prevalence": "uncommon",
+      "notes": "Leased Mi-8/Mi-171 for QRF and supply."
+    },
+    {
+      "vehicle_id": "orlan10",
+      "role": "uav",
+      "prevalence": "uncommon",
+      "notes": "Orlan-10 reconnaissance drones spotting for strikes."
+    },
+    {
+      "vehicle_id": "fpv_drone",
+      "role": "uav",
+      "prevalence": "common",
+      "notes": "FPV and grenade-dropping drones (game hazard)."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "kestrel_assault_group",
+      "name": "Kestrel assault group (8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "gaz_tigr"
+    },
+    {
+      "id": "kestrel_drone_team",
+      "name": "Drone team (hazard)",
+      "composition": [
+        {
+          "role": "drone_operator",
+          "count": 2
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "fpv_drone"
+    },
+    {
+      "id": "kestrel_mounted_raid",
+      "name": "Mounted raid section",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "at",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "technical_dshk"
+    },
+    {
+      "id": "kestrel_heli_qrf",
+      "name": "Helicopter QRF",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "mi8"
+    },
+    {
+      "id": "kestrel_bounty_team",
+      "name": "Bounty-hunter team (sniper ambush)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "sniper",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "drone_operator",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "gaz_tigr"
+    }
+  ],
+  "support_assets": [
+    "FPV and grenade-dropping drones",
+    "Orlan-10 spotting for mortars",
+    "82/120 mm mortars",
+    "Leased Mi-8 helicopter QRF",
+    "BTR fire support on larger contracts"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [],
+    "as_target": [
+      "rival_contractor_race (both sides chase the same objective)",
+      "Evict Kestrel guards from a mine or pipeline site (for a rival client)",
+      "Rescue hostages or prisoners held by Kestrel",
+      "Gather evidence of abuses for an NGO or UN client",
+      "Survive a Kestrel bounty-hunter ambush during extraction"
+    ]
+  },
+  "rivalry": {
+    "role": "heavy rival: aggressive, drone-heavy, careless with civilians",
+    "bids_on": [
+      "Mine, pipeline and airport security in sahel and levant_syria",
+      "Regime and VIP protection for governments aligned with Russia",
+      "Sabotage and 'deniable' work in eastern_ukraine, black_sea_coast and caucasus"
+    ],
+    "bidding_behaviour": "Cheapest bidder for Russia-aligned clients; rarely competes for Western clients and instead appears as the opposing force.",
+    "shows_up_as_enemy_when": [
+      "The player takes a contract from a client hostile to Russia in a Kestrel theatre",
+      "The player interferes with a site Kestrel guards",
+      "Kestrel holds a counter-contract on the same objective"
+    ],
+    "bounty_hunter_trigger": "After the player kills Kestrel men or captures a Kestrel commander, a bounty is posted; sniper-and-drone ambush teams may appear on extraction routes for several contracts.",
+    "defeat_rewards": [
+      "Salvage of Russian-pattern kit (AK-12, PKP, RPG-7 and rounds, ceramic plates) at loot caps",
+      "Intel on Kestrel and africa_corps contracts (unlocks evidence-gathering contracts)",
+      "Reputation with Western and Ukrainian clients",
+      "Captured drone parts that let the player field basic quadcopters (proposal)"
+    ],
+    "escalation": "Repeated defeats bring BTR fire support, more drone teams and finally a named veteran commander who recurs."
+  },
+  "notes": "FICTIONAL company; no real PMC, emblem or person is depicted (the real Wagner Group's Africa operations are covered by the real africa_corps faction, which stays separate). Inspired by Russia-linked Eastern European contractors. 'Pustelga' is a transliteration of the Russian word for kestrel used as an in-world nickname. Relations: close to rus and blr (business and political ties), a cooperative competitor of africa_corps, and a natural ally of sahel_aes as a source of contracts.",
+  "proposed": [
+    "everything (fictional faction): name, flag_colors, relations, theatres",
+    "rivalry (whole object)",
+    "doctrine.ai_tuning",
+    "unit_templates (drone_operator is a game role)",
+    "vehicles (BTR-82A and Mi-8 game assignment)",
+    "contract_types.as_target",
+    "body_armor (game tier mapping)",
+    "blocs (rival_pmc is a game tag)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Private_military_company",
+    "https://en.wikipedia.org/wiki/Wagner_Group",
+    "https://en.wikipedia.org/wiki/Africa_Corps_(Russia)"
+  ]
+}

@@ -1,0 +1,317 @@
+{
+  "id": "som",
+  "name": "Somali National Army (SNA)",
+  "short": "Somalia",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#4189DD",
+    "#FFFFFF"
+  ],
+  "blocs": [
+    "african_union",
+    "arab_league"
+  ],
+  "campaign_tier": "early",
+  "alignment_to_player": "neutral",
+  "player_client": true,
+  "relations": {
+    "player": 20,
+    "tur": 75,
+    "usa": 45,
+    "egy": 50,
+    "qat": 40,
+    "sau": 35,
+    "gbr": 40,
+    "are": -10,
+    "al_shabaab": -100,
+    "isis": -100,
+    "al_qaeda": -95,
+    "houthis": -30,
+    "pmc_halcyon": 5,
+    "pmc_kestrel": -20,
+    "pmc_black_sable": -30
+  },
+  "theatres": [
+    "horn_of_africa"
+  ],
+  "languages": [
+    "Somali",
+    "Arabic"
+  ],
+  "callout_language": "Somali",
+  "doctrine": {
+    "summary": "The federal army is rebuilding with foreign trainers after decades of state collapse: the US-trained Danab ('Lightning') commando brigade and the Turkish-trained Gorgor ('Eagle') brigades are the spearhead, backed by the African Union Support and Stabilisation Mission (AUSSOM, from January 2025, with Egypt deploying a mechanised contingent in 2026), US air strikes against al-Shabaab and Islamic State-Somalia, and Turkish drones. Most other units are light infantry in pickups and technicals, often clan-based and allied with Ma'awisley militias and federal member state forces (Jubaland, Puntland, South West), whose relations with Mogadishu can be tense. Since 2025 al-Shabaab has retaken towns in the Shabelle regions and pushed toward Mogadishu; Danab raids in Lower Shabelle and Lower Juba continue in 2026.",
+    "squad_size": 8,
+    "fireteam": "Sections of 8-10 in a technical and a pickup; Danab/Gorgor in battle-buddy pairs with better discipline.",
+    "tactics": [
+      "Danab and Gorgor raids on al-Shabaab camps, often at dawn and with air support",
+      "Clear-and-hold of towns with clan militias, then hand over to local forces",
+      "Convoy escort along main supply routes (IED and ambush threat)",
+      "Base defence against complex attacks (suicide vehicle plus assault, game hazard)"
+    ],
+    "ai_tuning": {
+      "aggression": 0.5,
+      "discipline": 0.4,
+      "suppression_resistance": 0.45,
+      "flanking": 0.45,
+      "grenade_use": 0.4,
+      "medical_care": 0.35,
+      "night_capability": 0.35,
+      "marksmanship": 0.45,
+      "morale": 0.45
+    }
+  },
+  "camo": [
+    {
+      "name": "Desert / tri-colour field uniform",
+      "palette": [
+        "#C8B48A",
+        "#9C8156",
+        "#6F5A3C"
+      ],
+      "use": "Regular SNA"
+    },
+    {
+      "name": "Woodland",
+      "palette": [
+        "#5C6038",
+        "#3B3F26",
+        "#7A5E3A",
+        "#1E1E18"
+      ],
+      "use": "Regular SNA (mixed issue)"
+    },
+    {
+      "name": "MultiCam-type (Danab) / Turkish pattern (Gorgor)",
+      "palette": [
+        "#9C8B66",
+        "#6F6248",
+        "#C9B98F",
+        "#4B4433"
+      ],
+      "use": "Elite brigades"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "AK-47 / AKM (7.62x39mm)",
+      "M4 carbine (5.56x45mm, Danab)",
+      "MKE MPT-76 (7.62x51mm, Gorgor)"
+    ],
+    "autorifleman": [
+      "PKM (7.62x54R)",
+      "M249 (5.56x45mm, Danab)"
+    ],
+    "marksman": [
+      "SVD Dragunov (7.62x54R)"
+    ],
+    "grenadier": [
+      "AK with GP-25 / M4 with M203"
+    ],
+    "at": [
+      "RPG-7 [in_game]"
+    ],
+    "medic": [
+      "AK-47 (7.62x39mm)"
+    ],
+    "squad_leader": [
+      "AKM or M4 (Danab)"
+    ],
+    "sniper": [
+      "SVD"
+    ],
+    "sidearm": [
+      "Makarov PM / Glock"
+    ]
+  },
+  "launchers": [
+    "RPG-7 with PG-7V / OG-7V [in_game]",
+    "SPG-9 recoilless rifles on technicals [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "light",
+    "vest": "light",
+    "plates": "mixed",
+    "notes": "Regular units: little or no armour. Danab and Gorgor: helmets and plate carriers (medium)."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "technical_dshk",
+      "role": "technical",
+      "prevalence": "signature",
+      "notes": "Pickups with DShK, the standard Somali fighting vehicle."
+    },
+    {
+      "vehicle_id": "technical_zu23",
+      "role": "technical",
+      "prevalence": "common",
+      "notes": "ZU-23-2 on Land Cruiser and truck mounts."
+    },
+    {
+      "vehicle_id": "toyota_land_cruiser",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Land Cruiser pickups for troops and commanders."
+    },
+    {
+      "vehicle_id": "kirpi",
+      "role": "mrap",
+      "prevalence": "uncommon",
+      "notes": "Turkish-donated Kirpi MRAPs (2020-2021), mainly Gorgor units."
+    },
+    {
+      "vehicle_id": "toyota_hilux",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Unarmed pickups carrying troops."
+    },
+    {
+      "vehicle_id": "bayraktar_tb2",
+      "role": "uav",
+      "prevalence": "rare",
+      "notes": "Turkish-operated TB2 and Akinci drones flying in support of Somali operations (not SNA-owned)."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "sna_section",
+      "name": "SNA section (technical)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "technical_dshk"
+    },
+    {
+      "id": "sna_danab_raid",
+      "name": "Danab commando raid team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "toyota_land_cruiser"
+    },
+    {
+      "id": "sna_gorgor_section",
+      "name": "Gorgor section (Kirpi)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "kirpi"
+    },
+    {
+      "id": "sna_base_guard",
+      "name": "Forward base guard",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 5
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "technical_zu23"
+    }
+  ],
+  "support_assets": [
+    "US air strikes against al-Shabaab and IS-Somalia (game: on some contracts)",
+    "Turkish drones",
+    "AUSSOM partner forces (Egyptian, Ethiopian, Ugandan, Kenyan, Djiboutian contingents)",
+    "Ma'awisley clan militias"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [
+      "Accompany Danab on a raid against an al-Shabaab camp",
+      "Defend a forward base against a complex attack",
+      "Escort a supply or aid convoy along a main supply route",
+      "Rescue hostages (aid workers, sailors from hijacked ships)",
+      "Hunt an IS-Somalia cell in the northern mountains (Puntland-type terrain)"
+    ],
+    "as_target": []
+  },
+  "notes": "Situation as of October 2026: al-Shabaab holds much of the countryside and has regained towns in central and southern Somalia since 2025; government and AUSSOM forces hold Mogadishu and major towns; AUSSOM funding is uncertain; Egypt's contingent deployed in 2026 alongside Türkiye's large training and drone presence (Türkiye is Somalia's closest military partner). Relations with the UAE are strained over its ties with Somaliland and Puntland (are -> som = -15). Federal elections and federal-state disputes (e.g. Jubaland, South West) add instability. Game: early-game client in horn_of_africa for counter-terror contracts; locks with al_shabaab are absolute.",
+  "proposed": [
+    "campaign_tier",
+    "relations.player",
+    "doctrine.ai_tuning",
+    "contract_types.as_client",
+    "unit_templates",
+    "vehicles[].prevalence",
+    "body_armor (game tier mapping)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Somali_Armed_Forces",
+    "https://en.wikipedia.org/wiki/Danab_Brigade",
+    "https://en.wikipedia.org/wiki/2025_Shabelle_offensive",
+    "https://www.military.africa/2026/02/turkey-egypt-expands-military-presence-in-somalia/",
+    "https://airwars.org/?p=424159",
+    "https://www.dawan.africa/news/somalia-says-16-al-shabaab-fighters-killed-in-lower-juba-operation",
+    "https://en.wikipedia.org/wiki/African_Union_Support_and_Stabilization_Mission_in_Somalia"
+  ]
+}

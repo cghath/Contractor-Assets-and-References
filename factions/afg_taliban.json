@@ -1,0 +1,334 @@
+{
+  "id": "afg_taliban",
+  "name": "Islamic Emirate of Afghanistan armed forces (Taliban)",
+  "short": "Taliban",
+  "kind": "non_state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#FFFFFF",
+    "#000000"
+  ],
+  "blocs": [
+    "de_facto_government"
+  ],
+  "campaign_tier": "early",
+  "alignment_to_player": "hostile",
+  "player_client": false,
+  "relations": {
+    "player": -65,
+    "pak": -65,
+    "isis_k": -100,
+    "isis": -90,
+    "al_qaeda": 30,
+    "usa": -55,
+    "gbr": -55,
+    "can": -55,
+    "deu": -50,
+    "fra": -50,
+    "rus": 35,
+    "chn": 30,
+    "qat": 35,
+    "irn": 5,
+    "ind": 15,
+    "kaz": 20,
+    "tur": 15,
+    "pmc_halcyon": -60,
+    "pmc_kestrel": -20,
+    "pmc_black_sable": -40
+  },
+  "theatres": [
+    "afghan_highlands"
+  ],
+  "languages": [
+    "Pashto",
+    "Dari"
+  ],
+  "callout_language": "Pashto",
+  "doctrine": {
+    "summary": "The armed forces of the Islamic Emirate, the government the Taliban set up after taking power in August 2021: an army organised into regional corps, the Interior Ministry's police and the GDI intelligence service, plus 'special forces' units such as Badri 313 that show off US-made kit captured from the former Afghan security forces (Humvees, Ford Ranger pickups, MaxxPro MRAPs, M1117s, M4 and M16 rifles, night-vision devices and some Mi-17 and UH-60 helicopters). Most fighters are light infantry veterans of the insurgency: skilled in mountain movement, ambush and endurance, weaker in maintenance, logistics and combined arms. As of 2026 the Emirate is recognised only by Russia (July 2025); most states, the UN and Western governments do not recognise it. It fights ISIS-K inside Afghanistan, and has fought an open border war with Pakistan since February 2026 (Pakistan's 'Operation Ghazab lil-Haq' strikes on alleged TTP and ISIS-K camps; Taliban counter-attacks on border posts; Taliban-claimed air strikes on alleged ISIS-K sites in Pakistan in June 2026).",
+    "squad_size": 8,
+    "fireteam": "Groups of 8-12 under a commander, loosely paired; mounted in Rangers or Humvees; 'special forces' in matched captured US kit.",
+    "tactics": [
+      "Mountain ambushes and movement on foot over ridgelines",
+      "Mounted patrols and checkpoints in captured Rangers, Humvees and MRAPs",
+      "Night raids on ISIS-K hideouts by 'special forces' units",
+      "Border-post fighting against Pakistani forces (artillery, mortars, small arms)",
+      "Checkpoint control of roads and towns; search of vehicles"
+    ],
+    "ai_tuning": {
+      "aggression": 0.65,
+      "discipline": 0.45,
+      "suppression_resistance": 0.65,
+      "flanking": 0.6,
+      "grenade_use": 0.45,
+      "medical_care": 0.3,
+      "night_capability": 0.45,
+      "marksmanship": 0.5,
+      "morale": 0.7
+    }
+  },
+  "camo": [
+    {
+      "name": "Shalwar kameez and patu shawl",
+      "palette": [
+        "#8C8270",
+        "#5F5A4E",
+        "#C2B9A3",
+        "#2E2B26"
+      ],
+      "use": "Most fighters and police; turbans black or white"
+    },
+    {
+      "name": "Captured US/ANA camouflage (woodland, MultiCam, ANA pattern)",
+      "palette": [
+        "#9C8B66",
+        "#6F6248",
+        "#4B5133",
+        "#C9B98F"
+      ],
+      "use": "'Special forces' units such as Badri 313 with helmets, plate carriers and NVGs"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "AK-47 / AKM / Type 56 (7.62x39mm)",
+      "M16A2/A4 and M4 carbines (5.56x45mm, captured)"
+    ],
+    "autorifleman": [
+      "PKM (7.62x54R)",
+      "M249 / M240 (captured)"
+    ],
+    "marksman": [
+      "SVD Dragunov (7.62x54R)"
+    ],
+    "grenadier": [
+      "AK with GP-25 / M4 with M203 (captured)"
+    ],
+    "at": [
+      "RPG-7 [in_game]"
+    ],
+    "medic": [
+      "AK-47 (7.62x39mm)"
+    ],
+    "squad_leader": [
+      "M4 carbine with optic (captured) or AKM"
+    ],
+    "sniper": [
+      "M24 / SVD (captured, limited)"
+    ],
+    "sidearm": [
+      "Makarov PM / Glock / M9 (captured)"
+    ]
+  },
+  "launchers": [
+    "RPG-7 with PG-7V / OG-7V [in_game]",
+    "SPG-9 recoilless rifles on vehicles [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "none",
+    "vest": "none",
+    "plates": "none",
+    "notes": "Rank-and-file: none (chest rigs only). 'Special forces' units: captured US helmets and plate carriers (medium, ceramic) and night-vision."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "toyota_hilux",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": "Above all the green ex-Afghan-police Ford Ranger pickups (recorded as a Ranger variant of this file), plus Hiluxes."
+    },
+    {
+      "vehicle_id": "humvee",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Ex-ANA Humvees (M1151/M1152), many with unit flags."
+    },
+    {
+      "vehicle_id": "technical_dshk",
+      "role": "technical",
+      "prevalence": "common",
+      "notes": "Pickups with DShK or captured M2."
+    },
+    {
+      "vehicle_id": "toyota_land_cruiser",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Land Cruiser pickups and SUVs for commanders."
+    },
+    {
+      "vehicle_id": "maxxpro",
+      "role": "mrap",
+      "prevalence": "uncommon",
+      "notes": "Ex-ANA MaxxPro MRAPs shown in parades; limited maintenance."
+    },
+    {
+      "vehicle_id": "m1117",
+      "role": "apc",
+      "prevalence": "uncommon",
+      "notes": "M1117 Guardian armoured security vehicles of the former ANA Mobile Strike Force."
+    },
+    {
+      "vehicle_id": "matv",
+      "role": "mrap",
+      "prevalence": "rare",
+      "notes": "A few captured M-ATVs."
+    },
+    {
+      "vehicle_id": "mi8",
+      "role": "transport_heli",
+      "prevalence": "rare",
+      "notes": "A handful of airworthy ex-Afghan Air Force Mi-17s."
+    },
+    {
+      "vehicle_id": "uh60",
+      "role": "transport_heli",
+      "prevalence": "rare",
+      "notes": "A few ex-Afghan Air Force UH-60A Black Hawks seen flying in 2021-2022; airworthiness doubtful."
+    },
+    {
+      "vehicle_id": "motorcycle",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Motorbikes for scouts, couriers and village patrols, as during the insurgency."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "taliban_patrol",
+      "name": "Taliban patrol (Ranger)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "toyota_hilux"
+    },
+    {
+      "id": "taliban_checkpoint",
+      "name": "Road checkpoint",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "technical_dshk"
+    },
+    {
+      "id": "taliban_badri_raid",
+      "name": "'Special forces' raid team (captured US kit)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "humvee"
+    },
+    {
+      "id": "taliban_mountain_ambush",
+      "name": "Mountain ambush group (on foot)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 5
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "at",
+          "count": 2
+        }
+      ],
+      "vehicle_id": null
+    }
+  ],
+  "support_assets": [
+    "Mortars and a few old artillery pieces (D-30) on the Pakistan border",
+    "Captured night-vision for 'special forces' units",
+    "Small drones (claimed) and a handful of helicopters",
+    "Local informant networks in villages"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [],
+    "as_target": [
+      "Recover captured US-made equipment or sensitive items before it is sold on",
+      "Extract a person at risk (journalist, former interpreter) through Taliban checkpoints",
+      "Avoid-contact transit through Taliban territory to reach an ISIS-K target",
+      "Third-party fights: Taliban and ISIS-K clash during a player mission"
+    ]
+  },
+  "notes": "The de facto government of Afghanistan since August 2021; recognised only by Russia (July 2025), with China, Pakistan, Qatar and others hosting Taliban envoys without formal recognition; not recognised by the UN. Kind is non_state because of that limited recognition; this is a description, not a judgement. Situation as of October 2026: fighting an ISIS-K insurgency at home and an open border war with Pakistan (since February 2026) that analysts say benefits ISIS-K; UN monitoring reports describe continuing ties with al-Qaeda figures (afg_taliban -> al_qaeda = +30, game value). Western states keep sanctions and no diplomatic relations. Game: neutral-to-hostile, never a client by default (open question for Captain); in afghan_highlands the player meets Taliban checkpoints and patrols as an obstacle and as a third party that also fights ISIS-K. Default player_client false.",
+  "proposed": [
+    "player_client (default false; open question for Captain)",
+    "alignment_to_player",
+    "campaign_tier",
+    "relations (player and al_qaeda values are game-level)",
+    "doctrine.ai_tuning",
+    "unit_templates",
+    "vehicles[].prevalence",
+    "contract_types.as_target",
+    "body_armor (game tier mapping)",
+    "blocs (de_facto_government is a game tag)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Recognition_of_the_Islamic_Emirate_of_Afghanistan",
+    "https://en.wikipedia.org/wiki/2026_Afghanistan%E2%80%93Pakistan_war",
+    "https://en.wikipedia.org/wiki/Afghan_Armed_Forces",
+    "https://www.twz.com/42217/huge-taliban-parade-features-throngs-of-u-s-bought-vehicles-and-a-black-hawk-helicopter",
+    "https://janes.com/osint-insights/defence-news/security/taliban-inaugurates-new-army-with-display-of-us-equipment",
+    "https://www.businesstoday.in/world/story/taliban-claims-airstrikes-on-isis-k-sites-in-pakistan-as-cross-border-tensions-deepen-540149-2026-07-01",
+    "https://www.hstoday.us/subject-matter-areas/counterterrorism/the-afghan-taliban-pakistan-confrontation-and-the-resurgence-of-iskp/"
+  ]
+}

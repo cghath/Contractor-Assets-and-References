@@ -23,7 +23,10 @@
     "tur",
     "sau",
     "are",
-    "jor"
+    "jor",
+    "aut",
+    "mex",
+    "afg_taliban"
   ],
   "crew": 4,
   "passengers": 11,
@@ -68,7 +71,8 @@
     "UH-60M (TWN)",
     "S-70i (PHL Air Force)",
     "S-70A Yanshuf (ISR)",
-    "S-70A-28 / T-70 (TUR)"
+    "S-70A-28 / T-70 (TUR)",
+    "S-70A-42 and UH-60M (AUT)"
   ],
   "existing_model": "uh60",
   "model_priority": "high",

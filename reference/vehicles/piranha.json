@@ -13,7 +13,9 @@
     "bel",
     "dnk",
     "rou",
-    "mda"
+    "mda",
+    "che",
+    "irl"
   ],
   "crew": 3,
   "passengers": 8,
@@ -57,7 +59,10 @@
     "Piranha V (DNK)",
     "VCR 8x8 Dragon (ESP)",
     "Luchs 2 6x6 (DEU, on order)",
-    "Piranha IIIH (MDA, ex-DEU)"
+    "Piranha IIIH (MDA, ex-DEU)",
+    "Radschützenpanzer 93 / Piranha IIIC 8x8 (CHE)",
+    "Piranha IV: Mörser 16 mortar, engineer vehicle and AGM howitzer carrier (CHE)",
+    "Piranha IIIH 8x8 (IRL, UN white on UNIFIL tours)"
   ],
   "existing_model": null,
   "model_priority": "medium",

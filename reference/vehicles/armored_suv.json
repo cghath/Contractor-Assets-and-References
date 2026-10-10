@@ -1,0 +1,77 @@
+{
+  "id": "armored_suv",
+  "name": "Commercially armoured full-size SUV",
+  "aliases": [
+    "blindada",
+    "B6 SUV",
+    "armoured Suburban-type SUV"
+  ],
+  "origin": "improvised",
+  "type": "light",
+  "operators": [
+    "cartel_pacifico",
+    "cartel_jalisco_nueva",
+    "pmc_halcyon"
+  ],
+  "crew": 1,
+  "passengers": 6,
+  "dimensions_m": {
+    "length": 5.7,
+    "width": 2.05,
+    "height": 1.95
+  },
+  "weight_t": 3.6,
+  "armament": [
+    "None fitted; occupants fire from doors and windows"
+  ],
+  "protection": "Real-world type: full-size American SUVs or crew-cab pickups (Chevrolet Suburban/Tahoe, Cheyenne, Ram) armoured by civilian armouring shops to about B4-B6, with thick laminated glass and run-flat inserts; Mexico has one of the world's largest civilian armouring industries. Game: immune to small-calibre rounds; 7.62x54R and larger penetrate; every launcher penetrates; sagging suspension and thick glass edges are the visual tells.",
+  "visual_notes": [
+    "Generic inspired-by type, not a specific photographed vehicle",
+    "Long boxy three-row SUV body, dark-tinted thick windows with visible frame edges",
+    "Sits low on its suspension because of the armour weight; heavy-duty wheels",
+    "Civilian appearance: black, white or silver paint, chrome trim, no markings",
+    "Cartel versions sometimes have crude bolt-on plates over the doors or a cut roof hatch"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Black",
+      "palette": [
+        "#151515",
+        "#2E2E2E",
+        "#9A9A9A"
+      ]
+    },
+    {
+      "name": "White",
+      "palette": [
+        "#EDEDEA",
+        "#BFC2C4",
+        "#2A2A2A"
+      ]
+    },
+    {
+      "name": "Silver",
+      "palette": [
+        "#B8BBBE",
+        "#7C7F82",
+        "#2A2A2A"
+      ]
+    }
+  ],
+  "variants": [
+    "Armoured full-size SUV",
+    "Armoured crew-cab pickup",
+    "Crudely up-plated cartel SUV"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Chevrolet_Suburban",
+    "https://commons.wikimedia.org/wiki/Category:Armoured_cars_(civilian)",
+    "https://en.wikipedia.org/wiki/Vehicle_armour"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Mexican_drug_war",
+    "https://en.wikipedia.org/wiki/Bulletproof_vest#Performance_standards"
+  ]
+}

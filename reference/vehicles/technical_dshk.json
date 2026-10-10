@@ -21,7 +21,12 @@
     "som",
     "syr",
     "africa_corps",
-    "irn"
+    "irn",
+    "hamas",
+    "isis_k",
+    "sahel_aes",
+    "pmc_kestrel",
+    "pmc_black_sable"
   ],
   "crew": 3,
   "passengers": 2,

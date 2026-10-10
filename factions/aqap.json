@@ -1,0 +1,362 @@
+{
+  "id": "aqap",
+  "name": "al-Qaeda in the Arabian Peninsula",
+  "short": "AQAP",
+  "kind": "non_state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#1C1C1C",
+    "#F2F2EE"
+  ],
+  "blocs": [
+    "al_qaeda_network"
+  ],
+  "campaign_tier": "early",
+  "alignment_to_player": "hostile",
+  "player_client": false,
+  "relations": {
+    "player": -100,
+    "usa": -100,
+    "gbr": -100,
+    "can": -100,
+    "aus": -100,
+    "fra": -90,
+    "deu": -85,
+    "sau": -90,
+    "are": -90,
+    "isr": -80,
+    "egy": -65,
+    "qat": -70,
+    "irn": -55,
+    "houthis": -60,
+    "isis": -85,
+    "al_qaeda": 90,
+    "al_shabaab": 70,
+    "jnim": 60
+  },
+  "theatres": [
+    "yemen_red_sea"
+  ],
+  "languages": [
+    "Arabic (Yemeni and Gulf dialects)"
+  ],
+  "callout_language": "Yemeni Arabic; tribal hosts' local dialects in Shabwa, Abyan and al-Bayda.",
+  "doctrine": {
+    "summary": "AQAP formed in 2009 from the merger of al-Qaeda's Saudi and Yemeni branches and is regarded as one of the network's most capable affiliates. It briefly held territory in southern Yemen (Abyan in 2011-2012, Mukalla in 2015-2016) before being pushed back to desert and mountain areas of Abyan, Shabwa, al-Bayda, Marib and Hadramawt. Leader since March 2024: Saad bin Atef al-Awlaki, after Khalid Batarfi's death. The US National Counterterrorism Center (2026) estimates 2,000-3,000 fighters. Its main enemies on the ground are the UAE-backed southern forces (Southern Transitional Council units, Security Belt, Shabwa Defence Forces) and the Houthis. Since 2022 it has run a long campaign of IEDs, raids on outposts and small quadcopter drone attacks in Abyan and Shabwa. In the game AQAP is an early-game desert-raid enemy: small fast-moving cells in pickups and on motorbikes, IED hazards on desert roads, night raids on checkpoints.",
+    "squad_size": 6,
+    "fireteam": "Raiding groups of 5-15 in pickups, built from cells of 3-5; local tribal hosts provide guides. In game: 2-4 battle-buddy pairs.",
+    "tactics": [
+      "Night raids on isolated checkpoints and outposts from wadis, then withdrawal into the desert",
+      "IED hazards on desert and mountain roads, telegraphed for the player to spot and clear",
+      "Quadcopter drone munition drops on outposts as an AI hazard ability",
+      "Ambush from wadis and ridgelines on supply convoys",
+      "Pickup shoot-and-scoot with DShK technicals",
+      "Retreat into tribal villages, keeping the casualty rule active"
+    ],
+    "ai_tuning": {
+      "aggression": 0.55,
+      "discipline": 0.4,
+      "suppression_resistance": 0.4,
+      "flanking": 0.55,
+      "grenade_use": 0.4,
+      "medical_care": 0.15,
+      "night_capability": 0.4,
+      "marksmanship": 0.45,
+      "morale": 0.6
+    }
+  },
+  "camo": [
+    {
+      "name": "Yemeni civilian / tribal dress",
+      "palette": [
+        "#E3DCCB",
+        "#6B5B45",
+        "#2F2F2F",
+        "#A08B64"
+      ],
+      "use": "Most fighters: thobe or futa skirt with jacket and shawl"
+    },
+    {
+      "name": "Desert ex-army pattern",
+      "palette": [
+        "#C2A878",
+        "#9A7F54",
+        "#6E5A3A",
+        "#DCCBA6"
+      ],
+      "use": "Captured army uniforms"
+    },
+    {
+      "name": "Black / dark fatigues",
+      "palette": [
+        "#1C1C1C",
+        "#3A3A3A",
+        "#5A5245"
+      ],
+      "use": "Raid teams"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "AKM / Type 56 (7.62x39mm)"
+    ],
+    "autorifleman": [
+      "PKM (7.62x54R)",
+      "RPK (7.62x39mm)"
+    ],
+    "marksman": [
+      "SVD (7.62x54R)"
+    ],
+    "grenadier": [
+      "AKM (7.62x39mm) with hand grenades"
+    ],
+    "at": [
+      "RPG-7 with PG-7V / OG-7V"
+    ],
+    "medic": [
+      "AKM (7.62x39mm)"
+    ],
+    "squad_leader": [
+      "AKMS (7.62x39mm)",
+      "M4 (5.56x45mm, captured)"
+    ],
+    "sniper": [
+      "SVD (7.62x54R)"
+    ],
+    "sidearm": [
+      "Makarov-pattern pistols (9x18mm)"
+    ]
+  },
+  "launchers": [
+    "RPG-7 (PG-7V, OG-7V) [in_game]",
+    "SPG-9 recoilless gun on technicals [not_in_game: vehicle weapon]"
+  ],
+  "body_armor": {
+    "helmet": "none",
+    "vest": "none",
+    "plates": "none",
+    "notes": "Chest rigs; occasional captured vest. Game: none (proposed)."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "toyota_hilux",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": "Pickups for raiding groups."
+    },
+    {
+      "vehicle_id": "technical_dshk",
+      "role": "technical",
+      "prevalence": "signature",
+      "notes": "DShK technicals for raids and convoy ambushes."
+    },
+    {
+      "vehicle_id": "motorcycle",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Motorbikes for scouts and targeted attacks."
+    },
+    {
+      "vehicle_id": "toyota_land_cruiser",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Land Cruiser 70-series pickups and SUVs."
+    },
+    {
+      "vehicle_id": "fpv_drone",
+      "role": "uav",
+      "prevalence": "uncommon",
+      "notes": "Small quadcopters used to drop munitions on southern forces' positions in Abyan and Shabwa since 2023-2024. AI hazard ability."
+    },
+    {
+      "vehicle_id": "technical_spg9",
+      "role": "technical",
+      "prevalence": "rare",
+      "notes": "SPG-9 pickups, mostly captured."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "aqap_desert_cell",
+      "name": "Desert cell (4-6)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "toyota_hilux"
+    },
+    {
+      "id": "aqap_technical_crew",
+      "name": "DShK technical crew",
+      "composition": [
+        {
+          "role": "driver",
+          "count": 1
+        },
+        {
+          "role": "gunner",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "technical_dshk"
+    },
+    {
+      "id": "aqap_night_raid",
+      "name": "Night raid group",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "toyota_land_cruiser"
+    },
+    {
+      "id": "aqap_moto_pair",
+      "name": "Motorbike raid pair",
+      "composition": [
+        {
+          "role": "rifleman",
+          "count": 1
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "motorcycle"
+    },
+    {
+      "id": "aqap_drone_team",
+      "name": "Drone team (AI hazard)",
+      "composition": [
+        {
+          "role": "drone_operator",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "fpv_drone"
+    },
+    {
+      "id": "aqap_ied_team",
+      "name": "IED hazard team",
+      "composition": [
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "squad_leader",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "motorcycle",
+      "notes": "Pre-placed IED hazards on a desert road plus a watcher pair."
+    },
+    {
+      "id": "aqap_hvt_guard",
+      "name": "Leader and guard detail",
+      "composition": [
+        {
+          "role": "leader_hvt",
+          "count": 1
+        },
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "toyota_land_cruiser"
+    }
+  ],
+  "support_assets": [
+    "Quadcopter munition-drop hazard",
+    "IED hazards on desert roads",
+    "82 mm mortar fire (rare)",
+    "Sniper overwatch from ridgelines"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [],
+    "as_target": [
+      "outpost_defence_vs_night_raid",
+      "ied_route_clearance",
+      "hvt_capture_or_kill",
+      "desert_camp_raid",
+      "hostage_rescue",
+      "drone_team_hunt",
+      "convoy_ambush_defence"
+    ]
+  },
+  "notes": "AQAP is a UN-listed and US-designated terrorist organisation and an affiliate of the al-Qaeda core (relation al_qaeda 90). It has attempted external attacks (2009 underwear bomb plot, 2010 cargo plot) and claimed the 2015 Charlie Hebdo attack. Leader: Saad bin Atef al-Awlaki since March 2024; in 2025 he called for attacks on senior US officials. NCTC (May 2026): about 2,000-3,000 fighters, mainly in southern and central Yemen. Reported 2026 activity includes clashes in Wadi Omran (Mudiyah, Abyan) in February 2026. The Houthis are an enemy (they fight in al-Bayda), although the UN Panel of Experts reported some tactical coordination in 2024; that value is kept negative. Game framing: early-game raid enemy in yemen_red_sea; contracts against AQAP come from Saudi, Emirati or Yemeni-government-linked clients.",
+  "proposed": [
+    "campaign_tier",
+    "relations.player",
+    "doctrine.ai_tuning (all values)",
+    "doctrine.squad_size (game cell size)",
+    "unit_templates (game compositions)",
+    "support_assets (game events and hazards)",
+    "contract_types.as_target",
+    "vehicles[].prevalence (game weighting)",
+    "body_armor (game tier mapping)",
+    "camo (approximate palettes)",
+    "player_trade (hostile-only: not sellable)",
+    "relations.houthis (enemy with reported limited coordination; low-confidence magnitude)",
+    "relations values (factual direction, game magnitudes)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Al-Qaeda_in_the_Arabian_Peninsula",
+    "https://www.dni.gov/nctc/terrorist_groups/aqap.html",
+    "https://metis.fenixinsight.com/event/583444",
+    "https://www.longwarjournal.org/?p=60688"
+  ]
+}

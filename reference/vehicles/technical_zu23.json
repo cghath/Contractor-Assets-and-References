@@ -8,7 +8,14 @@
   "origin": "Japan / Soviet Union (weapon)",
   "type": "technical",
   "operators": [
-    "syr"
+    "syr",
+    "hezbollah",
+    "houthis",
+    "isis",
+    "al_shabaab",
+    "sdf",
+    "sahel_aes",
+    "som"
   ],
   "crew": 3,
   "passengers": 2,

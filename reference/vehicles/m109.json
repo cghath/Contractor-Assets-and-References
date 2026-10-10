@@ -14,7 +14,9 @@
     "twn",
     "isr",
     "egy",
-    "jor"
+    "jor",
+    "che",
+    "aut"
   ],
   "crew": 6,
   "passengers": 0,
@@ -48,7 +50,9 @@
     "M109A5E (ESP)",
     "M109A5O (LVA, ex-AUT)",
     "M109A2/A5 (PAK, TWN)",
-    "M109 Doher (ISR)"
+    "M109 Doher (ISR)",
+    "Pz Hb 79/88/95 KAWEST (CHE)",
+    "M109A5Ö (AUT)"
   ],
   "existing_model": null,
   "model_priority": "low",

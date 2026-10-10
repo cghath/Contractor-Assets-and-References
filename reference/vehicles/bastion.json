@@ -7,7 +7,8 @@
   "origin": "France",
   "type": "apc",
   "operators": [
-    "arm"
+    "arm",
+    "sahel_aes"
   ],
   "crew": 2,
   "passengers": 8,

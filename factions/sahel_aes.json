@@ -1,0 +1,336 @@
+{
+  "id": "sahel_aes",
+  "name": "Alliance of Sahel States armed forces (Mali, Burkina Faso, Niger)",
+  "short": "AES",
+  "kind": "non_state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#2E7D32",
+    "#F2C200",
+    "#C62828"
+  ],
+  "blocs": [
+    "aes"
+  ],
+  "campaign_tier": "early",
+  "alignment_to_player": "neutral",
+  "player_client": true,
+  "relations": {
+    "player": -10,
+    "africa_corps": 80,
+    "rus": 75,
+    "tur": 50,
+    "chn": 30,
+    "irn": 15,
+    "fra": -60,
+    "usa": -30,
+    "deu": -25,
+    "ukr": -55,
+    "jnim": -100,
+    "isis": -100,
+    "al_qaeda": -95,
+    "pmc_halcyon": -40,
+    "pmc_kestrel": 40,
+    "pmc_black_sable": 10
+  },
+  "theatres": [
+    "sahel"
+  ],
+  "languages": [
+    "French",
+    "Bambara",
+    "Mooré",
+    "Hausa",
+    "Fula",
+    "Tamasheq"
+  ],
+  "callout_language": "French (with Bambara / Mooré / Hausa)",
+  "doctrine": {
+    "summary": "The armies of the three military governments of Mali (FAMa), Burkina Faso and Niger, which expelled French forces (2022-2023), left ECOWAS (effective January 2025) and formed the Alliance and then Confederation of Sahel States (2023-2024). A joint AES unified force (about 5,000-6,000 troops, launched in late 2025/early 2026) and coordinated air strikes back national armies, Burkina Faso's large VDP civilian auxiliary militia and Russia's Africa Corps. Turkish drones (Bayraktar TB2 and Akinci) are the main precision strike asset, alongside Soviet-era helicopters, BTR and BRDM armour, Western-built light vehicles from earlier years and large numbers of pickups. They fight JNIM (al-Qaeda) and Islamic State Sahel, and in Mali also the Azawad separatists (FLA). 2026 has gone badly: JNIM's fuel blockade of Bamako since September 2025, and coordinated JNIM and FLA attacks on 25 April 2026 that killed Mali's defence minister in Kati; Africa Corps withdrew from Kidal and consolidated around Bamako. Rights groups have documented mass killings of civilians in counter-insurgency operations by these forces and their partners.",
+    "squad_size": 8,
+    "fireteam": "Sections of 8-12 in pickups; loosely paired; VDP militia in small groups on motorbikes.",
+    "tactics": [
+      "Convoy operations along long desert and savannah roads, escorted by armour and drones",
+      "Drone strikes (TB2/Akinci) on columns and camps",
+      "Cordon-and-search of villages with Africa Corps or VDP militia (high civilian-harm risk on maps)",
+      "Defence of garrison towns and bases against massed motorbike assaults",
+      "Helicopter gunship support for besieged posts"
+    ],
+    "ai_tuning": {
+      "aggression": 0.55,
+      "discipline": 0.4,
+      "suppression_resistance": 0.45,
+      "flanking": 0.4,
+      "grenade_use": 0.4,
+      "medical_care": 0.35,
+      "night_capability": 0.3,
+      "marksmanship": 0.45,
+      "morale": 0.45
+    }
+  },
+  "camo": [
+    {
+      "name": "Desert / sand tri-colour",
+      "palette": [
+        "#C8B48A",
+        "#9C8156",
+        "#6F5A3C"
+      ],
+      "use": "Mali and Niger in the north"
+    },
+    {
+      "name": "Woodland / French CCE-style legacy",
+      "palette": [
+        "#5C6038",
+        "#3B3F26",
+        "#7A5E3A",
+        "#1E1E18"
+      ],
+      "use": "Burkina Faso and southern units"
+    },
+    {
+      "name": "Civilian clothes and scarves (VDP militia)",
+      "palette": [
+        "#8C7A5B",
+        "#4F4637",
+        "#B9A27A"
+      ],
+      "use": "Volunteers for the Defence of the Homeland"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "AK-47 / AKM / Type 56 (7.62x39mm)"
+    ],
+    "autorifleman": [
+      "PKM (7.62x54R)"
+    ],
+    "marksman": [
+      "SVD Dragunov (7.62x54R)"
+    ],
+    "grenadier": [
+      "AK with GP-25"
+    ],
+    "at": [
+      "RPG-7 [in_game]"
+    ],
+    "medic": [
+      "AK-47 (7.62x39mm)"
+    ],
+    "squad_leader": [
+      "AKM (7.62x39mm)"
+    ],
+    "sniper": [
+      "SVD (7.62x54R)"
+    ],
+    "sidearm": [
+      "Makarov PM (9x18mm)"
+    ]
+  },
+  "launchers": [
+    "RPG-7 with PG-7V / OG-7V [in_game]",
+    "SPG-9 recoilless rifles on vehicles [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "light",
+    "vest": "light",
+    "plates": "steel",
+    "notes": "Mixed: older helmets and vests in regular units (light), often discarded in the heat; VDP militia none."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "toyota_land_cruiser",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": "Land Cruiser 70-series pickups, the backbone of every convoy."
+    },
+    {
+      "vehicle_id": "technical_dshk",
+      "role": "technical",
+      "prevalence": "common",
+      "notes": "Pickups with DShK or PKM."
+    },
+    {
+      "vehicle_id": "bayraktar_tb2",
+      "role": "uav",
+      "prevalence": "common",
+      "notes": "TB2 drones in all three countries (Niger and Burkina Faso since 2022); Akinci drones in Mali and Burkina Faso (no catalogue file)."
+    },
+    {
+      "vehicle_id": "technical_zu23",
+      "role": "technical",
+      "prevalence": "uncommon",
+      "notes": "ZU-23-2 on pickups and trucks for base defence and convoy fire support."
+    },
+    {
+      "vehicle_id": "btr60",
+      "role": "apc",
+      "prevalence": "uncommon",
+      "notes": "BTR-60PB / BTR-70 class APCs in Mali."
+    },
+    {
+      "vehicle_id": "bastion",
+      "role": "apc",
+      "prevalence": "uncommon",
+      "notes": "ACMAT Bastion APCs bought or donated before 2022 (Burkina Faso, Niger, Mali)."
+    },
+    {
+      "vehicle_id": "vbl",
+      "role": "light",
+      "prevalence": "rare",
+      "notes": "Ex-French VBL scout cars from earlier cooperation."
+    },
+    {
+      "vehicle_id": "mi24",
+      "role": "attack_heli",
+      "prevalence": "uncommon",
+      "notes": "Mi-24/Mi-35 gunships of the Malian and Burkinabe air forces."
+    },
+    {
+      "vehicle_id": "mi8",
+      "role": "transport_heli",
+      "prevalence": "uncommon",
+      "notes": "Mi-8/Mi-171 transport helicopters."
+    },
+    {
+      "vehicle_id": "motorcycle",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "VDP militia and army scouts on motorbikes (also the jihadists' main vehicle; bans on motorbike traffic are common in conflict zones)."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "aes_patrol",
+      "name": "FAMa / Burkinabe / Nigerien patrol",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "toyota_land_cruiser"
+    },
+    {
+      "id": "aes_convoy_escort",
+      "name": "Convoy escort (armour and gun trucks)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 5
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "at",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "btr60"
+    },
+    {
+      "id": "aes_vdp_group",
+      "name": "VDP militia group (motorbikes and pickups)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 6
+        }
+      ],
+      "vehicle_id": "motorcycle"
+    },
+    {
+      "id": "aes_garrison",
+      "name": "Garrison post",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 6
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "at",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "technical_zu23"
+    }
+  ],
+  "support_assets": [
+    "Bayraktar TB2 and Akinci drone strikes",
+    "Mi-24/Mi-35 gunships",
+    "Africa Corps partner units (separate faction)",
+    "AES unified-force reinforcements and joint air strikes"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [
+      "Escort a fuel convoy through the JNIM blockade (harsh terms)",
+      "Defend a mine or airport against a jihadist assault",
+      "Recover a downed drone or helicopter crew",
+      "Evacuate foreign workers from a besieged town"
+    ],
+    "as_target": [
+      "Document or prevent abuses against civilians for an NGO/UN client (avoid-contact)",
+      "Third-party fights with AES and Africa Corps during contracts for other clients"
+    ]
+  },
+  "notes": "Modelled as one faction for the three AES juntas (a confederation; 'state' is also defensible, non_state chosen per brief because the game treats it as a bloc rather than one state). Situation as of October 2026: under heavy pressure from JNIM (fuel blockade of Bamako, April 2026 offensive, defence minister killed) and Islamic State Sahel; Africa Corps has pulled back to Bamako; the AES unified force exists but bloc unity is strained. The AES expelled French and US forces, broke with Ukraine (Mali, 2024) and works with Russia; Türkiye supplies drones. Game: player_client true but with few contracts and harsh terms because the AES works with africa_corps (a rival contractor); Western-aligned work locks out AES contracts. Civilian-harm risk is high on AES operations, and the casualty rules apply to the player in full.",
+  "proposed": [
+    "kind (non_state vs state)",
+    "player_client (true, rare and harsh terms) and relations.player",
+    "campaign_tier",
+    "doctrine.ai_tuning",
+    "contract_types",
+    "unit_templates",
+    "vehicles[].prevalence",
+    "body_armor (game tier mapping)",
+    "flag_colors (AES flag colours approximated)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Alliance_of_Sahel_States",
+    "https://adf-magazine.com/2026/04/aes-seeks-to-strengthen-ct-efforts-through-unified-force/",
+    "https://www.justsecurity.org/137563/mali-junta-insurgent-offensive/",
+    "https://www.securitycouncilreport.org/monthly-forecast/2026-07/west-africa-and-the-sahel-17.php",
+    "https://www.fairobserver.com/region/africa/attacks-in-mali-sahel-states-claim-one-alliance-but-pursue-different-agendas/",
+    "https://www.military.africa/2024/04/burkina-fasos-akinci-drone-breaks-cover/",
+    "https://www.thedefensepost.com/2022/06/01/turkey-bayraktar-drones-niger/",
+    "https://en.wikipedia.org/wiki/Malian_Armed_Forces"
+  ]
+}

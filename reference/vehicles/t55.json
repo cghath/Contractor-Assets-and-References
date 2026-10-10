@@ -13,7 +13,12 @@
   "operators": [
     "vnm",
     "syr",
-    "egy"
+    "egy",
+    "hezbollah",
+    "houthis",
+    "isis",
+    "sdf",
+    "krg_peshmerga"
   ],
   "crew": 4,
   "passengers": 0,

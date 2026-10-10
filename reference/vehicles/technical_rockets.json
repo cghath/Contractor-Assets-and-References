@@ -1,0 +1,70 @@
+{
+  "id": "technical_rockets",
+  "name": "Pickup technical with Type 63 107 mm rocket launcher",
+  "aliases": [
+    "rocket technical",
+    "107 mm rocket pickup"
+  ],
+  "origin": "Japan (vehicle) / China (launcher)",
+  "type": "mlrs",
+  "operators": [
+    "hezbollah",
+    "iraqi_militias"
+  ],
+  "crew": 3,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 5.3,
+    "width": 1.85,
+    "height": 2.2
+  },
+  "weight_t": 2.7,
+  "armament": [
+    "Type 63 12-tube 107 mm rocket launcher (or copies such as the Iranian HM-20 / Fadjr-1) in the bed"
+  ],
+  "protection": "Unarmoured pickup. Game rule treats the vehicle body as immune to small-calibre, but 7.62x54R and up penetrate; crew exposed. In game the launcher fires as an off-map or shoot-and-scoot event, and the launch site is a contract objective.",
+  "visual_notes": [
+    "Boxy 12-tube launcher (3 rows of 4) on a turntable in the bed",
+    "Hilux or Land Cruiser pickup chassis; tarpaulin cover when moving",
+    "Scorched paint behind the tubes, launch smoke and dust as an effect"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Civilian white",
+      "palette": [
+        "#E8E6E0",
+        "#2A2A2A"
+      ]
+    },
+    {
+      "name": "Tan / mud",
+      "palette": [
+        "#B59E78",
+        "#7A6448"
+      ]
+    },
+    {
+      "name": "Launcher olive",
+      "palette": [
+        "#4F5A35",
+        "#2A2A1E"
+      ]
+    }
+  ],
+  "variants": [
+    "Hilux",
+    "Land Cruiser 79",
+    "Improvised rails for single rockets"
+  ],
+  "existing_model": "technical_rockets",
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Type_63_multiple_rocket_launcher",
+    "https://en.wikipedia.org/wiki/Technical_(vehicle)",
+    "https://commons.wikimedia.org/wiki/Category:Type_63_multiple_rocket_launcher"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Type_63_multiple_rocket_launcher",
+    "https://en.wikipedia.org/wiki/Technical_(vehicle)"
+  ]
+}

@@ -11,7 +11,20 @@
   "operators": [
     "ukr",
     "rus",
-    "syr"
+    "syr",
+    "hamas",
+    "pij",
+    "hezbollah",
+    "houthis",
+    "iraqi_militias",
+    "aqap",
+    "isis",
+    "jnim",
+    "cartel_pacifico",
+    "cartel_jalisco_nueva",
+    "sdf",
+    "pmc_halcyon",
+    "pmc_kestrel"
   ],
   "crew": 0,
   "passengers": 0,

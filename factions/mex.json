@@ -1,0 +1,320 @@
+{
+  "id": "mex",
+  "name": "Mexican Armed Forces and National Guard (SEDENA / SEMAR / Guardia Nacional)",
+  "short": "Mexico",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#006847",
+    "#FFFFFF",
+    "#CE1126"
+  ],
+  "blocs": [
+    "usmca",
+    "oas",
+    "g20"
+  ],
+  "campaign_tier": "early",
+  "alignment_to_player": "neutral",
+  "player_client": true,
+  "relations": {
+    "player": 20,
+    "usa": 40,
+    "can": 50,
+    "esp": 50,
+    "fra": 20,
+    "chn": 10,
+    "rus": 0,
+    "cartel_pacifico": -90,
+    "cartel_jalisco_nueva": -90,
+    "pmc_halcyon": -20,
+    "pmc_kestrel": -30,
+    "pmc_black_sable": -20
+  },
+  "theatres": [
+    "mexico_cartel_belt"
+  ],
+  "languages": [
+    "Spanish"
+  ],
+  "callout_language": "Mexican Spanish",
+  "doctrine": {
+    "summary": "Mexico's security war against the cartels is fought by the Army and Air Force (SEDENA, the Secretaría de la Defensa Nacional), the Navy and marines (SEMAR), and the Guardia Nacional, which a 2024 constitutional reform placed fully under SEDENA. Forces work in large deployments to hot spots (Sinaloa, Jalisco, Michoacán, Guanajuato, Tamaulipas, the US border): mounted patrols in armoured pickups, Humvees and SandCat/DN-XI vehicles, checkpoints, helicopter-borne raids by special forces (the Army's Fuerzas Especiales and the Navy's marine infantry), and drug-lab and weapons seizures. On 22 February 2026 the Army killed the leader of the largest Jalisco-based cartel in a raid in Tapalpa, Jalisco, which set off blockades and arson at more than 250 points in 20 states. The Sinaloa cartel's internal war (since September 2024) continues, with cartels using explosive drones; Mexico deployed anti-drone equipment on the US border (2026) under pressure from Washington.",
+    "squad_size": 8,
+    "fireteam": "Army and Guardia Nacional patrol sections of 8-12 in two pickups or a SandCat/Humvee; special forces in 4-man teams.",
+    "tactics": [
+      "Mounted patrols and checkpoints on highways and town entrances",
+      "Helicopter-borne raids on labs, safe houses and HVTs (marines and Army special forces)",
+      "Clearing cartel roadblocks of burning vehicles after HVT operations",
+      "Counter-drone screens around bases and patrols",
+      "Cordon and search in towns contested by rival cartels"
+    ],
+    "ai_tuning": {
+      "aggression": 0.55,
+      "discipline": 0.6,
+      "suppression_resistance": 0.55,
+      "flanking": 0.5,
+      "grenade_use": 0.45,
+      "medical_care": 0.55,
+      "night_capability": 0.5,
+      "marksmanship": 0.55,
+      "morale": 0.55
+    }
+  },
+  "camo": [
+    {
+      "name": "SEDENA digital woodland",
+      "palette": [
+        "#5A6340",
+        "#3C4229",
+        "#7C6A48",
+        "#1F2018"
+      ],
+      "use": "Army field uniform"
+    },
+    {
+      "name": "Guardia Nacional dark grey/green",
+      "palette": [
+        "#3F4740",
+        "#2A2F2A",
+        "#6A7266"
+      ],
+      "use": "National Guard uniforms and patrol pickups"
+    },
+    {
+      "name": "SEMAR marine digital",
+      "palette": [
+        "#4C5743",
+        "#2D3528",
+        "#8A8B6C"
+      ],
+      "use": "Navy marines"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "FX-05 Xiuhcoatl (5.56x45mm)",
+      "HK G3 (7.62x51mm, legacy)"
+    ],
+    "autorifleman": [
+      "FN Minimi (5.56x45mm)",
+      "FN MAG / M60 (7.62x51mm)"
+    ],
+    "marksman": [
+      "HK G3 with optic / SR-25-pattern DMR (7.62x51mm)"
+    ],
+    "grenadier": [
+      "FX-05 with 40 mm underbarrel launcher"
+    ],
+    "at": [
+      "AT4 [in_game]",
+      "M72 LAW [not_in_game]"
+    ],
+    "medic": [
+      "FX-05 (5.56x45mm)"
+    ],
+    "squad_leader": [
+      "FX-05 or M4 carbine (5.56x45mm)"
+    ],
+    "sniper": [
+      "Barrett M107 / M82 (12.7x99mm)"
+    ],
+    "sidearm": [
+      "Glock 17 / Beretta 92 (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "AT4 [in_game]",
+    "M72 LAW [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "mixed",
+    "notes": "Ballistic helmets and plate carriers (ceramic or steel plates depending on unit); special forces medium-to-heavy."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "sandcat",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": "SandCat and the Army's DN-XI (Mexican-built, longer chassis, Mexican turret) armoured patrol vehicles; also used by the Guardia Nacional."
+    },
+    {
+      "vehicle_id": "toyota_hilux",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Patrol pickups (mostly Ford Lobo/F-150, Ram and Chevrolet pickups in the real fleet) with troops on bench seats in the bed and a roll-bar MG mount."
+    },
+    {
+      "vehicle_id": "humvee",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "M1114/M1151-type Humvees of SEDENA and SEMAR."
+    },
+    {
+      "vehicle_id": "uh60",
+      "role": "transport_heli",
+      "prevalence": "uncommon",
+      "notes": "UH-60M Black Hawks of the Air Force and Navy for raids."
+    },
+    {
+      "vehicle_id": "mi8",
+      "role": "transport_heli",
+      "prevalence": "uncommon",
+      "notes": "Mi-17 transport helicopters (Air Force and Navy)."
+    },
+    {
+      "vehicle_id": "bell412",
+      "role": "transport_heli",
+      "prevalence": "uncommon",
+      "notes": "Bell 412EP utility helicopters."
+    },
+    {
+      "vehicle_id": "hermes450",
+      "role": "uav",
+      "prevalence": "rare",
+      "notes": "Hermes 450/900 reconnaissance drones of the Mexican Air Force."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "mex_patrol",
+      "name": "Army / Guardia Nacional mounted patrol",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "toyota_hilux"
+    },
+    {
+      "id": "mex_dnxi_section",
+      "name": "Armoured patrol (DN-XI / SandCat)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "sandcat"
+    },
+    {
+      "id": "mex_fes_raid",
+      "name": "Special forces / marine raid team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "uh60"
+    },
+    {
+      "id": "mex_checkpoint",
+      "name": "Highway checkpoint",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "humvee"
+    }
+  ],
+  "support_assets": [
+    "Black Hawk / Mi-17 air assault and medevac",
+    "Hermes ISR drones over cartel strongholds",
+    "Anti-drone jammers at bases and checkpoints",
+    "Large reinforcement surges (hundreds of troops) after major cartel attacks"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [
+      "Raid a cartel drug lab or weapons cache with Mexican forces",
+      "Capture or locate a cartel HVT",
+      "Rescue kidnapped civilians or officials",
+      "Escort a fuel, medical or election-material convoy through a blockaded zone",
+      "Clear a cartel roadblock and reopen a highway",
+      "Counter-drone overwatch of a base or town"
+    ],
+    "as_target": []
+  },
+  "notes": "Situation as of October 2026: President Claudia Sheinbaum's government is waging an intensified campaign against the cartels under heavy US pressure (US designation of several cartels as foreign terrorist organisations in 2025, threats of unilateral US action that Mexico rejects). Key events: the Army killed the leader of the largest Jalisco cartel on 22 February 2026, followed by nationwide blockades; the Sinaloa cartel's internal war continues with explosive-drone attacks; about 6,000 improvised explosives were seized from September 2025. In game: an early-game neutral client in mexico_cartel_belt; the fictional cartel_pacifico and cartel_jalisco_nueva are the targets. Sovereignty is sensitive: contracts come only from the Mexican government (no unilateral foreign raids), and civilian-casualty rules apply in full in towns.",
+  "proposed": [
+    "campaign_tier",
+    "relations.player",
+    "doctrine.ai_tuning",
+    "contract_types.as_client",
+    "unit_templates",
+    "vehicles[].prevalence (game weighting)",
+    "vehicles toyota_hilux standing in for Ford/Ram/Chevrolet pickups",
+    "body_armor (game tier mapping)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Mexican_Armed_Forces",
+    "https://en.wikipedia.org/wiki/National_Guard_(Mexico)",
+    "https://en.wikipedia.org/wiki/Mexican_drug_war",
+    "https://www.pbs.org/newshour/world/mexican-army-kills-jalisco-new-generation-cartel-leader-el-mencho-official-says",
+    "https://www.razon.com.mx/mexico/2026/07/10/suman-31-ataques-con-drones-en-lucha-por-cartel-de-sinaloa/",
+    "https://www.militaryperiscope.com/weapons/ground-combat-vehicles/armored-reconnaissance/dn-xi-protected-vehicle/overview/",
+    "https://www.defensa.com/mexico/ejercito-mexicano-artillara-blindados-ligeros-ametralladoras",
+    "https://en.wikipedia.org/wiki/FX-05_Xiuhcoatl"
+  ]
+}

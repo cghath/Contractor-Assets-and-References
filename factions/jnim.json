@@ -1,0 +1,383 @@
+{
+  "id": "jnim",
+  "name": "JNIM (Jama'at Nusrat al-Islam wal-Muslimin)",
+  "short": "JNIM",
+  "kind": "non_state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#1C1C1C",
+    "#F2F2EE"
+  ],
+  "blocs": [
+    "al_qaeda_network"
+  ],
+  "campaign_tier": "early",
+  "alignment_to_player": "hostile",
+  "player_client": false,
+  "relations": {
+    "player": -100,
+    "sahel_aes": -100,
+    "africa_corps": -100,
+    "fra": -95,
+    "usa": -95,
+    "rus": -95,
+    "gbr": -85,
+    "can": -95,
+    "aus": -95,
+    "deu": -90,
+    "egy": -50,
+    "al_qaeda": 85,
+    "aqap": 60,
+    "al_shabaab": 55,
+    "isis": -90
+  },
+  "theatres": [
+    "sahel"
+  ],
+  "languages": [
+    "Bambara",
+    "Fulfulde (Fula)",
+    "Tamasheq",
+    "Arabic",
+    "French",
+    "Mooré (Burkina Faso)"
+  ],
+  "callout_language": "Fulfulde and Bambara in central and southern Mali and Burkina Faso; Tamasheq and Arabic in the north.",
+  "doctrine": {
+    "summary": "Jama'at Nusrat al-Islam wal-Muslimin was formed in March 2017 by merging Ansar Dine, al-Qaeda in the Islamic Maghreb's Sahara branch, al-Mourabitoun and the Macina Liberation Front, under Iyad Ag Ghaly with Amadou Koufa as a senior commander; it is al-Qaeda's Sahel affiliate. It is the fastest-growing armed group in the Sahel, operating across Mali, Burkina Faso and western Niger and spreading into northern Benin and Togo. Its fighters move in large motorbike columns backed by pickups and technicals, overrun army outposts, take vehicles and heavy weapons from Malian and Burkinabe forces, impose sieges and blockades on towns and use small drones. In September-November 2025 its fuel blockade paralysed Bamako; on 25 April 2026 it launched coordinated attacks, took Kidal with Tuareg separatist allies, and reimposed a blockade on Bamako on 28 April 2026, calling for a 'common front' to bring down the junta. It fights the AES juntas, Russia's Africa Corps and Islamic State Sahel Province. In the game JNIM is the main early-game enemy in the sahel: motorbike swarms, captured army vehicles and blockade checkpoints on roads.",
+    "squad_size": 8,
+    "fireteam": "Motorbike groups of 2 riders per bike, massed into columns of dozens for attacks; local katiba units. In game: 8 in battle-buddy pairs, swarms of 4-8 bikes.",
+    "tactics": [
+      "Motorbike swarms that converge on an outpost or convoy from several directions, then disperse",
+      "Road blockade checkpoints that stop and burn fuel convoys (escort contract hook)",
+      "Ambush of army convoys on laterite roads through bush and forest",
+      "Captured army vehicles and technicals as fire support",
+      "Quadcopter munition drops on outposts as an AI hazard ability",
+      "IED hazards on approach roads, telegraphed for the player",
+      "Withdraw into villages and forest reserves, keeping the casualty rule active"
+    ],
+    "ai_tuning": {
+      "aggression": 0.7,
+      "discipline": 0.45,
+      "suppression_resistance": 0.5,
+      "flanking": 0.7,
+      "grenade_use": 0.4,
+      "medical_care": 0.15,
+      "night_capability": 0.35,
+      "marksmanship": 0.45,
+      "morale": 0.7
+    }
+  },
+  "camo": [
+    {
+      "name": "Sahel dress and turban (boubou, tagelmust)",
+      "palette": [
+        "#C8B79A",
+        "#7A6448",
+        "#2F2F2F",
+        "#E7E1D2"
+      ],
+      "use": "Most fighters"
+    },
+    {
+      "name": "Captured Malian / Burkinabe army camo",
+      "palette": [
+        "#5B6B3A",
+        "#7E6E48",
+        "#3E4A2A",
+        "#B5A67E"
+      ],
+      "use": "Uniforms taken from overrun outposts"
+    },
+    {
+      "name": "Desert and khaki",
+      "palette": [
+        "#C2A878",
+        "#9A7F54",
+        "#6E5A3A"
+      ],
+      "use": "Northern units"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "AKM / Type 56 (7.62x39mm)"
+    ],
+    "autorifleman": [
+      "PKM (7.62x54R)",
+      "RPK (7.62x39mm)"
+    ],
+    "marksman": [
+      "SVD (7.62x54R)"
+    ],
+    "grenadier": [
+      "AKM (7.62x39mm) with hand grenades"
+    ],
+    "at": [
+      "RPG-7 with PG-7V / OG-7V"
+    ],
+    "medic": [
+      "AKM (7.62x39mm)"
+    ],
+    "squad_leader": [
+      "AKMS (7.62x39mm)",
+      "Captured army rifles"
+    ],
+    "sniper": [
+      "SVD (7.62x54R)"
+    ],
+    "sidearm": [
+      "Assorted pistols"
+    ]
+  },
+  "launchers": [
+    "RPG-7 (PG-7V, OG-7V) [in_game]",
+    "SPG-9 / captured recoilless guns [not_in_game: vehicle weapons]"
+  ],
+  "body_armor": {
+    "helmet": "none",
+    "vest": "none",
+    "plates": "none",
+    "notes": "Chest rigs; some captured army vests and helmets. Game: none, light on captured-kit fighters (proposed)."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "motorcycle",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": "Motorbikes are JNIM's defining vehicle: columns of dozens, two riders each."
+    },
+    {
+      "vehicle_id": "toyota_hilux",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": "Pickups, many captured from the Malian and Burkinabe armies."
+    },
+    {
+      "vehicle_id": "toyota_land_cruiser",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Land Cruiser 70-series pickups, often captured army vehicles."
+    },
+    {
+      "vehicle_id": "technical_dshk",
+      "role": "technical",
+      "prevalence": "common",
+      "notes": "DShK technicals."
+    },
+    {
+      "vehicle_id": "technical_zpu",
+      "role": "technical",
+      "prevalence": "uncommon",
+      "notes": "ZPU 14.5 mm technicals."
+    },
+    {
+      "vehicle_id": "fpv_drone",
+      "role": "uav",
+      "prevalence": "uncommon",
+      "notes": "Commercial quadcopters dropping small munitions on outposts (documented since 2023-2024). AI hazard ability."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "jnim_moto_swarm",
+      "name": "Motorbike swarm (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "motorcycle",
+      "notes": "4 motorbikes, 2 riders each."
+    },
+    {
+      "id": "jnim_moto_pair",
+      "name": "Motorbike scout pair",
+      "composition": [
+        {
+          "role": "rifleman",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "motorcycle"
+    },
+    {
+      "id": "jnim_technical_crew",
+      "name": "Technical crew",
+      "composition": [
+        {
+          "role": "driver",
+          "count": 1
+        },
+        {
+          "role": "gunner",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "technical_dshk"
+    },
+    {
+      "id": "jnim_blockade_post",
+      "name": "Road blockade checkpoint",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "toyota_hilux",
+      "notes": "Stops convoys on a main road; target for convoy-escort contracts."
+    },
+    {
+      "id": "jnim_outpost_assault",
+      "name": "Outpost assault group",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 2
+        },
+        {
+          "role": "rifleman",
+          "count": 10
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "at",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "motorcycle",
+      "notes": "Several swarms plus a technical."
+    },
+    {
+      "id": "jnim_drone_team",
+      "name": "Drone team (AI hazard)",
+      "composition": [
+        {
+          "role": "drone_operator",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "fpv_drone"
+    },
+    {
+      "id": "jnim_ied_team",
+      "name": "IED hazard team",
+      "composition": [
+        {
+          "role": "rifleman",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "motorcycle",
+      "notes": "Pre-placed IED hazards on a laterite road plus a watcher pair."
+    },
+    {
+      "id": "jnim_hvt_guard",
+      "name": "Commander and guard detail",
+      "composition": [
+        {
+          "role": "leader_hvt",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 5
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "toyota_land_cruiser"
+    }
+  ],
+  "support_assets": [
+    "Motorbike swarm reinforcements (game event)",
+    "Quadcopter munition-drop hazard",
+    "IED hazards on approach roads",
+    "Mortar fire on outposts",
+    "Captured technical fire support"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [],
+    "as_target": [
+      "fuel_convoy_escort_vs_blockade",
+      "outpost_defence_vs_swarm",
+      "blockade_checkpoint_clearance",
+      "hvt_capture_or_kill",
+      "hostage_rescue",
+      "drone_team_hunt",
+      "ied_route_clearance",
+      "town_relief_under_siege"
+    ]
+  },
+  "notes": "JNIM is UN-listed and US-designated, and the al-Qaeda affiliate in the Sahel (relation al_qaeda 85). It fights the Alliance of Sahel States juntas (sahel_aes), Russia's Africa Corps (africa_corps), and Islamic State Sahel Province (isis). It has also killed many civilians and run sieges of towns. Status 2026: after the 2025 fuel blockade around Bamako, JNIM's coordinated attacks of 25 April 2026 (with Tuareg separatist allies who took Kidal) and the blockade reimposed on Bamako from 28 April 2026 are the largest challenge yet to Mali's junta; AFP could not verify how fully the blockade was enforced. Game framing: the main early-game enemy in the sahel, where the player most often works for the AES juntas or escorts convoys; the contract board should note that the AES and Africa Corps are themselves implicated in abuses, so civilian-casualty rules apply fully.",
+  "proposed": [
+    "campaign_tier",
+    "relations.player",
+    "doctrine.ai_tuning (all values)",
+    "doctrine.squad_size (game cell size)",
+    "unit_templates (game compositions)",
+    "support_assets (game events and hazards)",
+    "contract_types.as_target",
+    "vehicles[].prevalence (game weighting)",
+    "body_armor (game tier mapping)",
+    "camo (approximate palettes)",
+    "player_trade (hostile-only: not sellable)",
+    "Motorbike swarm spawns as a game event",
+    "relations values (factual direction, game magnitudes)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Jama%27at_Nasr_al-Islam_wal_Muslimin",
+    "https://en.wikipedia.org/wiki/Iyad_Ag_Ghaly",
+    "https://www.africanews.com/2026/04/29/mali-jihadists-threaten-to-impose-blockade-on-bamako/",
+    "https://www.criticalthreats.org/analysis/mali-jnim-fla-somalia-shabaab-houthi-sudan-rsf-saf-nile-mozambique-prc-drc-m23-africa-file-april-30-2026",
+    "https://www.thenewhumanitarian.org/opinion/first-person/2026/05/01/unprecedented-mali-attacks-shock-and-fear",
+    "https://www.ilpost.it/2026/04/29/jnim-embargo-bamako-mali/"
+  ]
+}

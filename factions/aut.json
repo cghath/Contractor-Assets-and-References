@@ -1,0 +1,371 @@
+{
+  "id": "aut",
+  "name": "Austrian Armed Forces (Österreichisches Bundesheer)",
+  "short": "Austria",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#C8102E",
+    "#FFFFFF"
+  ],
+  "blocs": [
+    "neutral",
+    "eu",
+    "schengen",
+    "nato_partnership_for_peace",
+    "european_sky_shield"
+  ],
+  "campaign_tier": "mid",
+  "alignment_to_player": "neutral",
+  "player_client": true,
+  "relations": {
+    "player": 15,
+    "deu": 70,
+    "che": 60,
+    "ita": 50,
+    "fra": 45,
+    "irl": 40,
+    "gbr": 35,
+    "usa": 30,
+    "ukr": 40,
+    "pol": 35,
+    "srb": 15,
+    "tur": 10,
+    "rus": -30,
+    "blr": -25,
+    "afg_taliban": -40,
+    "isis": -90,
+    "al_qaeda": -85,
+    "hezbollah": -30,
+    "cartel_pacifico": -40,
+    "cartel_jalisco_nueva": -40,
+    "pmc_halcyon": 0,
+    "pmc_kestrel": -35,
+    "pmc_black_sable": -20
+  },
+  "theatres": [
+    "alpine_europe",
+    "lebanon_south"
+  ],
+  "languages": [
+    "German (Austrian German)"
+  ],
+  "callout_language": "German",
+  "doctrine": {
+    "summary": "A neutral EU member's conscript-and-professional army built around territorial defence, disaster relief and long-running peacekeeping (KFOR in Kosovo, EUFOR Althea in Bosnia, UNIFIL in Lebanon). The 'Mission vorWärts' and Aufbauplan 2032+ programmes are rebuilding heavy capability after years of cuts: 225 Pandur Evolution 6x6 APCs ordered in 2024 (36 with Skyranger 30 anti-drone/air-defence turrets), the modernisation of 112 Ulan (ASCOD) IFVs by 2030, overhauled Leopard 2A4 tanks, UH-60M and ex-US S-70 Black Hawks and AW169 helicopters. Austria joined the European Sky Shield Initiative while remaining militarily neutral and outside NATO.",
+    "squad_size": 8,
+    "fireteam": "Gruppe of 8 in two fireteams with battle-buddy pairs; Jäger (light infantry) in Pandur or Dingo, Panzergrenadiere in Ulan.",
+    "tactics": [
+      "Territorial defence of Alpine valleys and the Danube corridor",
+      "Mechanised counter-attacks with Ulan and Leopard 2A4",
+      "Jagdkommando special forces raids and hostage rescue",
+      "Counter-drone screens with Skyranger-equipped Pandurs",
+      "Peacekeeping patrols and observation posts abroad (UNIFIL, KFOR)"
+    ],
+    "ai_tuning": {
+      "aggression": 0.35,
+      "discipline": 0.8,
+      "suppression_resistance": 0.6,
+      "flanking": 0.55,
+      "grenade_use": 0.5,
+      "medical_care": 0.75,
+      "night_capability": 0.6,
+      "marksmanship": 0.7,
+      "morale": 0.6
+    }
+  },
+  "camo": [
+    {
+      "name": "Austrian multi-terrain pattern (Tarnanzug neu)",
+      "palette": [
+        "#8C8664",
+        "#5F5C40",
+        "#B8AD88",
+        "#3E3A2A"
+      ],
+      "use": "Current field uniform (rolled out from 2019)"
+    },
+    {
+      "name": "Bundesheer grey-olive (legacy)",
+      "palette": [
+        "#5E6247",
+        "#45493A"
+      ],
+      "use": "Legacy single-colour uniform, still seen on reservists and in training"
+    },
+    {
+      "name": "Vehicle olive",
+      "palette": [
+        "#4B5133",
+        "#353A26"
+      ],
+      "use": "Pandur, Ulan, Leopard, Dingo"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "StG 77 A1 / Steyr AUG A3 (5.56x45mm)"
+    ],
+    "autorifleman": [
+      "MG 74 (7.62x51mm)",
+      "FN Minimi (5.56x45mm)"
+    ],
+    "marksman": [
+      "Steyr SSG 69 / SSG 08 (7.62x51mm / .338 LM)"
+    ],
+    "grenadier": [
+      "StG 77 A1 with 40 mm underbarrel launcher"
+    ],
+    "at": [
+      "PAR 66/79 (Carl Gustaf-type 84 mm recoilless) [MAAWS: in_game]",
+      "PAL 2000 BB (BILL 2 ATGM) [not_in_game]"
+    ],
+    "medic": [
+      "StG 77 A1 (5.56x45mm)"
+    ],
+    "squad_leader": [
+      "StG 77 A1 (5.56x45mm)"
+    ],
+    "sniper": [
+      "Steyr HS .50 (12.7x99mm)",
+      "SSG 08 (.338 Lapua Magnum)"
+    ],
+    "sidearm": [
+      "P 80 / Glock 17 (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "PAR 66/79 84 mm recoilless rifle (Carl Gustaf family = MAAWS [in_game])",
+    "PAL 2000 BB / BILL 2 ATGM [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "ceramic",
+    "notes": "Modern ballistic helmets and plate carriers for deployed and active units (medium); Jagdkommando heavy where needed."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "pandur_ii",
+      "role": "apc",
+      "prevalence": "signature",
+      "notes": "Pandur Evolution 6x6 (GDELS-Steyr, Vienna): 225 ordered in 2024 for delivery by 2032, including 36 with Skyranger 30; older Pandur I 6x6 still in service. Recorded under the Pandur family file."
+    },
+    {
+      "vehicle_id": "pizarro",
+      "role": "ifv",
+      "prevalence": "common",
+      "notes": "ASCOD Ulan, 112 being modernised by 2030 (Panzergrenadierbataillone 13 and 35)."
+    },
+    {
+      "vehicle_id": "leopard2a6",
+      "role": "mbt",
+      "prevalence": "uncommon",
+      "notes": "Leopard 2A4 (Panzerbataillon 14), overhauled; 16 returned to troops in 2026."
+    },
+    {
+      "vehicle_id": "dingo",
+      "role": "mrap",
+      "prevalence": "common",
+      "notes": "Dingo 2 protected vehicles, used on KFOR and UNIFIL tours."
+    },
+    {
+      "vehicle_id": "iveco_lmv",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Iveco LMV (Husar) light multirole vehicles."
+    },
+    {
+      "vehicle_id": "uh60",
+      "role": "transport_heli",
+      "prevalence": "uncommon",
+      "notes": "S-70A-42 Black Hawks plus UH-60M (ordered 2021-2022) and two ex-US S-70s delivered in 2026."
+    },
+    {
+      "vehicle_id": "g_wagen",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Puch G (Austrian-built) utility vehicles."
+    },
+    {
+      "vehicle_id": "pinzgauer",
+      "role": "truck",
+      "prevalence": "uncommon",
+      "notes": "Austrian-built Pinzgauer 4x4/6x6, being phased out."
+    },
+    {
+      "vehicle_id": "m109",
+      "role": "artillery",
+      "prevalence": "uncommon",
+      "notes": "M109A5Ö self-propelled howitzers."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "aut_jaeger_gruppe",
+      "name": "Jäger group (Pandur)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "pandur_ii"
+    },
+    {
+      "id": "aut_pzgren_section",
+      "name": "Panzergrenadier section (Ulan)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "pizarro"
+    },
+    {
+      "id": "aut_unifil_patrol",
+      "name": "UNIFIL / KFOR peacekeeping patrol",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "dingo"
+    },
+    {
+      "id": "aut_jagdkommando",
+      "name": "Jagdkommando team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "uh60"
+    }
+  ],
+  "support_assets": [
+    "Skyranger 30 counter-drone and short-range air defence (from Pandur Evolution)",
+    "M109A5Ö artillery and 120 mm mortars",
+    "Black Hawk transport and medevac",
+    "Engineer and disaster-relief units"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 20,
+        "unlocks": [
+          "Austrian-made small arms and pistols (Steyr AUG-pattern rifles, Glock pistols)",
+          "Optics and personal kit"
+        ]
+      },
+      {
+        "rep": 40,
+        "unlocks": [
+          "Ammunition and 40 mm grenades",
+          "Precision and anti-materiel rifles (Steyr SSG 08, HS .50)"
+        ]
+      },
+      {
+        "rep": 60,
+        "unlocks": [
+          "Pinzgauer and Puch G utility vehicles (surplus)",
+          "Used Pandur I APC (game-level, subject to export licence)"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "Protect Austrian peacekeepers during the UNIFIL drawdown (lebanon_south)",
+      "Escort UN or NGO convoys",
+      "Evacuate Austrian and EU nationals",
+      "Recover stolen or diverted Austrian-made weapons",
+      "Secure diplomatic venues and international organisations (Vienna-type staging hub, alpine_europe)"
+    ],
+    "as_target": []
+  },
+  "notes": "Neutral EU state; never a target faction. In game: staging area and neutral contract source in alpine_europe, a UNIFIL contributor in lebanon_south, and a possible arms market (Steyr, Glock). Situation as of October 2026: the Bundesheer is in a large rearmament programme (Pandur Evolution, Ulan modernisation, Black Hawk and AW169 helicopters, Skyranger air defence) under the Aufbauplan 2032+, and a 2026 debate about neutrality continues; Austria remains outside NATO. UNIFIL's mandate ends on 31 December 2026, with withdrawal in 2027.",
+  "proposed": [
+    "campaign_tier",
+    "relations.player",
+    "doctrine.ai_tuning",
+    "player_trade (Austria as an arms market, rep thresholds and items)",
+    "contract_types.as_client",
+    "unit_templates",
+    "vehicles[].prevalence (game weighting)",
+    "body_armor (game tier mapping)",
+    "blocs (neutral is a game tag)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Austrian_Armed_Forces",
+    "https://militaeraktuell.at/en/the-austrian-armed-forces-are-planning-these-procurements-and-investments-in-2026/",
+    "https://www.vienna.at/main-battle-tanks-new-helicopters-new-leadership-bundesheer-continues-to-upgrade-in-2026/9898382",
+    "https://www.vol.at/bundesheer-news-on-pandur-evolution-tanks/9880136",
+    "https://en.wikipedia.org/wiki/Pandur_I",
+    "https://en.wikipedia.org/wiki/ASCOD_armoured_fighting_vehicle"
+  ]
+}

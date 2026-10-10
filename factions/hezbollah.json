@@ -1,0 +1,464 @@
+{
+  "id": "hezbollah",
+  "name": "Hezbollah",
+  "short": "Hezbollah",
+  "kind": "non_state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#F2C200",
+    "#2E7D32",
+    "#F2F2EE"
+  ],
+  "blocs": [
+    "axis_of_resistance"
+  ],
+  "campaign_tier": "mid",
+  "alignment_to_player": "hostile",
+  "player_client": false,
+  "relations": {
+    "player": -100,
+    "isr": -100,
+    "usa": -95,
+    "gbr": -85,
+    "can": -85,
+    "aus": -80,
+    "fra": -60,
+    "deu": -65,
+    "ita": -55,
+    "syr": -70,
+    "sau": -65,
+    "are": -65,
+    "jor": -45,
+    "egy": -35,
+    "tur": -35,
+    "qat": -15,
+    "pse_pa": -15,
+    "irq": 0,
+    "rus": 15,
+    "irn": 90,
+    "houthis": 80,
+    "iraqi_militias": 80,
+    "hamas": 70,
+    "pij": 75,
+    "al_qaeda": -90,
+    "isis": -100
+  },
+  "theatres": [
+    "lebanon_south",
+    "israel",
+    "levant_syria"
+  ],
+  "languages": [
+    "Arabic (Lebanese dialect)",
+    "Persian (some liaison with IRGC advisers)"
+  ],
+  "callout_language": "Lebanese Arabic; disciplined, coded radio procedure and field telephones; heavy use of prepared positions with wired communications.",
+  "doctrine": {
+    "summary": "Hezbollah is a Lebanese Shia Islamist party and armed movement founded in the early 1980s with Iranian backing, and before 2024 the most heavily armed non-state force in the world. Its military wing combines territorial infantry units in southern Lebanon, the Radwan special forces, anti-tank guided missile teams, a large rocket and missile arsenal and a drone unit, with Iranian (IRGC Quds Force) training and supply. It fought Israel in 2006, deployed thousands of fighters to Syria for the Assad government (2012-2024) and opened a front against Israel on 8 October 2023. The 2024 war (pager attack, killing of Hassan Nasrallah and most of its senior command, Israeli ground incursion) badly degraded it; the fall of Assad in December 2024 cut its overland supply route through Syria. Under Secretary-General Naim Qassem it re-entered the war on 2 March 2026 alongside Iran; Israel launched ground operations on 16 March 2026 and has held much of southern Lebanon since, through a temporary ceasefire (April 2026) and a June 2026 framework that Hezbollah rejected because it demands full disarmament. In the game Hezbollah is the step up from the early-game cells: disciplined squads, prepared positions, ATGM teams that punish exposed vehicles, and drones.",
+    "squad_size": 8,
+    "fireteam": "Light-infantry sections of 6-10 with organic RPG and PKM, plus attached ATGM and sniper teams; Radwan units are better trained and equipped. In game: 8 in battle-buddy pairs.",
+    "tactics": [
+      "ATGM ambush from long range across valleys and from village edges against vehicles; the team displaces after one or two shots",
+      "Prepared defensive positions: bunkers, underground launch and storage sites and tunnels as level geometry",
+      "Shoot-and-scoot rocket teams as off-map events, with the launch site as a contract objective",
+      "Drone spotting and one-way attack drones as AI hazard abilities",
+      "Village defence using stone houses, olive groves and terraces; fall back to the next village line",
+      "Radwan raid teams that infiltrate at night in small groups",
+      "Fall back into civilian areas, which keeps the casualty rule active"
+    ],
+    "ai_tuning": {
+      "aggression": 0.6,
+      "discipline": 0.7,
+      "suppression_resistance": 0.7,
+      "flanking": 0.65,
+      "grenade_use": 0.6,
+      "medical_care": 0.5,
+      "night_capability": 0.55,
+      "marksmanship": 0.6,
+      "morale": 0.7
+    }
+  },
+  "camo": [
+    {
+      "name": "Woodland-type field uniform",
+      "palette": [
+        "#4B5530",
+        "#6B6A3E",
+        "#2E2E1F",
+        "#7E6A45"
+      ],
+      "use": "Standard fighters' uniform; Russian-style and US woodland-type patterns are both seen"
+    },
+    {
+      "name": "Radwan multicam-type / olive",
+      "palette": [
+        "#6F6A4E",
+        "#8C8159",
+        "#3E3B2C",
+        "#B2A27A"
+      ],
+      "use": "Radwan force and better-equipped units"
+    },
+    {
+      "name": "Civilian clothing",
+      "palette": [
+        "#2C2C2C",
+        "#5D5548",
+        "#BFB7A8",
+        "#3A4A5A"
+      ],
+      "use": "Off-duty members, logistics and village guards"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "AKM / AK-74-pattern rifles (7.62x39 / 5.45x39mm)",
+      "M16 / M4-pattern rifles (5.56x45mm)"
+    ],
+    "autorifleman": [
+      "PKM (7.62x54R)"
+    ],
+    "marksman": [
+      "SVD (7.62x54R)"
+    ],
+    "grenadier": [
+      "AKM with GP-25 (40 mm)",
+      "M4 with M203 (40 mm)"
+    ],
+    "at": [
+      "RPG-7 with PG-7V / OG-7V",
+      "RPG-29",
+      "Kornet / Konkurs ATGM teams",
+      "Iranian Toophan and Almas ATGM teams"
+    ],
+    "medic": [
+      "AKM (7.62x39mm)"
+    ],
+    "squad_leader": [
+      "M4-pattern carbine (5.56x45mm)",
+      "AKMS (7.62x39mm)"
+    ],
+    "sniper": [
+      "SVD (7.62x54R)",
+      "Iranian Sayyad / AM-50 (12.7mm, Steyr HS .50 copy)"
+    ],
+    "sidearm": [
+      "Glock-type pistols (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "RPG-7 (PG-7V, OG-7V) [in_game]",
+    "RPG-29 [not_in_game: AI threat only]",
+    "9M133 Kornet ATGM [not_in_game: AI threat only]",
+    "9M113 Konkurs ATGM and Iranian Toophan [not_in_game: AI threat only]",
+    "Almas (Iranian Spike-type) ATGM [not_in_game: AI threat only]",
+    "Dehlavieh (Iranian Kornet copy) [not_in_game: AI threat only]"
+  ],
+  "body_armor": {
+    "helmet": "light",
+    "vest": "light",
+    "plates": "mixed",
+    "notes": "Regular fighters wear chest rigs and soft vests; Radwan units have plate carriers and helmets. Game: light for most, medium for Radwan (proposed)."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "toyota_hilux",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": "Pickups and civilian vans for moving teams, rockets and supplies."
+    },
+    {
+      "vehicle_id": "fpv_drone",
+      "role": "uav",
+      "prevalence": "signature",
+      "notes": "FPV and quadcopter drones used for strikes and spotting on the Israeli border in 2024-2026. AI hazard ability."
+    },
+    {
+      "vehicle_id": "shahed136",
+      "role": "uav",
+      "prevalence": "common",
+      "notes": "Family file for Iranian-type one-way attack drones; Hezbollah's are smaller types (Shahed-101/107-class, Ababil and Mersad). Off-map hazard."
+    },
+    {
+      "vehicle_id": "technical_zu23",
+      "role": "technical",
+      "prevalence": "common",
+      "notes": "ZU-23-2 on pickups, used as anti-aircraft and fire-support technicals in Syria and Lebanon."
+    },
+    {
+      "vehicle_id": "technical_rockets",
+      "role": "mlrs",
+      "prevalence": "common",
+      "notes": "Truck- and pickup-mounted 107 mm and larger rocket launchers; in game the launch site is an objective."
+    },
+    {
+      "vehicle_id": "motorcycle",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Motorbikes for scouts and Radwan teams moving between villages."
+    },
+    {
+      "vehicle_id": "toyota_land_cruiser",
+      "role": "light",
+      "prevalence": "uncommon",
+      "notes": "SUVs for commanders' details."
+    },
+    {
+      "vehicle_id": "t55",
+      "role": "mbt",
+      "prevalence": "rare",
+      "notes": "T-55 tanks shown at the 2016 al-Qusayr parade in Syria; held mainly in Syria and probably lost or abandoned with the fall of Assad. Rare set-piece vehicle."
+    },
+    {
+      "vehicle_id": "m113",
+      "role": "apc",
+      "prevalence": "rare",
+      "notes": "M113s (ex-South Lebanon Army stock) shown at the 2016 al-Qusayr parade, some with ZPU or AA mounts. Rare set-piece vehicle."
+    },
+    {
+      "vehicle_id": "bmp1",
+      "role": "ifv",
+      "prevalence": "rare",
+      "notes": "BMP-1s shown at the 2016 al-Qusayr parade (Syrian army origin). Rare set-piece vehicle."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "hzb_infantry_section",
+      "name": "Infantry section (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "hzb_atgm_team",
+      "name": "ATGM ambush team",
+      "composition": [
+        {
+          "role": "at",
+          "count": 2
+        },
+        {
+          "role": "rifleman",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null,
+      "notes": "Fires a Kornet-type missile at the first exposed vehicle, then displaces; the player must locate and hunt the team."
+    },
+    {
+      "id": "hzb_radwan_raid",
+      "name": "Radwan raid team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "motorcycle",
+      "notes": "Higher tuning tier; night raids."
+    },
+    {
+      "id": "hzb_rocket_team",
+      "name": "Rocket launch team",
+      "composition": [
+        {
+          "role": "driver",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "technical_rockets",
+      "notes": "Shoot-and-scoot; launch site is a contract objective."
+    },
+    {
+      "id": "hzb_aa_technical",
+      "name": "ZU-23 technical crew",
+      "composition": [
+        {
+          "role": "driver",
+          "count": 1
+        },
+        {
+          "role": "gunner",
+          "count": 2
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "technical_zu23"
+    },
+    {
+      "id": "hzb_drone_team",
+      "name": "Drone team (AI hazard)",
+      "composition": [
+        {
+          "role": "drone_operator",
+          "count": 2
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "fpv_drone"
+    },
+    {
+      "id": "hzb_bunker_defence",
+      "name": "Prepared position defence",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "sniper",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null,
+      "notes": "Bunker or tunnel entrance as level geometry; target for demolition contracts."
+    },
+    {
+      "id": "hzb_hvt_guard",
+      "name": "Commander and guard detail",
+      "composition": [
+        {
+          "role": "leader_hvt",
+          "count": 1
+        },
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "toyota_land_cruiser"
+    }
+  ],
+  "support_assets": [
+    "107 mm and heavier rocket salvos (off-map, telegraphed)",
+    "One-way attack drone hazard (Shahed-101/Ababil-type)",
+    "FPV and quadcopter drone hazard",
+    "ATGM overwatch on approach routes",
+    "82/120 mm mortar fire",
+    "Sniper overwatch"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [],
+    "as_target": [
+      "atgm_team_hunt",
+      "rocket_launch_site_clearance",
+      "tunnel_entrance_demolition",
+      "weapons_cache_raid",
+      "hvt_capture_or_kill",
+      "drone_team_hunt",
+      "smuggling_route_interdiction",
+      "convoy_ambush_defence"
+    ]
+  },
+  "notes": "Hezbollah is designated a terrorist organisation (in whole or its military wing) by the US, UK, Canada, Australia, the EU (military wing), the Arab League and the GCC, and is also a Lebanese political party with seats in parliament. It fought for Assad in Syria and is hostile to the post-Assad Syrian government. Status as of October 2026: re-entered the war on 2 March 2026 alongside Iran; Israel occupied much of southern Lebanon from 16 March 2026 and stayed through a temporary ceasefire in April and a June framework; Lebanese Speaker Nabih Berri said Hezbollah would withdraw south of the Litani if Israel withdrew in parallel, while Hezbollah rejected full disarmament. The Lebanese state (no faction file in this pack) is not hostile to it. Its 2016 parade of T-55s, M113s, BMP-1s and ZSU-57-2s at al-Qusayr is the factual basis for rare armour; most of that kit was in Syria and is presumed lost after December 2024. Game framing: a mid-tier step up from the early-game cells (Captain's brief allows mid), strongest in lebanon_south.",
+  "proposed": [
+    "campaign_tier",
+    "relations.player",
+    "doctrine.ai_tuning (all values)",
+    "doctrine.squad_size (game cell size)",
+    "unit_templates (game compositions)",
+    "support_assets (game events and hazards)",
+    "contract_types.as_target",
+    "vehicles[].prevalence (game weighting)",
+    "body_armor (game tier mapping)",
+    "camo (approximate palettes)",
+    "player_trade (hostile-only: not sellable)",
+    "campaign_tier mid (brief allows mid)",
+    "Radwan units as a higher tuning tier",
+    "Rare armour (t55, m113, bmp1) as set-piece vehicles only",
+    "relations values (factual direction, game magnitudes)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Hezbollah",
+    "https://en.wikipedia.org/wiki/Hezbollah_armed_strength",
+    "https://en.wikipedia.org/wiki/Radwan_Force",
+    "https://en.wikipedia.org/wiki/2026_Lebanon_war",
+    "https://en.wikipedia.org/wiki/Naim_Qassem",
+    "https://naharnet.com/stories/en/320518-berri-hezbollah-to-withdraw-from-south-litani-if-full-truce-reached-israel-pulls-back",
+    "https://www.diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/liban-annonce-de-la-mise-en-oeuvre-d-un-cessez-le-feu-entre-israel-et-le-liban",
+    "https://today.lorientlejour.com/article/1499639/qassem-to-hezbollah-fighters-the-final-word-will-be-on-the-ground.html"
+  ]
+}

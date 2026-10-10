@@ -1,0 +1,331 @@
+{
+  "id": "pij",
+  "name": "Palestinian Islamic Jihad (al-Quds Brigades)",
+  "short": "PIJ",
+  "kind": "non_state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#1C1C1C",
+    "#C9A227",
+    "#F2F2EE"
+  ],
+  "blocs": [
+    "axis_of_resistance"
+  ],
+  "campaign_tier": "early",
+  "alignment_to_player": "hostile",
+  "player_client": false,
+  "relations": {
+    "player": -100,
+    "isr": -100,
+    "usa": -90,
+    "gbr": -90,
+    "can": -90,
+    "aus": -90,
+    "fra": -80,
+    "deu": -80,
+    "pse_pa": -55,
+    "egy": -30,
+    "jor": -40,
+    "sau": -40,
+    "are": -55,
+    "syr": -35,
+    "irn": 85,
+    "hamas": 80,
+    "hezbollah": 75,
+    "houthis": 65,
+    "iraqi_militias": 60,
+    "al_qaeda": -40,
+    "isis": -80
+  },
+  "theatres": [
+    "gaza_west_bank",
+    "israel"
+  ],
+  "languages": [
+    "Arabic (Palestinian dialect)"
+  ],
+  "callout_language": "Palestinian Arabic; West Bank cells use local nicknames for streets and alleys inside the refugee camps.",
+  "doctrine": {
+    "summary": "Palestinian Islamic Jihad is a smaller Islamist armed movement than Hamas, closely aligned with and funded by Iran. Its armed wing, the al-Quds (Saraya al-Quds) Brigades, was the second-largest armed group in Gaza before the war, specialising in rocket units, and fought alongside Hamas from 7 October 2023. It does not govern territory. In the northern West Bank its local battalions (Jenin, Tulkarm, Nur Shams and others) operated as camp-based cells until Israeli operations from January 2025 and PA security operations broke up most of them. In the game PIJ is the easiest early-game enemy: very small cells, light weapons, motorbikes and civilian cars, roadside IED hazards in camp alleys, and quick dispersal into dense housing.",
+    "squad_size": 4,
+    "fireteam": "Cells of 2-5 fighters with a local leader; camp battalions mobilise loosely during raids. In game: one or two battle-buddy pairs per encounter.",
+    "tactics": [
+      "Camp alley defence: shoot from doorways and rooftops, then move through connected houses",
+      "Roadside IED hazards on camp approach roads, telegraphed for the player to spot and clear",
+      "Motorbike scouts that warn of the player's approach and trigger the cell to scatter",
+      "Short rocket salvos from Gaza as off-map events",
+      "Hide-and-blend: fighters drop weapons and mix with civilians, so the casualty rule constrains the player",
+      "Small quadcopter spotting drones over Gaza encounters"
+    ],
+    "ai_tuning": {
+      "aggression": 0.55,
+      "discipline": 0.3,
+      "suppression_resistance": 0.35,
+      "flanking": 0.4,
+      "grenade_use": 0.4,
+      "medical_care": 0.15,
+      "night_capability": 0.25,
+      "marksmanship": 0.35,
+      "morale": 0.55
+    }
+  },
+  "camo": [
+    {
+      "name": "Black fatigues",
+      "palette": [
+        "#1C1C1C",
+        "#2E2E2E",
+        "#4A4A4A"
+      ],
+      "use": "Uniformed al-Quds Brigades fighters (plain colours in game, no insignia)"
+    },
+    {
+      "name": "Civilian clothing",
+      "palette": [
+        "#3B3B3B",
+        "#6E6457",
+        "#C9C3B8",
+        "#34495E"
+      ],
+      "use": "Most West Bank cell members"
+    },
+    {
+      "name": "Mixed woodland surplus",
+      "palette": [
+        "#4E5A3A",
+        "#6B5B3E",
+        "#2F3324",
+        "#8C8460"
+      ],
+      "use": "Surplus woodland-pattern jackets and vests in Gaza"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "M16 / M4-pattern rifles, often locally assembled (5.56x45mm)",
+      "AKM / Type 56 (7.62x39mm)"
+    ],
+    "autorifleman": [
+      "PKM (7.62x54R)"
+    ],
+    "marksman": [
+      "M16 with magnified optic (5.56x45mm)"
+    ],
+    "grenadier": [
+      "AKM (7.62x39mm) with hand grenades"
+    ],
+    "at": [
+      "RPG-7 with PG-7V / OG-7V"
+    ],
+    "medic": [
+      "AKM (7.62x39mm)"
+    ],
+    "squad_leader": [
+      "M4-pattern carbine (5.56x45mm)"
+    ],
+    "sniper": [
+      "Steyr HS .50-type rifle (12.7mm), Gaza only"
+    ],
+    "sidearm": [
+      "Assorted 9x19mm pistols",
+      "Carlo-type improvised submachine guns (West Bank)"
+    ]
+  },
+  "launchers": [
+    "RPG-7 (PG-7V, OG-7V) [in_game]",
+    "Kornet ATGM [not_in_game: rare AI threat in Gaza]",
+    "Short-range unguided rockets (Quds family) [not_in_game: off-map event only]"
+  ],
+  "body_armor": {
+    "helmet": "none",
+    "vest": "none",
+    "plates": "none",
+    "notes": "Chest rigs only; occasional soft vest. Game: none for most fighters, light for leaders (proposed)."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "motorcycle",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": "Motorbikes for scouts and two-man teams in the West Bank camps and Gaza."
+    },
+    {
+      "vehicle_id": "toyota_hilux",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Civilian pickups for moving fighters and supplies."
+    },
+    {
+      "vehicle_id": "fpv_drone",
+      "role": "uav",
+      "prevalence": "uncommon",
+      "notes": "Commercial quadcopters for spotting and small munition drops in Gaza. AI hazard ability."
+    },
+    {
+      "vehicle_id": "toyota_land_cruiser",
+      "role": "light",
+      "prevalence": "rare",
+      "notes": "Older SUVs used by commanders' details in Gaza."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "pij_camp_cell",
+      "name": "Camp cell (3-5)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "pij_moto_scouts",
+      "name": "Motorbike scout pair",
+      "composition": [
+        {
+          "role": "rifleman",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "motorcycle",
+      "notes": "Warns the cell; if not stopped, the target cell disperses."
+    },
+    {
+      "id": "pij_ied_team",
+      "name": "IED hazard team",
+      "composition": [
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "squad_leader",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null,
+      "notes": "Appears as pre-placed roadside IED hazards plus a watcher pair; the player clears the route or catches the watchers."
+    },
+    {
+      "id": "pij_rpg_ambush",
+      "name": "RPG ambush pair-plus",
+      "composition": [
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "pij_rocket_unit",
+      "name": "Rocket unit (launch site guard)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        }
+      ],
+      "vehicle_id": "toyota_hilux",
+      "notes": "Contract target: rocket launch site clearance; launches appear as off-map events until cleared."
+    },
+    {
+      "id": "pij_hvt_guard",
+      "name": "Commander and guard detail",
+      "composition": [
+        {
+          "role": "leader_hvt",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "toyota_land_cruiser"
+    },
+    {
+      "id": "pij_drone_spotter",
+      "name": "Drone spotter team (AI hazard)",
+      "composition": [
+        {
+          "role": "drone_operator",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "fpv_drone"
+    }
+  ],
+  "support_assets": [
+    "Short-range rocket salvo (off-map event)",
+    "60 mm mortar fire",
+    "Roadside IED hazards on approach roads",
+    "Quadcopter spotting / munition-drop hazard (Gaza only)"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [],
+    "as_target": [
+      "cell_clear_out",
+      "hvt_capture_or_kill",
+      "weapons_cache_raid",
+      "ied_route_clearance",
+      "rocket_launch_site_clearance",
+      "hostage_rescue"
+    ]
+  },
+  "notes": "Palestinian Islamic Jihad was founded in 1981; it is smaller than Hamas, closely tied to Iran, and designated a terrorist organisation by the US, EU, UK and others. Its armed wing took part in the 7 October 2023 attack and held hostages. Its West Bank battalions (Jenin Brigade, Tulkarm Brigade and similar camp groups formed from 2021) were largely dismantled by the PA's Jenin operation (December 2024 - January 2025) and Israel's 'Iron Wall' operation from January 2025, which displaced tens of thousands of camp residents. Syrian authorities detained PIJ figures in Damascus in 2025 after Assad's fall. Status 2026: PIJ is reported to have accepted the Board of Peace disarmament plan for Gaza in principle, while Israel continued targeted strikes on members during the ceasefire (e.g. June 2026). Game framing: the lowest-ramp early-game enemy in gaza_west_bank; West Bank encounters should keep civilian density very high so the casualty rule dominates player choices.",
+  "proposed": [
+    "campaign_tier",
+    "relations.player",
+    "doctrine.ai_tuning (all values)",
+    "doctrine.squad_size (game cell size)",
+    "unit_templates (game compositions)",
+    "support_assets (game events and hazards)",
+    "contract_types.as_target",
+    "vehicles[].prevalence (game weighting)",
+    "body_armor (game tier mapping)",
+    "camo (approximate palettes)",
+    "player_trade (hostile-only: not sellable)",
+    "Lowest-ramp early-game tuning",
+    "relations values (factual direction, game magnitudes)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Palestinian_Islamic_Jihad",
+    "https://en.wikipedia.org/wiki/Al-Quds_Brigades",
+    "https://en.wikipedia.org/wiki/Jenin_Brigades",
+    "https://en.wikipedia.org/wiki/Tulkarm_Brigade",
+    "https://ecfr.eu/special/mapping_palestinian_politics/al_quds_brigades_aqb_islamic_jihad/",
+    "https://www.jpost.com/tags/palestinian-islamic-jihad?page=6"
+  ]
+}

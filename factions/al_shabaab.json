@@ -1,0 +1,407 @@
+{
+  "id": "al_shabaab",
+  "name": "al-Shabaab (Harakat al-Shabaab al-Mujahideen)",
+  "short": "al-Shabaab",
+  "kind": "non_state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#1C1C1C",
+    "#F2F2EE"
+  ],
+  "blocs": [
+    "al_qaeda_network"
+  ],
+  "campaign_tier": "early",
+  "alignment_to_player": "hostile",
+  "player_client": false,
+  "relations": {
+    "player": -100,
+    "usa": -100,
+    "gbr": -100,
+    "can": -100,
+    "aus": -100,
+    "fra": -90,
+    "deu": -90,
+    "ita": -90,
+    "som": -100,
+    "tur": -85,
+    "are": -80,
+    "sau": -65,
+    "qat": -55,
+    "egy": -55,
+    "jpn": -50,
+    "kor": -50,
+    "al_qaeda": 85,
+    "aqap": 70,
+    "jnim": 55,
+    "houthis": 10,
+    "isis": -90
+  },
+  "theatres": [
+    "horn_of_africa"
+  ],
+  "languages": [
+    "Somali",
+    "Arabic",
+    "Swahili (Kenyan recruits)"
+  ],
+  "callout_language": "Somali; clan-based nicknames; Arabic for formal orders.",
+  "doctrine": {
+    "summary": "Harakat al-Shabaab al-Mujahideen emerged from the youth wing of the Islamic Courts Union after the 2006 Ethiopian intervention and pledged allegiance to al-Qaeda in 2012. It lost Mogadishu (2011) and the main towns to African Union and Somali forces but still controls or contests much of rural southern and central Somalia (Jubaland, Lower and Middle Shabelle, Hiraan, Galgaduud), where it runs courts and taxation. Its fighters are light infantry in pickups and on foot, with technicals (ZU-23, DShK, SPG-9 and 106 mm recoilless guns), heavy use of IEDs and mortars, complex attacks on bases and hotels, and large raids on forward operating bases. Since 2025 the AU mission is AUSSOM (Uganda, Ethiopia, Kenya and others). In 2026 a joint Ugandan-Somali offensive retook Mubarak, while al-Shabaab raised attacks around the roads into Mogadishu by about 60% in June-August 2026 and US analysts called it stronger than in years. In the game al-Shabaab is the main early-game enemy in horn_of_africa: technical-heavy raids, IED hazards on supply roads and ambushes in bush and farmland.",
+    "squad_size": 8,
+    "fireteam": "Light-infantry sections of 6-12; raids massed from several sections with technicals in support. In game: 8 in battle-buddy pairs.",
+    "tactics": [
+      "Convoy ambush on supply roads: IED hazard to stop the lead vehicle, then RPG and PKM fire from the bush",
+      "Massed dawn raids on forward operating bases supported by technicals",
+      "Technical shoot-and-scoot with ZU-23, DShK and recoilless guns",
+      "Mortar harassment of bases and Mogadishu areas as off-map events",
+      "VBIED as a telegraphed set-piece hazard at base gates",
+      "Withdraw into villages and farmland along the Shabelle river, keeping the casualty rule active",
+      "Quadcopter spotting (reported recent use; rare)"
+    ],
+    "ai_tuning": {
+      "aggression": 0.65,
+      "discipline": 0.45,
+      "suppression_resistance": 0.5,
+      "flanking": 0.6,
+      "grenade_use": 0.4,
+      "medical_care": 0.15,
+      "night_capability": 0.3,
+      "marksmanship": 0.4,
+      "morale": 0.65
+    }
+  },
+  "camo": [
+    {
+      "name": "Somali civilian dress (macawiis sarong, shirt, scarf)",
+      "palette": [
+        "#E7E1D2",
+        "#5A6E8C",
+        "#7A6448",
+        "#2F2F2F"
+      ],
+      "use": "Most fighters"
+    },
+    {
+      "name": "Ex-army woodland / desert surplus",
+      "palette": [
+        "#4E5A3A",
+        "#6B5B3E",
+        "#C2A878",
+        "#2F3324"
+      ],
+      "use": "Uniformed raid units"
+    },
+    {
+      "name": "Bush khaki",
+      "palette": [
+        "#A08B64",
+        "#7A6A4C",
+        "#C9B58E",
+        "#3E3B2C"
+      ],
+      "use": "Plain khaki and olive fatigues"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "AKM / Type 56 (7.62x39mm)"
+    ],
+    "autorifleman": [
+      "PKM (7.62x54R)",
+      "RPK (7.62x39mm)"
+    ],
+    "marksman": [
+      "SVD (7.62x54R)"
+    ],
+    "grenadier": [
+      "AKM (7.62x39mm) with hand grenades"
+    ],
+    "at": [
+      "RPG-7 with PG-7V / OG-7V"
+    ],
+    "medic": [
+      "AKM (7.62x39mm)"
+    ],
+    "squad_leader": [
+      "AKMS (7.62x39mm)",
+      "M16 / G3 (captured)"
+    ],
+    "sniper": [
+      "SVD (7.62x54R)"
+    ],
+    "sidearm": [
+      "Makarov / Tokarev-pattern pistols"
+    ]
+  },
+  "launchers": [
+    "RPG-7 (PG-7V, OG-7V) [in_game]",
+    "SPG-9 and M40 106 mm recoilless guns on technicals [not_in_game: vehicle weapons]"
+  ],
+  "body_armor": {
+    "helmet": "none",
+    "vest": "none",
+    "plates": "none",
+    "notes": "Chest rigs; captured vests occasionally. Game: none (proposed)."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "technical_zu23",
+      "role": "technical",
+      "prevalence": "signature",
+      "notes": "ZU-23-2 technicals for fire support in raids."
+    },
+    {
+      "vehicle_id": "technical_dshk",
+      "role": "technical",
+      "prevalence": "signature",
+      "notes": "DShK technicals."
+    },
+    {
+      "vehicle_id": "toyota_land_cruiser",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": "Land Cruiser 70-series pickups: the standard Somali gun-truck chassis."
+    },
+    {
+      "vehicle_id": "technical_spg9",
+      "role": "technical",
+      "prevalence": "common",
+      "notes": "SPG-9 recoilless gun technicals."
+    },
+    {
+      "vehicle_id": "technical_m40",
+      "role": "technical",
+      "prevalence": "common",
+      "notes": "M40 106 mm recoilless rifle technicals, long common in Somalia."
+    },
+    {
+      "vehicle_id": "toyota_hilux",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Hilux pickups for moving fighters."
+    },
+    {
+      "vehicle_id": "motorcycle",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Motorbikes for scouts, tax collectors and targeted attacks."
+    },
+    {
+      "vehicle_id": "technical_zpu",
+      "role": "technical",
+      "prevalence": "uncommon",
+      "notes": "ZPU 14.5 mm technicals."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "shb_raid_section",
+      "name": "Raid section (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "shb_zu23_crew",
+      "name": "ZU-23 technical crew",
+      "composition": [
+        {
+          "role": "driver",
+          "count": 1
+        },
+        {
+          "role": "gunner",
+          "count": 2
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "technical_zu23"
+    },
+    {
+      "id": "shb_recoilless_crew",
+      "name": "Recoilless technical crew",
+      "composition": [
+        {
+          "role": "driver",
+          "count": 1
+        },
+        {
+          "role": "gunner",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "technical_m40"
+    },
+    {
+      "id": "shb_road_ambush",
+      "name": "Road ambush team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        }
+      ],
+      "vehicle_id": null,
+      "notes": "Starts with a telegraphed IED hazard on the lead vehicle."
+    },
+    {
+      "id": "shb_mortar_team",
+      "name": "Mortar team",
+      "composition": [
+        {
+          "role": "mortar_crew",
+          "count": 2
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "toyota_hilux",
+      "notes": "Off-map mortar events until the team is found."
+    },
+    {
+      "id": "shb_moto_pair",
+      "name": "Motorbike pair",
+      "composition": [
+        {
+          "role": "rifleman",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "motorcycle"
+    },
+    {
+      "id": "shb_base_assault",
+      "name": "FOB assault group",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 2
+        },
+        {
+          "role": "rifleman",
+          "count": 10
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "at",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "technical_dshk",
+      "notes": "Dawn raid; can open with a telegraphed VBIED hazard at the gate."
+    },
+    {
+      "id": "shb_hvt_guard",
+      "name": "Commander and guard detail",
+      "composition": [
+        {
+          "role": "leader_hvt",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 5
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "toyota_land_cruiser"
+    }
+  ],
+  "support_assets": [
+    "Mortar harassment (60/82 mm) as off-map events",
+    "IED hazards on supply roads",
+    "VBIED hazard at base gates (telegraphed set piece)",
+    "Technical fire support (ZU-23, recoilless guns)",
+    "Quadcopter spotting (rare)"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [],
+    "as_target": [
+      "fob_defence_vs_raid",
+      "convoy_ambush_defence",
+      "ied_route_clearance",
+      "hvt_capture_or_kill",
+      "mortar_team_hunt",
+      "checkpoint_and_tax_post_clearance",
+      "hostage_rescue",
+      "weapons_cache_raid"
+    ]
+  },
+  "notes": "al-Shabaab is a UN-sanctioned, US-designated terrorist organisation and al-Qaeda's affiliate in East Africa (relation al_qaeda 85). It fights the Somali federal government and army (som, an others-bloc faction), AUSSOM contingents (Uganda, Ethiopia, Kenya and others, which are not factions here), Turkish-trained Somali units and US strikes. Status 2026: AUSSOM says the group has taken no new territory since March 2025 and a joint Ugandan-Somali offensive retook Mubarak in March 2026, but attacks on the roads into Mogadishu rose sharply in mid-2026 and some analysts assess it as stronger than in years. Its rival in Somalia is Islamic State - Somalia Province (covered by isis). UN experts reported contacts with the Houthis (arms) in 2024-2025; the small positive value is low-confidence. Game framing: the main early-game enemy in horn_of_africa.",
+  "proposed": [
+    "campaign_tier",
+    "relations.player",
+    "doctrine.ai_tuning (all values)",
+    "doctrine.squad_size (game cell size)",
+    "unit_templates (game compositions)",
+    "support_assets (game events and hazards)",
+    "contract_types.as_target",
+    "vehicles[].prevalence (game weighting)",
+    "body_armor (game tier mapping)",
+    "camo (approximate palettes)",
+    "player_trade (hostile-only: not sellable)",
+    "relations.houthis (low-confidence; UN-reported contacts)",
+    "VBIED as a telegraphed set-piece hazard",
+    "relations values (factual direction, game magnitudes)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Al-Shabaab_(militant_group)",
+    "https://en.wikipedia.org/wiki/African_Union_Support_and_Stabilization_Mission_in_Somalia",
+    "https://www.dawan.africa/news/aussom-al-shabaab-has-captured-no-new-territory-since-march-2025",
+    "https://www.the-star.co.ke/news/2026-06-01-al-shabaab-stronger-than-in-years-warns-us-think-tank-report",
+    "https://www.criticalthreats.org/analysis/aussom-shabaab-somalia-puntland-fgs-somalia-iswap-boko-nigeria-africa-file-august-13-2026",
+    "https://allafrica.com/stories/202603040725.html"
+  ]
+}

@@ -12,7 +12,8 @@
     "nzl",
     "isr",
     "nor",
-    "est"
+    "est",
+    "pmc_halcyon"
   ],
   "crew": 2,
   "passengers": 2,

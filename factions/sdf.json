@@ -1,0 +1,310 @@
+{
+  "id": "sdf",
+  "name": "Syrian Democratic Forces (SDF)",
+  "short": "SDF",
+  "kind": "non_state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#F5D300",
+    "#2E7D32",
+    "#C62828"
+  ],
+  "blocs": [
+    "global_coalition_against_isis"
+  ],
+  "campaign_tier": "early",
+  "alignment_to_player": "neutral",
+  "player_client": true,
+  "relations": {
+    "player": 20,
+    "usa": 40,
+    "fra": 35,
+    "gbr": 25,
+    "deu": 30,
+    "krg_peshmerga": 25,
+    "irq": 0,
+    "syr": -15,
+    "tur": -65,
+    "irn": -25,
+    "rus": -5,
+    "iraqi_militias": -25,
+    "hezbollah": -20,
+    "isis": -100,
+    "al_qaeda": -70,
+    "pmc_halcyon": 5,
+    "pmc_kestrel": -40,
+    "pmc_black_sable": -20
+  },
+  "theatres": [
+    "levant_syria",
+    "mesopotamia"
+  ],
+  "languages": [
+    "Kurdish (Kurmanji)",
+    "Arabic",
+    "Syriac"
+  ],
+  "callout_language": "Kurdish (Kurmanji)",
+  "doctrine": {
+    "summary": "The Kurdish-led, multi-ethnic force of north-east Syria, built around the YPG and the women's YPJ with Arab, Syriac and other components. From 2015 it was the US-led coalition's main ground partner against the Islamic State, took Raqqa (2017) and Baghouz (2019), and guarded tens of thousands of IS detainees and the al-Hol and Roj camps. After Assad's fall it fought Turkish-backed Syrian National Army factions (Tishrin Dam, early 2025), signed an integration agreement with Damascus in March 2025, and after a January 2026 government offensive accepted a 29 January 2026 ceasefire that handed Raqqa and Deir ez-Zor to the government and began folding the SDF into Syrian army brigades. By mid-2026 four SDF brigades had been formed (two in Kobani and Hasakah) and about 6,000 members registered on army payrolls, while Qamishli, Hasakah and Kobani remained under SDF/Kurdish administration and a former YPG commander became a deputy defence minister. IS detention sites were handed over in 2026. The force is light infantry with good small-unit skills, snipers and drone use, US-supplied vehicles and many local up-armoured trucks.",
+    "squad_size": 8,
+    "fireteam": "Tabur (company) sections of 8-10 in pickups or Humvees; mixed-sex YPJ units; battle-buddy pairs with strong sniper support.",
+    "tactics": [
+      "Counter-IS raids and sweeps in the Euphrates valley and desert, often with partner special forces",
+      "Defence of towns with prepared positions, tunnels and sniper nests",
+      "Snipers and anti-materiel rifles as the backbone of defensive fights",
+      "Commercial and FPV drones for surveillance and strikes",
+      "Guarding detention sites and camps (prison-break defence)"
+    ],
+    "ai_tuning": {
+      "aggression": 0.5,
+      "discipline": 0.6,
+      "suppression_resistance": 0.6,
+      "flanking": 0.55,
+      "grenade_use": 0.5,
+      "medical_care": 0.45,
+      "night_capability": 0.45,
+      "marksmanship": 0.6,
+      "morale": 0.65
+    }
+  },
+  "camo": [
+    {
+      "name": "Khaki / olive field uniform",
+      "palette": [
+        "#8A8160",
+        "#5E5A40",
+        "#B8AD88"
+      ],
+      "use": "Most YPG/YPJ and SDF units; coloured scarves"
+    },
+    {
+      "name": "Woodland and MultiCam-type (US-supplied)",
+      "palette": [
+        "#9C8B66",
+        "#6F6248",
+        "#4B5133",
+        "#C9B98F"
+      ],
+      "use": "Counter-terror units (YAT) and commandos"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "AK-47 / AKM (7.62x39mm)",
+      "M16A4 / M4 (5.56x45mm, US-supplied)"
+    ],
+    "autorifleman": [
+      "PKM (7.62x54R)"
+    ],
+    "marksman": [
+      "SVD Dragunov (7.62x54R)"
+    ],
+    "grenadier": [
+      "AK with GP-25 / M4 with M203"
+    ],
+    "at": [
+      "RPG-7 [in_game]"
+    ],
+    "medic": [
+      "AK-47 (7.62x39mm)"
+    ],
+    "squad_leader": [
+      "M4 carbine with optic or AKM"
+    ],
+    "sniper": [
+      "Locally made 12.7 mm / 14.5 mm anti-materiel rifles",
+      "SVD (7.62x54R)"
+    ],
+    "sidearm": [
+      "Makarov PM / Glock (9 mm)"
+    ]
+  },
+  "launchers": [
+    "RPG-7 with PG-7V / OG-7V [in_game]",
+    "AT4 (US-supplied, limited) [in_game]",
+    "Kornet / Konkurs ATGM (captured, rare) [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "light",
+    "vest": "light",
+    "plates": "mixed",
+    "notes": "Line units: chest rigs, some soft vests (light). Counter-terror units (YAT): US-supplied helmets and plate carriers (medium)."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "technical_dshk",
+      "role": "technical",
+      "prevalence": "signature",
+      "notes": "Pickups with DShK and PKM, often with welded side plates."
+    },
+    {
+      "vehicle_id": "humvee",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "US-supplied Humvees (M1151 etc.) of YAT and commando units."
+    },
+    {
+      "vehicle_id": "toyota_hilux",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Unarmed pickups and up-armoured local trucks."
+    },
+    {
+      "vehicle_id": "maxxpro",
+      "role": "mrap",
+      "prevalence": "uncommon",
+      "notes": "MRAPs supplied to counter-IS partners, used at detention sites and on raids."
+    },
+    {
+      "vehicle_id": "technical_zu23",
+      "role": "technical",
+      "prevalence": "uncommon",
+      "notes": "ZU-23-2 on pickups and trucks for fire support."
+    },
+    {
+      "vehicle_id": "fpv_drone",
+      "role": "uav",
+      "prevalence": "uncommon",
+      "notes": "Commercial and FPV drones used in the 2025 Tishrin Dam fighting and against IS cells."
+    },
+    {
+      "vehicle_id": "t55",
+      "role": "mbt",
+      "prevalence": "rare",
+      "notes": "A few captured T-55s and old armour (game rarity)."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "sdf_section",
+      "name": "SDF infantry section",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "technical_dshk"
+    },
+    {
+      "id": "sdf_yat_raid",
+      "name": "Counter-terror (YAT) raid team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "humvee"
+    },
+    {
+      "id": "sdf_sniper_team",
+      "name": "Sniper and anti-materiel team",
+      "composition": [
+        {
+          "role": "sniper",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "sdf_detention_guard",
+      "name": "Detention-site guard force",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 5
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "maxxpro"
+    }
+  ],
+  "support_assets": [
+    "Commercial and FPV drones",
+    "ZU-23 and DShK fire support on trucks",
+    "Mortars",
+    "Historically coalition air support (US forces left Syria in early 2026)"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [
+      "Counter-IS raid on a desert cell or weapons cache",
+      "Reinforce a detention site or camp against a breakout attempt",
+      "Escort aid convoys to camps (al-Hol type)",
+      "Recover kidnapped staff or local officials",
+      "Train and accompany a counter-terror unit"
+    ],
+    "as_target": []
+  },
+  "notes": "Situation as of October 2026: integration into the Syrian state is under way but incomplete. The January 2026 government offensive and the 29 January ceasefire moved Raqqa and Deir ez-Zor under Damascus; SDF brigades are being formed inside the army; Kurdish-majority Qamishli, Hasakah and Kobani are still SDF/Autonomous Administration-run; IS detention sites were handed over in 2026 and IS attacks have risen in Raqqa and Deir ez-Zor. US forces left Syria in February-March 2026. syr -> sdf is -20 and sdf -> syr is -15 (tense partners in an unfinished integration, not open war). Türkiye regards the SDF as linked to the PKK (which announced dissolution in 2025) and remains hostile. Game: an early-game client for counter-IS work in levant_syria and mesopotamia (Syria-Iraq border). Proposal: if integration completes during the campaign, the SDF could fold into syr as a sub-faction.",
+  "proposed": [
+    "campaign_tier",
+    "relations.player",
+    "doctrine.ai_tuning",
+    "contract_types.as_client",
+    "unit_templates",
+    "vehicles[].prevalence",
+    "body_armor (game tier mapping)",
+    "folding sdf into syr if integration completes (campaign event)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Syrian_Democratic_Forces",
+    "https://english.enabbaladi.net/archives/2026/07/government-source-6000-sdf-members-join-syrian-army/",
+    "https://www.rudaw.net/english/middleeast/syria/020520261",
+    "https://english.enabbaladi.net/archives/2026/02/syrian-army-delegation-in-al-hasakah-steps-to-integrate-sdf-brigades/",
+    "https://en.wikipedia.org/wiki/People%27s_Defense_Units"
+  ]
+}

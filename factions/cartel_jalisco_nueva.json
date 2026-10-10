@@ -1,0 +1,312 @@
+{
+  "id": "cartel_jalisco_nueva",
+  "name": "Cártel Nueva Frontera (fictional)",
+  "short": "Nueva Frontera",
+  "kind": "criminal",
+  "inspired_by": "A fast-expanding, paramilitary-style cartel from western Mexico: uniformed cells with unit insignia, armoured trucks, drone-dropped explosives and mines left as hazards, aggressive expansion into rivals' territory, and a leadership hit by a state decapitation strike. No real organisation, leader or emblem is used.",
+  "flag_colors": [
+    "#1F1F1F",
+    "#5E6A3F",
+    "#B22222"
+  ],
+  "blocs": [
+    "cartel"
+  ],
+  "campaign_tier": "early",
+  "alignment_to_player": "hostile",
+  "player_client": false,
+  "relations": {
+    "player": -65,
+    "mex": -95,
+    "usa": -90,
+    "can": -75,
+    "cartel_pacifico": -85,
+    "pmc_halcyon": -50,
+    "pmc_kestrel": -10,
+    "pmc_black_sable": -20
+  },
+  "theatres": [
+    "mexico_cartel_belt"
+  ],
+  "languages": [
+    "Spanish"
+  ],
+  "callout_language": "Mexican Spanish (western slang, military-style radio calls)",
+  "doctrine": {
+    "summary": "The most military-looking armed group in the theatre. Cells wear matching camouflage, plate carriers and patches, move in convoys of armoured trucks, and fight in organised groups with radio discipline. The group is known for drone-dropped explosives, mines and improvised explosives on approach roads (game: map hazards), and for answering state pressure with mass blockades and arson across many towns at once. After a (fictional) decapitation strike against its founder the group is in a succession struggle that makes cells less predictable but no less violent.",
+    "squad_size": 8,
+    "fireteam": "Uniformed cells of 8-12 in two armoured trucks; pairs with a leader on the radio; specialist drone and explosives teams attached.",
+    "tactics": [
+      "Uniformed assault cells in armoured trucks attacking rival plazas and police posts",
+      "Drone-dropped explosives on patrols and positions (game hazard)",
+      "Mined approach roads and booby-trapped safe houses (map hazards, marked by cues)",
+      "Mass blockades of burning vehicles across a region after an HVT operation",
+      "Ambushes on Army and Guardia Nacional convoys from high ground"
+    ],
+    "ai_tuning": {
+      "aggression": 0.75,
+      "discipline": 0.5,
+      "suppression_resistance": 0.5,
+      "flanking": 0.55,
+      "grenade_use": 0.6,
+      "medical_care": 0.3,
+      "night_capability": 0.4,
+      "marksmanship": 0.5,
+      "morale": 0.55
+    }
+  },
+  "camo": [
+    {
+      "name": "Uniformed cell camouflage (woodland/MultiCam-style)",
+      "palette": [
+        "#5E6A3F",
+        "#3E4429",
+        "#8A7A55",
+        "#1F1F1A"
+      ],
+      "use": "Matching uniforms with fictional unit patches"
+    },
+    {
+      "name": "Black tactical",
+      "palette": [
+        "#1C1C1C",
+        "#353535",
+        "#4A4A44"
+      ],
+      "use": "Special 'elite' cells and night raids"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "AR-15 / M4-pattern rifles (5.56x45mm)",
+      "AK-47-pattern rifles (7.62x39mm)"
+    ],
+    "autorifleman": [
+      "M249-type LMG (5.56x45mm)",
+      "M60 / PKM-type belt-fed MG (7.62mm)"
+    ],
+    "marksman": [
+      "AR-10-pattern DMR (7.62x51mm)"
+    ],
+    "grenadier": [
+      "40 mm grenade launchers",
+      "Hand grenades"
+    ],
+    "at": [
+      "RPG-7 (rare) [in_game]",
+      ".50 BMG anti-materiel rifle"
+    ],
+    "medic": [
+      "AR-15-pattern rifle"
+    ],
+    "squad_leader": [
+      "M4-pattern rifle with optic and radio"
+    ],
+    "sniper": [
+      "Barrett M82-pattern .50 BMG (12.7x99mm)"
+    ],
+    "sidearm": [
+      "Glock-pattern (9x19mm), 5.7x28mm pistols"
+    ]
+  },
+  "launchers": [
+    "RPG-7 with PG-7V / OG-7V [in_game] (rare)",
+    "40 mm grenade launchers [not_in_game as launcher class]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "mixed",
+    "notes": "Most uniformed cells have plate carriers and ballistic helmets (steel or ceramic plates); lookouts and recruits none."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "narco_truck",
+      "role": "technical",
+      "prevalence": "signature",
+      "notes": "Armoured 'monster' trucks, painted and marked with fictional unit initials; the group's trademark."
+    },
+    {
+      "vehicle_id": "toyota_hilux",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Pickups carrying uniformed cells."
+    },
+    {
+      "vehicle_id": "armored_suv",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Commercially armoured SUVs for leaders and assault teams."
+    },
+    {
+      "vehicle_id": "fpv_drone",
+      "role": "uav",
+      "prevalence": "common",
+      "notes": "Drones dropping explosives on positions and patrols (game hazard)."
+    },
+    {
+      "vehicle_id": "motorcycle",
+      "role": "light",
+      "prevalence": "uncommon",
+      "notes": "Halcón lookouts on motorbikes."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "cjn_assault_cell",
+      "name": "Uniformed assault cell",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "narco_truck"
+    },
+    {
+      "id": "cjn_roadblock",
+      "name": "Roadblock (halcón lookouts plus armoured truck)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "lookout",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "narco_truck"
+    },
+    {
+      "id": "cjn_plaza_defence",
+      "name": "Plaza defence (fortified ranch or town block)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 6
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "sniper",
+          "count": 1
+        },
+        {
+          "role": "drone_operator",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "narco_truck"
+    },
+    {
+      "id": "cjn_drone_team",
+      "name": "Drone team (hazard)",
+      "composition": [
+        {
+          "role": "drone_operator",
+          "count": 2
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "fpv_drone"
+    },
+    {
+      "id": "cjn_convoy_escort",
+      "name": "Convoy escort (two armoured trucks)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 5
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "driver",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "narco_truck"
+    }
+  ],
+  "support_assets": [
+    "Drone-dropped explosives (game hazard)",
+    "Mined or booby-trapped approaches (map hazard with visible cues)",
+    "Regional blockades: burning vehicles on many roads after an HVT strike",
+    "Halcón lookout network"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [],
+    "as_target": [
+      "Lab raid",
+      "HVT capture (succession contender)",
+      "Hostage rescue",
+      "Convoy interdiction",
+      "Break a regional blockade and reopen a highway",
+      "Destroy a drone workshop or explosives cache"
+    ]
+  },
+  "notes": "FICTIONAL cartel; no real organisation, leader, insignia or slogans are depicted. Inspired by the real-world type of a fast-expanding paramilitary western Mexican cartel; the real-world reference for the 'decapitation then nationwide blockades' beat is the February 2026 Army operation in Jalisco. Tone is game-level only. Hostile to the player, never hires or sells. At war with cartel_pacifico and with the Mexican state; in game the two cartels may fight each other on the same map.",
+  "proposed": [
+    "name (fictional)",
+    "flag_colors (fictional insignia)",
+    "campaign_tier",
+    "relations (all, game-level)",
+    "doctrine.ai_tuning",
+    "unit_templates (roles lookout, drone_operator and driver are game roles)",
+    "vehicles[].prevalence",
+    "contract_types.as_target",
+    "body_armor (game tier mapping)",
+    "blocs (cartel is a game tag)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Mexican_drug_war",
+    "https://en.wikipedia.org/wiki/Narco_tank",
+    "https://www.pbs.org/newshour/world/mexican-army-kills-jalisco-new-generation-cartel-leader-el-mencho-official-says",
+    "https://digital-release.newsnationnow.com/?p=2392355",
+    "https://www.expreso.ec/actualidad/mundo/carteles-mexicanos-intensifican-ataques-con-drones-letales-bajo-presion-de-eeuu-273208.html"
+  ]
+}

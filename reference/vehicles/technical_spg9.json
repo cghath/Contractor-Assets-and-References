@@ -7,7 +7,10 @@
   "origin": "Japan / Soviet Union (weapon)",
   "type": "technical",
   "operators": [
-    "syr"
+    "syr",
+    "houthis",
+    "aqap",
+    "al_shabaab"
   ],
   "crew": 3,
   "passengers": 2,

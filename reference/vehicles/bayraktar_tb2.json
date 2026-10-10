@@ -8,7 +8,9 @@
   "type": "uav",
   "operators": [
     "aze",
-    "tur"
+    "tur",
+    "sahel_aes",
+    "som"
   ],
   "crew": 0,
   "passengers": 0,

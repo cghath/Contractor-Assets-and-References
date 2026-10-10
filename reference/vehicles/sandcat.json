@@ -9,7 +9,8 @@
   "type": "light",
   "operators": [
     "aze",
-    "kaz"
+    "kaz",
+    "mex"
   ],
   "crew": 2,
   "passengers": 6,
@@ -43,7 +44,8 @@
   "variants": [
     "SandCat Gen 2/3",
     "ATGM carrier",
-    "Recon"
+    "Recon",
+    "DN-XI (Mexican Army, SandCat-based, longer chassis, Mexican-designed turret)"
   ],
   "existing_model": null,
   "model_priority": "low",

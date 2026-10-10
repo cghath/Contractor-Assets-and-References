@@ -10,7 +10,8 @@
   "type": "transport_heli",
   "operators": [
     "rou",
-    "ukr"
+    "ukr",
+    "che"
   ],
   "crew": 3,
   "passengers": 16,
@@ -46,7 +47,8 @@
     "IAR 330L",
     "IAR 330 SOCAT",
     "IAR 330 Naval",
-    "SA 330 Puma"
+    "SA 330 Puma",
+    "AS332 Super Puma / AS532 Cougar (CHE, Puma family)"
   ],
   "existing_model": null,
   "model_priority": "low",

@@ -10,7 +10,8 @@
   "operators": [
     "rus",
     "blr",
-    "kaz"
+    "kaz",
+    "pmc_kestrel"
   ],
   "crew": 0,
   "passengers": 0,

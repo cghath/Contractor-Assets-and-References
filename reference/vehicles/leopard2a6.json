@@ -24,7 +24,9 @@
     "ukr",
     "ltu",
     "tur",
-    "qat"
+    "qat",
+    "che",
+    "aut"
   ],
   "crew": 4,
   "passengers": 0,
@@ -101,7 +103,9 @@
     "2A8 / 2A8NOR / Strv 123 (DEU, NOR, SWE, NLD on order)",
     "2PL (POL)",
     "Leopard 2A4 / 2A4T1 (TUR)",
-    "Leopard 2A7+ (QAT)"
+    "Leopard 2A7+ (QAT)",
+    "Pz 87 / Pz 87 WE (CHE)",
+    "2A4 (AUT, overhauled)"
   ],
   "existing_model": null,
   "model_priority": "high",

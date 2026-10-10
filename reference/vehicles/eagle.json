@@ -9,7 +9,8 @@
   "type": "light",
   "operators": [
     "dnk",
-    "deu"
+    "deu",
+    "che"
   ],
   "crew": 1,
   "passengers": 4,
@@ -49,7 +50,8 @@
   ],
   "variants": [
     "Eagle IV",
-    "Eagle V"
+    "Eagle V",
+    "Eagle I-IV / Aufkl Fz 93/97/11 (CHE)"
   ],
   "existing_model": null,
   "model_priority": "low",

@@ -17,7 +17,8 @@
     "nld",
     "est",
     "ltu",
-    "ukr"
+    "ukr",
+    "che"
   ],
   "crew": 3,
   "passengers": 7,
@@ -84,7 +85,8 @@
     "Mjolner mortar",
     "STING sapper",
     "CV9035EE (EST)",
-    "CV90 MkIV (LTU, on order)"
+    "CV90 MkIV (LTU, on order)",
+    "Spz 2000 / CV9030CH (CHE)"
   ],
   "existing_model": null,
   "model_priority": "high",

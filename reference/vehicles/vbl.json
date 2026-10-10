@@ -9,7 +9,8 @@
   "type": "light",
   "operators": [
     "fra",
-    "grc"
+    "grc",
+    "sahel_aes"
   ],
   "crew": 3,
   "passengers": 0,

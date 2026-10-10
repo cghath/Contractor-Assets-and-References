@@ -16,7 +16,8 @@
     "kaz",
     "srb",
     "arm",
-    "aze"
+    "aze",
+    "pmc_kestrel"
   ],
   "crew": 3,
   "passengers": 7,

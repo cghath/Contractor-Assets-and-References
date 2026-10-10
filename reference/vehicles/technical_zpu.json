@@ -1,0 +1,71 @@
+{
+  "id": "technical_zpu",
+  "name": "Pickup technical with ZPU 14.5 mm anti-aircraft gun",
+  "aliases": [
+    "ZPU technical",
+    "14.5 technical"
+  ],
+  "origin": "Japan (vehicle) / USSR (gun)",
+  "type": "technical",
+  "operators": [
+    "isis",
+    "jnim",
+    "al_shabaab"
+  ],
+  "crew": 3,
+  "passengers": 2,
+  "dimensions_m": {
+    "length": 5.3,
+    "width": 1.85,
+    "height": 2.4
+  },
+  "weight_t": 2.8,
+  "armament": [
+    "ZPU-1 or ZPU-2 14.5 mm KPV heavy machine gun mount in the bed"
+  ],
+  "protection": "Unarmoured pickup. Game rule treats the vehicle body as immune to small-calibre, but 7.62x54R and up penetrate; gunner seated and exposed. The 14.5 mm gun can penetrate light armour in game.",
+  "visual_notes": [
+    "ZPU-1 single or ZPU-2 twin barrels on a wheeled or pedestal carriage in the bed",
+    "Gunner's seat and ring sight; long flash hiders",
+    "Hilux or Land Cruiser 79 chassis, often with a cut-down cab"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Tan / mud",
+      "palette": [
+        "#B59E78",
+        "#7A6448"
+      ]
+    },
+    {
+      "name": "Civilian white",
+      "palette": [
+        "#E8E6E0",
+        "#2A2A2A"
+      ]
+    },
+    {
+      "name": "Black and grey",
+      "palette": [
+        "#2A2A2A",
+        "#5A5A5A"
+      ]
+    }
+  ],
+  "variants": [
+    "ZPU-1",
+    "ZPU-2",
+    "ZPU-4 on larger trucks"
+  ],
+  "existing_model": "technical_zpu",
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/ZPU",
+    "https://en.wikipedia.org/wiki/Technical_(vehicle)",
+    "https://commons.wikimedia.org/wiki/Category:ZPU"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/ZPU",
+    "https://en.wikipedia.org/wiki/Technical_(vehicle)"
+  ]
+}

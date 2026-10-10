@@ -8,7 +8,9 @@
   "origin": "Israel",
   "type": "uav",
   "operators": [
-    "isr"
+    "isr",
+    "che",
+    "mex"
   ],
   "crew": 0,
   "passengers": 0,
@@ -40,7 +42,8 @@
   "variants": [
     "Hermes 450",
     "Hermes 900 (larger)",
-    "Watchkeeper WK450 (UK derivative)"
+    "Watchkeeper WK450 (UK derivative)",
+    "ADS 15 / Hermes 900 HFE (CHE)"
   ],
   "existing_model": null,
   "model_priority": "low",

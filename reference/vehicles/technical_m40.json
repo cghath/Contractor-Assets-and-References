@@ -1,0 +1,73 @@
+{
+  "id": "technical_m40",
+  "name": "Pickup technical with M40 106 mm recoilless rifle",
+  "aliases": [
+    "106 technical",
+    "recoilless technical"
+  ],
+  "origin": "Japan (vehicle) / USA (gun)",
+  "type": "technical",
+  "operators": [
+    "al_shabaab",
+    "som"
+  ],
+  "crew": 3,
+  "passengers": 1,
+  "dimensions_m": {
+    "length": 5.2,
+    "width": 1.9,
+    "height": 2.3
+  },
+  "weight_t": 2.7,
+  "armament": [
+    "M40 106 mm recoilless rifle on a pedestal mount in the bed (often with its .50-cal spotting rifle removed)"
+  ],
+  "protection": "Unarmoured pickup (Land Cruiser 70-series or Hilux). Game rule treats the vehicle body as immune to small-calibre, but 7.62x54R and up penetrate; crew and gun are fully exposed. The backblast zone behind the bed is a gameplay hazard for nearby AI.",
+  "visual_notes": [
+    "Very long, thin 106 mm barrel overhanging the cab roof, mounted on a pedestal in the bed",
+    "Barrel often wrapped or painted; spotting rifle tube above the barrel on some",
+    "Land Cruiser 79 single-cab or Hilux chassis; cab roof sometimes cut down for traverse",
+    "Ammunition tubes and spare tyres stacked in the bed"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Somali sand",
+      "palette": [
+        "#C2A878",
+        "#8A7350",
+        "#2A2A2A"
+      ]
+    },
+    {
+      "name": "Civilian white",
+      "palette": [
+        "#E8E6E0",
+        "#9A9A96",
+        "#2A2A2A"
+      ]
+    },
+    {
+      "name": "Olive",
+      "palette": [
+        "#5A5E3C",
+        "#3E412A"
+      ]
+    }
+  ],
+  "variants": [
+    "Land Cruiser 79 single cab",
+    "Hilux",
+    "B-10 / B-11 recoilless gun versions"
+  ],
+  "existing_model": "technical_m40",
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/M40_recoilless_rifle",
+    "https://en.wikipedia.org/wiki/Technical_(vehicle)",
+    "https://commons.wikimedia.org/wiki/Category:M40_recoilless_rifle"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/M40_recoilless_rifle",
+    "https://en.wikipedia.org/wiki/Technical_(vehicle)"
+  ]
+}
