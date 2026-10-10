@@ -1127,111 +1127,196 @@ static func _abrams() -> Canvas:
 	return c
 
 
-## MaxxPro: 6.5 m MRAP with a short bonnet and big grille, one tall armoured cab-and-troop
-## box with small thick windows, a V-hull, 0.58 m radius wheels, rear door with a spare, and
-## a roof turret with the gun-protection kit and an M2.
+## MaxxPro: 6.4 m MRAP with a truck bonnet and tall slatted grille behind a brush guard, one
+## tall armoured cab-and-troop box whose lower sides fold in to the V-hull, thick armoured
+## windows, 1.1 m tyres under square arches, side steps and fuel tank, the rear door with its
+## step and spare tyre, and a roof turret with the gun-protection kit and an M2.
 static func _maxxpro() -> Canvas:
-	var c := Canvas.new(Vector3i(54, 66, 130), 0.05)
-	var hw := 1.2
-	# V-hull, bonnet, cab and troop box.
-	var y := 0.45
-	while y < 0.95:
-		var inset := (0.95 - y) * 1.6
-		c.mbox(-hw + inset, y, 0.9, hw - inset, y + c.vs, 6.1, P.PAINT_DARK)
+	var c := Canvas.new(Vector3i(56, 70, 132), 0.05)
+	# V-hull under the box.
+	var y := 0.48
+	while y < 1.05:
+		var inset := (1.05 - y) * 1.5
+		c.mbox(-1.1 + inset, y, 1.3, 1.1 - inset, y + c.vs, 6.2, P.PAINT_DARK)
 		y += c.vs
-	c.mbox(-1.05, 0.95, 0.15, 1.05, 1.65, 1.15, P.PAINT)
-	c.mbox(-1.0, 1.65, 0.25, 1.0, 1.72, 1.1, P.PAINT_LIGHT)
-	c.mbox(-0.85, 1.0, 0.12, 0.85, 1.55, 0.17, P.BLACK)  # grille
-	var gx := -0.8
-	while gx < 0.85:
-		c.mbox(gx, 1.0, 0.1, gx + 0.05, 1.55, 0.15, P.PAINT_DARK)
-		gx += 0.15
-	c.mbox(-1.15, 0.7, 0.0, 1.15, 0.95, 0.25, P.PAINT_DARK)  # bumper
-	c.mbox(-hw, 0.95, 1.15, hw, 2.75, 6.35, P.PAINT)
-	c.mbox(-hw + 0.1, 2.75, 1.4, hw - 0.1, 2.8, 6.1, P.PAINT_DARK)
-	# Thick armoured glass: two windscreen panes, cab doors, troop windows.
-	c.mskin(-1.05, 1.8, 1.1, -0.06, 2.55, 1.2, P.GLASS)
-	c.mskin(0.06, 1.8, 1.1, 1.05, 2.55, 1.2, P.GLASS)
-	c.mskin(-1.25, 1.85, 1.4, 1.25, 2.5, 2.2, P.GLASS)
-	c.mskin(-1.25, 1.85, 2.45, 1.25, 2.5, 3.15, P.GLASS)
-	for wz: float in [3.8, 4.7, 5.6]:
-		c.mskin(-1.25, 1.95, wz, 1.25, 2.35, wz + 0.4, P.GLASS)
-	c.mskin(-1.25, 1.0, 1.35, 1.25, 2.6, 1.4, P.PAINT_DARK, P.PAINT)  # door seams
-	c.mskin(-1.25, 1.0, 3.2, 1.25, 2.6, 3.25, P.PAINT_DARK, P.PAINT)
-	c.mbox(-0.65, 1.05, 6.35, 0.65, 2.55, 6.42, P.PAINT_DARK)  # rear door
-	c.mwheel(-0.25, 0.25, 1.65, 6.48, 0.45)  # spare (tread facing back)
-	# Wheels and arches, mirrors, lights, steps.
-	for wz: float in [1.25, 5.05]:
-		for side: float in [-1.0, 1.0]:
-			c.mwheel(minf(side * 0.95, side * 1.3), maxf(side * 0.95, side * 1.3), 0.58, wz, 0.58)
-			c.mbox(minf(side * 1.0, side * 1.3), 1.15, wz - 0.7, maxf(side * 1.0, side * 1.3), 1.25, wz + 0.7, P.PAINT_DARK)
+	# Bonnet, grille and front fenders.
+	c.mbox(-0.95, 0.95, 0.2, 0.95, 1.72, 1.5, P.PAINT)
+	c.mbox(-0.9, 1.72, 0.3, 0.9, 1.78, 1.45, P.PAINT)
+	c.mskin(-0.95, 1.7, 0.2, 0.95, 1.8, 0.4, P.PAINT_LIGHT, P.PAINT)
+	c.mbox(-0.82, 1.0, 0.17, 0.82, 1.62, 0.2, P.BLACK)
+	var gx := -0.78
+	while gx < 0.8:
+		c.mbox(gx, 1.0, 0.15, gx + 0.05, 1.62, 0.2, P.PAINT_DARK)
+		gx += 0.13
 	for side: float in [-1.0, 1.0]:
-		c.mbar(Vector3(side * 1.2, 2.2, 1.3), Vector3(side * 1.45, 2.25, 1.2), 0.04, P.METAL)
-		c.mbox(side * 1.4, 1.9, 1.12, side * 1.4 + side * 0.1, 2.3, 1.25, P.BLACK)
-		c.mbox(side * 0.85 - 0.12, 1.25, 0.12, side * 0.85 + 0.12, 1.4, 0.15, P.PAINT_LIGHT)
-		c.mbox(minf(side * 1.2, side * 1.32), 0.8, 1.9, maxf(side * 1.2, side * 1.32), 0.85, 2.4, P.METAL)
-	_turret(c, 0.0, 2.8, 2.7, 1.0)
+		c.mbox(minf(side * 0.95, side * 1.28), 1.15, 0.45, maxf(side * 0.95, side * 1.28), 1.25, 1.95, P.PAINT)  # fender
+		c.mbox(minf(side * 1.24, side * 1.28), 0.85, 0.45, maxf(side * 1.24, side * 1.28), 1.15, 0.55, P.PAINT)
+		c.mbox(side * 1.08 - 0.12, 1.25, 0.45, side * 1.08 + 0.12, 1.38, 0.55, P.PAINT_DARK)  # headlight
+		c.mskin(side * 1.08 - 0.09, 1.27, 0.43, side * 1.08 + 0.09, 1.36, 0.47, P.PAINT_LIGHT)
+	c.mbox(-1.2, 0.65, 0.0, 1.2, 0.95, 0.22, P.PAINT_DARK)  # bumper
+	for bx: float in [-0.75, 0.75]:  # brush guard
+		c.mbar(Vector3(bx, 0.95, 0.08), Vector3(bx, 1.7, 0.12), 0.06, P.PAINT_DARK)
+	c.mbar(Vector3(-0.75, 1.68, 0.12), Vector3(0.75, 1.68, 0.12), 0.06, P.PAINT_DARK)
+	c.mbar(Vector3(-0.75, 1.3, 0.1), Vector3(0.75, 1.3, 0.1), 0.06, P.PAINT_DARK)
+	# The armoured box: lower sides folded in, raked windscreen, roof.
+	var box := func(z: float) -> Section:
+		var top := 2.85
+		if z < 1.85:
+			top = lerpf(1.95, 2.85, clampf((z - 1.45) / 0.4, 0.0, 1.0))
+		return Section.new(1.05, top, 1.12, 1.24, 0.25, 0.06)
+	c.mhull(1.45, 6.4, box, P.PAINT)
+	c.mskin(-1.0, 2.0, 1.4, -0.05, 2.75, 1.9, P.GLASS)
+	c.mskin(0.05, 2.0, 1.4, 1.0, 2.75, 1.9, P.GLASS)
+	c.mskin(-1.3, 2.75, 1.4, 1.3, 2.9, 6.45, P.PAINT_DARK, P.PAINT)  # roof edge
+	for side: float in [-1.0, 1.0]:
+		var ox := minf(side * 1.1, side * 1.35)
+		var ix := maxf(side * 1.1, side * 1.35)
+		c.mskin(ox, 1.95, 2.0, ix, 2.55, 2.75, P.GLASS)  # crew door windows
+		c.mskin(ox, 1.95, 3.0, ix, 2.55, 3.6, P.GLASS)
+		for wz: float in [4.1, 4.85, 5.6]:
+			c.mskin(ox, 2.05, wz, ix, 2.45, wz + 0.42, P.GLASS)
+		for dz: float in [1.88, 2.9, 3.75]:  # door seams
+			c.mskin(ox, 1.1, dz, ix, 2.7, dz + 0.05, P.PAINT_DARK, P.PAINT)
+		c.mskin(ox, 2.68, 1.88, ix, 2.72, 3.8, P.PAINT_DARK, P.PAINT)
+		c.mbox(minf(side * 1.22, side * 1.3), 1.6, 2.6, maxf(side * 1.22, side * 1.3), 1.7, 2.8, P.METAL)  # handles
+		# Steps under the doors, fuel tank and battery box, mirrors on their arms.
+		c.mbox(minf(side * 1.0, side * 1.3), 0.75, 2.0, maxf(side * 1.0, side * 1.3), 0.8, 3.6, P.METAL)
+		c.mbox(minf(side * 0.85, side * 1.2), 0.7, 3.85, maxf(side * 0.85, side * 1.2), 1.05, 4.5, P.PAINT_DARK)
+		c.mbar(Vector3(side * 1.25, 2.55, 1.6), Vector3(side * 1.55, 2.6, 1.4), 0.04, P.METAL)
+		c.mbar(Vector3(side * 1.25, 2.1, 1.6), Vector3(side * 1.55, 2.25, 1.45), 0.04, P.METAL)
+		c.mbox(minf(side * 1.5, side * 1.6), 2.05, 1.32, maxf(side * 1.5, side * 1.6), 2.6, 1.48, P.BLACK)
+		# Wheels under square arches.
+		for wz: float in [1.15, 5.05]:
+			_mtire(c, side, minf(side * 0.9, side * 1.28), maxf(side * 0.9, side * 1.28), 0.56, wz, 0.56)
+		c.mbox(minf(side * 1.24, side * 1.32), 1.05, 4.3, maxf(side * 1.24, side * 1.32), 1.2, 5.85, P.PAINT_DARK)
+		c.mbox(side * 1.2 - 0.06, 2.4, 6.4, side * 1.2 + 0.06, 2.6, 6.45, P.LIGHT_RED)
+	# Rear door with its window, the folding step and the spare tyre on its carrier.
+	c.mskin(-0.6, 1.1, 6.38, 0.6, 2.6, 6.45, P.PAINT_DARK, P.PAINT)
+	c.mbox(-0.55, 1.15, 6.4, 0.55, 2.55, 6.42, P.PAINT)
+	c.mskin(-0.3, 2.05, 6.38, 0.3, 2.4, 6.45, P.GLASS)
+	c.mbox(-0.5, 0.5, 6.35, 0.5, 0.56, 6.75, P.METAL)
+	c.mbox(-0.5, 0.75, 6.35, 0.5, 0.8, 6.6, P.METAL)
+	c.mbox(0.65, 1.3, 6.4, 1.15, 1.4, 6.5, P.METAL)
+	var spare := func(z: float) -> Vector4: return Vector4(0.9, 1.75, 0.5 * sqrt(maxf(1.0 - pow((z - 6.66) / 0.17, 2.0), 0.0)) + 0.02, 0.5 * sqrt(maxf(1.0 - pow((z - 6.66) / 0.17, 2.0), 0.0)) + 0.02)
+	c.mloft(6.45, 6.6, spare, P.TIRE, 2.0)
+	# Roof: stowage rack, antennas, the turret.
+	c.mbox(-0.9, 2.85, 4.5, 0.9, 2.9, 6.1, P.PAINT_DARK)
+	c.mbox(-0.8, 2.9, 4.7, 0.2, 3.15, 5.6, P.SEAT)
+	c.mbar(Vector3(-1.1, 2.85, 6.2), Vector3(-1.1, 3.9, 6.25), 0.03, P.METAL)
+	c.mbar(Vector3(1.1, 2.85, 6.2), Vector3(1.1, 3.7, 6.25), 0.03, P.METAL)
+	_turret(c, 0.0, 2.85, 3.0, 0.95)
 	return c
 
 
-## M-ATV: 6.2 m MRAP all-terrain vehicle with a long sloped bonnet and slatted grille, a
-## compact armoured cab with a raked windscreen, rear cargo bed, big flared wheel arches,
+## M-ATV: 6.27 m MRAP all-terrain vehicle with the long bonnet sloping down to a wide slatted
+## grille, big flared arches over 1.24 m tyres on independent suspension, a compact armoured
+## four-door cab with a raked two-pane windscreen and sides leaning in, the short cargo bed,
 ## and the roof turret.
 static func _matv() -> Canvas:
-	var c := Canvas.new(Vector3i(54, 58, 126), 0.05)
-	var y := 0.4
-	while y < 0.9:
-		var inset := (0.9 - y) * 1.4
-		c.mbox(-1.15 + inset, y, 0.5, 1.15 - inset, y + c.vs, 6.0, P.PAINT_DARK)
+	var c := Canvas.new(Vector3i(54, 62, 128), 0.05)
+	var y := 0.45
+	while y < 0.95:
+		var inset := (0.95 - y) * 1.4
+		c.mbox(-1.05 + inset, y, 1.6, 1.05 - inset, y + c.vs, 6.0, P.PAINT_DARK)
 		y += c.vs
-	# Bonnet sloping down to the grille.
-	var z := 0.05
-	while z < 2.05:
-		var top := lerpf(1.3, 1.6, clampf(z / 1.4, 0.0, 1.0))
-		c.mbox(-1.05, 0.9, z, 1.05, top, z + c.vs, P.PAINT)
-		z += c.vs
-	var gx := -0.75
-	while gx < 0.8:
-		c.mbox(gx, 0.95, 0.0, gx + 0.06, 1.28, 0.06, P.BLACK)
-		gx += 0.12
-	c.mbox(-1.15, 0.65, 0.0, 1.15, 0.9, 0.2, P.PAINT_DARK)
-	# Cab with raked windscreen, then the cargo bed.
-	z = 2.0
-	while z < 4.35:
-		var top := lerpf(1.6, 2.35, clampf((z - 2.0) / 0.45, 0.0, 1.0))
-		c.mbox(-1.15, 0.9, z, 1.15, top, z + c.vs, P.PAINT)
-		z += c.vs
-	c.mskin(-1.05, 1.65, 2.0, -0.05, 2.3, 2.5, P.GLASS)
-	c.mskin(0.05, 1.65, 2.0, 1.05, 2.3, 2.5, P.GLASS)
-	c.mskin(-1.2, 1.7, 2.6, 1.2, 2.25, 3.3, P.GLASS)
-	c.mskin(-1.2, 1.7, 3.5, 1.2, 2.25, 4.1, P.GLASS)
-	c.mskin(-1.2, 0.95, 3.38, 1.2, 2.3, 3.43, P.PAINT_DARK, P.PAINT)
-	c.mbox(-1.15, 0.9, 4.35, 1.15, 1.25, 6.2, P.PAINT)
-	c.mbox(-1.15, 1.25, 4.35, -1.05, 1.65, 6.2, P.PAINT)
-	c.mbox(1.05, 1.25, 4.35, 1.15, 1.65, 6.2, P.PAINT)
-	c.mbox(-1.15, 1.25, 6.1, 1.15, 1.65, 6.2, P.PAINT)
-	c.mbox(-0.9, 1.25, 4.6, 0.9, 1.55, 5.6, P.SEAT)  # stowed kit in the bed
-	for wz: float in [1.0, 4.95]:
-		for side: float in [-1.0, 1.0]:
-			c.mwheel(minf(side * 0.9, side * 1.24), maxf(side * 0.9, side * 1.24), 0.56, wz, 0.56)
-			c.mbox(minf(side * 1.0, side * 1.25), 1.12, wz - 0.75, maxf(side * 1.0, side * 1.25), 1.22, wz + 0.75, P.PAINT_DARK)
+	# Bonnet sloping down to the grille, with its slats and the bash bar.
+	var hood := func(z: float) -> Section:
+		var top := lerpf(1.4, 1.72, clampf((z - 0.1) / 1.9, 0.0, 1.0))
+		return Section.new(0.85, top, 0.98, 0.88, 0.1, 0.12)
+	c.mhull(0.1, 2.05, hood, P.PAINT)
+	c.mskin(-0.85, 0.9, 0.05, 0.85, 1.32, 0.2, P.BLACK)
+	var gx := -0.8
+	while gx < 0.82:
+		c.mskin(gx, 0.9, 0.05, gx + 0.05, 1.32, 0.2, P.PAINT_DARK, P.BLACK)
+		gx += 0.11
+	c.mskin(-0.6, 1.5, 0.6, 0.6, 1.72, 1.9, P.PAINT_DARK, P.PAINT)  # bonnet louvre panel
+	c.mbox(-1.15, 0.6, 0.0, 1.15, 0.85, 0.22, P.PAINT_DARK)
 	for side: float in [-1.0, 1.0]:
-		c.mbar(Vector3(side * 1.15, 2.0, 2.2), Vector3(side * 1.4, 2.05, 2.1), 0.04, P.METAL)
-		c.mbox(side * 1.35, 1.75, 2.02, side * 1.35 + side * 0.1, 2.1, 2.15, P.BLACK)
-		c.mbox(side * 0.8 - 0.12, 1.1, 0.0, side * 0.8 + 0.12, 1.22, 0.05, P.PAINT_LIGHT)
-	_turret(c, 0.0, 2.35, 3.3, 0.9)
+		c.mbox(side * 0.82 - 0.12, 1.2, 0.08, side * 0.82 + 0.12, 1.34, 0.14, P.PAINT_LIGHT)
+		# Flared arches over the wheels, suspension arms, the tyres.
+		for wz: float in [1.05, 4.9]:
+			c.mbox(minf(side * 0.95, side * 1.25), 1.12, wz - 0.8, maxf(side * 0.95, side * 1.25), 1.22, wz + 0.8, P.PAINT)
+			c.mbox(minf(side * 1.2, side * 1.27), 0.95, wz - 0.8, maxf(side * 1.2, side * 1.27), 1.15, wz - 0.7, P.PAINT)
+			c.mbar(Vector3(side * 0.5, 0.7, wz), Vector3(side * 0.88, 0.62, wz), 0.1, P.METAL)
+			c.mbar(Vector3(side * 0.5, 0.95, wz - 0.1), Vector3(side * 0.88, 0.85, wz), 0.08, P.METAL)
+			_mtire(c, side, minf(side * 0.9, side * 1.22), maxf(side * 0.9, side * 1.22), 0.62, wz, 0.6)
+	# Cab: raked windscreen, sides leaning in, four doors.
+	var cab := func(z: float) -> Section:
+		var top := lerpf(1.72, 2.48, clampf((z - 2.0) / 0.55, 0.0, 1.0))
+		return Section.new(0.9, top, 1.15, 1.0, 0.15, 0.08)
+	c.mhull(2.0, 4.4, cab, P.PAINT, 0.1)
+	c.mskin(-0.95, 1.8, 1.95, -0.05, 2.42, 2.55, P.GLASS)
+	c.mskin(0.05, 1.8, 1.95, 0.95, 2.42, 2.55, P.GLASS)
+	for side: float in [-1.0, 1.0]:
+		var ox := minf(side * 0.95, side * 1.25)
+		var ix := maxf(side * 0.95, side * 1.25)
+		c.mskin(ox, 1.75, 2.6, ix, 2.3, 3.25, P.GLASS)
+		c.mskin(ox, 1.75, 3.5, ix, 2.3, 4.1, P.GLASS)
+		for dz: float in [2.55, 3.38, 4.25]:
+			c.mskin(ox, 0.95, dz, ix, 2.4, dz + 0.05, P.PAINT_DARK, P.PAINT)
+		c.mbox(minf(side * 1.12, side * 1.2), 1.55, 3.05, maxf(side * 1.12, side * 1.2), 1.62, 3.25, P.METAL)
+		c.mbox(minf(side * 1.12, side * 1.2), 1.55, 3.9, maxf(side * 1.12, side * 1.2), 1.62, 4.1, P.METAL)
+		c.mbox(minf(side * 0.95, side * 1.2), 0.75, 2.7, maxf(side * 0.95, side * 1.2), 0.8, 4.1, P.METAL)  # step
+		c.mbar(Vector3(side * 1.1, 2.2, 2.2), Vector3(side * 1.42, 2.25, 2.05), 0.04, P.METAL)
+		c.mbox(minf(side * 1.36, side * 1.46), 1.85, 1.95, maxf(side * 1.36, side * 1.46), 2.3, 2.1, P.BLACK)
+		c.mbox(side * 1.0 - 0.06, 1.35, 6.2, side * 1.0 + 0.06, 1.5, 6.25, P.LIGHT_RED)
+	# Cargo bed: low walls, tailgate, stowed kit.
+	c.mbox(-1.12, 0.9, 4.4, 1.12, 1.2, 6.25, P.PAINT)
+	c.mbox(-1.12, 1.2, 4.4, -1.04, 1.62, 6.25, P.PAINT)
+	c.mbox(1.04, 1.2, 4.4, 1.12, 1.62, 6.25, P.PAINT)
+	c.mbox(-1.12, 1.2, 6.17, 1.12, 1.62, 6.25, P.PAINT)
+	c.mskin(-1.15, 1.55, 4.4, 1.15, 1.63, 6.26, P.PAINT_DARK, P.PAINT)
+	c.mbox(-0.9, 1.2, 4.6, 0.3, 1.55, 5.5, P.SEAT)
+	c.mbox(0.4, 1.2, 4.6, 0.95, 1.45, 5.2, P.PAINT_DARK)
+	c.mbar(Vector3(-1.0, 2.48, 4.2), Vector3(-1.0, 3.4, 4.25), 0.03, P.METAL)
+	_turret(c, 0.0, 2.48, 3.3, 0.88)
 	return c
 
 
-## Roof turret ring with the four-sided gun-protection kit and an M2, centred at (x, z).
+## Roof turret ring with the O-GPK gun shield (front plate with wings angled back and an
+## armoured window, side plates) and an M2 with its ammo can, centred at (x, z).
 static func _turret(c: Canvas, x: float, roof: float, z: float, half: float) -> void:
-	c.mbox(x - half * 0.8, roof, z - half * 0.8, x + half * 0.8, roof + 0.1, z + half * 0.8, P.PAINT_DARK)
-	c.mbox(x - half, roof + 0.1, z - half, x + half, roof + 0.55, z - half + 0.05, P.PAINT)  # front shield
-	c.mskin(x - 0.25, roof + 0.3, z - half - 0.01, x + 0.25, roof + 0.5, z - half + 0.06, P.GLASS)
-	c.mbox(x - half, roof + 0.1, z - half, x - half + 0.05, roof + 0.5, z + half * 0.5, P.PAINT)
-	c.mbox(x + half - 0.05, roof + 0.1, z - half, x + half, roof + 0.5, z + half * 0.5, P.PAINT)
-	c.mbox(x - 0.1, roof + 0.25, z - half + 0.1, x + 0.1, roof + 0.42, z, P.GUN)
-	c.mbox(x - 0.03, roof + 0.31, z - half - 1.1, x + 0.03, roof + 0.37, z - half + 0.1, P.GUN)
+	c.mdisc(x, z, half * 0.78, roof, roof + 0.12, P.PAINT_DARK)
+	c.mdisc(x, z, half * 0.6, roof + 0.12, roof + 0.16, P.PAINT)
+	var front := z - half
+	c.mbox(x - half * 0.55, roof + 0.12, front, x + half * 0.55, roof + 0.72, front + 0.05, P.PAINT)
+	c.mskin(x - 0.22, roof + 0.42, front - 0.01, x + 0.22, roof + 0.66, front + 0.06, P.GLASS)
+	c.mbox(x - 0.07, roof + 0.25, front - 0.01, x + 0.07, roof + 0.38, front + 0.06, P.BLACK)  # gun port
+	for side: float in [-1.0, 1.0]:
+		# Wing angled back from the front plate, then the side plate.
+		var w := 0.0
+		while w < half * 0.45:
+			var wx := x + side * (half * 0.55 + w)
+			c.mbox(wx - 0.03, roof + 0.12, front + w * 0.8, wx + 0.03, roof + 0.66, front + w * 0.8 + 0.06, P.PAINT)
+			w += c.vs * 0.5
+		c.mskin(x + side * half * 0.7 - 0.1, roof + 0.4, front, x + side * half * 0.7 + 0.1, roof + 0.6, front + half * 0.3, P.GLASS)
+		c.mbox(minf(x + side * half, x + side * (half - 0.05)), roof + 0.12, front + half * 0.35, maxf(x + side * half, x + side * (half - 0.05)), roof + 0.55, z + half * 0.4, P.PAINT)
+		c.mbox(minf(x + side * half, x + side * (half - 0.05)), roof + 0.55, front + half * 0.35, maxf(x + side * half, x + side * (half - 0.05)), roof + 0.6, z + half * 0.4, P.PAINT_DARK)
+	# M2 on its pintle: receiver, barrel with the carrying handle, spade grips, ammo can.
+	c.mbar(Vector3(x, roof + 0.12, z - half * 0.3), Vector3(x, roof + 0.3, z - half * 0.3), 0.06, P.METAL)
+	c.mbox(x - 0.07, roof + 0.28, z - half + 0.1, x + 0.07, roof + 0.42, z - half * 0.1, P.GUN)
+	c.mbox(x - 0.03, roof + 0.33, z - half - 1.05, x + 0.03, roof + 0.38, z - half + 0.1, P.GUN)
+	c.mbox(x - 0.05, roof + 0.31, z - half - 1.1, x + 0.05, roof + 0.4, z - half - 1.0, P.GUN)
+	c.mbox(x - 0.02, roof + 0.38, z - half - 0.35, x + 0.02, roof + 0.44, z - half - 0.15, P.GUN)
+	c.mbox(x - 0.06, roof + 0.3, z - half * 0.1, x + 0.06, roof + 0.38, z, P.GUN)
+	c.mbox(x + 0.07, roof + 0.22, z - half + 0.15, x + 0.22, roof + 0.4, z - half + 0.45, P.SEAT)
+
+
+## A military tyre at x0..x1 (metres), centre (cy, cz), radius r: tread blocks around the
+## rim, the sidewall, and a hub with its bolt ring on the outer face (`side` -1 left, 1 right).
+static func _mtire(c: Canvas, side: float, x0: float, x1: float, cy: float, cz: float, r: float) -> void:
+	c.mwheel(x0, x1, cy, cz, r, P.TIRE, P.TIRE)
+	c.mwheel(x0, x1, cy, cz, r * 0.5, P.METAL, P.PAINT_DARK)
+	for t in 24:  # tread blocks: dark cuts across the running surface
+		var a := TAU * t / 24.0
+		var py := cy + sin(a) * r
+		var pz := cz + cos(a) * r
+		c.mskin(x0, py - 0.035, pz - 0.035, x1, py + 0.035, pz + 0.035, P.BLACK, P.TIRE)
+	var face := x1 if side > 0.0 else x0
+	c.mbox(face - 0.03, cy - r * 0.2, cz - r * 0.2, face + 0.03, cy + r * 0.2, cz + r * 0.2, P.PAINT_DARK)
+	for b in 8:
+		var a := TAU * b / 8.0
+		c.mbox(face - 0.03, cy + sin(a) * r * 0.36 - 0.025, cz + cos(a) * r * 0.36 - 0.025, face + 0.03, cy + sin(a) * r * 0.36 + 0.025, cz + cos(a) * r * 0.36 + 0.025, P.METAL)
 
 
 # --- Technicals -------------------------------------------------------------------------
