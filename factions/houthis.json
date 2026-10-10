@@ -45,7 +45,25 @@
     "al_shabaab": 10,
     "aqap": -60,
     "al_qaeda": -60,
-    "isis": -90
+    "isis": -90,
+    "som": -30,
+    "ukr": -50,
+    "nzl": -60,
+    "est": -65,
+    "ltu": -65,
+    "lva": -65,
+    "pol": -65,
+    "rou": -65,
+    "bel": -70,
+    "dnk": -70,
+    "esp": -70,
+    "fin": -70,
+    "nld": -70,
+    "nor": -70,
+    "swe": -70,
+    "grc": -75,
+    "pmc_halcyon": -80,
+    "pmc_black_sable": -90
   },
   "theatres": [
     "yemen_red_sea"
@@ -424,9 +442,8 @@
       "ied_and_mine_route_clearance"
     ]
   },
-  "notes": "The Houthis were designated a Foreign Terrorist Organization by the US in 2025 (re-designation after a 2021 revocation); they are the de facto authority in Sanaa and most of northern Yemen, opposed by the internationally recognised Presidential Leadership Council government and its allies (Saudi-backed forces, the UAE-linked Southern Transitional Council, Tareq Saleh's National Resistance on the west coast). Iran supplies missile, drone and weapons components; seizures of Iranian shipments are well documented. From November 2023 they attacked merchant ships (seizing the Galaxy Leader and sinking several ships) and fired at Israel; a US-Houthi truce on shipping (May 2025) did not cover Israel. Status 2026: joined Iran's war from March 2026, naval blockade of Saudi Arabia from July, attacks on Saudi-linked ships in August, and in September 2026 captured Mocha, the remaining Red Sea coast and Perim Island at Bab al-Mandab, with Saudi airstrikes in response. AQAP and the Houthis are enemies, though a UN panel reported limited tactical coordination in 2024; al-Shabaab contacts (arms) were also reported by UN experts; both values are low-confidence. Game framing: mid-tier enemy in yemen_red_sea (Captain's brief allows mid), the theatre's main conventional-style opponent.",
+  "notes": "The Houthis were designated a Foreign Terrorist Organization by the US in 2025 (re-designation after a 2021 revocation); they are the de facto authority in Sanaa and most of northern Yemen, opposed by the internationally recognised Presidential Leadership Council government and its allies (Saudi-backed forces, the UAE-linked Southern Transitional Council, Tareq Saleh's National Resistance on the west coast). Iran supplies missile, drone and weapons components; seizures of Iranian shipments are well documented. From November 2023 they attacked merchant ships (seizing the Galaxy Leader and sinking several ships) and fired at Israel; a US-Houthi truce on shipping (May 2025) did not cover Israel. Status 2026: joined Iran's war from March 2026, naval blockade of Saudi Arabia from July, attacks on Saudi-linked ships in August, and in September 2026 captured Mocha, the remaining Red Sea coast and Perim Island at Bab al-Mandab, with Saudi airstrikes in response. AQAP and the Houthis are enemies, though a UN panel reported limited tactical coordination in 2024; al-Shabaab contacts (arms) were also reported by UN experts; both values are low-confidence. Game framing: mid-tier enemy in yemen_red_sea (Captain's brief allows mid), the theatre's main conventional-style opponent. campaign_tier mid and the single-source values houthis <-> aqap -60 and houthis <-> al_shabaab +10 are Captain-confirmed (2026-10-10).",
   "proposed": [
-    "campaign_tier",
     "relations.player",
     "doctrine.ai_tuning (all values)",
     "doctrine.squad_size (game cell size)",
@@ -437,9 +454,7 @@
     "body_armor (game tier mapping)",
     "camo (approximate palettes)",
     "player_trade (hostile-only: not sellable)",
-    "campaign_tier mid (brief allows mid)",
     "fast_boat explosive variant as a telegraphed hazard",
-    "relations.aqap and relations.al_shabaab (low-confidence, reported contacts)",
     "relations values (factual direction, game magnitudes)"
   ],
   "sources": [

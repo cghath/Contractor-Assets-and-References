@@ -8,14 +8,15 @@
     "#FFFFFF",
     "#000000"
   ],
-  "blocs": [
+  "blocs": [],
+  "traits": [
     "de_facto_government"
   ],
   "campaign_tier": "early",
-  "alignment_to_player": "hostile",
-  "player_client": false,
+  "alignment_to_player": "neutral",
+  "player_client": true,
   "relations": {
-    "player": -65,
+    "player": -10,
     "pak": -65,
     "isis_k": -100,
     "isis": -90,
@@ -34,7 +35,18 @@
     "tur": 15,
     "pmc_halcyon": -60,
     "pmc_kestrel": -20,
-    "pmc_black_sable": -40
+    "pmc_black_sable": -40,
+    "che": -30,
+    "aut": -40,
+    "bel": -60,
+    "dnk": -60,
+    "esp": -60,
+    "fin": -60,
+    "grc": -60,
+    "ita": -60,
+    "nld": -60,
+    "nor": -60,
+    "swe": -60
   },
   "theatres": [
     "afghan_highlands"
@@ -132,10 +144,16 @@
   },
   "vehicles": [
     {
-      "vehicle_id": "toyota_hilux",
+      "vehicle_id": "ford_ranger",
       "role": "light",
       "prevalence": "signature",
-      "notes": "Above all the green ex-Afghan-police Ford Ranger pickups (recorded as a Ranger variant of this file), plus Hiluxes."
+      "notes": "Above all the green ex-Afghan-police Ford Ranger pickups, plus Hiluxes (toyota_hilux)."
+    },
+    {
+      "vehicle_id": "toyota_hilux",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Hilux pickups alongside the ex-police Rangers."
     },
     {
       "vehicle_id": "humvee",
@@ -218,7 +236,7 @@
           "count": 1
         }
       ],
-      "vehicle_id": "toyota_hilux"
+      "vehicle_id": "ford_ranger"
     },
     {
       "id": "taliban_checkpoint",
@@ -301,7 +319,11 @@
     "rep_tiers": []
   },
   "contract_types": {
-    "as_client": [],
+    "as_client": [
+      "Counter-ISIS-K raid on a cell, safe house or cache (afghan_highlands)",
+      "Convoy escort through the highlands",
+      "Infrastructure protection (mine, dam, power line or rail project) against ISIS-K attack"
+    ],
     "as_target": [
       "Recover captured US-made equipment or sensitive items before it is sold on",
       "Extract a person at risk (journalist, former interpreter) through Taliban checkpoints",
@@ -309,18 +331,17 @@
       "Third-party fights: Taliban and ISIS-K clash during a player mission"
     ]
   },
-  "notes": "The de facto government of Afghanistan since August 2021; recognised only by Russia (July 2025), with China, Pakistan, Qatar and others hosting Taliban envoys without formal recognition; not recognised by the UN. Kind is non_state because of that limited recognition; this is a description, not a judgement. Situation as of October 2026: fighting an ISIS-K insurgency at home and an open border war with Pakistan (since February 2026) that analysts say benefits ISIS-K; UN monitoring reports describe continuing ties with al-Qaeda figures (afg_taliban -> al_qaeda = +30, game value). Western states keep sanctions and no diplomatic relations. Game: neutral-to-hostile, never a client by default (open question for Captain); in afghan_highlands the player meets Taliban checkpoints and patrols as an obstacle and as a third party that also fights ISIS-K. Default player_client false.",
+  "notes": "The de facto government of Afghanistan since August 2021; recognised only by Russia (July 2025), with China, Pakistan, Qatar and others hosting Taliban envoys without formal recognition; not recognised by the UN. Kind is non_state because of that limited recognition; this is a description, not a judgement. Situation as of October 2026: fighting an ISIS-K insurgency at home and an open border war with Pakistan (since February 2026) that analysts say benefits ISIS-K; UN monitoring reports describe continuing ties with al-Qaeda figures (afg_taliban -> al_qaeda = +30, game value). Western states keep sanctions and no diplomatic relations. Game (Captain-confirmed (2026-10-10)): a limited client that can hire the player for counter-ISIS-K operations, convoy escort and infrastructure protection, and never sells gear; relations.player is -10. In afghan_highlands the player meets Taliban checkpoints and patrols as an obstacle and as a third party that also fights ISIS-K.",
   "proposed": [
-    "player_client (default false; open question for Captain)",
-    "alignment_to_player",
     "campaign_tier",
     "relations (player and al_qaeda values are game-level)",
     "doctrine.ai_tuning",
     "unit_templates",
     "vehicles[].prevalence",
+    "contract_types.as_client (contract list; the limited-client role itself is Captain-confirmed)",
     "contract_types.as_target",
     "body_armor (game tier mapping)",
-    "blocs (de_facto_government is a game tag)"
+    "traits (de_facto_government is a game tag)"
   ],
   "sources": [
     "https://en.wikipedia.org/wiki/Recognition_of_the_Islamic_Emirate_of_Afghanistan",

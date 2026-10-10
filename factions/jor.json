@@ -13,7 +13,8 @@
   "blocs": [
     "arab_league",
     "major_non_nato_ally_us",
-    "global_coalition_against_isis"
+    "global_coalition_against_isis",
+    "islamic_military_counter_terrorism_coalition"
   ],
   "campaign_tier": "early",
   "alignment_to_player": "friendly",
@@ -44,7 +45,14 @@
     "iraqi_militias": -60,
     "isis": -95,
     "al_qaeda": -90,
-    "isis_k": -70
+    "isis_k": -70,
+    "bel": 55,
+    "dnk": 55,
+    "esp": 55,
+    "fin": 55,
+    "grc": 55,
+    "nor": 55,
+    "swe": 55
   },
   "theatres": [
     "levant_syria",

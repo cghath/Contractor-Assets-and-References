@@ -29,7 +29,23 @@
     "al_qaeda": 85,
     "aqap": 60,
     "al_shabaab": 55,
-    "isis": -90
+    "isis": -90,
+    "esp": -85,
+    "est": -85,
+    "ltu": -85,
+    "lva": -85,
+    "pmc_black_sable": -85,
+    "pol": -85,
+    "rou": -85,
+    "bel": -90,
+    "dnk": -90,
+    "fin": -90,
+    "grc": -90,
+    "ita": -90,
+    "nld": -90,
+    "nor": -90,
+    "pmc_kestrel": -90,
+    "swe": -90
   },
   "theatres": [
     "sahel"

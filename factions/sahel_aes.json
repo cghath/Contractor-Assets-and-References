@@ -10,7 +10,8 @@
     "#C62828"
   ],
   "blocs": [
-    "aes"
+    "aes",
+    "african_union"
   ],
   "campaign_tier": "early",
   "alignment_to_player": "neutral",
@@ -31,7 +32,16 @@
     "al_qaeda": -95,
     "pmc_halcyon": -40,
     "pmc_kestrel": 40,
-    "pmc_black_sable": 10
+    "pmc_black_sable": 10,
+    "bel": -30,
+    "dnk": -30,
+    "esp": -30,
+    "fin": -30,
+    "grc": -30,
+    "ita": -30,
+    "nld": -30,
+    "nor": -30,
+    "swe": -30
   },
   "theatres": [
     "sahel"
@@ -311,10 +321,9 @@
       "Third-party fights with AES and Africa Corps during contracts for other clients"
     ]
   },
-  "notes": "Modelled as one faction for the three AES juntas (a confederation; 'state' is also defensible, non_state chosen per brief because the game treats it as a bloc rather than one state). Situation as of October 2026: under heavy pressure from JNIM (fuel blockade of Bamako, April 2026 offensive, defence minister killed) and Islamic State Sahel; Africa Corps has pulled back to Bamako; the AES unified force exists but bloc unity is strained. The AES expelled French and US forces, broke with Ukraine (Mali, 2024) and works with Russia; Türkiye supplies drones. Game: player_client true but with few contracts and harsh terms because the AES works with africa_corps (a rival contractor); Western-aligned work locks out AES contracts. Civilian-harm risk is high on AES operations, and the casualty rules apply to the player in full.",
+  "notes": "Modelled as one faction for the three AES juntas (a confederation; 'state' is also defensible, non_state chosen per brief because the game treats it as a bloc rather than one state). Situation as of October 2026: under heavy pressure from JNIM (fuel blockade of Bamako, April 2026 offensive, defence minister killed) and Islamic State Sahel; Africa Corps has pulled back to Bamako; the AES unified force exists but bloc unity is strained. The AES expelled French and US forces, broke with Ukraine (Mali, 2024) and works with Russia; Türkiye supplies drones. Game: player_client true but with few contracts and harsh terms because the AES works with africa_corps (a rival contractor); Western-aligned work locks out AES contracts. Civilian-harm risk is high on AES operations, and the casualty rules apply to the player in full. The rare-client role on harsh terms, with relation -10 to the player, is Captain-confirmed (2026-10-10).",
   "proposed": [
     "kind (non_state vs state)",
-    "player_client (true, rare and harsh terms) and relations.player",
     "campaign_tier",
     "doctrine.ai_tuning",
     "contract_types",

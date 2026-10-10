@@ -9,10 +9,12 @@
     "#FFFFFF"
   ],
   "blocs": [
+    "nato_partnership_for_peace"
+  ],
+  "traits": [
     "neutral",
     "efta",
-    "schengen",
-    "nato_partnership_for_peace"
+    "schengen"
   ],
   "campaign_tier": "mid",
   "alignment_to_player": "neutral",
@@ -339,17 +341,16 @@
     ],
     "as_target": []
   },
-  "notes": "Neutral state; never a target faction. In game it is mainly a staging area (alpine_europe), a source of neutral contracts (humanitarian convoys, evacuations, diplomatic security) and a possible arms market. Situation as of October 2026: neutrality is under debate. Parliament eased the War Material Act in December 2025 (automatic re-export permission for 25 mostly European partner states, with a Federal Council veto), opponents forced a referendum scheduled for November 2026, and Switzerland suspended some arms exports to the USA during the 2026 US-Israel war with Iran. Switzerland applies EU sanctions on Russia, which lists it as an unfriendly state (rus -> che = -40). Switzerland is the protecting power for US interests in Iran.",
+  "notes": "Neutral state; never a target faction. In game it is mainly a staging area (alpine_europe), a source of neutral contracts (humanitarian convoys, evacuations, diplomatic security) and an arms market for the player at rep 20/40/60 (Captain-confirmed (2026-10-10)). Situation as of October 2026: neutrality is under debate. Parliament eased the War Material Act in December 2025 (automatic re-export permission for 25 mostly European partner states, with a Federal Council veto), opponents forced a referendum scheduled for November 2026, and Switzerland suspended some arms exports to the USA during the 2026 US-Israel war with Iran. Switzerland applies EU sanctions on Russia, which lists it as an unfriendly state (rus -> che = -40). Switzerland is the protecting power for US interests in Iran.",
   "proposed": [
     "campaign_tier",
     "relations.player",
     "doctrine.ai_tuning",
-    "player_trade (Switzerland as an arms market, rep thresholds and items)",
     "contract_types.as_client",
     "unit_templates",
     "vehicles[].prevalence (game weighting)",
     "body_armor (game tier mapping)",
-    "blocs (neutral is a game tag)"
+    "traits (neutral is a game tag)"
   ],
   "sources": [
     "https://en.wikipedia.org/wiki/Swiss_Armed_Forces",

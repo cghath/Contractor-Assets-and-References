@@ -11,7 +11,10 @@
   ],
   "blocs": [
     "five_eyes",
-    "fpda"
+    "fpda",
+    "anzus",
+    "major_non_nato_ally_us",
+    "global_coalition_against_isis"
   ],
   "campaign_tier": "mid",
   "alignment_to_player": "friendly",

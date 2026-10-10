@@ -14,7 +14,10 @@
     "eu",
     "un_security_council_p5",
     "e3",
-    "weimar_triangle"
+    "weimar_triangle",
+    "global_coalition_against_isis",
+    "g7",
+    "unifil"
   ],
   "campaign_tier": "early",
   "alignment_to_player": "friendly",
@@ -74,7 +77,19 @@
     "swe": 80,
     "fin": 80,
     "grc": 85,
-    "ind": 70
+    "ind": 70,
+    "mda": 75,
+    "arm": 70,
+    "che": 50,
+    "aut": 45,
+    "irl": 45,
+    "geo": 40,
+    "phl": 40,
+    "srb": 35,
+    "vnm": 35,
+    "mex": 20,
+    "aze": -55,
+    "pmc_kestrel": -65
   },
   "theatres": [
     "sahel",

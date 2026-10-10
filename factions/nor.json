@@ -12,7 +12,9 @@
   "blocs": [
     "nato",
     "jef",
-    "nordefco"
+    "nordefco",
+    "global_coalition_against_isis",
+    "nb8"
   ],
   "campaign_tier": "late",
   "alignment_to_player": "friendly",

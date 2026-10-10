@@ -108,6 +108,8 @@ The fictional vehicles (`narco_truck`, `armored_suv`) are inspired-by types. Giv
 
 ## Open questions for Captain
 
+Answered by Captain on 2026-10-10 (Taliban as a limited client; che and aut arms markets on; pmc_black_sable is the nemesis; sahel_aes rare client): see "Captain's decisions (2026-10-10)" in [factions_handoff.md](factions_handoff.md).
+
 - Can the Taliban ever hire the player? The default is no: it's neutral-to-hostile and an anti-ISIS-K target-of-opportunity faction.
 - Should Switzerland and Austria act as arms markets for the player, and at what reputation?
 - Which rival PMC is the main nemesis? The default proposal is `pmc_halcyon`, since it mirrors the player most closely.

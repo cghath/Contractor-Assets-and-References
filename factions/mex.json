@@ -9,7 +9,8 @@
     "#FFFFFF",
     "#CE1126"
   ],
-  "blocs": [
+  "blocs": [],
+  "traits": [
     "usmca",
     "oas",
     "g20"
@@ -141,7 +142,7 @@
       "notes": "SandCat and the Army's DN-XI (Mexican-built, longer chassis, Mexican turret) armoured patrol vehicles; also used by the Guardia Nacional."
     },
     {
-      "vehicle_id": "toyota_hilux",
+      "vehicle_id": "ford_ranger",
       "role": "light",
       "prevalence": "common",
       "notes": "Patrol pickups (mostly Ford Lobo/F-150, Ram and Chevrolet pickups in the real fleet) with troops on bench seats in the bed and a roll-bar MG mount."
@@ -203,7 +204,7 @@
           "count": 1
         }
       ],
-      "vehicle_id": "toyota_hilux"
+      "vehicle_id": "ford_ranger"
     },
     {
       "id": "mex_dnxi_section",

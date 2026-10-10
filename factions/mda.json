@@ -10,9 +10,13 @@
     "#CC092F"
   ],
   "blocs": [
-    "eu_candidate",
-    "nato_partner",
+    "eu",
+    "nato_partnership_for_peace",
     "guam",
+    "eastern_partnership",
+    "global_coalition_against_isis"
+  ],
+  "traits": [
     "constitutionally_neutral"
   ],
   "campaign_tier": "mid",

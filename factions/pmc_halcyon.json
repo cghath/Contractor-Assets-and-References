@@ -9,7 +9,8 @@
     "#8FA3B5",
     "#E6E6E6"
   ],
-  "blocs": [
+  "blocs": [],
+  "traits": [
     "rival_pmc"
   ],
   "campaign_tier": "mid",
@@ -40,7 +41,12 @@
     "aqap": -100,
     "al_shabaab": -95,
     "cartel_pacifico": -50,
-    "cartel_jalisco_nueva": -50
+    "cartel_jalisco_nueva": -50,
+    "sdf": 5,
+    "aut": 0,
+    "che": 0,
+    "irl": -10,
+    "sahel_aes": -40
   },
   "theatres": [
     "mesopotamia",
@@ -339,7 +345,7 @@
     ]
   },
   "rivalry": {
-    "role": "nemesis (default proposal): the most player-like rival",
+    "role": "ordinary rival: the most player-like rival (same doctrine, better funding)",
     "bids_on": [
       "Counter-terror raids and HVT captures for Western and Gulf clients",
       "Oil, gas and port security in mesopotamia and persian_gulf_coast",
@@ -361,7 +367,7 @@
     ],
     "escalation": "Repeated defeats raise Halcyon's tier: more MRAPs, helicopter QRF, then a named team leader who recurs as a mini-boss."
   },
-  "notes": "FICTIONAL company; no real contractor, logo or person is depicted. Inspired by large Western private security and military contractors. Proposed as the player's main nemesis because it mirrors the player most closely (same doctrine, better funding). Relations with usa, gbr and Gulf states are business ties, not alliances; those states never deploy alongside it in game. Its use of MRAPs and M-ATVs is a game assignment proposal (open question on who fields MRAPs).",
+  "notes": "FICTIONAL company; no real contractor, logo or person is depicted. Inspired by large Western private security and military contractors. An ordinary rival that mirrors the player most closely (same doctrine, better funding); Captain chose pmc_black_sable as the main nemesis (2026-10-10). The name Halcyon is kept as is: any resemblance to a real security firm is coincidental (Captain-confirmed (2026-10-10)). Relations with usa, gbr and Gulf states are business ties, not alliances; those states never deploy alongside it in game. Its use of MRAPs and M-ATVs is a game assignment proposal (open question on who fields MRAPs).",
   "proposed": [
     "everything (fictional faction): name, flag_colors, relations, theatres",
     "rivalry (whole object)",
@@ -370,7 +376,7 @@
     "vehicles (MaxxPro/M-ATV game assignment)",
     "contract_types.as_target",
     "body_armor (game tier mapping)",
-    "blocs (rival_pmc is a game tag)"
+    "traits (rival_pmc is a game tag)"
   ],
   "sources": [
     "https://en.wikipedia.org/wiki/Private_military_company",

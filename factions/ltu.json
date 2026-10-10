@@ -14,7 +14,8 @@
     "eu",
     "jef",
     "bucharest_nine",
-    "nb8"
+    "nb8",
+    "global_coalition_against_isis"
   ],
   "campaign_tier": "late",
   "alignment_to_player": "friendly",
@@ -56,7 +57,11 @@
     "pij": -75,
     "hezbollah": -65,
     "houthis": -65,
-    "iraqi_militias": -55
+    "iraqi_militias": -55,
+    "bel": 80,
+    "esp": 80,
+    "grc": 80,
+    "ita": 80
   },
   "theatres": [
     "suwalki_gap",

@@ -13,6 +13,10 @@
     "arab_league",
     "mecca_joint_defence_agreement",
     "islamic_military_counter_terrorism_coalition",
+    "major_non_nato_ally_us",
+    "global_coalition_against_isis"
+  ],
+  "traits": [
     "g20"
   ],
   "campaign_tier": "early",
@@ -48,7 +52,19 @@
     "al_qaeda": -90,
     "isis": -95,
     "isis_k": -80,
-    "al_shabaab": -70
+    "al_shabaab": -70,
+    "pmc_black_sable": 40,
+    "bel": 30,
+    "deu": 30,
+    "dnk": 30,
+    "esp": 30,
+    "fin": 30,
+    "grc": 30,
+    "ita": 30,
+    "nld": 30,
+    "nor": 30,
+    "pmc_halcyon": 30,
+    "swe": 30
   },
   "theatres": [
     "yemen_red_sea",

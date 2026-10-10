@@ -23,7 +23,7 @@
     "deu": 30,
     "krg_peshmerga": 25,
     "irq": 0,
-    "syr": -15,
+    "syr": 10,
     "tur": -65,
     "irn": -25,
     "rus": -5,
@@ -33,7 +33,16 @@
     "al_qaeda": -70,
     "pmc_halcyon": 5,
     "pmc_kestrel": -40,
-    "pmc_black_sable": -20
+    "pmc_black_sable": -20,
+    "bel": 30,
+    "dnk": 30,
+    "esp": 30,
+    "fin": 30,
+    "grc": 30,
+    "ita": 30,
+    "nld": 30,
+    "nor": 30,
+    "swe": 30
   },
   "theatres": [
     "levant_syria",
@@ -289,7 +298,7 @@
     ],
     "as_target": []
   },
-  "notes": "Situation as of October 2026: integration into the Syrian state is under way but incomplete. The January 2026 government offensive and the 29 January ceasefire moved Raqqa and Deir ez-Zor under Damascus; SDF brigades are being formed inside the army; Kurdish-majority Qamishli, Hasakah and Kobani are still SDF/Autonomous Administration-run; IS detention sites were handed over in 2026 and IS attacks have risen in Raqqa and Deir ez-Zor. US forces left Syria in February-March 2026. syr -> sdf is -20 and sdf -> syr is -15 (tense partners in an unfinished integration, not open war). Türkiye regards the SDF as linked to the PKK (which announced dissolution in 2025) and remains hostile. Game: an early-game client for counter-IS work in levant_syria and mesopotamia (Syria-Iraq border). Proposal: if integration completes during the campaign, the SDF could fold into syr as a sub-faction.",
+  "notes": "Situation as of October 2026: integration into the Syrian state is under way but incomplete. The January 2026 government offensive and the 29 January ceasefire moved Raqqa and Deir ez-Zor under Damascus; SDF brigades are being formed inside the army; Kurdish-majority Qamishli, Hasakah and Kobani are still SDF/Autonomous Administration-run; IS detention sites were handed over in 2026 and IS attacks have risen in Raqqa and Deir ez-Zor. US forces left Syria in February-March 2026. syr -> sdf and sdf -> syr are both +10: neutral-to-friendly, treating the integration as mostly done (Captain's decision, 2026-10-10). Türkiye regards the SDF as linked to the PKK (which announced dissolution in 2025) and remains hostile. Game: an early-game client for counter-IS work in levant_syria and mesopotamia (Syria-Iraq border). Proposal: if integration completes during the campaign, the SDF could fold into syr as a sub-faction.",
   "proposed": [
     "campaign_tier",
     "relations.player",

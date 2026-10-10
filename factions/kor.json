@@ -10,7 +10,12 @@
     "#0047A0",
     "#000000"
   ],
-  "blocs": [],
+  "blocs": [
+    "us_kor_treaty",
+    "major_non_nato_ally_us",
+    "global_coalition_against_isis",
+    "unifil"
+  ],
   "campaign_tier": "mid",
   "alignment_to_player": "friendly",
   "player_client": true,
@@ -37,7 +42,20 @@
     "isis": -85,
     "al_qaeda": -85,
     "al_shabaab": -60,
-    "houthis": -40
+    "houthis": -40,
+    "bel": 55,
+    "deu": 55,
+    "dnk": 55,
+    "esp": 55,
+    "fra": 55,
+    "grc": 55,
+    "ita": 55,
+    "nld": 55,
+    "nzl": 55,
+    "swe": 55,
+    "are": 50,
+    "egy": 30,
+    "kaz": 30
   },
   "theatres": [
     "korean_dmz",

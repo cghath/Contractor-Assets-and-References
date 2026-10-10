@@ -35,7 +35,22 @@
     "aqap": 70,
     "jnim": 55,
     "houthis": 10,
-    "isis": -90
+    "isis": -90,
+    "est": -85,
+    "ltu": -85,
+    "lva": -85,
+    "pmc_black_sable": -85,
+    "pol": -85,
+    "rou": -85,
+    "bel": -90,
+    "dnk": -90,
+    "esp": -90,
+    "fin": -90,
+    "grc": -90,
+    "nld": -90,
+    "nor": -90,
+    "swe": -90,
+    "pmc_halcyon": -95
   },
   "theatres": [
     "horn_of_africa"
@@ -379,7 +394,7 @@
       "weapons_cache_raid"
     ]
   },
-  "notes": "al-Shabaab is a UN-sanctioned, US-designated terrorist organisation and al-Qaeda's affiliate in East Africa (relation al_qaeda 85). It fights the Somali federal government and army (som, an others-bloc faction), AUSSOM contingents (Uganda, Ethiopia, Kenya and others, which are not factions here), Turkish-trained Somali units and US strikes. Status 2026: AUSSOM says the group has taken no new territory since March 2025 and a joint Ugandan-Somali offensive retook Mubarak in March 2026, but attacks on the roads into Mogadishu rose sharply in mid-2026 and some analysts assess it as stronger than in years. Its rival in Somalia is Islamic State - Somalia Province (covered by isis). UN experts reported contacts with the Houthis (arms) in 2024-2025; the small positive value is low-confidence. Game framing: the main early-game enemy in horn_of_africa.",
+  "notes": "al-Shabaab is a UN-sanctioned, US-designated terrorist organisation and al-Qaeda's affiliate in East Africa (relation al_qaeda 85). It fights the Somali federal government and army (som, an others-bloc faction), AUSSOM contingents (Uganda, Ethiopia, Kenya and others, which are not factions here), Turkish-trained Somali units and US strikes. Status 2026: AUSSOM says the group has taken no new territory since March 2025 and a joint Ugandan-Somali offensive retook Mubarak in March 2026, but attacks on the roads into Mogadishu rose sharply in mid-2026 and some analysts assess it as stronger than in years. Its rival in Somalia is Islamic State - Somalia Province (covered by isis). UN experts reported contacts with the Houthis (arms) in 2024-2025; the small positive value is low-confidence. Game framing: the main early-game enemy in horn_of_africa. The value houthis <-> al_shabaab +10 is Captain-confirmed (2026-10-10).",
   "proposed": [
     "campaign_tier",
     "relations.player",
@@ -392,7 +407,6 @@
     "body_armor (game tier mapping)",
     "camo (approximate palettes)",
     "player_trade (hostile-only: not sellable)",
-    "relations.houthis (low-confidence; UN-reported contacts)",
     "VBIED as a telegraphed set-piece hazard",
     "relations values (factual direction, game magnitudes)"
   ],

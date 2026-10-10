@@ -14,7 +14,9 @@
     "aukus",
     "quad",
     "anzus",
-    "fpda"
+    "fpda",
+    "major_non_nato_ally_us",
+    "global_coalition_against_isis"
   ],
   "campaign_tier": "mid",
   "alignment_to_player": "friendly",
@@ -49,7 +51,19 @@
     "pij": -95,
     "hezbollah": -80,
     "houthis": -75,
-    "iraqi_militias": -70
+    "iraqi_militias": -70,
+    "bel": 70,
+    "deu": 70,
+    "dnk": 70,
+    "esp": 70,
+    "fin": 70,
+    "grc": 70,
+    "ita": 70,
+    "nld": 70,
+    "nor": 70,
+    "swe": 70,
+    "pol": 65,
+    "are": 30
   },
   "theatres": [
     "south_china_sea",

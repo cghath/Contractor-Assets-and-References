@@ -12,7 +12,8 @@
   "blocs": [
     "nato",
     "eu",
-    "benelux"
+    "benelux",
+    "global_coalition_against_isis"
   ],
   "campaign_tier": "mid",
   "alignment_to_player": "friendly",

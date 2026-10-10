@@ -9,7 +9,11 @@
     "#000095",
     "#FFFFFF"
   ],
-  "blocs": [],
+  "blocs": [
+    "taiwan_relations_act",
+    "major_non_nato_ally_us",
+    "global_coalition_against_isis"
+  ],
   "campaign_tier": "late",
   "alignment_to_player": "friendly",
   "player_client": true,

@@ -41,7 +41,22 @@
     "houthis": 65,
     "iraqi_militias": 55,
     "al_qaeda": -40,
-    "isis": -80
+    "isis": -80,
+    "ukr": -55,
+    "est": -75,
+    "ltu": -75,
+    "lva": -75,
+    "pol": -75,
+    "rou": -75,
+    "nzl": -80,
+    "bel": -85,
+    "dnk": -85,
+    "esp": -85,
+    "fin": -85,
+    "grc": -85,
+    "nld": -85,
+    "nor": -85,
+    "swe": -85
   },
   "theatres": [
     "gaza_west_bank",

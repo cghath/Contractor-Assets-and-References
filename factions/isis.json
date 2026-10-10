@@ -59,7 +59,33 @@
     "pij": -80,
     "hezbollah": -100,
     "houthis": -90,
-    "iraqi_militias": -100
+    "iraqi_militias": -100,
+    "vnm": -60,
+    "mda": -80,
+    "kor": -85,
+    "aut": -90,
+    "che": -90,
+    "geo": -90,
+    "irl": -90,
+    "jpn": -90,
+    "pmc_kestrel": -90,
+    "ukr": -90,
+    "est": -95,
+    "ltu": -95,
+    "lva": -95,
+    "pmc_black_sable": -95,
+    "pol": -95,
+    "rou": -95,
+    "bel": -100,
+    "dnk": -100,
+    "esp": -100,
+    "fin": -100,
+    "grc": -100,
+    "nld": -100,
+    "nor": -100,
+    "nzl": -100,
+    "pmc_halcyon": -100,
+    "swe": -100
   },
   "theatres": [
     "mesopotamia",
@@ -463,7 +489,7 @@
       "village_defence_vs_raid"
     ]
   },
-  "notes": "The Islamic State is UN-listed and designated a terrorist organisation by nearly every state; the Global Coalition to Defeat ISIS (which Syria joined in November 2025) opposes it. Its current caliph, announced in August 2023 as Abu Hafs al-Hashimi al-Qurashi, has not been publicly identified. Status 2026: rising attacks in Syria after the January 2026 north-east fighting, escapes from detention sites and the US withdrawal from Syria; a June 2026 attack on Raqqa police headquarters; persistent low-level cells in Iraq where the ISF lead clearance operations. Sahel Province attacked Niamey airport (January 2026) and claimed attacks that killed more than 50 Nigerien troops (September 2026); it fights JNIM as well as the AES juntas and Africa Corps. Somalia Province, based in Puntland's Cal Miskaad mountains, was the target of a major Puntland offensive in 2025. Captured 2014-2017 Humvees, M1117s and T-55s appear only as rare set pieces (Captain's open question; default yes, rare). Affiliate link: isis_k (+90). Rival: the al-Qaeda network (al_qaeda, aqap, al_shabaab, jnim), all strongly negative.",
+  "notes": "The Islamic State is UN-listed and designated a terrorist organisation by nearly every state; the Global Coalition to Defeat ISIS (which Syria joined in November 2025) opposes it. Its current caliph, announced in August 2023 as Abu Hafs al-Hashimi al-Qurashi, has not been publicly identified. Status 2026: rising attacks in Syria after the January 2026 north-east fighting, escapes from detention sites and the US withdrawal from Syria; a June 2026 attack on Raqqa police headquarters; persistent low-level cells in Iraq where the ISF lead clearance operations. Sahel Province attacked Niamey airport (January 2026) and claimed attacks that killed more than 50 Nigerien troops (September 2026); it fights JNIM as well as the AES juntas and Africa Corps. Somalia Province, based in Puntland's Cal Miskaad mountains, was the target of a major Puntland offensive in 2025. Captured 2014-2017 Humvees, M1117s and T-55s appear only as rare set pieces (Captain-confirmed (2026-10-10)). Affiliate link: isis_k (+90). Rival: the al-Qaeda network (al_qaeda, aqap, al_shabaab, jnim), all strongly negative. Covering the Sahel and Somalia provinces in this faction (theatres sahel and horn_of_africa) is Captain-confirmed (2026-10-10).",
   "proposed": [
     "campaign_tier",
     "relations.player",
@@ -476,9 +502,6 @@
     "body_armor (game tier mapping)",
     "camo (approximate palettes)",
     "player_trade (hostile-only: not sellable)",
-    "Coverage of Sahel and Somalia provinces inside this faction (Captain's open question; default yes)",
-    "theatres include horn_of_africa for Somalia Province",
-    "Captured Humvee/M1117/T-55 as rare set pieces (Captain's open question; default yes)",
     "VBIED as a telegraphed set-piece hazard",
     "relations values (factual direction, game magnitudes)"
   ],

@@ -12,7 +12,8 @@
   "blocs": [
     "nato",
     "eu",
-    "bucharest_nine"
+    "bucharest_nine",
+    "global_coalition_against_isis"
   ],
   "campaign_tier": "mid",
   "alignment_to_player": "friendly",
@@ -54,7 +55,12 @@
     "pij": -75,
     "hezbollah": -65,
     "houthis": -65,
-    "iraqi_militias": -55
+    "iraqi_militias": -55,
+    "bel": 70,
+    "dnk": 70,
+    "fin": 70,
+    "nor": 70,
+    "swe": 70
   },
   "theatres": [
     "black_sea_coast"

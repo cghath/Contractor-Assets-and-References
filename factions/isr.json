@@ -9,7 +9,8 @@
     "#0038B8"
   ],
   "blocs": [
-    "major_non_nato_ally_us"
+    "major_non_nato_ally_us",
+    "abraham_accords"
   ],
   "campaign_tier": "mid",
   "alignment_to_player": "neutral",
@@ -45,7 +46,26 @@
     "isis": -90,
     "al_qaeda": -85,
     "aqap": -80,
-    "isis_k": -70
+    "isis_k": -70,
+    "est": 50,
+    "rou": 50,
+    "srb": 40,
+    "pol": 30,
+    "vnm": 30,
+    "aus": 25,
+    "ita": 25,
+    "dnk": 20,
+    "fin": 20,
+    "nzl": 20,
+    "nld": 15,
+    "swe": 15,
+    "che": 10,
+    "bel": -5,
+    "nor": -5,
+    "esp": -10,
+    "arm": -20,
+    "irl": -25,
+    "pak": -70
   },
   "theatres": [
     "israel",

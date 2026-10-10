@@ -114,6 +114,8 @@ Check `reference/vehicles/` first. As of this snapshot these are missing:
 
 ## Open questions for Captain
 
+Answered by Captain on 2026-10-10: see "Captain's decisions (2026-10-10)" in [factions_handoff.md](factions_handoff.md).
+
 - Should `isis` cover IS's Sahel and West Africa provinces too, or should they stay inside `sahel` worldspace text only? The default is to cover them in `isis`.
 - Hamas after the 2025 ceasefire: set it as a mid-strength early-game enemy in `gaza_west_bank`. The default is yes, with tunnels as level geometry.
 - Should captured MRAPs and Humvees appear as enemy vehicles (an ISIS/Taliban look)? The default is yes, as rare.

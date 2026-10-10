@@ -14,7 +14,8 @@
     "cis",
     "union_state",
     "eaeu",
-    "sco"
+    "sco",
+    "brics"
   ],
   "campaign_tier": "late",
   "alignment_to_player": "hostile",
@@ -38,7 +39,24 @@
     "usa": -40,
     "gbr": -55,
     "deu": -55,
-    "isis": -90
+    "isis": -90,
+    "pmc_kestrel": 50,
+    "geo": -10,
+    "aut": -25,
+    "che": -25,
+    "mda": -40,
+    "can": -55,
+    "rou": -60,
+    "bel": -65,
+    "dnk": -65,
+    "esp": -65,
+    "fin": -65,
+    "fra": -65,
+    "grc": -65,
+    "ita": -65,
+    "nld": -65,
+    "nor": -65,
+    "swe": -65
   },
   "theatres": [
     "suwalki_gap",

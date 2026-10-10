@@ -12,6 +12,9 @@
   ],
   "blocs": [
     "arab_league",
+    "islamic_military_counter_terrorism_coalition"
+  ],
+  "traits": [
     "plo"
   ],
   "campaign_tier": "early",
@@ -41,7 +44,16 @@
     "pij": -55,
     "hezbollah": -20,
     "isis": -90,
-    "al_qaeda": -80
+    "al_qaeda": -80,
+    "bel": 45,
+    "irl": 40,
+    "dnk": 35,
+    "fin": 35,
+    "grc": 35,
+    "ita": 35,
+    "nld": 35,
+    "swe": 35,
+    "nzl": 20
   },
   "theatres": [
     "gaza_west_bank"
@@ -266,11 +278,10 @@
     ],
     "as_target": []
   },
-  "notes": "Situation as of October 2026: President Mahmoud Abbas, with Hussein al-Sheikh as vice-president and a leading succession candidate. A decree of 9 July 2026 set Palestinian legislative elections for 28 November 2026, with a presidential vote targeted for early 2027. Many states recognised the State of Palestine in September 2025, including France, the UK, Canada and Australia. Gaza: since the October 2025 ceasefire a National Committee for the Administration of Gaza (technocrats under the US-led Board of Peace, chaired by Ali Shaath) has worked from Egypt since January 2026 but had not entered Gaza by mid-2026; Hamas has not disarmed, the International Stabilization Force has not fully deployed, and Egyptian- and Jordanian-trained Palestinian police are a candidate future Gaza force (US officials reported training quality problems in early 2026). West Bank: Israeli military operations in the northern camps since January 2025, settler violence and the PA's fiscal crisis (withheld clearance revenues, partial salaries) weaken PA control in Jenin, Tulkarm and Nablus. The PA is a rival of Hamas and PIJ but not their battlefield enemy in the game sense; it never fights the IDF. Only three vehicle types are listed (spec asks 4-12) because PA forces are restricted to light weapons and unarmoured or lightly armoured vehicles; this is factual. Game framing: a low-power neutral client in gaza_west_bank (aid escort, election security, VIP protection, training) with very high civilian density; the player's civilian-casualty penalties apply fully.",
+  "notes": "Situation as of October 2026: President Mahmoud Abbas, with Hussein al-Sheikh as vice-president and a leading succession candidate. A decree of 9 July 2026 set Palestinian legislative elections for 28 November 2026, with a presidential vote targeted for early 2027. Many states recognised the State of Palestine in September 2025, including France, the UK, Canada and Australia. Gaza: since the October 2025 ceasefire a National Committee for the Administration of Gaza (technocrats under the US-led Board of Peace, chaired by Ali Shaath) has worked from Egypt since January 2026 but had not entered Gaza by mid-2026; Hamas has not disarmed, the International Stabilization Force has not fully deployed, and Egyptian- and Jordanian-trained Palestinian police are a candidate future Gaza force (US officials reported training quality problems in early 2026). West Bank: Israeli military operations in the northern camps since January 2025, settler violence and the PA's fiscal crisis (withheld clearance revenues, partial salaries) weaken PA control in Jenin, Tulkarm and Nablus. The PA is a rival of Hamas and PIJ but not their battlefield enemy in the game sense; it never fights the IDF. Only three vehicle types are listed (spec asks 4-12) because PA forces are restricted to light weapons and unarmoured or lightly armoured vehicles; this is factual. Game framing: a low-power neutral client in gaza_west_bank (aid escort, election security, VIP protection, training) with very high civilian density; the player's civilian-casualty penalties apply fully. Its player-client role, limited to escort, election security, VIP protection and training (real PA forces do not hire foreign PMCs for combat), is Captain-confirmed (2026-10-10).",
   "proposed": [
     "campaign_tier",
     "alignment_to_player",
-    "player_client (real PA forces do not hire foreign PMCs for combat; contracts are limited to escort, protection and training)",
     "relations.player",
     "contract_types.as_client",
     "doctrine.ai_tuning",

@@ -11,7 +11,10 @@
   ],
   "blocs": [
     "nato",
-    "eu"
+    "eu",
+    "global_coalition_against_isis",
+    "g7",
+    "unifil"
   ],
   "campaign_tier": "early",
   "alignment_to_player": "friendly",
@@ -70,7 +73,11 @@
     "dnk": 80,
     "swe": 80,
     "fin": 80,
-    "grc": 80
+    "grc": 80,
+    "mda": 60,
+    "aut": 50,
+    "che": 50,
+    "srb": 25
   },
   "theatres": [
     "lebanon_south",

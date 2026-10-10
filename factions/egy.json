@@ -14,7 +14,9 @@
     "arab_league",
     "african_union",
     "brics",
-    "major_non_nato_ally_us"
+    "major_non_nato_ally_us",
+    "global_coalition_against_isis",
+    "islamic_military_counter_terrorism_coalition"
   ],
   "campaign_tier": "mid",
   "alignment_to_player": "neutral",
@@ -50,7 +52,14 @@
     "al_qaeda": -85,
     "aqap": -70,
     "al_shabaab": -60,
-    "jnim": -50
+    "jnim": -50,
+    "bel": 35,
+    "dnk": 35,
+    "esp": 35,
+    "fin": 35,
+    "nld": 35,
+    "nor": 35,
+    "swe": 35
   },
   "theatres": [
     "gaza_west_bank",

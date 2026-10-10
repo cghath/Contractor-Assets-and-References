@@ -12,8 +12,14 @@
   ],
   "blocs": [
     "organization_of_turkic_states",
-    "non_aligned_movement",
-    "cis"
+    "cis",
+    "nato_partnership_for_peace",
+    "eastern_partnership",
+    "guam",
+    "tur_aze"
+  ],
+  "traits": [
+    "non_aligned_movement"
   ],
   "campaign_tier": "mid",
   "alignment_to_player": "neutral",
@@ -29,13 +35,15 @@
     "ukr": 35,
     "usa": 35,
     "gbr": 40,
-    "geo": 40,
+    "geo": 58,
     "rus": 0,
     "irn": -25,
     "ind": -35,
     "fra": -55,
     "arm": -40,
-    "isis": -90
+    "isis": -90,
+    "mda": 30,
+    "grc": -10
   },
   "theatres": [
     "caucasus"

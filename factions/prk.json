@@ -9,7 +9,10 @@
     "#ED1C27",
     "#FFFFFF"
   ],
-  "blocs": [],
+  "blocs": [
+    "rus_prk_treaty",
+    "chn_prk_treaty"
+  ],
   "campaign_tier": "late",
   "alignment_to_player": "hostile",
   "player_client": false,
@@ -26,7 +29,25 @@
     "ukr": -80,
     "aus": -60,
     "gbr": -60,
-    "can": -60
+    "can": -60,
+    "bel": -60,
+    "deu": -60,
+    "dnk": -60,
+    "esp": -60,
+    "fin": -60,
+    "fra": -60,
+    "grc": -60,
+    "ita": -60,
+    "nld": -60,
+    "nor": -60,
+    "nzl": -60,
+    "rou": -60,
+    "swe": -60,
+    "twn": -60,
+    "est": -70,
+    "ltu": -70,
+    "lva": -70,
+    "pol": -70
   },
   "theatres": [
     "korean_dmz",

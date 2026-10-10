@@ -9,10 +9,14 @@
     "#FFFFFF"
   ],
   "blocs": [
-    "neutral",
     "eu",
-    "schengen",
     "nato_partnership_for_peace",
+    "global_coalition_against_isis",
+    "unifil"
+  ],
+  "traits": [
+    "neutral",
+    "schengen",
     "european_sky_shield"
   ],
   "campaign_tier": "mid",
@@ -348,17 +352,16 @@
     ],
     "as_target": []
   },
-  "notes": "Neutral EU state; never a target faction. In game: staging area and neutral contract source in alpine_europe, a UNIFIL contributor in lebanon_south, and a possible arms market (Steyr, Glock). Situation as of October 2026: the Bundesheer is in a large rearmament programme (Pandur Evolution, Ulan modernisation, Black Hawk and AW169 helicopters, Skyranger air defence) under the Aufbauplan 2032+, and a 2026 debate about neutrality continues; Austria remains outside NATO. UNIFIL's mandate ends on 31 December 2026, with withdrawal in 2027.",
+  "notes": "Neutral EU state; never a target faction. In game: staging area and neutral contract source in alpine_europe, a UNIFIL contributor in lebanon_south, and an arms market for the player (Steyr, Glock) at rep 20/40/60 (Captain-confirmed (2026-10-10)). Situation as of October 2026: the Bundesheer is in a large rearmament programme (Pandur Evolution, Ulan modernisation, Black Hawk and AW169 helicopters, Skyranger air defence) under the Aufbauplan 2032+, and a 2026 debate about neutrality continues; Austria remains outside NATO. UNIFIL's mandate ends on 31 December 2026, with withdrawal in 2027.",
   "proposed": [
     "campaign_tier",
     "relations.player",
     "doctrine.ai_tuning",
-    "player_trade (Austria as an arms market, rep thresholds and items)",
     "contract_types.as_client",
     "unit_templates",
     "vehicles[].prevalence (game weighting)",
     "body_armor (game tier mapping)",
-    "blocs (neutral is a game tag)"
+    "traits (neutral is a game tag)"
   ],
   "sources": [
     "https://en.wikipedia.org/wiki/Austrian_Armed_Forces",

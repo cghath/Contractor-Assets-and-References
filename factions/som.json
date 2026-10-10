@@ -10,7 +10,9 @@
   ],
   "blocs": [
     "african_union",
-    "arab_league"
+    "arab_league",
+    "global_coalition_against_isis",
+    "islamic_military_counter_terrorism_coalition"
   ],
   "campaign_tier": "early",
   "alignment_to_player": "neutral",

@@ -10,7 +10,9 @@
   ],
   "blocs": [
     "nato",
-    "five_eyes"
+    "five_eyes",
+    "global_coalition_against_isis",
+    "g7"
   ],
   "campaign_tier": "early",
   "alignment_to_player": "friendly",
@@ -57,7 +59,20 @@
     "pij": -95,
     "hezbollah": -85,
     "houthis": -80,
-    "iraqi_militias": -70
+    "iraqi_militias": -70,
+    "bel": 80,
+    "esp": 80,
+    "fin": 80,
+    "grc": 80,
+    "ita": 80,
+    "nld": 80,
+    "swe": 80,
+    "rou": 70,
+    "phl": 45,
+    "twn": 30,
+    "pmc_halcyon": 20,
+    "sau": 15,
+    "africa_corps": -55
   },
   "theatres": [
     "baltic_coast",

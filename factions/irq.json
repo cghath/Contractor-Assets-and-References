@@ -43,7 +43,17 @@
     "hamas": 5,
     "houthis": 0,
     "isis": -100,
-    "al_qaeda": -90
+    "al_qaeda": -90,
+    "bel": 35,
+    "dnk": 35,
+    "esp": 35,
+    "fin": 35,
+    "grc": 35,
+    "nld": 35,
+    "nor": 35,
+    "swe": 35,
+    "can": 30,
+    "pmc_halcyon": 20
   },
   "theatres": [
     "mesopotamia",
@@ -368,11 +378,10 @@
     ],
     "as_target": []
   },
-  "notes": "Situation as of October 2026: Prime Minister Ali al-Zaidi (Coordination Framework consensus candidate, designated 27 April 2026; parliament approved a partial cabinet without settled interior and defence ministers). US forces completed their withdrawal from federal Iraq by 30 September 2026 under the 2024 agreement ending the coalition mission; reports differ on a residual presence in the Kurdistan Region. On 30 September 2026 the cabinet approved a contested PMF law and sent it to parliament; the government has set a mid-2027 deadline to disarm Iran-backed factions. PMF vs iraqi_militias (game boundary): the PMF is part of the Iraqi state and is NOT modelled as a separate faction. The `iraqi_militias` faction represents the Iran-aligned armed factions (Kataib Hezbollah, Harakat al-Nujaba and similar 'Islamic Resistance in Iraq' groups) acting OUTSIDE state command, e.g. the 2026 drone and rocket attacks on US sites, which drew US and Israeli strikes inside Iraq. The same men can wear PMF badges on duty, so irq's relation with iraqi_militias is tense but not open war (-20): ISF units avoid fighting them and arrests are rare and political. Contracts from irq should never ask the player to attack PMF units; contracts against iraqi_militias come from other clients. The Kurdistan Region's Peshmerga (krg_peshmerga) are a constitutional regional force with sometimes tense ties to Baghdad (Kirkuk, budget disputes). Iraq does not recognise Israel. Iran is Iraq's most influential neighbour (electricity, gas, politics) while the US remains a major arms supplier, so relations with both are positive. Iraq is a natural early-game neutral client for counter-ISIS work in the mesopotamia theatre.",
+  "notes": "Situation as of October 2026: Prime Minister Ali al-Zaidi (Coordination Framework consensus candidate, designated 27 April 2026; parliament approved a partial cabinet without settled interior and defence ministers). US forces completed their withdrawal from federal Iraq by 30 September 2026 under the 2024 agreement ending the coalition mission; reports differ on a residual presence in the Kurdistan Region. On 30 September 2026 the cabinet approved a contested PMF law and sent it to parliament; the government has set a mid-2027 deadline to disarm Iran-backed factions. PMF vs iraqi_militias (game boundary): the PMF is part of the Iraqi state and is NOT modelled as a separate faction. The `iraqi_militias` faction represents the Iran-aligned armed factions (Kataib Hezbollah, Harakat al-Nujaba and similar 'Islamic Resistance in Iraq' groups) acting OUTSIDE state command, e.g. the 2026 drone and rocket attacks on US sites, which drew US and Israeli strikes inside Iraq. The same men can wear PMF badges on duty, so irq's relation with iraqi_militias is tense but not open war (-20): ISF units avoid fighting them and arrests are rare and political. Contracts from irq should never ask the player to attack PMF units; contracts against iraqi_militias come from other clients. The Kurdistan Region's Peshmerga (krg_peshmerga) are a constitutional regional force with sometimes tense ties to Baghdad (Kirkuk, budget disputes). Iraq does not recognise Israel. Iran is Iraq's most influential neighbour (electricity, gas, politics) while the US remains a major arms supplier, so relations with both are positive. Iraq is a natural early-game neutral client for counter-ISIS work in the mesopotamia theatre. player_client true is Captain-confirmed (2026-10-10).",
   "proposed": [
     "campaign_tier",
     "alignment_to_player",
-    "player_client",
     "relations.player",
     "relations.iraqi_militias (game abstraction of a contested state-militia relationship)",
     "contract_types.as_client",

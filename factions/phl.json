@@ -11,7 +11,9 @@
     "#FCD116"
   ],
   "blocs": [
-    "asean"
+    "asean",
+    "us_phl_treaty",
+    "major_non_nato_ally_us"
   ],
   "campaign_tier": "early",
   "alignment_to_player": "friendly",
@@ -30,7 +32,8 @@
     "twn": 20,
     "chn": -65,
     "isis": -100,
-    "al_qaeda": -90
+    "al_qaeda": -90,
+    "nzl": 50
   },
   "theatres": [
     "south_china_sea"

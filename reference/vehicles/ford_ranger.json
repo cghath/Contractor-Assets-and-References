@@ -1,0 +1,79 @@
+{
+  "id": "ford_ranger",
+  "name": "Ford Ranger pickup (unarmed)",
+  "aliases": [
+    "Ranger",
+    "Ford Ranger T6",
+    "ANP Ranger",
+    "patrol pickup"
+  ],
+  "origin": "United States (T6 generation engineered by Ford Australia)",
+  "type": "light",
+  "operators": [
+    "afg_taliban",
+    "mex"
+  ],
+  "crew": 2,
+  "passengers": 3,
+  "dimensions_m": {
+    "length": 5.36,
+    "width": 1.85,
+    "height": 1.82
+  },
+  "weight_t": 2.2,
+  "armament": [
+    "None fitted; police and Taliban crews fire from the cab and bed (pintle MG mounts are improvised)"
+  ],
+  "protection": "Unarmoured. Under the game rule the body is immune to small-calibre fire, but 7.62x54R and up penetrate; occupants, glass and tyres are exposed to all fire.",
+  "visual_notes": [
+    "Double-cab 4x4 pickup, T6 (2011-2022) styling: large trapezoid grille, swept headlamps, squared wheel arches",
+    "Afghan police fleet: dark green paint, white 'Police' lettering or Taliban white-flag decals, roll bar and roof light bar, bench seats in the bed",
+    "Taliban use often adds a white Islamic Emirate flag on a whip antenna, fighters sitting on the bed rails",
+    "Mexican patrol versions (game stand-in for Ford Lobo / Ram): grey or green paint, roll-bar MG mount, troops on bench seats facing out",
+    "Shares proportions with the Hilux/technical voxel chassis: can be modelled as a reskin with a new nose"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Ex-ANP police green",
+      "palette": [
+        "#3E4A2E",
+        "#2C3522",
+        "#EDEDEA"
+      ]
+    },
+    {
+      "name": "Mexican military / Guardia Nacional",
+      "palette": [
+        "#4B5320",
+        "#6B6B5E",
+        "#1F1F1A"
+      ]
+    },
+    {
+      "name": "Civilian white",
+      "palette": [
+        "#EDEDEA",
+        "#BFC2C4",
+        "#2A2A2A"
+      ]
+    }
+  ],
+  "variants": [
+    "single cab",
+    "double cab (most common)",
+    "ex-Afghan National Police green patrol pickup (afg_taliban signature)",
+    "Ford Lobo / F-series and Ram patrol pickups (mex; game stand-in, moved from toyota_hilux)"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Ford_Ranger_(T6)",
+    "https://commons.wikimedia.org/wiki/Category:Ford_Ranger_(T6)",
+    "https://en.wikipedia.org/wiki/Ford_F-Series"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Ford_Ranger_(T6)",
+    "https://en.wikipedia.org/wiki/Afghan_National_Police",
+    "https://en.wikipedia.org/wiki/Military_equipment_of_Afghanistan"
+  ]
+}

@@ -32,7 +32,23 @@
     "isis": -85,
     "al_qaeda": 90,
     "al_shabaab": 70,
-    "jnim": 60
+    "jnim": 60,
+    "bel": -90,
+    "dnk": -90,
+    "esp": -90,
+    "est": -90,
+    "fin": -90,
+    "grc": -90,
+    "ita": -90,
+    "ltu": -90,
+    "lva": -90,
+    "nld": -90,
+    "nor": -90,
+    "pmc_black_sable": -90,
+    "pol": -90,
+    "rou": -90,
+    "swe": -90,
+    "pmc_halcyon": -100
   },
   "theatres": [
     "yemen_red_sea"
@@ -337,7 +353,7 @@
       "convoy_ambush_defence"
     ]
   },
-  "notes": "AQAP is a UN-listed and US-designated terrorist organisation and an affiliate of the al-Qaeda core (relation al_qaeda 90). It has attempted external attacks (2009 underwear bomb plot, 2010 cargo plot) and claimed the 2015 Charlie Hebdo attack. Leader: Saad bin Atef al-Awlaki since March 2024; in 2025 he called for attacks on senior US officials. NCTC (May 2026): about 2,000-3,000 fighters, mainly in southern and central Yemen. Reported 2026 activity includes clashes in Wadi Omran (Mudiyah, Abyan) in February 2026. The Houthis are an enemy (they fight in al-Bayda), although the UN Panel of Experts reported some tactical coordination in 2024; that value is kept negative. Game framing: early-game raid enemy in yemen_red_sea; contracts against AQAP come from Saudi, Emirati or Yemeni-government-linked clients.",
+  "notes": "AQAP is a UN-listed and US-designated terrorist organisation and an affiliate of the al-Qaeda core (relation al_qaeda 90). It has attempted external attacks (2009 underwear bomb plot, 2010 cargo plot) and claimed the 2015 Charlie Hebdo attack. Leader: Saad bin Atef al-Awlaki since March 2024; in 2025 he called for attacks on senior US officials. NCTC (May 2026): about 2,000-3,000 fighters, mainly in southern and central Yemen. Reported 2026 activity includes clashes in Wadi Omran (Mudiyah, Abyan) in February 2026. The Houthis are an enemy (they fight in al-Bayda), although the UN Panel of Experts reported some tactical coordination in 2024; that value is kept negative. Game framing: early-game raid enemy in yemen_red_sea; contracts against AQAP come from Saudi, Emirati or Yemeni-government-linked clients. The value houthis <-> aqap -60 is Captain-confirmed (2026-10-10).",
   "proposed": [
     "campaign_tier",
     "relations.player",
@@ -350,7 +366,6 @@
     "body_armor (game tier mapping)",
     "camo (approximate palettes)",
     "player_trade (hostile-only: not sellable)",
-    "relations.houthis (enemy with reported limited coordination; low-confidence magnitude)",
     "relations values (factual direction, game magnitudes)"
   ],
   "sources": [

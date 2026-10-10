@@ -40,10 +40,21 @@
     "hamas": -10,
     "pij": -30,
     "houthis": -30,
-    "sdf": -20,
+    "sdf": 10,
     "krg_peshmerga": 10,
     "isis": -95,
-    "al_qaeda": -50
+    "al_qaeda": -50,
+    "bel": 5,
+    "dnk": 5,
+    "esp": 5,
+    "fin": 5,
+    "grc": 5,
+    "ita": 5,
+    "nld": 5,
+    "nor": 5,
+    "swe": 5,
+    "prk": 0,
+    "pmc_kestrel": -10
   },
   "theatres": [
     "levant_syria",
@@ -386,11 +397,10 @@
       "monitor_ceasefire_line"
     ]
   },
-  "notes": "Situation as of October 2026: transitional government under President Ahmed al-Sharaa (former HTS leader); People's Assembly chosen by indirect selection in October 2025. Most US sanctions were lifted in 2025 and Syria was removed from the US arms-export ban list in September 2026. US forces left Syria in February-March 2026 (al-Tanf handed over); Syria is a coalition partner against ISIS, which has stepped up attacks in Raqqa and Deir ez-Zor after the 2026 handover of detention sites. SDF integration (agreements of March 2025 and 29 January 2026) is in progress; Qamishli, Hasakah and Kobane were not under government control as of spring 2026, and a Kurdish former YPG commander was made a deputy defence minister. Russia: a 9 August 2026 memorandum hands Hmeimim air base and the Tartus port berth to Syrian administration and turns the military facilities into joint training centres within three months. Iran and Hezbollah lost their position with Assad's fall and are hostile. Israel holds a buffer zone in the south-west and strikes Syrian targets (e.g. Abu al-Duhur air base, 18 August 2026) while US-mediated security talks continue; al-Sharaa demanded Israeli withdrawal at the UN General Assembly on 23 September 2026. The Druze-majority Suwayda region remains outside full government control after the July 2025 fighting. Game framing: an early-game neutral client for counter-ISIS and reconstruction-security work; reprisals against civilians (Alawite, Druze, Kurdish areas) should exist only as contract hazards the player can prevent, with the civilian-casualty rules fully active.",
+  "notes": "Situation as of October 2026: transitional government under President Ahmed al-Sharaa (former HTS leader); People's Assembly chosen by indirect selection in October 2025. Most US sanctions were lifted in 2025 and Syria was removed from the US arms-export ban list in September 2026. US forces left Syria in February-March 2026 (al-Tanf handed over); Syria is a coalition partner against ISIS, which has stepped up attacks in Raqqa and Deir ez-Zor after the 2026 handover of detention sites. SDF integration (agreements of March 2025 and 29 January 2026) is in progress; Qamishli, Hasakah and Kobane were not under government control as of spring 2026, and a Kurdish former YPG commander was made a deputy defence minister. Russia: a 9 August 2026 memorandum hands Hmeimim air base and the Tartus port berth to Syrian administration and turns the military facilities into joint training centres within three months. Iran and Hezbollah lost their position with Assad's fall and are hostile. Israel holds a buffer zone in the south-west and strikes Syrian targets (e.g. Abu al-Duhur air base, 18 August 2026) while US-mediated security talks continue; al-Sharaa demanded Israeli withdrawal at the UN General Assembly on 23 September 2026. The Druze-majority Suwayda region remains outside full government control after the July 2025 fighting. Game framing: an early-game neutral client for counter-ISIS and reconstruction-security work; reprisals against civilians (Alawite, Druze, Kurdish areas) should exist only as contract hazards the player can prevent, with the civilian-casualty rules fully active. player_client true is Captain-confirmed (2026-10-10). Game: syr and sdf are neutral-to-friendly (+10 each way; Captain's decision, 2026-10-10), treating the integration as mostly done.",
   "proposed": [
     "campaign_tier",
     "alignment_to_player",
-    "player_client",
     "relations.player",
     "contract_types",
     "doctrine.ai_tuning",

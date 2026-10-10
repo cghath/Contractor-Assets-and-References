@@ -12,6 +12,12 @@
     "nato",
     "mecca_joint_defence_agreement",
     "organization_of_turkic_states",
+    "eu",
+    "tur_aze",
+    "global_coalition_against_isis",
+    "islamic_military_counter_terrorism_coalition"
+  ],
+  "traits": [
     "g20"
   ],
   "campaign_tier": "mid",
@@ -54,7 +60,24 @@
     "isis": -90,
     "isis_k": -80,
     "al_qaeda": -60,
-    "al_shabaab": -85
+    "al_shabaab": -85,
+    "rou": 65,
+    "esp": 55,
+    "est": 55,
+    "lva": 55,
+    "ltu": 50,
+    "mda": 50,
+    "sahel_aes": 50,
+    "bel": 40,
+    "dnk": 40,
+    "fin": 40,
+    "nld": 40,
+    "nor": 40,
+    "swe": 35,
+    "afg_taliban": 15,
+    "aut": 10,
+    "pmc_black_sable": -20,
+    "ind": -30
   },
   "theatres": [
     "levant_syria",

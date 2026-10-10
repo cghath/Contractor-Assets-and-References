@@ -9,7 +9,8 @@
     "#FFFF00"
   ],
   "blocs": [
-    "asean"
+    "asean",
+    "brics"
   ],
   "campaign_tier": "mid",
   "alignment_to_player": "neutral",

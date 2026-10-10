@@ -13,7 +13,11 @@
     "cis",
     "eaeu",
     "sco",
-    "organization_of_turkic_states"
+    "organization_of_turkic_states",
+    "nato_partnership_for_peace",
+    "brics",
+    "abraham_accords",
+    "unifil"
   ],
   "campaign_tier": "mid",
   "alignment_to_player": "neutral",
@@ -33,7 +37,9 @@
     "afg_taliban": 10,
     "isis_k": -90,
     "isis": -90,
-    "al_qaeda": -90
+    "al_qaeda": -90,
+    "geo": 30,
+    "srb": 25
   },
   "theatres": [
     "levant_syria",

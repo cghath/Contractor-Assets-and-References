@@ -9,7 +9,10 @@
     "#FFFFFF"
   ],
   "blocs": [
-    "sco"
+    "sco",
+    "major_non_nato_ally_us",
+    "mecca_joint_defence_agreement",
+    "islamic_military_counter_terrorism_coalition"
   ],
   "campaign_tier": "early",
   "alignment_to_player": "varies",

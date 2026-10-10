@@ -41,7 +41,24 @@
     "hamas": 70,
     "pij": 75,
     "al_qaeda": -90,
-    "isis": -100
+    "isis": -100,
+    "sdf": -20,
+    "aut": -30,
+    "irl": -40,
+    "ukr": -50,
+    "esp": -55,
+    "bel": -65,
+    "dnk": -65,
+    "est": -65,
+    "fin": -65,
+    "grc": -65,
+    "ltu": -65,
+    "lva": -65,
+    "nld": -65,
+    "nor": -65,
+    "pol": -65,
+    "rou": -65,
+    "swe": -65
   },
   "theatres": [
     "lebanon_south",
@@ -433,9 +450,8 @@
       "convoy_ambush_defence"
     ]
   },
-  "notes": "Hezbollah is designated a terrorist organisation (in whole or its military wing) by the US, UK, Canada, Australia, the EU (military wing), the Arab League and the GCC, and is also a Lebanese political party with seats in parliament. It fought for Assad in Syria and is hostile to the post-Assad Syrian government. Status as of October 2026: re-entered the war on 2 March 2026 alongside Iran; Israel occupied much of southern Lebanon from 16 March 2026 and stayed through a temporary ceasefire in April and a June framework; Lebanese Speaker Nabih Berri said Hezbollah would withdraw south of the Litani if Israel withdrew in parallel, while Hezbollah rejected full disarmament. The Lebanese state (no faction file in this pack) is not hostile to it. Its 2016 parade of T-55s, M113s, BMP-1s and ZSU-57-2s at al-Qusayr is the factual basis for rare armour; most of that kit was in Syria and is presumed lost after December 2024. Game framing: a mid-tier step up from the early-game cells (Captain's brief allows mid), strongest in lebanon_south.",
+  "notes": "Hezbollah is designated a terrorist organisation (in whole or its military wing) by the US, UK, Canada, Australia, the EU (military wing), the Arab League and the GCC, and is also a Lebanese political party with seats in parliament. It fought for Assad in Syria and is hostile to the post-Assad Syrian government. Status as of October 2026: re-entered the war on 2 March 2026 alongside Iran; Israel occupied much of southern Lebanon from 16 March 2026 and stayed through a temporary ceasefire in April and a June framework; Lebanese Speaker Nabih Berri said Hezbollah would withdraw south of the Litani if Israel withdrew in parallel, while Hezbollah rejected full disarmament. The Lebanese state (no faction file in this pack) is not hostile to it. Its 2016 parade of T-55s, M113s, BMP-1s and ZSU-57-2s at al-Qusayr is the factual basis for rare armour; most of that kit was in Syria and is presumed lost after December 2024. Game framing: a mid-tier step up from the early-game cells (Captain's brief allows mid), strongest in lebanon_south. Rare ex-Assad-era armour (t55, m113, bmp1) as set pieces only, and campaign_tier mid, are Captain-confirmed (2026-10-10).",
   "proposed": [
-    "campaign_tier",
     "relations.player",
     "doctrine.ai_tuning (all values)",
     "doctrine.squad_size (game cell size)",
@@ -446,9 +462,7 @@
     "body_armor (game tier mapping)",
     "camo (approximate palettes)",
     "player_trade (hostile-only: not sellable)",
-    "campaign_tier mid (brief allows mid)",
     "Radwan units as a higher tuning tier",
-    "Rare armour (t55, m113, bmp1) as set-piece vehicles only",
     "relations values (factual direction, game magnitudes)"
   ],
   "sources": [

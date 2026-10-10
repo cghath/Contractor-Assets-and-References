@@ -10,7 +10,8 @@
   ],
   "blocs": [
     "nato",
-    "eu"
+    "eu",
+    "global_coalition_against_isis"
   ],
   "campaign_tier": "early",
   "alignment_to_player": "friendly",

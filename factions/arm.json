@@ -10,10 +10,11 @@
     "#F2A800"
   ],
   "blocs": [
-    "csto_suspended",
+    "csto",
     "cis",
     "eaeu",
-    "eu_partnership"
+    "eastern_partnership",
+    "nato_partnership_for_peace"
   ],
   "campaign_tier": "mid",
   "alignment_to_player": "neutral",
@@ -33,7 +34,8 @@
     "tur": -15,
     "isr": -20,
     "aze": -40,
-    "isis": -90
+    "isis": -90,
+    "ukr": 15
   },
   "theatres": [
     "caucasus"

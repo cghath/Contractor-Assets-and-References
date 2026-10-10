@@ -35,7 +35,14 @@
     "al_qaeda": -85,
     "pmc_halcyon": 20,
     "pmc_kestrel": -30,
-    "pmc_black_sable": -10
+    "pmc_black_sable": -10,
+    "bel": 55,
+    "dnk": 55,
+    "esp": 55,
+    "fin": 55,
+    "grc": 55,
+    "nor": 55,
+    "swe": 55
   },
   "theatres": [
     "mesopotamia",
@@ -304,14 +311,13 @@
     ],
     "as_target": []
   },
-  "notes": "Kind non_state chosen because the game models the KRG as a sub-state regional government inside Iraq (it is a constitutional regional force, so 'state' is also defensible). Situation as of October 2026: unification of the KDP and PUK forces under the Ministry of Peshmerga Affairs announced in September 2026; US forces left federal Iraq by 30 September 2026 and reports differ on a residual presence in the Kurdistan Region; Iran-aligned militias have attacked Kurdistan Region oil and gas fields and Erbil with drones and rockets (2025-2026); relations with Baghdad are cooperative but strained over Kirkuk, budgets and oil exports. Iran strikes Iranian Kurdish opposition groups based in the region, hence the iran_zagros border theatre. Player trade of basic kit is a proposal.",
+  "notes": "Kind non_state chosen because the game models the KRG as a sub-state regional government inside Iraq (it is a constitutional regional force, so 'state' is also defensible). Situation as of October 2026: unification of the KDP and PUK forces under the Ministry of Peshmerga Affairs announced in September 2026; US forces left federal Iraq by 30 September 2026 and reports differ on a residual presence in the Kurdistan Region; Iran-aligned militias have attacked Kurdistan Region oil and gas fields and Erbil with drones and rockets (2025-2026); relations with Baghdad are cooperative but strained over Kirkuk, budgets and oil exports. Iran strikes Iranian Kurdish opposition groups based in the region, hence the iran_zagros border theatre. Player trade of basic kit at rep 30/50 is Captain-confirmed (2026-10-10).",
   "proposed": [
     "kind (non_state vs state)",
     "campaign_tier",
     "alignment_to_player",
     "relations.player",
     "doctrine.ai_tuning",
-    "player_trade (basic kit sales, rep thresholds)",
     "contract_types.as_client",
     "unit_templates",
     "vehicles[].prevalence",

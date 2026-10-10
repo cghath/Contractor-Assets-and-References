@@ -6,7 +6,7 @@ The Contractor design doc (Claude Doc) is the source of truth for game design. W
 
 ## Handoffs (start here)
 
-**Status (11:05 UTC):** Jobs 1-3 are complete. All 77 factions exist, with 209 vehicles in the catalogue. The validator reports 0 errors. Next job: alliances.
+**Status (2026-10-10, after Job 4):** Jobs 1-4 are complete. All 77 factions exist and are reconciled to `factions/alliances.json` (47 alliances and the full 77 x 77 relations matrix), with 210 vehicles in the catalogue. The validator reports 0 errors. Next job: worldspaces; loadouts follow as job 6.
 
 **Faction count:** the roster has 77 ids, not 76 as earlier versions of this file said (1 + 5 + 11 + 8 + 7 + 9 + 11 + 11 + 14).
 
@@ -25,8 +25,8 @@ Each job has a sheet in this repo and a matching Claude Doc:
 1. ~~Finish syr, irq and pse_pa, and cross-check the 8 new Middle East files.~~ Done (10:45 UTC).
 2. ~~me_terror.~~ Done (10:55 UTC).
 3. ~~others.~~ Done (11:05 UTC).
-4. alliances.
-5. worldspaces.
+4. ~~alliances.~~ Done (2026-10-10).
+5. worldspaces. **Next.**
 6. loadouts (on the fork, after alliances; can run alongside worldspaces).
 
 The loadouts were owned by the "Faction loadout questions" thread, which never pushed any `loadouts/` files. On the fork, Captain's operator has asked for the loadouts job to be taken over and completed after alliances. Until then, don't touch `loadouts/`.
@@ -62,6 +62,27 @@ The loadouts were owned by the "Faction loadout questions" thread, which never p
 - **Tone:** factual and neutral. Tactics are described at game-design level only (ambushes, tunnels, IEDs as map hazards, drones).
 - **"Palestine/Iran":** built as separate regions, `gaza_west_bank` and `iran_zagros`, plus `persian_gulf_coast`, because one map can't hold both. `israel` is its own region.
 - **Photos:** the cloud build container can read web text (Wikipedia) but cannot download images; curl, upload.wikimedia.org and Commons are blocked. Each vehicle file therefore links its photo pages in `reference_pages` rather than storing photos. For exact matching, Captain can drop photos in a local folder, as was done for the UH-60.
+
+## Captain's decisions (2026-10-10)
+
+Answers to the open questions of Jobs 1-3, applied during Job 4. Each one was moved out of the faction's `proposed` list and noted as Captain-confirmed in its `notes` (or `rivalry.role`).
+
+- **Middle East states (Job 1):**
+  - syr, irq and pse_pa all stay player clients; pse_pa is limited to escort, election security, VIP protection and training.
+  - Syria and the SDF are neutral-to-friendly: syr -> sdf and sdf -> syr are +10 each (were -20 and -15), treating the integration as mostly done. The factual 2026 description of the integration process is unchanged.
+- **Terrorist bloc (Job 2):**
+  - isis keeps the Sahel and Somalia provinces (theatres include sahel and horn_of_africa).
+  - Captured Humvees, M1117s and T-55s (isis, isis_k) and ex-Assad-era armour (hezbollah) appear as rare set pieces.
+  - campaign_tier: only iraqi_militias moves from mid to early; hezbollah and houthis stay mid.
+  - The single-source relations stay as they are: al_qaeda -> afg_taliban +40, houthis <-> aqap -60, houthis <-> al_shabaab +10.
+  - The status notes based on the latest reporting found (Hamas roadmap to late July, Hezbollah/Lebanon to July, JNIM blockade to May) are acknowledged, with no change.
+- **Others (Job 3):**
+  - afg_taliban can hire the player as a limited client: player_client true, alignment neutral, relation -10 both ways with player, as_client counter-ISIS-K operations, convoy escort and infrastructure protection. It never sells gear. The factual recognition text is unchanged.
+  - Arms markets are all on: che and aut sell at rep 20/40/60, and krg_peshmerga sells basic kit at rep 30/50.
+  - The player's nemesis is **pmc_black_sable** (the Gulf-funded rival). pmc_halcyon is an ordinary rival. The rest of each rivalry object stays proposed.
+  - The name "Halcyon" stays as is; any resemblance to a real security firm is coincidental. No trademark-check question remains in the repo files.
+  - sahel_aes stays a rare client on harsh terms, relation -10 with the player.
+  - The Ford Ranger has its own catalogue file, `ford_ranger` (medium priority, no model yet), with the Mexican Ford Lobo/F-series and Ram patrol pickups as its variants. afg_taliban (signature, plus Hilux as common) and mex point at it; the Ranger variants were removed from `toyota_hilux`.
 
 ## Roster (canonical ids)
 
@@ -105,6 +126,12 @@ The loadouts were owned by the "Faction loadout questions" thread, which never p
 
 ## Status at this snapshot
 
+**Update, 2026-10-10: Job 4 (alliances) is complete.** New files: `factions/alliances.json` (47 alliances with member status, obligations and proposed game effects; proposed `game_rules` for side-lock, war joining, reputation spill-over and selling; the full 77 x 77 `relations_matrix`), `factions/ALLIANCES.md` (plain-words version, major-power matrix, change log, open questions), `factions/README.md` (schema, roster table, alliance matrix) and `reference/vehicles/ford_ranger.json`. All 77 faction files were reconciled:
+  - `relations`: 694 missing reverse entries added, so every pair a file lists is now listed by both sides (same sign, within 30 points). This closed the known gaps (European, Baltic and Asian states vs the terror groups; Nordic, Benelux and Southern European states vs afg_taliban, sdf, krg_peshmerga and sahel_aes; usa vs the PMCs; the terror files vs the PMCs and neutral states; player vs che, aut, irl, mex and prk). One mismatch fixed: aze <-> geo (40 vs 75) set to 58 both ways. The 1,450 pairs that no file lists are filled only in the matrix (judged pairs, group rules and a formula, all proposed).
+  - `blocs`: each file now lists exactly the alliances it belongs to (any member status). csto_suspended, eu_candidate, eu_partnership and nato_partner became alliance ids with a member_status; descriptive tags (neutral, schengen, g20, rival_pmc, cartel and others) moved to a new `traits` list.
+  - Captain's decisions (section above) were applied in the same pass. Validator: 0 errors.
+  - Next job: worldspaces; loadouts are job 6 (after alliances, can run alongside worldspaces).
+
 **Update, 2026-10-10 11:05 UTC: Job 3 (others) is complete.** All 14 files are written: che, aut, irl, mex, cartel_pacifico, cartel_jalisco_nueva, afg_taliban, sdf, krg_peshmerga, sahel_aes, som, pmc_halcyon, pmc_kestrel and pmc_black_sable. All 77 factions now exist. Next job: alliances.
 
 **Update, 2026-10-10 10:55 UTC: Job 2 (me_terror) is complete.** The next job is others, which is already running in a separate agent in the same checkout.
@@ -118,8 +145,9 @@ The queue, run one job at a time on Captain's desktop, is:
 1. middle_east_states (**done**, 10:45 UTC)
 2. me_terror (**done**, 10:55 UTC)
 3. others (**done**, 11:05 UTC)
-4. alliances
-5. worldspaces
+4. alliances (**done**, 2026-10-10)
+5. worldspaces (**next**)
+6. loadouts (after alliances; can run alongside worldspaces)
 
 **Loadouts moved (Captain, 09:38 UTC):** the faction loadouts are now built by the separate "Faction loadout questions" project thread, which writes only into `loadouts/`. The bloc and worldspace jobs must never edit `loadouts/`, `tools/loadouts_catalog_wip.pl` or `docs/loadouts_handoff.md`. Because another session pushes to this branch too, always pull (rebase) before pushing.
 
@@ -135,13 +163,13 @@ Current state:
 
 - **Factions done (77 of 77):** every bloc is written, plus `player`.
 - **Neutrals/others bloc (14 of 14 written):** che, aut, irl, mex, cartel_pacifico, cartel_jalisco_nueva, afg_taliban, sdf, krg_peshmerga, sahel_aes, som, pmc_halcyon, pmc_kestrel and pmc_black_sable.
-  - che, aut and irl are neutral states that can hire the player; che and aut sell to the player at rep 20/40/60 (proposed). irl lists only 3 vehicles because its armoured fleet is that small.
-  - The cartels ("Liga del Pacifico", "Cartel Nueva Frontera") and the rival PMCs (Halcyon, Western; Kestrel, Russia-linked and separate from africa_corps; Black Sable, Gulf-funded) are fictional, each with `inspired_by`. The PMCs carry a proposed `rivalry` object.
-  - afg_taliban is hostile and never a client (open question). sdf -> syr is -15 (syr -> sdf is -20). krg_peshmerga and sahel_aes are kind non_state (proposed).
+  - che, aut and irl are neutral states that can hire the player; che and aut sell to the player at rep 20/40/60 (Captain-confirmed 2026-10-10). irl lists only 3 vehicles because its armoured fleet is that small.
+  - The cartels ("Liga del Pacifico", "Cartel Nueva Frontera") and the rival PMCs (Halcyon, Western; Kestrel, Russia-linked and separate from africa_corps; Black Sable, Gulf-funded) are fictional, each with `inspired_by`. The PMCs carry a proposed `rivalry` object; pmc_black_sable is the nemesis (Captain-confirmed 2026-10-10), pmc_halcyon an ordinary rival.
+  - afg_taliban was hostile and never a client; by Captain's decision (2026-10-10) it is now a limited client (neutral, relation -10 with player). sdf -> syr was -15 (syr -> sdf -20); both are now +10 (Captain's decision). krg_peshmerga and sahel_aes are kind non_state (proposed).
   - Cross-check: no sign mismatches or gaps over 30 points with any existing file. Missing reverse entries for the alliances job: usa has none for the three PMCs, the me_terror files mostly omit the PMCs and neutral states, and player.json has no che, aut, irl or mex entries.
 - **Middle East terrorist bloc (11 of 11 written):** hamas, pij, hezbollah, houthis, iraqi_militias, al_qaeda, aqap, isis, isis_k, al_shabaab and jnim are done.
   - All 11 are hostile-only: `kind` non_state, `player_client` false, `sellable` false with empty `rep_tiers`, `relations.player` -100 (iraqi_militias -85), `as_client` empty. Each has 4-11 vehicles and 6-9 unit templates (cells, ambush teams, technical crews, motorbike pairs, drone teams and IED teams as hazards, HVT guard details).
-  - `campaign_tier`: hezbollah, houthis and iraqi_militias are `mid`; the other 8 are `early`. Tuning ramps from pij (lowest) up through hamas and the al-Qaeda/IS cells to hezbollah and the houthis (highest discipline and suppression resistance).
+  - `campaign_tier`: hezbollah and houthis are `mid`; the other 9 are `early` (iraqi_militias moved from mid to early by Captain's decision, 2026-10-10). Tuning ramps from pij (lowest) up through hamas and the al-Qaeda/IS cells to hezbollah and the houthis (highest discipline and suppression resistance).
   - Affiliate links: aqap 90, al_shabaab 85 and jnim 85 with al_qaeda (all three in bloc `al_qaeda_network`); isis_k 90 with isis (`islamic_state_network`). The two networks are -85 to -95 toward each other. hamas, pij, hezbollah, houthis and iraqi_militias form `axis_of_resistance` with irn.
   - `iraqi_militias` follows the irq.json boundary: the PMF is not this faction, units appear without PMF markings, and iraqi_militias -> irq is -15 (irq -> iraqi_militias is -20).
   - `isis` covers the Iraq/Syria core plus the Sahel and Somalia provinces (theatres mesopotamia, levant_syria, sahel, horn_of_africa); isis_k is separate.
@@ -151,9 +179,9 @@ Current state:
   - `irq` is the Iraqi Security Forces (Army, Federal Police, CTS). Its notes define the game boundary: the PMF is part of the Iraqi state and is not a faction; `iraqi_militias` covers the Iran-aligned factions acting outside state command (irq -> iraqi_militias = -20).
   - `pse_pa` is the PA Security Forces. It lists only 3 vehicles (the spec asks for 4-12) because PA forces are limited to light weapons and light vehicles.
   - Cross-check of the 8 earlier files: relation signs agree across all 11, every vehicle id exists, and israel, gaza_west_bank, iran_zagros and persian_gulf_coast are all covered. One fix: `sau` added to the operators of `toyota_land_cruiser`.
-- **Vehicle catalogue:** 209 vehicles (38 high, 62 medium, 109 low priority). Job 3 added `rg32m`, `narco_truck` and `armored_suv`, put DN-XI (sandcat), Pandur Evolution (pandur_ii), Ford Ranger and Mexican patrol pickups (toyota_hilux) and Super Puma (sa330) in as variants, and updated operators on 35 files. Job 2 added `technical_m40`, `technical_rockets` and `technical_zpu` (catalogue files for existing voxel models, all high), `motorcycle` (high, no model yet) and `fast_boat` (Houthi skiff, explosive variant as a game hazard only; medium). It also added the bloc's ids to the operators of `toyota_hilux`, `toyota_land_cruiser`, `technical_dshk`, `technical_zu23`, `technical_spg9`, `fpv_drone`, `shahed136`, `humvee`, `m1117`, `m113`, `t55`, `t72b3`, `bmp1` and `bmp2`. Job 1 added `al_jawad` (Jordanian-built PA armoured vehicle, with the Al-Maha as a variant). `ejder_yalcin` got `syr` and the Ejder 6x6 variant, `mi8` got `irq`, and `toyota_land_cruiser` got `sau`. Earlier: `aras` and `wolf_av` were added at 200, and `ah1z`, `dingo` and `t55` got operator updates.
+- **Vehicle catalogue:** 210 vehicles. Job 4 added `ford_ranger` (medium; Captain's decision) and moved the Ranger and Mexican patrol-pickup variants out of `toyota_hilux`. Before that: 209 vehicles (38 high, 62 medium, 109 low priority). Job 3 added `rg32m`, `narco_truck` and `armored_suv`, put DN-XI (sandcat), Pandur Evolution (pandur_ii), Ford Ranger and Mexican patrol pickups (toyota_hilux) and Super Puma (sa330) in as variants, and updated operators on 35 files. Job 2 added `technical_m40`, `technical_rockets` and `technical_zpu` (catalogue files for existing voxel models, all high), `motorcycle` (high, no model yet) and `fast_boat` (Houthi skiff, explosive variant as a game hazard only; medium). It also added the bloc's ids to the operators of `toyota_hilux`, `toyota_land_cruiser`, `technical_dshk`, `technical_zu23`, `technical_spg9`, `fpv_drone`, `shahed136`, `humvee`, `m1117`, `m113`, `t55`, `t72b3`, `bmp1` and `bmp2`. Job 1 added `al_jawad` (Jordanian-built PA armoured vehicle, with the Al-Maha as a variant). `ejder_yalcin` got `syr` and the Ejder 6x6 variant, `mi8` got `irq`, and `toyota_land_cruiser` got `sau`. Earlier: `aras` and `wolf_av` were added at 200, and `ah1z`, `dingo` and `t55` got operator updates.
 - **Worldspaces:** not started. They run after all the factions and alliances are done.
-- **Validation:** not started. It will fix ids and relation symmetry, merge duplicate vehicles, and write `factions/README.md` (roster and alliance matrix), `reference/vehicles/README.md` and `worldspaces/README.md`.
+- **Validation:** partly done in Job 4: relation ids and symmetry are fixed and `factions/README.md` (roster and alliance matrix) is written. Still to do: merge duplicate vehicles and write `reference/vehicles/README.md` and `worldspaces/README.md`.
 
 ## Next voxel models to build
 
@@ -181,8 +209,8 @@ Captain paused everything at 09:34 UTC. Resume only when Captain says so. Run **
 | 1 | middle_east_states: finish **syr, irq, pse_pa** | This file, plus `middle_east_states` in `BLOCS` in `tools/factions_workflow.js` | **Done** (11 of 11, 10:45 UTC) |
 | 2 | me_terror (11 groups) | [me_terror_handoff.md](me_terror_handoff.md) | **Done** (11 of 11, 10:55 UTC) |
 | 3 | others: neutrals, cartels, PMCs (14 factions) | [others_handoff.md](others_handoff.md) | **Done** (14 of 14, 11:05 UTC) |
-| 4 | alliances: `factions/alliances.json`, `ALLIANCES.md`, the relations matrix, and reconciling all 77 files | [alliances_handoff.md](alliances_handoff.md) | Next (all 77 factions exist) |
-| 5 | worldspaces: 23 theatres, Middle East and Africa first | [worldspaces_handoff.md](worldspaces_handoff.md) | Last job |
+| 4 | alliances: `factions/alliances.json`, `ALLIANCES.md`, the relations matrix, and reconciling all 77 files | [alliances_handoff.md](alliances_handoff.md) | **Done** (2026-10-10) |
+| 5 | worldspaces: 23 theatres, Middle East and Africa first | [worldspaces_handoff.md](worldspaces_handoff.md) | Next |
 | n/a | loadouts | [loadouts_handoff.md](loadouts_handoff.md) | Job 6 on the fork, after alliances (can run alongside worldspaces). The handoff sheet needs a file schema and an updated faction count first. |
 
 ### Job 1 details: finishing the Middle East states

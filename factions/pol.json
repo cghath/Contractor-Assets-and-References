@@ -12,7 +12,9 @@
     "nato",
     "eu",
     "bucharest_nine",
-    "weimar_triangle"
+    "weimar_triangle",
+    "global_coalition_against_isis",
+    "unifil"
   ],
   "campaign_tier": "mid",
   "alignment_to_player": "friendly",
@@ -61,7 +63,9 @@
     "pij": -75,
     "hezbollah": -65,
     "houthis": -65,
-    "iraqi_militias": -55
+    "iraqi_militias": -55,
+    "aut": 35,
+    "pmc_kestrel": -80
   },
   "theatres": [
     "suwalki_gap",

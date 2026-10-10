@@ -10,8 +10,12 @@
     "#FFFFFF"
   ],
   "blocs": [
+    "eu",
+    "nato_partnership_for_peace",
+    "unifil"
+  ],
+  "traits": [
     "csto_pa_observer",
-    "eu_candidate",
     "militarily_neutral"
   ],
   "campaign_tier": "mid",
@@ -32,7 +36,9 @@
     "ita": 25,
     "grc": 50,
     "ukr": -10,
-    "isis": -90
+    "isis": -90,
+    "pmc_kestrel": 20,
+    "aut": 15
   },
   "theatres": [
     "lebanon_south",
@@ -342,7 +348,7 @@
     "unit_templates",
     "contract_types",
     "theatres (alpine_europe as Balkan stand-in)",
-    "blocs (csto_pa_observer, militarily_neutral are descriptive tags)",
+    "traits (csto_pa_observer, militarily_neutral are descriptive tags)",
     "vehicles[].prevalence (game weighting)",
     "body_armor (game tier mapping)"
   ],

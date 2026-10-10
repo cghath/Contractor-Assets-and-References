@@ -10,6 +10,9 @@
     "#D52B1E"
   ],
   "blocs": [
+    "aes"
+  ],
+  "traits": [
     "russian_state_expeditionary"
   ],
   "campaign_tier": "mid",
@@ -28,7 +31,25 @@
     "usa": -60,
     "gbr": -60,
     "ukr": -90,
-    "can": -55
+    "can": -55,
+    "pmc_kestrel": 20,
+    "pmc_black_sable": -20,
+    "rou": -50,
+    "bel": -60,
+    "deu": -60,
+    "dnk": -60,
+    "esp": -60,
+    "est": -60,
+    "fin": -60,
+    "grc": -60,
+    "ita": -60,
+    "ltu": -60,
+    "lva": -60,
+    "nld": -60,
+    "nor": -60,
+    "pmc_halcyon": -60,
+    "pol": -60,
+    "swe": -60
   },
   "theatres": [
     "sahel"
@@ -294,7 +315,7 @@
     "unit_templates",
     "contract_types.as_target",
     "flag_colors (no official flag; game insignia colours)",
-    "blocs (russian_state_expeditionary is a game tag)",
+    "traits (russian_state_expeditionary is a game tag)",
     "vehicles[].prevalence (game weighting)",
     "body_armor (game tier mapping)"
   ],

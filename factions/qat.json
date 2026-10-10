@@ -11,7 +11,8 @@
   "blocs": [
     "gcc",
     "arab_league",
-    "major_non_nato_ally_us"
+    "major_non_nato_ally_us",
+    "global_coalition_against_isis"
   ],
   "campaign_tier": "early",
   "alignment_to_player": "friendly",
@@ -45,7 +46,18 @@
     "isis_k": -80,
     "al_qaeda": -80,
     "aqap": -75,
-    "al_shabaab": -60
+    "al_shabaab": -60,
+    "bel": 35,
+    "dnk": 35,
+    "esp": 35,
+    "fin": 35,
+    "grc": 35,
+    "ita": 35,
+    "nld": 35,
+    "nor": 35,
+    "swe": 35,
+    "pmc_halcyon": 20,
+    "pmc_black_sable": -10
   },
   "theatres": [
     "persian_gulf_coast"

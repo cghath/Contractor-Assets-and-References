@@ -10,7 +10,10 @@
   ],
   "blocs": [
     "quad",
-    "g7"
+    "g7",
+    "us_jpn_treaty",
+    "major_non_nato_ally_us",
+    "global_coalition_against_isis"
   ],
   "campaign_tier": "mid",
   "alignment_to_player": "friendly",
@@ -35,7 +38,18 @@
     "houthis": -40,
     "al_shabaab": -60,
     "isis": -90,
-    "al_qaeda": -90
+    "al_qaeda": -90,
+    "bel": 60,
+    "deu": 60,
+    "dnk": 60,
+    "esp": 60,
+    "fin": 60,
+    "grc": 60,
+    "nld": 60,
+    "nor": 60,
+    "nzl": 60,
+    "pol": 60,
+    "swe": 60
   },
   "theatres": [
     "korean_dmz",

@@ -9,7 +9,8 @@
     "#7A6A4F",
     "#A33A2A"
   ],
-  "blocs": [
+  "blocs": [],
+  "traits": [
     "rival_pmc"
   ],
   "campaign_tier": "mid",
@@ -36,7 +37,14 @@
     "jnim": -90,
     "al_qaeda": -85,
     "cartel_pacifico": -10,
-    "cartel_jalisco_nueva": -10
+    "cartel_jalisco_nueva": -10,
+    "som": -20,
+    "krg_peshmerga": -30,
+    "mex": -30,
+    "aut": -35,
+    "che": -35,
+    "irl": -35,
+    "sdf": -40
   },
   "theatres": [
     "eastern_ukraine",
@@ -370,7 +378,7 @@
     "vehicles (BTR-82A and Mi-8 game assignment)",
     "contract_types.as_target",
     "body_armor (game tier mapping)",
-    "blocs (rival_pmc is a game tag)"
+    "traits (rival_pmc is a game tag)"
   ],
   "sources": [
     "https://en.wikipedia.org/wiki/Private_military_company",

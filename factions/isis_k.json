@@ -36,7 +36,24 @@
     "jor": -70,
     "isr": -70,
     "isis": 90,
-    "al_qaeda": -90
+    "al_qaeda": -90,
+    "geo": -80,
+    "est": -90,
+    "ltu": -90,
+    "lva": -90,
+    "pol": -90,
+    "rou": -90,
+    "ukr": -90,
+    "bel": -95,
+    "dnk": -95,
+    "esp": -95,
+    "fin": -95,
+    "grc": -95,
+    "ita": -95,
+    "nld": -95,
+    "nor": -95,
+    "nzl": -95,
+    "swe": -95
   },
   "theatres": [
     "afghan_highlands"
@@ -309,7 +326,7 @@
       "mountain_hideout_raid"
     ]
   },
-  "notes": "ISIS-K is a province of the Islamic State (relation isis +90) and an enemy of the al-Qaeda network and of the Taliban (afg_taliban, an others-bloc faction). It is UN-listed and US-designated. Its mass-casualty attacks (Kabul airport 2021, Kerman 2024, Crocus City Hall 2024) belong only in briefing text. Status 2026: weakened inside Afghanistan by Taliban operations but still active, with networks in Pakistan and Central Asian recruitment per UN monitoring; Taliban claimed strikes on ISKP sites in Pakistan in June 2026 (denied by Pakistan). Game framing: early-game cell enemy in afghan_highlands, often a three-way encounter with Taliban units.",
+  "notes": "ISIS-K is a province of the Islamic State (relation isis +90) and an enemy of the al-Qaeda network and of the Taliban (afg_taliban, an others-bloc faction). It is UN-listed and US-designated. Its mass-casualty attacks (Kabul airport 2021, Kerman 2024, Crocus City Hall 2024) belong only in briefing text. Status 2026: weakened inside Afghanistan by Taliban operations but still active, with networks in Pakistan and Central Asian recruitment per UN monitoring; Taliban claimed strikes on ISKP sites in Pakistan in June 2026 (denied by Pakistan). Game framing: early-game cell enemy in afghan_highlands, often a three-way encounter with Taliban units. Captured Humvees as rare set-piece vehicles are Captain-confirmed (2026-10-10).",
   "proposed": [
     "campaign_tier",
     "relations.player",
@@ -323,7 +340,6 @@
     "camo (approximate palettes)",
     "player_trade (hostile-only: not sellable)",
     "Three-way encounters with afg_taliban units",
-    "Captured Humvee as a rare vehicle (Captain's open question; default yes)",
     "relations values (factual direction, game magnitudes)"
   ],
   "sources": [

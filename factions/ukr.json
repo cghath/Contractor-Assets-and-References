@@ -9,9 +9,11 @@
     "#FFD700"
   ],
   "blocs": [
-    "eu_candidate",
-    "nato_partner",
-    "guam"
+    "eu",
+    "nato_partnership_for_peace",
+    "guam",
+    "eastern_partnership",
+    "global_coalition_against_isis"
   ],
   "campaign_tier": "mid",
   "alignment_to_player": "friendly",
@@ -61,7 +63,12 @@
     "al_qaeda": -90,
     "hamas": -55,
     "houthis": -50,
-    "hezbollah": -50
+    "hezbollah": -50,
+    "aut": 40,
+    "che": 40,
+    "irl": 40,
+    "twn": 40,
+    "pmc_kestrel": -100
   },
   "theatres": [
     "eastern_ukraine",

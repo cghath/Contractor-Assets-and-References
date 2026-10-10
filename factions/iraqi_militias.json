@@ -12,7 +12,7 @@
   "blocs": [
     "axis_of_resistance"
   ],
-  "campaign_tier": "mid",
+  "campaign_tier": "early",
   "alignment_to_player": "hostile",
   "player_client": false,
   "relations": {
@@ -39,7 +39,24 @@
     "hamas": 55,
     "pij": 60,
     "al_qaeda": -95,
-    "isis": -100
+    "isis": -100,
+    "sdf": -25,
+    "bel": -55,
+    "dnk": -55,
+    "esp": -55,
+    "est": -55,
+    "fin": -55,
+    "grc": -55,
+    "ita": -55,
+    "ltu": -55,
+    "lva": -55,
+    "nld": -55,
+    "nor": -55,
+    "pol": -55,
+    "rou": -55,
+    "swe": -55,
+    "pmc_black_sable": -60,
+    "pmc_halcyon": -80
   },
   "theatres": [
     "mesopotamia",
@@ -51,7 +68,7 @@
   ],
   "callout_language": "Iraqi Arabic; semi-military radio procedure inherited from PMF service.",
   "doctrine": {
-    "summary": "A set of Iran-aligned Iraqi Shia armed factions that act under the banner 'Islamic Resistance in Iraq' when they attack US, Israeli or Gulf targets. The core groups are Kata'ib Hezbollah, Harakat Hezbollah al-Nujaba, Kata'ib Sayyid al-Shuhada, Kata'ib al-Imam Ali and smaller fronts; several are designated terrorist organisations by the US. Most of these groups also hold brigades inside the Popular Mobilization Forces (PMF), a legal Iraqi state body, so the same fighters can be on state duty or acting outside state command. GAME BOUNDARY (agreed with irq.json): the PMF is part of the Iraqi state and is NOT this faction; `iraqi_militias` represents only the factions acting outside state command (drone and rocket attacks, unsanctioned operations). Since the US-Israeli war on Iran began on 28 February 2026 they launched drone and rocket attacks on US sites in Iraq and on Gulf states and were struck in return (e.g. Jurf al-Nasr). In the game they are a mid-tier enemy: better armed than ISIS cells, with Iranian drones and rockets, but fighting as small teams that avoid open battle.",
+    "summary": "A set of Iran-aligned Iraqi Shia armed factions that act under the banner 'Islamic Resistance in Iraq' when they attack US, Israeli or Gulf targets. The core groups are Kata'ib Hezbollah, Harakat Hezbollah al-Nujaba, Kata'ib Sayyid al-Shuhada, Kata'ib al-Imam Ali and smaller fronts; several are designated terrorist organisations by the US. Most of these groups also hold brigades inside the Popular Mobilization Forces (PMF), a legal Iraqi state body, so the same fighters can be on state duty or acting outside state command. GAME BOUNDARY (agreed with irq.json): the PMF is part of the Iraqi state and is NOT this faction; `iraqi_militias` represents only the factions acting outside state command (drone and rocket attacks, unsanctioned operations). Since the US-Israeli war on Iran began on 28 February 2026 they launched drone and rocket attacks on US sites in Iraq and on Gulf states and were struck in return (e.g. Jurf al-Nasr). In the game they are an early-game enemy at the top of the early tier: better armed than ISIS cells, with Iranian drones and rockets, but fighting as small teams that avoid open battle.",
     "squad_size": 6,
     "fireteam": "Small teams of 4-8 for launch, drone and raid missions; PMF-trained fighters with semi-regular drills. In game: battle-buddy pairs, 6-8 per encounter.",
     "tactics": [
@@ -371,9 +388,8 @@
       "hvt_capture_or_kill"
     ]
   },
-  "notes": "Kata'ib Hezbollah and Harakat al-Nujaba are US-designated Foreign Terrorist Organizations; Kata'ib Sayyid al-Shuhada and others were designated in 2025. These groups led the 2023-2024 attack campaign on US bases (including the January 2024 Tower 22 drone strike in Jordan) and joined Iran's war from 28 February 2026; US strikes hit their bases and killed leaders (e.g. Jurf al-Nasr, February 2026; Baghdad, March 2026). Kata'ib Hezbollah announced a conditional pause on attacks on the US Embassy in March 2026. Status October 2026: US forces left federal Iraq by 30 September 2026; Prime Minister Ali al-Zaidi set and then moved a disarmament deadline (now June 2027 per reporting); some factions handed in weapons, but Kata'ib Hezbollah, al-Nujaba, Sayyid al-Shuhada and others refuse, and on 1 October 2026 Kata'ib Hezbollah denied any disarmament understanding. Consistency with irq.json: irq -> iraqi_militias is -20 (tense, not open war); here iraqi_militias -> irq is -15. Iraqi state contracts never target PMF units; contracts against this faction come from other clients (e.g. US-linked or Gulf clients) and its units appear without PMF markings. Gameplay inventions are listed in proposed.",
+  "notes": "Kata'ib Hezbollah and Harakat al-Nujaba are US-designated Foreign Terrorist Organizations; Kata'ib Sayyid al-Shuhada and others were designated in 2025. These groups led the 2023-2024 attack campaign on US bases (including the January 2024 Tower 22 drone strike in Jordan) and joined Iran's war from 28 February 2026; US strikes hit their bases and killed leaders (e.g. Jurf al-Nasr, February 2026; Baghdad, March 2026). Kata'ib Hezbollah announced a conditional pause on attacks on the US Embassy in March 2026. Status October 2026: US forces left federal Iraq by 30 September 2026; Prime Minister Ali al-Zaidi set and then moved a disarmament deadline (now June 2027 per reporting); some factions handed in weapons, but Kata'ib Hezbollah, al-Nujaba, Sayyid al-Shuhada and others refuse, and on 1 October 2026 Kata'ib Hezbollah denied any disarmament understanding. Consistency with irq.json: irq -> iraqi_militias is -20 (tense, not open war); here iraqi_militias -> irq is -15. Iraqi state contracts never target PMF units; contracts against this faction come from other clients (e.g. US-linked or Gulf clients) and its units appear without PMF markings. Gameplay inventions are listed in proposed. campaign_tier early (moved from mid) is Captain-confirmed (2026-10-10).",
   "proposed": [
-    "campaign_tier",
     "relations.player",
     "doctrine.ai_tuning (all values)",
     "doctrine.squad_size (game cell size)",
@@ -384,7 +400,6 @@
     "body_armor (game tier mapping)",
     "camo (approximate palettes)",
     "player_trade (hostile-only: not sellable)",
-    "campaign_tier mid (brief allows mid)",
     "relations.irq -15 (game abstraction of a contested state-militia relationship; matches irq.json sign)",
     "Units shown without PMF markings (PMF is part of the Iraqi state, not a target)",
     "relations values (factual direction, game magnitudes)"

@@ -9,9 +9,11 @@
     "#FF0000"
   ],
   "blocs": [
-    "eu_candidate",
-    "nato_partner",
-    "guam"
+    "eu",
+    "nato_partnership_for_peace",
+    "guam",
+    "eastern_partnership",
+    "global_coalition_against_isis"
   ],
   "campaign_tier": "mid",
   "alignment_to_player": "neutral",
@@ -30,7 +32,7 @@
     "mda": 40,
     "rou": 45,
     "tur": 70,
-    "aze": 75,
+    "aze": 58,
     "arm": 50,
     "kaz": 30,
     "chn": 25,
@@ -39,7 +41,8 @@
     "rus": -55,
     "isis": -90,
     "al_qaeda": -85,
-    "isis_k": -80
+    "isis_k": -80,
+    "pmc_kestrel": -40
   },
   "theatres": [
     "caucasus"

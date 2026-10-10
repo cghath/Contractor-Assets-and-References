@@ -10,9 +10,13 @@
     "#FF883E"
   ],
   "blocs": [
-    "neutral",
     "eu",
     "nato_partnership_for_peace",
+    "global_coalition_against_isis",
+    "unifil"
+  ],
+  "traits": [
+    "neutral",
     "un_peacekeeping"
   ],
   "campaign_tier": "early",
@@ -263,7 +267,7 @@
     "unit_templates",
     "vehicles[].prevalence (game weighting)",
     "body_armor (game tier mapping)",
-    "blocs (neutral and un_peacekeeping are game tags)"
+    "traits (neutral and un_peacekeeping are game tags)"
   ],
   "sources": [
     "https://en.wikipedia.org/wiki/Irish_Defence_Forces",

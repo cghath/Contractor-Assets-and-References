@@ -9,7 +9,8 @@
     "#5E6A3F",
     "#B22222"
   ],
-  "blocs": [
+  "blocs": [],
+  "traits": [
     "cartel"
   ],
   "campaign_tier": "early",
@@ -23,7 +24,9 @@
     "cartel_pacifico": -85,
     "pmc_halcyon": -50,
     "pmc_kestrel": -10,
-    "pmc_black_sable": -20
+    "pmc_black_sable": -20,
+    "aut": -40,
+    "che": -40
   },
   "theatres": [
     "mexico_cartel_belt"
@@ -300,7 +303,7 @@
     "vehicles[].prevalence",
     "contract_types.as_target",
     "body_armor (game tier mapping)",
-    "blocs (cartel is a game tag)"
+    "traits (cartel is a game tag)"
   ],
   "sources": [
     "https://en.wikipedia.org/wiki/Mexican_drug_war",

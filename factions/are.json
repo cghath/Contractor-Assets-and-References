@@ -14,7 +14,9 @@
     "gcc",
     "arab_league",
     "abraham_accords",
-    "brics"
+    "brics",
+    "global_coalition_against_isis",
+    "islamic_military_counter_terrorism_coalition"
   ],
   "campaign_tier": "early",
   "alignment_to_player": "friendly",
@@ -49,7 +51,20 @@
     "al_qaeda": -90,
     "isis": -95,
     "isis_k": -80,
-    "al_shabaab": -85
+    "al_shabaab": -85,
+    "grc": 65,
+    "pak": 50,
+    "pmc_black_sable": 50,
+    "bel": 45,
+    "deu": 45,
+    "dnk": 45,
+    "esp": 45,
+    "fin": 45,
+    "ita": 45,
+    "nld": 45,
+    "nor": 45,
+    "swe": 45,
+    "pmc_halcyon": 35
   },
   "theatres": [
     "persian_gulf_coast",

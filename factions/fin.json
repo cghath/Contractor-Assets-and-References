@@ -12,7 +12,10 @@
     "nato",
     "eu",
     "jef",
-    "nordefco"
+    "nordefco",
+    "global_coalition_against_isis",
+    "nb8",
+    "unifil"
   ],
   "campaign_tier": "late",
   "alignment_to_player": "friendly",
@@ -71,7 +74,8 @@
     "nor": 90,
     "dnk": 85,
     "swe": 95,
-    "grc": 85
+    "grc": 85,
+    "irl": 40
   },
   "theatres": [
     "arctic_north",
