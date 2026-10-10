@@ -202,6 +202,43 @@ static func _get_material() -> StandardMaterial3D:
 
 # --- Canvas -----------------------------------------------------------------------------
 
+## One cross-section for Canvas.mhull, in metres.
+class Section:
+	var cx := 0.0
+	var bottom := 0.0
+	var top := 1.0
+	var half_bottom := 1.0  ## half width at the bottom
+	var half_top := 1.0     ## half width at the top
+	var r_bottom := 0.0     ## lower corner radius
+	var r_top := 0.0        ## upper corner radius
+
+	func _init(p_bottom: float, p_top: float, p_half_bottom: float, p_half_top: float, p_r_bottom: float, p_r_top: float, p_cx := 0.0) -> void:
+		bottom = p_bottom
+		top = p_top
+		half_bottom = p_half_bottom
+		half_top = p_half_top
+		var h := (top - bottom) * 0.5
+		r_bottom = minf(minf(p_r_bottom, h), minf(half_bottom, half_top))
+		r_top = minf(minf(p_r_top, h), minf(half_bottom, half_top))
+		cx = p_cx
+
+	## Scales the whole section towards (cx, centre_y) by k, for rounding off a nose or tail.
+	func scaled(k: float, centre_y: float) -> Section:
+		return Section.new(lerpf(centre_y, bottom, k), lerpf(centre_y, top, k), half_bottom * k, half_top * k, r_bottom * k, r_top * k, cx)
+
+	func half_width_at(y: float) -> float:
+		if y < bottom or y > top:
+			return 0.0
+		var w := lerpf(half_bottom, half_top, (y - bottom) / (top - bottom))
+		var d := y - bottom
+		if d < r_bottom:
+			w -= r_bottom - sqrt(maxf(r_bottom * r_bottom - (r_bottom - d) * (r_bottom - d), 0.0))
+		d = top - y
+		if d < r_top:
+			w -= r_top - sqrt(maxf(r_top * r_top - (r_top - d) * (r_top - d), 0.0))
+		return w
+
+
 ## A voxel buffer with drawing helpers. Coordinates exclude the 1-voxel mesher padding.
 class Canvas:
 	var size: Vector3i
@@ -253,6 +290,36 @@ class Canvas:
 							and pow(absf((x - p.x) / inner_w), squareness) + pow(absf((y - p.y) / inner_h), squareness) < 1.0:
 						continue
 					put(xi, yi, zi, colour)
+
+	## Aircraft-style hull sections along z, in metres. `section(z_m)` returns a Section: a
+	## flat-bottomed, flat-topped shape whose sides lean in or out between the bottom and top
+	## widths, with its lower and upper corners rounded. With `shell` > 0 only a skin that thick
+	## is filled.
+	func mhull(z0: float, z1: float, section: Callable, colour: int, shell := 0.0) -> void:
+		for zi in range(_v(z0), _v(z1)):
+			var s: VehicleArt.Section = section.call((zi + 0.5) * vs)
+			if s == null or s.top <= s.bottom or s.half_bottom <= 0.0:
+				continue
+			for yi in range(_v(s.bottom), _v(s.top) + 1):
+				var y := (yi + 0.5) * vs
+				var w := s.half_width_at(y)
+				if w <= 0.0:
+					continue
+				var inner := 0.0
+				if shell > 0.0 and y > s.bottom + shell and y < s.top - shell:
+					inner = s.half_width_at(y) - shell
+				for xi in range(_vx(s.cx - w), _vx(s.cx + w) + 1):
+					var dx := absf((xi + 0.5 - size.x * 0.5) * vs - s.cx)
+					if dx <= w and (inner <= 0.0 or dx >= inner):
+						put(xi, yi, zi, colour)
+
+	## Upright cylinder (masts, hubs, hatches) centred on (cx, cz) from y0 to y1, in metres.
+	func mdisc(cx: float, cz: float, r: float, y0: float, y1: float, colour: int) -> void:
+		for yi in range(_v(y0), maxi(_v(y1), _v(y0) + 1)):
+			for xi in range(_vx(cx - r), _vx(cx + r) + 1):
+				for zi in range(_v(cz - r), _v(cz + r) + 1):
+					if Vector2((xi + 0.5 - size.x * 0.5) * vs - cx, (zi + 0.5) * vs - cz).length() <= r:
+						put(xi, yi, zi, colour)
 
 	## Wheel: a cylinder across x from x0 to x1 (metres), centre (cy, cz), radius r.
 	func mwheel(x0: float, x1: float, cy: float, cz: float, r: float, colour := VehicleArt.P.TIRE, hub := VehicleArt.P.METAL) -> void:
@@ -340,107 +407,184 @@ class Canvas:
 
 # --- Helicopters ------------------------------------------------------------------------
 
-## UH-60 Black Hawk at 5 cm voxels, drawn from its real dimensions: 15.3 m from nose to
-## tail rotor, 2.36 m wide cabin, two engines either side of the main transmission on the
-## roof, the tail boom kinked up into a swept pylon with the tail rotor canted on its right,
-## a low stabilator, forward main wheels on struts and a tail wheel.
+## UH-60M Black Hawk at 5 cm voxels, matched to reference photos and the real dimensions:
+## 15.26 m fuselage, a 2.36 m cabin whose sides lean in towards the roof, a bulbous nose under
+## the steep two-pane windscreen and overhead windows, the long upper deck with an engine
+## nacelle on each shoulder (round intakes forward, IR exhaust suppressors angled out aft),
+## the boom rising into a swept pylon with the tail rotor canted 20 degrees on its right, the
+## wide stabilator low on the pylon, main wheels under the cockpit's rear on a shock strut and
+## a long drag beam, and the tail wheel under the boom.
 static func _uh60() -> Canvas:
-	var c := Canvas.new(Vector3i(96, 82, 314), 0.05)
-	var fuselage := func(z: float) -> Vector4:
+	var c := Canvas.new(Vector3i(96, 86, 316), 0.05)
+	var body := func(z: float) -> Section:
+		var bottom := 0.5
+		var top := 2.22
 		var hw := 1.18
-		var bottom := 0.55
-		var top := 2.45
-		if z < 1.3:  # nose cone
-			var k := sqrt(z / 1.3)
-			hw = lerpf(0.35, 1.12, k)
-			bottom = lerpf(1.05, 0.6, k)
-			top = lerpf(1.45, 2.0, k)
-		elif z < 3.4:  # cockpit, windscreen rising to the roof
-			var k := clampf((z - 1.3) / 1.3, 0.0, 1.0)
-			hw = lerpf(1.12, 1.18, (z - 1.3) / 2.1)
-			bottom = lerpf(0.6, 0.55, (z - 1.3) / 2.1)
-			top = lerpf(2.0, 2.45, sqrt(k))
-		elif z > 7.6:  # aft cabin closing up into the boom
-			var k := clampf((z - 7.6) / 2.6, 0.0, 1.0)
-			hw = lerpf(1.18, 0.45, pow(k, 0.8))
-			bottom = lerpf(0.55, 1.6, k)
-			top = lerpf(2.45, 2.3, k)
-		return Vector4(0.0, (top + bottom) * 0.5, hw, (top - bottom) * 0.5)
-	c.mloft(0.0, 10.25, fuselage, P.PAINT, 3.4, 0.12)
-	var boom := func(z: float) -> Vector4:
-		var k := clampf((z - 10.1) / 4.3, 0.0, 1.0)
-		return Vector4(0.0, lerpf(1.95, 2.2, k), lerpf(0.45, 0.28, k), lerpf(0.38, 0.27, k))
-	c.mloft(10.1, 14.45, boom, P.PAINT, 2.2)
-	# Roof: transmission fairing, the two engine nacelles, intakes and IR exhaust suppressors.
-	var fairing := func(z: float) -> Vector4:
-		var k := clampf((z - 2.9) / 6.2, 0.0, 1.0)
-		var bump := sin(PI * k)
-		return Vector4(0.0, 2.45, 0.92 * minf(bump * 1.6, 1.0), 0.65 * minf(bump * 1.4, 1.0))
-	c.mloft(2.9, 9.1, fairing, P.PAINT, 2.8)
+		var lean := 0.24  # the roof is this much narrower than the floor line on each side
+		var rb := 0.3
+		var rt := 0.45
+		if z < 2.4:  # nose, windscreen and cockpit
+			if z < 1.15:
+				top = lerpf(1.22, 1.62, sqrt(z / 1.15))
+			else:
+				top = lerpf(1.62, 2.22, 1.0 - pow(1.0 - clampf((z - 1.15) / 1.0, 0.0, 1.0), 2.0))
+			bottom = lerpf(0.85, 0.5, smoothstep(0.0, 2.0, z))
+			hw = lerpf(0.86, 1.18, sqrt(clampf(z / 2.4, 0.0, 1.0)))
+			lean = lerpf(0.5, 0.24, smoothstep(1.0, 2.3, z))
+			rb = lerpf(0.5, 0.3, clampf(z / 2.0, 0.0, 1.0))
+			rt = lerpf(0.45, 0.45, clampf(z / 2.0, 0.0, 1.0))
+		elif z > 8.0:  # aft cabin sweeping up into the boom, then the boom tapering
+			var e := smoothstep(8.0, 10.8, z)
+			var b := clampf((z - 10.8) / 3.4, 0.0, 1.0)
+			bottom = lerpf(0.5, 1.5, e) + 0.3 * b
+			top = lerpf(2.22, 2.2, e) - 0.1 * b
+			hw = lerpf(1.18, 0.44, e) - 0.14 * b
+			lean = lerpf(0.24, 0.06, e)
+			rb = lerpf(0.3, 0.5, e)
+			rt = lerpf(0.45, 0.5, e)
+		var s := Section.new(bottom, top, hw, hw - lean, rb, rt)
+		if z < 0.6:  # round off the nose tip
+			s = s.scaled(maxf(sqrt(1.0 - pow(1.0 - z / 0.6, 2.0)), 0.25), (top + bottom) * 0.5 - 0.05)
+		elif z > 14.0:  # close off the tail cone behind the pylon
+			s = s.scaled(maxf(sqrt(1.0 - pow((z - 14.0) / 0.45, 2.0)), 0.2), (top + bottom) * 0.5)
+		return s
+	c.mhull(0.0, 14.45, body, P.PAINT, 0.12)
+	# Upper deck: the cowl behind the cockpit, flat over the engines and gearbox, then a long
+	# fairing tapering down into the boom.
+	var deck := func(z: float) -> Section:
+		var top := 2.66
+		var hw := 0.92
+		if z < 3.6:
+			var k := smoothstep(2.45, 3.6, z)
+			top = lerpf(2.2, 2.66, sqrt(k))
+			hw = lerpf(0.6, 0.92, k)
+		elif z > 8.6:
+			var k := smoothstep(8.6, 11.6, z)
+			top = lerpf(2.66, 2.15, k)
+			hw = lerpf(0.92, 0.26, k)
+		return Section.new(1.9, top, hw, hw - 0.22, 0.0, 0.4)
+	c.mhull(2.45, 11.6, deck, P.PAINT, 0.12)
+	c.mskin(-0.7, 2.56, 6.3, 0.7, 2.7, 7.6, P.PAINT_DARK, P.PAINT)  # oil cooler exhaust
+	for gz: float in [6.45, 6.75, 7.05, 7.35]:
+		c.mskin(-0.5, 2.6, gz, 0.5, 2.7, gz + 0.1, P.BLACK, P.PAINT_DARK)
+	c.mbox(0.36, 2.5, 9.0, 0.56, 2.62, 9.2, P.BLACK)  # APU exhaust
+	# Engine nacelles on the shoulders: round intakes forward, IR suppressors angled out aft.
 	for side: float in [-1.0, 1.0]:
+		var nx := side * 0.8
+		c.mbox(minf(side * 0.55, side * 1.0), 2.15, 4.2, maxf(side * 0.55, side * 1.0), 2.6, 7.6, P.PAINT)
 		var nacelle := func(z: float) -> Vector4:
-			var k := clampf((z - 4.6) / 3.3, 0.0, 1.0)
-			return Vector4(side * 0.74, 2.78, 0.34 * (0.85 + 0.15 * sin(PI * k)), 0.33)
-		c.mloft(4.6, 7.95, nacelle, P.PAINT, 2.2)
-		c.mbox(side * 0.74 - 0.22, 2.58, 4.55, side * 0.74 + 0.22, 3.0, 4.65, P.BLACK)
-		c.mbox(minf(side * 0.72, side * 1.12), 2.6, 7.9, maxf(side * 0.72, side * 1.12), 2.98, 8.7, P.PAINT_DARK)
-		c.mbox(minf(side * 1.05, side * 1.14), 2.62, 8.0, maxf(side * 1.05, side * 1.14), 2.95, 8.65, P.BLACK)
-	# Rotor mast and hub; the blades are a separate node so they can turn.
-	var mast := func(_z: float) -> Vector4: return Vector4(0.0, 3.4, 0.2, 0.45)
-	c.mloft(4.85, 5.25, mast, P.METAL, 2.0)
-	c.mbox(-0.35, 3.7, 4.7, 0.35, 3.9, 5.4, P.BLACK)
-	c.rotor("MainRotor", Vector3(0.0, 3.92, 5.05), 8.18, 0.53, 4, Vector3.UP)
-	# Swept tail pylon, tail rotor canted 20 degrees on its right, stabilator low on the pylon.
-	var y := 2.05
-	while y < 4.3:
-		var front := 13.55 + (y - 2.05) * 0.5
-		var back := 14.95 + (y - 2.05) * 0.16
-		c.mbox(-0.12, y, front, 0.12, y + 0.05, back, P.PAINT)
-		y += 0.05
-	c.mbox(-0.1, 4.2, 14.6, 0.1, 4.32, 15.3, P.PAINT_DARK)
-	c.mbox(0.12, 3.55, 14.85, 0.32, 3.85, 15.1, P.METAL)
-	c.rotor("TailRotor", Vector3(0.36, 3.7, 14.98), 1.67, 0.25, 4, Vector3(cos(deg_to_rad(20.0)), sin(deg_to_rad(20.0)), 0.0))
-	c.mbox(-2.2, 1.92, 14.3, 2.2, 2.02, 15.35, P.PAINT)
-	c.mbox(-2.2, 1.92, 14.15, -1.6, 2.02, 14.3, P.PAINT)
-	c.mbox(1.6, 1.92, 14.15, 2.2, 2.02, 14.3, P.PAINT)
-	# Glass: windscreen and cockpit side windows, chin windows, gunner and cabin windows.
-	c.mskin(-1.25, 1.55, 0.9, 1.25, 2.47, 2.55, P.GLASS)
-	c.mskin(-1.25, 1.45, 2.55, 1.25, 2.38, 3.3, P.GLASS)
-	c.mskin(-0.95, 0.72, 0.5, 0.95, 1.3, 1.6, P.GLASS)
-	c.mbox(-0.04, 1.7, 0.95, 0.04, 2.5, 2.6, P.PAINT_DARK)  # windscreen centre post
+			var r := 0.37 if z < 4.15 else 0.35
+			return Vector4(nx, 2.64, r, r)
+		c.mloft(3.95, 7.75, nacelle, P.PAINT, 2.0)
+		var intake := func(_z: float) -> Vector4: return Vector4(nx, 2.64, 0.27, 0.27)
+		c.mloft(3.95, 4.05, intake, P.BLACK, 2.0)
+		var spinner := func(z: float) -> Vector4:
+			var r := lerpf(0.04, 0.11, clampf((z - 3.9) / 0.15, 0.0, 1.0))
+			return Vector4(nx, 2.64, r, r)
+		c.mloft(3.9, 4.05, spinner, P.METAL, 2.0)
+		for seam: float in [5.1, 6.45]:  # cowling seams
+			c.mskin(minf(side * 0.5, side * 1.2), 2.25, seam, maxf(side * 0.5, side * 1.2), 3.05, seam + 0.05, P.PAINT_DARK, P.PAINT)
+		var hirss := func(z: float) -> Vector4:
+			return Vector4(side * (0.82 + (z - 7.6) * 0.32), 2.64, 0.24, 0.3)
+		c.mloft(7.6, 8.95, hirss, P.PAINT_DARK, 4.0)
+		for lz: float in [7.9, 8.2, 8.5]:
+			c.mskin(-1.5, 2.4, lz, 1.5, 2.96, lz + 0.05, P.BLACK, P.PAINT_DARK)
+		var outlet := func(z: float) -> Vector4:
+			return Vector4(side * (0.82 + (z - 7.6) * 0.32), 2.64, 0.18, 0.24)
+		c.mloft(8.9, 8.95, outlet, P.BLACK, 4.0)
+	# Main rotor mast, swashplate and hub; the blades turn on the MainRotor node.
+	c.mdisc(0.0, 5.25, 0.3, 2.64, 2.85, P.PAINT_DARK)
+	c.mdisc(0.0, 5.25, 0.17, 2.85, 3.62, P.METAL)
+	c.mdisc(0.0, 5.25, 0.4, 3.22, 3.3, P.METAL)
+	for side: float in [-1.0, 1.0]:  # pitch links
+		c.mbox(side * 0.3 - 0.03, 3.3, 5.22, side * 0.3 + 0.03, 3.6, 5.28, P.METAL)
+		c.mbox(-0.03, 3.3, 5.25 + side * 0.3 - 0.03, 0.03, 3.6, 5.25 + side * 0.3 + 0.03, P.METAL)
+	c.mdisc(0.0, 5.25, 0.34, 3.58, 3.74, P.BLACK)
+	c.rotor("MainRotor", Vector3(0.0, 3.82, 5.25), 8.18, 0.53, 4, Vector3.UP)
+	# Swept tail pylon with the gearbox fairing on top; tail rotor canted 20 degrees on its right.
+	var y := 1.5
+	while y < 4.15:
+		var le := 13.15 + maxf(y - 2.1, 0.0) * 0.72 + maxf(2.1 - y, 0.0) * 0.9
+		var te := 14.3 + (y - 1.5) * 0.34
+		var t := lerpf(0.18, 0.11, (y - 1.5) / 2.65)
+		c.mbox(-t, y, le, t, y + c.vs, te, P.PAINT)
+		y += c.vs
+	var cap := func(z: float) -> Vector4:
+		var k := clampf((z - 14.55) / 0.75, 0.0, 1.0)
+		return Vector4(0.0, 4.12, 0.15 * sin(PI * k) + 0.02, 0.17 * sin(PI * k) + 0.02)
+	c.mloft(14.55, 15.3, cap, P.PAINT, 2.2)
+	c.mbox(0.12, 3.48, 14.6, 0.36, 3.76, 14.92, P.METAL)  # tail rotor gearbox
+	c.mskin(-0.25, 3.7, 14.65, 0.25, 3.78, 14.9, P.PAINT_DARK, P.PAINT)
+	var cant := deg_to_rad(20.0)
+	c.rotor("TailRotor", Vector3(0.42, 3.62, 14.76), 1.68, 0.25, 4, Vector3(cos(cant), sin(cant), 0.0))
+	c.mbox(-0.04, 4.1, 15.2, 0.04, 4.18, 15.32, P.PAINT_LIGHT)  # tail light
+	# Stabilator: the full-width tailplane low on the pylon, slightly thicker at its spar.
+	c.mbox(-2.19, 1.42, 13.8, 2.19, 1.5, 14.82, P.PAINT)
+	c.mbox(-2.15, 1.4, 13.85, 2.15, 1.53, 14.3, P.PAINT)
+	c.mbox(-0.22, 1.36, 13.6, 0.22, 1.56, 14.9, P.PAINT)  # root fairing
+	# Glass: windscreen and overhead windows, cockpit door windows above and below, gunner's
+	# windows, the two windows in each sliding cabin door.
+	c.mskin(-1.0, 1.6, 1.05, 1.0, 2.18, 2.15, P.GLASS)
+	c.mskin(-0.55, 2.15, 2.1, 0.55, 2.3, 2.45, P.GLASS)
+	c.mskin(-0.04, 1.6, 1.1, 0.04, 2.3, 2.45, P.PAINT_DARK)  # centre post
 	for side: float in [-1.0, 1.0]:
-		var sx := side * 1.2
-		c.mbox(minf(sx, sx * 0.94), 1.4, 2.5, maxf(sx, sx * 0.94), 2.45, 2.6, P.PAINT_DARK)  # door frame
-		c.mbox(minf(sx, sx * 0.94), 1.4, 3.3, maxf(sx, sx * 0.94), 2.45, 3.4, P.PAINT_DARK)
-	c.mskin(-1.25, 1.55, 3.55, 1.25, 2.2, 4.15, P.GLASS)  # gunner's windows
-	c.mskin(-1.25, 1.6, 4.55, 1.25, 2.15, 5.35, P.GLASS)  # sliding door windows
-	c.mskin(-1.25, 1.6, 6.6, 1.25, 2.1, 7.3, P.GLASS)
-	# Sliding cabin door outline and the step under it.
-	c.mskin(-1.25, 0.6, 4.25, 1.25, 2.4, 4.32, P.PAINT_DARK, P.PAINT)
-	c.mskin(-1.25, 0.6, 5.95, 1.25, 2.4, 6.02, P.PAINT_DARK, P.PAINT)
-	c.mskin(-1.25, 2.33, 4.25, 1.25, 2.4, 6.0, P.PAINT_DARK, P.PAINT)
-	c.mbox(-1.28, 0.62, 4.35, 1.28, 0.68, 5.9, P.PAINT_DARK)
-	# M240 door guns on the gunner's window mounts.
-	for side: float in [-1.0, 1.0]:
-		var gx := side * 1.27
-		c.mbox(gx - 0.05, 1.78, 3.55, gx + 0.05, 1.93, 4.35, P.GUN)
-		c.mbox(gx - 0.025, 1.83, 2.9, gx + 0.025, 1.88, 3.55, P.GUN)
-		c.mbox(gx - 0.06, 1.64, 4.0, gx + 0.06, 1.78, 4.15, P.GUN)  # ammo box
-	# Main gear: wheels forward of the cabin on a strut and drag brace each side; tail wheel.
-	for side: float in [-1.0, 1.0]:
-		c.mbar(Vector3(side * 1.1, 0.95, 3.0), Vector3(side * 1.38, 0.32, 3.15), 0.1, P.METAL)
-		c.mbar(Vector3(side * 1.1, 0.75, 4.0), Vector3(side * 1.38, 0.32, 3.2), 0.08, P.METAL)
-		c.mwheel(minf(side * 1.28, side * 1.5), maxf(side * 1.28, side * 1.5), 0.31, 3.15, 0.31)
-	c.mbar(Vector3(0.0, 1.75, 13.0), Vector3(0.0, 0.25, 13.15), 0.08, P.METAL)
-	c.mwheel(-0.08, 0.08, 0.22, 13.15, 0.22)
-	# Wire cutters, antennas, nav lights, the anti-collision beacon and the boom's band.
-	c.mbox(-0.03, 2.45, 1.9, 0.03, 2.75, 2.0, P.METAL)
-	c.mbox(-0.03, 0.45, 1.2, 0.03, 0.6, 1.3, P.METAL)
-	c.mbar(Vector3(0.0, 2.3, 9.5), Vector3(0.0, 2.75, 10.1), 0.04, P.METAL)
-	c.mbox(-1.22, 1.9, 3.4, -1.15, 1.98, 3.5, P.LIGHT_RED)
-	c.mbox(1.15, 1.9, 3.4, 1.22, 1.98, 3.5, P.LIGHT_GREEN)
-	c.mbox(-0.05, 2.25, 11.0, 0.05, 2.32, 11.1, P.LIGHT_RED)
-	c.mskin(-0.6, 1.5, 11.8, 0.6, 2.6, 12.2, P.MARKING, P.PAINT)
+		var ox := minf(side * 0.92, side * 1.4)
+		var ix := maxf(side * 0.92, side * 1.4)
+		c.mskin(ox, 1.6, 1.05, ix, 2.3, 1.3, P.PAINT_DARK)  # windscreen side post
+		c.mskin(ox, 1.38, 1.3, ix, 2.14, 2.45, P.GLASS)  # cockpit door window
+		c.mskin(ox, 0.78, 1.55, ix, 1.3, 2.38, P.GLASS)  # lower door window
+		c.mskin(ox, 0.65, 2.48, ix, 2.18, 2.55, P.PAINT_DARK, P.PAINT)  # door rear edge
+		c.mskin(ox, 1.45, 2.95, ix, 2.08, 3.55, P.GLASS)  # gunner's window
+		c.mskin(ox, 1.4, 2.88, ix, 2.14, 2.95, P.PAINT_DARK, P.PAINT)
+		c.mskin(ox, 1.4, 3.55, ix, 2.14, 3.62, P.PAINT_DARK, P.PAINT)
+		# Sliding cabin door: outline, the rail it runs back on, windows and the step.
+		c.mskin(ox, 0.62, 4.3, ix, 2.15, 4.36, P.PAINT_DARK, P.PAINT)
+		c.mskin(ox, 0.62, 6.42, ix, 2.15, 6.48, P.PAINT_DARK, P.PAINT)
+		c.mskin(ox, 0.62, 4.3, ix, 0.68, 6.48, P.PAINT_DARK, P.PAINT)
+		c.mskin(ox, 2.13, 4.3, ix, 2.2, 7.4, P.BLACK, P.PAINT)
+		c.mskin(ox, 1.45, 4.55, ix, 1.98, 5.2, P.GLASS)
+		c.mskin(ox, 1.45, 5.6, ix, 1.98, 6.25, P.GLASS)
+		c.mbox(minf(side * 1.12, side * 1.3), 0.55, 4.6, maxf(side * 1.12, side * 1.3), 0.6, 5.3, P.METAL)
+		c.mskin(ox, 0.9, 7.55, ix, 1.85, 7.6, P.PAINT_DARK, P.PAINT)  # aft fuselage seam
+		# Chaff and flare dispensers on the boom.
+		c.mbox(minf(side * 0.36, side * 0.54), 1.7, 10.4, maxf(side * 0.36, side * 0.54), 1.95, 10.9, P.PAINT_DARK)
+		# M240H on the gunner's window mount, barrel stowed forward.
+		var gx := side * 1.4
+		c.mbar(Vector3(side * 1.18, 1.6, 3.62), Vector3(gx, 1.76, 3.45), 0.06, P.METAL)
+		c.mbox(gx - 0.05, 1.75, 3.0, gx + 0.05, 1.89, 3.72, P.GUN)
+		c.mbox(gx - 0.04, 1.77, 3.72, gx + 0.04, 1.85, 3.95, P.GUN)
+		c.mbox(gx - 0.025, 1.8, 2.25, gx + 0.025, 1.84, 3.0, P.GUN)
+		c.mbox(gx - 0.035, 1.78, 2.2, gx + 0.035, 1.86, 2.3, P.GUN)
+		c.mbox(gx - 0.06, 1.58, 3.3, gx + 0.06, 1.75, 3.55, P.SEAT)  # ammo bag
+		# Main gear: wheel under the cockpit's rear, shock strut up to the fuselage and the long
+		# drag beam running forward to the belly.
+		c.mbox(minf(side * 1.06, side * 1.24), 0.95, 3.9, maxf(side * 1.06, side * 1.24), 1.4, 4.4, P.PAINT_DARK)
+		c.mbar(Vector3(side * 1.18, 1.1, 4.12), Vector3(side * 1.24, 0.36, 4.05), 0.12, P.METAL)
+		c.mbar(Vector3(side * 0.92, 0.6, 2.25), Vector3(side * 1.22, 0.36, 4.05), 0.13, P.PAINT_DARK)
+		c.mwheel(minf(side * 1.27, side * 1.49), maxf(side * 1.27, side * 1.49), 0.33, 4.05, 0.33)
+		# Pitot probes on the cockpit roof.
+		c.mbar(Vector3(side * 0.42, 2.2, 2.3), Vector3(side * 0.42, 2.4, 2.2), 0.04, P.METAL)
+		c.mbar(Vector3(side * 0.42, 2.4, 2.2), Vector3(side * 0.42, 2.4, 1.75), 0.04, P.METAL)
+		# Nav lights on the cabin's upper corners.
+		c.mbox(minf(side * 1.0, side * 1.08), 2.05, 3.7, maxf(side * 1.0, side * 1.08), 2.13, 3.82, P.LIGHT_RED if side < 0.0 else P.LIGHT_GREEN)
+	# Tail wheel on a trailing strut under the boom.
+	c.mbar(Vector3(0.0, 1.72, 12.25), Vector3(0.0, 0.34, 12.8), 0.1, P.METAL)
+	c.mbar(Vector3(0.0, 1.76, 13.15), Vector3(0.0, 0.36, 12.82), 0.07, P.METAL)
+	c.mwheel(-0.07, 0.07, 0.22, 12.85, 0.22)
+	for fx: float in [-0.1, 0.08]:
+		c.mbox(fx, 0.2, 12.75, fx + 0.03, 0.42, 12.95, P.METAL)
+	# Wire strike cutters above the cockpit and under the nose, belly light and antennas,
+	# anti-collision beacons, boom seams.
+	c.mbar(Vector3(0.0, 2.22, 2.42), Vector3(0.0, 2.56, 2.05), 0.05, P.METAL)
+	c.mbar(Vector3(0.0, 0.6, 1.15), Vector3(0.0, 0.42, 0.8), 0.05, P.METAL)
+	c.mskin(-0.25, 0.45, 1.3, 0.25, 0.6, 1.6, P.GLASS)
+	c.mbox(-0.02, 0.32, 6.6, 0.02, 0.52, 6.9, P.PAINT_DARK)
+	c.mbar(Vector3(0.0, 2.35, 10.0), Vector3(0.0, 2.85, 10.6), 0.04, P.METAL)
+	c.mbox(-0.02, 2.05, 12.1, 0.02, 2.3, 12.45, P.PAINT_DARK)
+	c.mbox(-0.06, 2.62, 8.85, 0.06, 2.7, 8.97, P.LIGHT_RED)
+	c.mbox(-0.06, 0.44, 7.2, 0.06, 0.5, 7.32, P.LIGHT_RED)
+	for seam: float in [10.3, 11.6, 12.8]:
+		c.mskin(-1.0, 1.4, seam, 1.0, 2.35, seam + 0.05, P.PAINT_DARK, P.PAINT)
 	return c
 
 
