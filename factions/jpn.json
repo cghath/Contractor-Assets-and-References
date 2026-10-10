@@ -1,0 +1,382 @@
+{
+  "id": "jpn",
+  "name": "Japan",
+  "short": "JPN",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#FFFFFF",
+    "#BC002D"
+  ],
+  "blocs": [
+    "quad",
+    "g7"
+  ],
+  "campaign_tier": "mid",
+  "alignment_to_player": "friendly",
+  "player_client": true,
+  "relations": {
+    "player": 15,
+    "usa": 90,
+    "aus": 75,
+    "gbr": 65,
+    "can": 60,
+    "kor": 45,
+    "phl": 65,
+    "twn": 55,
+    "ind": 55,
+    "vnm": 40,
+    "fra": 50,
+    "ita": 50,
+    "ukr": 55,
+    "chn": -55,
+    "prk": -85,
+    "rus": -60,
+    "houthis": -40,
+    "al_shabaab": -60,
+    "isis": -90,
+    "al_qaeda": -90
+  },
+  "theatres": [
+    "korean_dmz",
+    "taiwan_strait",
+    "south_china_sea",
+    "horn_of_africa",
+    "arctic_north"
+  ],
+  "languages": [
+    "Japanese"
+  ],
+  "callout_language": "Japanese (JGSDF voice procedure)",
+  "doctrine": {
+    "summary": "Japan Ground Self-Defense Force: a professional, highly trained, technology-heavy defensive force reorienting to the southwest island chain (Nansei islands) with the Amphibious Rapid Deployment Brigade, anti-ship missile units, Type 16 wheeled combat vehicles and a growing counter-strike capability. Strict legal limits on use of force abroad; overseas presence limited to the Djibouti base, PKO and evacuation operations.",
+    "squad_size": 8,
+    "fireteam": "Infantry squad of ~8 with Minimi team and rifle team; ARDB uses USMC-style fireteams. Game: 8 in four pairs.",
+    "tactics": [
+      "Defensive island operations: dug-in positions, anti-ship and anti-armour ambushes",
+      "Amphibious counter-landing with AAV7 and V-22 from Osumi-class ships (ARDB)",
+      "Precise, deliberate fire and movement; strong discipline and conservative rules of engagement",
+      "Heavy use of Type 01 LMAT and Carl Gustaf in the anti-armour role",
+      "Night operations with modern optics"
+    ],
+    "ai_tuning": {
+      "aggression": 0.4,
+      "discipline": 0.95,
+      "suppression_resistance": 0.7,
+      "flanking": 0.55,
+      "grenade_use": 0.5,
+      "medical_care": 0.9,
+      "night_capability": 0.85,
+      "marksmanship": 0.8,
+      "morale": 0.75
+    }
+  },
+  "camo": [
+    {
+      "name": "Type III Jietai (JGSDF flecktarn-style)",
+      "palette": [
+        "#5D6A43",
+        "#3E4A2E",
+        "#8A7A57",
+        "#2B2E22",
+        "#A49C79"
+      ],
+      "use": "Standard JGSDF uniform since 2007"
+    },
+    {
+      "name": "JGSDF desert Jietai",
+      "palette": [
+        "#C6B48A",
+        "#A28D61",
+        "#7E6C49",
+        "#5E5139"
+      ],
+      "use": "Overseas deployments (Djibouti)"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "Howa Type 20 (5.56x45mm)",
+      "Howa Type 89 (5.56x45mm, being replaced)"
+    ],
+    "autorifleman": [
+      "Minimi Mk3 (5.56x45mm)",
+      "Sumitomo Minimi (5.56x45mm)"
+    ],
+    "marksman": [
+      "HK G28E / HK417-class DMR (7.62x51mm)"
+    ],
+    "grenadier": [
+      "Type 20 with Type 06 rifle grenades",
+      "40 mm underbarrel launcher (ARDB)"
+    ],
+    "at": [
+      "Type 01 LMAT",
+      "Carl Gustaf M4 (84mm)",
+      "110 mm LAM (Panzerfaust 3)"
+    ],
+    "medic": [
+      "Howa Type 20 (5.56x45mm)"
+    ],
+    "squad_leader": [
+      "Howa Type 20 (5.56x45mm)"
+    ],
+    "sniper": [
+      "M24 SWS (7.62x51mm)"
+    ],
+    "sidearm": [
+      "SFP9 (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "Carl Gustaf M4 [in_game as MAAWS]",
+    "Type 01 LMAT [not_in_game, Javelin-equivalent]",
+    "110 mm LAM / Panzerfaust 3 [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "ceramic",
+    "notes": "Type 88 Kai / Type 18 helmets (medium); Body Armour Type 3 (Kai) with front/back ceramic plates = medium."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "type10",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "Type 10 MBT (~139)."
+    },
+    {
+      "vehicle_id": "type16",
+      "role": "ifv",
+      "prevalence": "signature",
+      "notes": "Type 16 MCV 105 mm wheeled tank destroyer (~255); Type 24 IFV variants on order."
+    },
+    {
+      "vehicle_id": "type90",
+      "role": "mbt",
+      "prevalence": "common",
+      "notes": "Type 90 (~340), Hokkaido."
+    },
+    {
+      "vehicle_id": "type96_wapc",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "Type 96 WAPC (~381), being replaced."
+    },
+    {
+      "vehicle_id": "patria_amv",
+      "role": "apc",
+      "prevalence": "uncommon",
+      "notes": "Patria AMV XP selected 2022 as Type 96 replacement, licence-built by Japan Steel Works from 2025."
+    },
+    {
+      "vehicle_id": "komatsu_lav",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Komatsu LAV (~1,800), replacement trials (Eagle V, Hawkei)."
+    },
+    {
+      "vehicle_id": "aav7",
+      "role": "apc",
+      "prevalence": "uncommon",
+      "notes": "AAV7A1 (58) with the Amphibious Rapid Deployment Brigade."
+    },
+    {
+      "vehicle_id": "ah64",
+      "role": "attack_heli",
+      "prevalence": "rare",
+      "notes": "AH-64DJP (12)."
+    },
+    {
+      "vehicle_id": "ah1z",
+      "role": "attack_heli",
+      "prevalence": "uncommon",
+      "notes": "AH-1S Cobra (~71, retiring)."
+    },
+    {
+      "vehicle_id": "uh60",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": "UH-60JA (39) and UH-2."
+    },
+    {
+      "vehicle_id": "ch47",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": "CH-47J/JA (66)."
+    },
+    {
+      "vehicle_id": "v22",
+      "role": "transport_heli",
+      "prevalence": "uncommon",
+      "notes": "MV-22B Osprey (17) supporting ARDB."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "jpn_rifle_squad",
+      "name": "JGSDF infantry squad",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "jpn_ardb_squad",
+      "name": "ARDB amphibious squad with AAV7",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "team_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "aav7"
+    },
+    {
+      "id": "jpn_lav_at_team",
+      "name": "LAV anti-armour team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "driver",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 2
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "komatsu_lav"
+    },
+    {
+      "id": "jpn_mcv_section",
+      "name": "Type 16 MCV section",
+      "composition": [
+        {
+          "role": "vehicle_crew",
+          "count": 4
+        }
+      ],
+      "vehicle_id": "type16"
+    }
+  ],
+  "support_assets": [
+    "Type 19 / Type 99 155 mm artillery",
+    "AH-64DJP / AH-1S CAS (limited)",
+    "UH-60JA / CH-47 / MV-22 lift",
+    "Type 12 anti-ship missiles (off-map, coastal)",
+    "ISR drones",
+    "Naval gunfire from JMSDF (coastal, off-map)"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 40,
+        "unlocks": [
+          "medical kits",
+          "optics",
+          "non-lethal gear"
+        ]
+      },
+      {
+        "rep": 70,
+        "unlocks": [
+          "Type III uniforms",
+          "medium helmets",
+          "plate carriers"
+        ]
+      },
+      {
+        "rep": 90,
+        "unlocks": [
+          "UH-60JA lift hire"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "noncombatant_evacuation (Japanese nationals)",
+      "maritime_security_escort (anti-piracy, Horn of Africa)",
+      "hostage_rescue",
+      "reconnaissance (island observation)",
+      "disaster_relief_security"
+    ],
+    "as_target": []
+  },
+  "notes": "Friendly mid-tier state (proposal). Japanese law restricts lethal arms exports (relaxed in 2023-24 for some transfers); proposal: Japan sells only non-lethal and protective gear at high reputation, no weapons or vehicles. Contracts are low-volume, high-trust (evacuations, maritime security). Real-world: major China-Japan diplomatic spat from November 2025 over Taiwan contingency remarks.",
+  "proposed": [
+    "doctrine.ai_tuning",
+    "relations.player",
+    "campaign_tier",
+    "alignment_to_player",
+    "player_client",
+    "player_trade",
+    "contract_types",
+    "unit_templates (game squads use 8 men in battle-buddy pairs)",
+    "player_trade.sellable",
+    "player_trade.rep_tiers"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Japan_Ground_Self-Defense_Force",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Japan_Ground_Self-Defense_Force",
+    "https://en.wikipedia.org/wiki/Type_10_(tank)",
+    "https://en.wikipedia.org/wiki/Type_16_maneuver_combat_vehicle",
+    "https://en.wikipedia.org/wiki/Howa_Type_20",
+    "https://en.wikipedia.org/wiki/Amphibious_Rapid_Deployment_Brigade",
+    "https://www.asianmilitaryreview.com/2025/05/wheeled-armoured-combat-vehicles-for-japanese-gsdf-foc/",
+    "https://www.janes.com/defence-intelligence-insights/defence-news/land/japan-selects-patrias-amv-for-type-96-replacement-programme"
+  ]
+}

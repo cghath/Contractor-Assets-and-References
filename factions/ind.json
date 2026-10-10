@@ -1,0 +1,432 @@
+{
+  "id": "ind",
+  "name": "Republic of India",
+  "short": "IND",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#FF9933",
+    "#FFFFFF",
+    "#138808",
+    "#000080"
+  ],
+  "blocs": [
+    "quad",
+    "brics",
+    "sco"
+  ],
+  "campaign_tier": "mid",
+  "alignment_to_player": "neutral",
+  "player_client": true,
+  "relations": {
+    "player": 0,
+    "usa": 40,
+    "rus": 55,
+    "fra": 65,
+    "isr": 60,
+    "jpn": 55,
+    "aus": 60,
+    "gbr": 45,
+    "arm": 60,
+    "are": 55,
+    "sau": 40,
+    "irn": 25,
+    "vnm": 50,
+    "phl": 45,
+    "kor": 45,
+    "pak": -85,
+    "chn": -40,
+    "afg_taliban": 10,
+    "isis_k": -100,
+    "al_qaeda": -100,
+    "isis": -100,
+    "tur": -30,
+    "aze": -30,
+    "houthis": -50
+  },
+  "theatres": [
+    "kashmir_loc",
+    "afghan_highlands",
+    "persian_gulf_coast",
+    "yemen_red_sea"
+  ],
+  "languages": [
+    "Hindi",
+    "English",
+    "regional languages"
+  ],
+  "callout_language": "Hindi and English mixed (Indian Army voice procedure in English)",
+  "doctrine": {
+    "summary": "Very large volunteer army (~1.2 million) facing two fronts: the Line of Control with Pakistan and the Line of Actual Control with China. Decades of counter-insurgency in Jammu and Kashmir and the North-East. Doctrine moving to Integrated Battle Groups, 'Rudra' all-arms brigades and drone-heavy 'Bhairav' light commando battalions after the May 2025 India-Pakistan conflict (Operation Sindoor), which featured missile, drone and artillery exchanges.",
+    "squad_size": 10,
+    "fireteam": "Infantry section of 10 with LMG group and rifle group; Rashtriya Rifles counter-insurgency teams. Game: 8 in four pairs.",
+    "tactics": [
+      "Cordon-and-search counter-insurgency operations in mountain villages",
+      "High-altitude defence and patrolling (Ladakh, Siachen)",
+      "Artillery duels and drone strikes across the LoC",
+      "Mechanised strikes in the desert (Rajasthan) with T-90S and BMP-2",
+      "Special forces (Para SF) cross-border raids and hostage rescue"
+    ],
+    "ai_tuning": {
+      "aggression": 0.55,
+      "discipline": 0.75,
+      "suppression_resistance": 0.7,
+      "flanking": 0.6,
+      "grenade_use": 0.6,
+      "medical_care": 0.65,
+      "night_capability": 0.65,
+      "marksmanship": 0.65,
+      "morale": 0.75
+    }
+  },
+  "camo": [
+    {
+      "name": "Indian Army digital (2022)",
+      "palette": [
+        "#5F6544",
+        "#827556",
+        "#3E4232",
+        "#A7997A",
+        "#2E2F26"
+      ],
+      "use": "Standard combat uniform since January 2022"
+    },
+    {
+      "name": "Disruptive pattern (legacy)",
+      "palette": [
+        "#5B6B3F",
+        "#7C6847",
+        "#2F3226",
+        "#A08F66"
+      ],
+      "use": "Older uniforms, Rashtriya Rifles"
+    },
+    {
+      "name": "Snow / high-altitude whites",
+      "palette": [
+        "#E8E8E4",
+        "#B9BCB8",
+        "#6E7268"
+      ],
+      "use": "Ladakh, Siachen"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "AK-203 (7.62x39mm, Indo-Russian Rifles)",
+      "INSAS (5.56x45mm, being replaced)",
+      "SIG716 (7.62x51mm, frontline units)"
+    ],
+    "autorifleman": [
+      "Negev NG7 (7.62x51mm)",
+      "INSAS LMG (5.56x45mm)",
+      "PKM (7.62x54R)"
+    ],
+    "marksman": [
+      "Dragunov SVD (7.62x54R)",
+      "SIG716 DMR (7.62x51mm)"
+    ],
+    "grenadier": [
+      "AK-203 / INSAS with underbarrel 40 mm",
+      "MGL 40 mm"
+    ],
+    "at": [
+      "Carl Gustaf M4 (84mm)",
+      "Spike LR / NAG-family ATGM",
+      "MPATGM (entering service)"
+    ],
+    "medic": [
+      "AK-203 (7.62x39mm)"
+    ],
+    "squad_leader": [
+      "AK-203 (7.62x39mm)"
+    ],
+    "sniper": [
+      "Dragunov SVD (7.62x54R)",
+      "Sako TRG-42 (.338 Lapua Magnum)",
+      "Barrett M95 (.50 BMG)"
+    ],
+    "sidearm": [
+      "Glock 17 (9x19mm)",
+      "1A pistol (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "Carl Gustaf M4 [in_game as MAAWS]",
+    "Spike LR ATGM [not_in_game]",
+    "MPATGM [not_in_game, Javelin-equivalent]",
+    "RPG-7 (limited, special forces) [in_game]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "ceramic",
+    "notes": "Indigenous ballistic helmets and ballistic patka (medium); new bulletproof jackets with front/back ceramic/polyethylene plates (medium); counter-insurgency units often heavier."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "t90m",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "T-90S/SK Bhishma (~1,300), upgrading to T-90MS standard."
+    },
+    {
+      "vehicle_id": "t72b3",
+      "role": "mbt",
+      "prevalence": "common",
+      "notes": "T-72M1 Ajeya (~2,400)."
+    },
+    {
+      "vehicle_id": "bmp2",
+      "role": "ifv",
+      "prevalence": "signature",
+      "notes": "BMP-2 Sarath (~2,400)."
+    },
+    {
+      "vehicle_id": "arjun",
+      "role": "mbt",
+      "prevalence": "uncommon",
+      "notes": "Arjun Mk1 (124) and Mk1A (118 ordered)."
+    },
+    {
+      "vehicle_id": "zorawar",
+      "role": "mbt",
+      "prevalence": "rare",
+      "notes": "Zorawar light tank (59 ordered) for Ladakh."
+    },
+    {
+      "vehicle_id": "k9",
+      "role": "artillery",
+      "prevalence": "common",
+      "notes": "K9 Vajra-T (100 + 100 ordered 2024)."
+    },
+    {
+      "vehicle_id": "pinaka",
+      "role": "mlrs",
+      "prevalence": "common",
+      "notes": "Pinaka MBRL (126+ launchers)."
+    },
+    {
+      "vehicle_id": "atags",
+      "role": "artillery",
+      "prevalence": "uncommon",
+      "notes": "ATAGS towed 155 mm (307 ordered 2025)."
+    },
+    {
+      "vehicle_id": "m777",
+      "role": "artillery",
+      "prevalence": "uncommon",
+      "notes": "M777 (145) in mountain divisions, CH-47 lifted."
+    },
+    {
+      "vehicle_id": "ah64",
+      "role": "attack_heli",
+      "prevalence": "uncommon",
+      "notes": "AH-64E: 6 for Army Aviation (delivered 2025) plus 22 IAF."
+    },
+    {
+      "vehicle_id": "prachand",
+      "role": "attack_heli",
+      "prevalence": "uncommon",
+      "notes": "HAL Prachand LCH (156 ordered 2025)."
+    },
+    {
+      "vehicle_id": "dhruv",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": "HAL Dhruv ALH and Rudra armed variant."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "ind_infantry_section",
+      "name": "Infantry section (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "ind_rr_team",
+      "name": "Rashtriya Rifles counter-insurgency team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "radio_operator",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "ind_mech_section",
+      "name": "Mechanised section with BMP-2",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "bmp2"
+    },
+    {
+      "id": "ind_para_sf",
+      "name": "Para SF team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "breacher",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    }
+  ],
+  "support_assets": [
+    "Pinaka / Smerch rocket strikes",
+    "K9 / M777 / Dhanush fire missions",
+    "Prachand / Rudra / AH-64E CAS",
+    "Heron and loitering-munition drones",
+    "Mi-17V-5 / Dhruv lift"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 40,
+        "unlocks": [
+          "7.62x39 / 5.56 ammunition",
+          "grenades, smoke",
+          "medical kits"
+        ]
+      },
+      {
+        "rep": 60,
+        "unlocks": [
+          "AK-203",
+          "Indian digital uniforms",
+          "medium helmet"
+        ]
+      },
+      {
+        "rep": 85,
+        "unlocks": [
+          "Carl Gustaf (MAAWS) ammunition",
+          "Dhruv lift hire"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "maritime_security_escort (anti-piracy, Red Sea / Arabian Sea)",
+      "noncombatant_evacuation (Indian nationals, Gulf/Yemen/Sudan)",
+      "counter_terror_raid (isis_k / al_qaeda cells, outside Indian territory)",
+      "protect_infrastructure (overseas projects)"
+    ],
+    "as_target": [
+      "intel_theft (pak-aligned fixers)"
+    ]
+  },
+  "notes": "Neutral mid-tier state (proposal). India and Pakistan should be mutually exclusive clients with a long lockout. Proposal: India does NOT hire PMCs for operations inside Kashmir (sovereignty); contracts are overseas evacuation, maritime and counter-terror work. Real-world: April 2025 Pahalgam attack and May 2025 India-Pakistan conflict; India-China border disengagement deal October 2024.",
+  "proposed": [
+    "doctrine.ai_tuning",
+    "relations.player",
+    "campaign_tier",
+    "alignment_to_player",
+    "player_client",
+    "player_trade",
+    "contract_types",
+    "unit_templates (game squads use 8 men in battle-buddy pairs)",
+    "player_trade.sellable",
+    "player_trade.rep_tiers",
+    "contract_types (no in-Kashmir contracts)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Indian_Army",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Indian_Army",
+    "https://en.wikipedia.org/wiki/T-90",
+    "https://en.wikipedia.org/wiki/Arjun_(tank)",
+    "https://en.wikipedia.org/wiki/AK-203",
+    "https://en.wikipedia.org/wiki/2025_India%E2%80%93Pakistan_conflict",
+    "https://www.newsonair.gov.in/indian-army-receives-three-ah-64e-apache-helicopters-from-boeing/",
+    "https://www.overtdefense.com/2025/07/30/indian-army-receives-first-three-ah-64e-apache-guardian-helicopters"
+  ]
+}

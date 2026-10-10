@@ -1,0 +1,409 @@
+{
+  "id": "pak",
+  "name": "Islamic Republic of Pakistan",
+  "short": "PAK",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#01411C",
+    "#FFFFFF"
+  ],
+  "blocs": [
+    "sco"
+  ],
+  "campaign_tier": "early",
+  "alignment_to_player": "varies",
+  "player_client": true,
+  "relations": {
+    "player": 5,
+    "chn": 85,
+    "sau": 85,
+    "tur": 80,
+    "aze": 80,
+    "qat": 55,
+    "are": 50,
+    "usa": 30,
+    "gbr": 30,
+    "irn": 10,
+    "ind": -85,
+    "afg_taliban": -60,
+    "isr": -70,
+    "isis_k": -100,
+    "al_qaeda": -90,
+    "isis": -95
+  },
+  "theatres": [
+    "kashmir_loc",
+    "afghan_highlands",
+    "persian_gulf_coast"
+  ],
+  "languages": [
+    "Urdu",
+    "English",
+    "Punjabi",
+    "Pashto"
+  ],
+  "callout_language": "Urdu and English mixed (Pakistan Army voice procedure in English)",
+  "doctrine": {
+    "summary": "Large volunteer army (~560,000) with a two-front posture: conventional deterrence against India along the LoC and border, and long-running counter-terrorism in Khyber Pakhtunkhwa and Balochistan against the TTP, ISIS-K and Baloch separatists. Equipment mixes Chinese (VT-4, SH-15, Z-10ME), US (M113, MaxxPro, AH-1F, M109) and Ukrainian (T-80UD) sources. Fought India in May 2025 (missiles, drones, artillery) and clashed with the Afghan Taliban on the border in October 2025.",
+    "squad_size": 10,
+    "fireteam": "Infantry section of ~10 with MG3 group; Frontier Corps and SSG operate smaller teams. Game: 8 in four pairs.",
+    "tactics": [
+      "Intelligence-based counter-terror raids in mountain villages (early-game contracts)",
+      "Convoy and picket defence against ambushes and IEDs (map hazard) in the tribal districts",
+      "Artillery duels and drone use along the LoC",
+      "Armoured counter-strikes in the Punjab plains",
+      "SSG special forces hostage rescue and raids"
+    ],
+    "ai_tuning": {
+      "aggression": 0.6,
+      "discipline": 0.75,
+      "suppression_resistance": 0.7,
+      "flanking": 0.6,
+      "grenade_use": 0.6,
+      "medical_care": 0.55,
+      "night_capability": 0.6,
+      "marksmanship": 0.65,
+      "morale": 0.75
+    }
+  },
+  "camo": [
+    {
+      "name": "Pakistan Army digital (woodland/arid)",
+      "palette": [
+        "#7B7556",
+        "#5A5A3F",
+        "#A69A75",
+        "#3C3B2C",
+        "#C2B48E"
+      ],
+      "use": "Standard combat uniform"
+    },
+    {
+      "name": "Pakistan Army disruptive (legacy)",
+      "palette": [
+        "#6C6A44",
+        "#8B7652",
+        "#3B3A2B",
+        "#B8A57A"
+      ],
+      "use": "Older uniforms, Frontier Corps"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "G3P4 (7.62x51mm, POF licence)",
+      "Type 56 (7.62x39mm)"
+    ],
+    "autorifleman": [
+      "MG3 (7.62x51mm, POF licence)",
+      "Type 81 / RPK-pattern LMG (7.62x39mm)"
+    ],
+    "marksman": [
+      "G3 with optic / PSR-90-class (7.62x51mm)",
+      "Dragunov-type SVD (7.62x54R)"
+    ],
+    "grenadier": [
+      "G3P4 with underbarrel 40 mm"
+    ],
+    "at": [
+      "RPG-7 (PG-7V, OG-7V)",
+      "Baktar-Shikan (HJ-8)"
+    ],
+    "medic": [
+      "Type 56 (7.62x39mm)"
+    ],
+    "squad_leader": [
+      "G3P4 (7.62x51mm)"
+    ],
+    "sniper": [
+      "Steyr SSG-class (7.62x51mm)",
+      "Barrett M82 (.50 BMG)"
+    ],
+    "sidearm": [
+      "Glock 17/19 (9x19mm)",
+      "Beretta 92 (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "RPG-7 with PG-7V / OG-7V [in_game]",
+    "Baktar-Shikan (HJ-8 licence) ATGM [not_in_game]",
+    "TOW [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "light",
+    "plates": "steel",
+    "notes": "Aramid helmets in counter-terror units (medium), older steel elsewhere; soft vests with steel or ceramic plates in KP/Balochistan operations (light; SSG medium/ceramic)."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "al_khalid",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "Al-Khalid / Al-Khalid I (~410)."
+    },
+    {
+      "vehicle_id": "vt4",
+      "role": "mbt",
+      "prevalence": "common",
+      "notes": "VT-4 / Haider (176+; inductions reportedly stalled since 2025)."
+    },
+    {
+      "vehicle_id": "t80bvm",
+      "role": "mbt",
+      "prevalence": "common",
+      "notes": "T-80UD (~320-350, Ukrainian-built)."
+    },
+    {
+      "vehicle_id": "type59",
+      "role": "mbt",
+      "prevalence": "common",
+      "notes": "Al-Zarrar upgraded Type 59 (~500)."
+    },
+    {
+      "vehicle_id": "m113",
+      "role": "apc",
+      "prevalence": "signature",
+      "notes": "M113 family (~2,300) and local Talha/Saad."
+    },
+    {
+      "vehicle_id": "maxxpro",
+      "role": "mrap",
+      "prevalence": "common",
+      "notes": "MaxxPro (~525) for counter-terror operations in KP/Balochistan."
+    },
+    {
+      "vehicle_id": "pcl181",
+      "role": "artillery",
+      "prevalence": "common",
+      "notes": "SH-15 155 mm truck howitzer (164+)."
+    },
+    {
+      "vehicle_id": "m109",
+      "role": "artillery",
+      "prevalence": "common",
+      "notes": "M109A2/A5/L (~438)."
+    },
+    {
+      "vehicle_id": "ah1z",
+      "role": "attack_heli",
+      "prevalence": "uncommon",
+      "notes": "AH-1F Cobra (~50), being replaced by Z-10ME."
+    },
+    {
+      "vehicle_id": "z10",
+      "role": "attack_heli",
+      "prevalence": "rare",
+      "notes": "Z-10ME (40 ordered, first delivered 2025)."
+    },
+    {
+      "vehicle_id": "mi8",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": "Mi-17/Mi-171 (~48)."
+    },
+    {
+      "vehicle_id": "bell412",
+      "role": "transport_heli",
+      "prevalence": "uncommon",
+      "notes": "Bell 412EP (~31)."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "pak_infantry_section",
+      "name": "Infantry section (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "pak_ct_team",
+      "name": "Counter-terror raid team (FC/SSG)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "breacher",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "pak_mrap_patrol",
+      "name": "MaxxPro convoy patrol",
+      "composition": [
+        {
+          "role": "driver",
+          "count": 1
+        },
+        {
+          "role": "gunner",
+          "count": 1
+        },
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "maxxpro"
+    },
+    {
+      "id": "pak_mech_section",
+      "name": "Mechanised section with M113",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "m113"
+    }
+  ],
+  "support_assets": [
+    "SH-15 / M109 155 mm fire missions",
+    "A-100 / Fatah rocket strikes (off-map)",
+    "AH-1F / Z-10ME CAS",
+    "Mi-17 lift",
+    "Shahpar / Burraq / TB2-class drones"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 30,
+        "unlocks": [
+          "7.62x51 / 7.62x39 ammunition",
+          "grenades, smoke",
+          "medical kits"
+        ]
+      },
+      {
+        "rep": 55,
+        "unlocks": [
+          "G3P4",
+          "MG3",
+          "Pakistani digital uniforms"
+        ]
+      },
+      {
+        "rep": 80,
+        "unlocks": [
+          "RPG-7 (PG-7V, OG-7V)",
+          "Mi-17 lift hire"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "counter_terror_raid (isis_k cells, afghan_highlands border)",
+      "convoy_escort (CPEC projects)",
+      "hostage_rescue",
+      "protect_infrastructure (Chinese-funded projects)",
+      "high_value_target_capture"
+    ],
+    "as_target": [
+      "intel_theft (ind-aligned fixers)"
+    ]
+  },
+  "notes": "Mixed-alignment state (proposal: 'varies'). Fits the early-game counter-terror loop: Pakistani contracts against ISIS-K cells on the afghan_highlands border. India and Pakistan mutually lock out. Close to China (Chinese kit) yet a client of Western-aligned work; mutual defence pact with Saudi Arabia (September 2025). TTP (Pakistani Taliban) and Baloch separatist groups are not in the canonical roster; proposal: represent them under isis_k-style hostile cells or add later.",
+  "proposed": [
+    "doctrine.ai_tuning",
+    "relations.player",
+    "campaign_tier",
+    "alignment_to_player",
+    "player_client",
+    "player_trade",
+    "contract_types",
+    "unit_templates (game squads use 8 men in battle-buddy pairs)",
+    "player_trade.sellable",
+    "player_trade.rep_tiers"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Pakistan_Army",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Pakistan_Army",
+    "https://en.wikipedia.org/wiki/Al-Khalid_tank",
+    "https://en.wikipedia.org/wiki/VT-4",
+    "https://en.wikipedia.org/wiki/2025_India%E2%80%93Pakistan_conflict",
+    "https://en.wikipedia.org/wiki/2025_Afghanistan%E2%80%93Pakistan_conflict",
+    "https://quwa.org/category/pakistan-army-news",
+    "https://www.indiandefensenews.in/2026/08/pakistans-armour-ambitions-stall.html"
+  ]
+}

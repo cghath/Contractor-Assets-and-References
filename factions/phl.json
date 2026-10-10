@@ -1,0 +1,407 @@
+{
+  "id": "phl",
+  "name": "Republic of the Philippines",
+  "short": "PHL",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#0038A8",
+    "#CE1126",
+    "#FFFFFF",
+    "#FCD116"
+  ],
+  "blocs": [
+    "asean"
+  ],
+  "campaign_tier": "early",
+  "alignment_to_player": "friendly",
+  "player_client": true,
+  "relations": {
+    "player": 25,
+    "usa": 85,
+    "jpn": 65,
+    "aus": 65,
+    "kor": 50,
+    "can": 45,
+    "gbr": 45,
+    "fra": 40,
+    "ind": 45,
+    "vnm": 30,
+    "twn": 20,
+    "chn": -65,
+    "isis": -100,
+    "al_qaeda": -90
+  },
+  "theatres": [
+    "south_china_sea"
+  ],
+  "languages": [
+    "Filipino (Tagalog)",
+    "English",
+    "Cebuano"
+  ],
+  "callout_language": "Filipino and English mixed (Taglish)",
+  "doctrine": {
+    "summary": "Armed Forces of the Philippines shifting from decades of internal security (communist NPA insurgency and Islamist groups in Mindanao, including the 2017 Marawi siege against ISIS-affiliated fighters) to territorial defence in the South China Sea under the Comprehensive Archipelagic Defense Concept. Close US alliance (EDCA sites, Balikatan exercises with HIMARS/NMESIS), Reciprocal Access Agreement with Japan (2024).",
+    "squad_size": 9,
+    "fireteam": "Rifle squad of 9 in two fireteams with K3/Ultimax and M203; Scout Rangers and Special Forces operate in small teams. Game: 8 in four pairs.",
+    "tactics": [
+      "Jungle and urban counter-insurgency raids against ISIS-affiliated cells (early-game)",
+      "Close-quarters urban clearing learned at Marawi; armour in support (Simba, M113 FSV)",
+      "Small-boat and island defence operations, resupply runs to outposts",
+      "Air-ground coordination with S-70i, A-29 and T129 helicopters"
+    ],
+    "ai_tuning": {
+      "aggression": 0.6,
+      "discipline": 0.65,
+      "suppression_resistance": 0.65,
+      "flanking": 0.6,
+      "grenade_use": 0.55,
+      "medical_care": 0.6,
+      "night_capability": 0.55,
+      "marksmanship": 0.6,
+      "morale": 0.75
+    }
+  },
+  "camo": [
+    {
+      "name": "PHILARPAT (Philippine Army digital)",
+      "palette": [
+        "#5B6648",
+        "#7E7A5A",
+        "#3C4330",
+        "#2B2D23",
+        "#A59F7C"
+      ],
+      "use": "Standard Philippine Army pattern since late 2010s"
+    },
+    {
+      "name": "Philippine Marine Corps tiger-stripe digital",
+      "palette": [
+        "#4E5C3B",
+        "#2F3527",
+        "#7A7553",
+        "#1E2019"
+      ],
+      "use": "Philippine Marines"
+    },
+    {
+      "name": "Multicam (special forces)",
+      "palette": [
+        "#B5A77D",
+        "#8C8A5C",
+        "#5F5E3E",
+        "#9B7D55",
+        "#3D3A2C"
+      ],
+      "use": "PASOCOM / Scout Rangers"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "Remington R4A3 / M4 (5.56x45mm)",
+      "M16A1 (5.56x45mm, second line)"
+    ],
+    "autorifleman": [
+      "Daewoo K3 (5.56x45mm)",
+      "Ultimax 100 (5.56x45mm, Marines)",
+      "M60 (7.62x51mm)"
+    ],
+    "marksman": [
+      "SIG716 DMR (7.62x51mm)"
+    ],
+    "grenadier": [
+      "M4/R4 with M203 (40mm)"
+    ],
+    "at": [
+      "RPG-7 (PG-7V, OG-7V)",
+      "M67 90 mm recoilless rifle",
+      "Hyungung (Raybolt) ATGM"
+    ],
+    "medic": [
+      "R4A3 (5.56x45mm)"
+    ],
+    "squad_leader": [
+      "R4A3 (5.56x45mm)"
+    ],
+    "sniper": [
+      "M24 (7.62x51mm)",
+      "Barrett M82A1 (.50 BMG)"
+    ],
+    "sidearm": [
+      "Glock 17 (9x19mm)",
+      "M1911 (.45 ACP)"
+    ]
+  },
+  "launchers": [
+    "RPG-7 with PG-7V / OG-7V [in_game] (744 bought from Russia)",
+    "M67 recoilless rifle [not_in_game]",
+    "Raybolt ATGM [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "light",
+    "vest": "light",
+    "plates": "steel",
+    "notes": "Kevlar PASGT-type helmets (light); soft vests with steel or ceramic front plates (light); special forces medium."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "pizarro",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "Sabrah ASCOD 2 light tank with Elbit 105 mm turret (13 + 15 on order)."
+    },
+    {
+      "vehicle_id": "m113",
+      "role": "apc",
+      "prevalence": "signature",
+      "notes": "M113 FSV (76 mm Scorpion turret, ~144), M113A2+ with Elbit RCWS."
+    },
+    {
+      "vehicle_id": "simba",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "GKN Simba (~142), Mindanao workhorse."
+    },
+    {
+      "vehicle_id": "v150",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "V-150 Commando (~130)."
+    },
+    {
+      "vehicle_id": "guarani",
+      "role": "apc",
+      "prevalence": "uncommon",
+      "notes": "IVECO Guarani 6x6 (28)."
+    },
+    {
+      "vehicle_id": "pandur_ii",
+      "role": "ifv",
+      "prevalence": "rare",
+      "notes": "Sabrah wheeled light tank on Pandur II (10)."
+    },
+    {
+      "vehicle_id": "atmos",
+      "role": "artillery",
+      "prevalence": "uncommon",
+      "notes": "ATMOS 2000 155 mm (12)."
+    },
+    {
+      "vehicle_id": "aav7",
+      "role": "apc",
+      "prevalence": "uncommon",
+      "notes": "AAV7A1 (8) with the Philippine Marine Corps."
+    },
+    {
+      "vehicle_id": "uh60",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": "Philippine Air Force S-70i Black Hawk (~32)."
+    },
+    {
+      "vehicle_id": "bell412",
+      "role": "transport_heli",
+      "prevalence": "uncommon",
+      "notes": "Bell 412EPI and older Huey/412 fleet."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "phl_rifle_squad",
+      "name": "Philippine Army rifle squad (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "team_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "phl_scout_ranger_team",
+      "name": "Scout Ranger team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "radio_operator",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "phl_simba_section",
+      "name": "Mechanised section with Simba",
+      "composition": [
+        {
+          "role": "driver",
+          "count": 1
+        },
+        {
+          "role": "gunner",
+          "count": 1
+        },
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "simba"
+    },
+    {
+      "id": "phl_marine_squad",
+      "name": "Philippine Marine squad",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "team_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    }
+  ],
+  "support_assets": [
+    "105/155 mm fire missions",
+    "S-70i lift and casevac",
+    "A-29 Super Tucano and T129 ATAK CAS (air force)",
+    "ScanEagle ISR drones",
+    "US-supplied ISR (allied, off-map)"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 20,
+        "unlocks": [
+          "5.56 ammunition",
+          "grenades, smoke",
+          "medical kits"
+        ]
+      },
+      {
+        "rep": 45,
+        "unlocks": [
+          "R4A3 rifle",
+          "K3 LMG",
+          "PHILARPAT uniforms"
+        ]
+      },
+      {
+        "rep": 70,
+        "unlocks": [
+          "RPG-7 (PG-7V, OG-7V)",
+          "S-70i lift hire"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "counter_terror_raid (isis affiliates on southern islands)",
+      "hostage_rescue (kidnap-for-ransom groups)",
+      "resupply_outpost (south_china_sea)",
+      "maritime_security_boarding",
+      "reconnaissance",
+      "disaster_relief_security"
+    ],
+    "as_target": []
+  },
+  "notes": "Friendly early-tier client (proposal) supporting the Captain's early-game counter-terror loop: the southern islands of the south_china_sea theatre can host fictional Mindanao-inspired jungle towns with ISIS-affiliated cells (real-world: Dawlah Islamiyah and Abu Sayyaf remnants, mapped to faction 'isis'). Later the same theatre escalates to grey-zone confrontation with Chinese maritime forces (water cannon, ramming; real 2023-25 incidents at Second Thomas Shoal and Scarborough Shoal).",
+  "proposed": [
+    "doctrine.ai_tuning",
+    "relations.player",
+    "campaign_tier",
+    "alignment_to_player",
+    "player_client",
+    "player_trade",
+    "contract_types",
+    "unit_templates (game squads use 8 men in battle-buddy pairs)",
+    "player_trade.sellable",
+    "player_trade.rep_tiers",
+    "theatres (Mindanao-inspired islands inside south_china_sea)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Philippine_Army",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Philippine_Army",
+    "https://en.wikipedia.org/wiki/Battle_of_Marawi",
+    "https://en.wikipedia.org/wiki/Second_Thomas_Shoal",
+    "https://gbp.com.sg/stories/philippine-army-modernisation-on-display/",
+    "https://gbp.com.sg/stories/first-two-sabrah-light-tanks-arrived-in-the-philippines/"
+  ]
+}

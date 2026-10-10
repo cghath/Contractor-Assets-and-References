@@ -1,0 +1,431 @@
+{
+  "id": "kor",
+  "name": "Republic of Korea",
+  "short": "ROK",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#FFFFFF",
+    "#CD2E3A",
+    "#0047A0",
+    "#000000"
+  ],
+  "blocs": [],
+  "campaign_tier": "mid",
+  "alignment_to_player": "friendly",
+  "player_client": true,
+  "relations": {
+    "player": 25,
+    "usa": 85,
+    "jpn": 45,
+    "aus": 60,
+    "pol": 70,
+    "can": 55,
+    "gbr": 55,
+    "phl": 50,
+    "ind": 45,
+    "vnm": 45,
+    "est": 45,
+    "nor": 45,
+    "fin": 45,
+    "rou": 45,
+    "ukr": 45,
+    "twn": 20,
+    "prk": -90,
+    "chn": -20,
+    "rus": -40,
+    "isis": -85,
+    "al_qaeda": -85,
+    "al_shabaab": -60,
+    "houthis": -40
+  },
+  "theatres": [
+    "korean_dmz",
+    "persian_gulf_coast",
+    "horn_of_africa",
+    "lebanon_south"
+  ],
+  "languages": [
+    "Korean"
+  ],
+  "callout_language": "Korean (ROK Army voice procedure)",
+  "doctrine": {
+    "summary": "Large conscript army (18-month service) backed by a world-class defence industry, focused on deterring and fighting the KPA along the DMZ: massed K9 artillery and K239 rockets, mechanised corps with K2/K1A2 tanks and K21 IFVs, the 'Army TIGER' wheeled-mechanised brigades and strong ROK Marine Corps. Overseas: Cheonghae anti-piracy unit, UNIFIL (Dongmyeong unit, Lebanon) and Akh unit (UAE).",
+    "squad_size": 9,
+    "fireteam": "Rifle squad of 9-10 split into two fireteams with K15 LMG and K201 grenadiers. Game: 8 in four pairs.",
+    "tactics": [
+      "Counter-infiltration sweeps and DMZ guard-post defence",
+      "Massed counter-battery fire with K9 and K239",
+      "Mechanised combined arms with K2, K21 and K808 Army TIGER units",
+      "Marine Corps amphibious landings with KAAV7 and Surion/Marineon helicopters",
+      "Drone and counter-drone units (Drone Operations Command since 2023)"
+    ],
+    "ai_tuning": {
+      "aggression": 0.55,
+      "discipline": 0.85,
+      "suppression_resistance": 0.7,
+      "flanking": 0.65,
+      "grenade_use": 0.65,
+      "medical_care": 0.8,
+      "night_capability": 0.8,
+      "marksmanship": 0.75,
+      "morale": 0.75
+    }
+  },
+  "camo": [
+    {
+      "name": "ROK Army 'Granite B' digital",
+      "palette": [
+        "#585E43",
+        "#6E6E52",
+        "#3B3F2F",
+        "#262820",
+        "#8C8A70"
+      ],
+      "use": "Standard ROK Army uniform since 2014"
+    },
+    {
+      "name": "ROK Marine Corps digital frog",
+      "palette": [
+        "#4E5F3E",
+        "#7C7B52",
+        "#33402C",
+        "#A39C77"
+      ],
+      "use": "ROK Marine Corps"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "Daewoo K2 / K2C1 (5.56x45mm)"
+    ],
+    "autorifleman": [
+      "K15 LMG (5.56x45mm)",
+      "K3 (5.56x45mm, older)",
+      "K12 GPMG (7.62x51mm)"
+    ],
+    "marksman": [
+      "K14 / DMR (7.62x51mm)"
+    ],
+    "grenadier": [
+      "K2 with K201 40 mm underbarrel launcher"
+    ],
+    "at": [
+      "Panzerfaust 3 (licence by Poongsan)",
+      "Hyungung (Raybolt) ATGM",
+      "PZF 3-IT600"
+    ],
+    "medic": [
+      "Daewoo K1A (5.56x45mm)"
+    ],
+    "squad_leader": [
+      "K2C1 (5.56x45mm)"
+    ],
+    "sniper": [
+      "K14 (7.62x51mm)"
+    ],
+    "sidearm": [
+      "Daewoo K5 (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "Panzerfaust 3 [not_in_game]",
+    "Hyungung (Raybolt) ATGM [not_in_game, Javelin-equivalent]",
+    "AT4 (in some ROK special-forces inventories) [in_game, unverified]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "ceramic",
+    "notes": "New integrated combat helmet (medium); multipurpose bulletproof vest with front/back plates (medium)."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "k2_black_panther",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "K2 (~260 + more on order)."
+    },
+    {
+      "vehicle_id": "k9",
+      "role": "artillery",
+      "prevalence": "signature",
+      "notes": "K9/K9A1 Thunder (~1,240)."
+    },
+    {
+      "vehicle_id": "k21",
+      "role": "ifv",
+      "prevalence": "signature",
+      "notes": "K21 tracked IFV (~466+)."
+    },
+    {
+      "vehicle_id": "k1",
+      "role": "mbt",
+      "prevalence": "common",
+      "notes": "K1/K1E2 and K1A2 (~1,500 combined)."
+    },
+    {
+      "vehicle_id": "k200",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "K200/K200A1 KIFV (~1,700) and many variants."
+    },
+    {
+      "vehicle_id": "k808",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "K806/K808 White Tiger wheeled APCs (Army TIGER brigades)."
+    },
+    {
+      "vehicle_id": "kltv",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Kia KLTV replacing K131 jeeps."
+    },
+    {
+      "vehicle_id": "k239",
+      "role": "mlrs",
+      "prevalence": "common",
+      "notes": "K239 Chunmoo MLRS."
+    },
+    {
+      "vehicle_id": "aav7",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "KAAV7A1 with ROK Marine Corps."
+    },
+    {
+      "vehicle_id": "ah64",
+      "role": "attack_heli",
+      "prevalence": "uncommon",
+      "notes": "AH-64E (~36 army; more on order)."
+    },
+    {
+      "vehicle_id": "surion",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": "KUH-1 Surion (~218)."
+    },
+    {
+      "vehicle_id": "uh60",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": "UH-60P (~200)."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "kor_rifle_squad",
+      "name": "ROK rifle squad (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "team_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "kor_k21_squad",
+      "name": "Mechanised squad with K21",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "k21"
+    },
+    {
+      "id": "kor_marine_squad",
+      "name": "ROK Marine squad with KAAV7",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "team_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "aav7"
+    },
+    {
+      "id": "kor_tiger_squad",
+      "name": "Army TIGER squad with K808",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "drone_operator",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "k808"
+    }
+  ],
+  "support_assets": [
+    "K9 155 mm fire missions",
+    "K239 Chunmoo rockets",
+    "AH-64E / AH-1S / MD 500 CAS",
+    "UH-60P / Surion lift",
+    "Recon and attack drones (Drone Operations Command)",
+    "Counter-battery radar"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 20,
+        "unlocks": [
+          "5.56/7.62 ammunition",
+          "grenades, smoke, flashbangs",
+          "medical kits"
+        ]
+      },
+      {
+        "rep": 40,
+        "unlocks": [
+          "K2C1 rifle",
+          "K15 LMG",
+          "Granite B uniforms",
+          "medium helmet"
+        ]
+      },
+      {
+        "rep": 60,
+        "unlocks": [
+          "plate carriers",
+          "KLTV purchase",
+          "K14 sniper rifle"
+        ]
+      },
+      {
+        "rep": 80,
+        "unlocks": [
+          "K808 purchase",
+          "K9 fire support hire",
+          "Surion lift hire"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "maritime_security_escort (Cheonghae unit, Gulf of Aden / Strait of Hormuz)",
+      "noncombatant_evacuation",
+      "counter_infiltration_sweep",
+      "hostage_rescue",
+      "reconnaissance",
+      "protect_infrastructure (overseas construction sites)"
+    ],
+    "as_target": []
+  },
+  "notes": "Friendly mid-tier state and one of the largest arms exporters (K2, K9, K239 to Poland, Norway, Finland, Estonia, Romania, Australia, India, Vietnam). Proposal: ROK is a major gear vendor to the player (alternative to US/GB/CA). Political crisis after the December 2024 martial-law declaration; President Lee Jae-myung elected June 2025.",
+  "proposed": [
+    "doctrine.ai_tuning",
+    "relations.player",
+    "campaign_tier",
+    "alignment_to_player",
+    "player_client",
+    "player_trade",
+    "contract_types",
+    "unit_templates (game squads use 8 men in battle-buddy pairs)",
+    "player_trade.sellable",
+    "player_trade.rep_tiers",
+    "launchers (AT4 entry unverified)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Republic_of_Korea_Army",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Republic_of_Korea_Army",
+    "https://en.wikipedia.org/wiki/K2_Black_Panther",
+    "https://en.wikipedia.org/wiki/K21",
+    "https://en.wikipedia.org/wiki/K9_Thunder",
+    "https://en.wikipedia.org/wiki/Daewoo_Precision_Industries_K2",
+    "https://en.wikipedia.org/wiki/Granite_B",
+    "https://www.janes.com/defence-news/hyundai-rotem-to-build-third-batch-of-k806-and-k808-combat-vehicles-for-roka"
+  ]
+}

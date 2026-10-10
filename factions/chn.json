@@ -1,0 +1,423 @@
+{
+  "id": "chn",
+  "name": "People's Republic of China",
+  "short": "PRC",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#EE1C25",
+    "#FFFF00"
+  ],
+  "blocs": [
+    "sco",
+    "brics"
+  ],
+  "campaign_tier": "late",
+  "alignment_to_player": "hostile",
+  "player_client": false,
+  "relations": {
+    "player": -40,
+    "rus": 70,
+    "prk": 55,
+    "pak": 85,
+    "irn": 55,
+    "blr": 50,
+    "kaz": 45,
+    "srb": 40,
+    "vnm": -5,
+    "usa": -65,
+    "jpn": -55,
+    "twn": -95,
+    "phl": -65,
+    "ind": -40,
+    "kor": -20,
+    "aus": -30,
+    "gbr": -40,
+    "can": -40,
+    "isis_k": -90,
+    "al_qaeda": -80,
+    "isis": -80,
+    "afg_taliban": 20,
+    "sau": 40,
+    "are": 40,
+    "egy": 35
+  },
+  "theatres": [
+    "taiwan_strait",
+    "south_china_sea",
+    "korean_dmz",
+    "kashmir_loc",
+    "afghan_highlands",
+    "horn_of_africa"
+  ],
+  "languages": [
+    "Mandarin Chinese"
+  ],
+  "callout_language": "Mandarin Chinese (PLA voice procedure)",
+  "doctrine": {
+    "summary": "The PLA Ground Force is organised into combined-arms brigades (heavy, medium, light, amphibious, air assault) under five theatre commands, built around 'informatised' joint operations, massed precision rocket fires and heavy use of drones and electronic warfare. Training emphasis since 2015 is realistic opposed exercises, amphibious landings across the Taiwan Strait and high-altitude warfare on the Indian border. No large-scale combat since 1979; the 2020 Galwan clash was fought without firearms.",
+    "squad_size": 10,
+    "fireteam": "Rifle squad of ~10 (squad leader, deputy, LMG team, grenadier/PF-98 team, riflemen, DMR) in combined-arms brigades; game squads condensed to 8 in four battle-buddy pairs.",
+    "tactics": [
+      "Drill-perfect mounted assault: IFVs close under artillery and rocket fire, infantry dismounts late",
+      "Massed precision fires from PHL-16/PCL-181 cued by drones before contact",
+      "Heavy electronic warfare: jamming of radios and drone links is a constant map modifier",
+      "Amphibious assault with ZBD-05 waves and Z-20/Z-10 air assault on coastal maps",
+      "Mountain/high-altitude warfare with ZTQ-15 light tanks and Mengshi patrols",
+      "Small-drone swarms and quadcopters for reconnaissance and grenade drops"
+    ],
+    "ai_tuning": {
+      "aggression": 0.55,
+      "discipline": 0.85,
+      "suppression_resistance": 0.6,
+      "flanking": 0.55,
+      "grenade_use": 0.6,
+      "medical_care": 0.65,
+      "night_capability": 0.75,
+      "marksmanship": 0.65,
+      "morale": 0.65
+    }
+  },
+  "camo": [
+    {
+      "name": "Type 07 universal/woodland digital",
+      "palette": [
+        "#59613F",
+        "#7C7B56",
+        "#3A3F2B",
+        "#2A2B20",
+        "#9C9877"
+      ],
+      "use": "Most common field uniform since 2007; regional desert, urban and ocean variants"
+    },
+    {
+      "name": "Xingkong (Star Sky) Type 19/21",
+      "palette": [
+        "#6B6F4E",
+        "#8F8A66",
+        "#3E4230",
+        "#A9A585",
+        "#55573D"
+      ],
+      "use": "Newer multi-colour pattern on the Type 19 combat uniform and Type 21 field uniform, spreading through 2020s"
+    },
+    {
+      "name": "Type 07 ocean digital (PLA Navy Marines)",
+      "palette": [
+        "#3E5468",
+        "#6C7E8C",
+        "#2A3440",
+        "#9AA6AE"
+      ],
+      "use": "PLA Marine Corps; amphibious maps"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "QBZ-191 (5.8x42mm)",
+      "QBZ-95-1 (5.8x42mm, being replaced)"
+    ],
+    "autorifleman": [
+      "QJB-201 LMG (5.8x42mm)",
+      "QJY-201 GPMG (7.62x51mm-class Chinese 7.62)"
+    ],
+    "marksman": [
+      "QBU-191 DMR (5.8x42mm)",
+      "QBU-88 (5.8x42mm)"
+    ],
+    "grenadier": [
+      "QBZ-191 with 35 mm underbarrel launcher",
+      "QLU-11 35 mm grenade-sniper rifle"
+    ],
+    "at": [
+      "PF-98 120 mm (squad/company)",
+      "HJ-12 ATGM",
+      "PF-89 80 mm disposable"
+    ],
+    "medic": [
+      "QBZ-191 carbine (5.8x42mm)"
+    ],
+    "squad_leader": [
+      "QBZ-191 (5.8x42mm)"
+    ],
+    "sniper": [
+      "CS/LR4 (7.62x51mm)",
+      "QBU-10 anti-materiel (12.7x108mm)"
+    ],
+    "sidearm": [
+      "QSZ-92 / QSZ-193 (9x19mm / 5.8x21mm)"
+    ]
+  },
+  "launchers": [
+    "PF-98 120 mm [not_in_game]",
+    "PF-89 80 mm [not_in_game]",
+    "HJ-12 ATGM [not_in_game, Javelin-equivalent fire-and-forget]",
+    "PF-97 thermobaric [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "ceramic",
+    "notes": "QGF-11/QGF-03 aramid helmets (medium). Type 19 plate carrier with front/back ceramic plates is standard in modernised brigades = medium; reserve/border units may lack plates (light)."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "type99a",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "ZTZ-99A, ~770 in heavy combined-arms brigades; the PLA's premier tank."
+    },
+    {
+      "vehicle_id": "zbd04a",
+      "role": "ifv",
+      "prevalence": "signature",
+      "notes": "ZBD-04A tracked IFV (~2,000), backbone of heavy brigades."
+    },
+    {
+      "vehicle_id": "zbl08",
+      "role": "ifv",
+      "prevalence": "common",
+      "notes": "ZBL-08 8x8 (~3,250) and its ZTL-11 105 mm assault-gun variant in medium brigades."
+    },
+    {
+      "vehicle_id": "ztq15",
+      "role": "mbt",
+      "prevalence": "common",
+      "notes": "ZTQ-15 light tank (~1,000), Tibet/Xinjiang high-altitude and southern brigades."
+    },
+    {
+      "vehicle_id": "csk131",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Dongfeng Mengshi CSK-131 / CSK-181 protected 4x4, everywhere."
+    },
+    {
+      "vehicle_id": "zbd05",
+      "role": "ifv",
+      "prevalence": "common",
+      "notes": "ZBD-05 amphibious IFV (~750) in amphibious combined-arms brigades and the Marine Corps."
+    },
+    {
+      "vehicle_id": "type96",
+      "role": "mbt",
+      "prevalence": "common",
+      "notes": "Type 96A (~1,500), numerous in second-line brigades."
+    },
+    {
+      "vehicle_id": "pcl181",
+      "role": "artillery",
+      "prevalence": "common",
+      "notes": "PCL-181 155 mm truck howitzer (~630)."
+    },
+    {
+      "vehicle_id": "phl16",
+      "role": "mlrs",
+      "prevalence": "uncommon",
+      "notes": "PHL-16 modular 300/370 mm long-range rocket system (120+). Off-map fires."
+    },
+    {
+      "vehicle_id": "z10",
+      "role": "attack_heli",
+      "prevalence": "uncommon",
+      "notes": "Z-10 attack helicopter, army aviation brigades."
+    },
+    {
+      "vehicle_id": "z20",
+      "role": "transport_heli",
+      "prevalence": "uncommon",
+      "notes": "Z-20 utility helicopter replacing Mi-17s in air-assault brigades."
+    },
+    {
+      "vehicle_id": "mi8",
+      "role": "transport_heli",
+      "prevalence": "uncommon",
+      "notes": "Mi-171E/Mi-17 still widespread in Western/Tibet theatre."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "chn_rifle_squad",
+      "name": "PLA rifle squad (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "chn_mech_squad",
+      "name": "Mechanised squad with ZBD-04A",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "zbd04a"
+    },
+    {
+      "id": "chn_amphib_squad",
+      "name": "Amphibious assault squad with ZBD-05",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "zbd05"
+    },
+    {
+      "id": "chn_mengshi_recce",
+      "name": "Mengshi reconnaissance team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "driver",
+          "count": 1
+        },
+        {
+          "role": "gunner",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "drone_operator",
+          "count": 1
+        },
+        {
+          "role": "radio_operator",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "csk131"
+    }
+  ],
+  "support_assets": [
+    "PHL-16 / PHL-03 long-range rocket strikes (off-map)",
+    "PCL-181 / PLZ-05 155 mm fire missions",
+    "Z-10 attack helicopter CAS",
+    "ISR drones and small quadcopter swarms",
+    "Radio and GNSS jamming, drone-link jamming (EW zone modifier)",
+    "Loitering munitions",
+    "Air-assault insertion by Z-20"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [],
+    "as_target": [
+      "sabotage_of_forward_radar_or_missile_site (allied client)",
+      "rescue_downed_aircrew (allied client)",
+      "intel_theft",
+      "maritime_militia_interdiction (south_china_sea)",
+      "escort_convoy_through_contested_zone"
+    ]
+  },
+  "notes": "Hostile late-campaign state actor (proposal). Chinese gear is also the export kit of several enemy factions (Pakistan-linked groups, African and Middle East forces). Direct PLA combat should stay a late-game, high-stakes theatre (taiwan_strait, south_china_sea); earlier encounters are proxies and Chinese export equipment. PLA has fought no war since 1979; avoid portraying unverified atrocities or capabilities beyond public sources.",
+  "proposed": [
+    "doctrine.ai_tuning",
+    "relations.player",
+    "campaign_tier",
+    "alignment_to_player",
+    "player_client",
+    "player_trade",
+    "contract_types",
+    "unit_templates (game squads use 8 men in battle-buddy pairs)",
+    "player_trade.sellable",
+    "theatres (korean_dmz, horn_of_africa as limited presence: Djibouti base)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/People%27s_Liberation_Army_Ground_Force",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_People%27s_Liberation_Army_Ground_Force",
+    "https://en.wikipedia.org/wiki/Type_99_tank",
+    "https://en.wikipedia.org/wiki/Type_15_tank",
+    "https://en.wikipedia.org/wiki/ZBD-04",
+    "https://en.wikipedia.org/wiki/ZBL-08",
+    "https://en.wikipedia.org/wiki/ZBD-05",
+    "https://en.wikipedia.org/wiki/QBZ-191",
+    "https://en.wikipedia.org/wiki/Type_07_camouflage_pattern",
+    "https://www.janes.com/defence-intelligence-insights/defence-news/pla-continues-modernising-land-equipment-in-xinjiang-military-command"
+  ]
+}
