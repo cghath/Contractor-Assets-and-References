@@ -111,7 +111,9 @@ Captain asked to use subagents, to enable CI, and to give the worldspaces and th
    - a full relations matrix over every faction id, including `player`
 
    It then reconciles each faction file's `relations` and `blocs` fields to the matrix, only after all the blocs are finished.
-4. **CI:** `tools/validate_pack.py` is done. It checks that the JSON parses, that ids, theatres and vehicle refs are canonical, and that terrorist factions never hire the player. Missing files are reported as warnings while the pack is incomplete. Still to do: `.github/workflows/ci.yml`, with a `data` job that runs the validator and a `godot` job that downloads the Voxel Tools 4.7.2 editor, imports the project, parse-checks the GDScript and renders `uh60` under xvfb + opengl3 as an artifact. Pushing a workflow file needs a token with the `workflow` scope.
+4. **CI: done.** `.github/workflows/ci.yml` runs on pull requests and on pushes to main. It has two jobs. The `data` job runs `tools/validate_pack.py`. The `godot` job downloads the Voxel Tools 4.7.2 editor, imports the project, parse-checks every `.gd` file and renders `uh60` under xvfb + opengl3. The render is uploaded as the `uh60-render` artifact. Its first run on PR #2 passed.
+
+Resume attempt on Captain's desktop (09:08-09:15 UTC): items 1-3 were started as five parallel agents. Captain paused them again before they wrote any files, so they still need a full run. Captain's local clone also holds an older template-script completion of the pack. It is kept on the local-only branch `local-completion-backup`, which has not been pushed.
 
 ## How to resume if the run is interrupted
 
