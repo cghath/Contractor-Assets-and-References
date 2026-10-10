@@ -325,7 +325,11 @@
       "game_launcher": "RPG-7",
       "game_substitute": null,
       "game_item_id": null,
-      "rounds": [{"name": "PG-7V", "type": "HEAT", "count": 2}, {"name": "OG-7V", "type": "frag", "count": 1}]
+      "proposed_game_item_id": "rpg7",
+      "rounds": [
+       {"name": "PG-7V", "type": "HEAT", "count": 2, "proposed_game_item_id": "pg7v"},
+       {"name": "OG-7V", "type": "frag", "count": 1, "proposed_game_item_id": "og7v"}
+      ]
      },
      "grenades": [
       {
@@ -775,7 +779,9 @@
        "name": "Aircrew flight helmet (HGU-56/P / ZSh-7 class, non-ballistic)",
        "tier": "none",
        "game_rating": null,
-       "game_item_id": null
+       "game_item_id": null,
+       "cosmetic": true,
+       "proposed_game_id": "helmet_flight"
       }
      },
      "medical": {

@@ -180,7 +180,11 @@
       "game_launcher": "RPG-7",
       "game_substitute": null,
       "game_item_id": null,
-      "rounds": [{"name": "PG-7V", "type": "HEAT", "count": 2}, {"name": "OG-7V", "type": "frag", "count": 1}],
+      "proposed_game_item_id": "rpg7",
+      "rounds": [
+       {"name": "PG-7V", "type": "HEAT", "count": 2, "proposed_game_item_id": "pg7v"},
+       {"name": "OG-7V", "type": "frag", "count": 1, "proposed_game_item_id": "og7v"}
+      ],
       "alternates": ["rpg29"]
      },
      "grenades": [],
@@ -266,6 +270,7 @@
        "id": "mag_556",
        "round": "5.56x45mm SS109 / M855 (NATO ball)",
        "game_round_id": "556_m855",
+       "proposed_round_id": "556_ss109",
        "rounds_per_mag": 30,
        "count": 5,
        "game_item_id": "mag_556"
@@ -363,7 +368,15 @@
       "vest": {"id": "soft_vest", "name": "Soft armour vest (aramid, NIJ IIIA class)", "tier": "light", "game_item_id": "plate_carrier_light"},
       "plates": null,
       "side_plates": null,
-      "helmet": {"id": "tsh_tanker", "name": "TSh-series padded tanker helmet (non-ballistic)", "tier": "none", "game_rating": null, "game_item_id": null}
+      "helmet": {
+       "id": "tsh_tanker",
+       "name": "TSh-series padded tanker helmet (non-ballistic)",
+       "tier": "none",
+       "game_rating": null,
+       "game_item_id": null,
+       "cosmetic": true,
+       "proposed_game_id": "helmet_tanker"
+      }
      },
      "medical": {
       "container": "ifak",
@@ -430,7 +443,7 @@
    "id": "elite",
    "name": "Radwan Force",
    "camo": "Radwan multicam-type / olive",
-   "armor_tier": "medium",
+   "armor_tier": "light",
    "medical_level": "standard",
    "roles": {
     "rifleman": {
@@ -458,25 +471,21 @@
       {"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}
      ],
      "armor": {
-      "vest": {"id": "commercial_pc", "name": "Commercial plate carrier (Condor / Crye-pattern copy)", "tier": "medium", "game_item_id": "plate_carrier"},
+      "vest": {"id": "soft_vest", "name": "Soft armour vest (aramid, NIJ IIIA class)", "tier": "light", "game_item_id": "plate_carrier_light"},
       "plates": {
-       "id": "steel_nat",
-       "name": "Steel plates, national manufacture (NIJ III / III+ class)",
+       "id": "steel_light",
+       "name": "Light steel plate, front only (improvised, captured or commercial)",
        "material": "steel",
-       "real_rating": "NIJ III to III+ class",
+       "real_rating": "NIJ III or below",
        "front": true,
-       "back": true,
-       "game_rating": "III++",
-       "game_item_id": "plate_steel_l3"
+       "back": false,
+       "game_rating": "III",
+       "game_item_id": null,
+       "game_substitute": "plate_pe_l3",
+       "proposed_game_id": "plate_steel_light"
       },
       "side_plates": null,
-      "helmet": {
-       "id": "commercial_helmet",
-       "name": "Commercial ballistic helmet (FAST / MICH copy)",
-       "tier": "medium",
-       "game_rating": "IIIA",
-       "game_item_id": "helmet"
-      }
+      "helmet": null
      },
      "medical": {
       "container": "ifak",
@@ -489,9 +498,8 @@
      },
      "other": [{"id": "nvg_mono", "count": 1, "game_item_id": null}],
      "game_kit": [
-      ["plate_carrier", 1],
-      ["plate_steel_l3", 2],
-      ["helmet", 1],
+      ["plate_carrier_light", 1],
+      ["plate_pe_l3", 1],
       ["m4a1", 1],
       ["mag_556", 5],
       ["frag_grenade", 2],
@@ -526,25 +534,21 @@
       {"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}
      ],
      "armor": {
-      "vest": {"id": "commercial_pc", "name": "Commercial plate carrier (Condor / Crye-pattern copy)", "tier": "medium", "game_item_id": "plate_carrier"},
+      "vest": {"id": "soft_vest", "name": "Soft armour vest (aramid, NIJ IIIA class)", "tier": "light", "game_item_id": "plate_carrier_light"},
       "plates": {
-       "id": "steel_nat",
-       "name": "Steel plates, national manufacture (NIJ III / III+ class)",
+       "id": "steel_light",
+       "name": "Light steel plate, front only (improvised, captured or commercial)",
        "material": "steel",
-       "real_rating": "NIJ III to III+ class",
+       "real_rating": "NIJ III or below",
        "front": true,
-       "back": true,
-       "game_rating": "III++",
-       "game_item_id": "plate_steel_l3"
+       "back": false,
+       "game_rating": "III",
+       "game_item_id": null,
+       "game_substitute": "plate_pe_l3",
+       "proposed_game_id": "plate_steel_light"
       },
       "side_plates": null,
-      "helmet": {
-       "id": "commercial_helmet",
-       "name": "Commercial ballistic helmet (FAST / MICH copy)",
-       "tier": "medium",
-       "game_rating": "IIIA",
-       "game_item_id": "helmet"
-      }
+      "helmet": null
      },
      "medical": {
       "container": "ifak",
@@ -557,9 +561,8 @@
      },
      "other": [{"id": "nvg_mono", "count": 1, "game_item_id": null}],
      "game_kit": [
-      ["plate_carrier", 1],
-      ["plate_steel_l3", 2],
-      ["helmet", 1],
+      ["plate_carrier_light", 1],
+      ["plate_pe_l3", 1],
       ["m4a1", 1],
       ["mag_556", 7],
       ["frag_grenade", 2],
@@ -591,25 +594,21 @@
      "launcher": null,
      "grenades": [],
      "armor": {
-      "vest": {"id": "commercial_pc", "name": "Commercial plate carrier (Condor / Crye-pattern copy)", "tier": "medium", "game_item_id": "plate_carrier"},
+      "vest": {"id": "soft_vest", "name": "Soft armour vest (aramid, NIJ IIIA class)", "tier": "light", "game_item_id": "plate_carrier_light"},
       "plates": {
-       "id": "steel_nat",
-       "name": "Steel plates, national manufacture (NIJ III / III+ class)",
+       "id": "steel_light",
+       "name": "Light steel plate, front only (improvised, captured or commercial)",
        "material": "steel",
-       "real_rating": "NIJ III to III+ class",
+       "real_rating": "NIJ III or below",
        "front": true,
-       "back": true,
-       "game_rating": "III++",
-       "game_item_id": "plate_steel_l3"
+       "back": false,
+       "game_rating": "III",
+       "game_item_id": null,
+       "game_substitute": "plate_pe_l3",
+       "proposed_game_id": "plate_steel_light"
       },
       "side_plates": null,
-      "helmet": {
-       "id": "commercial_helmet",
-       "name": "Commercial ballistic helmet (FAST / MICH copy)",
-       "tier": "medium",
-       "game_rating": "IIIA",
-       "game_item_id": "helmet"
-      }
+      "helmet": null
      },
      "medical": {
       "container": "ifak",
@@ -622,9 +621,8 @@
      },
      "other": [{"id": "nvg_mono", "count": 1, "game_item_id": null}],
      "game_kit": [
-      ["plate_carrier", 1],
-      ["plate_steel_l3", 2],
-      ["helmet", 1],
+      ["plate_carrier_light", 1],
+      ["plate_pe_l3", 1],
       ["m110", 1],
       ["mag_762", 2],
       ["ifak", 1],
@@ -663,25 +661,21 @@
      "launcher": null,
      "grenades": [{"id": "f1", "name": "F-1 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}],
      "armor": {
-      "vest": {"id": "commercial_pc", "name": "Commercial plate carrier (Condor / Crye-pattern copy)", "tier": "medium", "game_item_id": "plate_carrier"},
+      "vest": {"id": "soft_vest", "name": "Soft armour vest (aramid, NIJ IIIA class)", "tier": "light", "game_item_id": "plate_carrier_light"},
       "plates": {
-       "id": "steel_nat",
-       "name": "Steel plates, national manufacture (NIJ III / III+ class)",
+       "id": "steel_light",
+       "name": "Light steel plate, front only (improvised, captured or commercial)",
        "material": "steel",
-       "real_rating": "NIJ III to III+ class",
+       "real_rating": "NIJ III or below",
        "front": true,
-       "back": true,
-       "game_rating": "III++",
-       "game_item_id": "plate_steel_l3"
+       "back": false,
+       "game_rating": "III",
+       "game_item_id": null,
+       "game_substitute": "plate_pe_l3",
+       "proposed_game_id": "plate_steel_light"
       },
       "side_plates": null,
-      "helmet": {
-       "id": "commercial_helmet",
-       "name": "Commercial ballistic helmet (FAST / MICH copy)",
-       "tier": "medium",
-       "game_rating": "IIIA",
-       "game_item_id": "helmet"
-      }
+      "helmet": null
      },
      "medical": {
       "container": "ifak",
@@ -694,9 +688,8 @@
      },
      "other": [{"id": "nvg_mono", "count": 1, "game_item_id": null}],
      "game_kit": [
-      ["plate_carrier", 1],
-      ["plate_steel_l3", 2],
-      ["helmet", 1],
+      ["plate_carrier_light", 1],
+      ["plate_pe_l3", 1],
       ["m4a1", 1],
       ["mag_556", 5],
       ["frag_grenade", 1],
@@ -733,30 +726,30 @@
       "game_launcher": "RPG-7",
       "game_substitute": null,
       "game_item_id": null,
-      "rounds": [{"name": "PG-7V", "type": "HEAT", "count": 2}, {"name": "OG-7V", "type": "frag", "count": 1}],
+      "proposed_game_item_id": "rpg7",
+      "rounds": [
+       {"name": "PG-7V", "type": "HEAT", "count": 2, "proposed_game_item_id": "pg7v"},
+       {"name": "OG-7V", "type": "frag", "count": 1, "proposed_game_item_id": "og7v"}
+      ],
       "alternates": ["rpg29"]
      },
      "grenades": [{"id": "f1", "name": "F-1 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}],
      "armor": {
-      "vest": {"id": "commercial_pc", "name": "Commercial plate carrier (Condor / Crye-pattern copy)", "tier": "medium", "game_item_id": "plate_carrier"},
+      "vest": {"id": "soft_vest", "name": "Soft armour vest (aramid, NIJ IIIA class)", "tier": "light", "game_item_id": "plate_carrier_light"},
       "plates": {
-       "id": "steel_nat",
-       "name": "Steel plates, national manufacture (NIJ III / III+ class)",
+       "id": "steel_light",
+       "name": "Light steel plate, front only (improvised, captured or commercial)",
        "material": "steel",
-       "real_rating": "NIJ III to III+ class",
+       "real_rating": "NIJ III or below",
        "front": true,
-       "back": true,
-       "game_rating": "III++",
-       "game_item_id": "plate_steel_l3"
+       "back": false,
+       "game_rating": "III",
+       "game_item_id": null,
+       "game_substitute": "plate_pe_l3",
+       "proposed_game_id": "plate_steel_light"
       },
       "side_plates": null,
-      "helmet": {
-       "id": "commercial_helmet",
-       "name": "Commercial ballistic helmet (FAST / MICH copy)",
-       "tier": "medium",
-       "game_rating": "IIIA",
-       "game_item_id": "helmet"
-      }
+      "helmet": null
      },
      "medical": {
       "container": "ifak",
@@ -769,9 +762,8 @@
      },
      "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}, {"id": "nvg_mono", "count": 1, "game_item_id": null}],
      "game_kit": [
-      ["plate_carrier", 1],
-      ["plate_steel_l3", 2],
-      ["helmet", 1],
+      ["plate_carrier_light", 1],
+      ["plate_pe_l3", 1],
       ["m4a1", 1],
       ["mag_556", 4],
       ["frag_grenade", 1],
@@ -804,25 +796,21 @@
      "launcher": null,
      "grenades": [],
      "armor": {
-      "vest": {"id": "commercial_pc", "name": "Commercial plate carrier (Condor / Crye-pattern copy)", "tier": "medium", "game_item_id": "plate_carrier"},
+      "vest": {"id": "soft_vest", "name": "Soft armour vest (aramid, NIJ IIIA class)", "tier": "light", "game_item_id": "plate_carrier_light"},
       "plates": {
-       "id": "steel_nat",
-       "name": "Steel plates, national manufacture (NIJ III / III+ class)",
+       "id": "steel_light",
+       "name": "Light steel plate, front only (improvised, captured or commercial)",
        "material": "steel",
-       "real_rating": "NIJ III to III+ class",
+       "real_rating": "NIJ III or below",
        "front": true,
-       "back": true,
-       "game_rating": "III++",
-       "game_item_id": "plate_steel_l3"
+       "back": false,
+       "game_rating": "III",
+       "game_item_id": null,
+       "game_substitute": "plate_pe_l3",
+       "proposed_game_id": "plate_steel_light"
       },
       "side_plates": null,
-      "helmet": {
-       "id": "commercial_helmet",
-       "name": "Commercial ballistic helmet (FAST / MICH copy)",
-       "tier": "medium",
-       "game_rating": "IIIA",
-       "game_item_id": "helmet"
-      }
+      "helmet": null
      },
      "medical": {
       "container": "trauma_kit",
@@ -844,9 +832,8 @@
      },
      "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}, {"id": "nvg_mono", "count": 1, "game_item_id": null}],
      "game_kit": [
-      ["plate_carrier", 1],
-      ["plate_steel_l3", 2],
-      ["helmet", 1],
+      ["plate_carrier_light", 1],
+      ["plate_pe_l3", 1],
       ["m4a1", 1],
       ["mag_556", 4],
       ["trauma_kit", 1],
@@ -872,6 +859,7 @@
        "id": "mag_556",
        "round": "5.56x45mm SS109 / M855 (NATO ball)",
        "game_round_id": "556_m855",
+       "proposed_round_id": "556_ss109",
        "rounds_per_mag": 30,
        "count": 5,
        "game_item_id": "mag_556"
@@ -892,24 +880,26 @@
       {"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}
      ],
      "armor": {
-      "vest": {"id": "commercial_pc", "name": "Commercial plate carrier (Condor / Crye-pattern copy)", "tier": "medium", "game_item_id": "plate_carrier"},
+      "vest": {"id": "soft_vest", "name": "Soft armour vest (aramid, NIJ IIIA class)", "tier": "light", "game_item_id": "plate_carrier_light"},
       "plates": {
-       "id": "steel_nat",
-       "name": "Steel plates, national manufacture (NIJ III / III+ class)",
+       "id": "steel_light",
+       "name": "Light steel plate, front only (improvised, captured or commercial)",
        "material": "steel",
-       "real_rating": "NIJ III to III+ class",
+       "real_rating": "NIJ III or below",
        "front": true,
-       "back": true,
-       "game_rating": "III++",
-       "game_item_id": "plate_steel_l3"
+       "back": false,
+       "game_rating": "III",
+       "game_item_id": null,
+       "game_substitute": "plate_pe_l3",
+       "proposed_game_id": "plate_steel_light"
       },
       "side_plates": null,
       "helmet": {
-       "id": "commercial_helmet",
-       "name": "Commercial ballistic helmet (FAST / MICH copy)",
-       "tier": "medium",
-       "game_rating": "IIIA",
-       "game_item_id": "helmet"
+       "id": "captured_helmet",
+       "name": "Captured military helmet (ACH / PASGT / SSh-68, mixed)",
+       "tier": "light",
+       "game_rating": "IIA",
+       "game_item_id": "helmet_bump"
       }
      },
      "medical": {
@@ -923,9 +913,9 @@
      },
      "other": [{"id": "radio", "count": 1, "game_item_id": null}, {"id": "nvg_mono", "count": 1, "game_item_id": null}],
      "game_kit": [
-      ["plate_carrier", 1],
-      ["plate_steel_l3", 2],
-      ["helmet", 1],
+      ["plate_carrier_light", 1],
+      ["plate_pe_l3", 1],
+      ["helmet_bump", 1],
       ["mk18", 1],
       ["mag_556", 5],
       ["m17", 1],
@@ -960,25 +950,21 @@
      "launcher": null,
      "grenades": [],
      "armor": {
-      "vest": {"id": "commercial_pc", "name": "Commercial plate carrier (Condor / Crye-pattern copy)", "tier": "medium", "game_item_id": "plate_carrier"},
+      "vest": {"id": "soft_vest", "name": "Soft armour vest (aramid, NIJ IIIA class)", "tier": "light", "game_item_id": "plate_carrier_light"},
       "plates": {
-       "id": "steel_nat",
-       "name": "Steel plates, national manufacture (NIJ III / III+ class)",
+       "id": "steel_light",
+       "name": "Light steel plate, front only (improvised, captured or commercial)",
        "material": "steel",
-       "real_rating": "NIJ III to III+ class",
+       "real_rating": "NIJ III or below",
        "front": true,
-       "back": true,
-       "game_rating": "III++",
-       "game_item_id": "plate_steel_l3"
+       "back": false,
+       "game_rating": "III",
+       "game_item_id": null,
+       "game_substitute": "plate_pe_l3",
+       "proposed_game_id": "plate_steel_light"
       },
       "side_plates": null,
-      "helmet": {
-       "id": "commercial_helmet",
-       "name": "Commercial ballistic helmet (FAST / MICH copy)",
-       "tier": "medium",
-       "game_rating": "IIIA",
-       "game_item_id": "helmet"
-      }
+      "helmet": null
      },
      "medical": {
       "container": "ifak",
@@ -991,9 +977,8 @@
      },
      "other": [{"id": "nvg_mono", "count": 1, "game_item_id": null}],
      "game_kit": [
-      ["plate_carrier", 1],
-      ["plate_steel_l3", 2],
-      ["helmet", 1],
+      ["plate_carrier_light", 1],
+      ["plate_pe_l3", 1],
       ["m110", 1],
       ["mag_762", 2],
       ["ifak", 1],
@@ -1024,16 +1009,18 @@
      "launcher": null,
      "grenades": [],
      "armor": {
-      "vest": {"id": "commercial_pc", "name": "Commercial plate carrier (Condor / Crye-pattern copy)", "tier": "medium", "game_item_id": "plate_carrier"},
+      "vest": {"id": "soft_vest", "name": "Soft armour vest (aramid, NIJ IIIA class)", "tier": "light", "game_item_id": "plate_carrier_light"},
       "plates": {
-       "id": "steel_nat",
-       "name": "Steel plates, national manufacture (NIJ III / III+ class)",
+       "id": "steel_light",
+       "name": "Light steel plate, front only (improvised, captured or commercial)",
        "material": "steel",
-       "real_rating": "NIJ III to III+ class",
+       "real_rating": "NIJ III or below",
        "front": true,
-       "back": true,
-       "game_rating": "III++",
-       "game_item_id": "plate_steel_l3"
+       "back": false,
+       "game_rating": "III",
+       "game_item_id": null,
+       "game_substitute": "plate_pe_l3",
+       "proposed_game_id": "plate_steel_light"
       },
       "side_plates": null,
       "helmet": {
@@ -1055,8 +1042,8 @@
      },
      "other": [{"id": "nvg_mono", "count": 1, "game_item_id": null}],
      "game_kit": [
-      ["plate_carrier", 1],
-      ["plate_steel_l3", 2],
+      ["plate_carrier_light", 1],
+      ["plate_pe_l3", 1],
       ["helmet_bump", 1],
       ["mk18", 1],
       ["mag_556", 3],
@@ -1124,8 +1111,8 @@
  ],
  "role_map": {"driver": "crew", "drone_operator": "rifleman", "gunner": "crew", "leader_hvt": "squad_leader"},
  "notes": [
-  "Faction file: regular fighters wear chest rigs and soft vests (light, no plate); Radwan units have plate carriers and helmets (medium).",
-  "Radwan is medium, not the Q9 light-vest default, to stay consistent with the faction file (open question for Captain).",
+  "Faction file: regular fighters wear chest rigs and soft vests (light, no plate).",
+  "Radwan wears the terror-elite kit (light vest with an improvised or captured steel plate, helmets on squad leaders). This differs from the faction file's medium rating by Captain's decision (2026-10-10).",
   "RPG-29 maps to RPG-7."
  ],
  "proposed": [

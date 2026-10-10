@@ -25,6 +25,7 @@
        "id": "mag_556",
        "round": "5.56x45mm SS109 / M855 (NATO ball)",
        "game_round_id": "556_m855",
+       "proposed_round_id": "556_ss109",
        "rounds_per_mag": 30,
        "count": 7,
        "game_item_id": "mag_556"
@@ -92,6 +93,7 @@
        "id": "belt_556_200",
        "round": "5.56x45mm SS109 / M855 (NATO ball)",
        "game_round_id": "556_m855",
+       "proposed_round_id": "556_ss109",
        "rounds_per_mag": 200,
        "count": 3,
        "game_item_id": null
@@ -243,6 +245,7 @@
        "id": "mag_556",
        "round": "5.56x45mm SS109 / M855 (NATO ball)",
        "game_round_id": "556_m855",
+       "proposed_round_id": "556_ss109",
        "rounds_per_mag": 30,
        "count": 7,
        "game_item_id": "mag_556"
@@ -319,6 +322,7 @@
        "id": "mag_556",
        "round": "5.56x45mm SS109 / M855 (NATO ball)",
        "game_round_id": "556_m855",
+       "proposed_round_id": "556_ss109",
        "rounds_per_mag": 30,
        "count": 5,
        "game_item_id": "mag_556"
@@ -333,7 +337,11 @@
       "game_launcher": "RPG-7",
       "game_substitute": null,
       "game_item_id": null,
-      "rounds": [{"name": "PG-7V", "type": "HEAT", "count": 2}, {"name": "OG-7V", "type": "frag", "count": 1}],
+      "proposed_game_item_id": "rpg7",
+      "rounds": [
+       {"name": "PG-7V", "type": "HEAT", "count": 2, "proposed_game_item_id": "pg7v"},
+       {"name": "OG-7V", "type": "frag", "count": 1, "proposed_game_item_id": "og7v"}
+      ],
       "alternates": ["m67rr"]
      },
      "grenades": [
@@ -395,6 +403,7 @@
        "id": "mag_556",
        "round": "5.56x45mm SS109 / M855 (NATO ball)",
        "game_round_id": "556_m855",
+       "proposed_round_id": "556_ss109",
        "rounds_per_mag": 30,
        "count": 6,
        "game_item_id": "mag_556"
@@ -478,6 +487,7 @@
        "id": "mag_556",
        "round": "5.56x45mm SS109 / M855 (NATO ball)",
        "game_round_id": "556_m855",
+       "proposed_round_id": "556_ss109",
        "rounds_per_mag": 30,
        "count": 7,
        "game_item_id": "mag_556"
@@ -647,6 +657,7 @@
        "id": "mag_556",
        "round": "5.56x45mm SS109 / M855 (NATO ball)",
        "game_round_id": "556_m855",
+       "proposed_round_id": "556_ss109",
        "rounds_per_mag": 30,
        "count": 4,
        "game_item_id": "mag_556"
@@ -724,6 +735,7 @@
        "id": "mag_556",
        "round": "5.56x45mm SS109 / M855 (NATO ball)",
        "game_round_id": "556_m855",
+       "proposed_round_id": "556_ss109",
        "rounds_per_mag": 30,
        "count": 4,
        "game_item_id": "mag_556"
@@ -757,7 +769,9 @@
        "name": "Aircrew flight helmet (HGU-56/P / ZSh-7 class, non-ballistic)",
        "tier": "none",
        "game_rating": null,
-       "game_item_id": null
+       "game_item_id": null,
+       "cosmetic": true,
+       "proposed_game_id": "helmet_flight"
       }
      },
      "medical": {

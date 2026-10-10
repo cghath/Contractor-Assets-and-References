@@ -21,7 +21,15 @@
       "game_item_id": null,
       "game_substitute": "m4a1",
       "optic": {"id": "iron", "name": "Iron sights"},
-      "ammo": {"id": "mag_545x39_30", "round": "5.45x39mm 7N6M (steel core)", "game_round_id": null, "rounds_per_mag": 30, "count": 6, "game_item_id": null},
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 30,
+       "count": 6,
+       "game_item_id": null
+      },
       "alternates": ["akm"]
      },
      "secondary": null,
@@ -178,7 +186,15 @@
       "game_item_id": null,
       "game_substitute": "m4a1",
       "optic": {"id": "iron", "name": "Iron sights"},
-      "ammo": {"id": "mag_545x39_30", "round": "5.45x39mm 7N6M (steel core)", "game_round_id": null, "rounds_per_mag": 30, "count": 6, "game_item_id": null},
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 30,
+       "count": 6,
+       "game_item_id": null
+      },
       "underbarrel": {
        "id": "gp25",
        "name": "GP-25 / GP-30",
@@ -231,7 +247,15 @@
       "game_item_id": null,
       "game_substitute": "m4a1",
       "optic": {"id": "iron", "name": "Iron sights"},
-      "ammo": {"id": "mag_545x39_30", "round": "5.45x39mm 7N6M (steel core)", "game_round_id": null, "rounds_per_mag": 30, "count": 4, "game_item_id": null}
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 30,
+       "count": 4,
+       "game_item_id": null
+      }
      },
      "secondary": null,
      "launcher": {
@@ -242,7 +266,11 @@
       "game_launcher": "RPG-7",
       "game_substitute": null,
       "game_item_id": null,
-      "rounds": [{"name": "PG-7V", "type": "HEAT", "count": 2}, {"name": "OG-7V", "type": "frag", "count": 1}],
+      "proposed_game_item_id": "rpg7",
+      "rounds": [
+       {"name": "PG-7V", "type": "HEAT", "count": 2, "proposed_game_item_id": "pg7v"},
+       {"name": "OG-7V", "type": "frag", "count": 1, "proposed_game_item_id": "og7v"}
+      ],
       "alternates": ["rpg26"]
      },
      "grenades": [{"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}],
@@ -287,7 +315,15 @@
       "game_item_id": null,
       "game_substitute": "mk18",
       "optic": {"id": "iron", "name": "Iron sights"},
-      "ammo": {"id": "mag_545x39_30", "round": "5.45x39mm 7N6M (steel core)", "game_round_id": null, "rounds_per_mag": 30, "count": 4, "game_item_id": null}
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 30,
+       "count": 4,
+       "game_item_id": null
+      }
      },
      "secondary": {
       "id": "pm_makarov",
@@ -295,7 +331,15 @@
       "calibre": "9x18mm",
       "game_item_id": null,
       "game_substitute": "m17",
-      "ammo": {"id": "mag_9x18_8", "round": "9x18mm 57-N-181S", "game_round_id": null, "rounds_per_mag": 8, "count": 2, "game_item_id": null}
+      "ammo": {
+       "id": "mag_9x18_8",
+       "round": "9x18mm 57-N-181S",
+       "game_round_id": null,
+       "proposed_round_id": "9x18_57n181s",
+       "rounds_per_mag": 8,
+       "count": 2,
+       "game_item_id": null
+      }
      },
      "launcher": null,
      "grenades": [{"id": "rdg2b", "name": "RDG-2B white smoke", "kind": "smoke_white", "count": 1, "game_item_id": "smoke_grenade"}],
@@ -358,7 +402,15 @@
       "game_item_id": null,
       "game_substitute": "m4a1",
       "optic": {"id": "collimator", "name": "Collimator (Kobra / 1P87 / EKP-8 class)"},
-      "ammo": {"id": "mag_545x39_30", "round": "5.45x39mm 7N6M (steel core)", "game_round_id": null, "rounds_per_mag": 30, "count": 6, "game_item_id": null}
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 30,
+       "count": 6,
+       "game_item_id": null
+      }
      },
      "secondary": {
       "id": "pm_makarov",
@@ -366,7 +418,15 @@
       "calibre": "9x18mm",
       "game_item_id": null,
       "game_substitute": "m17",
-      "ammo": {"id": "mag_9x18_8", "round": "9x18mm 57-N-181S", "game_round_id": null, "rounds_per_mag": 8, "count": 2, "game_item_id": null}
+      "ammo": {
+       "id": "mag_9x18_8",
+       "round": "9x18mm 57-N-181S",
+       "game_round_id": null,
+       "proposed_round_id": "9x18_57n181s",
+       "rounds_per_mag": 8,
+       "count": 2,
+       "game_item_id": null
+      }
      },
      "launcher": null,
      "grenades": [
@@ -438,7 +498,15 @@
       "calibre": "9x18mm",
       "game_item_id": null,
       "game_substitute": "m17",
-      "ammo": {"id": "mag_9x18_8", "round": "9x18mm 57-N-181S", "game_round_id": null, "rounds_per_mag": 8, "count": 2, "game_item_id": null}
+      "ammo": {
+       "id": "mag_9x18_8",
+       "round": "9x18mm 57-N-181S",
+       "game_round_id": null,
+       "proposed_round_id": "9x18_57n181s",
+       "rounds_per_mag": 8,
+       "count": 2,
+       "game_item_id": null
+      }
      },
      "launcher": null,
      "grenades": [{"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}],
@@ -485,7 +553,15 @@
       "game_item_id": null,
       "game_substitute": "mk18",
       "optic": {"id": "iron", "name": "Iron sights"},
-      "ammo": {"id": "mag_545x39_30", "round": "5.45x39mm 7N6M (steel core)", "game_round_id": null, "rounds_per_mag": 30, "count": 3, "game_item_id": null}
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 30,
+       "count": 3,
+       "game_item_id": null
+      }
      },
      "secondary": {
       "id": "pm_makarov",
@@ -493,7 +569,15 @@
       "calibre": "9x18mm",
       "game_item_id": null,
       "game_substitute": "m17",
-      "ammo": {"id": "mag_9x18_8", "round": "9x18mm 57-N-181S", "game_round_id": null, "rounds_per_mag": 8, "count": 2, "game_item_id": null}
+      "ammo": {
+       "id": "mag_9x18_8",
+       "round": "9x18mm 57-N-181S",
+       "game_round_id": null,
+       "proposed_round_id": "9x18_57n181s",
+       "rounds_per_mag": 8,
+       "count": 2,
+       "game_item_id": null
+      }
      },
      "launcher": null,
      "grenades": [],
@@ -510,7 +594,15 @@
        "game_item_id": "plate_steel_l3"
       },
       "side_plates": null,
-      "helmet": {"id": "tsh_tanker", "name": "TSh-series padded tanker helmet (non-ballistic)", "tier": "none", "game_rating": null, "game_item_id": null}
+      "helmet": {
+       "id": "tsh_tanker",
+       "name": "TSh-series padded tanker helmet (non-ballistic)",
+       "tier": "none",
+       "game_rating": null,
+       "game_item_id": null,
+       "cosmetic": true,
+       "proposed_game_id": "helmet_tanker"
+      }
      },
      "medical": {
       "container": "ifak",
@@ -538,7 +630,15 @@
       "game_item_id": null,
       "game_substitute": "mk18",
       "optic": {"id": "iron", "name": "Iron sights"},
-      "ammo": {"id": "mag_545x39_30", "round": "5.45x39mm 7N6M (steel core)", "game_round_id": null, "rounds_per_mag": 30, "count": 3, "game_item_id": null}
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 30,
+       "count": 3,
+       "game_item_id": null
+      }
      },
      "secondary": {
       "id": "pm_makarov",
@@ -546,7 +646,15 @@
       "calibre": "9x18mm",
       "game_item_id": null,
       "game_substitute": "m17",
-      "ammo": {"id": "mag_9x18_8", "round": "9x18mm 57-N-181S", "game_round_id": null, "rounds_per_mag": 8, "count": 2, "game_item_id": null}
+      "ammo": {
+       "id": "mag_9x18_8",
+       "round": "9x18mm 57-N-181S",
+       "game_round_id": null,
+       "proposed_round_id": "9x18_57n181s",
+       "rounds_per_mag": 8,
+       "count": 2,
+       "game_item_id": null
+      }
      },
      "launcher": null,
      "grenades": [],
@@ -559,7 +667,9 @@
        "name": "Aircrew flight helmet (HGU-56/P / ZSh-7 class, non-ballistic)",
        "tier": "none",
        "game_rating": null,
-       "game_item_id": null
+       "game_item_id": null,
+       "cosmetic": true,
+       "proposed_game_id": "helmet_flight"
       }
      },
      "medical": {

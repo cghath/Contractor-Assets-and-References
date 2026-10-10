@@ -21,7 +21,15 @@
       "game_item_id": null,
       "game_substitute": "m4a1",
       "optic": {"id": "chn_optic", "name": "Chinese 3x prism / red dot (QMK-class)"},
-      "ammo": {"id": "mag_58x42_30", "round": "5.8x42mm DBP10", "game_round_id": null, "rounds_per_mag": 30, "count": 6, "game_item_id": null},
+      "ammo": {
+       "id": "mag_58x42_30",
+       "round": "5.8x42mm DBP10",
+       "game_round_id": null,
+       "proposed_round_id": "58x42_dbp10",
+       "rounds_per_mag": 30,
+       "count": 6,
+       "game_item_id": null
+      },
       "alternates": ["qbz95_1"]
      },
      "secondary": null,
@@ -75,7 +83,15 @@
       "game_item_id": null,
       "game_substitute": "m4a1",
       "optic": {"id": "chn_optic", "name": "Chinese 3x prism / red dot (QMK-class)"},
-      "ammo": {"id": "belt_58x42_100", "round": "5.8x42mm DBP10", "game_round_id": null, "rounds_per_mag": 100, "count": 3, "game_item_id": null},
+      "ammo": {
+       "id": "belt_58x42_100",
+       "round": "5.8x42mm DBP10",
+       "game_round_id": null,
+       "proposed_round_id": "58x42_dbp10",
+       "rounds_per_mag": 100,
+       "count": 3,
+       "game_item_id": null
+      },
       "alternates": ["qjy201"]
      },
      "secondary": null,
@@ -129,7 +145,15 @@
       "game_item_id": null,
       "game_substitute": "m110",
       "optic": {"id": "dmr_scope", "name": "3-18x DMR scope"},
-      "ammo": {"id": "mag_58x42_30", "round": "5.8x42mm DBP10", "game_round_id": null, "rounds_per_mag": 30, "count": 6, "game_item_id": null},
+      "ammo": {
+       "id": "mag_58x42_30",
+       "round": "5.8x42mm DBP10",
+       "game_round_id": null,
+       "proposed_round_id": "58x42_dbp10",
+       "rounds_per_mag": 30,
+       "count": 6,
+       "game_item_id": null
+      },
       "alternates": ["qbu88"]
      },
      "secondary": null,
@@ -183,7 +207,15 @@
       "game_item_id": null,
       "game_substitute": "m4a1",
       "optic": {"id": "chn_optic", "name": "Chinese 3x prism / red dot (QMK-class)"},
-      "ammo": {"id": "mag_58x42_30", "round": "5.8x42mm DBP10", "game_round_id": null, "rounds_per_mag": 30, "count": 6, "game_item_id": null},
+      "ammo": {
+       "id": "mag_58x42_30",
+       "round": "5.8x42mm DBP10",
+       "game_round_id": null,
+       "proposed_round_id": "58x42_dbp10",
+       "rounds_per_mag": 30,
+       "count": 6,
+       "game_item_id": null
+      },
       "underbarrel": {
        "id": "qlg10",
        "name": "35 mm underbarrel launcher (QLG-10 class)",
@@ -243,7 +275,15 @@
       "game_item_id": null,
       "game_substitute": "m4a1",
       "optic": {"id": "chn_optic", "name": "Chinese 3x prism / red dot (QMK-class)"},
-      "ammo": {"id": "mag_58x42_30", "round": "5.8x42mm DBP10", "game_round_id": null, "rounds_per_mag": 30, "count": 4, "game_item_id": null}
+      "ammo": {
+       "id": "mag_58x42_30",
+       "round": "5.8x42mm DBP10",
+       "game_round_id": null,
+       "proposed_round_id": "58x42_dbp10",
+       "rounds_per_mag": 30,
+       "count": 4,
+       "game_item_id": null
+      }
      },
      "secondary": null,
      "launcher": {
@@ -306,7 +346,15 @@
       "game_item_id": null,
       "game_substitute": "mk18",
       "optic": {"id": "chn_optic", "name": "Chinese 3x prism / red dot (QMK-class)"},
-      "ammo": {"id": "mag_58x42_30", "round": "5.8x42mm DBP10", "game_round_id": null, "rounds_per_mag": 30, "count": 4, "game_item_id": null}
+      "ammo": {
+       "id": "mag_58x42_30",
+       "round": "5.8x42mm DBP10",
+       "game_round_id": null,
+       "proposed_round_id": "58x42_dbp10",
+       "rounds_per_mag": 30,
+       "count": 4,
+       "game_item_id": null
+      }
      },
      "secondary": {
       "id": "qsz92",
@@ -314,7 +362,15 @@
       "calibre": "9x19mm",
       "game_item_id": null,
       "game_substitute": "m17",
-      "ammo": {"id": "mag_9mm", "round": "9x19mm DAP92-9 (Chinese)", "game_round_id": "9x19_fmj", "rounds_per_mag": 15, "count": 2, "game_item_id": "mag_9mm"}
+      "ammo": {
+       "id": "mag_9mm",
+       "round": "9x19mm DAP92-9 (Chinese)",
+       "game_round_id": "9x19_fmj",
+       "proposed_round_id": "9x19_dap92",
+       "rounds_per_mag": 15,
+       "count": 2,
+       "game_item_id": "mag_9mm"
+      }
      },
      "launcher": null,
      "grenades": [
@@ -388,7 +444,15 @@
       "game_item_id": null,
       "game_substitute": "m4a1",
       "optic": {"id": "chn_optic", "name": "Chinese 3x prism / red dot (QMK-class)"},
-      "ammo": {"id": "mag_58x42_30", "round": "5.8x42mm DBP10", "game_round_id": null, "rounds_per_mag": 30, "count": 6, "game_item_id": null}
+      "ammo": {
+       "id": "mag_58x42_30",
+       "round": "5.8x42mm DBP10",
+       "game_round_id": null,
+       "proposed_round_id": "58x42_dbp10",
+       "rounds_per_mag": 30,
+       "count": 6,
+       "game_item_id": null
+      }
      },
      "secondary": {
       "id": "qsz92",
@@ -396,7 +460,15 @@
       "calibre": "9x19mm",
       "game_item_id": null,
       "game_substitute": "m17",
-      "ammo": {"id": "mag_9mm", "round": "9x19mm DAP92-9 (Chinese)", "game_round_id": "9x19_fmj", "rounds_per_mag": 15, "count": 2, "game_item_id": "mag_9mm"}
+      "ammo": {
+       "id": "mag_9mm",
+       "round": "9x19mm DAP92-9 (Chinese)",
+       "game_round_id": "9x19_fmj",
+       "proposed_round_id": "9x19_dap92",
+       "rounds_per_mag": 15,
+       "count": 2,
+       "game_item_id": "mag_9mm"
+      }
      },
      "launcher": null,
      "grenades": [
@@ -485,6 +557,7 @@
        "id": "mag_762x51_5",
        "round": "7.62x51mm (Chinese DVC12-class ball)",
        "game_round_id": "762x51_m80",
+       "proposed_round_id": "762x51_chn_ball",
        "rounds_per_mag": 5,
        "count": 6,
        "game_item_id": null
@@ -497,7 +570,15 @@
       "calibre": "9x19mm",
       "game_item_id": null,
       "game_substitute": "m17",
-      "ammo": {"id": "mag_9mm", "round": "9x19mm DAP92-9 (Chinese)", "game_round_id": "9x19_fmj", "rounds_per_mag": 15, "count": 2, "game_item_id": "mag_9mm"}
+      "ammo": {
+       "id": "mag_9mm",
+       "round": "9x19mm DAP92-9 (Chinese)",
+       "game_round_id": "9x19_fmj",
+       "proposed_round_id": "9x19_dap92",
+       "rounds_per_mag": 15,
+       "count": 2,
+       "game_item_id": "mag_9mm"
+      }
      },
      "launcher": null,
      "grenades": [{"id": "type82_2", "name": "Type 82-2 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}],
@@ -555,7 +636,15 @@
       "game_item_id": null,
       "game_substitute": "mk18",
       "optic": {"id": "chn_optic", "name": "Chinese 3x prism / red dot (QMK-class)"},
-      "ammo": {"id": "mag_58x42_30", "round": "5.8x42mm DBP10", "game_round_id": null, "rounds_per_mag": 30, "count": 3, "game_item_id": null}
+      "ammo": {
+       "id": "mag_58x42_30",
+       "round": "5.8x42mm DBP10",
+       "game_round_id": null,
+       "proposed_round_id": "58x42_dbp10",
+       "rounds_per_mag": 30,
+       "count": 3,
+       "game_item_id": null
+      }
      },
      "secondary": {
       "id": "qsz92",
@@ -563,7 +652,15 @@
       "calibre": "9x19mm",
       "game_item_id": null,
       "game_substitute": "m17",
-      "ammo": {"id": "mag_9mm", "round": "9x19mm DAP92-9 (Chinese)", "game_round_id": "9x19_fmj", "rounds_per_mag": 15, "count": 2, "game_item_id": "mag_9mm"}
+      "ammo": {
+       "id": "mag_9mm",
+       "round": "9x19mm DAP92-9 (Chinese)",
+       "game_round_id": "9x19_fmj",
+       "proposed_round_id": "9x19_dap92",
+       "rounds_per_mag": 15,
+       "count": 2,
+       "game_item_id": "mag_9mm"
+      }
      },
      "launcher": null,
      "grenades": [],
@@ -580,7 +677,15 @@
        "game_item_id": "plate_ceramic_l4"
       },
       "side_plates": null,
-      "helmet": {"id": "tsh_tanker", "name": "TSh-series padded tanker helmet (non-ballistic)", "tier": "none", "game_rating": null, "game_item_id": null}
+      "helmet": {
+       "id": "tsh_tanker",
+       "name": "TSh-series padded tanker helmet (non-ballistic)",
+       "tier": "none",
+       "game_rating": null,
+       "game_item_id": null,
+       "cosmetic": true,
+       "proposed_game_id": "helmet_tanker"
+      }
      },
      "medical": {
       "container": "ifak",
@@ -615,7 +720,15 @@
       "game_item_id": null,
       "game_substitute": "mk18",
       "optic": {"id": "chn_optic", "name": "Chinese 3x prism / red dot (QMK-class)"},
-      "ammo": {"id": "mag_58x42_30", "round": "5.8x42mm DBP10", "game_round_id": null, "rounds_per_mag": 30, "count": 3, "game_item_id": null}
+      "ammo": {
+       "id": "mag_58x42_30",
+       "round": "5.8x42mm DBP10",
+       "game_round_id": null,
+       "proposed_round_id": "58x42_dbp10",
+       "rounds_per_mag": 30,
+       "count": 3,
+       "game_item_id": null
+      }
      },
      "secondary": {
       "id": "qsz92",
@@ -623,7 +736,15 @@
       "calibre": "9x19mm",
       "game_item_id": null,
       "game_substitute": "m17",
-      "ammo": {"id": "mag_9mm", "round": "9x19mm DAP92-9 (Chinese)", "game_round_id": "9x19_fmj", "rounds_per_mag": 15, "count": 2, "game_item_id": "mag_9mm"}
+      "ammo": {
+       "id": "mag_9mm",
+       "round": "9x19mm DAP92-9 (Chinese)",
+       "game_round_id": "9x19_fmj",
+       "proposed_round_id": "9x19_dap92",
+       "rounds_per_mag": 15,
+       "count": 2,
+       "game_item_id": "mag_9mm"
+      }
      },
      "launcher": null,
      "grenades": [
@@ -645,7 +766,9 @@
        "name": "Aircrew flight helmet (HGU-56/P / ZSh-7 class, non-ballistic)",
        "tier": "none",
        "game_rating": null,
-       "game_item_id": null
+       "game_item_id": null,
+       "cosmetic": true,
+       "proposed_game_id": "helmet_flight"
       }
      },
      "medical": {

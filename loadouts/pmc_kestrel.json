@@ -25,6 +25,7 @@
        "id": "mag_545x39_30",
        "round": "5.45x39mm 7N10 (enhanced penetration)",
        "game_round_id": null,
+       "proposed_round_id": "545x39_7n10",
        "rounds_per_mag": 30,
        "count": 7,
        "game_item_id": null
@@ -93,6 +94,7 @@
        "id": "belt_762x54r_100",
        "round": "7.62x54R 7N13 (steel core), 7N1 for the SVD",
        "game_round_id": "762x54r_lps",
+       "proposed_round_id": "762x54r_7n13",
        "rounds_per_mag": 100,
        "count": 4,
        "game_item_id": null
@@ -160,6 +162,7 @@
        "id": "mag_762x54r_10",
        "round": "7.62x54R 7N13 (steel core), 7N1 for the SVD",
        "game_round_id": "762x54r_lps",
+       "proposed_round_id": "762x54r_7n13",
        "rounds_per_mag": 10,
        "count": 8,
        "game_item_id": null
@@ -227,6 +230,7 @@
        "id": "mag_545x39_30",
        "round": "5.45x39mm 7N10 (enhanced penetration)",
        "game_round_id": null,
+       "proposed_round_id": "545x39_7n10",
        "rounds_per_mag": 30,
        "count": 7,
        "game_item_id": null
@@ -300,6 +304,7 @@
        "id": "mag_545x39_30",
        "round": "5.45x39mm 7N10 (enhanced penetration)",
        "game_round_id": null,
+       "proposed_round_id": "545x39_7n10",
        "rounds_per_mag": 30,
        "count": 5,
        "game_item_id": null
@@ -321,7 +326,11 @@
       "game_launcher": "RPG-7",
       "game_substitute": null,
       "game_item_id": null,
-      "rounds": [{"name": "PG-7V", "type": "HEAT", "count": 2}, {"name": "OG-7V", "type": "frag", "count": 1}],
+      "proposed_game_item_id": "rpg7",
+      "rounds": [
+       {"name": "PG-7V", "type": "HEAT", "count": 2, "proposed_game_item_id": "pg7v"},
+       {"name": "OG-7V", "type": "frag", "count": 1, "proposed_game_item_id": "og7v"}
+      ],
       "alternates": ["rpg26", "rshg2"]
      },
      "grenades": [
@@ -376,6 +385,7 @@
        "id": "mag_545x39_30",
        "round": "5.45x39mm 7N10 (enhanced penetration)",
        "game_round_id": null,
+       "proposed_round_id": "545x39_7n10",
        "rounds_per_mag": 30,
        "count": 6,
        "game_item_id": null
@@ -454,6 +464,7 @@
        "id": "mag_545x39_30",
        "round": "5.45x39mm 7N10 (enhanced penetration)",
        "game_round_id": null,
+       "proposed_round_id": "545x39_7n10",
        "rounds_per_mag": 30,
        "count": 7,
        "game_item_id": null
@@ -521,7 +532,15 @@
       "game_item_id": null,
       "game_substitute": "m110",
       "optic": {"id": "sniper_scope", "name": "5-25x sniper scope"},
-      "ammo": {"id": "mag_338lm_5", "round": ".338 Lapua Magnum ball / match", "game_round_id": null, "rounds_per_mag": 5, "count": 6, "game_item_id": null}
+      "ammo": {
+       "id": "mag_338lm_5",
+       "round": ".338 Lapua Magnum ball / match",
+       "game_round_id": null,
+       "proposed_round_id": "338lm_ball",
+       "rounds_per_mag": 5,
+       "count": 6,
+       "game_item_id": null
+      }
      },
      "secondary": {
       "id": "pl15",
@@ -588,6 +607,7 @@
        "id": "mag_545x39_30",
        "round": "5.45x39mm 7N10 (enhanced penetration)",
        "game_round_id": null,
+       "proposed_round_id": "545x39_7n10",
        "rounds_per_mag": 30,
        "count": 4,
        "game_item_id": null
@@ -656,6 +676,7 @@
        "id": "mag_545x39_30",
        "round": "5.45x39mm 7N10 (enhanced penetration)",
        "game_round_id": null,
+       "proposed_round_id": "545x39_7n10",
        "rounds_per_mag": 30,
        "count": 4,
        "game_item_id": null
@@ -689,7 +710,9 @@
        "name": "Aircrew flight helmet (HGU-56/P / ZSh-7 class, non-ballistic)",
        "tier": "none",
        "game_rating": null,
-       "game_item_id": null
+       "game_item_id": null,
+       "cosmetic": true,
+       "proposed_game_id": "helmet_flight"
       }
      },
      "medical": {
@@ -742,6 +765,7 @@
        "id": "mag_545x39_30",
        "round": "5.45x39mm 7N10 (enhanced penetration)",
        "game_round_id": null,
+       "proposed_round_id": "545x39_7n10",
        "rounds_per_mag": 30,
        "count": 7,
        "game_item_id": null
@@ -775,7 +799,13 @@
        "game_item_id": "plate_ceramic_l4"
       },
       "side_plates": {"id": "side_plates", "name": "Side plates, national issue (6x8 in class)", "material": "ceramic", "count": 2, "game_item_id": "plate_side"},
-      "helmet": {"id": "6b47", "name": "6B47 Ratnik helmet", "tier": "medium", "game_rating": "IIIA", "game_item_id": "helmet"}
+      "helmet": {
+       "id": "k63_altyn",
+       "name": "K6-3 / Altyn-type titanium assault helmet with visor",
+       "tier": "heavy",
+       "game_rating": "III++",
+       "game_item_id": "helmet_heavy"
+      }
      },
      "medical": {
       "container": "ifak",
@@ -791,7 +821,7 @@
       ["plate_carrier_heavy", 1],
       ["plate_ceramic_l4", 2],
       ["plate_side", 2],
-      ["helmet", 1],
+      ["helmet_heavy", 1],
       ["m4a1", 1],
       ["mag_556", 7],
       ["m17", 1],
@@ -818,6 +848,7 @@
        "id": "belt_762x54r_100",
        "round": "7.62x54R 7N13 (steel core), 7N1 for the SVD",
        "game_round_id": "762x54r_lps",
+       "proposed_round_id": "762x54r_7n13",
        "rounds_per_mag": 100,
        "count": 4,
        "game_item_id": null
@@ -850,7 +881,13 @@
        "game_item_id": "plate_ceramic_l4"
       },
       "side_plates": {"id": "side_plates", "name": "Side plates, national issue (6x8 in class)", "material": "ceramic", "count": 2, "game_item_id": "plate_side"},
-      "helmet": {"id": "6b47", "name": "6B47 Ratnik helmet", "tier": "medium", "game_rating": "IIIA", "game_item_id": "helmet"}
+      "helmet": {
+       "id": "k63_altyn",
+       "name": "K6-3 / Altyn-type titanium assault helmet with visor",
+       "tier": "heavy",
+       "game_rating": "III++",
+       "game_item_id": "helmet_heavy"
+      }
      },
      "medical": {
       "container": "ifak",
@@ -866,7 +903,7 @@
       ["plate_carrier_heavy", 1],
       ["plate_ceramic_l4", 2],
       ["plate_side", 2],
-      ["helmet", 1],
+      ["helmet_heavy", 1],
       ["m4a1", 1],
       ["mag_556", 12],
       ["m17", 1],
@@ -893,6 +930,7 @@
        "id": "mag_762x54r_10",
        "round": "7.62x54R 7N13 (steel core), 7N1 for the SVD",
        "game_round_id": "762x54r_lps",
+       "proposed_round_id": "762x54r_7n13",
        "rounds_per_mag": 10,
        "count": 8,
        "game_item_id": null
@@ -968,6 +1006,7 @@
        "id": "mag_545x39_30",
        "round": "5.45x39mm 7N10 (enhanced penetration)",
        "game_round_id": null,
+       "proposed_round_id": "545x39_7n10",
        "rounds_per_mag": 30,
        "count": 7,
        "game_item_id": null
@@ -1006,7 +1045,13 @@
        "game_item_id": "plate_ceramic_l4"
       },
       "side_plates": {"id": "side_plates", "name": "Side plates, national issue (6x8 in class)", "material": "ceramic", "count": 2, "game_item_id": "plate_side"},
-      "helmet": {"id": "6b47", "name": "6B47 Ratnik helmet", "tier": "medium", "game_rating": "IIIA", "game_item_id": "helmet"}
+      "helmet": {
+       "id": "k63_altyn",
+       "name": "K6-3 / Altyn-type titanium assault helmet with visor",
+       "tier": "heavy",
+       "game_rating": "III++",
+       "game_item_id": "helmet_heavy"
+      }
      },
      "medical": {
       "container": "ifak",
@@ -1022,7 +1067,7 @@
       ["plate_carrier_heavy", 1],
       ["plate_ceramic_l4", 2],
       ["plate_side", 2],
-      ["helmet", 1],
+      ["helmet_heavy", 1],
       ["m4a1", 1],
       ["mag_556", 7],
       ["m17", 1],
@@ -1049,6 +1094,7 @@
        "id": "mag_545x39_30",
        "round": "5.45x39mm 7N10 (enhanced penetration)",
        "game_round_id": null,
+       "proposed_round_id": "545x39_7n10",
        "rounds_per_mag": 30,
        "count": 5,
        "game_item_id": null
@@ -1070,7 +1116,11 @@
       "game_launcher": "RPG-7",
       "game_substitute": null,
       "game_item_id": null,
-      "rounds": [{"name": "PG-7V", "type": "HEAT", "count": 2}, {"name": "OG-7V", "type": "frag", "count": 1}],
+      "proposed_game_item_id": "rpg7",
+      "rounds": [
+       {"name": "PG-7V", "type": "HEAT", "count": 2, "proposed_game_item_id": "pg7v"},
+       {"name": "OG-7V", "type": "frag", "count": 1, "proposed_game_item_id": "og7v"}
+      ],
       "alternates": ["rpg26", "rshg2"]
      },
      "grenades": [
@@ -1090,7 +1140,13 @@
        "game_item_id": "plate_ceramic_l4"
       },
       "side_plates": {"id": "side_plates", "name": "Side plates, national issue (6x8 in class)", "material": "ceramic", "count": 2, "game_item_id": "plate_side"},
-      "helmet": {"id": "6b47", "name": "6B47 Ratnik helmet", "tier": "medium", "game_rating": "IIIA", "game_item_id": "helmet"}
+      "helmet": {
+       "id": "k63_altyn",
+       "name": "K6-3 / Altyn-type titanium assault helmet with visor",
+       "tier": "heavy",
+       "game_rating": "III++",
+       "game_item_id": "helmet_heavy"
+      }
      },
      "medical": {
       "container": "ifak",
@@ -1106,7 +1162,7 @@
       ["plate_carrier_heavy", 1],
       ["plate_ceramic_l4", 2],
       ["plate_side", 2],
-      ["helmet", 1],
+      ["helmet_heavy", 1],
       ["m4a1", 1],
       ["mag_556", 5],
       ["m17", 1],
@@ -1133,6 +1189,7 @@
        "id": "mag_545x39_30",
        "round": "5.45x39mm 7N10 (enhanced penetration)",
        "game_round_id": null,
+       "proposed_round_id": "545x39_7n10",
        "rounds_per_mag": 30,
        "count": 6,
        "game_item_id": null
@@ -1161,7 +1218,13 @@
        "game_item_id": "plate_ceramic_l4"
       },
       "side_plates": {"id": "side_plates", "name": "Side plates, national issue (6x8 in class)", "material": "ceramic", "count": 2, "game_item_id": "plate_side"},
-      "helmet": {"id": "6b47", "name": "6B47 Ratnik helmet", "tier": "medium", "game_rating": "IIIA", "game_item_id": "helmet"}
+      "helmet": {
+       "id": "k63_altyn",
+       "name": "K6-3 / Altyn-type titanium assault helmet with visor",
+       "tier": "heavy",
+       "game_rating": "III++",
+       "game_item_id": "helmet_heavy"
+      }
      },
      "medical": {
       "container": "trauma_kit",
@@ -1186,7 +1249,7 @@
       ["plate_carrier_heavy", 1],
       ["plate_ceramic_l4", 2],
       ["plate_side", 2],
-      ["helmet", 1],
+      ["helmet_heavy", 1],
       ["m4a1", 1],
       ["mag_556", 6],
       ["m17", 1],
@@ -1215,6 +1278,7 @@
        "id": "mag_545x39_30",
        "round": "5.45x39mm 7N10 (enhanced penetration)",
        "game_round_id": null,
+       "proposed_round_id": "545x39_7n10",
        "rounds_per_mag": 30,
        "count": 7,
        "game_item_id": null
@@ -1246,7 +1310,13 @@
        "game_item_id": "plate_ceramic_l4"
       },
       "side_plates": {"id": "side_plates", "name": "Side plates, national issue (6x8 in class)", "material": "ceramic", "count": 2, "game_item_id": "plate_side"},
-      "helmet": {"id": "6b47", "name": "6B47 Ratnik helmet", "tier": "medium", "game_rating": "IIIA", "game_item_id": "helmet"}
+      "helmet": {
+       "id": "k63_altyn",
+       "name": "K6-3 / Altyn-type titanium assault helmet with visor",
+       "tier": "heavy",
+       "game_rating": "III++",
+       "game_item_id": "helmet_heavy"
+      }
      },
      "medical": {
       "container": "ifak",
@@ -1267,7 +1337,7 @@
       ["plate_carrier_heavy", 1],
       ["plate_ceramic_l4", 2],
       ["plate_side", 2],
-      ["helmet", 1],
+      ["helmet_heavy", 1],
       ["m4a1", 1],
       ["mag_556", 7],
       ["m17", 1],
@@ -1290,7 +1360,15 @@
       "game_item_id": null,
       "game_substitute": "m110",
       "optic": {"id": "sniper_scope", "name": "5-25x sniper scope"},
-      "ammo": {"id": "mag_338lm_5", "round": ".338 Lapua Magnum ball / match", "game_round_id": null, "rounds_per_mag": 5, "count": 6, "game_item_id": null}
+      "ammo": {
+       "id": "mag_338lm_5",
+       "round": ".338 Lapua Magnum ball / match",
+       "game_round_id": null,
+       "proposed_round_id": "338lm_ball",
+       "rounds_per_mag": 5,
+       "count": 6,
+       "game_item_id": null
+      }
      },
      "secondary": {
       "id": "pl15",
@@ -1365,6 +1443,7 @@
        "id": "mag_545x39_30",
        "round": "5.45x39mm 7N10 (enhanced penetration)",
        "game_round_id": null,
+       "proposed_round_id": "545x39_7n10",
        "rounds_per_mag": 30,
        "count": 4,
        "game_item_id": null
@@ -1440,6 +1519,7 @@
        "id": "mag_545x39_30",
        "round": "5.45x39mm 7N10 (enhanced penetration)",
        "game_round_id": null,
+       "proposed_round_id": "545x39_7n10",
        "rounds_per_mag": 30,
        "count": 4,
        "game_item_id": null
@@ -1473,7 +1553,9 @@
        "name": "Aircrew flight helmet (HGU-56/P / ZSh-7 class, non-ballistic)",
        "tier": "none",
        "game_rating": null,
-       "game_item_id": null
+       "game_item_id": null,
+       "cosmetic": true,
+       "proposed_game_id": "helmet_flight"
       }
      },
      "medical": {
@@ -1513,7 +1595,10 @@
      "rounds": [{"name": "missile", "type": "tandem HEAT", "count": 1}]
     }
    ],
-   "notes": ["Faction file: assault groups sometimes heavy (side plates)."]
+   "notes": [
+    "Faction file: assault groups sometimes heavy (side plates).",
+    "Assault roles wear a K6-3 / Altyn-type helmet with visor at the game's heavy tier (Captain, 2026-10-10)."
+   ]
   }
  ],
  "role_map": {"drone_operator": "rifleman"},

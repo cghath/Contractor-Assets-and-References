@@ -5,6 +5,8 @@ Default AI loadouts for the 76 non-player factions in `factions/` (every faction
 - `loadouts/<faction id>.json`: one file per faction: variants, each with every role's weapons, ammunition, launcher, grenades, armor, medical kit, other kit and a `game_kit` built only from items that exist in the game today.
 - [weapons_index.json](weapons_index.json): every weapon, calibre and round, magazine, optic, underbarrel launcher, launcher, launcher round and grenade (plus medical and other kit), with users and in-game flags.
 - [armor_index.json](armor_index.json): every helmet, vest / plate carrier and plate, with tier, game mapping and users.
+- [rounds_index.json](rounds_index.json): proposed specs for every round with no exact match in the game's `data/rounds.json` (Captain, 2026-10-10): calibre, designation, projectile, approximate muzzle velocity and mass, level on the game's armor ladder, which game armor stops it, users. Spec only; the loadouts point at these through `proposed_round_id`.
+- [../tools/loadouts_gen/](../tools/loadouts_gen/): the generator that writes everything in this folder (see its README).
 - Validate with `python3 tools/validate_pack.py` (loadouts checks included).
 
 ## Roster
@@ -29,7 +31,7 @@ Armor is the regular variant's vest tier (helmet tier); AT is the at role's laun
 | swe | Western Europe and Nordics | late | regular | Ak 5C | medium (medium) | Grg m/86 (Carl Gustaf M3) [MAAWS] | crew/pilot |
 | fin | Western Europe and Nordics | late | regular | RK 62 | medium (medium) | NLAW [NLAW] | crew/pilot |
 | grc | Western Europe and Nordics | early | regular | HK G3A3 | light (medium) | Carl Gustaf M2 (84mm) [MAAWS] | crew/pilot |
-| ukr | Ukraine and eastern flank | mid | regular, territorial | AK-74 / AKS-74 | medium (medium) | RPG-7 [RPG-7] | crew |
+| ukr | Ukraine and eastern flank | mid | regular, territorial, assault | AK-74 / AKS-74 | medium (medium) | RPG-7 [RPG-7] | crew |
 | pol | Ukraine and eastern flank | mid | regular | MSBS Grot C16 FB-A2 | medium (medium) | Carl Gustaf M4 (84mm) [MAAWS] | crew/pilot |
 | est | Ukraine and eastern flank | late | regular | LMT R-20 Rahe | medium (medium) | Carl Gustaf M4 (84mm) [MAAWS] | crew |
 | lva | Ukraine and eastern flank | late | regular | HK G36 | medium (medium) | M136 AT4 (84mm) [AT4] | crew/pilot |
@@ -37,7 +39,7 @@ Armor is the regular variant's vest tier (helmet tier); AT is the at role's laun
 | rou | Ukraine and eastern flank | mid | regular | PA md. 86 | medium (medium) | AG-7 (Romanian RPG-7) [RPG-7] | crew/pilot |
 | mda | Ukraine and eastern flank | mid | regular | AKM | light (light) | RPG-7 [RPG-7] | crew |
 | geo | Ukraine and eastern flank | mid | regular | M4A1 carbine | medium (medium) | RPG-7 [RPG-7] | crew/pilot |
-| rus | Russia, CSTO, Caucasus | late | regular, spetsnaz, vdv | AK-74M | medium (medium) | RPG-7V2 [RPG-7] | crew/pilot |
+| rus | Russia, CSTO, Caucasus | late | regular, spetsnaz, vdv, storm, mobilised | AK-74M | medium (medium) | RPG-7V2 [RPG-7] | crew/pilot |
 | blr | Russia, CSTO, Caucasus | late | regular | AK-74 / AKS-74 | medium (light) | RPG-7 [RPG-7] | crew/pilot |
 | africa_corps | Russia, CSTO, Caucasus | mid | regular | AK-74M | medium (medium) | RPG-7 [RPG-7] | crew/pilot |
 | kaz | Russia, CSTO, Caucasus | mid | regular | AK-74 / AKS-74 | medium (light) | RPG-7 [RPG-7] | crew/pilot |
@@ -53,10 +55,10 @@ Armor is the regular variant's vest tier (helmet tier); AT is the at role's laun
 | pak | Asia-Pacific | early | regular | G3P4 (POF licence G3) | light (medium) | RPG-7 [RPG-7] | crew/pilot |
 | phl | Asia-Pacific | early | regular | Remington R4A3 | light (light) | RPG-7 [RPG-7] | crew/pilot |
 | vnm | Asia-Pacific | mid | regular | STV-380 | light (light) | B41 (Vietnamese RPG-7) [RPG-7] | crew/pilot |
-| irn | Middle East states | mid | regular, irgc | KL-7.62 (Iranian AKM) | light (light) | RPG-7 (Iranian copy) [RPG-7] | crew/pilot |
+| irn | Middle East states | mid | regular, irgc, basij | KL-7.62 (Iranian AKM) | light (light) | RPG-7 (Iranian copy) [RPG-7] | crew/pilot |
 | isr | Middle East states | mid | regular | IWI Tavor X95 | medium (medium) | MATADOR (RGW 90 family, 90mm) [sub AT4] | crew/pilot |
 | tur | Middle East states | mid | regular | MKE MPT-76 | medium (medium) | HAR-66 (66mm, M72 type) [sub AT4] | crew/pilot |
-| sau | Middle East states | early | regular | HK G36 | medium (medium) | M136 AT4 (84mm) [AT4] | crew/pilot |
+| sau | Middle East states | early | regular, sang | HK G36 | medium (medium) | M136 AT4 (84mm) [AT4] | crew/pilot |
 | are | Middle East states | early | regular, presidential_guard | Caracal CAR 816 | medium (medium) | M136 AT4 (84mm) [AT4] | crew/pilot |
 | qat | Middle East states | early | regular | FN SCAR-L | medium (medium) | AT4 CS (84mm) [AT4] | crew/pilot |
 | egy | Middle East states | mid | regular, saaka | Misr (Egyptian AKM) | light (light) | RPG-7 [RPG-7] | crew/pilot |
@@ -86,9 +88,9 @@ Armor is the regular variant's vest tier (helmet tier); AT is the at role's laun
 | krg_peshmerga | Neutrals, Africa, cartels, PMCs | early | regular, zeravani | AKM | light (medium) | RPG-7 [RPG-7] | crew |
 | sahel_aes | Neutrals, Africa, cartels, PMCs | early | regular, vdp | AK-47 / Type 56 pattern | light (light) | RPG-7 [RPG-7] | crew/pilot |
 | som | Neutrals, Africa, cartels, PMCs | early | regular, danab, gorgor | AKM | light (none) | RPG-7 [RPG-7] | crew |
-| pmc_halcyon | Neutrals, Africa, cartels, PMCs | mid | regular, protective_detail | M4A1 carbine | heavy (medium) | M136 AT4 (84mm) [AT4] | crew/pilot |
+| pmc_halcyon | Neutrals, Africa, cartels, PMCs | mid | regular, protective_detail | M4A1 carbine | heavy (heavy) | M136 AT4 (84mm) [AT4] | crew/pilot |
 | pmc_kestrel | Neutrals, Africa, cartels, PMCs | mid | regular, assault | AK-12 | medium (medium) | RPG-7 [RPG-7] | crew/pilot |
-| pmc_black_sable | Neutrals, Africa, cartels, PMCs | mid | regular, auxiliary | Caracal CAR 816 | medium (medium) | RPG-7 [RPG-7] | crew |
+| pmc_black_sable | Neutrals, Africa, cartels, PMCs | mid | regular, auxiliary | Caracal CAR 816 | medium (heavy) | RPG-7 [RPG-7] | crew |
 
 ## What has to be built
 
@@ -98,18 +100,18 @@ Counted from the 76 loadout files against the game's `data/items.json` (35 items
 |---|---|---|---|
 | Weapons (primary, sidearm, alternates) | 242 | 4 (m110, m17, m4a1, mk18) | 238 |
 | Magazines and belts | 36 | 3 (mag_556, mag_762, mag_9mm) | 33 |
-| Calibres (rounds.json) | 20 | 7 | 13 calibres with no round; 6 designations now use a generic round |
-| Launchers | 79 | 20 map to the 6 design-doc launchers, which have no items.json entry yet | 6 launcher items (at4, javelin, maaws, nlaw, rpg7, smaw); 59 others use a game_substitute |
+| Rounds (rounds.json) | 20 calibres | 7 calibres have a round | 21 round specs in rounds_index.json: 13 calibres with no round, plus 6 designations that use a generic round today |
+| Launchers | 79 | 20 map to the 6 design-doc launchers, which have no items.json entry yet | 6 launcher items (at4, javelin, maaws, nlaw, rpg7, smaw) and 7 round items (ffv441d, ffv551, javelin_missile, mk3_hedp, mk6_heaa, og7v, pg7v); AT4 and NLAW are single-shot; 59 other launchers use a game_substitute |
 | Underbarrel launchers / their ammo | 22 / 5 | 0 | 22 / 5 |
 | Optics (class ids) | 13 | 0 | 13 |
 | Hand grenades | 24 models | frag, white smoke and stun covered by frag_grenade, smoke_grenade, flashbang | 3 signal smokes (smoke_green, smoke_red, smoke_violet) |
-| Helmets | 27 models | 25 map to helmet_bump / helmet by tier | 2 non-ballistic crew/aircrew helmets (flight_helmet, tsh_tanker); models are skins of the tier items |
+| Helmets | 29 models | 27 map to helmet_bump / helmet / helmet_heavy by tier | 2 cosmetic non-ballistic helmets (helmet_flight, helmet_tanker); models are skins of the tier items |
 | Vests / plate carriers | 24 models | all map to the 3 carrier tiers | visual variants only |
-| Plates | 14 models | ceramic, steel, PE and side plates map to existing plates | 1 new item: plate_steel_light (light-tier steel plate; used by 18 factions) |
+| Plates | 14 models | ceramic, steel, PE and side plates map to existing plates | 1 new item: plate_steel_light (light-tier steel plate; used by 20 factions: al_qaeda, al_shabaab, aqap, egy, grc, hamas, hezbollah, houthis, iraqi_militias, irn, isis, isis_k, jnim, mda, pak, phl, pij, rus, sahel_aes, vnm). Until it is built, `game_kit` uses plate_pe_l3 in its place |
 | Medical | 18 | 9 | 9 (adenosine, atropine, decompression_needle, defibrillator, epinephrine, io_fast1, iv_18g, saline_500, surgical_kit) |
 | Other kit | 7 | 2 (backpacks) | 5 (binoculars, nvg_bino, nvg_envgb, nvg_mono, radio) |
 
-Heavy helmets (III++) are not used by any default loadout: no faction file gives a rifle-rated helmet. The heavy tier stays a player/armory item.
+Heavy (III++) helmets go only to elite, SOF and PMC assault variants (Captain, 2026-10-10), on the assault roles (marksman and sniper keep the standard helmet): ukr assault, rus spetsnaz, are presidential_guard, egy saaka, irq cts, pmc_halcyon regular, pmc_kestrel assault, pmc_black_sable regular.
 
 ### Early game first
 
@@ -118,10 +120,10 @@ The early game is mostly fighting terrorist groups (Captain). These are the item
 | Item | Kind | Early-tier users | All users |
 |---|---|---|---|
 | PKM (`pkm`) | weapon, 7.62x54R | 19 | 36 |
-| AKM (`akm`) | weapon, 7.62x39mm | 17 | 28 |
+| AKM (`akm`) | weapon, 7.62x39mm | 17 | 30 |
 | SVD Dragunov (`svd`) | weapon, 7.62x54R | 16 | 32 |
+| M4 carbine (`m4`) | weapon, 5.56x45mm | 16 | 20 |
 | Glock 17 (`glock17`) | weapon, 9x19mm | 15 | 28 |
-| M4 carbine (`m4`) | weapon, 5.56x45mm | 15 | 19 |
 | AKMS (folding stock) (`akms`) | weapon, 7.62x39mm | 13 | 15 |
 | Type 56 (`type56`) | weapon, 7.62x39mm | 12 | 13 |
 | Barrett M82A1 (`m82a1`) | weapon, 12.7x99mm (.50 BMG) | 11 | 17 |
@@ -132,19 +134,19 @@ The early game is mostly fighting terrorist groups (Captain). These are the item
 | RPK (`rpk`) | weapon, 7.62x39mm | 7 | 12 |
 | M249 SAW (`m249`) | weapon, 5.56x45mm | 7 | 9 |
 | M16A4 (`m16a4`) | weapon, 5.56x45mm | 6 | 7 |
-| 7.62x39mm 30-round magazine (`mag_762x39_30`) | magazine | 20 | 37 |
+| 7.62x39mm 30-round magazine (`mag_762x39_30`) | magazine | 20 | 38 |
 | 7.62x54R 100-round belt (box) (`belt_762x54r_100`) | magazine | 19 | 40 |
 | 7.62x51mm 100-round belt (`belt_762x51_100`) | magazine | 18 | 46 |
 | 5.56x45mm 200-round belt (box or soft pouch) (`belt_556_200`) | magazine | 18 | 38 |
 | 7.62x54R 10-round magazine (`mag_762x54r_10`) | magazine | 16 | 36 |
 | 12.7x99mm 10-round magazine (`mag_50bmg_10`) | magazine | 13 | 26 |
-| RPG-7 (`rpg7`) | launcher, game RPG-7 | 21 | 36 |
+| RPG-7 (`rpg7`) | launcher, game RPG-7 | 21 | 37 |
 | M136 AT4 (84mm) (`at4`) | launcher, game AT4 | 8 | 17 |
 | FGM-148 Javelin (`javelin`) | launcher, game Javelin | 6 | 17 |
 | Carl Gustaf M2 (84mm) (`cg_m2`) | launcher, game MAAWS | 3 | 5 |
 | M203 (`m203`) | underbarrel launcher | 13 | 16 |
 | GP-25 / GP-30 (`gp25`) | underbarrel launcher | 8 | 21 |
-| 40 mm underbarrel launcher (`ugl40`) | underbarrel launcher | 3 | 12 |
+| 40 mm underbarrel launcher (`ugl40`) | underbarrel launcher | 4 | 13 |
 
 Calibres with no round in `data/rounds.json`: .300 Norma Magnum, .300 Winchester Magnum, .338 Lapua Magnum, 12.7x108mm, 14.5x114mm, 5.45x39mm, 5.7x28mm, 5.8x42mm, 6.8x51mm, 7.62x25mm, 7.92x57mm, 9x18mm, 9x39mm.
 
@@ -156,9 +158,9 @@ Designations that currently use a generic round (same calibre, different load): 
 |---|---|---|---|---|
 | PKM (`pkm`) | gpmg | 7.62x54R | 36 | m4a1 |
 | SVD Dragunov (`svd`) | dmr | 7.62x54R | 32 | m110 |
-| AKM (`akm`) | rifle | 7.62x39mm | 28 | m4a1 |
+| AKM (`akm`) | rifle | 7.62x39mm | 30 | m4a1 |
 | Glock 17 (`glock17`) | pistol | 9x19mm | 28 | m17 |
-| M4 carbine (`m4`) | carbine | 5.56x45mm | 19 | mk18 |
+| M4 carbine (`m4`) | carbine | 5.56x45mm | 20 | mk18 |
 | PM Makarov (`pm_makarov`) | pistol | 9x18mm | 19 | m17 |
 | FN Minimi (`minimi`) | lmg | 5.56x45mm | 18 | m4a1 |
 | Barrett M82A1 (`m82a1`) | amr | 12.7x99mm (.50 BMG) | 17 | m110 |
@@ -204,5 +206,6 @@ The other 198 weapons to build are used by 3 factions or fewer each; see weapons
 - Launchers: `in_game` is true when the launcher is one of the 6 design-doc launchers (AT4, RPG-7, Javelin, MAAWS, NLAW, SMAW); otherwise `game_substitute` names one of the 6 (MANPADS have none).
 - `count` is the total carried, including the magazine in the weapon.
 - `role_map` maps every role used by the faction's unit_templates that has no loadout of its own to the role whose loadout it uses.
-- Roles a faction does not field are marked `not_fielded` with a `stand_in_role` (only pse_pa: grenadier, at, sniper).
+- Roles a faction does not field are marked `not_fielded` with a `stand_in_role` (only pse_pa: at and sniper).
+- `proposed_round_id` (in `ammo`) points at a rounds_index.json spec wherever `game_round_id` is missing or only a generic match; `proposed_game_item_id` gives the proposed items.json id for the 6 in-game launchers and their rounds; `proposed_game_id` marks other new items (plate_steel_light, signal smokes, cosmetic helmets).
 

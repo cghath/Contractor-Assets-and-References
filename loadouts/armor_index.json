@@ -81,6 +81,17 @@
    ]
   },
   {
+   "id": "assault_helmet_visor",
+   "name": "Assault helmet with ballistic visor and mandible (Caiman / FAST class)",
+   "tier": "heavy",
+   "designation": "class",
+   "real_rating": "high-cut helmet with rifle applique and visor; game heavy tier (Captain, 2026-10-10)",
+   "game_rating": "III++",
+   "game_item_id": "helmet_heavy",
+   "game_match": "generic",
+   "users": ["are", "egy", "irq", "pmc_black_sable", "pmc_halcyon", "ukr"]
+  },
+  {
    "id": "captured_helmet",
    "name": "Captured military helmet (ACH / PASGT / SSh-68, mixed)",
    "tier": "light",
@@ -89,7 +100,7 @@
    "game_rating": "IIA",
    "game_item_id": "helmet_bump",
    "game_match": "generic",
-   "users": ["al_qaeda", "al_shabaab", "aqap", "hamas", "houthis", "iraqi_militias", "isis", "isis_k", "jnim", "pij"]
+   "users": ["al_qaeda", "al_shabaab", "aqap", "hamas", "hezbollah", "houthis", "iraqi_militias", "isis", "isis_k", "jnim", "pij"]
   },
   {
    "id": "cg634",
@@ -122,7 +133,7 @@
    "game_rating": "IIIA",
    "game_item_id": "helmet",
    "game_match": "generic",
-   "users": ["cartel_jalisco_nueva", "hezbollah", "pmc_black_sable"]
+   "users": ["cartel_jalisco_nueva", "pmc_black_sable"]
   },
   {
    "id": "cvc_helmet",
@@ -238,6 +249,8 @@
    "game_rating": null,
    "game_item_id": null,
    "game_match": null,
+   "cosmetic": true,
+   "proposed_game_id": "helmet_flight",
    "users": [
     "afg_taliban",
     "africa_corps",
@@ -338,6 +351,17 @@
    "users": ["irn"]
   },
   {
+   "id": "k63_altyn",
+   "name": "K6-3 / Altyn-type titanium assault helmet with visor",
+   "tier": "heavy",
+   "designation": "specific",
+   "real_rating": "titanium shell with visor, pistol and fragment rated in reality; game heavy tier (Captain, 2026-10-10)",
+   "game_rating": "III++",
+   "game_item_id": "helmet_heavy",
+   "game_match": "generic",
+   "users": ["pmc_kestrel", "rus"]
+  },
+  {
    "id": "kpa_steel_helmet",
    "name": "KPA steel helmet (SSh-40 pattern)",
    "tier": "light",
@@ -390,7 +414,7 @@
    "game_rating": "IIA",
    "game_item_id": "helmet_bump",
    "game_match": "generic",
-   "users": ["arm", "blr", "kaz", "mda"]
+   "users": ["arm", "blr", "kaz", "mda", "rus"]
   },
   {
    "id": "st4_hc22",
@@ -423,6 +447,8 @@
    "game_rating": null,
    "game_item_id": null,
    "game_match": null,
+   "cosmetic": true,
+   "proposed_game_id": "helmet_tanker",
    "users": [
     "afg_taliban",
     "arm",
@@ -478,10 +504,10 @@
    "id": "6b23",
    "name": "6B23 body armour (steel plates)",
    "designation": "specific",
-   "tiers": ["medium"],
-   "game_item_ids": {"medium": "plate_carrier"},
+   "tiers": ["light", "medium"],
+   "game_item_ids": {"light": "plate_carrier_light", "medium": "plate_carrier"},
    "game_match": "generic",
-   "users": ["arm", "blr", "kaz"]
+   "users": ["arm", "blr", "kaz", "rus"]
   },
   {
    "id": "6b43",
@@ -573,7 +599,7 @@
    "tiers": ["medium", "heavy"],
    "game_item_ids": {"medium": "plate_carrier", "heavy": "plate_carrier_heavy"},
    "game_match": "generic",
-   "users": ["africa_corps", "cartel_jalisco_nueva", "cartel_pacifico", "hezbollah", "pmc_black_sable", "pmc_kestrel"]
+   "users": ["africa_corps", "cartel_jalisco_nueva", "cartel_pacifico", "pmc_black_sable", "pmc_kestrel"]
   },
   {
    "id": "crye_avs",
@@ -791,9 +817,9 @@
    "designation": "specific",
    "real_rating": "GOST Br3/Br4 class",
    "side_plate": false,
-   "vest_tiers": ["medium"],
-   "game_item_ids": {"medium": "plate_steel_l3"},
-   "users": ["arm", "blr", "kaz"]
+   "vest_tiers": ["light", "medium"],
+   "game_item_ids": {"light": "NEW plate_steel_light (substitute plate_pe_l3)", "medium": "plate_steel_l3"},
+   "users": ["arm", "blr", "kaz", "rus"]
   },
   {
    "id": "6b45_plates",
@@ -953,7 +979,7 @@
    "side_plate": true,
    "vest_tiers": ["heavy"],
    "game_item_ids": {"heavy": "plate_side"},
-   "users": ["are", "fra", "gbr", "irq", "pmc_halcyon", "pmc_kestrel", "rus"]
+   "users": ["are", "fra", "gbr", "irq", "pmc_halcyon", "pmc_kestrel", "rus", "ukr"]
   },
   {
    "id": "smb_plates",
@@ -993,6 +1019,7 @@
     "egy",
     "grc",
     "hamas",
+    "hezbollah",
     "houthis",
     "iraqi_militias",
     "irn",
@@ -1014,9 +1041,9 @@
    "designation": "class",
    "real_rating": "NIJ III to III+ class",
    "side_plate": false,
-   "vest_tiers": ["medium"],
-   "game_item_ids": {"medium": "plate_steel_l3"},
-   "users": ["hezbollah", "irn", "syr", "ukr"]
+   "vest_tiers": ["medium", "heavy"],
+   "game_item_ids": {"medium": "plate_steel_l3", "heavy": "plate_steel_l3"},
+   "users": ["irn", "syr", "ukr"]
   },
   {
    "id": "type19_plates",

@@ -25,6 +25,7 @@
        "id": "mag_556",
        "round": "5.56x45mm SS109 / M855 (NATO ball)",
        "game_round_id": "556_m855",
+       "proposed_round_id": "556_ss109",
        "rounds_per_mag": 30,
        "count": 7,
        "game_item_id": "mag_556"
@@ -100,6 +101,7 @@
        "id": "belt_556_200",
        "round": "5.56x45mm SS109 / M855 (NATO ball)",
        "game_round_id": "556_m855",
+       "proposed_round_id": "556_ss109",
        "rounds_per_mag": 200,
        "count": 3,
        "game_item_id": null
@@ -263,6 +265,7 @@
        "id": "mag_556",
        "round": "5.56x45mm SS109 / M855 (NATO ball)",
        "game_round_id": "556_m855",
+       "proposed_round_id": "556_ss109",
        "rounds_per_mag": 30,
        "count": 7,
        "game_item_id": "mag_556"
@@ -345,6 +348,7 @@
        "id": "mag_556",
        "round": "5.56x45mm SS109 / M855 (NATO ball)",
        "game_round_id": "556_m855",
+       "proposed_round_id": "556_ss109",
        "rounds_per_mag": 30,
        "count": 5,
        "game_item_id": "mag_556"
@@ -359,7 +363,11 @@
       "game_launcher": "MAAWS",
       "game_substitute": null,
       "game_item_id": null,
-      "rounds": [{"name": "FFV551 HEAT", "type": "HEAT", "count": 1}, {"name": "FFV441D HE", "type": "HE", "count": 1}],
+      "proposed_game_item_id": "maaws",
+      "rounds": [
+       {"name": "FFV551 HEAT", "type": "HEAT", "count": 1, "proposed_game_item_id": "ffv551"},
+       {"name": "FFV441D HE", "type": "HE", "count": 1, "proposed_game_item_id": "ffv441d"}
+      ],
       "alternates": ["cg_m2", "m72"]
      },
      "grenades": [
@@ -427,6 +435,7 @@
        "id": "mag_556",
        "round": "5.56x45mm SS109 / M855 (NATO ball)",
        "game_round_id": "556_m855",
+       "proposed_round_id": "556_ss109",
        "rounds_per_mag": 30,
        "count": 6,
        "game_item_id": "mag_556"
@@ -519,6 +528,7 @@
        "id": "mag_556",
        "round": "5.56x45mm SS109 / M855 (NATO ball)",
        "game_round_id": "556_m855",
+       "proposed_round_id": "556_ss109",
        "rounds_per_mag": 30,
        "count": 7,
        "game_item_id": "mag_556"
@@ -627,7 +637,15 @@
       "game_item_id": null,
       "game_substitute": "m110",
       "optic": {"id": "sniper_scope", "name": "5-25x sniper scope"},
-      "ammo": {"id": "mag_338lm_5", "round": ".338 Lapua Magnum ball / match", "game_round_id": null, "rounds_per_mag": 5, "count": 6, "game_item_id": null}
+      "ammo": {
+       "id": "mag_338lm_5",
+       "round": ".338 Lapua Magnum ball / match",
+       "game_round_id": null,
+       "proposed_round_id": "338lm_ball",
+       "rounds_per_mag": 5,
+       "count": 6,
+       "game_item_id": null
+      }
      },
      "secondary": {
       "id": "p320",
@@ -709,6 +727,7 @@
        "id": "mag_556",
        "round": "5.56x45mm SS109 / M855 (NATO ball)",
        "game_round_id": "556_m855",
+       "proposed_round_id": "556_ss109",
        "rounds_per_mag": 30,
        "count": 4,
        "game_item_id": "mag_556"
@@ -794,6 +813,7 @@
        "id": "mag_556",
        "round": "5.56x45mm SS109 / M855 (NATO ball)",
        "game_round_id": "556_m855",
+       "proposed_round_id": "556_ss109",
        "rounds_per_mag": 30,
        "count": 4,
        "game_item_id": "mag_556"
@@ -836,7 +856,9 @@
        "name": "Aircrew flight helmet (HGU-56/P / ZSh-7 class, non-ballistic)",
        "tier": "none",
        "game_rating": null,
-       "game_item_id": null
+       "game_item_id": null,
+       "cosmetic": true,
+       "proposed_game_id": "helmet_flight"
       }
      },
      "medical": {

@@ -7,7 +7,7 @@ Checks the JSON in factions/, reference/vehicles/, worldspaces/ and loadouts/:
   * relation keys, theatre ids and vehicle_ids are known;
   * every referenced vehicle_id has a reference/vehicles/<id>.json file;
   * terrorist factions (bloc me_terror in ROSTER) have player_client false;
-  * loadouts/<id>.json (the two index files are skipped): the id is a canonical non-player faction id
+  * loadouts/<id>.json (the three index files are skipped): the id is a canonical non-player faction id
     matching the filename, a 'regular' variant exists, every variant has the core roles, in_game
     launchers are among the 6 in-game launchers (others name one of them or null as game_substitute),
     and vest and helmet tiers are valid.
@@ -30,7 +30,7 @@ FACTION_KEYS = ["id", "name", "kind", "relations", "theatres", "vehicles"]
 # Files in factions/ that are not faction records.
 NON_FACTION_FILES = {"alliances"}
 # Files in loadouts/ that are not per-faction loadouts.
-LOADOUT_INDEX_FILES = {"weapons_index", "armor_index"}
+LOADOUT_INDEX_FILES = {"weapons_index", "armor_index", "rounds_index"}
 CORE_ROLES = ["rifleman", "autorifleman", "marksman", "grenadier", "at", "medic", "squad_leader", "sniper"]
 GAME_LAUNCHERS = {"AT4", "RPG-7", "Javelin", "MAAWS", "NLAW", "SMAW"}
 VEST_TIERS = {"light", "medium", "heavy"}

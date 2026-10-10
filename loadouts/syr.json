@@ -171,7 +171,11 @@
       "game_launcher": "RPG-7",
       "game_substitute": null,
       "game_item_id": null,
-      "rounds": [{"name": "PG-7V", "type": "HEAT", "count": 2}, {"name": "OG-7V", "type": "frag", "count": 1}]
+      "proposed_game_item_id": "rpg7",
+      "rounds": [
+       {"name": "PG-7V", "type": "HEAT", "count": 2, "proposed_game_item_id": "pg7v"},
+       {"name": "OG-7V", "type": "frag", "count": 1, "proposed_game_item_id": "og7v"}
+      ]
      },
      "grenades": [{"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}],
      "armor": {
@@ -378,7 +382,15 @@
       "vest": {"id": "soft_vest", "name": "Soft armour vest (aramid, NIJ IIIA class)", "tier": "light", "game_item_id": "plate_carrier_light"},
       "plates": null,
       "side_plates": null,
-      "helmet": {"id": "tsh_tanker", "name": "TSh-series padded tanker helmet (non-ballistic)", "tier": "none", "game_rating": null, "game_item_id": null}
+      "helmet": {
+       "id": "tsh_tanker",
+       "name": "TSh-series padded tanker helmet (non-ballistic)",
+       "tier": "none",
+       "game_rating": null,
+       "game_item_id": null,
+       "cosmetic": true,
+       "proposed_game_id": "helmet_tanker"
+      }
      },
      "medical": {"container": null, "items": [{"id": "pressure_bandage", "count": 1, "game_item_id": "pressure_bandage"}]},
      "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}],
@@ -708,7 +720,11 @@
       "game_launcher": "RPG-7",
       "game_substitute": null,
       "game_item_id": null,
-      "rounds": [{"name": "PG-7V", "type": "HEAT", "count": 2}, {"name": "OG-7V", "type": "frag", "count": 1}]
+      "proposed_game_item_id": "rpg7",
+      "rounds": [
+       {"name": "PG-7V", "type": "HEAT", "count": 2, "proposed_game_item_id": "pg7v"},
+       {"name": "OG-7V", "type": "frag", "count": 1, "proposed_game_item_id": "og7v"}
+      ]
      },
      "grenades": [{"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}],
      "armor": {
@@ -1021,7 +1037,15 @@
        "game_item_id": "plate_steel_l3"
       },
       "side_plates": null,
-      "helmet": {"id": "tsh_tanker", "name": "TSh-series padded tanker helmet (non-ballistic)", "tier": "none", "game_rating": null, "game_item_id": null}
+      "helmet": {
+       "id": "tsh_tanker",
+       "name": "TSh-series padded tanker helmet (non-ballistic)",
+       "tier": "none",
+       "game_rating": null,
+       "game_item_id": null,
+       "cosmetic": true,
+       "proposed_game_id": "helmet_tanker"
+      }
      },
      "medical": {
       "container": "ifak",

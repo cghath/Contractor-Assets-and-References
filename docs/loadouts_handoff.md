@@ -1,17 +1,18 @@
 # AI default loadouts: handoff sheet
 
-Snapshot as of 2026-10-10 11:45 UTC. **Job 6 is complete on the fork** (`cghath/Contractor-Assets-and-References`, branch `factions-worldspaces`).
+Snapshot as of 2026-10-10 (updated after Captain's answers). **Job 6 is complete on the fork** (`cghath/Contractor-Assets-and-References`, branch `factions-worldspaces`).
 
 ## Status
 
 - **Ownership:** this job was owned by the separate "Faction loadout questions" thread, which never pushed any `loadouts/` files. On 2026-10-10 the user asked for the job to be taken over and completed on the fork, after the alliances job (Job 4). Captain's 09:34 pause had been lifted for the queue by then (see [factions_handoff.md](factions_handoff.md)).
 - **Done (2026-10-10):**
-  - `loadouts/<faction id>.json` for all **76 non-player factions**: 107 variants in total. Every variant has the 8 core roles, plus `crew` where the faction fields armoured vehicles (MBT, IFV, APC, MRAP) and `pilot` where it fields helicopters.
-  - `loadouts/weapons_index.json` and `loadouts/armor_index.json` with users and in-game flags.
+  - `loadouts/<faction id>.json` for all **76 non-player factions**: 112 variants in total. Every variant has the 8 core roles, plus `crew` where the faction fields armoured vehicles (MBT, IFV, APC, MRAP) and `pilot` where it fields helicopters.
+  - `loadouts/weapons_index.json`, `loadouts/armor_index.json` and `loadouts/rounds_index.json` with users and in-game flags.
   - `loadouts/README.md` with the roster and the "what has to be built" summary.
-  - Loadouts checks in `tools/validate_pack.py`. The validator reports 0 errors (warnings are only the worldspaces still being written).
-- The WIP Perl catalogue, [tools/loadouts_catalog_wip.pl](../tools/loadouts_catalog_wip.pl), is superseded by the two index files. Its ids were kept, except `m110_sniper`, which duplicated `m110`. One correction: the INSAS rifle now uses `mag_556_20`, because 20 rounds in `mag_556` broke the one-id-per-calibre-and-type rule. Its `%GAME_IDS` list is out of date; use the live `data/items.json`.
-- The files were made by a generator script kept in the session scratchpad, not in the repo (see "How the files were made"). Edit the JSON directly, or regenerate with a new script.
+  - Loadouts checks in `tools/validate_pack.py`. The validator reports 0 errors and 0 warnings.
+  - **Update (2026-10-10):** Captain answered all 10 open questions (see "Captain's decisions (2026-10-10)" below). The answers are applied, and the generator is committed at `tools/loadouts_gen/`.
+- The WIP Perl catalogue, [tools/loadouts_catalog_wip.pl](../tools/loadouts_catalog_wip.pl), is superseded by `tools/loadouts_gen/catalog.py` and the index files. Its ids were kept, except `m110_sniper`, which duplicated `m110`. One correction: the INSAS rifle now uses `mag_556_20`, because 20 rounds in `mag_556` broke the one-id-per-calibre-and-type rule. Its `%GAME_IDS` list is out of date; use the live `data/items.json`.
+- The files are made by the generator in [tools/loadouts_gen/](../tools/loadouts_gen/). Change the specs there and re-run it; don't hand-edit `loadouts/`.
 
 ## What Captain asked for
 
@@ -22,6 +23,28 @@ Snapshot as of 2026-10-10 11:45 UTC. **Job 6 is complete on the fork** (`cghath/
   - A "what has to be built" summary in the README.
   - Keep ids stable.
 - The agent must **ask questions** rather than guess. Questions go to Captain through the project assistant. Open questions don't block the work: their defaults are applied and marked `proposed`.
+
+## Captain's decisions (2026-10-10)
+
+Captain's answers to the 10 questions raised by Job 6 are all applied.
+
+1. **Light steel plates: both.** `plate_steel_light` (steel, III, fits light) is a new item to build, and the loadouts and `armor_index.json` list it. Until it exists, each role's `game_kit` uses `plate_pe_l3` in its place. It is used by 20 factions.
+2. **Launcher items:** `at4`, `rpg7`, `javelin`, `maaws`, `nlaw` and `smaw`.
+   - The reloadable launchers' rounds are `pg7v`, `og7v`, `ffv551`, `ffv441d`, `mk6_heaa` and `mk3_hedp`, plus `javelin_missile`. AT4 and NLAW are single-shot, so the launcher item is the round.
+   - These ids appear as `proposed_game_item_id` on each launcher and round.
+3. **Hezbollah Radwan is light,** like other terror elites: a light vest with an improvised or captured steel plate, and helmets on squad leaders. The hezbollah notes say this differs from the faction file's medium by Captain's decision.
+4. **Crew helmets:** the TSh tanker helmet and the aircrew flight helmet are cosmetic, non-ballistic items to build (`helmet_tanker`, `helmet_flight`; tier `none`, `cosmetic: true`).
+5. **Heavy (III++) helmets** go to elite, SOF and PMC assault variants only, never regulars. They are worn on the assault roles (rifleman, autorifleman, grenadier, at, medic, squad_leader); marksman and sniper keep the standard helmet.
+   - K6-3 / Altyn-type with visor: rus `spetsnaz`, pmc_kestrel `assault`.
+   - Visored assault helmet (Caiman / FAST class): ukr `assault`, are `presidential_guard`, egy `saaka`, irq `cts`, pmc_halcyon `regular` (its assault team), pmc_black_sable `regular` (its contractor assault team).
+   - No Western SOF variant exists, and chn, isr, tur, kor, jpn, ind, pol, sau and qat have no elite variant, so none was created for this.
+6. **No collapsing of weapon families:** every designation stays its own model to build (238 weapons).
+7. **Rounds** are specced in the pack only, in `loadouts/rounds_index.json`: 21 round specs covering the 13 calibres with no round and the 6 designations that used a generic round. Each spec has calibre, designation, projectile, approximate muzzle velocity and mass, level on the game's armor ladder (with what stops it and what it defeats), users, and `in_game: false`.
+   - Each `ammo` entry keeps `game_round_id` (exact or generic) and adds `proposed_round_id`.
+   - The game repo is not edited.
+8. **Variants:** the 16 extra variants stay. New: rus `storm` and `mobilised`, ukr `assault`, irn `basij` and sau `sang`, each with all 8 core roles and real-world kit. That makes 112 variants.
+9. **pse_pa has a light grenadier:** an AKM with 4 hand grenades and no launcher. No PA combat 40 mm launcher is documented: the faction file lists only a 37/40 mm tear-gas launcher, and PA forces are limited to light weapons. The at and sniper roles stay `not_fielded`.
+10. **The generator is committed** at `tools/loadouts_gen/`. It runs from the repo root with `python3 -I tools/loadouts_gen/gen.py --game <game repo>` and reproduces the committed files exactly.
 
 ## Captain's answer (09:32 UTC, loadout questions thread)
 
@@ -51,7 +74,7 @@ Only the "real-life names" answer came back. The other 8 defaults were applied a
 6. **Medical (applied):** the game now already has `pressure_bandage`, `chest_seal`, `splint` and `morphine`. The still-missing ids are `iv_18g`, `io_fast1`, `saline_500`, `decompression_needle`, `epinephrine`, `adenosine`, `atropine`, `surgical_kit` and `defibrillator`. `ifak` and `trauma_kit` stay as containers.
 7. **Optics and smoke (applied):** optics are proposed class ids (`red_dot`, `prism4`, `lpvo`, `pso1` and so on). Smoke is white for screening (`smoke_grenade`), and green, red or violet for signalling (proposed `smoke_green`, `smoke_red`, `smoke_violet`).
 8. **Magazines (applied):** one id per calibre and type, for example `mag_545x39_30` and `belt_762x54r_100`. Pistol magazines share `mag_9mm` per calibre, as in the WIP catalogue.
-9. **Terror armor (applied):** regular fighters get none. Elites get a light vest with an improvised or captured steel plate, and only their squad leaders get a helmet; NVGs follow the faction's night capability. Exceptions that follow the faction files are listed under "Captain's decisions reflected" and in the open questions.
+9. **Terror armor (applied):** regular fighters get none. Elites get a light vest with an improvised or captured steel plate, and only their squad leaders get a helmet; NVGs follow the faction's night capability. Hezbollah and iraqi_militias regulars wear light soft vests, as their faction files say. Hezbollah's Radwan elite is light by Captain's decision (above).
 
 ## Rules
 
@@ -72,7 +95,7 @@ Only the "real-life names" answer came back. The other 8 defaults were applied a
 - **iraqi_militias is early tier.** Its armor is kept at light: a soft vest for regulars, and a light vest with a steel plate for elites. The faction file notes some medium (PMF-issued plate carriers); that is left out for the early game.
 - **afg_taliban is a limited client but never sells gear.** Its loadout notes say its gear reaches the player only as loot.
 - **pmc_black_sable is the nemesis** and pmc_halcyon an ordinary rival; this is noted in the files and does not change kit.
-- **hezbollah and houthis stay mid tier.** hezbollah regulars wear light soft vests, and its Radwan elite wears medium armor, as the faction file says (see open questions).
+- **hezbollah and houthis stay mid tier.** hezbollah regulars wear light soft vests; its Radwan elite wears the light terror-elite kit (Captain's decision, item 3 above).
 
 ## File schema
 
@@ -116,6 +139,7 @@ All files are UTF-8 JSON. Ids are stable snake_case. Item references share these
     "id", "name", "calibre", "game_item_id", "game_substitute"?,
     "optic": { "id", "name" },                  // optic class id (Q7)
     "ammo": { "id": "<mag id>", "round": "<real round designation>", "game_round_id": "<rounds.json id>|null",
+              "proposed_round_id"?: "<rounds_index.json id>",   // when game_round_id is null or only a generic match
               "rounds_per_mag", "count", "game_item_id" },
     "underbarrel"?: { "id", "name", "calibre", "game_item_id": null,
                       "ammo": [ { "id", "name", "count", "game_item_id": null } ] },
@@ -130,7 +154,8 @@ All files are UTF-8 JSON. Ids are stable snake_case. Item references share these
     "plates": { "id", "name", "material": "ceramic|steel|polyethylene", "real_rating", "front", "back",
                 "game_rating", "game_item_id", "game_substitute"?, "proposed_game_id"? } | null,
     "side_plates": { "id", "name", "material", "count", "game_item_id": "plate_side" } | null,   // heavy only
-    "helmet": { "id", "name", "tier": "none|light|medium|heavy", "game_rating", "game_item_id" } | null
+    "helmet": { "id", "name", "tier": "none|light|medium|heavy", "game_rating", "game_item_id",
+                "cosmetic"?: true, "proposed_game_id"? } | null      // cosmetic: non-ballistic crew helmets
   },
   "medical": { "container": "ifak|trauma_kit|null", "items": [ { "id", "count", "game_item_id" } ] },
   "other": [ { "id", "count", "game_item_id" } ],          // backpack, radio, binoculars, NVG
@@ -145,12 +170,14 @@ All files are UTF-8 JSON. Ids are stable snake_case. Item references share these
   "game_launcher": "AT4|RPG-7|Javelin|MAAWS|NLAW|SMAW" | null,
   "game_substitute": "<one of the 6>" | null,   // when in_game is false; null for MANPADS
   "game_item_id": null,                  // items.json has no launchers yet
-  "rounds": [ { "name": "PG-7V", "type": "HEAT|tandem HEAT|HE|HEDP|frag|thermobaric|SAM|top attack", "count" } ],
+  "proposed_game_item_id"?: "at4|rpg7|javelin|maaws|nlaw|smaw",   // in_game launchers only
+  "rounds": [ { "name": "PG-7V", "type": "HEAT|tandem HEAT|HE|HEDP|frag|thermobaric|SAM|top attack", "count",
+                "proposed_game_item_id"?: "pg7v|og7v|ffv551|ffv441d|mk6_heaa|mk3_hedp|javelin_missile" } ],
   "alternates"?: [ "<launcher id>", ... ]
 }
 ```
 
-`game_kit` is a stand-in kit the game can load today. It uses exact or generic items and `game_substitute` weapons. Ammunition is converted to the substitute's magazine by round count, capped at 12. It leaves out launchers, underbarrel ammo, optics, NVGs and medical items that do not exist yet.
+`game_kit` is a stand-in kit the game can load today. It uses exact or generic items and `game_substitute` items: weapons, and `plate_pe_l3` in place of the not-yet-built `plate_steel_light`. Ammunition is converted to the substitute's magazine by round count, capped at 12. It leaves out launchers, underbarrel ammo, optics, NVGs, cosmetic helmets and medical items that do not exist yet.
 
 ### `loadouts/weapons_index.json`
 
@@ -173,13 +200,26 @@ All files are UTF-8 JSON. Ids are stable snake_case. Item references share these
 
 `users` lists faction ids that use the item in any variant or role, including as an alternate.
 
+### `loadouts/rounds_index.json`
+
+```
+{
+  "schema_version": 1, "_note": "...",
+  "ladder": [ "IIA", "II", "IIIA", "III", "III+", "III++", "IV", "ABOVE_IV" ],
+  "game_armor_ratings": [ { "armor", "rating" } ],
+  "rounds": [ { "id", "calibre", "designations": [...], "projectile", "muzzle_velocity_mps", "mass_g", "class",
+                "game_level", "stopped_by": [game armor], "defeats": [game armor],
+                "current_game_round_id": "<generic rounds.json id>|null", "in_game": false, "users" } ]
+}
+```
+
 ### `loadouts/armor_index.json`
 
 ```
 {
   "schema_version": 1, "_note": "...",
   "tiers": { "vest": {...}, "helmet": {...}, "plate": {...} },   // tier -> generic game item
-  "helmets": [ { "id", "name", "tier", "designation": "specific|class", "real_rating", "game_rating", "game_item_id", "game_match", "users" } ],
+  "helmets": [ { "id", "name", "tier", "designation": "specific|class", "real_rating", "game_rating", "game_item_id", "game_match", "cosmetic"?, "proposed_game_id"?, "users" } ],
   "vests":   [ { "id", "name", "designation", "tiers": [worn at], "game_item_ids": { tier: item }, "game_match", "users" } ],
   "plates":  [ { "id", "name", "material", "designation", "real_rating", "side_plate", "vest_tiers", "game_item_ids": { tier: item or "NEW ..." }, "users" } ]
 }
@@ -187,12 +227,13 @@ All files are UTF-8 JSON. Ids are stable snake_case. Item references share these
 
 ## How the files were made
 
-- A Python generator held the catalogue (ported from the WIP Perl file, with additions), one spec per bloc (weapons per role, armor, variants and notes per faction) and the rules above. It read `factions/<id>.json` for names, camo, tier, vehicles, unit_templates and `ai_tuning`, and `data/items.json` for the game ids. It wrote the 76 files, the two indexes and the README in one run.
-- The script was kept in the session scratchpad, as this job's brief asked, so it is not in the repo. To change a loadout, edit the JSON and keep the indexes in step, or ask for the generator to be committed (open question below).
+- The generator is [tools/loadouts_gen/](../tools/loadouts_gen/) (its README explains the files and spec keys). It holds the catalogue (started as a port of the WIP Perl file), one spec per bloc and the rules above.
+- It reads `factions/<id>.json` (names, camo, tier, vehicles, unit_templates, `ai_tuning`), `reference/vehicles/` (vehicle types) and the game's `data/items.json`. It writes the 76 files, the three indexes and the README in one run.
+- Run it from the repo root: `python3 -I tools/loadouts_gen/gen.py --game <path to the Contractor game repo>` (on Captain's desktop, `--game B:\Contractor`). Then run `python3 -I tools/validate_pack.py`. The output is deterministic, and an unchanged checkout regenerates byte for byte.
 
 ## Validator
 
-`tools/validate_pack.py` checks every `loadouts/<id>.json` except the two index files:
+`tools/validate_pack.py` checks every `loadouts/<id>.json` except the three index files:
 
 - The id is a canonical faction id, not `player`, and matches the filename.
 - A `regular` variant exists, variant ids are unique, and every variant has all 8 core roles (a role may be `not_fielded`).
@@ -204,15 +245,4 @@ On Captain's desktop, which has no Python, mirror these checks in the session's 
 
 ## Open questions for Captain
 
-These are new questions raised while doing the job. Their defaults are applied and marked `proposed`.
-
-1. **Light steel plates.** Several faction files give light vests with steel plates: grc, mda, pak, phl, vnm, Artesh conscripts (irn), egy conscripts, sahel_aes and the terror elites except Hezbollah's Radwan (18 factions in all). The game has only a PE light plate. Default: a new `plate_steel_light` (steel, III, fits light), with `plate_pe_l3` standing in. Alternatives: use PE, or move these factions to medium.
-2. **Launcher items.** `data/items.json` has none of the 6 design-doc launchers yet. Proposed ids are `at4`, `rpg7`, `javelin`, `maaws`, `nlaw` and `smaw`, with their rounds (PG-7V, OG-7V, FFV551, FFV441D, Mk 6, Mk 3).
-3. **Hezbollah Radwan armor.** The faction file says medium, while the terror-elite default (Q9) is a light vest with a steel plate. Medium was kept. Confirm.
-4. **Non-ballistic crew helmets.** Tank crews (TSh tanker helmet) and aircrew (flight helmet) wear helmets with no ballistic rating. Default: helmet tier `none`, which needs a cosmetic helmet item. Alternatively, crews could wear the tier helmets.
-5. **Heavy helmets.** No AI default uses a heavy (III++) helmet, because no faction file gives one. Should Spetsnaz, PMC assault teams or other SOF variants get one for gameplay?
-6. **Build scope for weapons.** 238 weapons would have to be built, many used by 1-3 factions. Should close relatives share one model with skins (for example AK-74/AK-74M, the Minimi family, the G36 family, Carl Gustaf M2/M3/M4)?
-7. **Rounds.** 13 calibres have no round in `data/rounds.json`, and 6 designations (M855A1, SS109, M80A1, 7N13, and Chinese 7.62x51 and 9x19) use a generic round of the same calibre. Should they get their own rounds?
-8. **Extra variants.** Confirm the variants added beyond the Q1 list. Should Russian mobilised and Storm units, Ukrainian assault units, Basij, SANG and the other forces that faction files mention get variants too?
-9. **pse_pa.** The faction file lists no AT weapons, no sniper rifles and only a riot-control launcher, so grenadier, at and sniper are `not_fielded` (stand-in: rifleman). Confirm.
-10. **Generator.** Should the generator script be committed under `tools/` so the files can be regenerated, rather than edited by hand?
+None open for this job. The 10 questions raised by Job 6 were answered on 2026-10-10 (see "Captain's decisions (2026-10-10)").

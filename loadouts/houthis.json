@@ -148,7 +148,11 @@
       "game_launcher": "RPG-7",
       "game_substitute": null,
       "game_item_id": null,
-      "rounds": [{"name": "PG-7V", "type": "HEAT", "count": 2}, {"name": "OG-7V", "type": "frag", "count": 1}]
+      "proposed_game_item_id": "rpg7",
+      "rounds": [
+       {"name": "PG-7V", "type": "HEAT", "count": 2, "proposed_game_item_id": "pg7v"},
+       {"name": "OG-7V", "type": "frag", "count": 1, "proposed_game_item_id": "og7v"}
+      ]
      },
      "grenades": [],
      "armor": {"vest": null, "plates": null, "side_plates": null, "helmet": null},
@@ -213,7 +217,15 @@
       "calibre": "9x18mm",
       "game_item_id": null,
       "game_substitute": "m17",
-      "ammo": {"id": "mag_9x18_8", "round": "9x18mm 57-N-181S", "game_round_id": null, "rounds_per_mag": 8, "count": 2, "game_item_id": null}
+      "ammo": {
+       "id": "mag_9x18_8",
+       "round": "9x18mm 57-N-181S",
+       "game_round_id": null,
+       "proposed_round_id": "9x18_57n181s",
+       "rounds_per_mag": 8,
+       "count": 2,
+       "game_item_id": null
+      }
      },
      "launcher": null,
      "grenades": [{"id": "f1", "name": "F-1 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}],
@@ -272,7 +284,15 @@
       "vest": null,
       "plates": null,
       "side_plates": null,
-      "helmet": {"id": "tsh_tanker", "name": "TSh-series padded tanker helmet (non-ballistic)", "tier": "none", "game_rating": null, "game_item_id": null}
+      "helmet": {
+       "id": "tsh_tanker",
+       "name": "TSh-series padded tanker helmet (non-ballistic)",
+       "tier": "none",
+       "game_rating": null,
+       "game_item_id": null,
+       "cosmetic": true,
+       "proposed_game_id": "helmet_tanker"
+      }
      },
      "medical": {"container": null, "items": [{"id": "pressure_bandage", "count": 1, "game_item_id": "pressure_bandage"}]},
      "other": [],
@@ -563,7 +583,11 @@
       "game_launcher": "RPG-7",
       "game_substitute": null,
       "game_item_id": null,
-      "rounds": [{"name": "PG-7V", "type": "HEAT", "count": 2}, {"name": "OG-7V", "type": "frag", "count": 1}]
+      "proposed_game_item_id": "rpg7",
+      "rounds": [
+       {"name": "PG-7V", "type": "HEAT", "count": 2, "proposed_game_item_id": "pg7v"},
+       {"name": "OG-7V", "type": "frag", "count": 1, "proposed_game_item_id": "og7v"}
+      ]
      },
      "grenades": [{"id": "f1", "name": "F-1 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}],
      "armor": {
@@ -693,7 +717,15 @@
       "calibre": "9x18mm",
       "game_item_id": null,
       "game_substitute": "m17",
-      "ammo": {"id": "mag_9x18_8", "round": "9x18mm 57-N-181S", "game_round_id": null, "rounds_per_mag": 8, "count": 2, "game_item_id": null}
+      "ammo": {
+       "id": "mag_9x18_8",
+       "round": "9x18mm 57-N-181S",
+       "game_round_id": null,
+       "proposed_round_id": "9x18_57n181s",
+       "rounds_per_mag": 8,
+       "count": 2,
+       "game_item_id": null
+      }
      },
      "launcher": null,
      "grenades": [

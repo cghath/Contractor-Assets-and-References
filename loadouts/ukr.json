@@ -21,7 +21,15 @@
       "game_item_id": null,
       "game_substitute": "m4a1",
       "optic": {"id": "collimator", "name": "Collimator (Kobra / 1P87 / EKP-8 class)"},
-      "ammo": {"id": "mag_545x39_30", "round": "5.45x39mm 7N6M (steel core)", "game_round_id": null, "rounds_per_mag": 30, "count": 6, "game_item_id": null},
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 30,
+       "count": 6,
+       "game_item_id": null
+      },
       "alternates": ["akm", "m4", "hk416", "scar_l"]
      },
      "secondary": null,
@@ -84,7 +92,15 @@
       "game_item_id": null,
       "game_substitute": "m4a1",
       "optic": {"id": "collimator", "name": "Collimator (Kobra / 1P87 / EKP-8 class)"},
-      "ammo": {"id": "mag_545x39_45", "round": "5.45x39mm 7N6M (steel core)", "game_round_id": null, "rounds_per_mag": 45, "count": 8, "game_item_id": null},
+      "ammo": {
+       "id": "mag_545x39_45",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 45,
+       "count": 8,
+       "game_item_id": null
+      },
       "alternates": ["pkm", "m240b", "mg3", "mg5", "minimi", "mg4"]
      },
      "secondary": null,
@@ -211,7 +227,15 @@
       "game_item_id": null,
       "game_substitute": "m4a1",
       "optic": {"id": "collimator", "name": "Collimator (Kobra / 1P87 / EKP-8 class)"},
-      "ammo": {"id": "mag_545x39_30", "round": "5.45x39mm 7N6M (steel core)", "game_round_id": null, "rounds_per_mag": 30, "count": 6, "game_item_id": null},
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 30,
+       "count": 6,
+       "game_item_id": null
+      },
       "alternates": ["m4"],
       "underbarrel": {
        "id": "gp25",
@@ -278,7 +302,15 @@
       "game_item_id": null,
       "game_substitute": "m4a1",
       "optic": {"id": "collimator", "name": "Collimator (Kobra / 1P87 / EKP-8 class)"},
-      "ammo": {"id": "mag_545x39_30", "round": "5.45x39mm 7N6M (steel core)", "game_round_id": null, "rounds_per_mag": 30, "count": 4, "game_item_id": null}
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 30,
+       "count": 4,
+       "game_item_id": null
+      }
      },
      "secondary": null,
      "launcher": {
@@ -289,7 +321,11 @@
       "game_launcher": "RPG-7",
       "game_substitute": null,
       "game_item_id": null,
-      "rounds": [{"name": "PG-7V", "type": "HEAT", "count": 2}, {"name": "OG-7V", "type": "frag", "count": 1}],
+      "proposed_game_item_id": "rpg7",
+      "rounds": [
+       {"name": "PG-7V", "type": "HEAT", "count": 2, "proposed_game_item_id": "pg7v"},
+       {"name": "OG-7V", "type": "frag", "count": 1, "proposed_game_item_id": "og7v"}
+      ],
       "alternates": ["nlaw", "at4", "cg_m2", "smaw", "m72", "rpg26"]
      },
      "grenades": [{"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}],
@@ -347,7 +383,15 @@
       "game_item_id": null,
       "game_substitute": "mk18",
       "optic": {"id": "collimator", "name": "Collimator (Kobra / 1P87 / EKP-8 class)"},
-      "ammo": {"id": "mag_545x39_30", "round": "5.45x39mm 7N6M (steel core)", "game_round_id": null, "rounds_per_mag": 30, "count": 4, "game_item_id": null}
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 30,
+       "count": 4,
+       "game_item_id": null
+      }
      },
      "secondary": {
       "id": "pm_makarov",
@@ -355,7 +399,15 @@
       "calibre": "9x18mm",
       "game_item_id": null,
       "game_substitute": "m17",
-      "ammo": {"id": "mag_9x18_8", "round": "9x18mm 57-N-181S", "game_round_id": null, "rounds_per_mag": 8, "count": 2, "game_item_id": null}
+      "ammo": {
+       "id": "mag_9x18_8",
+       "round": "9x18mm 57-N-181S",
+       "game_round_id": null,
+       "proposed_round_id": "9x18_57n181s",
+       "rounds_per_mag": 8,
+       "count": 2,
+       "game_item_id": null
+      }
      },
      "launcher": null,
      "grenades": [{"id": "rdg2b", "name": "RDG-2B white smoke", "kind": "smoke_white", "count": 1, "game_item_id": "smoke_grenade"}],
@@ -428,7 +480,15 @@
       "game_item_id": null,
       "game_substitute": "m4a1",
       "optic": {"id": "collimator", "name": "Collimator (Kobra / 1P87 / EKP-8 class)"},
-      "ammo": {"id": "mag_545x39_30", "round": "5.45x39mm 7N6M (steel core)", "game_round_id": null, "rounds_per_mag": 30, "count": 6, "game_item_id": null},
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 30,
+       "count": 6,
+       "game_item_id": null
+      },
       "alternates": ["hk416", "m4"]
      },
      "secondary": {
@@ -437,7 +497,15 @@
       "calibre": "9x18mm",
       "game_item_id": null,
       "game_substitute": "m17",
-      "ammo": {"id": "mag_9x18_8", "round": "9x18mm 57-N-181S", "game_round_id": null, "rounds_per_mag": 8, "count": 2, "game_item_id": null}
+      "ammo": {
+       "id": "mag_9x18_8",
+       "round": "9x18mm 57-N-181S",
+       "game_round_id": null,
+       "proposed_round_id": "9x18_57n181s",
+       "rounds_per_mag": 8,
+       "count": 2,
+       "game_item_id": null
+      }
      },
      "launcher": null,
      "grenades": [
@@ -523,7 +591,15 @@
       "calibre": "9x18mm",
       "game_item_id": null,
       "game_substitute": "m17",
-      "ammo": {"id": "mag_9x18_8", "round": "9x18mm 57-N-181S", "game_round_id": null, "rounds_per_mag": 8, "count": 2, "game_item_id": null}
+      "ammo": {
+       "id": "mag_9x18_8",
+       "round": "9x18mm 57-N-181S",
+       "game_round_id": null,
+       "proposed_round_id": "9x18_57n181s",
+       "rounds_per_mag": 8,
+       "count": 2,
+       "game_item_id": null
+      }
      },
      "launcher": null,
      "grenades": [{"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}],
@@ -587,7 +663,15 @@
       "game_item_id": null,
       "game_substitute": "mk18",
       "optic": {"id": "collimator", "name": "Collimator (Kobra / 1P87 / EKP-8 class)"},
-      "ammo": {"id": "mag_545x39_30", "round": "5.45x39mm 7N6M (steel core)", "game_round_id": null, "rounds_per_mag": 30, "count": 3, "game_item_id": null}
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 30,
+       "count": 3,
+       "game_item_id": null
+      }
      },
      "secondary": {
       "id": "pm_makarov",
@@ -595,7 +679,15 @@
       "calibre": "9x18mm",
       "game_item_id": null,
       "game_substitute": "m17",
-      "ammo": {"id": "mag_9x18_8", "round": "9x18mm 57-N-181S", "game_round_id": null, "rounds_per_mag": 8, "count": 2, "game_item_id": null}
+      "ammo": {
+       "id": "mag_9x18_8",
+       "round": "9x18mm 57-N-181S",
+       "game_round_id": null,
+       "proposed_round_id": "9x18_57n181s",
+       "rounds_per_mag": 8,
+       "count": 2,
+       "game_item_id": null
+      }
      },
      "launcher": null,
      "grenades": [],
@@ -612,7 +704,15 @@
        "game_item_id": "plate_steel_l3"
       },
       "side_plates": null,
-      "helmet": {"id": "tsh_tanker", "name": "TSh-series padded tanker helmet (non-ballistic)", "tier": "none", "game_rating": null, "game_item_id": null}
+      "helmet": {
+       "id": "tsh_tanker",
+       "name": "TSh-series padded tanker helmet (non-ballistic)",
+       "tier": "none",
+       "game_rating": null,
+       "game_item_id": null,
+       "cosmetic": true,
+       "proposed_game_id": "helmet_tanker"
+      }
      },
      "medical": {
       "container": "ifak",
@@ -649,7 +749,8 @@
      "game_launcher": "Javelin",
      "game_substitute": null,
      "game_item_id": null,
-     "rounds": [{"name": "FGM-148 missile (tandem HEAT, top attack)", "type": "tandem HEAT", "count": 1}]
+     "proposed_game_item_id": "javelin",
+     "rounds": [{"name": "FGM-148 missile (tandem HEAT, top attack)", "type": "tandem HEAT", "count": 1, "proposed_game_item_id": "javelin_missile"}]
     },
     {
      "id": "stugna",
@@ -748,7 +849,15 @@
       "game_item_id": null,
       "game_substitute": "m4a1",
       "optic": {"id": "iron", "name": "Iron sights"},
-      "ammo": {"id": "mag_545x39_45", "round": "5.45x39mm 7N6M (steel core)", "game_round_id": null, "rounds_per_mag": 45, "count": 8, "game_item_id": null},
+      "ammo": {
+       "id": "mag_545x39_45",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 45,
+       "count": 8,
+       "game_item_id": null
+      },
       "alternates": ["pkm"]
      },
      "secondary": null,
@@ -874,7 +983,15 @@
       "game_item_id": null,
       "game_substitute": "m4a1",
       "optic": {"id": "iron", "name": "Iron sights"},
-      "ammo": {"id": "mag_545x39_30", "round": "5.45x39mm 7N6M (steel core)", "game_round_id": null, "rounds_per_mag": 30, "count": 6, "game_item_id": null},
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 30,
+       "count": 6,
+       "game_item_id": null
+      },
       "underbarrel": {
        "id": "gp25",
        "name": "GP-25 / GP-30",
@@ -958,7 +1075,11 @@
       "game_launcher": "RPG-7",
       "game_substitute": null,
       "game_item_id": null,
-      "rounds": [{"name": "PG-7V", "type": "HEAT", "count": 2}, {"name": "OG-7V", "type": "frag", "count": 1}],
+      "proposed_game_item_id": "rpg7",
+      "rounds": [
+       {"name": "PG-7V", "type": "HEAT", "count": 2, "proposed_game_item_id": "pg7v"},
+       {"name": "OG-7V", "type": "frag", "count": 1, "proposed_game_item_id": "og7v"}
+      ],
       "alternates": ["rpg18", "rpg22", "nlaw"]
      },
      "grenades": [{"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}],
@@ -1016,7 +1137,15 @@
       "game_item_id": null,
       "game_substitute": "mk18",
       "optic": {"id": "iron", "name": "Iron sights"},
-      "ammo": {"id": "mag_545x39_30", "round": "5.45x39mm 7N6M (steel core)", "game_round_id": null, "rounds_per_mag": 30, "count": 4, "game_item_id": null}
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 30,
+       "count": 4,
+       "game_item_id": null
+      }
      },
      "secondary": {
       "id": "pm_makarov",
@@ -1024,7 +1153,15 @@
       "calibre": "9x18mm",
       "game_item_id": null,
       "game_substitute": "m17",
-      "ammo": {"id": "mag_9x18_8", "round": "9x18mm 57-N-181S", "game_round_id": null, "rounds_per_mag": 8, "count": 2, "game_item_id": null}
+      "ammo": {
+       "id": "mag_9x18_8",
+       "round": "9x18mm 57-N-181S",
+       "game_round_id": null,
+       "proposed_round_id": "9x18_57n181s",
+       "rounds_per_mag": 8,
+       "count": 2,
+       "game_item_id": null
+      }
      },
      "launcher": null,
      "grenades": [{"id": "rdg2b", "name": "RDG-2B white smoke", "kind": "smoke_white", "count": 1, "game_item_id": "smoke_grenade"}],
@@ -1097,7 +1234,15 @@
       "game_item_id": null,
       "game_substitute": "m4a1",
       "optic": {"id": "collimator", "name": "Collimator (Kobra / 1P87 / EKP-8 class)"},
-      "ammo": {"id": "mag_545x39_30", "round": "5.45x39mm 7N6M (steel core)", "game_round_id": null, "rounds_per_mag": 30, "count": 6, "game_item_id": null}
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 30,
+       "count": 6,
+       "game_item_id": null
+      }
      },
      "secondary": {
       "id": "pm_makarov",
@@ -1105,7 +1250,15 @@
       "calibre": "9x18mm",
       "game_item_id": null,
       "game_substitute": "m17",
-      "ammo": {"id": "mag_9x18_8", "round": "9x18mm 57-N-181S", "game_round_id": null, "rounds_per_mag": 8, "count": 2, "game_item_id": null}
+      "ammo": {
+       "id": "mag_9x18_8",
+       "round": "9x18mm 57-N-181S",
+       "game_round_id": null,
+       "proposed_round_id": "9x18_57n181s",
+       "rounds_per_mag": 8,
+       "count": 2,
+       "game_item_id": null
+      }
      },
      "launcher": null,
      "grenades": [
@@ -1190,7 +1343,15 @@
       "calibre": "9x18mm",
       "game_item_id": null,
       "game_substitute": "m17",
-      "ammo": {"id": "mag_9x18_8", "round": "9x18mm 57-N-181S", "game_round_id": null, "rounds_per_mag": 8, "count": 2, "game_item_id": null}
+      "ammo": {
+       "id": "mag_9x18_8",
+       "round": "9x18mm 57-N-181S",
+       "game_round_id": null,
+       "proposed_round_id": "9x18_57n181s",
+       "rounds_per_mag": 8,
+       "count": 2,
+       "game_item_id": null
+      }
      },
      "launcher": null,
      "grenades": [{"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}],
@@ -1254,7 +1415,15 @@
       "game_item_id": null,
       "game_substitute": "mk18",
       "optic": {"id": "iron", "name": "Iron sights"},
-      "ammo": {"id": "mag_545x39_30", "round": "5.45x39mm 7N6M (steel core)", "game_round_id": null, "rounds_per_mag": 30, "count": 3, "game_item_id": null}
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 30,
+       "count": 3,
+       "game_item_id": null
+      }
      },
      "secondary": {
       "id": "pm_makarov",
@@ -1262,7 +1431,15 @@
       "calibre": "9x18mm",
       "game_item_id": null,
       "game_substitute": "m17",
-      "ammo": {"id": "mag_9x18_8", "round": "9x18mm 57-N-181S", "game_round_id": null, "rounds_per_mag": 8, "count": 2, "game_item_id": null}
+      "ammo": {
+       "id": "mag_9x18_8",
+       "round": "9x18mm 57-N-181S",
+       "game_round_id": null,
+       "proposed_round_id": "9x18_57n181s",
+       "rounds_per_mag": 8,
+       "count": 2,
+       "game_item_id": null
+      }
      },
      "launcher": null,
      "grenades": [],
@@ -1279,7 +1456,15 @@
        "game_item_id": "plate_steel_l3"
       },
       "side_plates": null,
-      "helmet": {"id": "tsh_tanker", "name": "TSh-series padded tanker helmet (non-ballistic)", "tier": "none", "game_rating": null, "game_item_id": null}
+      "helmet": {
+       "id": "tsh_tanker",
+       "name": "TSh-series padded tanker helmet (non-ballistic)",
+       "tier": "none",
+       "game_rating": null,
+       "game_item_id": null,
+       "cosmetic": true,
+       "proposed_game_id": "helmet_tanker"
+      }
      },
      "medical": {
       "container": "ifak",
@@ -1320,12 +1505,796 @@
     }
    ],
    "notes": ["Older AK stocks, fewer optics and fewer Western launchers than the line brigades."]
+  },
+  {
+   "id": "assault",
+   "name": "Assault brigades and assault units",
+   "camo": "MultiCam",
+   "armor_tier": "heavy",
+   "medical_level": "full",
+   "roles": {
+    "rifleman": {
+     "primary": {
+      "id": "ak74",
+      "name": "AK-74 / AKS-74",
+      "calibre": "5.45x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "collimator", "name": "Collimator (Kobra / 1P87 / EKP-8 class)"},
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 30,
+       "count": 6,
+       "game_item_id": null
+      },
+      "alternates": ["hk416", "m4", "scar_l"]
+     },
+     "secondary": null,
+     "launcher": null,
+     "grenades": [
+      {"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"},
+      {"id": "f1", "name": "F-1 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}
+     ],
+     "armor": {
+      "vest": {"id": "plate_carrier_nat", "name": "Modular plate carrier, national issue", "tier": "heavy", "game_item_id": "plate_carrier_heavy"},
+      "plates": {
+       "id": "steel_nat",
+       "name": "Steel plates, national manufacture (NIJ III / III+ class)",
+       "material": "steel",
+       "real_rating": "NIJ III to III+ class",
+       "front": true,
+       "back": true,
+       "game_rating": "III++",
+       "game_item_id": "plate_steel_l3"
+      },
+      "side_plates": {"id": "side_plates", "name": "Side plates, national issue (6x8 in class)", "material": "ceramic", "count": 2, "game_item_id": "plate_side"},
+      "helmet": {
+       "id": "assault_helmet_visor",
+       "name": "Assault helmet with ballistic visor and mandible (Caiman / FAST class)",
+       "tier": "heavy",
+       "game_rating": "III++",
+       "game_item_id": "helmet_heavy"
+      }
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [
+       {"id": "tourniquet", "count": 2, "game_item_id": "tourniquet"},
+       {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"},
+       {"id": "hemostatic_gauze", "count": 1, "game_item_id": "hemostatic_gauze"},
+       {"id": "chest_seal", "count": 2, "game_item_id": "chest_seal"},
+       {"id": "npa", "count": 1, "game_item_id": "npa"}
+      ]
+     },
+     "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}, {"id": "nvg_bino", "count": 1, "game_item_id": null}],
+     "game_kit": [
+      ["plate_carrier_heavy", 1],
+      ["plate_steel_l3", 2],
+      ["plate_side", 2],
+      ["helmet_heavy", 1],
+      ["m4a1", 1],
+      ["mag_556", 6],
+      ["frag_grenade", 2],
+      ["ifak", 1],
+      ["tourniquet", 2],
+      ["pressure_bandage", 2],
+      ["hemostatic_gauze", 1],
+      ["chest_seal", 2],
+      ["npa", 1],
+      ["assault_pack", 1]
+     ]
+    },
+    "autorifleman": {
+     "primary": {
+      "id": "pkm",
+      "name": "PKM",
+      "calibre": "7.62x54R",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "iron", "name": "Iron sights"},
+      "ammo": {
+       "id": "belt_762x54r_100",
+       "round": "7.62x54R 57-N-323S LPS (steel core)",
+       "game_round_id": "762x54r_lps",
+       "rounds_per_mag": 100,
+       "count": 3,
+       "game_item_id": null
+      },
+      "alternates": ["minimi", "mg4", "rpk74"]
+     },
+     "secondary": null,
+     "launcher": null,
+     "grenades": [{"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}],
+     "armor": {
+      "vest": {"id": "plate_carrier_nat", "name": "Modular plate carrier, national issue", "tier": "heavy", "game_item_id": "plate_carrier_heavy"},
+      "plates": {
+       "id": "steel_nat",
+       "name": "Steel plates, national manufacture (NIJ III / III+ class)",
+       "material": "steel",
+       "real_rating": "NIJ III to III+ class",
+       "front": true,
+       "back": true,
+       "game_rating": "III++",
+       "game_item_id": "plate_steel_l3"
+      },
+      "side_plates": {"id": "side_plates", "name": "Side plates, national issue (6x8 in class)", "material": "ceramic", "count": 2, "game_item_id": "plate_side"},
+      "helmet": {
+       "id": "assault_helmet_visor",
+       "name": "Assault helmet with ballistic visor and mandible (Caiman / FAST class)",
+       "tier": "heavy",
+       "game_rating": "III++",
+       "game_item_id": "helmet_heavy"
+      }
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [
+       {"id": "tourniquet", "count": 2, "game_item_id": "tourniquet"},
+       {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"},
+       {"id": "hemostatic_gauze", "count": 1, "game_item_id": "hemostatic_gauze"},
+       {"id": "chest_seal", "count": 2, "game_item_id": "chest_seal"},
+       {"id": "npa", "count": 1, "game_item_id": "npa"}
+      ]
+     },
+     "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}, {"id": "nvg_bino", "count": 1, "game_item_id": null}],
+     "game_kit": [
+      ["plate_carrier_heavy", 1],
+      ["plate_steel_l3", 2],
+      ["plate_side", 2],
+      ["helmet_heavy", 1],
+      ["m4a1", 1],
+      ["mag_556", 10],
+      ["frag_grenade", 1],
+      ["ifak", 1],
+      ["tourniquet", 2],
+      ["pressure_bandage", 2],
+      ["hemostatic_gauze", 1],
+      ["chest_seal", 2],
+      ["npa", 1],
+      ["assault_pack", 1]
+     ]
+    },
+    "marksman": {
+     "primary": {
+      "id": "svd",
+      "name": "SVD Dragunov",
+      "calibre": "7.62x54R",
+      "game_item_id": null,
+      "game_substitute": "m110",
+      "optic": {"id": "pso1", "name": "PSO-1 4x scope"},
+      "ammo": {
+       "id": "mag_762x54r_10",
+       "round": "7.62x54R 57-N-323S LPS (steel core)",
+       "game_round_id": "762x54r_lps",
+       "rounds_per_mag": 10,
+       "count": 6,
+       "game_item_id": null
+      }
+     },
+     "secondary": null,
+     "launcher": null,
+     "grenades": [{"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}],
+     "armor": {
+      "vest": {"id": "plate_carrier_nat", "name": "Modular plate carrier, national issue", "tier": "heavy", "game_item_id": "plate_carrier_heavy"},
+      "plates": {
+       "id": "steel_nat",
+       "name": "Steel plates, national manufacture (NIJ III / III+ class)",
+       "material": "steel",
+       "real_rating": "NIJ III to III+ class",
+       "front": true,
+       "back": true,
+       "game_rating": "III++",
+       "game_item_id": "plate_steel_l3"
+      },
+      "side_plates": {"id": "side_plates", "name": "Side plates, national issue (6x8 in class)", "material": "ceramic", "count": 2, "game_item_id": "plate_side"},
+      "helmet": {
+       "id": "aramid_helmet",
+       "name": "Aramid combat helmet, national issue (PASGT / MICH class)",
+       "tier": "medium",
+       "game_rating": "IIIA",
+       "game_item_id": "helmet"
+      }
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [
+       {"id": "tourniquet", "count": 2, "game_item_id": "tourniquet"},
+       {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"},
+       {"id": "hemostatic_gauze", "count": 1, "game_item_id": "hemostatic_gauze"},
+       {"id": "chest_seal", "count": 2, "game_item_id": "chest_seal"},
+       {"id": "npa", "count": 1, "game_item_id": "npa"}
+      ]
+     },
+     "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}, {"id": "nvg_bino", "count": 1, "game_item_id": null}],
+     "game_kit": [
+      ["plate_carrier_heavy", 1],
+      ["plate_steel_l3", 2],
+      ["plate_side", 2],
+      ["helmet", 1],
+      ["m110", 1],
+      ["mag_762", 3],
+      ["frag_grenade", 1],
+      ["ifak", 1],
+      ["tourniquet", 2],
+      ["pressure_bandage", 2],
+      ["hemostatic_gauze", 1],
+      ["chest_seal", 2],
+      ["npa", 1],
+      ["assault_pack", 1]
+     ]
+    },
+    "grenadier": {
+     "primary": {
+      "id": "ak74",
+      "name": "AK-74 / AKS-74",
+      "calibre": "5.45x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "collimator", "name": "Collimator (Kobra / 1P87 / EKP-8 class)"},
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 30,
+       "count": 6,
+       "game_item_id": null
+      },
+      "underbarrel": {
+       "id": "gp25",
+       "name": "GP-25 / GP-30",
+       "calibre": "40mm VOG-25 (caseless)",
+       "game_item_id": null,
+       "ammo": [{"id": "gl_vog25", "name": "VOG-25 40mm caseless HE grenade", "count": 10, "game_item_id": null}]
+      }
+     },
+     "secondary": null,
+     "launcher": null,
+     "grenades": [{"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}],
+     "armor": {
+      "vest": {"id": "plate_carrier_nat", "name": "Modular plate carrier, national issue", "tier": "heavy", "game_item_id": "plate_carrier_heavy"},
+      "plates": {
+       "id": "steel_nat",
+       "name": "Steel plates, national manufacture (NIJ III / III+ class)",
+       "material": "steel",
+       "real_rating": "NIJ III to III+ class",
+       "front": true,
+       "back": true,
+       "game_rating": "III++",
+       "game_item_id": "plate_steel_l3"
+      },
+      "side_plates": {"id": "side_plates", "name": "Side plates, national issue (6x8 in class)", "material": "ceramic", "count": 2, "game_item_id": "plate_side"},
+      "helmet": {
+       "id": "assault_helmet_visor",
+       "name": "Assault helmet with ballistic visor and mandible (Caiman / FAST class)",
+       "tier": "heavy",
+       "game_rating": "III++",
+       "game_item_id": "helmet_heavy"
+      }
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [
+       {"id": "tourniquet", "count": 2, "game_item_id": "tourniquet"},
+       {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"},
+       {"id": "hemostatic_gauze", "count": 1, "game_item_id": "hemostatic_gauze"},
+       {"id": "chest_seal", "count": 2, "game_item_id": "chest_seal"},
+       {"id": "npa", "count": 1, "game_item_id": "npa"}
+      ]
+     },
+     "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}, {"id": "nvg_bino", "count": 1, "game_item_id": null}],
+     "game_kit": [
+      ["plate_carrier_heavy", 1],
+      ["plate_steel_l3", 2],
+      ["plate_side", 2],
+      ["helmet_heavy", 1],
+      ["m4a1", 1],
+      ["mag_556", 6],
+      ["frag_grenade", 1],
+      ["ifak", 1],
+      ["tourniquet", 2],
+      ["pressure_bandage", 2],
+      ["hemostatic_gauze", 1],
+      ["chest_seal", 2],
+      ["npa", 1],
+      ["assault_pack", 1]
+     ]
+    },
+    "at": {
+     "primary": {
+      "id": "ak74",
+      "name": "AK-74 / AKS-74",
+      "calibre": "5.45x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "collimator", "name": "Collimator (Kobra / 1P87 / EKP-8 class)"},
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 30,
+       "count": 4,
+       "game_item_id": null
+      }
+     },
+     "secondary": null,
+     "launcher": {
+      "id": "rpg7",
+      "name": "RPG-7",
+      "kind": "rocket",
+      "in_game": true,
+      "game_launcher": "RPG-7",
+      "game_substitute": null,
+      "game_item_id": null,
+      "proposed_game_item_id": "rpg7",
+      "rounds": [
+       {"name": "PG-7V", "type": "HEAT", "count": 2, "proposed_game_item_id": "pg7v"},
+       {"name": "OG-7V", "type": "frag", "count": 1, "proposed_game_item_id": "og7v"}
+      ],
+      "alternates": ["at4", "nlaw", "smaw", "rpg26"]
+     },
+     "grenades": [{"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}],
+     "armor": {
+      "vest": {"id": "plate_carrier_nat", "name": "Modular plate carrier, national issue", "tier": "heavy", "game_item_id": "plate_carrier_heavy"},
+      "plates": {
+       "id": "steel_nat",
+       "name": "Steel plates, national manufacture (NIJ III / III+ class)",
+       "material": "steel",
+       "real_rating": "NIJ III to III+ class",
+       "front": true,
+       "back": true,
+       "game_rating": "III++",
+       "game_item_id": "plate_steel_l3"
+      },
+      "side_plates": {"id": "side_plates", "name": "Side plates, national issue (6x8 in class)", "material": "ceramic", "count": 2, "game_item_id": "plate_side"},
+      "helmet": {
+       "id": "assault_helmet_visor",
+       "name": "Assault helmet with ballistic visor and mandible (Caiman / FAST class)",
+       "tier": "heavy",
+       "game_rating": "III++",
+       "game_item_id": "helmet_heavy"
+      }
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [
+       {"id": "tourniquet", "count": 2, "game_item_id": "tourniquet"},
+       {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"},
+       {"id": "hemostatic_gauze", "count": 1, "game_item_id": "hemostatic_gauze"},
+       {"id": "chest_seal", "count": 2, "game_item_id": "chest_seal"},
+       {"id": "npa", "count": 1, "game_item_id": "npa"}
+      ]
+     },
+     "other": [{"id": "ruck_45", "count": 1, "game_item_id": "ruck_45"}, {"id": "nvg_bino", "count": 1, "game_item_id": null}],
+     "game_kit": [
+      ["plate_carrier_heavy", 1],
+      ["plate_steel_l3", 2],
+      ["plate_side", 2],
+      ["helmet_heavy", 1],
+      ["m4a1", 1],
+      ["mag_556", 4],
+      ["frag_grenade", 1],
+      ["ifak", 1],
+      ["tourniquet", 2],
+      ["pressure_bandage", 2],
+      ["hemostatic_gauze", 1],
+      ["chest_seal", 2],
+      ["npa", 1],
+      ["ruck_45", 1]
+     ]
+    },
+    "medic": {
+     "primary": {
+      "id": "aks74u",
+      "name": "AKS-74U",
+      "calibre": "5.45x39mm",
+      "game_item_id": null,
+      "game_substitute": "mk18",
+      "optic": {"id": "collimator", "name": "Collimator (Kobra / 1P87 / EKP-8 class)"},
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 30,
+       "count": 4,
+       "game_item_id": null
+      }
+     },
+     "secondary": {
+      "id": "pm_makarov",
+      "name": "PM Makarov",
+      "calibre": "9x18mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {
+       "id": "mag_9x18_8",
+       "round": "9x18mm 57-N-181S",
+       "game_round_id": null,
+       "proposed_round_id": "9x18_57n181s",
+       "rounds_per_mag": 8,
+       "count": 2,
+       "game_item_id": null
+      }
+     },
+     "launcher": null,
+     "grenades": [{"id": "rdg2b", "name": "RDG-2B white smoke", "kind": "smoke_white", "count": 1, "game_item_id": "smoke_grenade"}],
+     "armor": {
+      "vest": {"id": "plate_carrier_nat", "name": "Modular plate carrier, national issue", "tier": "heavy", "game_item_id": "plate_carrier_heavy"},
+      "plates": {
+       "id": "steel_nat",
+       "name": "Steel plates, national manufacture (NIJ III / III+ class)",
+       "material": "steel",
+       "real_rating": "NIJ III to III+ class",
+       "front": true,
+       "back": true,
+       "game_rating": "III++",
+       "game_item_id": "plate_steel_l3"
+      },
+      "side_plates": {"id": "side_plates", "name": "Side plates, national issue (6x8 in class)", "material": "ceramic", "count": 2, "game_item_id": "plate_side"},
+      "helmet": {
+       "id": "assault_helmet_visor",
+       "name": "Assault helmet with ballistic visor and mandible (Caiman / FAST class)",
+       "tier": "heavy",
+       "game_rating": "III++",
+       "game_item_id": "helmet_heavy"
+      }
+     },
+     "medical": {
+      "container": "trauma_kit",
+      "items": [
+       {"id": "tourniquet", "count": 4, "game_item_id": "tourniquet"},
+       {"id": "pressure_bandage", "count": 8, "game_item_id": "pressure_bandage"},
+       {"id": "hemostatic_gauze", "count": 4, "game_item_id": "hemostatic_gauze"},
+       {"id": "chest_seal", "count": 4, "game_item_id": "chest_seal"},
+       {"id": "splint", "count": 2, "game_item_id": "splint"},
+       {"id": "npa", "count": 3, "game_item_id": "npa"},
+       {"id": "decompression_needle", "count": 2, "game_item_id": null},
+       {"id": "iv_18g", "count": 3, "game_item_id": null},
+       {"id": "io_fast1", "count": 1, "game_item_id": null},
+       {"id": "saline_500", "count": 4, "game_item_id": null},
+       {"id": "morphine", "count": 4, "game_item_id": "morphine"},
+       {"id": "epinephrine", "count": 3, "game_item_id": null},
+       {"id": "adenosine", "count": 1, "game_item_id": null},
+       {"id": "atropine", "count": 2, "game_item_id": null},
+       {"id": "surgical_kit", "count": 1, "game_item_id": null}
+      ]
+     },
+     "other": [{"id": "ruck_45", "count": 1, "game_item_id": "ruck_45"}, {"id": "nvg_bino", "count": 1, "game_item_id": null}],
+     "game_kit": [
+      ["plate_carrier_heavy", 1],
+      ["plate_steel_l3", 2],
+      ["plate_side", 2],
+      ["helmet_heavy", 1],
+      ["mk18", 1],
+      ["mag_556", 4],
+      ["m17", 1],
+      ["mag_9mm", 2],
+      ["smoke_grenade", 1],
+      ["trauma_kit", 1],
+      ["tourniquet", 4],
+      ["pressure_bandage", 8],
+      ["hemostatic_gauze", 4],
+      ["chest_seal", 4],
+      ["splint", 2],
+      ["npa", 3],
+      ["morphine", 4],
+      ["ruck_45", 1]
+     ]
+    },
+    "squad_leader": {
+     "primary": {
+      "id": "hk416",
+      "name": "HK416",
+      "calibre": "5.56x45mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "collimator", "name": "Collimator (Kobra / 1P87 / EKP-8 class)"},
+      "ammo": {
+       "id": "mag_556",
+       "round": "5.56x45mm SS109 / M855 (NATO ball)",
+       "game_round_id": "556_m855",
+       "proposed_round_id": "556_ss109",
+       "rounds_per_mag": 30,
+       "count": 6,
+       "game_item_id": "mag_556"
+      },
+      "alternates": ["m4"]
+     },
+     "secondary": {
+      "id": "pm_makarov",
+      "name": "PM Makarov",
+      "calibre": "9x18mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {
+       "id": "mag_9x18_8",
+       "round": "9x18mm 57-N-181S",
+       "game_round_id": null,
+       "proposed_round_id": "9x18_57n181s",
+       "rounds_per_mag": 8,
+       "count": 2,
+       "game_item_id": null
+      }
+     },
+     "launcher": null,
+     "grenades": [
+      {"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"},
+      {"id": "f1", "name": "F-1 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"},
+      {"id": "rdg2b", "name": "RDG-2B white smoke", "kind": "smoke_white", "count": 1, "game_item_id": "smoke_grenade"}
+     ],
+     "armor": {
+      "vest": {"id": "plate_carrier_nat", "name": "Modular plate carrier, national issue", "tier": "heavy", "game_item_id": "plate_carrier_heavy"},
+      "plates": {
+       "id": "steel_nat",
+       "name": "Steel plates, national manufacture (NIJ III / III+ class)",
+       "material": "steel",
+       "real_rating": "NIJ III to III+ class",
+       "front": true,
+       "back": true,
+       "game_rating": "III++",
+       "game_item_id": "plate_steel_l3"
+      },
+      "side_plates": {"id": "side_plates", "name": "Side plates, national issue (6x8 in class)", "material": "ceramic", "count": 2, "game_item_id": "plate_side"},
+      "helmet": {
+       "id": "assault_helmet_visor",
+       "name": "Assault helmet with ballistic visor and mandible (Caiman / FAST class)",
+       "tier": "heavy",
+       "game_rating": "III++",
+       "game_item_id": "helmet_heavy"
+      }
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [
+       {"id": "tourniquet", "count": 2, "game_item_id": "tourniquet"},
+       {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"},
+       {"id": "hemostatic_gauze", "count": 1, "game_item_id": "hemostatic_gauze"},
+       {"id": "chest_seal", "count": 2, "game_item_id": "chest_seal"},
+       {"id": "npa", "count": 1, "game_item_id": "npa"}
+      ]
+     },
+     "other": [
+      {"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"},
+      {"id": "radio", "count": 1, "game_item_id": null},
+      {"id": "binoculars", "count": 1, "game_item_id": null},
+      {"id": "nvg_bino", "count": 1, "game_item_id": null}
+     ],
+     "game_kit": [
+      ["plate_carrier_heavy", 1],
+      ["plate_steel_l3", 2],
+      ["plate_side", 2],
+      ["helmet_heavy", 1],
+      ["m4a1", 1],
+      ["mag_556", 6],
+      ["m17", 1],
+      ["mag_9mm", 2],
+      ["frag_grenade", 2],
+      ["smoke_grenade", 1],
+      ["ifak", 1],
+      ["tourniquet", 2],
+      ["pressure_bandage", 2],
+      ["hemostatic_gauze", 1],
+      ["chest_seal", 2],
+      ["npa", 1],
+      ["assault_pack", 1]
+     ]
+    },
+    "sniper": {
+     "primary": {
+      "id": "fort301",
+      "name": "Fort-301",
+      "calibre": "7.62x51mm",
+      "game_item_id": null,
+      "game_substitute": "m110",
+      "optic": {"id": "sniper_scope", "name": "5-25x sniper scope"},
+      "ammo": {
+       "id": "mag_762x51_10",
+       "round": "7.62x51mm M80 / NATO ball",
+       "game_round_id": "762x51_m80",
+       "rounds_per_mag": 10,
+       "count": 5,
+       "game_item_id": null
+      },
+      "alternates": ["ax308", "m82a1"]
+     },
+     "secondary": {
+      "id": "pm_makarov",
+      "name": "PM Makarov",
+      "calibre": "9x18mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {
+       "id": "mag_9x18_8",
+       "round": "9x18mm 57-N-181S",
+       "game_round_id": null,
+       "proposed_round_id": "9x18_57n181s",
+       "rounds_per_mag": 8,
+       "count": 2,
+       "game_item_id": null
+      }
+     },
+     "launcher": null,
+     "grenades": [{"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}],
+     "armor": {
+      "vest": {"id": "plate_carrier_nat", "name": "Modular plate carrier, national issue", "tier": "heavy", "game_item_id": "plate_carrier_heavy"},
+      "plates": {
+       "id": "steel_nat",
+       "name": "Steel plates, national manufacture (NIJ III / III+ class)",
+       "material": "steel",
+       "real_rating": "NIJ III to III+ class",
+       "front": true,
+       "back": true,
+       "game_rating": "III++",
+       "game_item_id": "plate_steel_l3"
+      },
+      "side_plates": {"id": "side_plates", "name": "Side plates, national issue (6x8 in class)", "material": "ceramic", "count": 2, "game_item_id": "plate_side"},
+      "helmet": {
+       "id": "aramid_helmet",
+       "name": "Aramid combat helmet, national issue (PASGT / MICH class)",
+       "tier": "medium",
+       "game_rating": "IIIA",
+       "game_item_id": "helmet"
+      }
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [
+       {"id": "tourniquet", "count": 2, "game_item_id": "tourniquet"},
+       {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"},
+       {"id": "hemostatic_gauze", "count": 1, "game_item_id": "hemostatic_gauze"},
+       {"id": "chest_seal", "count": 2, "game_item_id": "chest_seal"},
+       {"id": "npa", "count": 1, "game_item_id": "npa"}
+      ]
+     },
+     "other": [
+      {"id": "ruck_45", "count": 1, "game_item_id": "ruck_45"},
+      {"id": "binoculars", "count": 1, "game_item_id": null},
+      {"id": "nvg_bino", "count": 1, "game_item_id": null}
+     ],
+     "game_kit": [
+      ["plate_carrier_heavy", 1],
+      ["plate_steel_l3", 2],
+      ["plate_side", 2],
+      ["helmet", 1],
+      ["m110", 1],
+      ["mag_762", 3],
+      ["m17", 1],
+      ["mag_9mm", 2],
+      ["frag_grenade", 1],
+      ["ifak", 1],
+      ["tourniquet", 2],
+      ["pressure_bandage", 2],
+      ["hemostatic_gauze", 1],
+      ["chest_seal", 2],
+      ["npa", 1],
+      ["ruck_45", 1]
+     ]
+    },
+    "crew": {
+     "primary": {
+      "id": "aks74u",
+      "name": "AKS-74U",
+      "calibre": "5.45x39mm",
+      "game_item_id": null,
+      "game_substitute": "mk18",
+      "optic": {"id": "collimator", "name": "Collimator (Kobra / 1P87 / EKP-8 class)"},
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 30,
+       "count": 3,
+       "game_item_id": null
+      }
+     },
+     "secondary": {
+      "id": "pm_makarov",
+      "name": "PM Makarov",
+      "calibre": "9x18mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {
+       "id": "mag_9x18_8",
+       "round": "9x18mm 57-N-181S",
+       "game_round_id": null,
+       "proposed_round_id": "9x18_57n181s",
+       "rounds_per_mag": 8,
+       "count": 2,
+       "game_item_id": null
+      }
+     },
+     "launcher": null,
+     "grenades": [],
+     "armor": {
+      "vest": {"id": "plate_carrier_nat", "name": "Modular plate carrier, national issue", "tier": "medium", "game_item_id": "plate_carrier"},
+      "plates": {
+       "id": "steel_nat",
+       "name": "Steel plates, national manufacture (NIJ III / III+ class)",
+       "material": "steel",
+       "real_rating": "NIJ III to III+ class",
+       "front": true,
+       "back": true,
+       "game_rating": "III++",
+       "game_item_id": "plate_steel_l3"
+      },
+      "side_plates": null,
+      "helmet": {
+       "id": "tsh_tanker",
+       "name": "TSh-series padded tanker helmet (non-ballistic)",
+       "tier": "none",
+       "game_rating": null,
+       "game_item_id": null,
+       "cosmetic": true,
+       "proposed_game_id": "helmet_tanker"
+      }
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [
+       {"id": "tourniquet", "count": 2, "game_item_id": "tourniquet"},
+       {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"},
+       {"id": "hemostatic_gauze", "count": 1, "game_item_id": "hemostatic_gauze"},
+       {"id": "chest_seal", "count": 2, "game_item_id": "chest_seal"},
+       {"id": "npa", "count": 1, "game_item_id": "npa"}
+      ]
+     },
+     "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}, {"id": "nvg_bino", "count": 1, "game_item_id": null}],
+     "game_kit": [
+      ["plate_carrier", 1],
+      ["plate_steel_l3", 2],
+      ["mk18", 1],
+      ["mag_556", 3],
+      ["m17", 1],
+      ["mag_9mm", 2],
+      ["ifak", 1],
+      ["tourniquet", 2],
+      ["pressure_bandage", 2],
+      ["hemostatic_gauze", 1],
+      ["chest_seal", 2],
+      ["npa", 1],
+      ["assault_pack", 1]
+     ]
+    }
+   },
+   "team_weapons": [
+    {
+     "id": "javelin",
+     "name": "FGM-148 Javelin",
+     "kind": "atgm",
+     "in_game": true,
+     "game_launcher": "Javelin",
+     "game_substitute": null,
+     "game_item_id": null,
+     "proposed_game_item_id": "javelin",
+     "rounds": [{"name": "FGM-148 missile (tandem HEAT, top attack)", "type": "tandem HEAT", "count": 1, "proposed_game_item_id": "javelin_missile"}]
+    },
+    {
+     "id": "stugna",
+     "name": "Stugna-P ATGM",
+     "kind": "atgm",
+     "in_game": false,
+     "game_launcher": null,
+     "game_substitute": "Javelin",
+     "game_item_id": null,
+     "rounds": [{"name": "missile", "type": "tandem HEAT", "count": 1}]
+    }
+   ],
+   "notes": [
+    "Faction file: assault units add side plates and groin/neck protection (heavy) at the cost of mobility.",
+    "Assault roles wear a visored assault helmet at the game's heavy tier (Captain, 2026-10-10); marksman and sniper keep the standard helmet."
+   ]
   }
  ],
  "role_map": {"drone_operator": "rifleman"},
  "notes": [
   "Plates are very mixed in reality (Ukrainian steel or ceramic); steel is the proposed default for the regular variant.",
-  "Assault units with side plates (heavy) are described in the faction file but are not a separate variant (Q1 default lists only regular and territorial).",
+  "The assault variant was added by Captain's decision (2026-10-10).",
   "Fort-14/17 and Glock 17 are sidearm alternates to the PM."
  ],
  "proposed": [
