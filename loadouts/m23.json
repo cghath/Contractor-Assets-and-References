@@ -1288,7 +1288,7 @@
  ],
  "role_map": {"driver": "crew", "gunner": "crew", "mortar_crew": "rifleman", "tank_crew": "crew"},
  "notes": [
-  "Real armed non-state group (hostile non-client, proposed); real-world weapons and kit.",
+  "Real armed non-state group (hostile non-client, Captain-confirmed 2026-10-10); real-world weapons and kit.",
   "UN experts reported MANPADS and anti-aircraft weapons; they are modelled as air-denial zones and technicals, not as loadout items.",
   "Crew role for the captured T-55 set piece.",
   "Added in Job 7 (Captain, 2026-10-10)."

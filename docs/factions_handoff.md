@@ -6,11 +6,13 @@ The Contractor design doc (Claude Doc) is the source of truth for game design. W
 
 ## Handoffs (start here)
 
+**Status (2026-10-10, Job 7 follow-up):** Captain answered the three Job 7 questions (see "Captain's decisions" below): m23 stays a hostile non-client, chn stays on eastern_congo as a fictional what-if MONUSCO unit, and adf, m23 and cod now form a new `central_africa` roster bloc (ROSTER and BLOCS in `tools/factions_workflow.js`, `tools/loadouts_gen/s_central_africa.py`). adf carries the trait `hostile_only`, so the validator's hostile-only check still covers it. The validator reports 0 errors and 0 warnings.
+
 **Status (2026-10-10, after Job 7):** Job 7 added three theatres (`mindanao_sulu`, `iraq_iran_border`, `eastern_congo`; 26 in total) and three factions (`adf`, `m23`, `cod`; the roster now has **80 ids**), applied Captain's worldspace decisions (listed below) and added Russian mountain troops to alpine_europe. `factions/alliances.json` has 48 alliances (new: `monusco`) and the full 80 x 80 matrix; the vehicle catalogue has 211 vehicles (new: `ch4`); there are 79 loadout files with 120 variants. The validator reports 0 errors and 0 warnings and now also checks `factions_present` against each faction's `theatres` both ways.
 
 **Status (2026-10-10, after Job 4):** Jobs 1-4 are complete. All 77 factions exist and are reconciled to `factions/alliances.json` (47 alliances and the full 77 x 77 relations matrix), with 210 vehicles in the catalogue. The validator reports 0 errors. Job 6 (loadouts) is also complete: all 76 non-player factions have loadouts. Job 5 (worldspaces) is also complete: all 23 theatres are written. The validator reports 0 errors and 0 warnings. Remaining: merge duplicate vehicles and write `reference/vehicles/README.md`.
 
-**Faction count:** the roster has 80 ids since Job 7 (1 + 5 + 11 + 8 + 7 + 9 + 11 + 12 + 16: adf joined the terror bloc, m23 and cod the others bloc). Before Job 7 it had 77, not 76 as earlier versions of this file said.
+**Faction count:** the roster has 80 ids since Job 7 in 9 blocs plus the player (1 + 5 + 11 + 8 + 7 + 9 + 11 + 11 + 14 + 3: adf, m23 and cod form the central_africa bloc since Captain's decision of 2026-10-10; Job 7 had first put adf in the terror bloc and m23 and cod in the others bloc). Before Job 7 it had 77, not 76 as earlier versions of this file said.
 
 Each job has a sheet in this repo and a matching Claude Doc:
 
@@ -97,7 +99,7 @@ Answers to the open questions of Jobs 1-3, applied during Job 4. Each one was mo
 
 - **Theatres and worldspaces (Job 7; Captain's answers of 2026-10-10, applied in Job 7):**
   - Three new early-game theatres: `mindanao_sulu` (southern Philippines; isis East Asia cells vs phl, usa advisers; coastal, LHD allowed), `iraq_iran_border` (Diyala and Zagros-foothill borderlands; irq, krg_peshmerga, iraqi_militias, irn, isis remnants) and `eastern_congo` (North Kivu and Ituri; UN peacekeeping map with chn and ind as MONUSCO-type peacekeepers).
-  - New factions: `adf` (Allied Democratic Forces / ISCAP; hostile-only, linked to isis and islamic_state_network), `m23` (M23/AFC; hostile non-client, relation -50 with the player, mid tier; the alignment is proposed) and `cod` (FARDC, the state client on eastern_congo; the new state faction is noted in its file).
+  - New factions: `adf` (Allied Democratic Forces / ISCAP; hostile-only, linked to isis and islamic_state_network), `m23` (M23/AFC; hostile non-client, relation -50 with the player, mid tier; the alignment was confirmed in the follow-up below) and `cod` (FARDC, the state client on eastern_congo; the new state faction is noted in its file).
   - alpine_europe keeps the generic arms-trafficker NPCs and adds Russian mountain troops (rus) as the hostile force, a what-if marked proposed; the rus loadouts gained a `mountain` variant.
   - Kashmir keeps generic militant NPCs; no new faction.
   - Hot zones are twice the AREA of a contract zone (8-16 km² vs 2-4 km²).
@@ -108,6 +110,11 @@ Answers to the open questions of Jobs 1-3, applied during Job 4. Each one was mo
   - Map sizes of 16-24 km per side are confirmed.
   - The theatre gaps are answered by the new maps: lebanon_south keeps chn and ind as UNIFIL contributors and chn.json and ind.json now list lebanon_south; iraqi_militias is not added to iran_zagros and isis is not added to south_china_sea.
   - Each worldspace file records these in a new `captain_confirmed` list; they were moved out of `proposed`.
+
+- **Job 7 follow-up (Captain's answers of 2026-10-10 to the Job 7 questions):**
+  - m23 stays a **hostile non-client**: relation -50 with the player, never hires or sells (player_client false, sellable false), like the cartels; its units are not attacked by default during ceasefire phases. Moved out of m23.json's `proposed` (alignment, player_client, relations.player, ceasefire phases) and noted as Captain-confirmed in its `notes`; campaign_tier mid stays proposed. Also in eastern_congo's `captain_confirmed` and in m23's loadout notes.
+  - China stays on eastern_congo as the what-if returning MONUSCO engineer and medical unit, clearly marked fictional. Marked Captain-confirmed in chn.json (`notes`; the eastern_congo entry left `proposed`), in the `monusco` entry of alliances.json (member_status stays what_if), in worldspaces/eastern_congo.json (`captain_confirmed`, and the factions_present text says "fictional game what-if") and in the docs.
+  - New roster bloc **`central_africa`** (Central Africa, eastern DR Congo): adf, m23 and cod, moved out of me_terror and others. Faction files keep `blocs` for alliance ids only, so no new alliance was made and no `blocs` changed (adf stays in islamic_state_network, cod in african_union and global_coalition_against_isis); the bloc lives in ROSTER/BLOCS in `tools/factions_workflow.js`. adf gained the trait `hostile_only`; `tools/validate_pack.py` treats the me_terror bloc plus every faction with that trait as hostile-only (player_client must be false), so adf stays covered and m23 and cod are not checked. Loadout specs moved to `tools/loadouts_gen/s_central_africa.py`; the regenerated `loadouts/` differs only in the three rows' bloc label in its README and one m23 note.
 
 ## Roster (canonical ids)
 
@@ -120,8 +127,9 @@ Answers to the open questions of Jobs 1-3, applied during Job 4. Each one was mo
 | Russia, CSTO, Caucasus | rus, blr, africa_corps (Russian state PMC, rival), kaz, srb, arm, aze |
 | Asia-Pacific | chn, prk, jpn, kor, twn, ind, pak, phl, vnm |
 | Middle East states | irn (Artesh and IRGC), isr, tur, sau, are, qat, egy, jor, syr, irq, pse_pa |
-| Middle East terrorist and armed non-state groups (early game) | hamas, pij, hezbollah, houthis, iraqi_militias, al_qaeda, aqap, isis, isis_k, al_shabaab, jnim, adf (ISCAP, eastern DR Congo; Job 7) |
-| Neutrals, Africa, Central Asia, cartels, rival PMCs | che, aut, irl, mex, cartel_pacifico, cartel_jalisco_nueva (fictional), afg_taliban, sdf, krg_peshmerga, sahel_aes, som, pmc_halcyon, pmc_kestrel, pmc_black_sable (fictional), m23, cod (Job 7) |
+| Middle East terrorist and armed non-state groups (early game) | hamas, pij, hezbollah, houthis, iraqi_militias, al_qaeda, aqap, isis, isis_k, al_shabaab, jnim |
+| Neutrals, Africa, Central Asia, cartels, rival PMCs | che, aut, irl, mex, cartel_pacifico, cartel_jalisco_nueva (fictional), afg_taliban, sdf, krg_peshmerga, sahel_aes, som, pmc_halcyon, pmc_kestrel, pmc_black_sable (fictional) |
+| Central Africa (eastern DR Congo; Job 7, own bloc since 2026-10-10) | adf (ISCAP; hostile-only), m23 (M23/AFC; hostile non-client), cod (FARDC; client) |
 
 ## Theatres (worldspace ids)
 
@@ -154,7 +162,7 @@ Answers to the open questions of Jobs 1-3, applied during Job 4. Each one was mo
 ## Status at this snapshot
 
 **Update, 2026-10-10: Job 7 is complete on the fork.** New files: `factions/adf.json`, `factions/m23.json`, `factions/cod.json`, `worldspaces/mindanao_sulu.json`, `worldspaces/iraq_iran_border.json`, `worldspaces/eastern_congo.json`, `reference/vehicles/ch4.json` (FARDC CH-4 drones, low priority) and `loadouts/adf.json`, `m23.json`, `cod.json`.
-  - Roster 80 ids (adf in the terror bloc; m23 and cod in the others bloc); 26 theatres (11 early-game, 14 with `lhd: true`). ROSTER and THEATRES in `tools/factions_workflow.js` are updated; the validator reads both from there.
+  - Roster 80 ids (adf in the terror bloc; m23 and cod in the others bloc; all three moved to the new central_africa bloc in the follow-up); 26 theatres (11 early-game, 14 with `lhd: true`). ROSTER and THEATRES in `tools/factions_workflow.js` are updated; the validator reads both from there.
   - Relations: rows and columns for the three new factions in the 80 x 80 matrix; reverse entries added to player, usa, gbr, fra, bel, chn, ind, qat, isis, isis_k, al_qaeda, al_shabaab, jnim, egy, som, tur, are and rus (details in [ALLIANCES.md](../factions/ALLIANCES.md)). Every pair agrees in sign and is within 30 points across files and matrix.
   - Alliances: new `monusco` (ind; chn as a what-if, since China's MONUSCO contingent left in April 2024); adf joined islamic_state_network; cod joined african_union and global_coalition_against_isis.
   - Theatres added to isis, phl, usa (mindanao_sulu); iraqi_militias, irn, irq, krg_peshmerga, isis (iraq_iran_border); chn, ind (eastern_congo, lebanon_south); rus (alpine_europe). isis gained `fast_boat` (East Asia cells).
@@ -201,7 +209,7 @@ Each job has its own handoff sheet:
 
 Current state:
 
-- **Factions done (80 of 80):** every bloc is written, plus `player`. Job 7 added adf (terror bloc), m23 and cod (others bloc).
+- **Factions done (80 of 80):** every bloc is written, plus `player`. Job 7 added adf, m23 and cod, which now form the central_africa bloc.
 - **Neutrals/others bloc (14 of 14 written):** che, aut, irl, mex, cartel_pacifico, cartel_jalisco_nueva, afg_taliban, sdf, krg_peshmerga, sahel_aes, som, pmc_halcyon, pmc_kestrel and pmc_black_sable.
   - che, aut and irl are neutral states that can hire the player; che and aut sell to the player at rep 20/40/60 (Captain-confirmed 2026-10-10). irl lists only 3 vehicles because its armoured fleet is that small.
   - The cartels ("Liga del Pacifico", "Cartel Nueva Frontera") and the rival PMCs (Halcyon, Western; Kestrel, Russia-linked and separate from africa_corps; Black Sable, Gulf-funded) are fictional, each with `inspired_by`. The PMCs carry a proposed `rivalry` object; pmc_black_sable is the nemesis (Captain-confirmed 2026-10-10), pmc_halcyon an ordinary rival.
@@ -237,9 +245,6 @@ Early-game (terrorist) theatres lean on the existing technicals, Hiluxes, BMP/BT
 
 - Who fields the AH-1Z, MRAPs, Bradley and Abrams in the game (real-world operators are recorded).
 - Reputation thresholds and prices for buying from the USA, GB and Canada; the values in the files are proposals.
-- Job 7: m23 is modelled as a hostile non-client (relation -50 with the player, mid tier, not attacked by default during ceasefire phases) rather than hostile-only; confirm or change.
-- Job 7: China's MONUSCO contingent left in April 2024, so chn on eastern_congo is a returning-contingent what-if (alliance `monusco`, member_status what_if); keep it, or show only ind (and non-roster contributors) as peacekeepers?
-- Job 7: adf sits in the `me_terror` bloc (like al_shabaab and jnim) so the validator's hostile-only check covers it; m23 and cod sit in `others`. A separate Central Africa bloc is possible if Captain prefers.
 
 ## How to resume (current plan, 2026-10-10 09:50 UTC)
 

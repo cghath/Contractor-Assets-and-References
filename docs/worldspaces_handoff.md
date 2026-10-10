@@ -175,7 +175,11 @@ Answered by Captain (2026-10-10), applied in Job 7:
 - alpine_europe keeps the generic arms-trafficker NPCs and gains Russian mountain troops (rus) as the hostile force, as a fictional what-if.
 - The theatre gaps are answered by the new maps: iraqi_militias is not added to iran_zagros (iraq_iran_border covers it), isis is not added to south_china_sea (mindanao_sulu covers it), and chn and ind keep their UNIFIL entry on lebanon_south and now list lebanon_south in their files.
 
+Answered by Captain (2026-10-10), applied in a Job 7 follow-up:
+
+- m23 stays a hostile non-client (relation -50 with the player, never hires or sells, like the cartels; not attacked by default during ceasefire phases). Recorded in eastern_congo's `captain_confirmed`.
+- chn stays on eastern_congo as the what-if returning MONUSCO engineer and medical unit, clearly marked fictional. Recorded in eastern_congo's `captain_confirmed`.
+
 Still open:
 
-- The low-plausibility listings flagged in the README (blr in eastern_ukraine and baltic_coast; fra, bel and esp in sahel; jpn in arctic_north; chn in korean_dmz) and the new what-if listings (chn as returning MONUSCO peacekeepers on eastern_congo; rus mountain troops on alpine_europe) are kept at low strength or marked as what-ifs; Captain may want to drop any of them.
-- m23's alignment (hostile non-client, relation -50 with the player, not attacked by default in ceasefire phases) is a proposal.
+- The low-plausibility listings flagged in the README (blr in eastern_ukraine and baltic_coast; fra, bel and esp in sahel; jpn in arctic_north; chn in korean_dmz) and the new what-if listing of rus mountain troops on alpine_europe are kept at low strength or marked as what-ifs; Captain may want to drop any of them. (chn on eastern_congo is settled, see above.)

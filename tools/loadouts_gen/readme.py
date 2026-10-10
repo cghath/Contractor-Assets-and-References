@@ -5,7 +5,8 @@ from gen import REPO, GAME_ITEMS
 
 BLOC_NAMES = {'five_eyes': 'US and Five Eyes', 'nato_west': 'Western Europe and Nordics', 'eastern_flank': 'Ukraine and eastern flank',
               'russia_csto': 'Russia, CSTO, Caucasus', 'asia_pacific': 'Asia-Pacific', 'middle_east_states': 'Middle East states',
-              'me_terror': 'ME terrorist / armed groups', 'others': 'Neutrals, Africa, cartels, PMCs'}
+              'me_terror': 'ME terrorist / armed groups', 'others': 'Neutrals, Africa, cartels, PMCs',
+              'central_africa': 'Central Africa'}
 
 def roster_blocs():
     src = open(os.path.join(REPO, 'tools', 'factions_workflow.js'), encoding='utf-8').read()

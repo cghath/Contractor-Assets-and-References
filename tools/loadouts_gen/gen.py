@@ -16,7 +16,7 @@ from catalog import *
 
 REPO = os.path.dirname(os.path.dirname(HERE))
 BLOCS = ['s_five_eyes', 's_nato_west', 's_eastern_flank', 's_russia_csto', 's_asia_pacific',
-         's_middle_east_states', 's_me_terror', 's_others']
+         's_middle_east_states', 's_me_terror', 's_others', 's_central_africa']
 
 def _game_dir():
     a = sys.argv[1:]

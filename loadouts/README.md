@@ -76,7 +76,6 @@ Armor is the regular variant's vest tier (helmet tier); AT is the at role's laun
 | isis | ME terrorist / armed groups | early | regular, elite | AKM | none (none) | RPG-7 [RPG-7] | crew |
 | isis_k | ME terrorist / armed groups | early | regular, elite | AKM | none (none) | RPG-7 [RPG-7] | - |
 | al_shabaab | ME terrorist / armed groups | early | regular, elite | AKM | none (none) | RPG-7 [RPG-7] | - |
-| adf | ME terrorist / armed groups | early | regular, elite | AK-47 / Type 56 pattern | none (none) | RPG-7 [RPG-7] | - |
 | jnim | ME terrorist / armed groups | early | regular, elite | AKM | none (none) | RPG-7 [RPG-7] | - |
 | che | Neutrals, Africa, cartels, PMCs | mid | regular | Stgw 90 (SIG SG 550) | medium (medium) | NLAW [NLAW] | crew/pilot |
 | aut | Neutrals, Africa, cartels, PMCs | mid | regular | StG 77 A1 (Steyr AUG) | medium (medium) | PAR 66/79 (Carl Gustaf family, 84mm) [MAAWS] | crew/pilot |
@@ -92,8 +91,9 @@ Armor is the regular variant's vest tier (helmet tier); AT is the at role's laun
 | pmc_halcyon | Neutrals, Africa, cartels, PMCs | mid | regular, protective_detail | M4A1 carbine | heavy (heavy) | M136 AT4 (84mm) [AT4] | crew/pilot |
 | pmc_kestrel | Neutrals, Africa, cartels, PMCs | mid | regular, assault | AK-12 | medium (medium) | RPG-7 [RPG-7] | crew/pilot |
 | pmc_black_sable | Neutrals, Africa, cartels, PMCs | mid | regular, auxiliary | Caracal CAR 816 | medium (heavy) | RPG-7 [RPG-7] | crew |
-| m23 | Neutrals, Africa, cartels, PMCs | mid | regular, assault | AK-47 / Type 56 pattern | light (none) | RPG-7 [RPG-7] | crew |
-| cod | Neutrals, Africa, cartels, PMCs | early | regular, republican_guard, wazalendo | AKM | none (none) | RPG-7 [RPG-7] | crew/pilot |
+| adf | Central Africa | early | regular, elite | AK-47 / Type 56 pattern | none (none) | RPG-7 [RPG-7] | - |
+| m23 | Central Africa | mid | regular, assault | AK-47 / Type 56 pattern | light (none) | RPG-7 [RPG-7] | crew |
+| cod | Central Africa | early | regular, republican_guard, wazalendo | AKM | none (none) | RPG-7 [RPG-7] | crew/pilot |
 
 ## What has to be built
 

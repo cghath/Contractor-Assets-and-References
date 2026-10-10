@@ -300,11 +300,8 @@
       "evacuate_civilians_from_frontline"
     ]
   },
-  "notes": "Alignment (proposed, Job 7): M23 is an armed non-state group under UN and US sanctions but is not designated a terrorist organisation by the UN or the US (the DR Congo government labels it a terrorist movement). Following the pack's rules for armed non-state groups, it is a hostile non-client like the cartels rather than hostile-only like the terror groups: player_client false, sellable false, relation with player -50 (not -100), campaign_tier mid because it fights as a well-equipped conventional force. During ceasefire phases on eastern_congo its units are not attacked by default and contracts are verification escorts and evacuations; contracts against M23 come from cod during fighting phases. Rwanda's backing is recorded as the UN Group of Experts reported it (Rwanda denies it); Rwanda is not a roster faction, and RDF units appear only as off-map support events. Situation as of October 2026: AFC/M23 holds the main lake city and much of the highlands; it withdrew from Uvira in January 2026 and from forward Lubero positions in April 2026; the Doha-track roadmap of August 2026 and EJVM+ verification are in place but fighting continues. M23 is not allied with the ADF (m23 -> adf -40). Added in Job 7 (Captain, 2026-10-10).",
+  "notes": "Alignment (Captain-confirmed 2026-10-10): M23 is an armed non-state group under UN and US sanctions but is not designated a terrorist organisation by the UN or the US (the DR Congo government labels it a terrorist movement). Following the pack's rules for armed non-state groups, it is a hostile non-client like the cartels rather than hostile-only like the terror groups: player_client false, sellable false, relation with player -50 (not -100), campaign_tier mid because it fights as a well-equipped conventional force. During ceasefire phases on eastern_congo its units are not attacked by default and contracts are verification escorts and evacuations; contracts against M23 come from cod during fighting phases. Rwanda's backing is recorded as the UN Group of Experts reported it (Rwanda denies it); Rwanda is not a roster faction, and RDF units appear only as off-map support events. Situation as of October 2026: AFC/M23 holds the main lake city and much of the highlands; it withdrew from Uvira in January 2026 and from forward Lubero positions in April 2026; the Doha-track roadmap of August 2026 and EJVM+ verification are in place but fighting continues. M23 is not allied with the ADF (m23 -> adf -40). Added in Job 7 (Captain, 2026-10-10). Captain confirmed on 2026-10-10 that m23 stays a hostile non-client (relation -50 with the player, never hires or sells, like the cartels; not attacked by default during ceasefire phases); campaign_tier mid stays a proposal. It sits in the central_africa roster bloc with adf and cod.",
   "proposed": [
-    "alignment_to_player (hostile non-client, not hostile-only)",
-    "player_client (false)",
-    "relations.player (-50)",
     "campaign_tier (mid)",
     "relations values (factual direction, game magnitudes)",
     "doctrine.ai_tuning (all values)",
@@ -315,8 +312,7 @@
     "vehicles: captured t55 as a rare set piece",
     "body_armor (game tier mapping)",
     "camo (approximate palettes)",
-    "flag_colors (generic olive and white; no official flag verified)",
-    "ceasefire phases (units not attacked by default)"
+    "flag_colors (generic olive and white; no official flag verified)"
   ],
   "sources": [
     "https://en.wikipedia.org/wiki/March_23_Movement",

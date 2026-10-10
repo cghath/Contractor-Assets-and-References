@@ -12,7 +12,8 @@
     "islamic_state_network"
   ],
   "traits": [
-    "us_designated_fto"
+    "us_designated_fto",
+    "hostile_only"
   ],
   "campaign_tier": "early",
   "alignment_to_player": "hostile",
@@ -319,7 +320,7 @@
       "ied_route_clearance"
     ]
   },
-  "notes": "The ADF is designated a Foreign Terrorist Organization by the US (as ISIS-DRC, March 2021) and its leaders are under UN sanctions. It is the Islamic State's Central Africa Province (ISCAP) in DR Congo (the Mozambique branch became a separate province in 2022), hence membership of islamic_state_network and isis +85. It fights the FARDC (cod), the Ugandan army in the joint Operation Shujaa (Uganda is not a roster faction; UPDF units appear as neutral-allied NPCs), local militias and MONUSCO peacekeepers (ind, chn on this map). It is not allied with M23 (adf -> m23 -40); the two operate in different areas and the value is a game magnitude. Status 2026: high civilian death tolls in Beni, Lubero and Mambasa territories through July 2026, including attacks on gold-mining sites. Game framing: hostile-only like the other terror groups (player_client false, sellable false), the main early-game enemy in eastern_congo. Tactics are described at game-design level only. Added in Job 7 (Captain, 2026-10-10).",
+  "notes": "The ADF is designated a Foreign Terrorist Organization by the US (as ISIS-DRC, March 2021) and its leaders are under UN sanctions. It is the Islamic State's Central Africa Province (ISCAP) in DR Congo (the Mozambique branch became a separate province in 2022), hence membership of islamic_state_network and isis +85. It fights the FARDC (cod), the Ugandan army in the joint Operation Shujaa (Uganda is not a roster faction; UPDF units appear as neutral-allied NPCs), local militias and MONUSCO peacekeepers (ind, chn on this map). It is not allied with M23 (adf -> m23 -40); the two operate in different areas and the value is a game magnitude. Status 2026: high civilian death tolls in Beni, Lubero and Mambasa territories through July 2026, including attacks on gold-mining sites. Game framing: hostile-only like the other terror groups (player_client false, sellable false), the main early-game enemy in eastern_congo. Tactics are described at game-design level only. Added in Job 7 (Captain, 2026-10-10). Since Captain's decision of 2026-10-10 it sits in the central_africa roster bloc with m23 and cod; trait hostile_only keeps it under the validator's hostile-only check.",
   "proposed": [
     "campaign_tier",
     "relations.player",

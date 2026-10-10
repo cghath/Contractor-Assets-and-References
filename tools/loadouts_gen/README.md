@@ -21,7 +21,7 @@ The output is deterministic. Running it on an unchanged checkout reproduces the 
 | `gen.py` | Rules (families, optic styles, kit profiles, medical levels, counts), the role builder, `game_kit`, and the JSON writer. Also reads `factions/<id>.json` and `reference/vehicles/`. |
 | `catalog.py` | Catalogue of weapons, magazines, round designations and specs, underbarrel launchers, optics, launchers, grenades, helmets, vests and plates. Ids are stable; it started as a port of `tools/loadouts_catalog_wip.pl`. |
 | `sutil.py` | Spec helpers: `W(...)` weapons per role, `A(...)` armor (helmet, vest, tier, plate, side plate). |
-| `s_<bloc>.py` | One spec per bloc: each faction's regular variant, extra variants (as overrides of regular), notes and sources. |
+| `s_<bloc>.py` | One spec per bloc (the ROSTER keys in `tools/factions_workflow.js`, e.g. `s_central_africa.py` for adf, m23 and cod): each faction's regular variant, extra variants (as overrides of regular), notes and sources. A new bloc file is listed in `BLOCS` in `gen.py` and named in `BLOC_NAMES` in `readme.py`. |
 | `index.py` | Writes the three index files. |
 | `readme.py` | Writes `loadouts/README.md` (roster and the "what has to be built" summary). |
 

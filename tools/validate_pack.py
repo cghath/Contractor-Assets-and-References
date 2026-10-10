@@ -6,7 +6,9 @@ Checks the JSON in factions/, reference/vehicles/, worldspaces/ and loadouts/:
   * faction files have the required top-level keys and their id matches the filename;
   * relation keys, theatre ids and vehicle_ids are known;
   * every referenced vehicle_id has a reference/vehicles/<id>.json file;
-  * terrorist factions (bloc me_terror in ROSTER) have player_client false;
+  * hostile-only factions have player_client false: every faction in the me_terror bloc of ROSTER, plus any
+    faction whose `traits` include "hostile_only" (adf, in the central_africa bloc). Hostile non-clients such
+    as m23 and the cartels have no such trait and are not checked;
   * every faction a worldspace lists in factions_present lists that theatre in its own `theatres`, and
     every theatre a faction lists (except player, which lists all) has that faction in factions_present;
   * loadouts/<id>.json (the three index files are skipped): the id is a canonical non-player faction id
@@ -29,6 +31,8 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WORKFLOW = os.path.join(ROOT, "tools", "factions_workflow.js")
 FACTION_KEYS = ["id", "name", "kind", "relations", "theatres", "vehicles"]
+# Trait that marks a hostile-only faction outside the me_terror bloc (e.g. adf in central_africa).
+HOSTILE_ONLY_TRAIT = "hostile_only"
 # Files in factions/ that are not faction records.
 NON_FACTION_FILES = {"alliances"}
 # Files in loadouts/ that are not per-faction loadouts.
@@ -170,7 +174,7 @@ def main():
     roster = parse_js_lists(src, "ROSTER")
     theatres_by_group = parse_js_lists(src, "THEATRES")
     faction_ids = {"player"} | {i for ids in roster.values() for i in ids}
-    terror_ids = set(roster.get("me_terror", []))
+    hostile_only_ids = set(roster.get("me_terror", []))
     theatre_ids = {i for ids in theatres_by_group.values() for i in ids}
 
     factions = load_json_dir("factions")
@@ -188,6 +192,10 @@ def main():
     if worlds is None:
         warn("worldspaces/ does not exist yet (generated after the factions)")
         worlds = {}
+    for stem, d in factions.items():
+        traits = d.get("traits") if isinstance(d, dict) else None
+        if isinstance(traits, list) and HOSTILE_ONLY_TRAIT in traits:
+            hostile_only_ids.add(stem)
 
     # Vehicle catalogue: id should match the filename.
     for stem, v in vehicles.items():
@@ -251,8 +259,8 @@ def main():
             if vid and vid not in vehicles:
                 warn("%s: unit_templates[%d] vehicle_id %r has no catalogue file" % (path, i, vid))
 
-        if stem in terror_ids and d.get("player_client") is not False:
-            error("%s: terrorist faction must have player_client false (got %r)"
+        if stem in hostile_only_ids and d.get("player_client") is not False:
+            error("%s: hostile-only faction must have player_client false (got %r)"
                   % (path, d.get("player_client")))
 
     # Alliances: member ids and relations-matrix keys must be canonical faction ids.

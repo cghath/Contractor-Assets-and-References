@@ -156,7 +156,7 @@
     {"faction_id": "m23", "role": "occupier", "strength": "high", "where": "The lake city and the lava shore, the southern highlands and the road south of the ceasefire line: hill positions, checkpoints and a parallel administration post; anti-aircraft guns on ridges."},
     {"faction_id": "adf", "role": "insurgent", "strength": "high", "where": "Northern lowland rainforest: forest camps, raids on forest villages, cocoa farms and gold-mining camps, ambushes on the forest road."},
     {"faction_id": "ind", "role": "patrol", "strength": "medium", "where": "UN peacekeepers (MONUSCO-type): bases next to the northern town and the main displacement camp, and a company near the ceasefire-line crossing supporting verification teams. Neutral units; ind can post camp-protection and escort contracts."},
-    {"faction_id": "chn", "role": "patrol", "strength": "low", "where": "UN engineer and medical company (game what-if; China's real contingent left in April 2024) repairing the forest road and bridges and running a field hospital near the northern town. Neutral units; never a client here."}
+    {"faction_id": "chn", "role": "patrol", "strength": "low", "where": "UN engineer and medical company (fictional game what-if, Captain-confirmed 2026-10-10; China's real contingent left in April 2024) repairing the forest road and bridges and running a field hospital near the northern town. Neutral units; never a client here."}
   ],
   "frontline": "Two wars on one map. In the south a ceasefire line separates the cod and m23 zones; a peace-process meter (Doha-track talks and EJVM+ verification) sets the phase: in ceasefire phases the line is frozen, m23 units are not attacked by default and contracts are verification escorts, evacuations and humanitarian work; violations lower the meter, and a fighting phase lets each side push for ridge zones (cod contracts to retake positions; m23 offensives threaten the northern road). In the north the ADF regenerates in the forest: each surviving ADF camp raises the raid level of nearby villages and mining camps and posts defence, hostage-rescue and camp-raid contracts. Displacement events follow every fight and grow the camps. UN bases never flip and are neutral ground.",
   "contract_hooks": [
@@ -188,6 +188,8 @@
   "captain_confirmed": [
     "theatre added (Captain, 2026-10-10): early-game UN peacekeeping map; chn and ind as UN peacekeepers, with adf, m23 and cod",
     "cod (FARDC) added as the state client on this map (Captain, 2026-10-10)",
+    "chn stays as a returning MONUSCO-type engineer and medical unit, a fictional what-if clearly marked as such (Captain, 2026-10-10; the real contingent left in April 2024)",
+    "m23 is a hostile non-client (relation -50 with the player, never hires or sells) and its units are not attacked by default in ceasefire phases (Captain, 2026-10-10)",
     "map_size_km within the confirmed 16-24 km per side (Captain, 2026-10-10)",
     "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
     "materials accepted as the next voxel_world.gd additions (Captain, 2026-10-10; not yet in the game): BASALT #4b4845, CINDER_BLOCK #9a978f, CORRUGATED_IRON #8b8e8c, GLASS #9fbcc4, BRICK #9c5a3c, MUD_BRICK #a47e57, THATCH #b49a5e, TARP #3f6d8c, HESCO #a99a6c, SANDBAG #b8a378, DIRT_BERM #8a6f4e"
@@ -197,8 +199,6 @@
     "generator numbers",
     "two-war frontline model and the peace-process meter (ceasefire and fighting phases)",
     "zone_plan and hot zone",
-    "chn presence as a UN engineer and medical company (game what-if: the real contingent left in April 2024)",
-    "m23 not attacked by default in ceasefire phases",
     "Wazalendo militias as cod auxiliaries; UPDF, Burundian troops, FDLR and local militias as neutral or generic NPCs (no faction files); Rwanda's army as off-map support events only",
     "IEDs and felled-tree roadblocks as marked map hazards only (game-level)"
   ],

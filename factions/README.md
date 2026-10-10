@@ -10,7 +10,7 @@ Real-world-inspired factions for Contractor, as of October 2026: 80 ids (the pla
 ## Faction file schema (short)
 
 - Identity: `id`, `name`, `short`, `kind` (state, non_state, pmc, criminal), `inspired_by` (fictional factions), `flag_colors`.
-- Politics: `blocs` (alliance ids from alliances.json), `traits` (descriptive tags), `campaign_tier`, `alignment_to_player`, `player_client`, `relations` (notable ones, -100..100; the full matrix is in alliances.json).
+- Politics: `blocs` (alliance ids from alliances.json), `traits` (descriptive tags; `hostile_only` marks a hostile-only faction outside the me_terror roster bloc, currently adf, so the validator checks it), `campaign_tier`, `alignment_to_player`, `player_client`, `relations` (notable ones, -100..100; the full matrix is in alliances.json).
 - World: `theatres`, `languages`, `callout_language`.
 - Fighting: `doctrine` (summary, squad size, tactics, `ai_tuning` 0-1), `camo`, `small_arms` by role, `launchers`, `body_armor`, `vehicles` (catalogue ids with role and prevalence), `unit_templates`, `support_assets`.
 - Economy: `player_trade` (sellable, rep tiers), `contract_types` (as_client, as_target).
@@ -83,7 +83,6 @@ Real-world-inspired factions for Contractor, as of October 2026: 80 ids (the pla
 | isis_k | Islamic State Khorasan Province | ME terrorist / armed groups | early | hostile | no | afghan_highlands |
 | al_shabaab | al-Shabaab (Harakat al-Shabaab al-Mujahideen) | ME terrorist / armed groups | early | hostile | no | horn_of_africa |
 | jnim | JNIM (Jama'at Nusrat al-Islam wal-Muslimin) | ME terrorist / armed groups | early | hostile | no | sahel |
-| adf | Allied Democratic Forces (ADF) / Islamic State Central Africa Province (ISCAP) | ME terrorist / armed groups | early | hostile | no | eastern_congo |
 | che | Swiss Armed Forces (Schweizer Armee) | Neutrals, Africa, cartels, PMCs | mid | neutral | yes | alpine_europe |
 | aut | Austrian Armed Forces (Österreichisches Bundesheer) | Neutrals, Africa, cartels, PMCs | mid | neutral | yes | alpine_europe, lebanon_south |
 | irl | Irish Defence Forces (Óglaigh na hÉireann) | Neutrals, Africa, cartels, PMCs | early | neutral | yes | lebanon_south |
@@ -98,8 +97,9 @@ Real-world-inspired factions for Contractor, as of October 2026: 80 ids (the pla
 | pmc_halcyon | Halcyon Global Risk (fictional) | Neutrals, Africa, cartels, PMCs | mid | hostile | no | mesopotamia, persian_gulf_coast, horn_of_africa, yemen_red_sea, levant_syria, mexico_cartel_belt |
 | pmc_kestrel | Kestrel Security Group (fictional; 'Pustelga') | Neutrals, Africa, cartels, PMCs | mid | hostile | no | eastern_ukraine, sahel, levant_syria, caucasus, black_sea_coast |
 | pmc_black_sable | Black Sable Services (fictional) | Neutrals, Africa, cartels, PMCs | mid | hostile | no | yemen_red_sea, horn_of_africa, persian_gulf_coast, sahel |
-| m23 | March 23 Movement (M23) / Alliance Fleuve Congo (AFC) | Neutrals, Africa, cartels, PMCs | mid | hostile | no | eastern_congo |
-| cod | Armed Forces of the Democratic Republic of the Congo (FARDC) | Neutrals, Africa, cartels, PMCs | early | neutral | yes | eastern_congo |
+| adf | Allied Democratic Forces (ADF) / Islamic State Central Africa Province (ISCAP) | Central Africa | early | hostile | no | eastern_congo |
+| m23 | March 23 Movement (M23) / Alliance Fleuve Congo (AFC) | Central Africa | mid | hostile | no | eastern_congo |
+| cod | Armed Forces of the Democratic Republic of the Congo (FARDC) | Central Africa | early | neutral | yes | eastern_congo |
 
 ## Alliance matrix (major powers)
 
@@ -182,15 +182,15 @@ Each file's `proposed` list names its gameplay inventions. The most common, by n
 
 - `doctrine.ai_tuning`: 80 files
 - `unit_templates`: 79 files
-- `relations.player`: 77 files
 - `campaign_tier`: 73 files
+- `relations.player`: 71 files
 - `body_armor`: 66 files
 - `vehicles[].prevalence`: 62 files
 - `contract_types`: 40 files
-- `alignment_to_player`: 34 files
+- `alignment_to_player`: 33 files
 - `player_trade.rep_tiers`: 30 files
 - `player_trade`: 30 files
-- `player_client`: 26 files
+- `player_client`: 25 files
 - `contract_types.as_target`: 23 files
 
 Open questions for Captain are collected in [ALLIANCES.md](ALLIANCES.md) and in [docs/factions_handoff.md](../docs/factions_handoff.md).

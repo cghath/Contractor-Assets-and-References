@@ -210,7 +210,7 @@ Member status is full unless marked. Game effect: war_join / side_lock / rep_spi
 - **UN Organization Stabilization Mission in the DR Congo (MONUSCO-type peacekeepers)** (`monusco`): ind, chn (what_if).
   - Obligation: UN peacekeeping mandate in eastern DR Congo; since May 2024 (Resolution 2717) the mission operates only in North Kivu and Ituri, and it supports the ceasefire-verification mechanism (EJVM+) of the 2025-2026 peace process.
   - Game: war_join none, side_lock no, rep_spill 0.0.
-  - Notes: Added in Job 7 for eastern_congo (Captain, 2026-10-10: chn and ind as UN peacekeepers). ind is a long-standing troop contributor (about 1,100-1,200 troops around Goma and Sake in January 2025). China's engineer and medical contingent left in April 2024, so chn's presence is a game what-if (member_status what_if). Like unifil: neutral, never side-locks and never joins wars.
+  - Notes: Added in Job 7 for eastern_congo (Captain, 2026-10-10: chn and ind as UN peacekeepers). ind is a long-standing troop contributor (about 1,100-1,200 troops around Goma and Sake in January 2025). China's engineer and medical contingent left in April 2024, so chn's presence is a fictional game what-if (member_status what_if): a returning engineer and medical unit, which Captain confirmed on 2026-10-10 (it stays, clearly marked fictional). Like unifil: neutral, never side-locks and never joins wars.
 
 ### Terror network
 
@@ -387,7 +387,7 @@ Among the new three: adf <-> cod -100, adf <-> m23 -40, m23 <-> cod -90.
 
 ## Open questions for Captain
 
-Answered by Captain (2026-10-10): side-lock lasts 2-4 in-game weeks; NATO allies outside the Five Eyes sell at higher reputation than usa/gbr/can; reputation spill-over applies within alliances only; the Gulf states (sau, are, qat) sell at high reputation and Israel does not; player relations with the rival PMCs (-20 to -45) and cartels (-60 to -65) stay as written; afg_taliban vs pak is -90 both ways (active border war).; tur (a NATO member) does not sell.
+Answered by Captain (2026-10-10): side-lock lasts 2-4 in-game weeks; NATO allies outside the Five Eyes sell at higher reputation than usa/gbr/can; reputation spill-over applies within alliances only; the Gulf states (sau, are, qat) sell at high reputation and Israel does not; player relations with the rival PMCs (-20 to -45) and cartels (-60 to -65) stay as written; afg_taliban vs pak is -90 both ways (active border war); tur (a NATO member) does not sell. Job 7 follow-ups (2026-10-10): m23 stays a hostile non-client (relation -50 with the player, never hires or sells, not attacked by default during ceasefire phases); chn stays in `monusco` on eastern_congo as the fictional what-if returning engineer and medical unit; adf, m23 and cod form a new `central_africa` roster bloc (no new alliance: roster blocs are not alliances, and adf stays in islamic_state_network).
 
 Still open:
 
