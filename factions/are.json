@@ -368,8 +368,36 @@
     "Dense air and counter-drone defence (Patriot, THAAD, Pantsir, Cheongung)"
   ],
   "player_trade": {
-    "sellable": false,
-    "rep_tiers": []
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 40,
+        "unlocks": [
+          "5.56x45mm and 7.62x51mm ammunition",
+          "Caracal CAR 816 rifle",
+          "frags, smoke and flashbangs",
+          "medium helmets and soft vests"
+        ]
+      },
+      {
+        "rep": 60,
+        "unlocks": [
+          "Caracal CAR 817 DMR",
+          "FN Minimi and FN MAG",
+          "plate carriers with ceramic front/back plates",
+          "AT4"
+        ]
+      },
+      {
+        "rep": 80,
+        "unlocks": [
+          "NIMR purchase",
+          "M-ATV purchase",
+          "Javelin",
+          "NVGs and thermal optics"
+        ]
+      }
+    ]
   },
   "contract_types": {
     "as_client": [
@@ -386,7 +414,6 @@
   "notes": "A natural early-game Gulf client for port security, counter-drone and Hormuz-escort work. Context 2026: struck by Iranian missiles and drones after 28 February 2026 (soldiers and civilians killed) and among the states that struck back; Abraham Accords partner of Israel since 2020; withdrew remaining forces from Yemen on 30 December 2025 after Saudi Arabia demanded the UAE-backed STC leave Hadramawt and Mahra; strained ties with the Somali federal government because of its links to Somaliland and Puntland. Wealthy, with Western, Russian, Chinese and Korean kit side by side.",
   "proposed": [
     "campaign_tier",
-    "alignment_to_player (friendly client, not a seller)",
     "player_client",
     "contract_types.as_client",
     "relations.player",
@@ -395,7 +422,8 @@
     "unit_templates",
     "vehicles[].prevalence (game weighting)",
     "body_armor (game tier mapping)",
-    "player_trade.sellable (false until Captain decides)"
+    "alignment_to_player (friendly client and seller)",
+    "player_trade.rep_tiers (40/60/80 thresholds and unlocks; that are sells at high reputation is Captain-confirmed 2026-10-10)"
   ],
   "sources": [
     "https://en.wikipedia.org/wiki/United_Arab_Emirates_Armed_Forces",

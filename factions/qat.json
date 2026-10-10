@@ -314,8 +314,36 @@
     "Patriot and NASAMS air defence; counter-drone systems at Ras Laffan"
   ],
   "player_trade": {
-    "sellable": false,
-    "rep_tiers": []
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 40,
+        "unlocks": [
+          "5.56x45mm and 7.62x51mm ammunition",
+          "FN SCAR-L rifle",
+          "frags, smoke and flashbangs",
+          "medium helmets and soft vests"
+        ]
+      },
+      {
+        "rep": 60,
+        "unlocks": [
+          "HK417 marksman rifle",
+          "FN Minimi and FN MAG",
+          "plate carriers with ceramic front/back plates",
+          "AT4 CS and Carl Gustaf (MAAWS)"
+        ]
+      },
+      {
+        "rep": 80,
+        "unlocks": [
+          "Ejder Yalcin purchase",
+          "Dingo purchase",
+          "Javelin",
+          "NVGs and thermal optics"
+        ]
+      }
+    ]
   },
   "contract_types": {
     "as_client": [
@@ -339,7 +367,8 @@
     "unit_templates",
     "vehicles[].prevalence (game weighting)",
     "body_armor (game tier mapping)",
-    "player_trade.sellable (false until Captain decides)"
+    "alignment_to_player (friendly client and seller)",
+    "player_trade.rep_tiers (40/60/80 thresholds and unlocks; that qat sells at high reputation is Captain-confirmed 2026-10-10)"
   ],
   "sources": [
     "https://en.wikipedia.org/wiki/Qatar_Armed_Forces",

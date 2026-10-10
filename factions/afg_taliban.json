@@ -17,7 +17,7 @@
   "player_client": true,
   "relations": {
     "player": -10,
-    "pak": -65,
+    "pak": -90,
     "isis_k": -100,
     "isis": -90,
     "al_qaeda": 30,

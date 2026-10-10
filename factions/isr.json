@@ -495,7 +495,7 @@
     ],
     "as_target": []
   },
-  "notes": "Israel is a central faction for the israel, gaza_west_bank and lebanon_south theatres and the main actor (with the US) against Iran since February 2026. 2026 situation: Gaza ceasefire since October 2025 with the IDF holding a large part of the Strip behind a 'yellow line', an International Stabilization Force and a Board of Peace planned under the US 20-point plan, and a July 2026 framework on Hamas disarmament and phased Israeli withdrawal not yet complete; West Bank raids continue; southern Lebanon re-occupied from March 2026; buffer zone in southern Syria while Damascus seeks a security agreement; Israeli elections due by 27 October 2026. Real-world US contractors guarded aid distribution sites in Gaza in 2025, which is the basis for proposing Israel as an occasional (neutral) client. The game should keep the civilian-casualty penalties fully active in Israel-related maps and frame contracts neutrally. Israeli kit visible on maps: Mitznefet helmet covers, olive uniforms, Tavor rifles, Merkava/Namer with Trophy, D9 bulldozers.",
+  "notes": "Israel is a central faction for the israel, gaza_west_bank and lebanon_south theatres and the main actor (with the US) against Iran since February 2026. 2026 situation: Gaza ceasefire since October 2025 with the IDF holding a large part of the Strip behind a 'yellow line', an International Stabilization Force and a Board of Peace planned under the US 20-point plan, and a July 2026 framework on Hamas disarmament and phased Israeli withdrawal not yet complete; West Bank raids continue; southern Lebanon re-occupied from March 2026; buffer zone in southern Syria while Damascus seeks a security agreement; Israeli elections due by 27 October 2026. Real-world US contractors guarded aid distribution sites in Gaza in 2025, which is the basis for proposing Israel as an occasional (neutral) client. The game should keep the civilian-casualty penalties fully active in Israel-related maps and frame contracts neutrally. Israeli kit visible on maps: Mitznefet helmet covers, olive uniforms, Tavor rifles, Merkava/Namer with Trophy, D9 bulldozers. Captain decided (2026-10-10) that Israel hires the player but never sells to them.",
   "proposed": [
     "campaign_tier",
     "alignment_to_player (neutral)",
@@ -506,7 +506,6 @@
     "unit_templates",
     "vehicles[].prevalence (game weighting)",
     "body_armor (game tier mapping)",
-    "player_trade.sellable (false until Captain decides)",
     "theatres (iran_zagros and yemen_red_sea are strike/special-forces only)"
   ],
   "sources": [

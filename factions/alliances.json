@@ -1471,14 +1471,14 @@
     }
   ],
   "game_rules": {
-    "status": "proposed",
+    "status": "Side-lock length, reputation spill-over scope and the seller list are Captain-confirmed (2026-10-10); everything else here is proposed.",
     "side_lock": {
       "rule": "Taking a contract against faction X locks the player out of X's contracts, and out of the contracts of every faction whose relation toward the client is -50 or below.",
       "duration_days": [
-        3,
-        10
+        14,
+        28
       ],
-      "duration_scaling": "Scaled by contract severity (escort 3 days ... HVT kill or capture 10 days).",
+      "duration_scaling": "Scaled by contract severity (escort 14 days ... HVT kill or capture 28 days). The 2-4 week range is Captain-confirmed 2026-10-10.",
       "exempt": "Peacekeeping (unifil) clients and neutral humanitarian clients (che, aut, irl) never lock, and never cause a lock.",
       "terror_groups": "Terror groups are never clients, so they never lock; working against them never locks anyone out except their own network."
     },
@@ -1491,19 +1491,19 @@
       "terror_networks": "Terror networks and the axis_of_resistance's non-state members never 'join' a war: they surge activity (more attacks and contracts against them in their theatres)."
     },
     "rep_spillover": {
-      "formula": "For reputation change rep_delta with faction X, each other faction Y changes by rep_delta * clamp(relation(Y, X) / 100, -1, 1) * alliance_factor.",
+      "formula": "For reputation change rep_delta with faction X, each faction Y that shares at least one alliance with X changes by rep_delta * clamp(relation(Y, X) / 100, -1, 1) * alliance_factor. Factions that share no alliance with X are not affected.",
       "alliance_factor": {
         "shared_defence_treaty_or_military_alliance": 0.5,
         "shared_other_alliance": 0.3,
-        "otherwise": 0.15
+        "otherwise": 0
       },
       "per_alliance": "Each alliance's game_effect.rep_spill is its alliance_factor; when X and Y share several alliances, the highest applies.",
       "sign": "Negative relations invert the delta: helping X angers X's enemies.",
-      "scope": "Whole matrix, weighted as above (default; open question)."
+      "scope": "Allies only: spill-over applies only between factions that share an alliance (Captain-confirmed 2026-10-10)."
     },
     "player_trade": {
-      "sellers": "Only factions with player_trade.sellable true sell to the player: usa, gbr, can (decided), che and aut (Captain-confirmed 2026-10-10), krg_peshmerga basic kit (Captain-confirmed), plus the proposals in the remaining files (aus, nzl and several European states carry sellable true as proposals).",
-      "requirement": "A relation of at least +40 toward the player plus the faction's rep tier; che and aut (relation +15) are exempt as neutral arms markets that sell on rep tier only.",
+      "sellers": "Only factions with player_trade.sellable true sell to the player: usa, gbr, can (decided); the NATO members outside the Five Eyes (fra, deu, ita, esp, nld, bel, nor, dnk, swe, fin, grc, pol, est, lva, ltu, rou) at higher reputation thresholds than usa/gbr/can (rep 20/40/60/80); sau, are and qat at high reputation (rep 40/60/80); che and aut as arms markets (rep 20/40/60); krg_peshmerga basic kit (rep 30/50). All Captain-confirmed 2026-10-10. isr is a client only and never sells (Captain-confirmed 2026-10-10). tur is not a seller (open). aus and nzl carry sellable true as proposals.",
+      "requirement": "usa, gbr and can sell when the player's relation with them is at least +40 plus the rep tier. The other sellers (the non-Five-Eyes NATO members, sau, are, qat, che, aut, krg_peshmerga) sell on rep tier alone, using their higher thresholds, as long as their relation toward the player is not negative.",
       "never": "Terror groups, cartels, rival PMCs and africa_corps never sell."
     }
   },
@@ -1560,7 +1560,7 @@
       "nld": -60,
       "nor": -60,
       "nzl": -40,
-      "pak": -65,
+      "pak": -90,
       "phl": -20,
       "pij": 10,
       "player": -10,
@@ -5565,7 +5565,7 @@
       "vnm": 25
     },
     "pak": {
-      "afg_taliban": -60,
+      "afg_taliban": -90,
       "africa_corps": 0,
       "al_qaeda": -90,
       "al_shabaab": -60,
@@ -7523,7 +7523,7 @@
     "symmetry": "Every pair agrees in sign and is within 30 points (most are equal)."
   },
   "proposed": [
-    "game_rules (all of it)",
+    "game_rules, except side-lock length, reputation spill-over scope and the seller list (Captain-confirmed 2026-10-10)",
     "game_effect values for every alliance (war_join, side_lock, rep_spill)",
     "relations_matrix values filled by override, rule or formula (see matrix_method); file values are the factions' own",
     "alliance kind intelligence_alliance for five_eyes (not in the base kind list)",
