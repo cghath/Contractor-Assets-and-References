@@ -12,7 +12,8 @@
   "type": "mbt",
   "operators": [
     "vnm",
-    "syr"
+    "syr",
+    "egy"
   ],
   "crew": 4,
   "passengers": 0,
@@ -48,7 +49,8 @@
     "T-54B",
     "T-55",
     "T-54M3 (VNM upgrade)",
-    "T-55 / T-55A (SYR, ex-Assad stock)"
+    "T-55 / T-55A (SYR, ex-Assad stock)",
+    "Ramses II (EGY, upgraded T-54/55)"
   ],
   "existing_model": null,
   "model_priority": "medium",

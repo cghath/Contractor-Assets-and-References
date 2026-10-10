@@ -78,10 +78,33 @@ The Contractor design doc (Claude Doc) is the source of truth for game design. W
 
 ## Status at this snapshot
 
-- **Factions done (41 of 76):** every faction in the Five Eyes, Western Europe, eastern flank, Russia/CSTO and Asia-Pacific blocs, plus `player`.
-- **Factions still generating:** the Middle East states, the terrorist bloc, and the neutrals/others bloc.
-- **Vehicle catalogue:** 198 vehicles (34 high, 58 medium, 106 low priority).
-- **Worldspaces:** not started. They run after all the factions are done.
+**Update, 2026-10-10 09:40 UTC: ALL WORK PAUSED by Captain at 09:34.** Every agent is stopped and the auto-save loop is off. Don't resume anything until Captain says so.
+
+The queue, run one job at a time on Captain's desktop, is:
+
+1. middle_east_states (**partial**)
+2. me_terror
+3. others
+4. alliances
+5. worldspaces
+
+The loadouts job runs alongside the queue and is also paused; see [loadouts_handoff.md](loadouts_handoff.md).
+
+Each job has its own handoff sheet:
+
+- [me_terror_handoff.md](me_terror_handoff.md)
+- [others_handoff.md](others_handoff.md)
+- [alliances_handoff.md](alliances_handoff.md)
+- [worldspaces_handoff.md](worldspaces_handoff.md)
+- [loadouts_handoff.md](loadouts_handoff.md)
+
+Current state:
+
+- **Factions done (49 of 76):** every faction in the Five Eyes, Western Europe, eastern flank, Russia/CSTO and Asia-Pacific blocs, plus `player`.
+- **Middle East states (8 of 11 written):** irn, isr, tur, sau, are, qat, egy and jor are done. **syr, irq and pse_pa are missing.** The agent stopped at a usage limit. When resuming, check the 8 written files only lightly; the agent was still mid-bloc and may not have finished cross-checking them.
+- **Not started:** the terrorist bloc and the neutrals/others bloc.
+- **Vehicle catalogue:** 200 vehicles. The new ones are `aras` and `wolf_av`; `ah1z`, `dingo` and `t55` got operator updates. Older count: 198 (34 high, 58 medium, 106 low priority).
+- **Worldspaces:** not started. They run after all the factions and alliances are done.
 - **Validation:** not started. It will fix ids and relation symmetry, merge duplicate vehicles, and write `factions/README.md` (roster and alliance matrix), `reference/vehicles/README.md` and `worldspaces/README.md`.
 
 ## Next voxel models to build

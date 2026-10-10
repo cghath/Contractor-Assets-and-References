@@ -11,7 +11,8 @@
     "usa",
     "twn",
     "jpn",
-    "pak"
+    "pak",
+    "irn"
   ],
   "crew": 2,
   "passengers": 0,
@@ -47,7 +48,8 @@
   "variants": [
     "AH-1Z (USMC)",
     "AH-1W SuperCobra (Taiwan)",
-    "AH-1S/F (older Cobras: Japan, Pakistan)"
+    "AH-1S/F (older Cobras: Japan, Pakistan)",
+    "AH-1J International / Toufan (IRN, pre-1979 twin-engine Cobra, locally overhauled)"
   ],
   "existing_model": "ah1z",
   "model_priority": "medium",

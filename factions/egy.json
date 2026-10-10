@@ -1,0 +1,391 @@
+{
+  "id": "egy",
+  "name": "Arab Republic of Egypt (Egyptian Armed Forces)",
+  "short": "Egypt",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#CE1126",
+    "#FFFFFF",
+    "#000000",
+    "#C09300"
+  ],
+  "blocs": [
+    "arab_league",
+    "african_union",
+    "brics",
+    "major_non_nato_ally_us"
+  ],
+  "campaign_tier": "mid",
+  "alignment_to_player": "neutral",
+  "player_client": true,
+  "relations": {
+    "player": 10,
+    "usa": 50,
+    "fra": 50,
+    "rus": 30,
+    "chn": 35,
+    "deu": 30,
+    "ita": 30,
+    "ind": 35,
+    "kor": 30,
+    "grc": 55,
+    "sau": 60,
+    "are": 65,
+    "qat": 40,
+    "jor": 70,
+    "tur": 20,
+    "isr": 25,
+    "pse_pa": 55,
+    "syr": 10,
+    "irq": 30,
+    "irn": -15,
+    "som": 50,
+    "hamas": -25,
+    "pij": -30,
+    "hezbollah": -40,
+    "houthis": -50,
+    "iraqi_militias": -30,
+    "isis": -95,
+    "al_qaeda": -85,
+    "aqap": -70,
+    "al_shabaab": -60,
+    "jnim": -50
+  },
+  "theatres": [
+    "gaza_west_bank",
+    "yemen_red_sea",
+    "horn_of_africa"
+  ],
+  "languages": [
+    "Arabic (Egyptian dialect)",
+    "English (officers)"
+  ],
+  "callout_language": "Egyptian Arabic military radio: 'ishtibak' (engagement), 'darb' (fire), 'qunbula' (grenade), 'masab' (casualty), 'tamam ya fandim' (acknowledged, sir).",
+  "doctrine": {
+    "summary": "The largest army in the Arab world: a conscript mass army with a mix of US-supplied armour (M1A1 Abrams co-produced in Egypt, M60A3, M113) and Soviet-legacy, Chinese, Russian, French and Korean equipment. Its main combat experience since 2013 is counter-insurgency against the ISIS Sinai Province in northern Sinai (largely suppressed by 2023), plus border security on the Gaza (Rafah), Libyan and Sudanese frontiers. Egypt keeps a peace treaty with Israel, mediates in Gaza and contributes troops to the African Union mission in Somalia (AUSSOM). Doctrine is heavy on armour, artillery and fixed checkpoints; quality varies widely between conscript units and elite formations (Thunderbolt/Sa'ka commandos, Unit 777, Republican Guard).",
+    "squad_size": 9,
+    "fireteam": "Infantry squad of 9-11 conscripts around a PKM and RPG-7, carried in M113, Fahd or BMP-1; Sa'ka (Thunderbolt) commando teams of 6-10. In game: 8 men in battle-buddy pairs.",
+    "tactics": [
+      "Fortified checkpoints and berms along roads and borders (Sinai, Rafah)",
+      "Armoured columns with Abrams/M60 and M113 sweeping villages after air and artillery preparation",
+      "Commando raids and cordon-and-search operations against insurgent cells",
+      "Apache gunships and Wing Loong drones for close support in the desert",
+      "Engineer demolition of tunnels and creation of buffer zones on the Gaza border"
+    ],
+    "ai_tuning": {
+      "aggression": 0.45,
+      "discipline": 0.5,
+      "suppression_resistance": 0.45,
+      "flanking": 0.4,
+      "grenade_use": 0.45,
+      "medical_care": 0.45,
+      "night_capability": 0.45,
+      "marksmanship": 0.45,
+      "morale": 0.5
+    }
+  },
+  "camo": [
+    {
+      "name": "Egyptian desert digital",
+      "palette": [
+        "#CDB896",
+        "#A88F68",
+        "#7A664A",
+        "#E4D7BA"
+      ],
+      "use": "Standard army field uniform"
+    },
+    {
+      "name": "Egyptian legacy desert (brown blobs)",
+      "palette": [
+        "#C9AE84",
+        "#8B6E4A",
+        "#5F4B33"
+      ],
+      "use": "Older stocks, conscripts in rear areas"
+    },
+    {
+      "name": "Sa'ka commando woodland / multicam-type",
+      "palette": [
+        "#6B6A48",
+        "#8C875E",
+        "#4B4A33",
+        "#2E2D22"
+      ],
+      "use": "Thunderbolt commandos and special forces"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "Misr (Egyptian AKM, 7.62x39mm)",
+      "Maadi ARM / AKM variants (7.62x39mm)",
+      "M4 / M16A4 (5.56x45mm, special forces)"
+    ],
+    "autorifleman": [
+      "PKM-type (7.62x54R)",
+      "Misr RPK-type (7.62x39mm)",
+      "FN MAG (7.62x51mm)"
+    ],
+    "marksman": [
+      "SVD-type (7.62x54R)"
+    ],
+    "grenadier": [
+      "Misr with GP-25-type launcher (40 mm)",
+      "M4 with M203 (40 mm)"
+    ],
+    "at": [
+      "RPG-7 (Egyptian-made)",
+      "Kornet / TOW-2 / Milan ATGM teams"
+    ],
+    "medic": [
+      "Misr (7.62x39mm)"
+    ],
+    "squad_leader": [
+      "Misr (7.62x39mm)",
+      "M4 (5.56x45mm)"
+    ],
+    "sniper": [
+      "SVD-type (7.62x54R)",
+      "Barrett M82 (12.7x99mm)",
+      "Steyr HS .50 (12.7x99mm)"
+    ],
+    "sidearm": [
+      "Helwan (Beretta M1951 licence, 9x19mm)",
+      "Glock 17 (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "RPG-7 with PG-7V [in_game] and OG-7V [in_game]",
+    "M72 LAW [not_in_game]",
+    "9M133 Kornet, TOW-2, Milan [not_in_game]",
+    "Strela / Stinger MANPADS [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "light",
+    "vest": "light",
+    "plates": "steel",
+    "notes": "Conscript infantry: steel or basic aramid helmet and light vest, often none on rear-area checkpoints. Commandos and Sinai units: medium helmets and plate carriers (medium)."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "abrams",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "M1A1 Abrams co-produced at Factory 200 (about 1,100+); backbone of the armoured divisions and seen in Sinai."
+    },
+    {
+      "vehicle_id": "m60",
+      "role": "mbt",
+      "prevalence": "common",
+      "notes": "M60A1/A3 in large numbers."
+    },
+    {
+      "vehicle_id": "t55",
+      "role": "mbt",
+      "prevalence": "uncommon",
+      "notes": "Ramses II (upgraded T-54/55) and T-62 in reserve and border units."
+    },
+    {
+      "vehicle_id": "fahd",
+      "role": "apc",
+      "prevalence": "signature",
+      "notes": "Domestic Fahd 4x4 APC on Mercedes chassis; Sinai and internal security."
+    },
+    {
+      "vehicle_id": "m113",
+      "role": "apc",
+      "prevalence": "signature",
+      "notes": "M113A2 and YPR-765 in very large numbers; the standard tracked carrier."
+    },
+    {
+      "vehicle_id": "bmp1",
+      "role": "ifv",
+      "prevalence": "uncommon",
+      "notes": "BMP-1 (some upgraded) in older mechanised units."
+    },
+    {
+      "vehicle_id": "humvee",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Humvees (incl. up-armoured and TOW) on Sinai checkpoints and border patrols."
+    },
+    {
+      "vehicle_id": "toyota_hilux",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Pickups for border guards and Sinai patrols; also Land Cruisers."
+    },
+    {
+      "vehicle_id": "k9",
+      "role": "artillery",
+      "prevalence": "uncommon",
+      "notes": "K9A1EGY ordered 2022, local production; M109A2/A5 still the most common SPG."
+    },
+    {
+      "vehicle_id": "ah64",
+      "role": "attack_heli",
+      "prevalence": "signature",
+      "notes": "AH-64D Apaches used extensively in Sinai."
+    },
+    {
+      "vehicle_id": "ka52",
+      "role": "attack_heli",
+      "prevalence": "uncommon",
+      "notes": "Ka-52 Alligator (46 ordered)."
+    },
+    {
+      "vehicle_id": "wing_loong",
+      "role": "uav",
+      "prevalence": "common",
+      "notes": "Wing Loong I armed drones used against insurgents in Sinai and Libya border."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "egy_infantry_squad",
+      "name": "Conscript infantry squad (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "m113"
+    },
+    {
+      "id": "egy_checkpoint",
+      "name": "Sinai / border checkpoint (game 6)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "humvee"
+    },
+    {
+      "id": "egy_saka_team",
+      "name": "Sa'ka (Thunderbolt) commando team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "fahd"
+    },
+    {
+      "id": "egy_tank_section",
+      "name": "Abrams section with M113 infantry",
+      "composition": [
+        {
+          "role": "tank_crew",
+          "count": 8
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        }
+      ],
+      "vehicle_id": "abrams"
+    }
+  ],
+  "support_assets": [
+    "AH-64D and Ka-52 attack helicopters",
+    "Wing Loong armed drones",
+    "F-16, Rafale and MiG-29M strikes (off-map)",
+    "Large tube artillery park (M109, K9, D-30)",
+    "Border engineer units (tunnel demolition, berms)"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [
+      "border_security_rafah_crossing",
+      "escort_aid_convoy_gaza",
+      "hvt_capture_isis_sinai",
+      "anti_smuggling_raid",
+      "protect_suez_shipping",
+      "peacekeeping_support_somalia"
+    ],
+    "as_target": []
+  },
+  "notes": "Mid-tier neutral client. Egypt controls the Rafah crossing into Gaza and is a guarantor and mediator of the Gaza ceasefire; it is expected to train Palestinian police for post-war Gaza. ISIS Sinai Province is much weakened but still a map threat. Houthi attacks in the Red Sea cut Suez Canal revenue, so Egypt is hostile to them without joining strikes. Egypt condemned Iranian strikes on Jordan in 2026 but has kept out of the Iran war. Deployed troops to AUSSOM in Somalia. Large, mixed arsenal: US, Russian, Chinese, French, German, Korean.",
+  "proposed": [
+    "campaign_tier",
+    "alignment_to_player",
+    "player_client",
+    "contract_types.as_client",
+    "relations.player",
+    "doctrine.ai_tuning",
+    "unit_templates",
+    "vehicles[].prevalence (game weighting)",
+    "body_armor (game tier mapping)",
+    "player_trade.sellable (false until Captain decides)",
+    "theatres (gaza_west_bank covers the Rafah border; horn_of_africa is the AUSSOM contingent)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Egyptian_Army",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Egyptian_Army",
+    "https://en.wikipedia.org/wiki/Sinai_insurgency",
+    "https://en.wikipedia.org/wiki/Fahd_(armored_personnel_carrier)",
+    "https://en.wikipedia.org/wiki/K9_Thunder",
+    "https://en.wikipedia.org/wiki/Misr_assault_rifle",
+    "https://english.ahram.org.eg/News/572559.aspx"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "id": "aras",
+  "name": "Aras / Aras-2 tactical vehicle",
+  "aliases": [
+    "Aras-2",
+    "Aras 4x4"
+  ],
+  "origin": "Iran",
+  "type": "light",
+  "operators": [
+    "irn"
+  ],
+  "crew": 2,
+  "passengers": 4,
+  "dimensions_m": {
+    "length": 5.2,
+    "width": 2.0,
+    "height": 2.0
+  },
+  "weight_t": 4.0,
+  "armament": [
+    "Pintle 12.7 mm DShK or 7.62 mm PKM in the cargo bed",
+    "Can carry a 106 mm recoilless rifle, Toophan ATGM launcher or the AD-08 Majid short-range air-defence launcher"
+  ],
+  "protection": "Unarmoured or lightly armoured cab (dimensions and weight are approximate: few published figures). Game: soft-skin; small arms disable crew and tyres; 7.62x54R and larger penetrate; any launcher destroys it.",
+  "visual_notes": [
+    "Boxy Iranian 4x4 utility truck with a short bonnet, flat windscreen and two-door or four-door cab, open cargo bed with roll bar",
+    "Large off-road tyres on 2 axles, high ground clearance, front bull bar and winch",
+    "Weapon mount on a pedestal in the bed; Majid SAM version carries a 4-round launcher box on a turntable",
+    "Usually Artesh sand/khaki paint with black number plates and a small Iranian flag; IRGC versions in olive"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Artesh sand",
+      "palette": [
+        "#C2AD84",
+        "#9E8862",
+        "#2B2A26"
+      ]
+    },
+    {
+      "name": "Olive drab (IRGC / northern units)",
+      "palette": [
+        "#5A5D42",
+        "#3C3E2E",
+        "#22221E"
+      ]
+    }
+  ],
+  "variants": [
+    "Aras (first model)",
+    "Aras-2 (2019, 200 hp diesel)",
+    "Aras-2 with 106 mm recoilless rifle",
+    "Aras-2 with AD-08 Majid SHORAD launcher"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://www.globalsecurity.org/wmd/library/news/iran/2019/iran-190813-presstv01.htm",
+    "https://www.armyrecognition.com/archives/archives-land-defense/land-defense-2022/iran-has-developed-ad-08-majid-new-short-range-air-defense-missile-system"
+  ],
+  "sources": [
+    "https://www.globalsecurity.org/wmd/library/news/iran/2019/iran-190813-presstv01.htm",
+    "https://www.techinsider.ru/vehicles/news-499662-iranskaya-armiya-poluchila-novyy-vnedorozhnik-aras-2/",
+    "https://www.armyrecognition.com/archives/archives-land-defense/land-defense-2022/iran-has-developed-ad-08-majid-new-short-range-air-defense-missile-system"
+  ]
+}

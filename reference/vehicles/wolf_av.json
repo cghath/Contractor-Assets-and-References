@@ -1,0 +1,69 @@
+{
+  "id": "wolf_av",
+  "name": "Wolf (Ze'ev) Armoured Vehicle",
+  "aliases": [
+    "Ze'ev",
+    "Wolf APC",
+    "Rafael/Carmor Wolf"
+  ],
+  "origin": "Israel",
+  "type": "apc",
+  "operators": [
+    "isr",
+    "geo",
+    "rou"
+  ],
+  "crew": 2,
+  "passengers": 10,
+  "dimensions_m": {
+    "length": 5.75,
+    "width": 2.38,
+    "height": 2.35
+  },
+  "weight_t": 8.0,
+  "armament": [
+    "Optional remote weapon station on the roof (7.62 mm or 12.7 mm MG)",
+    "Firing ports in some versions"
+  ],
+  "protection": "About 3 t of armour around the crew box, drivetrain and wheels; armoured doors and run-flat tyres; protected against rifle fire and fragments. Game: immune to small calibre; 7.62x54R and larger can penetrate (side/rear), launchers kill it.",
+  "visual_notes": [
+    "Commercial Ford F-550 truck chassis with a separate boxy armoured body: long flat-sided crew box, sloped front bonnet armour",
+    "2 axles, single rear wheels per side on a heavy truck chassis, large wheel arches",
+    "Six doors: two crew doors, two side doors and two rear doors; small thick bullet-proof windows in rows",
+    "Roof hatches and optional RWS; grille guard and lights cage at the front; often a riot-screen frame or mesh on windows",
+    "IDF sand/olive paint with black hatch details; Border Police versions grey-green"
+  ],
+  "colour_schemes": [
+    {
+      "name": "IDF sinai grey / sand",
+      "palette": [
+        "#A9A086",
+        "#8A8270",
+        "#3A3934"
+      ]
+    },
+    {
+      "name": "IDF olive",
+      "palette": [
+        "#5B5E44",
+        "#3F4130",
+        "#262620"
+      ]
+    }
+  ],
+  "variants": [
+    "Wolf APC",
+    "Wolf command",
+    "Wolf ambulance",
+    "Wolf riot-control / police"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Wolf_Armoured_Vehicle",
+    "https://commons.wikimedia.org/wiki/Category:Wolf_Armoured_Vehicle"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Wolf_Armoured_Vehicle"
+  ]
+}

@@ -1,0 +1,456 @@
+{
+  "id": "tur",
+  "name": "Republic of Türkiye (Turkish Armed Forces)",
+  "short": "Türkiye",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#E30A17",
+    "#FFFFFF"
+  ],
+  "blocs": [
+    "nato",
+    "mecca_joint_defence_agreement",
+    "organization_of_turkic_states",
+    "g20"
+  ],
+  "campaign_tier": "mid",
+  "alignment_to_player": "neutral",
+  "player_client": true,
+  "relations": {
+    "player": 10,
+    "usa": 35,
+    "gbr": 40,
+    "deu": 30,
+    "fra": 10,
+    "ita": 35,
+    "grc": -25,
+    "pol": 40,
+    "ukr": 40,
+    "rus": 15,
+    "chn": 10,
+    "aze": 90,
+    "pak": 75,
+    "kaz": 50,
+    "arm": -15,
+    "geo": 45,
+    "sau": 60,
+    "qat": 85,
+    "are": 25,
+    "egy": 20,
+    "jor": 35,
+    "syr": 75,
+    "irq": 25,
+    "irn": -15,
+    "isr": -50,
+    "pse_pa": 45,
+    "som": 70,
+    "sdf": -60,
+    "krg_peshmerga": 45,
+    "hamas": 25,
+    "hezbollah": -35,
+    "houthis": -15,
+    "iraqi_militias": -25,
+    "isis": -90,
+    "isis_k": -80,
+    "al_qaeda": -60,
+    "al_shabaab": -85
+  },
+  "theatres": [
+    "levant_syria",
+    "mesopotamia",
+    "black_sea_coast",
+    "caucasus",
+    "horn_of_africa"
+  ],
+  "languages": [
+    "Turkish",
+    "Kurdish (many conscripts)",
+    "Arabic (border regions)"
+  ],
+  "callout_language": "Turkish military radio: 'temas' (contact), 'ates' (fire), 'dikkat' (attention), 'el bombasi' (grenade), 'yarali var' (wounded), 'IHA' (drone); 'tamam' acknowledgements.",
+  "doctrine": {
+    "summary": "NATO's second-largest army, with decades of counter-insurgency experience in the mountains of south-east Türkiye and northern Iraq and of cross-border operations in northern Syria. Commando brigades, Gendarmerie special operations (JÖH) and police special operations (PÖH) lead mountain and urban operations; mechanised forces use Leopard 2A4 and M60T tanks, ACV-15 IFVs and a large fleet of domestic MRAPs (Kirpi, Ejder Yalçın, Vuran, Cobra). Drones are central: Bayraktar TB2/Akıncı and Anka strike drones find and hit targets, and the domestic defence industry (Altay tank, T129 ATAK, Firtina howitzer) supplies an increasing share. Türkiye is the main military patron of Syria's new government (2025 training and equipment accord) and signed the Mecca Joint Defence Agreement with Saudi Arabia and Pakistan in August 2026. The PKK announced its dissolution and disarmament in 2025, lowering the intensity of the domestic conflict.",
+    "squad_size": 9,
+    "fireteam": "Infantry/commando squad (manga) of 9-11: squad leader, two fireteams with MPT-76 rifles, an MG3/PKM-type gunner, grenadier, AT gunner and marksman, mounted in an MRAP or ACV-15. Commando teams of 6-12 on foot in mountains. In game: 8 men in battle-buddy pairs.",
+    "tactics": [
+      "Drone-first: TB2/Akıncı overwatch identifies and strikes targets before ground units move (game: strike-drone support)",
+      "Commando foot patrols along mountain ridgelines and cave-clearing in rough terrain",
+      "MRAP-mounted convoys with route clearance against IEDs (map hazards)",
+      "Artillery and MLRS (Firtina, TRG-300 Kasırga) fire from across the border",
+      "Partnering with allied Syrian forces as the front-line infantry while Turkish units provide drones, artillery and armour",
+      "Gendarmerie and JÖH urban clearance with flashbangs and grenades"
+    ],
+    "ai_tuning": {
+      "aggression": 0.6,
+      "discipline": 0.7,
+      "suppression_resistance": 0.65,
+      "flanking": 0.6,
+      "grenade_use": 0.6,
+      "medical_care": 0.65,
+      "night_capability": 0.65,
+      "marksmanship": 0.65,
+      "morale": 0.7
+    }
+  },
+  "camo": [
+    {
+      "name": "Turkish Land Forces digital (woodland)",
+      "palette": [
+        "#6C6B4A",
+        "#4A4A34",
+        "#8F8763",
+        "#2C2B22"
+      ],
+      "use": "Standard army uniform since 2008"
+    },
+    {
+      "name": "Turkish digital (desert/arid)",
+      "palette": [
+        "#B8A47A",
+        "#8D7A57",
+        "#5F543E",
+        "#D5C7A2"
+      ],
+      "use": "Syria and Iraq cross-border operations"
+    },
+    {
+      "name": "Gendarmerie digital (green-grey)",
+      "palette": [
+        "#5E6352",
+        "#3E4237",
+        "#878A76",
+        "#262721"
+      ],
+      "use": "Jandarma and JÖH"
+    },
+    {
+      "name": "Commando / special forces multicam-type",
+      "palette": [
+        "#7A7356",
+        "#A3966F",
+        "#4F4A37",
+        "#C8B992"
+      ],
+      "use": "Commandos, Special Forces (maroon beret, 'Bordo Bereliler')"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "MKE MPT-76 (7.62x51mm)",
+      "HK G3A7 (7.62x51mm, legacy)",
+      "MKE MPT-55 (5.56x45mm)"
+    ],
+    "autorifleman": [
+      "MKE MG3 (7.62x51mm)",
+      "MKE PMT-76 (7.62x51mm)",
+      "FN Minimi (5.56x45mm)"
+    ],
+    "marksman": [
+      "MKE KNT-76 (7.62x51mm)",
+      "MPT-76 DMR (7.62x51mm)"
+    ],
+    "grenadier": [
+      "MPT-76 with MKE T-40 underbarrel (40 mm)",
+      "MKE AV-40 / 40 mm automatic grenade launcher, crew-served"
+    ],
+    "at": [
+      "HAR-66 (M72 LAW type, 66 mm)",
+      "Roketsan KARAOK short-range ATGM",
+      "Kornet-E / OMTAS / Eryx ATGM teams"
+    ],
+    "medic": [
+      "MKE MPT-55 (5.56x45mm)"
+    ],
+    "squad_leader": [
+      "MKE MPT-76 (7.62x51mm)"
+    ],
+    "sniper": [
+      "MKE Bora-12 / JNG-90 (7.62x51mm)",
+      "KNT-308 (.338 Lapua)",
+      "Barrett M82 / KNT-50 type (12.7x99mm)"
+    ],
+    "sidearm": [
+      "Canik TP9 (9x19mm)",
+      "Sarsılmaz SAR9 (9x19mm)",
+      "MKE Yavuz 16 (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "HAR-66 (M72 LAW type) [not_in_game]",
+    "Roketsan KARAOK fire-and-forget ATGM [not_in_game]",
+    "Roketsan OMTAS ATGM [not_in_game]",
+    "9M133 Kornet-E, Milan, Eryx, TOW [not_in_game]",
+    "Stinger MANPADS (licence) [not_in_game]",
+    "AT4 is used in small numbers by special units [in_game]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "ceramic",
+    "notes": "Domestic aramid helmets and plate carriers with ceramic front/back plates for commandos, JÖH and front-line units = medium; side plates on special operations = heavy. Conscripts in rear areas wear lighter vests."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "leopard2a6",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "Leopard 2A4 and Aselsan-upgraded 2A4T1 with add-on armour and RWS; lost several in Syria (2016-17), prompting upgrades."
+    },
+    {
+      "vehicle_id": "m60",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "M60T Sabra (IAI upgrade with 120 mm gun and ERA) and M60TM Firat; heavily used in Syria and Iraq operations."
+    },
+    {
+      "vehicle_id": "altay",
+      "role": "mbt",
+      "prevalence": "rare",
+      "notes": "First Altay T1 tanks delivered October 2025; about 10+ planned for 2026, so rare in 2026 but rising."
+    },
+    {
+      "vehicle_id": "acv15",
+      "role": "ifv",
+      "prevalence": "signature",
+      "notes": "FNSS ACV-15 (M113-derived) IFV/APC with 25 mm turret or 12.7 mm; the most numerous Turkish tracked carrier."
+    },
+    {
+      "vehicle_id": "kirpi",
+      "role": "mrap",
+      "prevalence": "signature",
+      "notes": "BMC Kirpi MRAP, standard troop carrier on cross-border operations."
+    },
+    {
+      "vehicle_id": "ejder_yalcin",
+      "role": "mrap",
+      "prevalence": "common",
+      "notes": "Nurol Ejder Yalçın 4x4 for Gendarmerie, special forces and police."
+    },
+    {
+      "vehicle_id": "cobra",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Otokar Cobra / Cobra II 4x4 light armoured vehicles; also donated to Syria's new army."
+    },
+    {
+      "vehicle_id": "vuran",
+      "role": "mrap",
+      "prevalence": "common",
+      "notes": "BMC Vuran 4x4 MRAP for Gendarmerie, commandos and police."
+    },
+    {
+      "vehicle_id": "k9",
+      "role": "artillery",
+      "prevalence": "signature",
+      "notes": "T-155 Fırtına / Fırtına II (K9-derived) 155 mm self-propelled howitzer, used across the Syrian and Iraqi borders."
+    },
+    {
+      "vehicle_id": "t129",
+      "role": "attack_heli",
+      "prevalence": "common",
+      "notes": "TAI T129 ATAK attack helicopter (AH-1W/P Cobras retiring)."
+    },
+    {
+      "vehicle_id": "uh60",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": "S-70A-28 / T-70 Black Hawks for commando insertion; also Cougar and Gökbey."
+    },
+    {
+      "vehicle_id": "bayraktar_tb2",
+      "role": "uav",
+      "prevalence": "signature",
+      "notes": "Bayraktar TB2 and the larger Akıncı and TAI Anka strike drones (game: strike-drone support and visible MALE drone overhead)."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "tur_commando_squad",
+      "name": "Commando squad (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "kirpi"
+    },
+    {
+      "id": "tur_mech_squad",
+      "name": "Mechanised infantry squad",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "acv15"
+    },
+    {
+      "id": "tur_joh_team",
+      "name": "Gendarmerie special operations (JÖH) team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "breacher",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "ejder_yalcin"
+    },
+    {
+      "id": "tur_tank_section",
+      "name": "Tank section with MRAP escort",
+      "composition": [
+        {
+          "role": "tank_crew",
+          "count": 8
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        }
+      ],
+      "vehicle_id": "m60"
+    },
+    {
+      "id": "tur_drone_team",
+      "name": "Forward drone and fires team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "drone_operator",
+          "count": 1
+        },
+        {
+          "role": "radio_operator",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "cobra"
+    }
+  ],
+  "support_assets": [
+    "Bayraktar TB2, Akıncı and Anka strike drones (frequent, short warning)",
+    "Fırtına 155 mm SPGs and TRG-300 / T-122 Sakarya MLRS",
+    "T129 ATAK attack helicopters",
+    "F-16 air strikes (off-map)",
+    "Kangal / Aselsan EW jammers against remote-detonated IEDs and drones"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [
+      "escort_convoy_northern_syria",
+      "isis_cache_raid",
+      "hvt_capture_isis",
+      "train_partner_force_security",
+      "recover_downed_drone",
+      "protect_reconstruction_site"
+    ],
+    "as_target": []
+  },
+  "notes": "NATO member and the main outside military patron of Syria's transitional government (August 2025 accord: training, weapons, logistics; Turkish-supplied Cobra, Ejder, Kirpi, Amazon and ex-Turkish M113 vehicles appear in Syrian service). Hostile to the SDF and to the PKK (which announced dissolution in 2025); supports the January 2026 SDF-Damascus integration agreement if it is carried out. Strongly opposed to Israel's wars in Gaza and Lebanon and hosts Hamas political figures, while Turkish-Israeli tensions in Syria are high. Signed the Mecca Joint Defence Agreement with Saudi Arabia and Pakistan on 7 August 2026; on 5 October 2026 the partners agreed to activate collective-defence deployments in Saudi Arabia. Keeps a base and training mission in Somalia (horn_of_africa). Good candidate for a neutral-to-friendly client for counter-ISIS contracts in levant_syria and mesopotamia.",
+  "proposed": [
+    "campaign_tier",
+    "alignment_to_player",
+    "player_client",
+    "contract_types.as_client",
+    "relations.player",
+    "doctrine.ai_tuning",
+    "unit_templates",
+    "vehicles[].prevalence (game weighting)",
+    "body_armor (game tier mapping)",
+    "player_trade.sellable (false until Captain decides)",
+    "blocs.mecca_joint_defence_agreement (new alliance id for the alliances agent)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Turkish_Land_Forces",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Turkish_Land_Forces",
+    "https://www.defensenews.com/global/europe/2025/10/31/turkey-wants-eight-altay-battle-tanks-yearly-from-new-bmc-factory/",
+    "https://www.janes.com/osint-insights/defence-news/defence/turkiye-receives-first-altay-mbt",
+    "https://www.al-monitor.com/originals/2025/08/turkey-help-syria-weapon-systems-equipment-under-new-accord-source-says",
+    "https://www.inquirer.com/news/nation-world/saudi-arabia-pakistan-turkey-sign-mecca-joint-defense-agreement-20260807.html",
+    "https://www.aljazeera.com/news/2026/10/5/mecca-alliance-agrees-to-activate-collective-deterrence-measures",
+    "https://en.wikipedia.org/wiki/MKE_MPT-76",
+    "https://en.wikipedia.org/wiki/Bayraktar_TB2",
+    "https://en.wikipedia.org/wiki/T-155_F%C4%B1rt%C4%B1na"
+  ]
+}

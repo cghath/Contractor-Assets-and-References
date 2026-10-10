@@ -8,7 +8,8 @@
   "type": "mrap",
   "operators": [
     "deu",
-    "bel"
+    "bel",
+    "qat"
   ],
   "crew": 2,
   "passengers": 6,
@@ -46,7 +47,8 @@
   ],
   "variants": [
     "Dingo 1",
-    "Dingo 2 A3/A4"
+    "Dingo 2 A3/A4",
+    "Dingo 2 (QAT)"
   ],
   "existing_model": null,
   "model_priority": "low",
