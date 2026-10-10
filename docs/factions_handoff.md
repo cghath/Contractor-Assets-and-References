@@ -1,6 +1,6 @@
 # Contractor faction pack: handoff
 
-Snapshot as of 2026-10-10 04:35 UTC. The pack is still being generated on branch `factions-worldspaces` (draft PR #2). Finished files push automatically every 10 minutes, so the folders on the branch are the live state. Check them against the "Status" section below.
+Snapshot as of 2026-10-10 09:06 UTC. **The cloud run is PAUSED** (Captain moved the work to the local desktop). The pack is still being generated on branch `factions-worldspaces` (draft PR #2). Finished files push automatically every 10 minutes, so the folders on the branch are the live state. Check them against the "Status" section below.
 
 The Contractor design doc (Claude Doc) is the source of truth for game design. Where it disagrees with this pack, the design doc wins. Anything this pack invents for gameplay is listed under `proposed` in each file, so it can be tuned.
 
@@ -98,6 +98,20 @@ Early-game (terrorist) theatres lean on the existing technicals, Hiluxes, BMP/BT
 - Whether hot zones are twice the area (current) or twice the width.
 - Reputation thresholds and prices for buying from the USA, GB and Canada; the values in the files are proposals.
 - Whether any non-Five-Eyes friendly (for example Poland or France) should also sell to the player.
+
+## Paused state and the plan Captain set (09:00-09:05 UTC)
+
+Captain asked to use subagents, to enable CI, and to give the worldspaces and the alliances one dedicated subagent each. All of these were started and then paused at Captain's word before they wrote any files. Resume them as separate, parallel jobs:
+
+1. **Faction blocs still to build:** middle_east_states, me_terror and others. Run one agent per bloc, using CONTEXT and FACTION_SPEC from `tools/factions_workflow.js`.
+2. **Worldspaces agent:** builds all 23 `worldspaces/*.json` and `worldspaces/README.md` from WORLD_SPEC. Start with the Middle East and Africa theatres (the early game).
+3. **Alliances agent:** writes `factions/alliances.json` and `factions/ALLIANCES.md`:
+   - each real 2026 alliance with its id, kind, members (faction ids) and obligations
+   - proposed game rules for side-locking, war joining and reputation spill-over
+   - a full relations matrix over every faction id, including `player`
+
+   It then reconciles each faction file's `relations` and `blocs` fields to the matrix, only after all the blocs are finished.
+4. **CI:** `tools/validate_pack.py` is done. It checks that the JSON parses, that ids, theatres and vehicle refs are canonical, and that terrorist factions never hire the player. Missing files are reported as warnings while the pack is incomplete. Still to do: `.github/workflows/ci.yml`, with a `data` job that runs the validator and a `godot` job that downloads the Voxel Tools 4.7.2 editor, imports the project, parse-checks the GDScript and renders `uh60` under xvfb + opengl3 as an artifact. Pushing a workflow file needs a token with the `workflow` scope.
 
 ## How to resume if the run is interrupted
 
