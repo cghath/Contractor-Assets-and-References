@@ -4,7 +4,20 @@ Snapshot as of 2026-10-10 09:25 UTC. Branch `factions-worldspaces` (draft PR #2)
 
 ## Status
 
-- **Not started.** Captain made the worldspaces the final job: they run after the 3 remaining faction blocs and the alliances job land.
+- **Done (Job 5, 2026-10-10).** All 23 theatres are written in `worldspaces/<id>.json`, together with [worldspaces/README.md](../worldspaces/README.md), which has the theatre table, the zone fit, the generator approach and the material registry. The validator reports 0 errors and 0 warnings; the missing-worldspace warnings are gone.
+  - Pass 1 covers Middle East and Africa (11). Pass 2 covers Europe, Asia and the Americas (12); it was built in the same job, which answers the pass-2 question below for now.
+  - `early_game_suitable: true` is set on 8 theatres: levant_syria, gaza_west_bank, mesopotamia, yemen_red_sea, sahel, horn_of_africa, afghan_highlands and mexico_cartel_belt.
+  - `lhd: true` is set on the 13 coastal maps.
+  - The maps are 16-24 km per side. Each file has a `zone_plan` with 4 contract zones and 1-2 hot zones.
+  - Town names are fictional. Names derived from real places were replaced in a cleanup pass.
+  - afghan_highlands reflects the active Afghanistan-Pakistan border war (afg_taliban <-> pak at -90; the two clients lock each other out).
+- **Faction coverage.** Every faction file's `theatres` entry is reflected in `factions_present`. One worldspace adds factions its files don't list: lebanon_south adds chn and ind, the UNIFIL contributors per `alliances.json`. Open questions:
+  - Should iraqi_militias list iran_zagros?
+  - Should isis list south_china_sea, for phl's counter-terror hook?
+  - alpine_europe has no hostile faction.
+  - kashmir_loc has no militant faction.
+  - Several low-plausibility listings are flagged in the README: blr in eastern_ukraine and baltic_coast, fra, bel and esp in sahel, jpn in arctic_north, and chn in korean_dmz.
+- Earlier note: Captain made the worldspaces the final job: they run after the 3 remaining faction blocs and the alliances job land.
 - The job order is: middle_east_states, then me_terror, then others, then alliances, then worldspaces. Only one job runs at a time.
 - Faction files already list their theatres (see the table below), so `factions_present` can be checked against them.
 

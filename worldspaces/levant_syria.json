@@ -1,0 +1,239 @@
+{
+  "id": "levant_syria",
+  "name": "Wadi Furat Marches",
+  "inspired_by": "Central and north-east Syria in the post-Assad transition (2025-2026): the middle Euphrates valley with its irrigated strip, the Badia steppe desert to the south, the Jazira grain plain to the north up to the Turkish border, and a basalt plateau in the south-west standing in for the Hauran and the Golan buffer area. The map compresses these into one fictional region; no real town is reproduced.",
+  "map_size_km": [24, 20],
+  "climate": "Hot semi-arid to arid (Koppen BSh/BWh). Summers 38-45 C in the valley, winters 3-12 C with occasional frost on the plateau. Annual rain 150-350 mm, falling November-April; the Jazira north gets the most, the Badia the least.",
+  "seasons": [
+    "Winter (Dec-Feb): cool, short rain spells, mud on farm tracks, fog in the valley at dawn",
+    "Spring (Mar-May): green steppe for a few weeks, wheat and barley ripening, khamsin dust storms from April",
+    "Summer (Jun-Sep): extreme heat, haze, dry wadis, cotton in the irrigated strip",
+    "Autumn (Oct-Nov): harvest smoke, first rains, sheep moving back from the Badia"
+  ],
+  "biomes": [
+    {
+      "id": "euphrates_irrigated_strip",
+      "share": 0.22,
+      "vegetation": ["Euphrates poplar (Populus euphratica) along the banks", "tamarisk thickets", "giant reed (Arundo donax)", "cotton and wheat fields", "date palms and pomegranate in village gardens", "irrigation canal verges of camelthorn"],
+      "ground_palette": ["#8c7a5b", "#6f6247", "#a39272", "#5d5a3c", "#b9a985"],
+      "foliage_palette": ["#5e6e3a", "#7d8a4a", "#a0a866", "#4b5a33", "#c8c39a"]
+    },
+    {
+      "id": "jazira_grain_plain",
+      "share": 0.24,
+      "vegetation": ["rain-fed wheat and barley", "stubble and fallow", "scattered olive and pistachio groves", "roadside eucalyptus windbreaks", "wild mustard and poppy in spring"],
+      "ground_palette": ["#a8916a", "#c2ab7f", "#8e7652", "#d1bf95", "#7a6648"],
+      "foliage_palette": ["#c9b56e", "#a99a52", "#6f7a3c", "#8d8f55", "#e0d29b"]
+    },
+    {
+      "id": "badia_steppe",
+      "share": 0.32,
+      "vegetation": ["white wormwood (Artemisia herba-alba) dwarf shrub steppe", "saltwort (Salsola) and Haloxylon in depressions", "seasonal grasses (Poa bulbosa, Stipa)", "bare gravel hamada"],
+      "ground_palette": ["#c4ad86", "#b39a72", "#d8c6a0", "#9b8564", "#e3d5b4", "#8a7a63"],
+      "foliage_palette": ["#a8a27e", "#8f8a68", "#c1b98f", "#6f6c55"]
+    },
+    {
+      "id": "basalt_plateau",
+      "share": 0.14,
+      "vegetation": ["sparse grass between basalt boulders", "wheat and vegetable plots in cleared fields", "fig and olive near villages", "thistles and spiny burnet (Sarcopoterium)"],
+      "ground_palette": ["#4b4845", "#5f5a52", "#7b6f5e", "#3a3836", "#8d806a"],
+      "foliage_palette": ["#6a7340", "#8c8a55", "#56603a", "#a9a36d"]
+    },
+    {
+      "id": "limestone_hills",
+      "share": 0.08,
+      "vegetation": ["degraded oak and pistachio scrub (Quercus calliprinos, Pistacia atlantica)", "olive terraces", "thyme and sage garrigue"],
+      "ground_palette": ["#d6caa8", "#bfb08b", "#9f8f6c", "#e6dcc0", "#7e705a"],
+      "foliage_palette": ["#5c6a3c", "#7f8a55", "#9aa070", "#46552f"]
+    }
+  ],
+  "terrain": {
+    "elevation_range_m": [190, 780],
+    "relief": "Mostly flat to gently rolling. The Euphrates valley floor (190-230 m) is incised 30-60 m below the steppe with bluffs on its south bank; the Badia rises gently to 450 m with isolated mesas; the basalt plateau in the south-west stands at 600-780 m with volcanic cones; low limestone hills fringe the west edge.",
+    "features": ["incised river valley with bluffs and oxbow meanders", "river islands with reed and poplar", "dry wadis draining to the river", "mesas and buttes in the Badia", "basalt boulder fields and small volcanic cones", "irrigation canals and pumping stations", "ancient tells (settlement mounds) 10-30 m high", "sabkha salt flats in Badia depressions"],
+    "water": "One large river (300-600 m wide channel with islands) crossing the map west to east, a dam reservoir arm at the north-west edge, a main irrigation canal parallel to the river on the north bank, seasonal wadis elsewhere, and cisterns and wells in the Badia.",
+    "generator": {
+      "approach": "Heightmap built in code at 10 m resolution, later portable to a VoxelLodTerrain with VoxelGeneratorGraph. Base = sum of noise layers below, then carve the river valley as a spline with a flat floor and terraced bluff profile, then stamp the basalt plateau as a masked region (southwest quadrant, smooth step edge 800 m wide). Biomes assigned by elevation, distance from river and a low-frequency moisture noise.",
+      "noise_layers": [
+        {"type": "simplex fbm (4 octaves)", "frequency": 0.06, "amplitude_m": 140, "purpose": "regional tilt and broad steppe swells"},
+        {"type": "ridged multifractal", "frequency": 0.35, "amplitude_m": 45, "purpose": "Badia mesas and limestone hill crests, masked to steppe and hill biomes"},
+        {"type": "cellular (Worley F1)", "frequency": 1.2, "amplitude_m": 18, "purpose": "volcanic cones and basalt hummocks on the plateau mask"},
+        {"type": "simplex", "frequency": 4.0, "amplitude_m": 2.5, "purpose": "micro-relief, field undulation and berm-able ground"},
+        {"type": "value noise", "frequency": 0.15, "amplitude_m": 0, "purpose": "moisture/vegetation mask (not height): drives crop vs steppe"}
+      ],
+      "erosion": "Light hydraulic erosion pass (20-40 iterations) on the steppe only, to cut shallow wadis toward the river; thermal erosion on bluffs capped at 35 degrees so bluffs stay climbable in places.",
+      "rivers": "River as a hand-weighted spline across the map (west to east, sinuous, amplitude 1.5 km), valley floor 2-4 km wide flattened to 190-230 m; wadis follow flow accumulation and end at the valley edge in alluvial fans. Main canal is a 12 m wide straight-segment channel 0.5-1.5 km north of the river.",
+      "settlement_flattening": "Each settlement footprint is flattened to its median height with a 60 m feathered skirt; villages on bluffs step in 1.5 m terraces. Tells are stamped as truncated cones before flattening and never flattened.",
+      "notes": "Macro terrain is a mesh or coarse ground; only the active contract or hot zone gets the 10 cm voxel structure layer. Keep slopes above 30 degrees rare outside bluffs so convoys can route anywhere on the steppe; the river crossings (3 bridges, 1 dam road, 2 ferries) become the real chokepoints."
+    }
+  },
+  "settlements": [
+    {
+      "type": "village",
+      "share": 0.4,
+      "pop_range": [300, 3000],
+      "architecture": "Single-storey courtyard houses of mud brick or cinder block with flat concrete roofs, rebar stubs left for a future floor, parapets 0.8 m, metal gates, rooftop water tanks and satellite dishes. Older Jazira villages keep a few beehive (corbelled dome) mud houses used as stores. A small domed mosque with a square minaret.",
+      "footprint_m": "house 10x12 to 18x20 with walled courtyard; plot walls 2.2 m",
+      "storeys": [1, 2],
+      "wall_class": "Mud-brick outer walls 40-60 cm (thick, good cover, chip slowly); cinder-block additions 20 cm (thin, breachable); sheet-metal gates thin.",
+      "materials": ["MUD_BRICK", "CINDER_BLOCK", "CONCRETE", "PLASTER", "STEEL"],
+      "palette": ["#b59a73", "#a48a63", "#d8ccb3", "#8f8d86", "#e3dccb", "#4a4d50"],
+      "layout_rules": ["organic cluster along a road or canal, 40-120 houses", "one main street with shops and a mosque square", "orchards and threshing floors at the edge", "grain silo or water tower as a landmark", "2-4 approach roads plus field tracks; ditches and canal culverts as cover"],
+      "example_names": ["Tall Hamra", "Ain al-Khadra", "Rasm al-Sawda", "Jdeidet Furat", "Abu Shuayb", "Kharbat Nasr", "Hawija Saghira"]
+    },
+    {
+      "type": "town",
+      "share": 0.25,
+      "pop_range": [15000, 60000],
+      "architecture": "Two- to five-storey reinforced-concrete frame buildings with cinder-block infill, shops at street level with roller shutters, balconies, flat roofs with water tanks and solar panels, unfinished upper floors. Many buildings show war damage: collapsed slabs, patched walls, rubble lots.",
+      "footprint_m": "block 40x60 to 80x120; building 12x15 to 20x30",
+      "storeys": [2, 5],
+      "wall_class": "Concrete frame columns and slabs thick (cover); infill walls 20 cm cinder block thin (breachable); shutters steel thin.",
+      "materials": ["CONCRETE", "CINDER_BLOCK", "PAINTED", "STEEL", "GLASS"],
+      "palette": ["#8a8577", "#9a978f", "#c9c1ad", "#6b6a63", "#5f6b58", "#9fbcc4"],
+      "layout_rules": ["grid core around a souq street and a large mosque with a tall minaret", "river corniche or canal road on one side", "industrial edge with workshops, fuel stations and a bus garage", "rubble blocks (10-20% of the core) from the 2012-2019 war", "two or three bridges or causeways into town"],
+      "example_names": ["Dayr Shams", "Al-Qantara al-Hamra", "Madinat al-Sanabil", "Jisr al-Ghazal", "Sadd al-Qamar", "Hamidiyat al-Furat"]
+    },
+    {
+      "type": "farm",
+      "share": 0.15,
+      "pop_range": [10, 60],
+      "architecture": "Walled farmstead: one or two flat-roofed houses, a long livestock shed with corrugated roof, a tractor shed, a diesel pump house on the canal, hay stacks.",
+      "footprint_m": "compound 40x60; house 10x14",
+      "storeys": [1, 1],
+      "wall_class": "Compound wall cinder block or mud 30 cm (medium); sheds thin.",
+      "materials": ["MUD_BRICK", "CINDER_BLOCK", "CORRUGATED_IRON", "WOOD"],
+      "palette": ["#a48a63", "#9a978f", "#8b8e8c", "#8c6a46", "#c2ab7f"],
+      "layout_rules": ["placed on canal or wadi edges, 300-800 m apart", "one track in, field banks around", "diesel pump and water tank as landmark"],
+      "example_names": ["Mazraat Abu Hassan", "Mazraat al-Rashid", "Ard al-Qasab", "Mazraat Tell Saba"]
+    },
+    {
+      "type": "camp",
+      "share": 0.1,
+      "pop_range": [2000, 25000],
+      "architecture": "Displacement camp in rows of white UNHCR-style tents and prefab caravans, cinder-block washrooms, a perimeter fence and berm, guard towers at the gates. A separate walled detention-site annex in some camps.",
+      "footprint_m": "camp 600x900; tent 4x6; caravan 3x6",
+      "storeys": [1, 1],
+      "wall_class": "Tents and caravans very thin (rounds pass through; no cover); perimeter berm and HESCO thick.",
+      "materials": ["TARP", "CORRUGATED_IRON", "CINDER_BLOCK", "HESCO", "STEEL"],
+      "palette": ["#e8e4da", "#3f6d8c", "#8b8e8c", "#a99a6c", "#9a978f"],
+      "layout_rules": ["strict grid of blocks 60x60 with 8 m lanes", "one main gate with checkpoint and admin area", "water tanks and latrine blocks every block", "high civilian density at all hours"],
+      "example_names": ["Mukhayyam al-Amal", "Mukhayyam Bir al-Milh", "Camp Sabkha", "Mukhayyam al-Sabkha al-Sharqi"]
+    },
+    {
+      "type": "compound",
+      "share": 0.1,
+      "pop_range": [0, 200],
+      "architecture": "Military or industrial compounds: ex-army base with hardened aircraft shelters or vehicle sheds, oil field gathering station, grain silo complex, pumping station. Earth berms, concrete T-walls and watchtowers.",
+      "footprint_m": "200x200 to 800x1200",
+      "storeys": [1, 3],
+      "wall_class": "T-walls and berms thick; prefabs and sheds thin; silos concrete thick.",
+      "materials": ["CONCRETE", "STEEL", "DIRT_BERM", "HESCO", "SANDBAG", "CORRUGATED_IRON"],
+      "palette": ["#8a8577", "#4a4d50", "#8a6f4e", "#a99a6c", "#b8a378"],
+      "layout_rules": ["isolated on the steppe or at a road junction", "one or two gates, perimeter berm with corner towers", "tank farm or vehicle park as the central open space"],
+      "example_names": ["Mahattat Dukhan", "Qaidat al-Hamada", "Silos Abu Rasin", "Haql al-Jafra"]
+    }
+  ],
+  "infrastructure": {
+    "roads": "One two-lane highway along the north bank (M4/M7-style), a desert highway across the Badia toward the east border, paved village roads, and a dense net of graded tracks. Three road bridges (one damaged, one-lane), one dam crest road and two pontoon ferries are the convoy chokepoints.",
+    "rail": "One disused single-track line along the north bank with a rusting station and a girder bridge.",
+    "power": "Hydro dam at the north-west edge, 230 kV pylons along the river, diesel generators everywhere, solar panels on rooftops.",
+    "ports": "None (inland). River ferries only.",
+    "airfields": "One ex-air-force base with hardened shelters and a 3 km runway (partly cratered) in the Badia; one agricultural strip.",
+    "checkpoints": "Government General Security checkpoints on highway junctions and bridges (concrete blocks, a container, a flag); SDF posts on the northern approaches; informal tribal checkpoints on Badia tracks; a border crossing on the east edge and a border fence with towers on the north edge."
+  },
+  "pois": [
+    {"type": "badia_hideout", "description": "Cave and rock-shelter hideout in a Badia mesa with a hidden vehicle under camouflage netting, fuel drums, a water bladder and a sleeping area. 2-3 approaches through wadis; an observation post on the mesa top.", "contract_use": "isis cell raid or HVT capture; intel on Badia cell network", "loot_tier": "medium", "intel_chance": 0.55},
+    {"type": "detention_site", "description": "Walled former school converted to a detention facility: two-storey concrete block, inner yard, guard towers, a vehicle gate and a second wall of HESCO. Thick walls, few windows.", "contract_use": "reinforce against a breakout attack; recover escaped detainees", "loot_tier": "low", "intel_chance": 0.35},
+    {"type": "river_bridge", "description": "Concrete girder bridge, 400 m long, one span dropped and replaced by a one-lane Bailey section. Checkpoint at each end, reed beds below, a village on the north bank overlooking.", "contract_use": "convoy escort chokepoint, hold the bridge, ambush defence", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "oil_field_station", "description": "Gathering station with tank farm, flare stack, pump houses and a prefab workers' camp behind a berm. Pipelines run out across the steppe on low supports.", "contract_use": "protect infrastructure site; escort oil convoy; counter-drone defence", "loot_tier": "medium", "intel_chance": 0.2},
+    {"type": "ex_army_airbase", "description": "Abandoned air base with hardened aircraft shelters (thick concrete arches), a control tower, wrecked jets and an ammunition storage area with earth-covered bunkers. Large open runway apron.", "contract_use": "weapons cache destruction; recover sensitive kit; hot-zone HQ candidate", "loot_tier": "medium", "intel_chance": 0.4},
+    {"type": "tell_dig_site", "description": "Archaeological tell mound with trench cuts, a dig-house compound and looters' pits. Commands views over the valley.", "contract_use": "overwatch position; antiquities-smuggling interdiction; meeting-site HVT grab", "loot_tier": "low", "intel_chance": 0.3},
+    {"type": "displacement_camp", "description": "Camp grid with a gated admin sector, aid warehouse and clinic. Very high civilian density.", "contract_use": "escort aid convoy to the camp; recover kidnapped staff; no-fire environment test", "loot_tier": "low", "intel_chance": 0.2},
+    {"type": "border_crossing", "description": "Customs crossing on the east edge: canopy over 6 lanes, inspection sheds, a truck park of 40-60 lorries, smuggler tracks bypassing it through a wadi.", "contract_use": "border smuggler interdiction; militia supply route raid", "loot_tier": "medium", "intel_chance": 0.45},
+    {"type": "dam_and_powerhouse", "description": "Earth-fill dam crest road 1.5 km long with a concrete spillway and powerhouse at one end. Single road across; reservoir on one side, a 40 m drop on the other.", "contract_use": "protect infrastructure; hot-zone objective; convoy chokepoint", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "uxo_field", "description": "Former front line on a ridge: collapsed trenches, burnt vehicle hulks, signs for unexploded ordnance and IED hazard markers. Game hazard area that slows movement.", "contract_use": "clear UXO and IED hazards (escort engineers); recover a lost vehicle", "loot_tier": "low", "intel_chance": 0.1},
+    {"type": "smuggler_warehouse", "description": "Walled warehouse yard in a town's industrial edge with stacked crates, a fuel tanker and a back gate onto a canal track. Thin walls, roller doors.", "contract_use": "cache raid; captagon or weapons smuggling interdiction; intel grab", "loot_tier": "medium", "intel_chance": 0.5},
+    {"type": "un_observation_post", "description": "Small blue-helmet post on the basalt plateau: prefab cabins, a tower, white vehicles, sandbags. Neutral units the player must not harm.", "contract_use": "escort UN convoy; evacuate staff during an incursion", "loot_tier": "low", "intel_chance": 0.1},
+    {"type": "joint_training_centre", "description": "Former foreign airbase in the west hills now run as a joint training centre: runway, hangars, barracks blocks, mixed national flags. Restricted, heavily patrolled.", "contract_use": "VIP protection on a visit; recover a stolen vehicle that left the base", "loot_tier": "medium", "intel_chance": 0.3}
+  ],
+  "weather": {
+    "conditions": ["clear and hot (most days)", "dust haze", "khamsin/shamal dust storm (spring and early summer)", "winter rain front", "valley fog at dawn (winter)", "night frost on the plateau"],
+    "visibility_notes": "Heat shimmer over the steppe cuts long-range optics at midday; dust storms drop visibility to 50-300 m and ground helicopters; very dark moonless nights in the Badia favour NVGs.",
+    "dust_or_snow": "Dust frequent from March to July; snow rare and only on the basalt plateau for a day or two in January."
+  },
+  "civilians": {
+    "density": "medium",
+    "behaviour": "Farm work from dawn, markets busy 08:00-13:00 and after the evening prayer; shepherds with flocks in the Badia; families on rooftops on summer nights. Gunfire empties streets in under a minute; civilians shelter in courtyards and ground floors rather than flee across open ground. Displaced people move along highways with loaded pickups. Camps are the densest civilian areas on the map.",
+    "vehicles": ["Kia and Hyundai pickups loaded with produce", "white minibuses", "motorbikes with two or three riders", "tractors with trailers", "fuel tankers", "Bedouin pickups with water tanks", "aid lorries"],
+    "casualty_risk_notes": "Town cores and camps make the casualty rule bite: house-clearing in towns and any fight near a camp risk the 8-casualty void. Badia zones are almost empty and suit loud fights."
+  },
+  "factions_present": [
+    {"faction_id": "syr", "role": "defender", "strength": "high", "where": "Towns, highway checkpoints, bridges and the dam along the river and in the south-west; General Security posts at junctions."},
+    {"faction_id": "sdf", "role": "defender", "strength": "medium", "where": "Northern Jazira villages and the north-east corner (Kurdish-majority towns); joint posts with syr on the northern approaches while integration runs."},
+    {"faction_id": "isis", "role": "insurgent", "strength": "medium", "where": "Badia mesas and wadis, south-bank villages at night, around detention sites; cells raid along the desert highway."},
+    {"faction_id": "al_qaeda", "role": "insurgent", "strength": "low", "where": "Isolated safe houses in limestone-hill villages on the west edge; HVT-only presence, no field force."},
+    {"faction_id": "hezbollah", "role": "insurgent", "strength": "low", "where": "Smuggling routes and stores in the western limestone hills near the map edge toward the Lebanese border; small teams only."},
+    {"faction_id": "iraqi_militias", "role": "militia", "strength": "low", "where": "Border-crossing area and desert tracks at the east edge; drone and rocket teams and smuggling trucks."},
+    {"faction_id": "tur", "role": "patrol", "strength": "medium", "where": "Northern border fence and towers; Turkish-supplied vehicles with syr units; drone overwatch of northern villages."},
+    {"faction_id": "isr", "role": "occupier", "strength": "medium", "where": "Buffer zone on the basalt plateau in the south-west: hilltop posts, patrol roads and observation masts; occasional air strikes elsewhere (AI aircraft only)."},
+    {"faction_id": "jor", "role": "patrol", "strength": "low", "where": "Southern map edge border berm and towers; anti-smuggling patrols on Badia tracks."},
+    {"faction_id": "irq", "role": "patrol", "strength": "low", "where": "East border crossing and the Iraqi side of the border berm."},
+    {"faction_id": "rus", "role": "patrol", "strength": "low", "where": "Joint training centre in the western hills only (reduced presence after the 2026 base handover)."},
+    {"faction_id": "kaz", "role": "patrol", "strength": "low", "where": "Neutral UN observer post on the basalt plateau (UNDOF-type); never hostile."},
+    {"faction_id": "usa", "role": "patrol", "strength": "low", "where": "No ground bases (US forces left in 2026); ISR drones and occasional strikes on isis, plus a liaison cell at the joint training centre."},
+    {"faction_id": "gbr", "role": "patrol", "strength": "low", "where": "Coalition liaison and training team at a government base in the main town."},
+    {"faction_id": "fra", "role": "patrol", "strength": "low", "where": "Coalition liaison team and special-forces advisers visiting government bases."},
+    {"faction_id": "can", "role": "patrol", "strength": "low", "where": "Coalition training team (counter-IED instruction) at a government base."},
+    {"faction_id": "nzl", "role": "patrol", "strength": "low", "where": "Small coalition staff and training detachment; appears only as friendly NPCs at the main base."},
+    {"faction_id": "pmc_halcyon", "role": "rival_pmc", "strength": "low", "where": "Oil field stations and reconstruction sites under its own contracts; competes for the same convoy and site-security jobs."},
+    {"faction_id": "pmc_kestrel", "role": "rival_pmc", "strength": "low", "where": "Ex-army airbase and phosphate/oil sites in the Badia, hired by foreign investors; deniable teams with drones."}
+  ],
+  "frontline": "Three overlapping contests. (1) isis versus syr and sdf: isis cells grow out of the Badia and push north toward the river at night; each successful isis raid on a checkpoint or detention site flips that zone to 'contested' and raises the cell count in adjacent Badia zones, while government sweeps (often player-assisted) push the cells back south. (2) The syr-sdf integration line in the north: mostly calm (+10 relations), but a failed integration event can turn joint posts into tense standoffs, posting escort and mediation-security contracts rather than combat. (3) Edge pressure: the Israeli buffer zone in the south-west, Turkish border posts in the north and militia smuggling at the east crossing do not move much but post interdiction, recovery and border contracts. The war sim posts counter-isis raids from syr, sdf, irq, tur and jor; isis surges after detention-site incidents.",
+  "contract_hooks": [
+    "Badia cell raid: clear a mesa hideout with a wadi approach (client syr, sdf or jor)",
+    "Detention site defence: hold a walled site against a night breakout attack (client sdf or syr)",
+    "Escaped detainee recovery: track fugitives from a breached site through farm villages (client syr)",
+    "Bridge hold and convoy escort: move a reconstruction convoy over the one-lane bridge under threat of ambush (client syr or tur)",
+    "Oil station protection and counter-drone defence (client syr; rival pmc_halcyon may bid against you)",
+    "Border smuggler interdiction at the east crossing and its wadi bypass (client syr or jor)",
+    "UXO and IED hazard clearance escort along the old front ridge (client syr)",
+    "HVT capture in a western hill village safe house (client syr, usa or gbr)",
+    "UN observer evacuation from the basalt plateau during an incursion (neutral)",
+    "Aid convoy escort to a displacement camp (client sdf)"
+  ],
+  "zone_plan": {
+    "contract_zones": [
+      {"name": "Badia mesa cluster", "area_km2": 3, "anchor": "badia_hideout", "notes": "low civilians, long sightlines, wadi approaches"},
+      {"name": "North-bank village and bridge", "area_km2": 2.5, "anchor": "river_bridge", "notes": "medium civilians, chokepoint fight"},
+      {"name": "Oil field station", "area_km2": 2, "anchor": "oil_field_station", "notes": "industrial cover, drone threat"},
+      {"name": "Town industrial edge", "area_km2": 2, "anchor": "smuggler_warehouse", "notes": "dense civilians, short ranges"}
+    ],
+    "hot_zones": [
+      {"name": "South-bank Badia front", "area_km2": 12, "layout": "isis HQ in the ex-army airbase; 4 outposts on mesas and in two villages; checkpoints on the desert highway; roaming motorbike and pickup patrols; 1 QRF base with technicals at a farm compound"}
+    ]
+  },
+  "insertion": {"lhd": false, "fob": "FOB inside a government base on the north-bank highway (walled ex-agricultural college with a helipad). Players reach zones by road over the bridges, by helicopter, or by ground vehicle across the steppe; AAVs can cross the river only at ferry sites."},
+  "early_game_suitable": true,
+  "early_game_notes": "isis, al_qaeda and iraqi_militias are early-tier; hezbollah (mid) appears only as low-strength smuggling teams at the west edge, so early contracts should avoid the west hills.",
+  "ambient_audio": ["call to prayer from several mosques", "diesel irrigation pumps", "sheep bells and dogs", "wind over steppe", "distant generator hum in towns", "motorbikes", "frogs and reed warblers by the river at night", "occasional distant drone buzz"],
+  "proposed": [
+    "map_size_km and the composite layout (river, Badia, Jazira and basalt plateau on one map)",
+    "all generator numbers (noise layers, erosion, settlement flattening)",
+    "zone_plan and hot-zone layout",
+    "faction roles and strengths per zone",
+    "materials: MUD_BRICK #a47e57, CINDER_BLOCK #9a978f, PLASTER #e3dccb, GLASS #9fbcc4, CORRUGATED_IRON #8b8e8c, TARP #3f6d8c, HESCO #a99a6c, DIRT_BERM #8a6f4e, SANDBAG #b8a378, LIMESTONE #d6caa8, BASALT #4b4845",
+    "POI loot tiers and intel_chance values",
+    "UXO field as a movement-slowing map hazard (game-level only)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Geography_of_Syria",
+    "https://en.wikipedia.org/wiki/Euphrates",
+    "https://en.wikipedia.org/wiki/Syrian_Desert",
+    "https://en.wikipedia.org/wiki/Jazira_region",
+    "https://en.wikipedia.org/wiki/Hauran",
+    "https://en.wikipedia.org/wiki/Climate_of_Syria",
+    "https://en.wikipedia.org/wiki/Beehive_house",
+    "factions/syr.json, sdf.json, isis.json, tur.json, isr.json, rus.json, kaz.json (situation notes, October 2026)"
+  ]
+}

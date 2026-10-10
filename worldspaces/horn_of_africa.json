@@ -1,0 +1,230 @@
+{
+  "id": "horn_of_africa",
+  "name": "Shabelle Coast",
+  "inspired_by": "Southern and central Somalia with northern elements, as of 2026: a coral-stone coastal capital-type city behind dunes, the irrigated Shabelle-type river corridor, vast Acacia-Commiphora bushland where al-Shabaab holds the countryside, dry limestone mountains in the north-east standing in for Puntland's Cal Miskaad range (IS-Somalia), and a foreign-hosted port enclave inspired by Djibouti's base cluster. All towns are fictional.",
+  "map_size_km": [24, 24],
+  "climate": "Hot semi-arid (Koppen BSh) on the coast and river, arid (BWh) in the north-east mountains' lowlands. 27-35 C year-round on the coast with high humidity and sea breezes; inland up to 40 C. Two rainy seasons: Gu (April-June) and Deyr (October-November), 300-500 mm on the coast and river, under 200 mm in the north-east. Droughts and river floods both common.",
+  "seasons": [
+    "Jilaal (Jan-Mar): long hot dry season, dust, herds at wells",
+    "Gu rains (Apr-Jun): main rains, river floods, muddy roads, green bush",
+    "Hagaa (Jul-Sep): cooler, windy south-west monsoon on the coast, light showers, rough seas",
+    "Deyr rains (Oct-Dec): short rains, second planting"
+  ],
+  "biomes": [
+    {
+      "id": "coastal_dunes_and_city",
+      "share": 0.16,
+      "vegetation": ["dune scrub and Ipomoea creepers", "coconut and neem in the city", "Prosopis thickets on the outskirts", "bare white sand"],
+      "ground_palette": ["#e8dcc0", "#d9c69e", "#c7b07e", "#f2e9d2", "#b49c72"],
+      "foliage_palette": ["#5a7f3a", "#7d9a4a", "#3f6b2e", "#a8b86a"]
+    },
+    {
+      "id": "river_farmland",
+      "share": 0.18,
+      "vegetation": ["banana plantations", "maize and sesame fields", "mango and papaya trees", "riverine forest of Ficus sycomorus and tamarind", "irrigation canals with reeds"],
+      "ground_palette": ["#7a5a42", "#5f4634", "#9a785a", "#3f3226", "#b3977a"],
+      "foliage_palette": ["#2f5a2b", "#4a7a36", "#6d9a48", "#264a22", "#8fb062"]
+    },
+    {
+      "id": "acacia_commiphora_bushland",
+      "share": 0.36,
+      "vegetation": ["Acacia (Vachellia, Senegalia) thorn bush", "Commiphora myrrh bushes", "termite mounds", "doum palm in drainage lines", "dry grasses"],
+      "ground_palette": ["#b5603a", "#c97b4e", "#9a4e2e", "#d89a6a", "#8a5a3a", "#c4a07a"],
+      "foliage_palette": ["#7a8a48", "#5f7038", "#a0a866", "#4b5a30", "#c9b56e"]
+    },
+    {
+      "id": "northern_limestone_mountains",
+      "share": 0.18,
+      "vegetation": ["frankincense trees (Boswellia) on cliffs", "Euphorbia and Dracaena succulents", "juniper on high ridges", "bare limestone and gypsum"],
+      "ground_palette": ["#cdbf9f", "#b7a885", "#9a8a6c", "#e2d8bf", "#7d6f58"],
+      "foliage_palette": ["#7a7f58", "#5c6644", "#9c9e74", "#495236"]
+    },
+    {
+      "id": "port_enclave_and_sea",
+      "share": 0.12,
+      "vegetation": ["coral reef shelves", "mangrove patches", "planted trees inside base perimeters"],
+      "ground_palette": ["#2a6f86", "#3d8ea3", "#7fc4c8", "#d9e6dc", "#8a8577"],
+      "foliage_palette": ["#4a6b3a", "#5f7f48", "#7d9a5e", "#3a5530"]
+    }
+  ],
+  "terrain": {
+    "elevation_range_m": [-30, 1600],
+    "relief": "Coastal dune ridge (30-80 m) behind the beach; flat river corridor (50-150 m) running parallel to the coast; gently rising bushland plains (150-450 m) with low ridges; rugged limestone mountains in the north-east rising to 1,600 m with deep gorges (togga) and caves.",
+    "features": ["dune ridge with blowouts", "coral-stone old town on a headland", "a perennial river running parallel to the coast and ending in swamps", "irrigation canals and flood channels", "dry riverbeds (togga) from the mountains", "limestone gorges and caves", "termite-mound fields", "reef and a deep-water port"],
+    "water": "Indian Ocean along the south-east edge and a gulf on the north-east edge (composite); one perennial river with seasonal floods; boreholes and berkads (cement rainwater cisterns) in the bush; gorge springs in the mountains.",
+    "generator": {
+      "approach": "Heightmap at 10 m. Coastal ramp with a dune ridge (anisotropic noise along the shoreline), a flat river corridor carved as a spline basin 2-4 km wide, bushland plains of low fbm, and a north-east mountain block as ridged noise masked by distance, with gorges carved by flow accumulation. Sea and reef via bathymetry below 0 m.",
+      "noise_layers": [
+        {"type": "simplex, anisotropic (along shore 6:1)", "frequency": 1.0, "amplitude_m": 45, "purpose": "coastal dune ridge"},
+        {"type": "simplex fbm", "frequency": 0.12, "amplitude_m": 260, "purpose": "inland rise of the bushland plains"},
+        {"type": "ridged multifractal", "frequency": 0.45, "amplitude_m": 1100, "purpose": "north-east limestone mountains, masked to that corner"},
+        {"type": "cellular (Worley)", "frequency": 25.0, "amplitude_m": 2.5, "purpose": "termite mounds scattered over bushland (instanced, not heightmap, at close range)"},
+        {"type": "simplex", "frequency": 5.0, "amplitude_m": 1.5, "purpose": "micro-relief"}
+      ],
+      "erosion": "Hydraulic erosion in the mountains (80 iterations) for gorges; bushland and river corridor kept flat; dunes shaped by the anisotropic layer only.",
+      "rivers": "River spline parallel to the coast 6-10 km inland, 30-60 m wide, ending in a swamp; canals branch to farms; dry riverbeds from the mountains by flow accumulation.",
+      "settlement_flattening": "City flattened on the dune back-slope; villages flattened as small discs; mountain hamlets per plot.",
+      "notes": "Bushland gives 30-150 m sightlines with thorn walls: ideal for ambush and for al-Shabaab movement. The main supply route from the city through the river corridor to inland towns (with two river bridges) is the key convoy line and the most-attacked road on the map."
+    }
+  },
+  "settlements": [
+    {
+      "type": "city_district",
+      "share": 0.25,
+      "pop_range": [100000, 500000],
+      "architecture": "Coastal city district: an old quarter of coral-stone and lime-plaster houses with carved wooden doors and flat roofs, partly ruined from decades of war; newer three- to ten-storey concrete hotels, offices and apartment blocks painted in pastel colours; blast walls and gates around hotels and ministries; markets of corrugated-iron stalls.",
+      "footprint_m": "block 40x80; building 15x20",
+      "storeys": [1, 10],
+      "wall_class": "Coral stone 50 cm thick; concrete frames thick; blast walls thick; stalls none.",
+      "materials": ["CORAL_STONE", "CONCRETE", "PAINTED", "CORRUGATED_IRON", "STEEL", "GLASS"],
+      "palette": ["#cbbf9f", "#e8e0cc", "#7fb7c4", "#e8c06a", "#8b8e8c", "#8a8577"],
+      "layout_rules": ["old quarter on a headland with a lighthouse and mosques", "grid of newer districts with paved and sand streets", "fortified airport and international zone on the coast", "blast-walled hotels on main roads", "very dense market district"],
+      "example_names": ["Xeeb Cad", "Badda Cusub", "Laanta Bari", "Daar Badda"]
+    },
+    {
+      "type": "town",
+      "share": 0.2,
+      "pop_range": [10000, 80000],
+      "architecture": "Inland market town on the river or a road junction: one-storey stone and block houses with corrugated-iron roofs painted in bright colours, a mosque with a green dome, a market, a district office, an army base on the edge behind a sand berm.",
+      "footprint_m": "house 8x12; block 50x60",
+      "storeys": [1, 2],
+      "wall_class": "Block and stone medium; tin roofs none; base berm thick.",
+      "materials": ["CINDER_BLOCK", "STONE", "CORRUGATED_IRON", "PAINTED", "DIRT_BERM"],
+      "palette": ["#9a978f", "#8f8676", "#8b8e8c", "#3f8f6f", "#c75b4a", "#8a6f4e"],
+      "layout_rules": ["grid around a market and a mosque", "river bridge or ford at one edge", "army base and AU-type camp on the edge", "airstrip next to town"],
+      "example_names": ["Webi Cusub", "Dhexdoon Waqooyi", "Ceel Dhexe", "Beer Bari", "Garas Yar"]
+    },
+    {
+      "type": "village",
+      "share": 0.3,
+      "pop_range": [100, 2000],
+      "architecture": "Bush villages of round huts (mundul) with mud-and-wattle walls and conical thatch roofs, rectangular tin-roofed houses, thorn-fence livestock enclosures (zariba), a small mosque, a berkad cistern.",
+      "footprint_m": "hut 4-5 m diameter; homestead 30x30 inside a thorn fence",
+      "storeys": [1, 1],
+      "wall_class": "Wattle and mud 15-20 cm thin; thorn fences block movement but not fire.",
+      "materials": ["MUD_BRICK", "THATCH", "WOOD", "CORRUGATED_IRON"],
+      "palette": ["#a8673f", "#b49a5e", "#8c6a46", "#8b8e8c"],
+      "layout_rules": ["loose cluster of homesteads around a well or cistern", "thorn fences around each homestead", "tracks in from the road; bush all around"],
+      "example_names": ["Buulo Cagaar", "Ceel Jaale", "Tuulo Bari", "Doonbaale Hoose", "Muuri Cusub"]
+    },
+    {
+      "type": "camp",
+      "share": 0.1,
+      "pop_range": [2000, 40000],
+      "architecture": "Displacement camps on the city edge: domed buul shelters of sticks, cloth and plastic sheeting, tin shacks, water points, aid distribution areas.",
+      "footprint_m": "shelter 3x3; camp 500x800",
+      "storeys": [1, 1],
+      "wall_class": "None.",
+      "materials": ["TARP", "WOOD", "CORRUGATED_IRON"],
+      "palette": ["#3f6d8c", "#e8e4da", "#c97b4e", "#8b8e8c"],
+      "layout_rules": ["dense irregular clusters on open land", "water tanks and latrines at intervals", "very high density"],
+      "example_names": ["Xero Nabad Camp", "Siinlay IDP Site", "Daryeel Camp"]
+    },
+    {
+      "type": "compound",
+      "share": 0.15,
+      "pop_range": [0, 3000],
+      "architecture": "Military and foreign compounds: Somali army forward bases (sand berm, container towers, technicals), an AU-type contingent base with HESCO, a Turkish-run training base with barracks blocks, foreign naval bases in the port enclave (fenced, hangars, quays), al-Shabaab bush camps.",
+      "footprint_m": "forward base 200x200; training base 800x600; enclave base 1000x800",
+      "storeys": [1, 4],
+      "wall_class": "Berms and HESCO thick; containers thin.",
+      "materials": ["DIRT_BERM", "HESCO", "SANDBAG", "STEEL", "CONCRETE", "CORRUGATED_IRON"],
+      "palette": ["#9a4e2e", "#a99a6c", "#b8a378", "#4a4d50", "#8a8577"],
+      "layout_rules": ["forward bases on the main supply route", "enclave bases fenced along the port", "bush camps hidden in thickets near water"],
+      "example_names": ["FOB Ceel Gaab", "Camp Turksom Bari", "Base Navale de Ras Kaliil", "Danab Camp Dooxo Weyn"]
+    }
+  ],
+  "infrastructure": {
+    "roads": "One paved main supply route from the city through the river corridor to inland towns (potholed, with two river bridges and many culverts), sand roads elsewhere, mountain tracks in the north-east. Al-Shabaab checkpoints tax the bush roads.",
+    "rail": "None.",
+    "power": "Private diesel and solar mini-grids in the city and towns; no national grid.",
+    "ports": "City seaport with breakwater and quays; the foreign-hosted port enclave with naval quays; fishing beaches.",
+    "airfields": "Fortified international airport in the city, an airbase inland used for drone and training operations, laterite strips at inland towns.",
+    "checkpoints": "Army and police checkpoints on the city exits and the main supply route; AU-type contingent posts; al-Shabaab 'tax' checkpoints in the bush; clan militia checkpoints between districts."
+  },
+  "pois": [
+    {"type": "shabaab_bush_camp", "description": "Camp in thick bush near a seasonal pond: tarp shelters, a vehicle park of technicals under trees, a training clearing, a sharia court shed.", "contract_use": "accompany Danab on a raid (client som)", "loot_tier": "medium", "intel_chance": 0.55},
+    {"type": "forward_base", "description": "Somali army forward base on the main supply route: berm, container towers, technicals, a mortar pit. Target of complex attacks.", "contract_use": "defend a forward base against a complex attack (client som)", "loot_tier": "medium", "intel_chance": 0.2},
+    {"type": "supply_route_culverts", "description": "Stretch of the main road with culverts, a burnt-out truck and bush within 30 m; IED-hazard markers.", "contract_use": "escort a supply or aid convoy (client som); route clearance escort", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "river_bridge", "description": "Concrete bridge over the river with a checkpoint, banana plantations and riverine forest on both banks.", "contract_use": "convoy chokepoint; hold the bridge", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "beach_hotel", "description": "Blast-walled seafront hotel with a gate, guard towers, restaurant terrace and rooms on four floors; officials and foreigners stay here.", "contract_use": "VIP protection; hostage rescue after a hotel attack (clients som, tur)", "loot_tier": "low", "intel_chance": 0.25},
+    {"type": "mountain_cave_base", "description": "IS-Somalia cave base in a limestone gorge: cave mouths with stone walls, a water spring, a supply track, lookouts on the rim.", "contract_use": "hunt an IS-Somalia cell in the northern mountains (client som)", "loot_tier": "medium", "intel_chance": 0.55},
+    {"type": "hijacked_dhow_or_ship", "description": "Hijacked fishing dhow or merchant ship anchored off a beach village; skiffs on the beach.", "contract_use": "rescue hostages (sailors); anti-piracy boarding (clients jpn, kor, are)", "loot_tier": "medium", "intel_chance": 0.35},
+    {"type": "port_enclave", "description": "Port enclave hosting several foreign bases: fenced compounds, a naval quay with frigates, hangars and a runway end.", "contract_use": "staging, contract board for naval clients; evacuation point", "loot_tier": "low", "intel_chance": 0.05},
+    {"type": "drone_airbase", "description": "Inland airbase with a long runway, hangars for drones, a training camp and a fortified perimeter.", "contract_use": "defend against an attack; recover a downed drone nearby", "loot_tier": "medium", "intel_chance": 0.3},
+    {"type": "idp_camp", "description": "Displacement camp at the city edge with an aid distribution point and water tanks.", "contract_use": "escort aid convoy; protect a distribution", "loot_tier": "low", "intel_chance": 0.1},
+    {"type": "liberated_town", "description": "Inland town recently retaken by the army: damaged houses, a mined approach, returning families, an army post in the district office.", "contract_use": "hold the town against counter-attack; UXO escort", "loot_tier": "low", "intel_chance": 0.3},
+    {"type": "frankincense_valley", "description": "Mountain valley with frankincense trees, a herder's hamlet, a well and a track; a smuggling route for weapons from the coast.", "contract_use": "interdict an arms route; recon for a cell hunt", "loot_tier": "low", "intel_chance": 0.4}
+  ],
+  "weather": {
+    "conditions": ["hot and humid", "rain squalls in the Gu and Deyr", "river floods", "windy monsoon months with rough seas", "dust in the dry season"],
+    "visibility_notes": "Bush limits sightlines more than weather; rain squalls ground drones briefly; rough seas in July-August stop small-boat operations.",
+    "dust_or_snow": "Dust in Jilaal; no snow."
+  },
+  "civilians": {
+    "density": "high",
+    "behaviour": "Busy city markets from dawn; khat deliveries arrive mid-morning; Friday prayers at midday; herders with camels and goats on all roads; minibus traffic between towns; in the bush, villagers live alongside al-Shabaab control and avoid any armed force. Civilians in the city shelter quickly after explosions and crowds gather afterwards.",
+    "vehicles": ["Toyota minibuses and pickups", "tuk-tuks (bajaj) in the city", "khat-delivery Land Cruisers", "donkey carts with water drums", "camels", "aid lorries", "fishing skiffs"],
+    "casualty_risk_notes": "The city, camps and markets are very dense; bush zones are low density but villages lie inside them. Complex-attack defence near the city is where the casualty rule bites most."
+  },
+  "factions_present": [
+    {"faction_id": "al_shabaab", "role": "insurgent", "strength": "high", "where": "Acacia-Commiphora bushland and bush villages, river-corridor farms at night, tax checkpoints on bush roads; complex attacks on bases and the city."},
+    {"faction_id": "isis", "role": "insurgent", "strength": "low", "where": "North-east limestone mountains: cave bases and gorge camps (IS-Somalia)."},
+    {"faction_id": "som", "role": "defender", "strength": "medium", "where": "City, inland towns, forward bases on the main supply route, the drone airbase (Danab and Gorgor units)."},
+    {"faction_id": "tur", "role": "patrol", "strength": "medium", "where": "Training base in the city and drone operations from the airbase."},
+    {"faction_id": "egy", "role": "patrol", "strength": "medium", "where": "AU-type contingent base on the river corridor with mechanised patrols (AUSSOM contingent)."},
+    {"faction_id": "are", "role": "patrol", "strength": "low", "where": "North-east coastal port and airstrip in a federal-member-state area; tense with the federal government."},
+    {"faction_id": "usa", "role": "patrol", "strength": "low", "where": "Advisers with Danab at the drone airbase; drone strikes (AI aircraft only)."},
+    {"faction_id": "chn", "role": "patrol", "strength": "low", "where": "Naval base compound in the port enclave (Djibouti-type)."},
+    {"faction_id": "jpn", "role": "patrol", "strength": "low", "where": "Base compound in the port enclave; anti-piracy patrol aircraft and a destroyer offshore."},
+    {"faction_id": "kor", "role": "patrol", "strength": "low", "where": "Destroyer of the anti-piracy unit offshore."},
+    {"faction_id": "fra", "role": "patrol", "strength": "low", "where": "Base compound in the port enclave."},
+    {"faction_id": "ita", "role": "patrol", "strength": "low", "where": "Base compound in the port enclave; EU naval mission frigate."},
+    {"faction_id": "esp", "role": "patrol", "strength": "low", "where": "EU anti-piracy mission frigate and patrol aircraft at the enclave."},
+    {"faction_id": "pmc_black_sable", "role": "rival_pmc", "strength": "medium", "where": "North-east port and airstrip security for Gulf-linked clients, coastal escort boats, and a forward camp in the bush."},
+    {"faction_id": "pmc_halcyon", "role": "rival_pmc", "strength": "low", "where": "Aid-agency and hotel security in the city; ship security teams."}
+  ],
+  "frontline": "Al-Shabaab holds most bush zones and pushes on the main supply route; the government holds the city, towns and bases. Army offensives (often with player contracts) retake towns, which become 'liberated' zones that must be held against counter-attacks for several campaign days or flip back. Al-Shabaab complex attacks on forward bases and city hotels are events that post defence and hostage contracts. In the north-east, IS-Somalia holds mountain cave zones that shrink under cell-hunt contracts. AU-type funding events can thin the AUSSOM-type contingent, weakening government hold on the river corridor. Piracy events post boarding and hostage contracts at sea.",
+  "contract_hooks": [
+    "Accompany Danab on a raid against an al-Shabaab bush camp (client som)",
+    "Defend a forward base against a complex attack (client som)",
+    "Escort a supply or aid convoy along the main supply route (clients som, egy)",
+    "Rescue hostages (aid workers, or sailors from a hijacked ship) (clients som, jpn, kor, are)",
+    "Hunt an IS-Somalia cell in the northern mountains (client som)",
+    "Hold a liberated town against counter-attack (client som)",
+    "Anti-piracy boarding and escort (clients are, esp, ita, jpn)",
+    "Train and partner support at the Turkish-run base (client tur)"
+  ],
+  "zone_plan": {
+    "contract_zones": [
+      {"name": "Main supply route culverts", "area_km2": 3, "anchor": "supply_route_culverts", "notes": "bush ambushes, convoy"},
+      {"name": "Forward base", "area_km2": 2, "anchor": "forward_base", "notes": "defensive"},
+      {"name": "Mountain gorge", "area_km2": 4, "anchor": "mountain_cave_base", "notes": "IS cell hunt, caves"},
+      {"name": "Seafront hotel district", "area_km2": 2, "anchor": "beach_hotel", "notes": "urban, dense"}
+    ],
+    "hot_zones": [
+      {"name": "Bushland belt", "area_km2": 14, "layout": "al_shabaab HQ in a bush camp near a pond; 4-6 outposts in villages and thickets; tax checkpoints on bush roads; roaming technicals and foot patrols; 1-2 QRF of technicals; a government forward base on the edge as the friendly anchor"}
+    ]
+  },
+  "insertion": {"lhd": true, "fob": "LHD offshore for coastal, city and anti-piracy contracts (landing at the port or beach). Inland FOB at the drone airbase for bush contracts, reached by the main supply route or helicopter; AAVs usable on the coast and river corridor."},
+  "early_game_suitable": true,
+  "early_game_notes": "al_shabaab and isis are early-tier; som is an early-game client. Rival PMCs (mid) appear in the north-east and city.",
+  "ambient_audio": ["call to prayer", "surf on the reef", "minibus horns and bajaj engines", "goat and camel sounds", "generators", "weaver birds and hornbills in the bush", "distant drone hum"],
+  "proposed": [
+    "map_size_km and composite coast (Indian Ocean plus a gulf corner, with a Djibouti-type port enclave)",
+    "generator numbers",
+    "liberated-town hold mechanic",
+    "zone_plan and hot zone",
+    "AUSSOM partners other than Egypt (Uganda, Ethiopia, Kenya) as neutral NPCs (no faction files)",
+    "materials: CORAL_STONE #cbbf9f, CINDER_BLOCK #9a978f, STONE #8f8676, CORRUGATED_IRON #8b8e8c, MUD_BRICK #a47e57, THATCH #b49a5e, TARP #3f6d8c, HESCO #a99a6c, SANDBAG #b8a378, DIRT_BERM #8a6f4e, GLASS #9fbcc4"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Geography_of_Somalia",
+    "https://en.wikipedia.org/wiki/Shabelle_River",
+    "https://en.wikipedia.org/wiki/Somali_Acacia-Commiphora_bushlands_and_thickets",
+    "https://en.wikipedia.org/wiki/Cal_Madow",
+    "https://en.wikipedia.org/wiki/Architecture_of_Somalia",
+    "https://en.wikipedia.org/wiki/Djibouti",
+    "factions/al_shabaab.json, som.json, isis.json, tur.json, egy.json situation notes, October 2026"
+  ]
+}

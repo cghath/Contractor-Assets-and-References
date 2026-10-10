@@ -1,0 +1,238 @@
+{
+  "id": "gaza_west_bank",
+  "name": "Coastal Strip and Highlands",
+  "inspired_by": "The Gaza Strip and the West Bank as of October 2026, built as two separate sectors on one zone graph because one contiguous map cannot hold both. Sector A follows the Gaza situation after the October 2025 ceasefire: a narrow, extremely dense coastal strip with very heavy war damage, displaced families in tent areas near the coast, and the eastern part held by Israeli forces behind a demarcation line. Sector B follows the northern West Bank hill country: olive-terraced limestone hills, Palestinian towns and refugee camps, Israeli settlements and military posts, checkpoints and the separation barrier, with the Jordan Valley at its east edge. Every town and camp is fictional; no real place is reproduced.",
+  "map_size_km": [20, 16],
+  "map_layout_note": "Two sectors share one map file: Sector A (coastal strip) is 7 x 16 km on the west; Sector B (highlands) is 12 x 16 km on the east; a 1 km impassable seam separates them, and the zone graph links them only through off-map travel (proposed).",
+  "climate": "Mediterranean (Koppen Csa) on the coast and in the hills; semi-arid to arid (BSh/BWh) in the Jordan Valley. Coast: 25-32 C summers, 12-18 C winters, 300-400 mm rain. Hills: 28-30 C summers, cold wet winters with 500-700 mm rain and occasional snow above 800 m. Jordan Valley: very hot (40 C+) summers below sea level.",
+  "seasons": [
+    "Winter (Dec-Feb): storms flood low ground and tent areas on the coast; cold rain and fog in the hills",
+    "Spring (Mar-May): short green season, hamsin dust and heat days",
+    "Summer (Jun-Sep): humid heat on the coast, dry heat in the hills, water shortage",
+    "Autumn (Oct-Nov): olive harvest across the hills, first rains"
+  ],
+  "biomes": [
+    {
+      "id": "coastal_urban_rubble",
+      "share": 0.2,
+      "vegetation": ["few surviving street trees", "date palms in courtyards", "weeds on rubble", "small kitchen gardens between tents"],
+      "ground_palette": ["#b8ab93", "#8f8678", "#cfc4ae", "#6e675c", "#a39783"],
+      "foliage_palette": ["#7a8250", "#5c6a3c", "#9aa06a", "#4a5432"]
+    },
+    {
+      "id": "coastal_sand_and_tents",
+      "share": 0.1,
+      "vegetation": ["sand dune grasses", "sycamore fig (Ficus sycomorus) and tamarisk", "guava and date gardens", "reed fences"],
+      "ground_palette": ["#e2d3ad", "#d4c193", "#c7b07e", "#ecdfbf", "#b49c72"],
+      "foliage_palette": ["#7c8b55", "#5a7040", "#a6b07e", "#3e5530"]
+    },
+    {
+      "id": "eastern_farmland_and_buffer",
+      "share": 0.12,
+      "vegetation": ["bulldozed orchards and fields", "regrowing weeds", "isolated citrus and olive remnants", "greenhouse frames"],
+      "ground_palette": ["#a38a63", "#8c7452", "#c1a97e", "#6e5a40", "#d5c19a"],
+      "foliage_palette": ["#8d8f55", "#6f7a3c", "#b3a95e", "#575f38"]
+    },
+    {
+      "id": "olive_terrace_hills",
+      "share": 0.38,
+      "vegetation": ["ancient olive groves on dry-stone terraces", "fig, almond and grape vines", "wheat on valley floors", "Aleppo pine stands", "thorny burnet and thyme on bare slopes"],
+      "ground_palette": ["#a0704c", "#c4a57e", "#d6caa8", "#7e5a3e", "#e6dcc0"],
+      "foliage_palette": ["#6f7a48", "#8a9460", "#55603a", "#b2b07c", "#3e4a2a"]
+    },
+    {
+      "id": "eastern_slopes_and_jordan_valley",
+      "share": 0.2,
+      "vegetation": ["desert steppe shrubs on the eastern slopes", "date palm plantations and banana in the valley", "tamarisk and reeds along the river", "irrigated vegetable fields under plastic"],
+      "ground_palette": ["#cdb48a", "#b39567", "#e2d2ae", "#8e7656", "#d9c7a4"],
+      "foliage_palette": ["#5f7a3a", "#3f6b2e", "#a8a27a", "#7d8a4a", "#c1b98f"]
+    }
+  ],
+  "terrain": {
+    "elevation_range_m": [-300, 920],
+    "relief": "Sector A: almost flat sand and loess coastal plain at 0-80 m with low dune ridges and a shallow wadi crossing it. Sector B: rugged limestone hills at 400-920 m with steep valleys, dropping east over 10 km down rough eastern slopes to the Jordan Valley floor at about -300 m.",
+    "features": ["coastal dunes and beach", "a shallow wadi with a polluted stream crossing Sector A", "dense rubble fields (Sector A)", "tunnel network as level geometry under Sector A towns", "dry-stone olive terraces (Sector B)", "springs and cisterns", "the separation barrier (concrete wall in towns, fence elsewhere) along Sector B's west edge", "steep wadis down to the Jordan Valley"],
+    "water": "Mediterranean along Sector A's west edge; brackish groundwater, damaged desalination and wells; springs and rainwater cisterns in the hills; the Jordan River as a narrow, reed-lined river on Sector B's east edge.",
+    "generator": {
+      "approach": "Two independent heightmaps. Sector A: near-flat coastal plain with dune noise and a wadi spline; urban fabric placed first, then a destruction pass (see notes). Sector B: west-high to east-low tilt with hills from fbm and ridged noise, terraces quantised on 8-30 degree slopes, and a strong east escarpment ramp down to the valley.",
+      "noise_layers": [
+        {"type": "simplex", "frequency": 1.0, "amplitude_m": 12, "purpose": "Sector A coastal dunes and low ridges"},
+        {"type": "simplex fbm (5 octaves)", "frequency": 0.15, "amplitude_m": 350, "purpose": "Sector B hill massif"},
+        {"type": "ridged multifractal", "frequency": 0.7, "amplitude_m": 110, "purpose": "Sector B valley-and-spur pattern"},
+        {"type": "linear ramp (west to east)", "frequency": 0, "amplitude_m": -1100, "purpose": "Sector B east escarpment to the Jordan Valley over the last 5 km"},
+        {"type": "simplex", "frequency": 6.0, "amplitude_m": 2, "purpose": "micro-relief, rubble mounds (Sector A), boulders (Sector B)"}
+      ],
+      "erosion": "Sector A none (flat). Sector B hydraulic erosion (50 iterations) to cut eastward wadis; terraces post-pass in olive zones.",
+      "rivers": "Sector A: one wadi spline west to the sea, 30-80 m wide, shallow. Sector B: wadis by flow accumulation; Jordan River spline along the east edge, 10-30 m wide, meandering.",
+      "settlement_flattening": "Sector A towns flattened to the plain; Sector B towns per plot along slopes, settlements on flattened hilltops with retaining walls.",
+      "notes": "Destruction pass for Sector A (game-level, factual scale): 50-80% of structures in Sector A towns are damaged or collapsed, generated by removing slabs and walls with a noise mask; collapsed buildings become rubble mounds that are traversable but slow. Tunnel shafts are POI-stamped into structures as level geometry only."
+    }
+  },
+  "settlements": [
+    {
+      "type": "city_district",
+      "share": 0.25,
+      "pop_range": [50000, 300000],
+      "architecture": "Sector A: four- to twelve-storey reinforced-concrete apartment buildings with cinder-block infill, flat roofs with water tanks and solar panels, ground-floor shops with steel shutters; most heavily damaged, with pancaked slabs, open facades and rubble streets; displaced families living in damaged buildings and in tents in cleared lots.",
+      "footprint_m": "block 40x80; building 15x20",
+      "storeys": [3, 12],
+      "wall_class": "Standing concrete frames thick; infill thin; rubble mounds medium cover; tents none.",
+      "materials": ["CONCRETE", "CINDER_BLOCK", "STEEL", "TARP", "GLASS", "PLASTER"],
+      "palette": ["#8a8577", "#9a978f", "#b8ab93", "#e3dccb", "#3f6d8c", "#6e675c"],
+      "layout_rules": ["grid of main roads (a north-south coastal road and a central highway) with dense side streets", "destruction mask 50-80% (higher near the demarcation line)", "cleared lots and squares hold tents and aid points", "hospitals, schools and mosques as landmarks and shelters", "extremely high civilian density"],
+      "example_names": ["Hayy al-Bahr", "Shati al-Nakhil", "Bayt Zaytun al-Sahil", "Hayy al-Zuhur", "Madinat Wadi Ghazal"]
+    },
+    {
+      "type": "camp",
+      "share": 0.2,
+      "pop_range": [10000, 120000],
+      "architecture": "Two kinds. Sector A coastal tent areas: improvised tents of tarpaulin, nylon and wood, aid tents, water points, makeshift latrines on sand. Sector B refugee camps from the 1950s: very dense three- to five-storey concrete houses on tiny plots, alleys 1-2 m wide, murals, rooftop water tanks; parts bulldozed by 2025 military operations and partly emptied.",
+      "footprint_m": "tent 4x5; camp house 6x8; camp 500x600 (Sector B)",
+      "storeys": [1, 5],
+      "wall_class": "Tents none; camp houses 15-20 cm block thin (breachable but few routes).",
+      "materials": ["TARP", "WOOD", "CINDER_BLOCK", "CONCRETE", "CORRUGATED_IRON", "PAINTED"],
+      "palette": ["#3f6d8c", "#e8e4da", "#9a978f", "#8a8577", "#8b8e8c", "#5f6b58"],
+      "layout_rules": ["tent areas: irregular rows on sand along the coast, water and food distribution points", "camp alleys: no vehicle access beyond the main street; bulldozed roads cut through parts", "a UN school and clinic as landmarks", "very high civilian density"],
+      "example_names": ["Mukhayyam al-Rimal", "Rimal al-Nakhil", "Mukhayyam Ayn al-Tin", "Mukhayyam Nur al-Huda", "Mukhayyam Tal al-Ward"]
+    },
+    {
+      "type": "town",
+      "share": 0.25,
+      "pop_range": [20000, 150000],
+      "architecture": "Sector B Palestinian town on a hillside: limestone-clad concrete houses and apartment blocks of three to eight storeys, an old core of vaulted stone houses and a covered souq, mosques and churches, PA government buildings, universities. Flat roofs with black water tanks.",
+      "footprint_m": "building 14x18; old-core house 10x12 with courtyard",
+      "storeys": [2, 8],
+      "wall_class": "Stone-clad concrete thick; old-core 60-90 cm stone thick and vaulted; infill thin.",
+      "materials": ["LIMESTONE", "CONCRETE", "CINDER_BLOCK", "STEEL", "GLASS"],
+      "palette": ["#d6caa8", "#e6dcc0", "#c9c1ad", "#8a8577", "#9fbcc4"],
+      "layout_rules": ["organic old core in a valley with souq and main mosque", "newer neighbourhoods up the slopes", "main road entries controlled by checkpoints outside the town", "PA security headquarters (muqata-style compound) on the edge"],
+      "example_names": ["Madinat Jabal al-Zaytun", "Bayt Karma", "Arraba al-Tilal", "Marj al-Sanabil", "Wadi Rumman"]
+    },
+    {
+      "type": "village",
+      "share": 0.15,
+      "pop_range": [800, 6000],
+      "architecture": "Sector B Palestinian villages: two- to three-storey stone-clad houses among olive groves, a mosque, a school, a spring and a village council building; dirt roads to the fields.",
+      "footprint_m": "house 12x14",
+      "storeys": [1, 3],
+      "wall_class": "Stone-clad houses medium-thick; garden walls stone thick.",
+      "materials": ["LIMESTONE", "CONCRETE", "CINDER_BLOCK", "STONE"],
+      "palette": ["#d6caa8", "#c4a57e", "#9a978f", "#8f8676"],
+      "layout_rules": ["on slopes below ridge tops", "single main road with an access gate (sometimes closed)", "olive terraces all around"],
+      "example_names": ["Kafr Zaytun", "Ayn al-Fawwar", "Deir Nasr al-Gharbi", "Khirbat al-Lawz"]
+    },
+    {
+      "type": "village",
+      "share": 0.1,
+      "pop_range": [300, 5000],
+      "architecture": "Israeli settlement on a hilltop: red-tiled one- and two-storey houses and small apartment blocks in a ring road layout, perimeter fence with security road and gate, a synagogue, water tower; some smaller outposts of caravans.",
+      "footprint_m": "house 10x12; settlement 600x800",
+      "storeys": [1, 4],
+      "wall_class": "Houses block thin except safe rooms thick; caravans none.",
+      "materials": ["PLASTER", "ROOF_TILE", "LIMESTONE", "CONCRETE", "STEEL"],
+      "palette": ["#e3dccb", "#a4553b", "#d6caa8", "#8a8577", "#4a4d50"],
+      "layout_rules": ["flattened hilltop with a perimeter fence and patrol road", "one gated access road from a bypass road", "military post at the gate or nearby"],
+      "example_names": ["Givat Shaked", "Neve Elon", "Har Hadas", "Mitzpe Yarden"]
+    },
+    {
+      "type": "compound",
+      "share": 0.05,
+      "pop_range": [0, 500],
+      "architecture": "Checkpoints and military posts: fortified towers, concrete barriers, turnstile terminals, the separation-barrier wall in town sections; demarcation-line posts in Sector A on earth berms.",
+      "footprint_m": "checkpoint 60x100; post 100x150",
+      "storeys": [1, 3],
+      "wall_class": "Wall, towers and berms thick; terminals thin.",
+      "materials": ["CONCRETE", "STEEL", "DIRT_BERM", "SANDBAG"],
+      "palette": ["#8a8577", "#4a4d50", "#8a6f4e", "#b8a378"],
+      "layout_rules": ["on main road entrances to towns and on the demarcation line", "a vehicle lane and a pedestrian lane", "watchtower with camera and covered firing position"],
+      "example_names": ["Checkpoint Zaytun", "Crossing Tzomet Zayit", "Line Post 14", "Barrier Gate 3"]
+    }
+  ],
+  "infrastructure": {
+    "roads": "Sector A: one coastal road and one central highway north-south, heavily damaged, with cleared lanes; east-west roads cut by the demarcation line. Sector B: a bypass road network linking settlements, older village roads, agricultural tracks; road gates and closures.",
+    "rail": "None.",
+    "power": "Sector A: grid largely down; generators, solar panels and a damaged power plant. Sector B: overhead lines, frequent cuts in towns.",
+    "ports": "Sector A: small fishing harbour (damaged); an aid jetty proposal is not modelled. LHD use is restricted (see insertion).",
+    "airfields": "None.",
+    "checkpoints": "Sector A: demarcation-line posts; the southern crossing to Egypt and the eastern goods crossing for aid. Sector B: permanent checkpoints at town entrances, flying checkpoints, road gates, the separation barrier, the Jordan River crossing at the east edge."
+  },
+  "pois": [
+    {"type": "aid_distribution_point", "description": "Fenced lot with containers, food stacks, water tankers and queue lanes, near a main road in Sector A. Crowds at distribution times.", "contract_use": "escort aid convoy to the point and secure distribution; no-fire environment", "loot_tier": "low", "intel_chance": 0.1},
+    {"type": "southern_crossing", "description": "Border crossing terminal with gates, inspection halls, truck lanes and a staging yard on the far side; trained Palestinian police unit staging there.", "contract_use": "border security support; aid convoy hand-over; VIP protection for officials", "loot_tier": "low", "intel_chance": 0.2},
+    {"type": "damaged_hospital", "description": "Multi-wing hospital complex, partly damaged: courtyard, generator plant, emergency entrance, staff and patients present. Protected site.", "contract_use": "escort medical supplies; evacuate patients (strictly no combat)", "loot_tier": "low", "intel_chance": 0.1},
+    {"type": "tunnel_shaft_house", "description": "Damaged house with a concealed shaft in a ground-floor room leading to a short tunnel section (level geometry): narrow passages, side rooms, a second exit in a nearby lot.", "contract_use": "disarmament verification escort or cache documentation for a client; confined-space hazard", "loot_tier": "medium", "intel_chance": 0.5},
+    {"type": "rubble_quarter", "description": "Block of collapsed apartment buildings with pancaked slabs, open floors and craters; UXO hazard markers; very slow movement.", "contract_use": "UXO clearance escort; remains recovery escort", "loot_tier": "low", "intel_chance": 0.2},
+    {"type": "demarcation_line_post", "description": "Earth-berm post on the line with a tower, concrete blocks and a cleared strip; coloured line markers.", "contract_use": "aid convoy passage negotiation; escort through a crossing point", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "west_bank_camp_alley", "description": "Dense camp quarter: 1-2 m alleys between three- to five-storey houses, a bulldozed main street, murals, hanging laundry, a UN school.", "contract_use": "clear UXO hazards with PA police; escort election materials; small-cell encounter", "loot_tier": "low", "intel_chance": 0.3},
+    {"type": "pa_security_compound", "description": "Walled government compound with offices, a parade ground, a garage and a helipad-sized yard; Presidential Guard sentries.", "contract_use": "VIP protection; police training contract base", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "polling_station_school", "description": "School building used as a polling station: classrooms, a walled yard, a gate, queues.", "contract_use": "secure polling stations during the November election (client pse_pa)", "loot_tier": "low", "intel_chance": 0.05},
+    {"type": "olive_harvest_valley", "description": "Terraced olive valley between a village and a hilltop settlement with ladders, tarps and pickups; tension area at harvest.", "contract_use": "escort farmers and aid observers (neutral)", "loot_tier": "low", "intel_chance": 0.05},
+    {"type": "jordan_river_crossing", "description": "Bridge terminal over the Jordan River with inspection buildings, bus bays and lorry lanes; palm plantations and the valley road.", "contract_use": "aid convoy escort from Jordan; VIP arrival protection", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "weapons_workshop", "description": "Ground-floor workshop in a Sector B town with lathes and stored parts; a family lives above. High civilian risk.", "contract_use": "intel recovery for a client (game-level only, no manufacturing detail)", "loot_tier": "medium", "intel_chance": 0.45},
+    {"type": "uxo_dump_site", "description": "Fenced sand lot where collected unexploded ordnance is stacked for disposal; engineers' container office.", "contract_use": "clear UXO hazard escort (client pse_pa)", "loot_tier": "low", "intel_chance": 0.1}
+  ],
+  "weather": {
+    "conditions": ["clear and hot", "humid coastal haze", "winter storms flooding low ground and tents", "hill fog and cold rain", "hamsin dust and heat"],
+    "visibility_notes": "Dust from rubble and hamsin days lowers visibility in Sector A; hill fog in Sector B winters. Very dark Sector A nights (no grid power) favour NVGs; Sector B towns are lit.",
+    "dust_or_snow": "Rubble dust year-round in Sector A; rare snow on the highest Sector B ridges."
+  },
+  "civilians": {
+    "density": "very_high",
+    "behaviour": "Sector A: the densest civilian map in the game. People queue at water and aid points from dawn, move along cleared roads on foot and by cart, and shelter in damaged buildings and tents; gunfire causes crowds to scatter toward buildings, not away from them. Sector B: busy towns and markets (08:00-15:00), traffic queues at checkpoints, farmers in olive groves in autumn; raids empty streets but people stay at home.",
+    "vehicles": ["donkey and horse carts", "bicycles and motorbikes", "old minibuses and taxis", "aid lorries and water tankers", "ambulances", "farm pickups (Sector B)", "yellow-plate and green-plate private cars (Sector B)"],
+    "casualty_risk_notes": "Casualty penalties apply in full and dominate play: Sector A contracts are mostly escort and recovery with strict fire discipline; any firefight near tents, aid points or hospitals is likely to void the contract."
+  },
+  "factions_present": [
+    {"faction_id": "hamas", "role": "insurgent", "strength": "high", "where": "Sector A towns and camps west of the demarcation line, tunnel shafts in damaged quarters; low in Sector B (small cells in towns)."},
+    {"faction_id": "pij", "role": "insurgent", "strength": "medium", "where": "Sector A camps (small rocket and drone teams); Sector B refugee-camp alleys (small, largely broken-up cells)."},
+    {"faction_id": "isr", "role": "occupier", "strength": "high", "where": "Sector A east of the demarcation line (posts, cleared buffer); Sector B checkpoints, settlement security, military posts and raids into camps and towns; drones over both sectors."},
+    {"faction_id": "pse_pa", "role": "defender", "strength": "medium", "where": "Sector B towns (Area A-type): security compound, police posts, polling stations; a trained police unit staging at the Sector A southern crossing."},
+    {"faction_id": "egy", "role": "patrol", "strength": "low", "where": "Sector A southern crossing and border fence; aid convoy staging on the far side."},
+    {"faction_id": "jor", "role": "patrol", "strength": "low", "where": "Sector B Jordan River crossing at the east edge; aid convoys from Jordan."}
+  ],
+  "frontline": "Sector A: the demarcation line is the frontline. In the ceasefire state it is static and the war sim posts escort, distribution, UXO and remains-recovery contracts; violation events (incidents near the line, rocket or drone launches) raise the alert in nearby zones and can shift the line a few hundred metres for days. A disarmament-progress meter (proposed) slowly lowers hamas strength in Sector A when verification contracts succeed and a phased-withdrawal event moves the line east. Sector B: no front; zones flip between calm and raid states. Raids on camps by isr and arrest operations by pse_pa reduce pij and hamas cells; settler-village tension events post neutral escort contracts. The election (late November 2026 in the campaign calendar) posts pse_pa security contracts.",
+  "contract_hooks": [
+    "Aid convoy escort from the southern crossing to a distribution point (clients egy, jor, isr; strict rules of engagement)",
+    "Secure polling stations in a Sector B town during the legislative election (client pse_pa)",
+    "VIP protection for officials between the security compound and a crossing (client pse_pa)",
+    "Train and accompany a police unit on a UXO-clearance day (clients pse_pa, egy)",
+    "Clear UXO hazards in a rubble quarter with engineers (client pse_pa)",
+    "Hostage or remains-recovery intel follow-up near the demarcation line (client isr; intel only)",
+    "Border security and anti-smuggling patrol at the southern crossing (client egy)",
+    "Defend an aid convoy against an ambush by an armed cell or looters in a damaged district (any convoy client)"
+  ],
+  "zone_plan": {
+    "contract_zones": [
+      {"name": "Southern crossing and road", "area_km2": 2.5, "anchor": "southern_crossing", "notes": "Sector A; escort; very dense civilians"},
+      {"name": "Rubble quarter", "area_km2": 2, "anchor": "rubble_quarter", "notes": "Sector A; slow movement, tunnel geometry"},
+      {"name": "Sector B town and camp", "area_km2": 3, "anchor": "west_bank_camp_alley", "notes": "dense alleys, checkpoints at entries"},
+      {"name": "Jordan Valley crossing", "area_km2": 3, "anchor": "jordan_river_crossing", "notes": "open, hot, low civilians"}
+    ],
+    "hot_zones": [
+      {"name": "Sector A central districts", "area_km2": 9, "layout": "hamas command node in a tunnel-shaft quarter; 3-4 outposts in damaged blocks; aid-route checkpoints; roaming 2-4 man cells and drone teams; demarcation-line posts as the third party. Proposed only for late in the early game, given the civilian density."}
+    ]
+  },
+  "insertion": {"lhd": true, "fob": "Coastal map but LHD operations are restricted by the client (proposed: LHD only for evacuation contracts via the fishing harbour). Normal entry is by road through the southern crossing (Sector A) or the Jordan River crossing (Sector B), from a FOB on the far side of each crossing; helicopters only for medical evacuation."},
+  "early_game_suitable": true,
+  "early_game_notes": "hamas and pij are early-tier (pij is the lowest-ramp enemy in the game), but civilian density is extreme, so early contracts here should be escort, election security and UXO work rather than raids.",
+  "ambient_audio": ["drone buzz overhead (constant in Sector A)", "generators", "crowds at aid points", "call to prayer", "sea surf", "donkey carts on rubble", "church bells (Sector B towns)", "checkpoint loudspeakers"],
+  "proposed": [
+    "two-sector layout on one map file and the off-map link between sectors",
+    "map_size_km and all generator numbers",
+    "destruction mask percentages (based on reported damage scale, tuned for play)",
+    "disarmament-progress meter and phased-withdrawal events",
+    "LHD restriction rule for this theatre",
+    "International Stabilization Force not modelled (no faction file)",
+    "materials: CINDER_BLOCK #9a978f, TARP #3f6d8c, PLASTER #e3dccb, LIMESTONE #d6caa8, STONE #8f8676, ROOF_TILE #a4553b, GLASS #9fbcc4, CORRUGATED_IRON #8b8e8c, DIRT_BERM #8a6f4e, SANDBAG #b8a378",
+    "tunnels as level geometry only"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Gaza_Strip",
+    "https://en.wikipedia.org/wiki/West_Bank",
+    "https://en.wikipedia.org/wiki/Geography_of_the_State_of_Palestine",
+    "https://en.wikipedia.org/wiki/Jordan_Valley",
+    "https://en.wikipedia.org/wiki/Palestinian_refugee_camps",
+    "https://en.wikipedia.org/wiki/Israeli_West_Bank_barrier",
+    "factions/hamas.json, pij.json, pse_pa.json, isr.json, egy.json, jor.json situation notes, October 2026"
+  ]
+}

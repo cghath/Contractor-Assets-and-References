@@ -1,0 +1,221 @@
+{
+  "id": "lebanon_south",
+  "name": "Jabal Amil Frontier",
+  "inspired_by": "Southern Lebanon between the Litani river and the Blue Line, as of 2026: a narrow coastal plain of citrus and banana groves, terraced limestone hills with dense hilltop villages, the deep Litani gorge, and a heavily damaged border strip. UNIFIL is in its final mandate year (drawdown through 2026) and Israeli forces hold much of the south after March 2026. All towns are fictional.",
+  "map_size_km": [16, 14],
+  "climate": "Mediterranean (Koppen Csa). Hot dry summers (30-34 C on the coast, cooler in the hills), mild wet winters (10-16 C) with 600-900 mm of rain from November to March; frost and occasional snow above 700 m.",
+  "seasons": [
+    "Winter (Dec-Feb): heavy rain fronts, low cloud on the ridges, muddy terraces, swollen Litani",
+    "Spring (Mar-May): green terraces, tobacco planting, wildflowers, clear air",
+    "Summer (Jun-Sep): dry and hot, brush fires on the hillsides, haze over the coast",
+    "Autumn (Oct-Nov): olive harvest, first rains, tobacco leaves drying on strings"
+  ],
+  "biomes": [
+    {
+      "id": "coastal_orchard_plain",
+      "share": 0.18,
+      "vegetation": ["banana plantations under plastic windbreaks", "citrus groves", "greenhouses", "date and fan palms on the shore", "eucalyptus rows", "sand dune scrub with sea daffodil"],
+      "ground_palette": ["#9c7b56", "#b39570", "#7d6346", "#d4c3a0", "#5f5236"],
+      "foliage_palette": ["#3f6b2e", "#5a8a3a", "#7ba04a", "#2f5226", "#a3b86a"]
+    },
+    {
+      "id": "terraced_hills",
+      "share": 0.34,
+      "vegetation": ["olive terraces on dry-stone walls", "tobacco fields", "fig, almond and carob trees", "vineyards", "prickly pear hedges"],
+      "ground_palette": ["#9e6a48", "#b37f58", "#d6caa8", "#7e5a3e", "#c4a57e"],
+      "foliage_palette": ["#6f7a48", "#8a9460", "#55603a", "#b2b07c", "#3e4a2a"]
+    },
+    {
+      "id": "maquis_ridges",
+      "share": 0.24,
+      "vegetation": ["Palestine oak (Quercus calliprinos) maquis", "terebinth (Pistacia palaestina)", "Calabrian pine stands", "spiny broom (Calicotome)", "sage and thyme garrigue on bare limestone"],
+      "ground_palette": ["#d6caa8", "#b8a888", "#8e7f66", "#e8dfc8", "#6b5e4a"],
+      "foliage_palette": ["#3e5530", "#56703c", "#2e4225", "#7c8b55", "#9aa36e"]
+    },
+    {
+      "id": "litani_gorge",
+      "share": 0.1,
+      "vegetation": ["oriental plane (Platanus orientalis)", "willows and oleander along the river", "reed beds", "fig and wild vine on the cliffs"],
+      "ground_palette": ["#8a7a62", "#6c5f4b", "#b3a487", "#4f4638", "#c7bca4"],
+      "foliage_palette": ["#2f5a2b", "#4a7a36", "#6d9a48", "#264a22", "#8fb062"]
+    },
+    {
+      "id": "damaged_border_strip",
+      "share": 0.14,
+      "vegetation": ["burnt scrub and cleared ground", "bulldozed orchards", "regrowing grass and thistle", "isolated surviving olives"],
+      "ground_palette": ["#6e6355", "#8f8270", "#4c453c", "#a69a85", "#3a3530"],
+      "foliage_palette": ["#7b7a52", "#5c5f3e", "#9e9b6e", "#4a4a34"]
+    }
+  ],
+  "terrain": {
+    "elevation_range_m": [0, 880],
+    "relief": "Steep and broken. A 1-3 km coastal plain rises abruptly into limestone hills cut by deep east-west wadis; ridges and hilltops at 500-880 m carry villages; the Litani cuts a 200-400 m deep gorge across the north of the map before turning west to the sea.",
+    "features": ["dry-stone agricultural terraces", "karst caves and sinkholes", "deep wadis with cliffs", "Litani gorge with a few bridges and fords", "hilltop villages with commanding views", "a crusader-era castle ruin on a spur", "border fence, patrol road and concrete wall sections on the south edge"],
+    "water": "The Litani (15-30 m wide, perennial, with a small dam upstream at the north-east edge); seasonal streams in the wadis; village springs and cisterns; the sea along the west edge with a small harbour.",
+    "generator": {
+      "approach": "Heightmap at 5-10 m resolution. Base coastal ramp (0 m at the shore rising east), plus ridged noise for the hill mass, then carve the Litani as a deep spline canyon and wadis by flow accumulation. Terraces are a post-pass: on terraced_hills slopes of 8-30 degrees, quantise height into 1.5-2.5 m steps with a stone-wall edge flag for the structure layer.",
+      "noise_layers": [
+        {"type": "linear ramp + simplex fbm", "frequency": 0.08, "amplitude_m": 450, "purpose": "coast-to-ridge rise and broad ridge massifs"},
+        {"type": "ridged multifractal", "frequency": 0.5, "amplitude_m": 160, "purpose": "east-west ridges and spurs between wadis"},
+        {"type": "simplex", "frequency": 2.0, "amplitude_m": 20, "purpose": "hilltop knolls where villages seed"},
+        {"type": "cellular (Worley F2-F1)", "frequency": 3.0, "amplitude_m": -6, "purpose": "karst dolines and sinkholes on ridge tops"},
+        {"type": "simplex", "frequency": 8.0, "amplitude_m": 1.5, "purpose": "micro-relief, boulders"}
+      ],
+      "erosion": "Hydraulic erosion (60 iterations) to sharpen wadis; thermal erosion capped at 45 degrees leaves limestone cliffs in the gorge.",
+      "rivers": "Litani as a hand-placed spline across the north third, canyon depth 200-400 m, floor 30-80 m wide; wadis follow flow accumulation to the sea or the Litani.",
+      "settlement_flattening": "Villages seed on knolls and ridge saddles; flatten per building plot (not whole village) so streets climb with the slope; coastal town core flattened to a 5 m bench.",
+      "notes": "Short sightlines between ridges (1-3 km) and long ones across the gorge. Bridges over the Litani (3) and the coastal highway are the convoy chokepoints. Caves are POI-stamped volumes for the structure layer, not generated by noise."
+    }
+  },
+  "settlements": [
+    {
+      "type": "village",
+      "share": 0.45,
+      "pop_range": [800, 6000],
+      "architecture": "Dense hilltop villages of two- to four-storey reinforced-concrete houses with cinder-block infill, many built with emigrant money: arched balconies, stone cladding on the facade, flat roofs with water tanks, solar heaters and rebar stubs. A domed mosque or a church with a bell tower, a husseiniya hall, a municipal building, a school. Many houses in the border-side villages are damaged or destroyed.",
+      "footprint_m": "house 12x14 to 16x20; plots 20x30 with garden walls",
+      "storeys": [2, 4],
+      "wall_class": "Concrete frame and slabs thick (cover); cinder-block infill 15-20 cm thin (breachable); stone-clad facades medium; garden walls 30 cm stone thick.",
+      "materials": ["CONCRETE", "CINDER_BLOCK", "LIMESTONE", "PLASTER", "STEEL", "GLASS"],
+      "palette": ["#d6caa8", "#c9c1ad", "#8a8577", "#9a978f", "#e3dccb", "#9fbcc4"],
+      "layout_rules": ["organic streets following contours, 1-2 main roads along the ridge", "village square with mosque or church, shops and a municipal building", "terraced orchards ring the village", "rubble lots and collapsed buildings: 10-40% in border-side villages", "only 2-3 vehicle approaches; footpaths on terraces"],
+      "example_names": ["Ayn al-Sindyan al-Gharbiyya", "Kfar Ward al-Wadi", "Deir Sindiyan al-Jabal", "Majdal Zaytun", "Bint Hajar", "Jabal Tuffah al-Ulya", "Ayn Lawz al-Sughra"]
+    },
+    {
+      "type": "town",
+      "share": 0.2,
+      "pop_range": [20000, 60000],
+      "architecture": "Coastal market town with four- to eight-storey concrete apartment blocks, ground-floor shops, an old stone quarter with vaulted souq lanes and courtyard houses, a fishing harbour and a corniche. Rooftop clutter: water tanks, antennas, solar panels.",
+      "footprint_m": "block 30x60; building 14x20",
+      "storeys": [3, 8],
+      "wall_class": "Apartment frames thick; infill thin; old stone quarter 60-80 cm limestone walls thick and vaulted.",
+      "materials": ["CONCRETE", "CINDER_BLOCK", "LIMESTONE", "PAINTED", "GLASS", "STEEL"],
+      "palette": ["#c9c1ad", "#d6caa8", "#e3dccb", "#8a8577", "#5f6b58", "#9fbcc4"],
+      "layout_rules": ["grid of newer blocks around an organic old core", "corniche and harbour on the west edge", "main road north-south on the coastal highway", "market street and a large mosque near the old quarter", "Palestinian-refugee-camp-style dense quarter on the edge (narrow alleys, 3-5 storeys)"],
+      "example_names": ["Madinat al-Murjan al-Sahil", "Ras al-Sakhr al-Jadida", "Burj al-Nawras", "Bayyadat al-Hamam"]
+    },
+    {
+      "type": "farm",
+      "share": 0.15,
+      "pop_range": [5, 40],
+      "architecture": "Farmhouses among orchards: one or two storeys, flat roof, a packing shed, greenhouses on the coast, tobacco drying frames in the hills.",
+      "footprint_m": "house 10x12; greenhouse 8x40",
+      "storeys": [1, 2],
+      "wall_class": "Houses cinder block thin to medium; greenhouses no cover.",
+      "materials": ["CINDER_BLOCK", "CONCRETE", "GLASS", "CORRUGATED_IRON", "WOOD"],
+      "palette": ["#9a978f", "#c9c1ad", "#dfe8e4", "#8b8e8c", "#8c6a46"],
+      "layout_rules": ["scattered in orchards on the plain and terraces", "track access from the nearest village", "irrigation pools and pump houses"],
+      "example_names": ["Bayyarat Abu Ali", "Hakurat al-Tin", "Mazraat Wadi Jilu"]
+    },
+    {
+      "type": "compound",
+      "share": 0.2,
+      "pop_range": [0, 300],
+      "architecture": "Military positions: hilltop outposts of the occupying force (earth berms, concrete T-walls, observation masts); UN positions (prefab cabins, HESCO, white-painted towers, blue flags); army barracks; and dug-in positions in the maquis with bunkers and cave entrances.",
+      "footprint_m": "UN post 80x120; hilltop outpost 150x200; bunker entrance 3x3",
+      "storeys": [1, 2],
+      "wall_class": "HESCO, T-walls and berms thick; prefabs thin; bunkers and caves effectively indestructible.",
+      "materials": ["HESCO", "CONCRETE", "SANDBAG", "STEEL", "DIRT_BERM", "CORRUGATED_IRON"],
+      "palette": ["#a99a6c", "#8a8577", "#b8a378", "#e8e8e8", "#4a4d50", "#8a6f4e"],
+      "layout_rules": ["on hilltops and spurs with long views", "single gated access road", "UN posts marked white with blue signage", "bunker and cave entrances hidden in maquis and terrace walls"],
+      "example_names": ["UN Post 7-2 Tallat Sindiyan", "Position Tallat al-Hamra", "Qal'at al-Nisr Ridge Post", "Barracks Wadi Ghazal"]
+    }
+  ],
+  "infrastructure": {
+    "roads": "A four-lane coastal highway on the plain, two-lane ridge roads linking villages, steep switchbacks into wadis, and agricultural tracks along terraces. Three bridges over the Litani (one destroyed, one temporary) and the coastal highway bridge are chokepoints. The border patrol road runs along the south edge.",
+    "rail": "None (a disused coastal line bed only).",
+    "power": "Overhead lines on wooden and steel poles, frequent outages, private diesel generators in every neighbourhood, rooftop solar.",
+    "ports": "Small fishing and commercial harbour at the coastal town; the LHD stands off the coast.",
+    "airfields": "None. A helipad at the UN headquarters compound on the coast.",
+    "checkpoints": "Occupying-force checkpoints at road junctions in the south; Lebanese army checkpoints north of the Litani (no faction file: neutral NPCs); UN posts along the patrol road; earth berms closing village entrances near the border."
+  },
+  "pois": [
+    {"type": "un_position", "description": "UN position on a hill: prefab offices and accommodation, a bunker, a watchtower, HESCO perimeter and white armoured vehicles. Staff partly withdrawn during the drawdown.", "contract_use": "protect peacekeepers during the drawdown; escort withdrawing equipment; evacuate staff", "loot_tier": "low", "intel_chance": 0.1},
+    {"type": "litani_bridge", "description": "Concrete bridge over the gorge, centre span repaired with steel girders, switchback roads down both sides, a riverside cafe and orchard below.", "contract_use": "convoy chokepoint; escort UN or NGO convoys; hold during an evacuation", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "tunnel_and_bunker_complex", "description": "Cave entrance in a maquis-covered slope leading to a short tunnel with side chambers (a game level geometry set piece): concrete-lined sections, steel doors, ventilation shafts. Stored rocket launch rails and crates.", "contract_use": "locate and document a cache for a client; recover sensitive kit; hazard: confined spaces", "loot_tier": "medium", "intel_chance": 0.5},
+    {"type": "rocket_launch_orchard", "description": "Olive grove on a terrace with scorch marks and launch-rail debris, a camouflaged pickup and a shed. Map hazard: unexploded rockets.", "contract_use": "recover launch debris and intel for a client; UXO escort", "loot_tier": "low", "intel_chance": 0.35},
+    {"type": "damaged_border_village", "description": "Border village largely destroyed: collapsed multi-storey houses, a damaged mosque, burnt cars, a few returning families. Rubble gives cover and slows movement.", "contract_use": "escort returning civilians; body or remains recovery; clear UXO for engineers", "loot_tier": "low", "intel_chance": 0.2},
+    {"type": "hilltop_outpost", "description": "Occupying-force outpost on a ridge: earth berms, concrete blocks, a tank or APC ramp, an observation mast and camera towers. Controls two valleys.", "contract_use": "recover a downed drone nearby; escort an aid convoy through its control zone (neutral client)", "loot_tier": "medium", "intel_chance": 0.25},
+    {"type": "coastal_town_souq", "description": "Old stone souq quarter with vaulted lanes, courtyard houses and a mosque; very dense, narrow, civilians at all hours.", "contract_use": "VIP protection; recover a kidnapped aid worker or peacekeeper", "loot_tier": "low", "intel_chance": 0.3},
+    {"type": "castle_ruin", "description": "Crusader-era castle on a spur above the Litani: thick stone walls, a moat cut in rock, towers. Strong overwatch over the gorge.", "contract_use": "overwatch for a convoy; observation post defence", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "harbour", "description": "Fishing harbour with a breakwater, boat ramp, ice plant and warehouses; the LHD landing point for small boats and AAVs.", "contract_use": "evacuation of nationals by sea; small-boat landing; port security", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "weapons_store_house", "description": "Ordinary-looking two-storey village house with a reinforced basement storeroom; family living above.", "contract_use": "intel recovery on weapons smuggling for a client (high civilian risk)", "loot_tier": "medium", "intel_chance": 0.55},
+    {"type": "water_pumping_station", "description": "Pumping station by the Litani with a walled yard, pump hall, transformer and a pipeline up the hill.", "contract_use": "protect infrastructure from rocket teams; repair-crew escort", "loot_tier": "low", "intel_chance": 0.1},
+    {"type": "un_hq_compound", "description": "Large UN headquarters on the coast: helipad, workshops, vehicle park, staff accommodation, a beach fence. Neutral safe area.", "contract_use": "staging for UN convoy contracts; evacuation pick-up point", "loot_tier": "low", "intel_chance": 0.1}
+  ],
+  "weather": {
+    "conditions": ["clear and hot (summer)", "sea haze", "winter storm fronts with heavy rain", "low cloud and fog on ridges", "brush-fire smoke in late summer"],
+    "visibility_notes": "Ridge-top fog and low cloud in winter cut visibility to 100-300 m and keep drones and helicopters down; summer haze over the coast. Terraces and maquis give constant concealment.",
+    "dust_or_snow": "Little dust; snow on ridges above 700 m a few days each winter."
+  },
+  "civilians": {
+    "density": "medium",
+    "behaviour": "Population fluctuates with the fighting: border villages are nearly empty with a few returning families; coastal town and villages north of the Litani are busy and crowded with displaced people. Markets 08:00-14:00, schools out at 14:00, evenings on balconies. On alarms civilians stay in basements and ground floors; displaced families drive north in loaded cars along the coastal highway.",
+    "vehicles": ["old Mercedes taxis", "Kia and Toyota minivans", "scooters and motorbikes", "farm pickups loaded with produce or furniture", "fishing boats", "white UN vehicles", "ambulances and civil-defence trucks"],
+    "casualty_risk_notes": "Dense towns and inhabited villages make the casualty rule central north of the Litani; peacekeepers are neutral units and also count against the player's reputation if harmed (proposed)."
+  },
+  "factions_present": [
+    {"faction_id": "hezbollah", "role": "militia", "strength": "high", "where": "Maquis ridges, tunnel and bunker complexes, villages north of the Litani and in the hills; rocket and drone teams in orchards; small teams infiltrating the occupied south."},
+    {"faction_id": "isr", "role": "occupier", "strength": "high", "where": "Southern half of the map: hilltop outposts, the border strip, patrol roads and junction checkpoints; drones and air strikes over the whole map (aircraft AI only)."},
+    {"faction_id": "irn", "role": "patrol", "strength": "low", "where": "Advisers with hezbollah units only (Quds Force-type), never a field force; appear in HVT and intel contexts."},
+    {"faction_id": "syr", "role": "patrol", "strength": "low", "where": "Border posts at the north-east map edge, anti-smuggling patrols against hezbollah supply routes."},
+    {"faction_id": "fra", "role": "patrol", "strength": "medium", "where": "UNIFIL force reserve: armoured patrols on ridge roads, the UN HQ on the coast."},
+    {"faction_id": "ita", "role": "patrol", "strength": "medium", "where": "UNIFIL western sector posts and the coastal plain."},
+    {"faction_id": "esp", "role": "patrol", "strength": "medium", "where": "UNIFIL eastern sector posts on the hills."},
+    {"faction_id": "irl", "role": "patrol", "strength": "low", "where": "UNIFIL posts in the central hills (joint battalion with pol)."},
+    {"faction_id": "pol", "role": "patrol", "strength": "low", "where": "UNIFIL joint battalion posts with irl in the central hills."},
+    {"faction_id": "fin", "role": "patrol", "strength": "low", "where": "UNIFIL posts in the western sector."},
+    {"faction_id": "aut", "role": "patrol", "strength": "low", "where": "UNIFIL logistics units at the coastal HQ and convoy routes."},
+    {"faction_id": "deu", "role": "patrol", "strength": "low", "where": "UNIFIL Maritime Task Force offshore and liaison staff at the HQ."},
+    {"faction_id": "kor", "role": "patrol", "strength": "low", "where": "UNIFIL battalion posts on the coastal plain near the town."},
+    {"faction_id": "srb", "role": "patrol", "strength": "low", "where": "UNIFIL infantry company with the Spanish-led sector."},
+    {"faction_id": "kaz", "role": "patrol", "strength": "low", "where": "Small UNIFIL contingent with the Indian battalion posts in the east."},
+    {"faction_id": "ind", "role": "patrol", "strength": "low", "where": "UNIFIL battalion posts on the eastern hills (listed as a UNIFIL contributor in alliances.json; not yet in ind.json theatres)."},
+    {"faction_id": "chn", "role": "patrol", "strength": "low", "where": "UNIFIL engineer and medical units at a coastal base (listed as a UNIFIL contributor in alliances.json; not yet in chn.json theatres)."}
+  ],
+  "frontline": "The south is held by the occupying force and contested by hezbollah teams; the Litani gorge is the de facto line. The war sim moves it in steps: hezbollah attacks on outposts or rocket fire flip ridge zones to contested and trigger occupying-force raids that push north of the Litani for a few days, after which they withdraw to the hilltop line. Ceasefire events freeze the line and post escort, return and UXO contracts instead of combat. UN positions never change hands but shrink over the drawdown: each campaign month removes UN posts, posting evacuation and equipment-escort contracts, until the mandate ends. The contract board here is mostly neutral humanitarian and peacekeeper protection, plus neutral-client isr jobs (drone recovery, infrastructure protection).",
+  "contract_hooks": [
+    "Peacekeeper protection during the drawdown: escort a withdrawing UN convoy through two checkpoints and the Litani bridge (clients aut, irl, ita, fra, esp)",
+    "Evacuation of nationals from the coastal town to the harbour and the LHD (clients fra, ita, irl, aut, srb, kaz)",
+    "Recover a kidnapped aid worker or peacekeeper from a hill village (client irl or ita)",
+    "UXO clearance escort for engineers near UN positions and damaged villages (client irl)",
+    "Recover a downed drone from a contested ridge before others reach it (client isr)",
+    "Protect a pumping station or power line from rocket teams (client isr, in the south)",
+    "Cache survey: locate and document a tunnel and bunker complex for a client (client isr; heavy resistance)",
+    "Aid convoy escort to returning families in a damaged border village (neutral clients)"
+  ],
+  "zone_plan": {
+    "contract_zones": [
+      {"name": "Litani bridge and gorge", "area_km2": 3, "anchor": "litani_bridge", "notes": "steep, chokepoint, castle overwatch"},
+      {"name": "Coastal town and harbour", "area_km2": 2.5, "anchor": "harbour", "notes": "very dense civilians, LHD-adjacent"},
+      {"name": "Damaged border village", "area_km2": 2, "anchor": "damaged_border_village", "notes": "rubble, UXO hazard, low civilians"},
+      {"name": "UN hill position", "area_km2": 2, "anchor": "un_position", "notes": "defensive, neutral units"}
+    ],
+    "hot_zones": [
+      {"name": "Central ridges", "area_km2": 10, "layout": "hezbollah HQ in a tunnel and bunker complex; 4 outposts in hill villages and maquis; checkpoints on two ridge roads; roaming 2-4 man teams with ATGMs and drones; 1 QRF in a wadi garage; occupying-force outposts on the south edge as a third party"}
+    ]
+  },
+  "insertion": {"lhd": true, "fob": "LHD offshore for most contracts (small boats and helicopters to the harbour or UN HQ helipad). Inland FOB proposed at a UN-shared logistics base north of the Litani; AAVs can land only on the coastal plain, not in the hills."},
+  "early_game_suitable": false,
+  "early_game_notes": "hezbollah is mid-tier and Israeli forces are high strength; the escort and evacuation contracts can still be offered early as low-combat jobs.",
+  "ambient_audio": ["call to prayer and church bells", "drone buzz overhead (constant)", "distant artillery and air strikes", "cicadas in summer", "generators", "sea and gulls at the coast", "UN radio chatter in English and Italian/French"],
+  "proposed": [
+    "map_size_km, composite layout and the Litani-as-frontline rule",
+    "generator numbers and terracing post-pass",
+    "UN drawdown mechanic (posts removed monthly)",
+    "zone_plan and hot-zone layout",
+    "presence of ind and chn as UNIFIL contributors (from alliances.json; their faction files do not list lebanon_south)",
+    "Lebanese Armed Forces as neutral NPCs (no faction file)",
+    "materials: LIMESTONE #d6caa8, CINDER_BLOCK #9a978f, PLASTER #e3dccb, GLASS #9fbcc4, HESCO #a99a6c, SANDBAG #b8a378, DIRT_BERM #8a6f4e, CORRUGATED_IRON #8b8e8c",
+    "tunnel complexes as level geometry only (game-level)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/South_Lebanon",
+    "https://en.wikipedia.org/wiki/Litani_River",
+    "https://en.wikipedia.org/wiki/Jabal_Amil",
+    "https://en.wikipedia.org/wiki/United_Nations_Interim_Force_in_Lebanon",
+    "https://en.wikipedia.org/wiki/Climate_of_Lebanon",
+    "https://en.wikipedia.org/wiki/Beaufort_Castle,_Lebanon",
+    "factions/hezbollah.json, isr.json, alliances.json (unifil) situation notes, October 2026"
+  ]
+}

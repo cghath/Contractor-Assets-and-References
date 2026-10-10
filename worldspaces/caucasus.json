@@ -1,0 +1,130 @@
+{
+  "id": "caucasus",
+  "name": "Three Borders Highlands",
+  "inspired_by": "The South Caucasus where Georgia, Armenia and Azerbaijan meet, as of 2026: a high volcanic plateau with lakes, forested Lesser Caucasus ridges and deep river gorges, the lowland Kura-type valley to the east with an oil-and-gas pipeline corridor toward Turkey, an administrative boundary line of a Russian-occupied region on the north edge, a Russian base on the west side, and a planned US-backed transit corridor road in the south. The Armenia-Azerbaijan peace treaty was initialled in August 2025 but not signed. All towns are fictional.",
+  "map_size_km": [20, 20],
+  "climate": "Varied by altitude: continental highland (Koppen Dfb) on the plateau at 1,800-2,200 m with cold snowy winters (-10 to -20 C) and cool summers; humid temperate (Cfa/Cfb) in the forested gorges; semi-arid (BSk) in the eastern lowland with hot summers (32-38 C). 400-800 mm precipitation, heavy snow on the ridges.",
+  "seasons": [
+    "Winter (Dec-Mar): deep snow on the plateau and ridges, closed passes, frozen lakes",
+    "Spring (Apr-May): snowmelt, flooding gorges, green pastures, mud",
+    "Summer (Jun-Sep): shepherds and herds on high pastures, hot lowland, thunderstorms on ridges",
+    "Autumn (Oct-Nov): grape and fruit harvest in the gorges, forests turn, first snow above 2,000 m"
+  ],
+  "biomes": [
+    {"id": "volcanic_plateau_steppe", "share": 0.3, "vegetation": ["mountain steppe grassland", "potato and barley fields", "bare basalt and tuff outcrops", "lake shore meadows"], "ground_palette": ["#5f5a52", "#7b6f5e", "#4b4845", "#a8a080", "#c7c09a"], "foliage_palette": ["#8a9a58", "#a6aa70", "#5f6e40", "#c9b56e"]},
+    {"id": "deciduous_mountain_forest", "share": 0.26, "vegetation": ["oriental beech", "hornbeam and oak", "maple and linden", "rhododendron undergrowth on high slopes"], "ground_palette": ["#5a4a3a", "#7a6450", "#3e342a", "#9a8268"], "foliage_palette": ["#2f5a2b", "#4a7a36", "#6d9a48", "#264a22", "#c98a2e"]},
+    {"id": "alpine_meadows_and_ridges", "share": 0.14, "vegetation": ["subalpine meadows with flowers", "juniper and dwarf rhododendron", "bare rock and scree", "snowfields"], "ground_palette": ["#9a9486", "#b7b1a3", "#7d776b", "#e8ecef"], "foliage_palette": ["#7a8f50", "#9aaa66", "#5c6644", "#495236"]},
+    {"id": "gorge_orchards_and_vineyards", "share": 0.12, "vegetation": ["walnut, apricot and apple orchards", "vineyards on terraces", "poplar along the river", "plane trees in villages"], "ground_palette": ["#8a6f52", "#a58a68", "#6e5640", "#c2a985"], "foliage_palette": ["#3f6b2e", "#5a8a3a", "#83a050", "#2f5226"]},
+    {"id": "lowland_semi_desert_valley", "share": 0.18, "vegetation": ["wormwood semi-desert", "irrigated cotton, wheat and melons", "tamarisk and tugai forest on the river", "pistachio and juniper on dry hills"], "ground_palette": ["#c4ad86", "#b39a72", "#d8c6a0", "#9b8564", "#a8916a"], "foliage_palette": ["#a8a27e", "#8f8a68", "#c1b98f", "#6f6c55", "#5f7a3a"]}
+  ],
+  "terrain": {
+    "elevation_range_m": [300, 3200],
+    "relief": "A high volcanic plateau (1,800-2,200 m) with crater lakes and cinder cones in the west; forested ridges (2,000-3,200 m) and deep river gorges (600-1,200 m) across the centre; the land drops east to a broad semi-arid valley at 300-500 m.",
+    "features": ["volcanic plateau with crater lakes and cinder cones", "deep basalt-walled river gorges with canyon villages", "forested ridges and passes", "a broad lowland river valley with tugai forest", "a buried oil-and-gas pipeline corridor with block-valve stations", "the administrative boundary line of an occupied region on the north edge (fences and signs that move)", "old trench lines and mined border hills from past wars (marked hazards)"],
+    "water": "A gorge river flowing east to a lowland river; crater and plateau lakes; a reservoir in the lowland; mountain streams; snowmelt torrents in spring.",
+    "generator": {
+      "approach": "Heightmap at 10 m. Plateau as a high flat mask with cellular cones and crater depressions in the west; ridged noise for the forested ridges; gorges carved by flow accumulation then steepened (basalt walls); an east-west ramp down to the lowland where a wide river spline and tugai belt sit.",
+      "noise_layers": [
+        {"type": "plateau mask + simplex fbm", "frequency": 0.15, "amplitude_m": 300, "purpose": "volcanic plateau surface"},
+        {"type": "cellular (Worley F1, inverted) + crater rim profile", "frequency": 0.8, "amplitude_m": 180, "purpose": "cinder cones and crater lakes"},
+        {"type": "ridged multifractal", "frequency": 0.35, "amplitude_m": 1200, "purpose": "Lesser Caucasus ridges"},
+        {"type": "linear ramp (west to east)", "frequency": 0, "amplitude_m": -1500, "purpose": "descent to the lowland valley"},
+        {"type": "simplex", "frequency": 6.0, "amplitude_m": 2, "purpose": "micro-relief, basalt boulders"}
+      ],
+      "erosion": "Hydraulic erosion (100 iterations) on ridges; gorge walls kept vertical with a basalt mask (thermal cap 75 degrees).",
+      "rivers": "Gorge river by flow accumulation, widened in the lowland to a meandering spline with a reservoir; crater lakes filled by basin.",
+      "settlement_flattening": "Plateau villages flattened as clusters; gorge villages on terraces at the canyon rim and floor; lowland towns flattened.",
+      "notes": "Roads cross the gorges on a few bridges and climb passes; borders between three states and one occupied line cross the map, so convoy routes change with border status. Mined hills are marked hazards."
+    }
+  },
+  "settlements": [
+    {"type": "village", "share": 0.4, "pop_range": [100, 2000], "architecture": "Plateau and gorge villages: one- and two-storey houses of dark basalt or pink and orange tuff blocks with low-pitched tin roofs, wooden balconies (Georgian gorge villages), stone churches with conical domes, Azerbaijani lowland houses of brick with walled gardens and a mosque; haystacks and dung-cake piles on the plateau.", "footprint_m": "house 10x12", "storeys": [1, 2], "wall_class": "Stone and tuff walls 40-60 cm thick; brick medium; wooden balconies thin.", "materials": ["BASALT", "TUFF", "STONE", "BRICK", "CORRUGATED_IRON", "WOOD"], "palette": ["#4b4845", "#c48a6a", "#9c5a3c", "#8b8e8c", "#8c6a46", "#d6caa8"], "layout_rules": ["plateau villages compact around a church and a spring", "gorge villages strung along the canyon rim", "lowland villages on a grid with gardens and irrigation ditches"], "example_names": ["Kldekari Zemo", "Karmirkar", "Karasar", "Gushchu Yeni", "Mtisdziri", "Aghbyuravan"]},
+    {"type": "town", "share": 0.2, "pop_range": [10000, 60000], "architecture": "Regional towns: a 19th-century core of tuff and brick, Soviet five- and nine-storey blocks, a market, an Orthodox or Armenian Apostolic cathedral, a mosque in the eastern town, damaged earthquake-era buildings in one town, a railway station.", "footprint_m": "block 12x60", "storeys": [1, 9], "wall_class": "Tuff and brick medium-thick; panel blocks thick.", "materials": ["STONE", "BRICK", "CONCRETE", "GLASS", "CORRUGATED_IRON"], "palette": ["#c48a6a", "#9c5a3c", "#8a8577", "#9fbcc4", "#d6caa8"], "layout_rules": ["old core on a river terrace", "blocks and industry on the edge", "railway along the valley"], "example_names": ["Kvabiani", "Tuffavan", "Garaduz", "Tsiteltba"]},
+    {"type": "compound", "share": 0.25, "pop_range": [0, 3000], "architecture": "Military, border and energy sites: border posts of the three states (concrete towers, fences, sandbagged positions), a Russian base with barracks and vehicle parks, occupied-line posts with fences and surveillance masts, pipeline pump and block-valve stations, a railway junction, demining camps.", "footprint_m": "border post 60x80; Russian base 1200x1000; pump station 300x300", "storeys": [1, 4], "wall_class": "Concrete thick; prefabs thin.", "materials": ["CONCRETE", "STEEL", "SANDBAG", "DIRT_BERM", "CORRUGATED_IRON"], "palette": ["#8a8577", "#4a4d50", "#b8a378", "#8a6f4e", "#5f6b58"], "layout_rules": ["border posts on hills overlooking roads", "pump stations every 20-40 km along the pipeline corridor", "Russian base on the plateau edge near a town"], "example_names": ["Post 14 Karmir Ridge", "Pump Station PS-Tsiteli", "Baza Plateau-102", "ABL Post Mezobeli"]},
+    {"type": "farm", "share": 0.15, "pop_range": [5, 40], "architecture": "Summer shepherd camps on high pastures (stone huts, wagons, sheepfolds) and lowland farms (brick houses, cotton sheds).", "footprint_m": "camp 40x60", "storeys": [1, 1], "wall_class": "Stone huts thick; wagons none.", "materials": ["STONE", "WOOD", "CORRUGATED_IRON"], "palette": ["#8f8676", "#8c6a46", "#8b8e8c"], "layout_rules": ["summer pastures above villages", "lowland farms by canals"], "example_names": ["Yaylakh Gorneli", "Shepherds' Camp Sar-Yayla", "Ferma Pambiq-Kend"]}
+  ],
+  "infrastructure": {
+    "roads": "A plateau highway with a pass, gorge roads with tunnels and bridges, the lowland highway, a new transit-corridor road under construction along a southern gorge.",
+    "rail": "Electrified line along the gorge and lowland, a railway junction, a new rail link to Turkey across the plateau.",
+    "power": "Power lines over the ridges, a hydro plant in the gorge.",
+    "ports": "None (inland).",
+    "airfields": "A Russian-used airbase on the plateau edge (AI aircraft), a regional airport in the lowland.",
+    "checkpoints": "Border crossings between the three states and toward Turkey; the occupied-region line on the north edge with posts and moving fences; police checkpoints; construction checkpoints on the transit corridor."
+  },
+  "pois": [
+    {"type": "pipeline_block_valve_station", "description": "Fenced station on the buried pipeline: valve pits, control cabin, cameras, a helipad; in a lowland semi-desert.", "contract_use": "pipeline and infrastructure guard (clients aze, geo)", "loot_tier": "low", "intel_chance": 0.2},
+    {"type": "transit_corridor_construction", "description": "Road and rail construction site in a southern gorge: tunnels, bridge piers, cranes, contractor camp with foreign staff.", "contract_use": "convoy escort on the transit corridor (client arm)", "loot_tier": "low", "intel_chance": 0.25},
+    {"type": "border_post_hill", "description": "Armenian or Azerbaijani border post on a hill: trenches, a concrete tower, a flag; old mined slopes below.", "contract_use": "border post reinforcement (client arm) or border security (client aze), mutually exclusive", "loot_tier": "low", "intel_chance": 0.25},
+    {"type": "demining_field", "description": "Demining site on former front hills: marked lanes, flags, a demining team camp, a machine.", "contract_use": "demining escort (clients arm, aze)", "loot_tier": "low", "intel_chance": 0.1},
+    {"type": "occupied_line_village", "description": "Village split by the occupied-region line: fences through orchards, surveillance mast, a post on the other side; detentions of villagers.", "contract_use": "border security patrol; hostage (detained villager) recovery negotiation escort (client geo)", "loot_tier": "low", "intel_chance": 0.3},
+    {"type": "russian_base", "description": "Russian military base on the plateau: barracks, vehicle park with armour, air defence, a fence; restricted.", "contract_use": "observe only; rival encounter in late game", "loot_tier": "medium", "intel_chance": 0.4},
+    {"type": "gorge_bridge", "description": "Steel bridge over a 150 m deep basalt gorge on the main road; a canyon village below.", "contract_use": "convoy chokepoint; civilian evacuation route", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "monastery_ridge", "description": "Medieval stone monastery on a ridge with thick walls, a bell tower and a monks' house; overlooks two valleys.", "contract_use": "overwatch; VIP meeting site", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "drone_training_site", "description": "Military training area with a drone launch site, containers and a range.", "contract_use": "drone defence training (client arm)", "loot_tier": "low", "intel_chance": 0.1},
+    {"type": "smuggler_pass_hut", "description": "Stone hut at a high pass on a smuggling route between the occupied region and the plateau.", "contract_use": "counter-terror or counter-smuggling raid (client geo)", "loot_tier": "medium", "intel_chance": 0.45},
+    {"type": "crater_lake_resort", "description": "Lake resort with Soviet sanatorium buildings, cabins and a jetty.", "contract_use": "VIP protection; hostage rescue (clients geo, aze)", "loot_tier": "low", "intel_chance": 0.2},
+    {"type": "rail_junction", "description": "Railway junction with yards, a depot, fuel tanks and a station; the new line to Turkey starts here.", "contract_use": "recover lost equipment or sensitive kit (client geo); infrastructure guard", "loot_tier": "low", "intel_chance": 0.2}
+  ],
+  "weather": {
+    "conditions": ["clear cold on the plateau", "blizzards in winter", "ridge fog and thunderstorms in summer", "hot dry lowland", "valley inversion fog in winter"],
+    "visibility_notes": "Ridge fog and snow ground helicopters; plateau views are long; forests limit sightlines to 30-100 m.",
+    "dust_or_snow": "Heavy snow on the plateau and ridges December-March; dust in the lowland in summer."
+  },
+  "civilians": {
+    "density": "medium",
+    "behaviour": "Farmers and shepherds; summer migration of herds to high pastures; markets in towns; border villagers live with fences and posts and avoid the line; construction workers on the transit corridor.",
+    "vehicles": ["Ladas and old Mercedes", "minibuses (marshrutkas)", "UAZ and Niva 4x4s", "tractors and hay wagons", "construction lorries", "horses and donkeys"],
+    "casualty_risk_notes": "Border villages and towns are the risk; open plateau and forest zones are sparse."
+  },
+  "factions_present": [
+    {"faction_id": "arm", "role": "defender", "strength": "medium", "where": "South-west plateau and the southern gorge (transit corridor), border posts."},
+    {"faction_id": "aze", "role": "defender", "strength": "medium", "where": "Eastern lowland, pipeline stations, border posts facing the plateau; drones."},
+    {"faction_id": "geo", "role": "defender", "strength": "medium", "where": "Northern half: towns, rail junction, pipeline stations, the occupied-line villages."},
+    {"faction_id": "rus", "role": "occupier", "strength": "medium", "where": "Russian base on the plateau (Armenian side) and posts along the occupied-region line on the north edge."},
+    {"faction_id": "tur", "role": "patrol", "strength": "low", "where": "West edge border and the rail link; liaison with aze."},
+    {"faction_id": "pmc_kestrel", "role": "rival_pmc", "strength": "low", "where": "Smuggling and security work from the occupied region; a team near the Russian base."}
+  ],
+  "frontline": "A cold peace with several lines. The Armenia-Azerbaijan border is quiet but unsettled: incident events (shots across the border, drone sightings) raise alert in border-post zones and post reinforcement, demining and evacuation contracts; treaty-progress events lower it and open the transit corridor. The occupied-region line on the north edge creeps ('borderization' events move fences into villages), posting Georgian patrol and detained-villager contracts. Contracts for arm and aze are mutually exclusive (side-lock). The Russian base does not move; rus pressure appears as events and rival-PMC activity.",
+  "contract_hooks": [
+    "Border post reinforcement after an incident (client arm)",
+    "Border security sweep in the lowland hills (client aze)",
+    "Demining escort on former front hills (clients arm, aze)",
+    "Convoy escort on the transit corridor through the southern gorge (client arm)",
+    "Pipeline and infrastructure guard at a block-valve station (clients aze, geo)",
+    "Border security patrol on the occupied-region line (client geo)",
+    "Hostage rescue at a crater-lake resort (clients geo, aze)",
+    "Civilian evacuation from a border village (client arm)",
+    "Counter-smuggling raid at a pass hut (client geo)"
+  ],
+  "zone_plan": {
+    "contract_zones": [
+      {"name": "Lowland pipeline", "area_km2": 3, "anchor": "pipeline_block_valve_station", "notes": "open semi-desert"},
+      {"name": "Southern gorge corridor", "area_km2": 3, "anchor": "transit_corridor_construction", "notes": "vertical terrain, construction"},
+      {"name": "Occupied-line village", "area_km2": 2, "anchor": "occupied_line_village", "notes": "fences, posts, civilians"},
+      {"name": "Border hills", "area_km2": 3, "anchor": "border_post_hill", "notes": "mines, trenches"}
+    ],
+    "hot_zones": [
+      {"name": "Plateau escalation (mid-late)", "area_km2": 12, "layout": "Hostile HQ chosen by the side-lock (the other state's border command, or a rus/pmc_kestrel node); 4 outposts on hills and passes; checkpoints at bridges; roaming patrols and drones; 1 QRF of armour"}
+    ]
+  },
+  "insertion": {"lhd": false, "fob": "FOB at a host-state base chosen by client: plateau town (arm), lowland town (aze) or rail junction (geo). Roads and passes; helicopters weather-limited; AAVs only in the lowland."},
+  "early_game_suitable": false,
+  "early_game_notes": "State actors only, mid tier; mid-campaign theatre.",
+  "ambient_audio": ["church bells and call to prayer (east)", "wind on the plateau", "river in the gorge", "sheep and dogs", "trains in the valley", "construction machinery", "distant drones"],
+  "proposed": [
+    "map_size_km and composite tri-border layout with the transit corridor and the occupied line",
+    "generator numbers",
+    "borderization events and treaty-progress events",
+    "zone_plan and hot zone",
+    "materials: BASALT #4b4845, TUFF #c48a6a (new), STONE #8f8676, BRICK #9c5a3c, CORRUGATED_IRON #8b8e8c, GLASS #9fbcc4, SANDBAG #b8a378, DIRT_BERM #8a6f4e",
+    "mined hills as marked hazards only"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Lesser_Caucasus",
+    "https://en.wikipedia.org/wiki/Javakheti_Plateau",
+    "https://en.wikipedia.org/wiki/Kura_(Caspian_Sea)",
+    "https://en.wikipedia.org/wiki/Baku%E2%80%93Tbilisi%E2%80%93Ceyhan_pipeline",
+    "https://en.wikipedia.org/wiki/102nd_Military_Base",
+    "factions/arm.json, aze.json, geo.json, rus.json notes"
+  ]
+}

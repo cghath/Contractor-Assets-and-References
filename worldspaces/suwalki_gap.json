@@ -1,0 +1,128 @@
+{
+  "id": "suwalki_gap",
+  "name": "Lakeland Corridor",
+  "inspired_by": "The Suwalki Gap as of 2026: the roughly 65 km land corridor along the Polish-Lithuanian border between Russia's Kaliningrad exclave and Belarus. Glacial lakeland of hills, lakes and forests, farmland and small towns, crossed by one main highway and one railway, with fortified borders on both flanks (fences, cameras, new defence lines). The map compresses the corridor so both flank borders sit on its edges. All towns are fictional.",
+  "map_size_km": [16, 20],
+  "climate": "Humid continental (Koppen Dfb), one of the coldest parts of lowland Poland: summers 17-23 C, winters -5 to -12 C with snow cover from December to March; 550-650 mm precipitation; frequent morning fog over lakes.",
+  "seasons": [
+    "Winter (Dec-Mar): snow, frozen lakes thick enough to walk on in cold spells, short days",
+    "Spring (Apr-May): thaw, mud on field tracks, high water in streams",
+    "Summer (Jun-Aug): warm, green, lake tourists and kayakers, haymaking",
+    "Autumn (Sep-Nov): harvest, rain, fog, early dusk"
+  ],
+  "biomes": [
+    {"id": "lakeland_farmland", "share": 0.36, "vegetation": ["rye, oats, potato and maize fields", "hay meadows and pastures", "willow and birch hedgerows", "wayside crosses with lime trees"], "ground_palette": ["#6e5a40", "#8a7454", "#a8916c", "#53452f", "#c9b47a"], "foliage_palette": ["#5f8a3a", "#7da048", "#3f6b2e", "#a8b86a", "#d8c84a"]},
+    {"id": "mixed_forest", "share": 0.3, "vegetation": ["Scots pine and Norway spruce", "birch and oak", "hazel and bilberry understorey", "clearcuts with young plantations"], "ground_palette": ["#4f4432", "#6b5d45", "#3a3226", "#8a7a5c", "#a89a78"], "foliage_palette": ["#1f3a24", "#2f4e2e", "#4a6a3a", "#7a9a4e"]},
+    {"id": "lakes_and_wetlands", "share": 0.16, "vegetation": ["reed belts", "alder carr", "sedge meadows", "open water with water lilies"], "ground_palette": ["#2f5a6e", "#3f6f80", "#5a5a40", "#7a7a52"], "foliage_palette": ["#7a8a48", "#a0a866", "#5f6e38", "#3f5a2a"]},
+    {"id": "moraine_hills", "share": 0.18, "vegetation": ["dry grassland on hilltops", "juniper", "boulder fields (erratics)", "small pine copses"], "ground_palette": ["#8a7a5a", "#a89a78", "#9a9486", "#c7b998"], "foliage_palette": ["#8a9a58", "#a6aa70", "#5f6e40", "#3f5530"]}
+  ],
+  "terrain": {
+    "elevation_range_m": [110, 300],
+    "relief": "Rolling glacial terrain: moraine hills to 300 m, kettle-hole lakes and long ribbon lakes in tunnel valleys, eskers, boulder fields; steep short slopes with long open fields between forest blocks.",
+    "features": ["ribbon lakes in tunnel valleys", "kettle lakes and bogs", "moraine hills and erratic boulders", "eskers", "border fence with patrol road and cameras on both flank edges", "new anti-tank ditches, dragon's teeth and bunkers near the borders", "the tripoint area where three borders meet at the south-west corner"],
+    "water": "Many lakes (5-15% of area), a few small rivers and streams, drainage ditches; lakes freeze in cold winters.",
+    "generator": {
+      "approach": "Heightmap at 10 m. Rolling fbm base; ribbon lakes carved as elongated troughs along NNE-SSW and filled to a water level; kettle lakes as cellular depressions; eskers as warped ridges; boulders instanced. Border lines placed as splines on the west and east edges.",
+      "noise_layers": [
+        {"type": "simplex fbm", "frequency": 0.4, "amplitude_m": 90, "purpose": "moraine hills"},
+        {"type": "ridged, anisotropic (NNE-SSW, 6:1), inverted", "frequency": 0.3, "amplitude_m": -35, "purpose": "tunnel-valley ribbon lakes"},
+        {"type": "cellular (Worley F1, inverted, sparse)", "frequency": 1.5, "amplitude_m": -12, "purpose": "kettle-hole lakes and bogs"},
+        {"type": "ridged, domain-warped", "frequency": 1.0, "amplitude_m": 10, "purpose": "eskers"},
+        {"type": "simplex", "frequency": 6.0, "amplitude_m": 1.2, "purpose": "micro-relief"}
+      ],
+      "erosion": "Light hydraulic pass only.",
+      "rivers": "Small streams by flow accumulation linking lakes; water level per lake basin computed by fill.",
+      "settlement_flattening": "Villages on gentle hill flanks and lake shores, flattened lightly per plot.",
+      "notes": "The single highway and railway through the corridor are the strategic chokepoints; lakes and forests channel movement into 2-3 east-west lanes. Open fields between forest edges are long kill zones for drones and ATGMs."
+    }
+  },
+  "settlements": [
+    {"type": "town", "share": 0.3, "pop_range": [5000, 40000], "architecture": "Market town: a central square with a baroque church, two- and three-storey brick and plastered tenements with tiled roofs, communist-era four- and five-storey blocks, single-family houses with gabled roofs, a supermarket and petrol station on the highway, a railway station.", "footprint_m": "tenement 15x20; block 12x60; house 10x12", "storeys": [1, 5], "wall_class": "Brick tenements medium-thick; concrete blocks thick; timber annexes thin.", "materials": ["BRICK", "PLASTER", "CONCRETE", "ROOF_TILE", "GLASS"], "palette": ["#9c5a3c", "#e3dccb", "#d8c06a", "#8a8577", "#a4553b", "#9fbcc4"], "layout_rules": ["market square with church and town hall", "highway bypass with commercial strip", "blocks and houses on the outskirts", "lake shore with beach and boat hire"], "example_names": ["Jeziorna Wola", "Borkowiska", "Zalesie Jeziorne", "Lazdynėliai", "Ąžuolų Kalnelis"]},
+    {"type": "village", "share": 0.35, "pop_range": [50, 800], "architecture": "Farm villages: one-and-a-half-storey houses of brick or timber with steep roofs, barns of fieldstone and timber, Lithuanian wooden roadside shrines and Polish wayside crosses, a small church or chapel; farm machinery sheds.", "footprint_m": "house 9x11; barn 10x25", "storeys": [1, 2], "wall_class": "Fieldstone barns thick; brick houses medium; timber thin.", "materials": ["BRICK", "WOOD", "STONE", "CORRUGATED_IRON", "FIBRE_CEMENT"], "palette": ["#9c5a3c", "#8c6a46", "#8f8676", "#8b8e8c", "#a5a49c"], "layout_rules": ["street village along a road with long field strips behind each farm", "chapel and bus stop at the centre", "lake or pond nearby"], "example_names": ["Stara Kolnica", "Sosnowa Kępa", "Pušynėlis", "Šventežeriai Dvaras", "Bilwinowo Małe"]},
+    {"type": "farm", "share": 0.15, "pop_range": [2, 20], "architecture": "Isolated modern farmsteads: a house, large steel-clad cattle barns, silage clamps, grain silos.", "footprint_m": "barn 20x60", "storeys": [1, 2], "wall_class": "Steel-clad barns thin; silos thick.", "materials": ["STEEL", "CORRUGATED_IRON", "BRICK", "CONCRETE"], "palette": ["#4a4d50", "#8b8e8c", "#9c5a3c", "#8a8577"], "layout_rules": ["on hilltops with long views, one track in"], "example_names": ["Gospodarstwo Zielony Dół", "Ūkis Pagiriai", "Kolonia Leśna"]},
+    {"type": "compound", "share": 0.2, "pop_range": [0, 1500], "architecture": "Military and border sites: a brigade base in the forest (sheds, barracks, a fuel park), border guard stations with fence control rooms, bunkers and dragon's teeth, a highway border crossing (now quiet) with customs canopies, an air-defence site.", "footprint_m": "border station 80x100; base 800x1000", "storeys": [1, 3], "wall_class": "Bunkers thick; sheds thin; teeth block vehicles.", "materials": ["CONCRETE", "STEEL", "SANDBAG", "DIRT_BERM", "CORRUGATED_IRON"], "palette": ["#8a8577", "#4a4d50", "#b8a378", "#8a6f4e", "#5f6b58"], "layout_rules": ["border stations on the flank edges every 5-8 km", "brigade base in the forest near the highway", "defence-line belts 1-3 km in from each border"], "example_names": ["Placówka Straży Granicznej Mazury-7", "Camp Ruda Leśna", "Customs Post Graniczne-Nowe", "Air Defence Site Wzgórze 280"]}
+  ],
+  "infrastructure": {
+    "roads": "One expressway-standard highway (Via Baltica-type) north-south through the corridor, regional roads, gravel field and forest tracks; small bridges over streams between lakes are chokepoints.",
+    "rail": "One line through the corridor with a new European-gauge section under construction and a break-of-gauge yard.",
+    "power": "Overhead lines and a new interconnector substation; wind farms on hills.",
+    "ports": "None (inland).",
+    "airfields": "None on the map; a highway strip proposal for allied aircraft (AI only).",
+    "checkpoints": "Border guard stations, fence cameras and patrol roads on both flanks; the main road crossing is the only official crossing on the map; military traffic control on the highway in escalation."
+  },
+  "pois": [
+    {"type": "border_fence_sector", "description": "Five-metre steel fence with razor wire, cameras on masts, a patrol road and a border guard pickup; forest on both sides.", "contract_use": "border security patrol (clients ltu, pol)", "loot_tier": "low", "intel_chance": 0.2},
+    {"type": "highway_bridge", "description": "Highway bridge between two lakes; the only fast route north for allied reinforcements.", "contract_use": "counter-sabotage guard; escalation hold point", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "rail_yard", "description": "Break-of-gauge rail yard with sidings, cranes, transshipment sheds and fuel tanks.", "contract_use": "counter-sabotage infrastructure guard (clients ltu, pol)", "loot_tier": "low", "intel_chance": 0.2},
+    {"type": "brigade_forest_base", "description": "Allied brigade base in pine forest: vehicle sheds with tanks and IFVs, barracks, fuel park, training lanes.", "contract_use": "contract board; recover lost equipment or sensitive kit (clients deu, nld, usa)", "loot_tier": "low", "intel_chance": 0.05},
+    {"type": "tripoint_area", "description": "Wooded hill where three borders meet, with a monument, a viewpoint tower and fences converging.", "contract_use": "recon; drone-incursion response", "loot_tier": "low", "intel_chance": 0.3},
+    {"type": "smuggling_balloon_site", "description": "Field where smuggling balloons from across the border come down; scattered packages, tracks to a barn used by a smuggling ring.", "contract_use": "counter-smuggling raid and evidence recovery (client ltu)", "loot_tier": "medium", "intel_chance": 0.45},
+    {"type": "defence_line_bunkers", "description": "New bunkers, dragon's teeth rows and an anti-tank ditch along a forest edge facing the border.", "contract_use": "escalation-phase defence", "loot_tier": "low", "intel_chance": 0.1},
+    {"type": "lake_shore_resort", "description": "Lake resort with wooden cabins, a jetty, a restaurant and a camping field; summer crowds.", "contract_use": "VIP protection; meeting site", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "farmstead_safehouse", "description": "Isolated farm used by a sabotage team: barn workshop, a van with false plates, radios and drones.", "contract_use": "counter-sabotage raid with police (clients pol, ltu)", "loot_tier": "medium", "intel_chance": 0.55},
+    {"type": "air_defence_site", "description": "Hilltop air-defence site with radar and launcher vehicles, fence and a generator.", "contract_use": "site security during a drone incursion", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "substation", "description": "Interconnector substation with transformers, a control building and a fenced yard.", "contract_use": "counter-sabotage infrastructure guard", "loot_tier": "low", "intel_chance": 0.15}
+  ],
+  "weather": {
+    "conditions": ["overcast and drizzle", "lake fog at dawn", "snow and frost", "summer thunderstorms", "clear cold winter nights"],
+    "visibility_notes": "Fog over lakes and valleys at dawn; snow shows tracks; winter nights long.",
+    "dust_or_snow": "Snow December-March; no dust."
+  },
+  "civilians": {
+    "density": "low",
+    "behaviour": "Sparse rural population; farmers in fields, lorries on the highway, summer tourists at lakes; border closures keep the area quiet. Irregular border-crossing groups occasionally appear near the fence (civilians, never targets). Residents report strangers to the border guard.",
+    "vehicles": ["private cars", "tractors and combines", "timber and long-haul lorries", "buses", "border guard and military vehicles"],
+    "casualty_risk_notes": "Low density, but lakeside resorts in summer and towns raise risk; civilians near the fence are a strict no-fire case."
+  },
+  "factions_present": [
+    {"faction_id": "pol", "role": "defender", "strength": "high", "where": "Southern half of the corridor: border guard stations, defence-line bunkers, air defence."},
+    {"faction_id": "ltu", "role": "defender", "strength": "high", "where": "Northern half: border stations, rail yard, highway bridge."},
+    {"faction_id": "deu", "role": "defender", "strength": "medium", "where": "Brigade forest base in the northern half (permanent German brigade)."},
+    {"faction_id": "nld", "role": "patrol", "strength": "low", "where": "Contingent with the German-led brigade."},
+    {"faction_id": "usa", "role": "patrol", "strength": "medium", "where": "Rotational armoured units at the base and air defence in the southern half."},
+    {"faction_id": "can", "role": "patrol", "strength": "low", "where": "Liaison and logistics movement through the corridor toward the Canadian-led brigade further north."},
+    {"faction_id": "rus", "role": "occupier", "strength": "medium", "where": "Beyond the west-edge border (Kaliningrad side): border posts, drones, electronic warfare, sabotage teams."},
+    {"faction_id": "blr", "role": "occupier", "strength": "medium", "where": "Beyond the east-edge border: border posts, exercises, balloon and drone incursions, pressure on the fence."}
+  ],
+  "frontline": "Two hostile flanks and a friendly corridor. In the grey-zone state, rus and blr events (drones, balloons, GPS jamming, fence pressure, sabotage teams) raise alert in edge zones and post border, counter-smuggling and counter-sabotage contracts. In the late-game escalation scenario (proposed), rus and blr push from both edges to close the corridor at the highway bridge and rail yard; allied units hold the lakes and defence lines, and the war sim measures corridor control as the share of the highway still open.",
+  "contract_hooks": [
+    "Border security patrol along the fence during a pressure event (clients ltu, pol)",
+    "Counter-smuggling raid on a balloon landing site and barn (client ltu)",
+    "Counter-sabotage raid on a farmstead safe house (clients pol, ltu)",
+    "Guard the rail yard or substation against sabotage (clients ltu, pol)",
+    "Recover sensitive kit lost in a forest training area (clients deu, nld, usa)",
+    "Air-defence site security during a drone incursion (client pol)",
+    "Escalation scenario: hold the highway bridge until reinforcements cross (late game)"
+  ],
+  "zone_plan": {
+    "contract_zones": [
+      {"name": "East fence sector", "area_km2": 3, "anchor": "border_fence_sector", "notes": "forest, cameras, low civilians"},
+      {"name": "Rail yard and town", "area_km2": 2.5, "anchor": "rail_yard", "notes": "urban-industrial"},
+      {"name": "Lake farm", "area_km2": 2, "anchor": "farmstead_safehouse", "notes": "open fields, isolated"},
+      {"name": "Tripoint hill", "area_km2": 3, "anchor": "tripoint_area", "notes": "two hostile borders in view"}
+    ],
+    "hot_zones": [
+      {"name": "Corridor escalation (late game)", "area_km2": 16, "layout": "Two enemy HQs off the edges; 4-6 bridgehead outposts at lake gaps; checkpoints on regional roads; roaming recon and drone teams; 2 QRF armour groups; allied brigade base as the friendly anchor"}
+    ]
+  },
+  "insertion": {"lhd": false, "fob": "FOB at the allied brigade forest base. Good road network; helicopters affected by fog and EW threat; AAVs can cross lakes (proposed) but not frozen-and-cracking ice."},
+  "early_game_suitable": false,
+  "early_game_notes": "Peer-state flanks (rus late, blr late); late-campaign theatre.",
+  "ambient_audio": ["wind over fields", "cranes and geese", "church bells", "highway lorries", "fence-camera motors", "distant artillery training", "ice cracking on lakes in winter"],
+  "proposed": [
+    "map_size_km and compression of the corridor with both flank borders on the map edges",
+    "generator numbers",
+    "corridor-control frontline variable and escalation scenario",
+    "zone_plan and hot zone",
+    "materials: BRICK #9c5a3c, PLASTER #e3dccb, ROOF_TILE #a4553b, STONE #8f8676, FIBRE_CEMENT #a5a49c, CORRUGATED_IRON #8b8e8c, GLASS #9fbcc4, SANDBAG #b8a378, DIRT_BERM #8a6f4e",
+    "can presence as liaison only (Canada leads the brigade in Latvia, not in the corridor)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Suwa%C5%82ki_Gap",
+    "https://en.wikipedia.org/wiki/Suwa%C5%82ki_Lake_District",
+    "https://en.wikipedia.org/wiki/Via_Baltica",
+    "https://en.wikipedia.org/wiki/East_Shield",
+    "https://en.wikipedia.org/wiki/45th_Panzer_Brigade_(Bundeswehr)",
+    "factions/pol.json, ltu.json, rus.json, blr.json notes"
+  ]
+}

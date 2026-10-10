@@ -1,0 +1,130 @@
+{
+  "id": "south_china_sea",
+  "name": "Reef Line and Karst Isles",
+  "inspired_by": "The eastern South China Sea as of 2026: a Palawan-type island of limestone karst, rainforest, mangroves and stilt fishing villages on the east of the map, and a Spratly-type reef group to the west with a grounded-ship outpost, small occupied islets of several claimants, an artificial island base, and an offshore gas platform. Coast guard water-cannon and blocking incidents, maritime militia swarms and resupply runs to outposts define the confrontation. All towns and features are fictional.",
+  "map_size_km": [24, 22],
+  "climate": "Tropical monsoon (Koppen Am). 26-33 C year-round, very humid. South-west monsoon (habagat) June-October with heavy rain and typhoons in the north; north-east monsoon (amihan) December-March, drier with steady winds and rough seas on exposed reefs. 1,500-3,000 mm rain.",
+  "seasons": [
+    "Amihan (Dec-Mar): drier, steady north-east winds, rough water on the reefs",
+    "Hot dry (Apr-May): calm seas, best for resupply runs and exercises",
+    "Habagat (Jun-Oct): heavy rain, squalls, typhoon events, poor visibility",
+    "Transition (Nov): mixed weather"
+  ],
+  "biomes": [
+    {"id": "open_sea_and_reef", "share": 0.45, "vegetation": ["none (water): deep blue sea, turquoise lagoons", "coral reefs exposed at low tide", "seagrass beds"], "ground_palette": ["#1e4d63", "#2a6f86", "#3d8ea3", "#7fc4c8", "#d9e6dc"], "foliage_palette": ["#4e8f86", "#6aa79a", "#2d6e66", "#a7d0c4"]},
+    {"id": "tropical_lowland_rainforest", "share": 0.2, "vegetation": ["dipterocarp rainforest", "rattan and lianas", "wild banana and ferns", "strangler figs"], "ground_palette": ["#5a3a28", "#7a4a34", "#3e2a1e", "#9a6a4a"], "foliage_palette": ["#1f4a24", "#2f5a2b", "#4a7a36", "#6d9a48", "#264a22"]},
+    {"id": "limestone_karst", "share": 0.1, "vegetation": ["karst forest on cliffs", "bare grey limestone towers", "caves", "swiftlet nests"], "ground_palette": ["#9a9486", "#b7b1a3", "#7d776b", "#d3cec2"], "foliage_palette": ["#2f5a2b", "#4a7a36", "#6d9a48", "#3e5530"]},
+    {"id": "mangrove_and_coast", "share": 0.12, "vegetation": ["Rhizophora and Avicennia mangroves", "nipa palm in estuaries", "coconut palms and beach almond on the shore", "white sand beaches"], "ground_palette": ["#e8dcc0", "#6b6250", "#4f493c", "#d4c193"], "foliage_palette": ["#3f6b2e", "#4a6b3a", "#5f7f48", "#7d9a5e"]},
+    {"id": "coastal_farmland_and_village", "share": 0.13, "vegetation": ["rice paddies", "coconut and cashew plantations", "banana and cassava plots", "grassland on cleared hills"], "ground_palette": ["#7a5a42", "#9a785a", "#5f4634", "#b3977a"], "foliage_palette": ["#5f8a3a", "#7da048", "#3f6b2e", "#a8c06a"]}
+  ],
+  "terrain": {
+    "elevation_range_m": [-1500, 1100],
+    "relief": "East: a long narrow island with a mountain spine to 1,100 m, karst towers and cliffs on the west coast, coastal plains and mangrove bays on the east coast. West: open sea up to 1,500 m deep with atolls and reefs rising from it; reef tops at 0-2 m, sand cays 1-4 m above high tide; one artificial island of dredged sand at 3-6 m with a runway.",
+    "features": ["karst towers and sea caves", "mangrove bays and estuaries", "atolls with lagoons", "sand cays", "a reef shoal with a grounded rusting ship used as an outpost", "an artificial island with seawalls, runway and radar domes", "small occupied islets with concrete outpost buildings", "an offshore gas platform"],
+    "water": "Sea covers most of the map; island rivers short and steep with estuaries; lagoons inside atolls; tide exposes reef flats.",
+    "generator": {
+      "approach": "Heightmap with bathymetry at 20 m (sea) and 10 m (island). Island as an elongated mask with ridged noise spine and karst towers from cellular noise; deep sea from low-frequency noise; atolls as ring shapes (annulus SDF) rising from depth with lagoons; cays and the artificial island stamped. Tide variable for reef exposure.",
+      "noise_layers": [
+        {"type": "ridged multifractal (masked to the island)", "frequency": 0.4, "amplitude_m": 900, "purpose": "island mountain spine"},
+        {"type": "cellular (Worley F1, inverted, sharp)", "frequency": 2.5, "amplitude_m": 180, "purpose": "karst towers on the west coast"},
+        {"type": "simplex fbm", "frequency": 0.05, "amplitude_m": 1200, "purpose": "deep-sea bathymetry"},
+        {"type": "annulus SDF with simplex warp", "frequency": 0.3, "amplitude_m": 1400, "purpose": "atolls rising from depth to reef level"},
+        {"type": "simplex", "frequency": 4.0, "amplitude_m": 1.0, "purpose": "reef flat micro-relief"}
+      ],
+      "erosion": "Hydraulic erosion on the island spine; karst towers keep vertical walls (thermal cap 80 degrees).",
+      "rivers": "Short steep island rivers by flow accumulation, ending in mangrove estuaries.",
+      "settlement_flattening": "Coastal villages on beach ridges and stilts over water; town on the bay plain; outposts on cays and reef platforms.",
+      "notes": "Most play is maritime: boats, boarding, resupply runs, small-island actions. Typhoon events close the sea. Grey-zone incidents (water cannon, blocking, ramming) are scripted vessel behaviours, not shooting."
+    }
+  },
+  "settlements": [
+    {"type": "village", "share": 0.4, "pop_range": [200, 3000], "architecture": "Fishing villages: houses on stilts over water and on the beach, of wood and woven bamboo (sawali) with nipa thatch or corrugated-iron roofs, plank walkways, outrigger bancas pulled up on the sand; a chapel or small mosque, a basketball court, sari-sari stores.", "footprint_m": "house 5x7", "storeys": [1, 2], "wall_class": "Wood and bamboo very thin.", "materials": ["WOOD", "THATCH", "CORRUGATED_IRON", "CINDER_BLOCK"], "palette": ["#8c6a46", "#b49a5e", "#8b8e8c", "#3f8fbf", "#e8e0cc"], "layout_rules": ["along the shore and over the water on stilts", "walkways between houses", "basketball court and chapel at the centre", "bancas on the beach"], "example_names": ["Barangay Tubig-Asul", "Sitio Bangkaan", "Purok Bagong Dagat", "Barangay Malinaw", "Sitio Batong Puti"]},
+    {"type": "town", "share": 0.2, "pop_range": [10000, 60000], "architecture": "Municipal town: two- and three-storey concrete and cinder-block buildings with corrugated roofs and balconies, a Spanish-era church plaza, a municipal hall, a public market, a port with fishing and ferry piers, tricycle stands.", "footprint_m": "building 10x15", "storeys": [1, 3], "wall_class": "Cinder block medium; wood upper floors thin.", "materials": ["CINDER_BLOCK", "CONCRETE", "CORRUGATED_IRON", "PAINTED", "WOOD"], "palette": ["#e6e0d2", "#9a978f", "#8b8e8c", "#3f8f6f", "#d8b04a"], "layout_rules": ["plaza with church and municipal hall", "market by the pier", "national highway as the main street"], "example_names": ["San Isidro de Bahia", "Puerto Kalamay", "Bayan ng Talampas", "Rizal Baybayin"]},
+    {"type": "compound", "share": 0.3, "pop_range": [0, 1500], "architecture": "Outposts and bases: the grounded-ship outpost (rusting hull with shacks on deck), small-islet outposts of concrete buildings with flags, a lighthouse and a helipad, the artificial-island base (hangars, radar domes, seawalls, runway), a naval/coast guard station in a bay, an offshore gas platform (steel decks), a Taiwanese-held island garrison at the far west edge.", "footprint_m": "islet outpost 60x80; artificial island 3000x800; platform 60x60", "storeys": [1, 4], "wall_class": "Concrete outposts thick; ship hull steel (thin-medium); platform steel.", "materials": ["CONCRETE", "STEEL", "SANDBAG", "PAINTED", "CORRUGATED_IRON"], "palette": ["#8a8577", "#4a4d50", "#8a3a22", "#e6e6e2", "#b8a378"], "layout_rules": ["each outpost on a different reef or cay", "the artificial island at the far west of the reef group", "coast guard station in the main island's bay"], "example_names": ["Outpost Ship Matatag", "Cay Bituin Munti", "Reef Station Bai Da", "Platform Kalaw-Timog", "Garrison Isle Nanyu"]},
+    {"type": "farm", "share": 0.1, "pop_range": [5, 50], "architecture": "Coconut and cashew plantation homesteads, seaweed farms on stakes in shallow bays with drying platforms.", "footprint_m": "homestead 30x30", "storeys": [1, 1], "wall_class": "Thin.", "materials": ["WOOD", "THATCH", "CORRUGATED_IRON"], "palette": ["#8c6a46", "#b49a5e", "#8b8e8c"], "layout_rules": ["along the coastal road", "seaweed farms in lagoons"], "example_names": ["Sitio Niyogan", "Seaweed Farm Lambat"]}
+  ],
+  "infrastructure": {
+    "roads": "One national highway along the island's east coast, dirt roads inland; nothing on the reefs.",
+    "rail": "None.",
+    "power": "Diesel plants and solar on the island; outposts on generators.",
+    "ports": "Town port with ferry and fishing piers, coast guard station, outrigger landings; the artificial island's harbour; the LHD offshore east of the reefs.",
+    "airfields": "Town airport (domestic), the artificial island's runway (AI only), an islet airstrip.",
+    "checkpoints": "Coast guard at the port; none on the reefs; blocking lines of coast guard and militia vessels near shoals (events)."
+  },
+  "pois": [
+    {"type": "grounded_ship_outpost", "description": "Rusting grounded ship on a shoal used as an outpost: deck shacks, a small garrison, a helipad, resupply only by boat through blocking vessels.", "contract_use": "resupply outpost (client phl)", "loot_tier": "low", "intel_chance": 0.25},
+    {"type": "artificial_island_base", "description": "Dredged island base: seawalls, runway, hangars, radar domes, missile shelters, harbour. Observe only.", "contract_use": "reconnaissance from a boat; late-game escalation objective", "loot_tier": "medium", "intel_chance": 0.5},
+    {"type": "islet_outpost", "description": "Small cay with a concrete outpost building, flag, lighthouse, solar panels and a jetty; a few soldiers.", "contract_use": "resupply; reconnaissance (Spratly reefs) (clients phl, vnm)", "loot_tier": "low", "intel_chance": 0.25},
+    {"type": "gas_platform", "description": "Offshore gas platform with decks, cranes, a helideck and accommodation module.", "contract_use": "protect infrastructure (offshore oil platforms) (client vnm or phl); boarding", "loot_tier": "medium", "intel_chance": 0.3},
+    {"type": "militia_swarm_anchorage", "description": "Dozens of large fishing vessels anchored in a reef lagoon in rows, rarely fishing.", "contract_use": "maritime security observation; document for a client", "loot_tier": "low", "intel_chance": 0.4},
+    {"type": "stilt_village", "description": "Fishing village on stilts with plank walkways and bancas; fishermen harassed at the shoals.", "contract_use": "escort fishermen; disaster relief security after a typhoon", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "karst_cave_cove", "description": "Hidden cove under karst cliffs with a sea cave, used by smugglers.", "contract_use": "counter-smuggling; hostage rescue (kidnap-for-ransom gang)", "loot_tier": "medium", "intel_chance": 0.45},
+    {"type": "coast_guard_station", "description": "Coast guard station with pier, patrol boats, a radar mast and barracks.", "contract_use": "contract board; maritime security boarding staging", "loot_tier": "low", "intel_chance": 0.05},
+    {"type": "downed_drone_reef", "description": "Crashed surveillance drone on a reef flat, accessible at low tide.", "contract_use": "recover before rival vessels (clients phl, usa, jpn)", "loot_tier": "medium", "intel_chance": 0.45},
+    {"type": "typhoon_damaged_town", "description": "Coastal town after a typhoon: roofs torn off, flooded streets, relief goods at the plaza.", "contract_use": "disaster relief security (clients phl, aus, nzl, jpn)", "loot_tier": "low", "intel_chance": 0.05},
+    {"type": "taiwan_held_island", "description": "Small island with a runway, hospital, port and garrison at the west edge.", "contract_use": "noncombatant evacuation; reconnaissance (client twn)", "loot_tier": "low", "intel_chance": 0.2},
+    {"type": "jungle_airstrip", "description": "Grass airstrip in the rainforest with a hangar shed, used by a logging company and smugglers.", "contract_use": "hostage rescue; smuggling interdiction (client phl)", "loot_tier": "medium", "intel_chance": 0.35}
+  ],
+  "weather": {
+    "conditions": ["hot humid sun", "tropical squalls", "typhoons", "monsoon rain", "calm glassy seas"],
+    "visibility_notes": "Squalls drop visibility to under 500 m and ground helicopters; typhoons shut everything; jungle limits sight to 10-30 m; sea glare.",
+    "dust_or_snow": "None."
+  },
+  "civilians": {
+    "density": "medium",
+    "behaviour": "Fishermen out at night with lights and back at dawn; markets at the town pier in the morning; Sunday church; basketball in the evening. At sea, fishing bancas work near the shoals and are harassed by larger vessels. Typhoon events send people to evacuation centres (schools, churches).",
+    "vehicles": ["tricycles (motorbike sidecars)", "jeepneys", "motorbikes", "outrigger bancas", "ferries", "fishing vessels"],
+    "casualty_risk_notes": "Fishing boats near incidents and dense stilt villages are the main risks."
+  },
+  "factions_present": [
+    {"faction_id": "phl", "role": "defender", "strength": "high", "where": "The main island, coast guard station, grounded-ship outpost and one islet; navy and coast guard patrols."},
+    {"faction_id": "chn", "role": "patrol", "strength": "high", "where": "Artificial island base, coast guard cutters and maritime militia swarms around the reefs (grey zone)."},
+    {"faction_id": "vnm", "role": "defender", "strength": "low", "where": "One islet outpost and the gas platform sector in the south-west."},
+    {"faction_id": "twn", "role": "defender", "strength": "low", "where": "Garrison island at the far west edge."},
+    {"faction_id": "usa", "role": "patrol", "strength": "low", "where": "Advisers at the coast guard station, maritime patrol aircraft, exercises (EDCA-type site on the main island)."},
+    {"faction_id": "jpn", "role": "patrol", "strength": "low", "where": "Coast guard patrol vessel donations, observers and joint exercises."},
+    {"faction_id": "aus", "role": "patrol", "strength": "low", "where": "Joint patrols and exercises; disaster relief teams."},
+    {"faction_id": "nzl", "role": "patrol", "strength": "low", "where": "Disaster relief and exercise contingent."}
+  ],
+  "frontline": "Maritime grey zone. Control of each shoal is a state (open, contested, blocked). chn blocking and water-cannon events raise contest levels and make resupply runs harder; successful runs and allied patrols lower them. Islets do not change hands in the default state. Typhoon events pause the confrontation and post relief contracts. The late-game escalation scenario (proposed) puts the outposts under blockade and assault.",
+  "contract_hooks": [
+    "Resupply the grounded-ship outpost through a blocking line (client phl)",
+    "Reconnaissance of the Spratly-type reefs (clients phl, vnm)",
+    "Protect the offshore gas platform (client vnm)",
+    "Maritime security boarding of a smuggling vessel (client phl)",
+    "Hostage rescue from a kidnap gang in a karst cove (client phl)",
+    "Recover a downed drone from a reef at low tide (clients phl, usa, jpn)",
+    "Disaster relief security after a typhoon (clients phl, aus, nzl, jpn)",
+    "Escalation scenario: hold an islet outpost (late game)"
+  ],
+  "zone_plan": {
+    "contract_zones": [
+      {"name": "Grounded-ship shoal", "area_km2": 3, "anchor": "grounded_ship_outpost", "notes": "boats, blocking vessels"},
+      {"name": "Karst cove", "area_km2": 2, "anchor": "karst_cave_cove", "notes": "caves, jungle"},
+      {"name": "Gas platform", "area_km2": 2, "anchor": "gas_platform", "notes": "steel decks, boarding"},
+      {"name": "Coastal town", "area_km2": 2.5, "anchor": "typhoon_damaged_town", "notes": "civilians, relief"}
+    ],
+    "hot_zones": [
+      {"name": "Reef group escalation (late game)", "area_km2": 16, "layout": "chn HQ on the artificial island; 3-4 occupied reefs as outposts; blocking lines as checkpoints; roaming cutters and militia vessels; QRF by boat and helicopter; friendly islet outposts as anchors"}
+    ]
+  },
+  "insertion": {"lhd": true, "fob": "LHD east of the reef group; FOB at the coast guard station on the main island. Boats, helicopters and AAVs (lagoons and beaches)."},
+  "early_game_suitable": false,
+  "early_game_notes": "The main confrontation is with chn (late tier). phl's early-game counter-terror hook (ISIS-affiliated cells on southern islands) needs isis to list this theatre (open question); until then only criminal kidnap gangs (generic NPCs) appear.",
+  "ambient_audio": ["surf on reefs", "banca engines", "rain on tin roofs", "jungle birds and geckos", "karaoke from a village", "coast guard loudhailer warnings (events)", "ship horns"],
+  "proposed": [
+    "map_size_km and composite (Palawan-type island plus a Spratly-type reef group)",
+    "shoal control states and blocking-vessel behaviour",
+    "generic kidnap-gang NPCs",
+    "zone_plan and hot zone",
+    "materials: THATCH #b49a5e, CORRUGATED_IRON #8b8e8c, CINDER_BLOCK #9a978f, SANDBAG #b8a378"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Palawan",
+    "https://en.wikipedia.org/wiki/Spratly_Islands",
+    "https://en.wikipedia.org/wiki/Second_Thomas_Shoal",
+    "https://en.wikipedia.org/wiki/People%27s_Armed_Forces_Maritime_Militia",
+    "https://en.wikipedia.org/wiki/Bahay_kubo",
+    "factions/phl.json, chn.json, vnm.json, twn.json notes"
+  ]
+}

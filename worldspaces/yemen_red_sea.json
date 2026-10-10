@@ -1,0 +1,236 @@
+{
+  "id": "yemen_red_sea",
+  "name": "Tihama and the Southern Gate",
+  "inspired_by": "Western and central Yemen and the southern Red Sea as of 2026: the hot Tihama coastal plain with fishing towns and a strait island at the southern gate (Bab al-Mandab type), a steep escarpment rising to terraced highlands with stone tower-house villages, and interior desert wadis with mud-brick tower towns to the east. The Houthis hold most of the coast and highlands after their September 2026 advance; AQAP operates in the interior wadis. All towns are fictional.",
+  "map_size_km": [24, 24],
+  "climate": "Three bands. Tihama coast: hot desert with very high humidity (Koppen BWh), 32-42 C, under 100 mm rain. Highlands (2,000-2,800 m): temperate (Cwb), 20-28 C days, cool nights, frost in winter, 300-700 mm rain in two monsoon-fed seasons (March-May and July-September). Interior wadis: hot desert (BWh), 35-45 C in summer, rare flash floods.",
+  "seasons": [
+    "Winter (Dec-Feb): mild coast, cold highland nights with frost, dry",
+    "Spring rains (Mar-May): highland thunderstorms, flash floods in wadis",
+    "Summer (Jun-Sep): extreme humid heat on the coast, khamsin and dust from the interior, main rains on the escarpment",
+    "Autumn (Oct-Nov): harvest of sorghum on the terraces, clear air in the highlands"
+  ],
+  "biomes": [
+    {
+      "id": "tihama_coastal_plain",
+      "share": 0.26,
+      "vegetation": ["doum palm (Hyphaene thebaica) groves", "Prosopis juliflora thickets", "acacia (Vachellia tortilis) scrub", "irrigated sorghum, millet and mango in wadi deltas", "sand dunes near the coast"],
+      "ground_palette": ["#d9c49c", "#c7ae82", "#b39a72", "#e8dbbd", "#8f7a5c"],
+      "foliage_palette": ["#7a8a48", "#5f7038", "#a0a866", "#4b5a30", "#c8c39a"]
+    },
+    {
+      "id": "red_sea_coast_and_islands",
+      "share": 0.12,
+      "vegetation": ["grey mangrove patches", "salt-tolerant shrubs", "bare volcanic rock on the strait island", "coral reef shelves"],
+      "ground_palette": ["#e8dcc0", "#4b4845", "#6e675c", "#d4c193", "#2a6f86"],
+      "foliage_palette": ["#4a6b3a", "#5f7f48", "#7d9a5e", "#3a5530"]
+    },
+    {
+      "id": "escarpment_and_wadis",
+      "share": 0.18,
+      "vegetation": ["dragon's blood and Euphorbia succulents on cliffs", "Ficus and tamarind in wadi beds", "acacia and Commiphora scrub", "coffee and banana terraces in wet gorges"],
+      "ground_palette": ["#7d5f48", "#9a7a5e", "#5f4a3a", "#b49c80", "#4b4845"],
+      "foliage_palette": ["#3f6b2e", "#5a7f3a", "#7d9a4a", "#2f5226", "#94a86a"]
+    },
+    {
+      "id": "terraced_highlands",
+      "share": 0.24,
+      "vegetation": ["sorghum, barley and wheat terraces", "qat (Catha edulis) shrub plantations", "fruit trees (pomegranate, apricot, grape)", "juniper and acacia on ridges"],
+      "ground_palette": ["#8a6a4c", "#a5876a", "#6b5240", "#c2a988", "#9a9486"],
+      "foliage_palette": ["#4f6f34", "#3e5a2a", "#6f8a46", "#9aa868", "#2d4422"]
+    },
+    {
+      "id": "interior_desert_wadis",
+      "share": 0.2,
+      "vegetation": ["date palm and sidr (Ziziphus spina-christi) in wadi floors", "irrigated sorghum and alfalfa near towns", "bare sandstone plateau (jol)", "sand sheets at the desert edge"],
+      "ground_palette": ["#d2b48a", "#bf9d6e", "#e3cfa8", "#a68259", "#8a6c4c", "#efe1c4"],
+      "foliage_palette": ["#5f7a3a", "#7d8a4a", "#a8a27a", "#3f5a2a"]
+    }
+  ],
+  "terrain": {
+    "elevation_range_m": [-40, 2800],
+    "relief": "A flat coastal plain 4-8 km wide on the west rises abruptly up a 1,500-2,000 m escarpment cut by deep gorges to rolling, terraced highland plateaus and volcanic peaks (2,000-2,800 m); east of the highlands the land drops to a flat-topped sandstone plateau dissected by steep-walled canyon wadis (800-1,200 m).",
+    "features": ["coastal dunes, sabkha and lagoons", "the strait island of dark volcanic rock with a lighthouse", "escarpment gorges with waterfalls in the rains", "agricultural terraces covering whole mountainsides", "volcanic cones and basalt flows on the plateau", "flat-topped plateau with canyon wadis in the east", "ancient dam remains and water cisterns"],
+    "water": "Red Sea and the strait on the west and south-west; seasonal rivers (sayl) flowing down from the escarpment that spread into irrigated deltas on the Tihama; cisterns and wells in the highlands; flash floods in the eastern wadis.",
+    "generator": {
+      "approach": "Heightmap at 10 m. Three bands built west to east: (a) coastal plain with dune noise and wadi deltas; (b) an escarpment as a steep sigmoid step (1,800 m over 4 km) broken by ridged noise and carved gorges; (c) highland plateau with fbm hills and volcanic cones, then a gentler eastern descent to the sandstone plateau where canyons are carved as deep, narrow, flat-floored channels. Terraces post-pass over the whole highland band on 8-35 degree slopes.",
+      "noise_layers": [
+        {"type": "sigmoid step (west-east) + simplex warp", "frequency": 0.2, "amplitude_m": 1800, "purpose": "the escarpment line, warped so it is irregular with spurs"},
+        {"type": "ridged multifractal", "frequency": 0.8, "amplitude_m": 350, "purpose": "escarpment spurs and highland ridges"},
+        {"type": "cellular (Worley F1, inverted)", "frequency": 1.0, "amplitude_m": 220, "purpose": "volcanic cones on the plateau"},
+        {"type": "simplex fbm", "frequency": 0.4, "amplitude_m": 80, "purpose": "rolling plateau and eastern jol surface"},
+        {"type": "simplex", "frequency": 5.0, "amplitude_m": 2, "purpose": "coastal dunes and micro-relief"}
+      ],
+      "erosion": "Strong hydraulic erosion on the escarpment (100 iterations) for deep gorges; canyon carving in the east as a separate pass (flow lines widened to 100-400 m flat floors with vertical walls); thermal erosion capped at 60 degrees in canyons.",
+      "rivers": "Seasonal: gorges from flow accumulation down the escarpment, ending in alluvial deltas on the Tihama with irrigation channels; eastern wadis as flat-floored canyons with palm gardens. No perennial river.",
+      "settlement_flattening": "Tihama towns flattened; highland villages on ridge crests and spurs per plot, never flattening terraces; eastern tower towns on wadi-side benches above flood level.",
+      "notes": "The escarpment roads (2 switchback roads, one through a gorge) are the decisive chokepoints between coast and highlands. AAVs only on the coastal band; helicopters struggle with altitude and storms in the highlands (proposed)."
+    }
+  },
+  "settlements": [
+    {
+      "type": "village",
+      "share": 0.3,
+      "pop_range": [200, 3000],
+      "architecture": "Highland stone tower-house village: three- to six-storey houses of dressed stone (lower floors) and brick or stone above, small windows with white gypsum frames and alabaster or stained-glass fanlights (qamariya), flat roofs with parapets; livestock on the ground floor, a top-floor reception room (mafraj); villages perched on ridge crests like fortresses.",
+      "footprint_m": "tower house 8x10 to 10x12",
+      "storeys": [3, 6],
+      "wall_class": "Stone walls 60-90 cm thick at the base (very strong cover); upper brick 30 cm medium.",
+      "materials": ["STONE", "BRICK", "PLASTER", "WOOD", "GLASS"],
+      "palette": ["#8f8676", "#7d5f48", "#b49c80", "#f2ede2", "#9c5a3c", "#c75b4a"],
+      "layout_rules": ["on a ridge crest or spur, houses packed together forming an outer wall", "one gate and a steep road; footpaths down to terraces", "a mosque with a white minaret", "cisterns and threshing floors at the edge"],
+      "example_names": ["Hisn al-Ahjar", "Bayt al-Muqri", "Hisn al-Ghurab", "Bayt al-Aqiq", "Jabal Shams al-Qura", "Hajarat al-Qudum"]
+    },
+    {
+      "type": "town",
+      "share": 0.2,
+      "pop_range": [10000, 80000],
+      "architecture": "Tihama coastal town: one- and two-storey houses of brick and plaster with carved and painted decoration, courtyards, reed-and-wood huts (ushash, conical thatched) on the outskirts; concrete blocks of two to four storeys on the main road; a fishing harbour with wooden boats, a fish market and a mosque.",
+      "footprint_m": "courtyard house 14x16; hut 4 m diameter",
+      "storeys": [1, 4],
+      "wall_class": "Brick-and-plaster houses medium; huts none; concrete blocks frames thick.",
+      "materials": ["BRICK", "PLASTER", "THATCH", "CONCRETE", "CINDER_BLOCK", "WOOD"],
+      "palette": ["#e8e0cc", "#c9a46e", "#b49a5e", "#8a8577", "#2f6f8f", "#8c6a46"],
+      "layout_rules": ["old quarter of lanes around a mosque and souq", "hut quarters at the outskirts", "harbour and beach with boats", "coastal highway as the main street"],
+      "example_names": ["Marsa al-Bunn", "Ras al-Dawm", "Bayt al-Nakhl", "Suq al-Ahad al-Jadid", "Wadi al-Rumman"]
+    },
+    {
+      "type": "town",
+      "share": 0.15,
+      "pop_range": [5000, 40000],
+      "architecture": "Interior wadi tower town: five- to eight-storey mud-brick tower houses, rendered with lime at the top, small windows, flat roofs; packed into a walled block on a wadi-side bench; palm gardens below.",
+      "footprint_m": "tower 10x10 to 12x14",
+      "storeys": [4, 8],
+      "wall_class": "Mud-brick walls 80-100 cm at the base (thick cover) but crumble under sustained fire; upper walls 40 cm.",
+      "materials": ["MUD_BRICK", "PLASTER", "WOOD"],
+      "palette": ["#a47e57", "#bf9d6e", "#e3dccb", "#8c6a46", "#d2b48a"],
+      "layout_rules": ["dense walled block, streets 2-4 m wide", "single gate facing the wadi road", "palm gardens and fields on the wadi floor", "flood channel at the foot"],
+      "example_names": ["Hisn al-Tin", "Qarn al-Nakhl", "Ghayl al-Qadima", "Qasr al-Shams"]
+    },
+    {
+      "type": "camp",
+      "share": 0.1,
+      "pop_range": [1000, 15000],
+      "architecture": "Displacement settlement: tents, reed huts and tin shelters, water tanks, a clinic tent.",
+      "footprint_m": "camp 300x500",
+      "storeys": [1, 1],
+      "wall_class": "None.",
+      "materials": ["TARP", "THATCH", "CORRUGATED_IRON"],
+      "palette": ["#3f6d8c", "#e8e4da", "#b49a5e", "#8b8e8c"],
+      "layout_rules": ["on open ground near a town or road", "very high civilian density", "aid distribution point at the entrance"],
+      "example_names": ["Mukhayyam Ras al-Dawm", "Mukhayyam Wadi Saba", "Dar al-Salam Camp"]
+    },
+    {
+      "type": "compound",
+      "share": 0.25,
+      "pop_range": [0, 1000],
+      "architecture": "Military and infrastructure sites: Houthi positions in caves and bunkers on the escarpment, coastal launch sites under camouflage, an ex-army base with tank revetments, government-aligned posts in the interior, the strait island garrison, an oil pumping station on the eastern plateau.",
+      "footprint_m": "cave position 30x30; base 400x500",
+      "storeys": [1, 2],
+      "wall_class": "Caves and bunkers effectively indestructible; sandbag and stone sangars thick; sheds thin.",
+      "materials": ["STONE", "SANDBAG", "CONCRETE", "DIRT_BERM", "STEEL"],
+      "palette": ["#8f8676", "#b8a378", "#8a8577", "#8a6f4e", "#4a4d50"],
+      "layout_rules": ["escarpment and ridge positions with views over roads", "coastal sites hidden in palm groves", "single access road"],
+      "example_names": ["Mawqi Jabal Ras", "Mu'askar al-Sahil", "Jazirat al-Bab Garrison", "Mahattat Safir Nawe"]
+    }
+  ],
+  "infrastructure": {
+    "roads": "Coastal highway on the Tihama, two switchback roads and one gorge road up the escarpment to the highlands, rough highland roads between ridge villages, a desert road east across the plateau. Many bridges damaged; sand and flood washouts.",
+    "rail": "None.",
+    "power": "Grid largely down; solar panels on every roof, generators, a damaged coastal power station.",
+    "ports": "A small commercial port and many fishing harbours on the coast; the strait island jetty.",
+    "airfields": "A damaged regional airport on the Tihama, a military airstrip on the strait island (out of use), dirt strips in the interior.",
+    "checkpoints": "Houthi checkpoints on the coastal highway and every escarpment road (sandbags, a hut, a slogan banner); government-aligned and tribal checkpoints in the interior; smuggling landings on beaches."
+  },
+  "pois": [
+    {"type": "coastal_launch_site", "description": "Launch site in a doum palm grove near the coast: camouflage nets over trucks, a shed, fuel drums and launch-rail debris; drone and missile parts (game-level).", "contract_use": "locate and document for a client; recover sensitive debris (clients sau, usa)", "loot_tier": "medium", "intel_chance": 0.5},
+    {"type": "escarpment_switchback", "description": "Hairpin road climbing the escarpment with stone sangars above, a broken guardrail, a burnt truck and a checkpoint at the top.", "contract_use": "convoy escort chokepoint; aid convoy to the highlands", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "ridge_village_fortress", "description": "Stone tower-house village on a ridge crest with a single gate; overwatch over two valleys.", "contract_use": "HVT location; hot-zone outpost; rescue a downed aircrew sheltered there", "loot_tier": "medium", "intel_chance": 0.35},
+    {"type": "aqap_wadi_camp", "description": "AQAP camp in a side canyon of an eastern wadi: tents under rock overhangs, a vehicle park of Hiluxes, a training area, an observation post on the rim.", "contract_use": "HVT capture or camp raid (clients sau, are)", "loot_tier": "medium", "intel_chance": 0.6},
+    {"type": "fishing_harbour_smuggling", "description": "Fishing harbour with wooden boats, ice plant and a beach landing used for smuggling; warehouses behind the beach.", "contract_use": "anti-smuggling raid (client sau)", "loot_tier": "medium", "intel_chance": 0.45},
+    {"type": "strait_island", "description": "Volcanic island in the strait with a lighthouse, a garrison, an old airstrip and a jetty; overlooks the shipping lane.", "contract_use": "hot-zone objective; observation from sea; recover a seized crew held there", "loot_tier": "medium", "intel_chance": 0.4},
+    {"type": "seized_ship", "description": "Merchant ship held at anchor off the coast; guards on the bridge; the crew held below.", "contract_use": "recover seized ship crew (client are, gbr)", "loot_tier": "medium", "intel_chance": 0.35},
+    {"type": "downed_aircrew_site", "description": "Crash site of a helicopter or jet on the terraces; wreckage, survivors' hide in a terrace wall, villagers approaching.", "contract_use": "rescue downed aircrew (client sau)", "loot_tier": "low", "intel_chance": 0.25},
+    {"type": "border_post", "description": "Northern border post with stone and sandbag positions, a container barracks, a fence and a watchtower on a hill.", "contract_use": "border post defence (client sau)", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "aid_warehouse", "description": "Aid warehouse and distribution point in a coastal town: lorries, stacked sacks, crowds at distribution hours.", "contract_use": "escort aid convoy (client sau)", "loot_tier": "low", "intel_chance": 0.1},
+    {"type": "oil_pumping_station", "description": "Pumping station on the eastern plateau with a pipeline, tanks and a fenced compound; previously struck by drones.", "contract_use": "counter-drone defence of an oil facility (client sau)", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "ancient_dam_ruins", "description": "Ancient dam and sluice ruins in a wadi, massive cut-stone walls, a visitor hut; good cover and a meeting site.", "contract_use": "meeting-site HVT grab; overwatch", "loot_tier": "low", "intel_chance": 0.3}
+  ],
+  "weather": {
+    "conditions": ["clear and extremely hot and humid (coast)", "highland afternoon thunderstorms", "escarpment cloud and fog", "dust storms from the interior", "flash floods in wadis"],
+    "visibility_notes": "Coastal haze and heat shimmer; highland cloud covers the escarpment top in the afternoon; dust storms in summer ground helicopters; very dark rural nights.",
+    "dust_or_snow": "Dust common on the coast and in the east from May to August; frost but no snow in the highlands."
+  },
+  "civilians": {
+    "density": "medium",
+    "behaviour": "Morning markets on the coast; highland farmers on terraces; afternoon qat-chewing sessions empty the streets 14:00-18:00 and fill the mafraj rooms; men often carry rifles openly, which is a readable but not hostile cue; children herding goats. Displacement camps along the coastal highway. Civilians flee uphill on foot in the highlands and along the highway on the coast.",
+    "vehicles": ["old Toyota Land Cruisers and Hiluxes", "motorbikes", "minibuses", "donkey carts on the Tihama", "water tankers", "wooden fishing boats", "camels in the interior"],
+    "casualty_risk_notes": "Armed civilians are common, so identification matters; camps and coastal towns are dense; the casualty rule bites in highland villages where houses are packed together."
+  },
+  "factions_present": [
+    {"faction_id": "houthis", "role": "occupier", "strength": "high", "where": "Coastal plain and towns, the strait island, the escarpment and highland villages; launch sites in palm groves; checkpoints on every escarpment road; fast boats offshore."},
+    {"faction_id": "aqap", "role": "insurgent", "strength": "medium", "where": "Interior desert wadis and side canyons in the east; raids on the desert road and pumping station."},
+    {"faction_id": "sau", "role": "patrol", "strength": "medium", "where": "Northern border posts on the map edge, the eastern oil pumping station, air strikes over Houthi areas (AI aircraft only), support to government-aligned posts in the east."},
+    {"faction_id": "are", "role": "patrol", "strength": "low", "where": "Offshore and in contracts only (UAE forces withdrew from Yemen in December 2025): a naval vessel and liaison with southern partner forces at the east edge."},
+    {"faction_id": "egy", "role": "patrol", "strength": "low", "where": "Naval patrol in the Red Sea shipping lane."},
+    {"faction_id": "irn", "role": "patrol", "strength": "low", "where": "Advisers with Houthi missile and drone teams; smuggling dhows at sea."},
+    {"faction_id": "isr", "role": "patrol", "strength": "low", "where": "Strikes on the port and power station (AI aircraft only); no ground presence."},
+    {"faction_id": "usa", "role": "patrol", "strength": "medium", "where": "Warships and helicopters in the Red Sea, drones over the coast."},
+    {"faction_id": "gbr", "role": "patrol", "strength": "low", "where": "Warship and boarding teams in the shipping lane."},
+    {"faction_id": "fra", "role": "patrol", "strength": "low", "where": "European escort mission frigate."},
+    {"faction_id": "ita", "role": "patrol", "strength": "low", "where": "European escort mission frigate."},
+    {"faction_id": "grc", "role": "patrol", "strength": "low", "where": "European escort mission frigate (command role)."},
+    {"faction_id": "deu", "role": "patrol", "strength": "low", "where": "European escort mission frigate."},
+    {"faction_id": "dnk", "role": "patrol", "strength": "low", "where": "Escort frigate in the shipping lane."},
+    {"faction_id": "ind", "role": "patrol", "strength": "low", "where": "Destroyer on anti-piracy and escort duty."},
+    {"faction_id": "pmc_black_sable", "role": "rival_pmc", "strength": "medium", "where": "Contracted forces holding coastal enclaves, port warehouses and the eastern road for Gulf-linked clients; armed escort boats."},
+    {"faction_id": "pmc_halcyon", "role": "rival_pmc", "strength": "low", "where": "Embarked ship security teams and an aid-agency security contract in a coastal town."}
+  ],
+  "frontline": "The Houthi line runs along the coast and the escarpment; the east is a three-way space (AQAP, government-aligned posts, Black Sable enclaves). The war sim moves Houthi control down the coast toward the strait in escalation phases (as in September 2026) and back in counter-offensives supported by Saudi air strikes; each Houthi-held coastal zone adds fast-boat and launch-site activity offshore. AQAP raids flip eastern road zones to contested; successful HVT and camp raids clear them. Shipping attacks post escort and ship-recovery contracts at sea.",
+  "contract_hooks": [
+    "HVT capture or camp raid on an AQAP wadi camp (clients sau, are)",
+    "Border post defence on the northern edge (client sau)",
+    "Rescue a downed aircrew from highland terraces before patrols arrive (client sau)",
+    "Recover a seized ship's crew at anchor (clients are, gbr)",
+    "Escort an aid convoy up an escarpment switchback (client sau)",
+    "Anti-smuggling raid on a fishing harbour landing (client sau)",
+    "Counter-drone defence of the eastern pumping station (client sau)",
+    "Protect Red Sea shipping: escort a merchant ship past the strait island (clients grc, ita, gbr, ind, usa)",
+    "Document a coastal launch site for a client (recon, LRRP)"
+  ],
+  "zone_plan": {
+    "contract_zones": [
+      {"name": "Eastern wadi canyon", "area_km2": 4, "anchor": "aqap_wadi_camp", "notes": "early-game AQAP raids, low civilians"},
+      {"name": "Coastal harbour town", "area_km2": 2.5, "anchor": "fishing_harbour_smuggling", "notes": "dense, Houthi checkpoints"},
+      {"name": "Escarpment road", "area_km2": 3, "anchor": "escarpment_switchback", "notes": "vertical fight, chokepoint"},
+      {"name": "Eastern pumping station", "area_km2": 2, "anchor": "oil_pumping_station", "notes": "drone defence"}
+    ],
+    "hot_zones": [
+      {"name": "Strait coast and island", "area_km2": 14, "layout": "houthis HQ in a coastal town compound; 4 outposts (strait island, two launch sites, a harbour); checkpoints on the coastal highway; roaming technicals and fast boats; 1 QRF of technicals plus a boat group"},
+      {"name": "Eastern wadis", "area_km2": 10, "layout": "aqap HQ in a canyon camp; 3 outposts on rims and in a tower town edge; checkpoints on the desert road; motorbike patrols; 1 QRF of Hiluxes (early-game hot zone)"}
+    ]
+  },
+  "insertion": {"lhd": true, "fob": "LHD offshore in the Red Sea for coastal and strait contracts. For the eastern wadis, a FOB at a government-aligned airstrip on the plateau, reached by helicopter; AAVs only on the coastal band."},
+  "early_game_suitable": true,
+  "early_game_notes": "The eastern wadis (aqap, early tier) are the early-game area; Houthi coastal and highland zones (mid tier) open later.",
+  "ambient_audio": ["sea and wind on the Tihama", "call to prayer echoing off the escarpment", "goat bells on terraces", "motorbikes", "distant jets and explosions (events)", "generators", "Houthi slogans over loudspeakers at checkpoints"],
+  "proposed": [
+    "map_size_km and the three-band layout",
+    "generator numbers and canyon carving",
+    "frontline rules",
+    "zone_plan and hot zones",
+    "are presence low/offshore only after the December 2025 withdrawal",
+    "Yemeni government, STC and west-coast forces as neutral or allied NPCs (no faction files)",
+    "materials: STONE #8f8676, BRICK #9c5a3c, PLASTER #e3dccb, MUD_BRICK #a47e57, THATCH #b49a5e, CINDER_BLOCK #9a978f, TARP #3f6d8c, SANDBAG #b8a378, DIRT_BERM #8a6f4e, GLASS #9fbcc4, CORRUGATED_IRON #8b8e8c",
+    "armed civilians as a readable cue (game rule)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Tihamah",
+    "https://en.wikipedia.org/wiki/Geography_of_Yemen",
+    "https://en.wikipedia.org/wiki/Bab-el-Mandeb",
+    "https://en.wikipedia.org/wiki/Architecture_of_Yemen",
+    "https://en.wikipedia.org/wiki/Shibam",
+    "https://en.wikipedia.org/wiki/Hadhramaut",
+    "factions/houthis.json, aqap.json, sau.json, are.json situation notes, October 2026"
+  ]
+}

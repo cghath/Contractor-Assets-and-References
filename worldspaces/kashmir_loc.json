@@ -1,0 +1,124 @@
+{
+  "id": "kashmir_loc",
+  "name": "Line of Control Valleys",
+  "inspired_by": "The Kashmir Line of Control as of 2026: a river gorge valley crossing the LoC between Indian- and Pakistani-administered Kashmir, with Pir Panjal-type forested ridges, alpine meadows used by herders, a fenced and floodlit LoC with ridge-top posts on both sides, and a Kashmir-valley fringe of rice paddies, willow and apple orchards. After the April 2025 Pahalgam attack and the May 2025 India-Pakistan conflict, the LoC saw heavy shelling and drone use. A high north-east corner stands in for the routes toward Gilgit-Baltistan where Chinese-funded projects run. All towns are fictional.",
+  "map_size_km": [20, 20],
+  "climate": "Humid subtropical in the lowest valleys (Koppen Cwa), temperate-continental in the valley (Dfb), alpine above 3,000 m. Valley summers 25-32 C, winters -5 to 5 C; heavy winter snow on ridges (passes closed November-May); 700-1,500 mm precipitation from western disturbances in winter and spring and monsoon fringe in summer.",
+  "seasons": [
+    "Winter (Dec-Mar): deep snow on ridges, avalanches, LoC posts snowbound, chillai kalan cold in the valley",
+    "Spring (Apr-May): snowmelt, orchard blossom, passes reopen, infiltration season starts (historically)",
+    "Summer (Jun-Aug): herders on high meadows, monsoon showers, green valleys",
+    "Autumn (Sep-Nov): apple and saffron harvest, chinar leaves turn red, clear skies"
+  ],
+  "biomes": [
+    {"id": "valley_paddies_and_orchards", "share": 0.2, "vegetation": ["rice paddies", "apple, walnut and almond orchards", "willow and poplar rows along canals", "chinar (Platanus orientalis) shading villages", "mustard fields in spring"], "ground_palette": ["#6a5a40", "#8a7454", "#5a6a4a", "#a8916c", "#4a3e2c"], "foliage_palette": ["#5f8a3a", "#7da048", "#d8c84a", "#3f6b2e", "#c84a2a"]},
+    {"id": "conifer_forest_slopes", "share": 0.34, "vegetation": ["deodar cedar", "blue pine (Pinus wallichiana)", "silver fir and spruce higher up", "walnut and horse chestnut in ravines"], "ground_palette": ["#4f4432", "#6b5d45", "#3a3226", "#8a7a5c"], "foliage_palette": ["#1f3a24", "#2f4e2e", "#4a6a3a", "#3e5a3a", "#7a9a4e"]},
+    {"id": "alpine_meadows_margs", "share": 0.18, "vegetation": ["alpine meadows with flowers", "birch (Betula utilis) at the treeline", "juniper and rhododendron scrub", "herders' summer huts"], "ground_palette": ["#7a8a52", "#9aaa66", "#6a6a4a", "#b7b1a3"], "foliage_palette": ["#5f8a3a", "#7da048", "#a8c06a", "#3f6b2e"]},
+    {"id": "high_rock_and_snow", "share": 0.18, "vegetation": ["bare rock and scree", "permanent snowfields and small glaciers", "lichens"], "ground_palette": ["#9a9486", "#b7b1a3", "#7d776b", "#e8ecef", "#f4f6f8"], "foliage_palette": ["#7a7f58", "#9c9e74", "#5c6644", "#495236"]},
+    {"id": "river_gorge", "share": 0.1, "vegetation": ["willow and poplar on terraces", "maize terraces", "boulder beds"], "ground_palette": ["#8a8478", "#a8a294", "#6a645a", "#c4beb0"], "foliage_palette": ["#5f7a3a", "#7d9a4a", "#3f5a2a", "#a8b86a"]}
+  ],
+  "terrain": {
+    "elevation_range_m": [1300, 4400],
+    "relief": "A deep river gorge (1,300-1,700 m) runs west across the map and through the LoC; steep forested slopes rise to ridges at 3,000-4,400 m with passes; the south-east corner opens onto the flat valley floor (1,550-1,600 m); a high plateau corner in the north-east above 3,500 m.",
+    "features": ["the LoC fence (double fence with floodlights and sensors) following ridges and crossing the gorge", "ridge-top posts and bunkers on both sides", "a river gorge with a few bridges and a crossing point (closed)", "alpine meadows (margs) and passes", "avalanche chutes", "terraced maize fields on gorge slopes", "a hydro project dam and tunnels on one side"],
+    "water": "A fast glacial river through the gorge, side streams and waterfalls, a hydro diversion dam, valley canals and a small lake on the valley floor; rivers freeze at the edges in winter.",
+    "generator": {
+      "approach": "Heightmap at 10 m. Ridged multifractal Himalayan-type relief; gorge carved as a deep V-spline; valley floor in the south-east as a flat basin mask; north-east plateau mask. The LoC is a spline following ridge crests (via a ridge-finding pass) and dropping across the gorge; fence placed along it.",
+      "noise_layers": [
+        {"type": "ridged multifractal (7 octaves)", "frequency": 0.3, "amplitude_m": 2600, "purpose": "ridges and peaks"},
+        {"type": "V-gorge carve along spline", "frequency": 0, "amplitude_m": -1500, "purpose": "the river gorge"},
+        {"type": "basin mask flatten", "frequency": 0, "amplitude_m": 0, "purpose": "valley floor in the south-east"},
+        {"type": "simplex fbm", "frequency": 1.0, "amplitude_m": 150, "purpose": "slope breakup, meadow benches"},
+        {"type": "ridged", "frequency": 6.0, "amplitude_m": 20, "purpose": "rock ribs and avalanche gullies"}
+      ],
+      "erosion": "Strong hydraulic erosion (120 iterations) for gullies; thermal cap 50 degrees; avalanche chutes as clear swathes in forest by slope and aspect.",
+      "rivers": "Main river spline through the gorge; tributaries by flow accumulation; valley canals on the floor.",
+      "settlement_flattening": "Gorge villages on terraces; valley villages flattened; posts on ridge crests.",
+      "notes": "Movement is channelled into the gorge road and passes; ridges dominate. The LoC fence and minefields are hazards; shelling events (both sides) create crater fields near posts. Helicopters limited by altitude and weather."
+    }
+  },
+  "settlements": [
+    {"type": "village", "share": 0.45, "pop_range": [200, 3000], "architecture": "Kashmiri villages: two- and three-storey houses of brick in timber frames (taq and dhajji dewari construction) with pitched corrugated-iron roofs (often green or red) and attic storage, wooden balconies and lattice windows; mosques and shrines with pagoda-like tiered roofs; gorge villages of stone and timber on terraces.", "footprint_m": "house 10x12", "storeys": [2, 3], "wall_class": "Brick-in-timber walls medium; stone thick; timber thin; LoC-side houses have bunkers (community shelters).", "materials": ["BRICK", "WOOD", "CORRUGATED_IRON", "STONE", "CONCRETE"], "palette": ["#9c5a3c", "#8c6a46", "#3f8f6f", "#c8402e", "#8f8676"], "layout_rules": ["clustered on terraces or the valley floor around a mosque or shrine", "community bunkers near LoC villages", "orchards and paddies around", "footpaths to meadows"], "example_names": ["Chak Sabzwar", "Gund-e-Chinar", "Kokernag Bala", "Wanpora Kandi", "Zaffran Bagh", "Dardpora Gali"]},
+    {"type": "town", "share": 0.2, "pop_range": [10000, 50000], "architecture": "District town: three- and four-storey brick and concrete buildings with tin roofs, a bazaar, a large mosque, army and police camps behind walls with sandbagged sentry posts, a bus stand, a hospital.", "footprint_m": "block 30x60", "storeys": [2, 4], "wall_class": "Brick medium; concrete thick; camp walls thick.", "materials": ["BRICK", "CONCRETE", "CORRUGATED_IRON", "SANDBAG", "GLASS"], "palette": ["#9c5a3c", "#c9c1ad", "#3f8f6f", "#b8a378", "#8a8577"], "layout_rules": ["bazaar along the main road", "camps on the edges", "bridge over the river"], "example_names": ["Kaniwal-e-Naya", "Badampora", "Neelgarh-Chak", "Kandiwal"]},
+    {"type": "camp", "share": 0.1, "pop_range": [20, 300], "architecture": "Gujjar and Bakarwal herders' seasonal settlements: low mud-and-timber kotha huts with earth roofs dug into slopes, sheep pens, tents in summer meadows.", "footprint_m": "hut 6x8", "storeys": [1, 1], "wall_class": "Earth-sheltered huts thick on the uphill side.", "materials": ["DIRT_BERM", "WOOD", "STONE", "TARP"], "palette": ["#6a5a40", "#8c6a46", "#8f8676", "#e8e4da"], "layout_rules": ["on meadows and forest clearings", "seasonal (summer high, winter low)"], "example_names": ["Dhok Marg-e-Bala", "Bahak Sarbal", "Kotha Gujran"]},
+    {"type": "compound", "share": 0.25, "pop_range": [0, 1500], "architecture": "Military and infrastructure: ridge-top posts with stone and concrete bunkers, sandbagged positions, overhead cover and nets; the LoC fence with floodlights; brigade camps in valleys; a hydro power project (dam, powerhouse in a tunnel, contractor camp); a road project with foreign engineers in the north-east.", "footprint_m": "post 40x60; camp 600x600; dam 300 m", "storeys": [1, 3], "wall_class": "Bunkers thick; tin sheds thin.", "materials": ["STONE", "CONCRETE", "SANDBAG", "STEEL", "CORRUGATED_IRON"], "palette": ["#8f8676", "#8a8577", "#b8a378", "#4a4d50", "#3f8f6f"], "layout_rules": ["posts on every dominant ridge point on both sides", "fence 0.5-2 km behind the line on the Indian side", "camps in valleys with helipads"], "example_names": ["Post Hill 3240", "Picket Kanchan", "Chowki Lal Pahar", "Hydro Project Darra-Sabz", "Road Camp Barfgah-Nau"]}
+  ],
+  "infrastructure": {
+    "roads": "One road through the gorge (to a closed crossing point and bridge), mountain roads with hairpins to posts, mule tracks to meadows and passes; a road-building project in the north-east.",
+    "rail": "None on the map.",
+    "power": "Hydro project with dam and tunnels, power lines along the gorge.",
+    "ports": "None (inland).",
+    "airfields": "Helipads at camps; AI aircraft only.",
+    "checkpoints": "Army checkpoints on roads, the closed LoC crossing point, police checkpoints in towns."
+  },
+  "pois": [
+    {"type": "ridge_post", "description": "Post on a ridge crest: stone bunkers, trenches, overhead cover, a mortar pit, a helipad; facing posts within 500-1,000 m across the line.", "contract_use": "observe only; shelling hazard; escalation objective", "loot_tier": "low", "intel_chance": 0.3},
+    {"type": "loc_crossing_bridge", "description": "Closed crossing point on a bridge over the gorge river: gates, a meeting hut, flags of both sides.", "contract_use": "VIP or prisoner hand-over security (neutral); hostage hand-over", "loot_tier": "low", "intel_chance": 0.3},
+    {"type": "hydro_project", "description": "Dam, intake, tunnel portals and a contractor camp with foreign engineers in a side valley.", "contract_use": "protect infrastructure (client pak, Chinese-funded projects); hostage rescue of engineers", "loot_tier": "low", "intel_chance": 0.25},
+    {"type": "road_project_camp", "description": "Road-building camp with foreign engineers, machinery and a fenced compound on the north-east plateau road.", "contract_use": "convoy escort (client pak, CPEC-type); protect workers", "loot_tier": "low", "intel_chance": 0.25},
+    {"type": "shelled_village", "description": "LoC village after cross-border shelling: damaged houses, a crater in the school yard, villagers in community bunkers.", "contract_use": "evacuation of civilians (neutral humanitarian)", "loot_tier": "low", "intel_chance": 0.1},
+    {"type": "infiltration_route_pass", "description": "High pass with a herders' trail, caves and a cache spot; snowbound in winter.", "contract_use": "high value target capture (client pak, on its side); intel recovery", "loot_tier": "medium", "intel_chance": 0.45},
+    {"type": "forest_hideout", "description": "Hideout in deodar forest: a dugout with a camouflaged entrance, supplies, a radio set.", "contract_use": "HVT capture (client pak); intel grab", "loot_tier": "medium", "intel_chance": 0.5},
+    {"type": "avalanche_blocked_road", "description": "Gorge road blocked by an avalanche with trapped vehicles; snow-clearing machines.", "contract_use": "rescue and recovery (neutral)", "loot_tier": "low", "intel_chance": 0.05},
+    {"type": "shrine_fair", "description": "Hillside Sufi shrine with an annual fair: crowds, stalls, pilgrims.", "contract_use": "protect a gathering (high civilian density)", "loot_tier": "low", "intel_chance": 0.1},
+    {"type": "drone_crash_orchard", "description": "Crashed military drone in an apple orchard near the LoC; villagers gather.", "contract_use": "recover a downed drone (client pak or neutral, depending on side)", "loot_tier": "medium", "intel_chance": 0.4},
+    {"type": "brigade_camp", "description": "Valley camp with barracks, vehicle sheds, helipad and an artillery park.", "contract_use": "staging; observe", "loot_tier": "low", "intel_chance": 0.1}
+  ],
+  "weather": {
+    "conditions": ["clear mountain days", "heavy snow and blizzards", "avalanches", "valley fog and smog in winter", "monsoon showers", "thunderstorms"],
+    "visibility_notes": "Snow and cloud close passes and ground helicopters; clear days give long views across the line; valley fog in winter mornings.",
+    "dust_or_snow": "Heavy snow November-April on ridges; no dust."
+  },
+  "civilians": {
+    "density": "medium",
+    "behaviour": "Farmers and orchardists in the valley; herders move to meadows in summer; bazaars busy mornings; LoC villages use community bunkers during shelling and may evacuate; shrine fairs draw crowds. Strict security checks in towns.",
+    "vehicles": ["Tata Sumo and Maruti jeeps", "minibuses", "apple trucks", "horses and mules on trails", "army trucks", "motorbikes"],
+    "casualty_risk_notes": "LoC villages and towns are sensitive; most contracts should avoid populated valley areas."
+  },
+  "factions_present": [
+    {"faction_id": "ind", "role": "defender", "strength": "high", "where": "Eastern half of the map (Indian-administered side): ridge posts, the LoC fence, valley camps and towns."},
+    {"faction_id": "pak", "role": "defender", "strength": "high", "where": "Western half (Pakistani-administered side): ridge posts, gorge villages, the hydro project and road camp."},
+    {"faction_id": "chn", "role": "patrol", "strength": "low", "where": "North-east plateau corner only: engineers and company security at the road project (Chinese-funded projects); no PLA units (plausibility: the LAC with China is a different line)."}
+  ],
+  "frontline": "The LoC is fixed; the war sim moves alert levels, not territory. Crisis events (attacks, retaliations, drone incursions, shelling) raise alert on both sides, post evacuation, recovery and infrastructure-protection contracts, and can escalate to artillery and drone exchanges along the ridges. India and Pakistan are mutually exclusive clients (long side-lock). India does not hire the player for operations inside Kashmir (per ind.json), so Indian-side contracts are limited to neutral humanitarian work; Pakistani contracts focus on project protection, HVT capture and hostage rescue on its side.",
+  "contract_hooks": [
+    "Protect a Chinese-funded hydro project from attack (client pak)",
+    "Convoy escort on the road project (client pak)",
+    "Hostage rescue of kidnapped engineers (client pak)",
+    "High value target capture at a forest hideout (client pak)",
+    "Evacuate civilians from a shelled LoC village (neutral humanitarian)",
+    "Avalanche rescue and recovery on the gorge road (neutral)",
+    "Recover a downed drone from an orchard (client pak, on its side)"
+  ],
+  "zone_plan": {
+    "contract_zones": [
+      {"name": "Hydro project valley", "area_km2": 3, "anchor": "hydro_project", "notes": "Pakistani side"},
+      {"name": "North-east road camp", "area_km2": 3, "anchor": "road_project_camp", "notes": "high plateau"},
+      {"name": "Forest pass", "area_km2": 3, "anchor": "infiltration_route_pass", "notes": "snow, forest"},
+      {"name": "LoC village", "area_km2": 2, "anchor": "shelled_village", "notes": "humanitarian"}
+    ],
+    "hot_zones": [
+      {"name": "Gorge escalation (late game)", "area_km2": 12, "layout": "Opposing brigade HQ in a valley camp (side set by the side-lock); 5 ridge posts as outposts; checkpoints on the gorge road; patrols and drones; artillery as a hazard; 1 QRF"}
+    ]
+  },
+  "insertion": {"lhd": false, "fob": "FOB at a host-side brigade camp (Pakistani side for pak contracts; a neutral humanitarian base in the valley for neutral contracts). Roads and trails; helicopters weather and altitude limited; no AAVs."},
+  "early_game_suitable": false,
+  "early_game_notes": "State-on-state line with no faction-listed militant groups; mid-campaign. Militant groups active in Kashmir are not in the canonical roster (open question).",
+  "ambient_audio": ["river roar in the gorge", "wind in deodars", "call to prayer echoing", "sheep and herders' calls", "distant shelling (events)", "army helicopters", "apple-truck horns"],
+  "proposed": [
+    "map_size_km and composite (gorge across the LoC, valley corner, north-east plateau)",
+    "generator numbers and LoC ridge-following spline",
+    "alert-level frontline model",
+    "chn presence as project engineers only",
+    "zone_plan and hot zone",
+    "materials: BRICK #9c5a3c, CORRUGATED_IRON #8b8e8c, STONE #8f8676, SANDBAG #b8a378, DIRT_BERM #8a6f4e, TARP #3f6d8c, GLASS #9fbcc4"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Line_of_Control",
+    "https://en.wikipedia.org/wiki/Pir_Panjal_Range",
+    "https://en.wikipedia.org/wiki/Kashmir_Valley",
+    "https://en.wikipedia.org/wiki/Dhajji_dewari",
+    "https://en.wikipedia.org/wiki/Neelum%E2%80%93Jhelum_Hydropower_Plant",
+    "factions/ind.json, pak.json, chn.json notes"
+  ]
+}

@@ -1,0 +1,224 @@
+{
+  "id": "sahel",
+  "name": "Boucle du Fleuve",
+  "inspired_by": "The central Sahel of Mali, Burkina Faso and western Niger as of 2026: a seasonally flooded river delta, flat laterite plains with shrub savanna, a sandstone escarpment with cliff villages, dunes to the north-east toward the three-borders area, and a southern strip near a coastal-state border. JNIM blockades and Islamic State Sahel attacks press the AES juntas and Africa Corps. All towns are fictional.",
+  "map_size_km": [24, 24],
+  "climate": "Hot semi-arid (Koppen BSh), arid (BWh) in the north-east. Dry season October-May with harmattan dust (December-February, 15-32 C, cold nights) then extreme heat (April-May, 40-46 C); rainy season June-September with 300-600 mm in squall-line storms and flooding.",
+  "seasons": [
+    "Harmattan (Dec-Feb): dry dusty north-east wind, haze, cool nights",
+    "Hot dry season (Mar-May): 40 C+, burning, dust devils, low river",
+    "Rains (Jun-Sep): squall lines with dust walls, flooding, green grass, impassable tracks, rising river",
+    "Harvest (Oct-Nov): millet and rice harvest, river at high water in the delta, herds on the move"
+  ],
+  "biomes": [
+    {
+      "id": "river_delta_floodplain",
+      "share": 0.18,
+      "vegetation": ["bourgou grass (Echinochloa stagnina) floodplain pasture", "rice paddies", "doum palm and Borassus palm", "acacia (Vachellia nilotica) on levees", "water lilies and reeds in channels"],
+      "ground_palette": ["#6f5a40", "#8a7454", "#53452f", "#a8916c", "#3e3424"],
+      "foliage_palette": ["#5f8a3a", "#7da048", "#3f6b2e", "#a8b86a", "#c8c87a"]
+    },
+    {
+      "id": "laterite_shrub_savanna",
+      "share": 0.32,
+      "vegetation": ["Combretum and Guiera senegalensis shrubs", "Balanites aegyptiaca", "baobab (Adansonia digitata)", "millet and sorghum fields", "annual grasses (Cenchrus) turning gold in the dry season"],
+      "ground_palette": ["#b5603a", "#9a4e2e", "#c97b4e", "#7d3f26", "#d89a6a", "#a8826a"],
+      "foliage_palette": ["#7a8a48", "#a0a866", "#c9b56e", "#5f7038", "#d8c88a"]
+    },
+    {
+      "id": "southern_parkland",
+      "share": 0.14,
+      "vegetation": ["shea (Vitellaria paradoxa) and nere (Parkia biglobosa) parkland over fields", "cotton and maize", "kapok and mango near villages", "gallery forest along streams"],
+      "ground_palette": ["#a9583a", "#8a4a30", "#c47a52", "#6e3a26", "#b89878"],
+      "foliage_palette": ["#3f6b2e", "#5a8a3a", "#7ba04a", "#2f5226", "#94b062"]
+    },
+    {
+      "id": "sandstone_escarpment",
+      "share": 0.14,
+      "vegetation": ["bare sandstone slabs and cliffs", "figs and baobabs in crevices", "onion gardens in terraced plots below the cliff", "grass on talus"],
+      "ground_palette": ["#c08a5a", "#a87048", "#d8a878", "#8a5a3a", "#e6c7a0"],
+      "foliage_palette": ["#6f7a3c", "#8d8f55", "#4f5f30", "#a9a36d"]
+    },
+    {
+      "id": "northern_dunes_and_steppe",
+      "share": 0.22,
+      "vegetation": ["fixed dunes with Leptadenia and Calligonum", "Acacia (Vachellia tortilis) scattered", "cram-cram grass (Cenchrus biflorus)", "bare gravel reg"],
+      "ground_palette": ["#e0b884", "#d0a26c", "#ecca9a", "#c08c58", "#f2dcb4"],
+      "foliage_palette": ["#a8a27e", "#8f8a68", "#c1b98f", "#6f6c55"]
+    }
+  ],
+  "terrain": {
+    "elevation_range_m": [250, 680],
+    "relief": "Mostly flat (250-330 m): the delta floodplain in the north-west, laterite plains and low rocky outcrops (inselbergs) across the centre; a 150-300 m sandstone escarpment cliff crossing the south-east, with a plateau above; low fixed dunes in the north-east.",
+    "features": ["seasonally flooded channels and lakes", "laterite crust plateaus (cuirasse) with iron-red gravel", "granite inselbergs and boulder piles", "a sandstone escarpment with caves and cliff villages", "fixed dunes and interdunal ponds", "seasonal ponds (mares) where herds water", "artisanal gold-mining pits"],
+    "water": "A large river with a wide inner-delta floodplain whose extent depends on the season (flooded August-December), seasonal ponds, a few boreholes and wells, and rain-fed streams that vanish in the dry season.",
+    "generator": {
+      "approach": "Heightmap at 10 m. Flat base with low-amplitude noise; delta built as a branching channel network on a very gently sloping plane; a seasonal flood mask raises a water plane over low ground (flood level is a campaign-season variable). Escarpment stamped as a warped cliff line with a plateau behind it; inselbergs as cellular bumps; dunes as anisotropic ridged noise aligned NE-SW.",
+      "noise_layers": [
+        {"type": "simplex fbm", "frequency": 0.15, "amplitude_m": 25, "purpose": "broad plain undulation"},
+        {"type": "warped step (cliff)", "frequency": 0.3, "amplitude_m": 260, "purpose": "sandstone escarpment and plateau in the south-east"},
+        {"type": "cellular (Worley F1, inverted, sparse)", "frequency": 0.8, "amplitude_m": 70, "purpose": "granite inselbergs"},
+        {"type": "ridged, anisotropic (NE-SW, 3:1)", "frequency": 2.0, "amplitude_m": 12, "purpose": "fixed dunes in the north-east"},
+        {"type": "value noise", "frequency": 1.5, "amplitude_m": 0, "purpose": "laterite vs sandy soil mask (ground colour and vegetation)"}
+      ],
+      "erosion": "Minimal: light hydraulic pass on the escarpment for gullies and talus; the plains stay flat.",
+      "rivers": "River as a wide spline in the north-west with a braided delta of 6-20 channels created by branching splines; floodplain is a height band 0-3 m above dry-season water; seasonal ponds placed in local minima.",
+      "settlement_flattening": "Villages flattened as discs on slight rises (above flood level in the delta); cliff villages placed on talus ledges per building.",
+      "notes": "Rainy-season flooding closes delta tracks and creates island villages reachable only by pirogue; dry-season dust lowers visibility. Roads are few, so the single paved road and its bridges and culverts are vital convoy routes and blockade targets."
+    }
+  },
+  "settlements": [
+    {
+      "type": "village",
+      "share": 0.45,
+      "pop_range": [200, 3000],
+      "architecture": "Banco (mud-brick and mud-render) compounds: rectangular one-storey houses with flat roofs on timber beams and wooden water spouts, round granaries with conical thatch roofs on stone feet, compound walls 1.5-2 m, a mud mosque with buttresses and protruding toron beams; Fulani hamlets of woven-mat dome huts.",
+      "footprint_m": "family compound 20x25; house 4x8; granary 2.5 m diameter",
+      "storeys": [1, 2],
+      "wall_class": "Mud walls 40-60 cm thick (good cover, slowly chipped); thatch and mat huts none.",
+      "materials": ["MUD_BRICK", "THATCH", "WOOD", "CORRUGATED_IRON", "CINDER_BLOCK"],
+      "palette": ["#a8673f", "#c4875a", "#8a5232", "#b49a5e", "#8c6a46", "#8b8e8c"],
+      "layout_rules": ["organic cluster of compounds with winding lanes", "mosque and an open market ground under a large tree", "well or borehole with a hand pump as a landmark", "fields and parkland trees around; cattle corrals at the edge", "delta villages on mounds, cliff villages stacked on ledges"],
+      "example_names": ["Tondo Koro", "Djenebou", "Tonka Bozo", "Kani Sorou", "Banco Saba", "Gourma Wéré Sud", "Falaise Kanda"]
+    },
+    {
+      "type": "town",
+      "share": 0.2,
+      "pop_range": [10000, 60000],
+      "architecture": "Market town: mixed banco and cinder-block one- and two-storey buildings with corrugated-iron roofs, painted shopfronts, a large Sudano-Sahelian mud mosque with towers and toron beams, a weekly market, a prefecture, a military camp, a bus station, an airstrip.",
+      "footprint_m": "block 50x80; shop 6x10",
+      "storeys": [1, 2],
+      "wall_class": "Banco medium-thick; cinder block thin; tin roofs none.",
+      "materials": ["MUD_BRICK", "CINDER_BLOCK", "CORRUGATED_IRON", "PAINTED", "CONCRETE"],
+      "palette": ["#a8673f", "#9a978f", "#8b8e8c", "#c75b4a", "#2f6f8f", "#e3dccb"],
+      "layout_rules": ["grid of laterite streets around the market and mosque", "military camp and prefecture walled on the edge", "bus station and fuel depot on the paved road", "river port with pirogues if on the river"],
+      "example_names": ["Diaka Bara", "Bourgou Kura", "Sahel Saba", "Toguéré Est", "Mare Doundé Nord"]
+    },
+    {
+      "type": "camp",
+      "share": 0.1,
+      "pop_range": [1000, 20000],
+      "architecture": "Displacement site at a town edge: tents, straw and plastic-sheet shelters, water points, a clinic tent; also nomadic Fulani camps of mat huts with herds.",
+      "footprint_m": "site 300x400; hut 3x4",
+      "storeys": [1, 1],
+      "wall_class": "None.",
+      "materials": ["TARP", "THATCH", "WOOD"],
+      "palette": ["#3f6d8c", "#e8e4da", "#b49a5e", "#8c6a46"],
+      "layout_rules": ["on open ground near a town or pond", "aid point at the entrance", "high density"],
+      "example_names": ["Site de Déplacés Kora", "Camp Mare Sali", "Bangou Kaïna Camp"]
+    },
+    {
+      "type": "compound",
+      "share": 0.15,
+      "pop_range": [0, 1500],
+      "architecture": "Military camps (earth berms, HESCO, sandbag towers, prefab barracks), an Africa Corps base with container walls, an industrial gold mine (open pit, plant, fenced camp), artisanal mining fields (shafts, sluices, tarp shelters).",
+      "footprint_m": "outpost 150x150; mine 1500x2000",
+      "storeys": [1, 2],
+      "wall_class": "Berms and HESCO thick; prefabs, containers and shelters thin.",
+      "materials": ["DIRT_BERM", "HESCO", "SANDBAG", "STEEL", "CORRUGATED_IRON", "CONCRETE"],
+      "palette": ["#9a4e2e", "#a99a6c", "#b8a378", "#4a4d50", "#8b8e8c"],
+      "layout_rules": ["isolated on a rise or at a road junction", "single gate, berm perimeter with corner towers", "helipad inside larger camps"],
+      "example_names": ["Camp de la Falaise Est", "Base Dunes-Sud", "Mine de Sanoukou Nouvelle", "Site d'Orpaillage Sanmatenga-Sud"]
+    },
+    {
+      "type": "farm",
+      "share": 0.1,
+      "pop_range": [5, 50],
+      "architecture": "Rice and vegetable farm hamlets in the delta and garden plots near the escarpment: a banco house, a granary, an irrigation pump, a pirogue.",
+      "footprint_m": "hamlet 30x30",
+      "storeys": [1, 1],
+      "wall_class": "Mud walls medium.",
+      "materials": ["MUD_BRICK", "THATCH", "WOOD"],
+      "palette": ["#a8673f", "#b49a5e", "#8c6a46"],
+      "layout_rules": ["on mounds in the floodplain", "pirogue access in the rains"],
+      "example_names": ["Hameau Sonfé", "Kôkô Plaine", "Saba Rive"]
+    }
+  ],
+  "infrastructure": {
+    "roads": "One paved two-lane national road crossing the map (potholed, with culverts and two bridges), laterite feeder roads, sand tracks; most tracks impassable in the rains. Bridges and the river ferry are blockade and ambush points.",
+    "rail": "None.",
+    "power": "Little grid: diesel and solar mini-grids in towns, solar panels on compounds, a damaged high-voltage line.",
+    "ports": "River port with pirogues and a ferry; no sea.",
+    "airfields": "Laterite airstrip at the main town (military and UN-era), a strip at the gold mine.",
+    "checkpoints": "Army and VDP checkpoints on the paved road; JNIM 'blockade' checkpoints on feeder roads (a log, armed men on motorbikes); Africa Corps posts near its base; customs post at the south-edge border."
+  },
+  "pois": [
+    {"type": "fuel_convoy_route", "description": "Stretch of the paved road with a culvert, burnt tanker hulks from earlier blockade attacks, scrub on both sides and a village 1 km away.", "contract_use": "escort a fuel convoy through the blockade (client sahel_aes, harsh terms)", "loot_tier": "low", "intel_chance": 0.2},
+    {"type": "army_outpost", "description": "Isolated outpost of berms and HESCO with towers, a mortar pit, armoured vehicles and a helipad; overrun-attack target.", "contract_use": "defend against a jihadist assault (client sahel_aes)", "loot_tier": "medium", "intel_chance": 0.25},
+    {"type": "gold_mine", "description": "Industrial gold mine: open pit with haul roads, a processing plant, a fuel depot, a fenced workers' camp and a strip; artisanal pits around it.", "contract_use": "defend a mine against an assault; evacuate foreign workers (client sahel_aes)", "loot_tier": "medium", "intel_chance": 0.3},
+    {"type": "jnim_forest_camp", "description": "Camp in a gallery forest or thicket: tarps between trees, motorbike park, fuel drums, a cooking area, a lookout in a baobab.", "contract_use": "camp raid; HVT capture (clients fra, esp, bel as off-AES contracts; or sahel_aes)", "loot_tier": "medium", "intel_chance": 0.55},
+    {"type": "isis_dune_hideout", "description": "Hideout in the north-east dunes: dug-in shelters, pickups under nets, a well; tracks lead toward the three-borders edge.", "contract_use": "hideout clearance; intel grab", "loot_tier": "medium", "intel_chance": 0.5},
+    {"type": "cliff_village", "description": "Village stacked on the escarpment talus with granaries, caves above, a single steep path; onion gardens below.", "contract_use": "evacuate villagers threatened by fighting; observation over the plain", "loot_tier": "low", "intel_chance": 0.2},
+    {"type": "river_ferry_crossing", "description": "Ferry landing with a pontoon, waiting lorries, food stalls and pirogues; the only crossing for 40 km.", "contract_use": "convoy chokepoint; seize or hold the crossing", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "downed_drone_or_helicopter", "description": "Crash site of a junta drone or helicopter in shrub savanna, wreckage and a crew hide in a gully.", "contract_use": "recover a downed drone or helicopter crew (client sahel_aes)", "loot_tier": "medium", "intel_chance": 0.4},
+    {"type": "weekly_market", "description": "Open-air market on its weekly day: hundreds of people, cattle, carts, lorries; empty on other days.", "contract_use": "meeting site; recon; strictly no fire on market day", "loot_tier": "low", "intel_chance": 0.25},
+    {"type": "africa_corps_base", "description": "Fortified base by the airstrip: container walls, berms, armoured vehicles, helicopters, Russian flags; restricted.", "contract_use": "rival-contractor encounter; observe and avoid", "loot_tier": "medium", "intel_chance": 0.35},
+    {"type": "artisanal_mining_field", "description": "Hundreds of shafts, sluices, tarp shelters and generators, a crowded camp of miners and traders.", "contract_use": "recover kidnapped workers; tax-collection network intel", "loot_tier": "low", "intel_chance": 0.3},
+    {"type": "border_customs_post", "description": "South-edge customs post with a barrier, a shed, lorry parking and a partner-state post on the far side.", "contract_use": "evacuation hand-over point; border monitoring (clients fra, esp, bel)", "loot_tier": "low", "intel_chance": 0.2}
+  ],
+  "weather": {
+    "conditions": ["harmattan haze", "extreme heat", "squall lines with dust walls and rain", "flooding in the delta", "clear cold dry-season nights"],
+    "visibility_notes": "Harmattan haze limits visibility to 1-3 km for weeks; dust walls before squall lines drop it to near zero; rains ground helicopters and close tracks; dense thickets limit sight in the south.",
+    "dust_or_snow": "Dust heavy December-May; no snow."
+  },
+  "civilians": {
+    "density": "medium",
+    "behaviour": "Farmers in fields at dawn and dusk; herders with cattle moving to ponds and floodplains; weekly markets draw whole districts; under blockade, traffic on the road falls and fuel prices rise. Villagers flee into the bush or to the town at the first sign of armed motorbikes; some villages are under armed-group control and civilians avoid contact with any force.",
+    "vehicles": ["motorbikes (everywhere)", "donkey carts", "bush taxis and minibuses", "Toyota Hilux and Land Cruiser", "overloaded lorries", "pirogues on the river", "herds of cattle on roads"],
+    "casualty_risk_notes": "Civilian-harm risk is high on AES and Africa Corps operations; the player's casualty rule applies in full, especially on market days and in villages where armed men and civilians mix."
+  },
+  "factions_present": [
+    {"faction_id": "jnim", "role": "insurgent", "strength": "high", "where": "Shrub savanna, thickets and gallery forests across the centre and south, delta islands; blockade checkpoints on feeder roads; motorbike columns attack outposts and convoys."},
+    {"faction_id": "isis", "role": "insurgent", "strength": "medium", "where": "North-east dunes and steppe toward the three-borders edge; raids on villages and army posts; fights jnim at the dune edge."},
+    {"faction_id": "sahel_aes", "role": "defender", "strength": "high", "where": "Towns, outposts, the paved road and its checkpoints, the gold mine; VDP auxiliaries in villages; drones overhead."},
+    {"faction_id": "africa_corps", "role": "rival_pmc", "strength": "medium", "where": "Fortified base at the main town airstrip; convoys on the paved road; joint operations with AES forces."},
+    {"faction_id": "pmc_kestrel", "role": "rival_pmc", "strength": "low", "where": "Gold mine security under a deniable contract; drone teams."},
+    {"faction_id": "pmc_black_sable", "role": "rival_pmc", "strength": "low", "where": "Artisanal gold trade route and a fuel depot under contract to a Gulf-linked buyer."},
+    {"faction_id": "fra", "role": "patrol", "strength": "low", "where": "South edge only, from a neighbouring coastal-state partner: border monitoring and evacuation hand-over at the customs post (French forces left the AES states in 2022-2023)."},
+    {"faction_id": "esp", "role": "patrol", "strength": "low", "where": "South edge only: border-monitoring liaison with the partner state."},
+    {"faction_id": "bel", "role": "patrol", "strength": "low", "where": "South edge only: training liaison with the partner state's border force."}
+  ],
+  "frontline": "A blockade war. JNIM controls the countryside in rings around towns: each JNIM-held zone adjacent to the paved road raises the blockade level (fuel and supply contracts pay more, convoys face more ambushes). AES and Africa Corps operations (and player contracts for the AES) clear road zones temporarily; JNIM regains rural zones within days unless outposts are rebuilt. isis pushes from the north-east and fights jnim at the dunes, which can weaken both. Western clients post contracts only from the south edge (evacuation, counter-terror strikes), and taking them locks out AES contracts (and vice versa). The rainy season floods the delta and freezes movement there.",
+  "contract_hooks": [
+    "Escort a fuel convoy through the blockade on the paved road (client sahel_aes, harsh terms)",
+    "Defend a mine or airport against a jihadist assault (client sahel_aes)",
+    "Recover a downed drone or helicopter crew in the savanna (client sahel_aes)",
+    "Evacuate foreign workers from a besieged town or mine (client sahel_aes)",
+    "Counter-terror strike on a JNIM forest camp from the south edge (client fra)",
+    "Hostage or personnel recovery from a delta island village (clients fra, esp, bel)",
+    "Hideout clearance in the north-east dunes against isis (client sahel_aes)",
+    "Ferry crossing hold during a convoy move (client sahel_aes)"
+  ],
+  "zone_plan": {
+    "contract_zones": [
+      {"name": "Paved road culvert stretch", "area_km2": 3, "anchor": "fuel_convoy_route", "notes": "convoy ambushes, flat, scrub"},
+      {"name": "Army outpost", "area_km2": 2, "anchor": "army_outpost", "notes": "defensive, motorbike assaults"},
+      {"name": "Gold mine", "area_km2": 3.5, "anchor": "gold_mine", "notes": "industrial, rival PMC present"},
+      {"name": "Delta island villages", "area_km2": 3, "anchor": "river_ferry_crossing", "notes": "water and pirogues, seasonal"}
+    ],
+    "hot_zones": [
+      {"name": "Central savanna", "area_km2": 14, "layout": "jnim HQ in a gallery-forest camp; 4-5 outposts in villages and thickets; blockade checkpoints on feeder roads; roaming motorbike columns of 6-20; 1-2 QRF bases with technicals; AES outpost and Africa Corps convoy as third parties"}
+    ]
+  },
+  "insertion": {"lhd": false, "fob": "FOB at the main town airstrip next to (but separate from) the AES military camp, or for Western contracts a FOB at the south-edge customs post on the partner side. Players move by road, by helicopter in the dry season, and by pirogue in the flooded delta; AAVs work in the delta."},
+  "early_game_suitable": true,
+  "early_game_notes": "jnim and isis are early-tier and the core early-game enemies here; africa_corps and the rival PMCs (mid) add three-way fights.",
+  "ambient_audio": ["call to prayer from a mud mosque", "motorbike engines (threat cue when many)", "cattle and goat bells", "pounding of millet in mortars", "harmattan wind", "frogs and insects in the rains", "pirogue paddles and outboards"],
+  "proposed": [
+    "map_size_km and composite layout",
+    "seasonal flood mask tied to the campaign calendar",
+    "blockade level as the frontline variable",
+    "fra, esp and bel limited to the south edge from a partner state (plausibility: their forces left the AES states)",
+    "zone_plan and hot zone",
+    "materials: MUD_BRICK #a47e57, THATCH #b49a5e, CINDER_BLOCK #9a978f, CORRUGATED_IRON #8b8e8c, TARP #3f6d8c, HESCO #a99a6c, SANDBAG #b8a378, DIRT_BERM #8a6f4e"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Sahel",
+    "https://en.wikipedia.org/wiki/Inner_Niger_Delta",
+    "https://en.wikipedia.org/wiki/Bandiagara_Escarpment",
+    "https://en.wikipedia.org/wiki/Sudano-Sahelian_architecture",
+    "https://en.wikipedia.org/wiki/Harmattan",
+    "https://en.wikipedia.org/wiki/Liptako-Gourma",
+    "factions/jnim.json, isis.json, sahel_aes.json, africa_corps.json situation notes, October 2026"
+  ]
+}

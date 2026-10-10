@@ -1,0 +1,218 @@
+{
+  "id": "iran_zagros",
+  "name": "Hawraz Border Ranges",
+  "inspired_by": "The Kurdish-populated central Zagros along the Iran-Iraq border as of 2026: steep folded limestone ranges, oak woodland, stepped stone villages (Hawraman/Uraman type), river gorges and reservoirs, with the Kurdistan Region of Iraq on the western strip and western Iran (Kurdistan and Kermanshah provinces) to the east. Iran has been in open conflict with Israel and the US since February 2026, with hostilities resuming in September 2026. All towns are fictional.",
+  "map_size_km": [20, 20],
+  "climate": "Mountain Mediterranean-continental (Koppen Csa at low elevation, Dsa/Dsb above 1,800 m). Hot dry summers (32-38 C in valleys, cooler on ridges), cold snowy winters (-10 to 5 C above 1,500 m) with 500-1,000 mm of precipitation, most as winter snow on the ridges.",
+  "seasons": [
+    "Winter (Dec-Mar): deep snow on ridges, closed passes, avalanche-prone slopes, smoky villages",
+    "Spring (Apr-May): snowmelt floods, green pastures, wildflowers, nomadic herders move up",
+    "Summer (Jun-Sep): dry, hot valleys, oak forest fires, cool high pastures",
+    "Autumn (Oct-Nov): walnut and pomegranate harvest, first snow on peaks, clear air"
+  ],
+  "biomes": [
+    {
+      "id": "zagros_oak_woodland",
+      "share": 0.34,
+      "vegetation": ["Brant's oak (Quercus brantii) open woodland", "Lebanon oak (Q. libani) and Aleppo oak (Q. infectoria)", "wild pistachio (Pistacia atlantica)", "hawthorn and wild almond", "Astragalus cushions and grasses in clearings"],
+      "ground_palette": ["#8a6f52", "#a5896a", "#6e5640", "#c2a985", "#5a4a3a"],
+      "foliage_palette": ["#4a5e30", "#627a3c", "#7f8f50", "#3a4a26", "#a3a86a"]
+    },
+    {
+      "id": "terraced_village_valleys",
+      "share": 0.18,
+      "vegetation": ["walnut, mulberry and pomegranate terraces", "poplar rows along irrigation channels", "fig and grape vines", "small wheat and vegetable plots"],
+      "ground_palette": ["#9e7a56", "#7c5f43", "#bba07c", "#5e4a36", "#d1bf9e"],
+      "foliage_palette": ["#3f6b2e", "#5a8a3a", "#83a050", "#2f5226", "#b7c07a"]
+    },
+    {
+      "id": "limestone_ridges",
+      "share": 0.26,
+      "vegetation": ["bare grey limestone cliffs and scree", "juniper and maple scrub in crevices", "thorn cushions (Astragalus, Acantholimon)", "alpine grassland on crests"],
+      "ground_palette": ["#b7b1a3", "#9a9486", "#d3cec2", "#7d776b", "#5f5a50"],
+      "foliage_palette": ["#7a7f58", "#5c6644", "#9c9e74", "#495236"]
+    },
+    {
+      "id": "river_gorge_and_reservoir",
+      "share": 0.1,
+      "vegetation": ["oriental plane and willow along the river", "oleander and tamarisk on gravel bars", "reed beds at the reservoir tail"],
+      "ground_palette": ["#7e7462", "#a39783", "#5f574a", "#c4baa5"],
+      "foliage_palette": ["#2f5a2b", "#4a7a36", "#6d9a48", "#264a22"]
+    },
+    {
+      "id": "intermontane_plain",
+      "share": 0.12,
+      "vegetation": ["rain-fed wheat and barley", "chickpea and lentil fields", "poplar windbreaks", "steppe grasses on fallow"],
+      "ground_palette": ["#b59a6e", "#9c8158", "#cfb98e", "#7e6646", "#e0cfa8"],
+      "foliage_palette": ["#c9b56e", "#a99a52", "#6f7a3c", "#e0d29b"]
+    }
+  ],
+  "terrain": {
+    "elevation_range_m": [700, 2950],
+    "relief": "Very rugged. Parallel NW-SE fold ridges (anticlines) at 2,000-2,950 m with cliffs and scree, separated by deep synclinal valleys and gorges at 700-1,400 m; a small intermontane plain at about 1,300 m in the east; the border runs along a high ridge with passes.",
+    "features": ["parallel fold ridges with cliffs", "gorges and narrow river canyons", "stepped village terraces on steep slopes", "high passes with smuggling trails", "karst springs and caves", "a dam and reservoir in the central valley", "landmine hazard belts from the 1980s war near the border (marked hazard areas)"],
+    "water": "One river flowing through a gorge into a reservoir held by a concrete dam; mountain streams and springs; irrigation channels feeding village terraces; snowmelt torrents in spring.",
+    "generator": {
+      "approach": "Heightmap at 10 m. Fold ridges from an anisotropic ridged noise stretched along NW-SE (aspect 5:1), plus fbm for breakup; valleys are the troughs. Rivers carved after erosion along synclines; the dam is a stamped structure that sets a flat reservoir level upstream. Terraces post-pass on village slopes.",
+      "noise_layers": [
+        {"type": "ridged multifractal, anisotropic (NW-SE, 5:1)", "frequency": 0.3, "amplitude_m": 1300, "purpose": "fold ridges and synclinal valleys"},
+        {"type": "simplex fbm (5 octaves)", "frequency": 0.8, "amplitude_m": 220, "purpose": "breakup of ridges, side spurs and saddles (passes)"},
+        {"type": "ridged", "frequency": 3.0, "amplitude_m": 40, "purpose": "cliff bands and gullies"},
+        {"type": "simplex", "frequency": 0.1, "amplitude_m": 250, "purpose": "regional tilt (east higher plain, west lower foothills)"},
+        {"type": "simplex", "frequency": 10.0, "amplitude_m": 1.5, "purpose": "boulders and micro-relief"}
+      ],
+      "erosion": "Hydraulic erosion (80 iterations) to cut gullies down the ridge flanks; thermal erosion capped at 50 degrees to keep cliff bands; scree fans at cliff feet.",
+      "rivers": "Main river spline along the central syncline into the reservoir (dam at the south-west); tributaries by flow accumulation in side valleys; reservoir water level is a flat plane at the dam crest minus 5 m.",
+      "settlement_flattening": "Stepped villages: no flattening as a whole, each house sits on its own 3-4 m terrace, the roof of one house forming the yard of the next. Plain villages flattened as discs.",
+      "notes": "AAVs are useless here (Captain: AAVs no use in the mountains); helicopters are limited by weather and high ridges. Roads are few, so passes and the dam crest are decisive chokepoints."
+    }
+  },
+  "settlements": [
+    {
+      "type": "village",
+      "share": 0.45,
+      "pop_range": [300, 4000],
+      "architecture": "Stepped mountain village: one- and two-storey houses of dry-laid or mud-mortared stone, flat roofs of timber beams, brushwood and packed earth, built so each roof is the courtyard of the house above; small windows, wooden doors and balconies; newer houses in concrete and cinder block; a mosque with a small minaret, a school, a spring house.",
+      "footprint_m": "house 8x10 to 10x14",
+      "storeys": [1, 2],
+      "wall_class": "Stone walls 50-70 cm thick (cover, slow to chip); earth roofs medium; newer cinder-block houses thin.",
+      "materials": ["STONE", "WOOD", "DIRT_BERM", "CINDER_BLOCK", "CONCRETE"],
+      "palette": ["#9a9486", "#b7b1a3", "#8c6a46", "#8a6f4e", "#9a978f"],
+      "layout_rules": ["terraced up a steep south-facing slope above a stream", "narrow stepped lanes and stairs, no vehicle access above the lowest street", "one road ends at the bottom of the village", "walnut and mulberry orchards below, pastures above"],
+      "example_names": ["Hawraz", "Zewe Ban", "Kani Shirin", "Dareh Gol", "Biyare Sor", "Nowdeh Kuh"]
+    },
+    {
+      "type": "town",
+      "share": 0.2,
+      "pop_range": [15000, 60000],
+      "architecture": "Iranian Kurdish market town: two- to five-storey brick and concrete buildings, facades of yellow fired brick or stone tiles, shops with roller shutters, a covered bazaar, a large mosque with a dome, government and IRGC/Basij buildings, a border-trade warehouse district.",
+      "footprint_m": "block 40x80; building 12x20",
+      "storeys": [2, 5],
+      "wall_class": "Brick walls 20-35 cm medium; concrete frames thick; shutters thin.",
+      "materials": ["BRICK", "CONCRETE", "STONE", "STEEL", "GLASS"],
+      "palette": ["#c9a46e", "#9c5a3c", "#8a8577", "#b7b1a3", "#9fbcc4"],
+      "layout_rules": ["valley-floor grid with a main boulevard and a roundabout landmark", "covered bazaar near the main mosque", "military and security compound at the edge", "border-trade truck park and warehouses"],
+      "example_names": ["Kani Darreh", "Shahu-e Bala", "Zarivar-e Kuchak", "Gol-e Now"]
+    },
+    {
+      "type": "town",
+      "share": 0.1,
+      "pop_range": [5000, 30000],
+      "architecture": "Kurdistan Region border town on the western strip: concrete houses of two to three storeys, painted facades, flat roofs with water tanks and satellite dishes, shops and a market road, a Peshmerga post and a customs post.",
+      "footprint_m": "house 12x14",
+      "storeys": [1, 3],
+      "wall_class": "Concrete frames thick; block infill thin.",
+      "materials": ["CONCRETE", "CINDER_BLOCK", "PAINTED", "STEEL"],
+      "palette": ["#c9c1ad", "#e3dccb", "#5f6b58", "#9a978f", "#8a8577"],
+      "layout_rules": ["along the valley road to the border crossing", "market road with shops and petrol stations", "Peshmerga base and flag on a hill"],
+      "example_names": ["Shax-e Taza", "Kani Sard", "Sargat Khwar", "Bnar Shin"]
+    },
+    {
+      "type": "camp",
+      "share": 0.1,
+      "pop_range": [500, 5000],
+      "architecture": "Settlement of an exiled opposition community on the Iraqi side: one-storey block houses, a school, walls, guard posts; target of cross-border strikes (game events).",
+      "footprint_m": "camp 400x500",
+      "storeys": [1, 2],
+      "wall_class": "Block houses thin; perimeter wall medium.",
+      "materials": ["CINDER_BLOCK", "CONCRETE", "CORRUGATED_IRON", "SANDBAG"],
+      "palette": ["#9a978f", "#8a8577", "#8b8e8c", "#b8a378"],
+      "layout_rules": ["valley site with one access road", "dense civilian population including families"],
+      "example_names": ["Aram Nwe", "Zirgwez Camp", "Hiwa Saghir"]
+    },
+    {
+      "type": "compound",
+      "share": 0.15,
+      "pop_range": [0, 600],
+      "architecture": "Military sites: Iranian border posts (stone and concrete towers on ridges with walls and trenches), an Artesh brigade base on the plain, IRGC positions at passes, a radar station on a peak; Peshmerga hilltop posts on the western strip.",
+      "footprint_m": "border post 40x60; base 500x700; radar site 120x120",
+      "storeys": [1, 3],
+      "wall_class": "Stone and concrete posts thick; prefabs and sheds thin; trenches as cover.",
+      "materials": ["CONCRETE", "STONE", "SANDBAG", "STEEL", "DIRT_BERM"],
+      "palette": ["#8a8577", "#9a9486", "#b8a378", "#4a4d50", "#8a6f4e"],
+      "layout_rules": ["ridge-top posts every 1-2 km along the border", "switchback access road to each post", "base on the plain behind the ridges"],
+      "example_names": ["Post Kuh-e Sefid 3", "Qaraolkhaneh Gardaneh", "Paygah-e Darband", "Peshmerga Post Shaxi Spi Ridge"]
+    }
+  ],
+  "infrastructure": {
+    "roads": "One two-lane road along the main valley to a border crossing, mountain roads with hairpins to villages, a dam crest road, and mule and porter trails over the passes (not drivable).",
+    "rail": "None.",
+    "power": "Hydro powerhouse at the dam, 132 kV lines over the ridges, village distribution lines.",
+    "ports": "None (inland).",
+    "airfields": "None; a helipad at the Artesh base.",
+    "checkpoints": "Iranian border crossing with customs halls; IRGC and police checkpoints on the valley road; KRG customs and Peshmerga checkpoint on the western side; unofficial trails watched by border posts."
+  },
+  "pois": [
+    {"type": "border_crossing", "description": "Mountain border crossing: two customs halls with a no-man's-land between, truck queue on both sides, money changers, a mosque, a Peshmerga post and an Iranian border-guard post.", "contract_use": "escort an aid or VIP convoy to the crossing (client krg_peshmerga); evacuation of foreign workers", "loot_tier": "low", "intel_chance": 0.25},
+    {"type": "dam_and_powerhouse", "description": "Concrete arch dam in a gorge with a crest road, a powerhouse at the foot and a switchyard; spillway and tunnels.", "contract_use": "hot-zone objective; recover a downed drone that hit the switchyard (client isr)", "loot_tier": "low", "intel_chance": 0.2},
+    {"type": "ridge_radar_station", "description": "Radar and communications site on a peak: domes, masts, generator building, a garrison block and an air-defence emplacement; reached by one switchback road.", "contract_use": "observe and document a site for a client (recon only); recover crashed drone debris on the slope", "loot_tier": "medium", "intel_chance": 0.45},
+    {"type": "oil_gas_field", "description": "Gas processing site on the KRG side: pipes, flare stack, tanks, compressor sheds behind a berm; struck by drones in 2025-2026.", "contract_use": "defend against drone and rocket attacks (client krg_peshmerga)", "loot_tier": "medium", "intel_chance": 0.2},
+    {"type": "porter_trail_pass", "description": "High pass on a mule and porter trail: stone cairns, a shepherd hut, scree, snow patches; border posts overlook it.", "contract_use": "cross-border recovery route; LRRP insertion route", "loot_tier": "low", "intel_chance": 0.3},
+    {"type": "stepped_village", "description": "Terraced stone village climbing a slope above a stream; lanes are stairs; roofs are yards.", "contract_use": "recover a kidnapped worker; observation of a valley road", "loot_tier": "low", "intel_chance": 0.2},
+    {"type": "irgc_pass_position", "description": "Dug-in position at a road pass: concrete bunkers, trenches, a tank ramp, an ATGM position and a checkpoint barrier.", "contract_use": "observe and avoid; hot-zone outpost", "loot_tier": "medium", "intel_chance": 0.4},
+    {"type": "artesh_brigade_base", "description": "Brigade base on the plain: vehicle sheds with tanks and APCs, barracks, a parade ground, fuel depot, perimeter wall and towers.", "contract_use": "hot-zone HQ (enemy); recon only for contract zones", "loot_tier": "medium", "intel_chance": 0.5},
+    {"type": "landmine_hazard_belt", "description": "Old war minefield on a border slope: rusted signs, fenced in places, cratered ground; marked hazard area that slows and channels movement.", "contract_use": "route planning hazard; demining escort for a KRG team", "loot_tier": "low", "intel_chance": 0.05},
+    {"type": "opposition_community_camp", "description": "Walled settlement on the KRG side housing an exiled community; school, clinic, guard posts; target of cross-border strikes (map events).", "contract_use": "evacuate wounded after a strike; protect a medical convoy (client krg_peshmerga)", "loot_tier": "low", "intel_chance": 0.2},
+    {"type": "cave_shelter", "description": "Karst cave used by shepherds and smugglers, with a stone wall across the entrance and supplies.", "contract_use": "hide site for an LRRP; cache found during a recovery", "loot_tier": "medium", "intel_chance": 0.35},
+    {"type": "downed_drone_site", "description": "Wreck of a large drone on an oak-covered slope, debris field, burn scar; locals and patrols converge.", "contract_use": "recover a downed drone or its sensitive parts before others (client isr)", "loot_tier": "medium", "intel_chance": 0.6}
+  ],
+  "weather": {
+    "conditions": ["clear and dry (summer)", "heavy snow and blizzards (winter)", "valley fog and low cloud", "spring thunderstorms", "summer forest-fire smoke"],
+    "visibility_notes": "Ridges block line of sight and radio; low cloud covers peaks; snow and cloud ground helicopters for days in winter; clear nights very dark in the valleys.",
+    "dust_or_snow": "Snow cover above 1,500 m from December to March, closing passes; dust rare (occasional haze from Iraqi dust storms in spring)."
+  },
+  "civilians": {
+    "density": "medium",
+    "behaviour": "Village life from dawn: herding, terraces, walnut harvest; town bazaars 09:00-13:00 and 17:00-20:00; cross-border porters carrying loads on the passes at night (civilians, not combatants). After strikes or fighting, families leave villages for relatives in towns; strict security in Iranian towns (checkpoints, ID checks).",
+    "vehicles": ["Peugeot 405 and Saipa Pride cars", "Nissan Zamyad pickups", "minibuses", "tractors", "mules and donkeys on trails", "fuel lorries at the crossing"],
+    "casualty_risk_notes": "Porters on the passes and families in stepped villages are the main risk; the casualty rule matters in towns and around the opposition camp."
+  },
+  "factions_present": [
+    {"faction_id": "irn", "role": "defender", "strength": "high", "where": "Iranian side (east of the border ridge): border posts on ridges, IRGC pass positions and checkpoints, Artesh brigade base on the plain, radar station on a peak; drones and strikes into the KRG strip (map events)."},
+    {"faction_id": "krg_peshmerga", "role": "defender", "strength": "medium", "where": "Western strip (Kurdistan Region side): border-town posts, customs crossing, hilltop posts, gas field security."},
+    {"faction_id": "isr", "role": "patrol", "strength": "low", "where": "No ground force; drones over the Iranian side, strikes on the radar and military sites (AI aircraft only); occasional recovery tasks offered as contracts."}
+  ],
+  "frontline": "The border ridge is the line and does not move. The persistent war here is strikes and recoveries: escalation events (Israel/US-Iran hostilities in the campaign calendar) put air strikes on Iranian sites, which raises the alert of every Iranian zone and posts recovery contracts; Iranian retaliation events send drones and rockets at KRG gas fields and the opposition camp, posting defence and evacuation contracts for krg_peshmerga. Ceasefire events lower alerts and reopen the crossing. The player cannot take ground on the Iranian side; Iranian-side zones are for recon, recovery and LRRP contracts, with high risk.",
+  "contract_hooks": [
+    "Defend a KRG gas field against drone and rocket attacks (client krg_peshmerga)",
+    "Escort an aid or VIP convoy along the valley road to the border crossing (client krg_peshmerga)",
+    "Recover a downed drone from an oak slope on the Iranian side before patrols reach it (client isr; LRRP)",
+    "LRRP over a porter pass to document a radar or pass position (client isr)",
+    "Evacuate wounded from the opposition camp after a strike (client krg_peshmerga)",
+    "Recover a kidnapped Peshmerga officer or foreign worker from a stepped village (client krg_peshmerga)",
+    "Demining escort along a border hazard belt for a KRG team (client krg_peshmerga)"
+  ],
+  "zone_plan": {
+    "contract_zones": [
+      {"name": "Border crossing valley", "area_km2": 3, "anchor": "border_crossing", "notes": "KRG side; convoy and evacuation"},
+      {"name": "Gas field", "area_km2": 2, "anchor": "oil_gas_field", "notes": "KRG side; counter-drone"},
+      {"name": "Downed drone slope", "area_km2": 4, "anchor": "downed_drone_site", "notes": "Iranian side; recovery under time pressure"},
+      {"name": "Porter pass", "area_km2": 3, "anchor": "porter_trail_pass", "notes": "high, snow, hazard belt"}
+    ],
+    "hot_zones": [
+      {"name": "Iranian central valley", "area_km2": 14, "layout": "Artesh brigade base as HQ; 4-5 outposts (IRGC pass positions, border posts, radar station); checkpoints on the valley road; roaming foot patrols and drone overwatch; 2 QRF elements (tanks and APCs at the base, IRGC Land Cruisers at the pass). LRRP-style deep missions."}
+    ]
+  },
+  "insertion": {"lhd": false, "fob": "FOB on the Kurdistan Region side in a Peshmerga base near the border town. Players reach zones by road on the KRG side, on foot over the passes for Iranian-side work, or by helicopter only in good weather; AAVs unavailable (mountains)."},
+  "early_game_suitable": false,
+  "early_game_notes": "The hostile force is a state military (irn, mid tier) and the map is a high-escalation border; mid-to-late campaign.",
+  "ambient_audio": ["wind on ridges", "stream and waterfall noise", "goat and sheep bells", "call to prayer echoing in valleys", "distant jets and air-defence fire (events)", "mule bells on trails", "Kurdish music from a car radio"],
+  "proposed": [
+    "map_size_km and border-straddling layout",
+    "generator numbers",
+    "zone_plan; Iranian-side zones as recon/recovery/LRRP only",
+    "exiled opposition camp as neutral NPCs (no faction in the roster)",
+    "iraqi_militias absent here because iraqi_militias.json does not list iran_zagros (open question)",
+    "materials: STONE #8f8676, BRICK #9c5a3c, CINDER_BLOCK #9a978f, DIRT_BERM #8a6f4e, SANDBAG #b8a378, CORRUGATED_IRON #8b8e8c, GLASS #9fbcc4",
+    "landmine belts as marked hazard areas only (game-level)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Zagros_Mountains",
+    "https://en.wikipedia.org/wiki/Hawraman",
+    "https://en.wikipedia.org/wiki/Uraman_Takht",
+    "https://en.wikipedia.org/wiki/Zagros_Mountains_forest_steppe",
+    "https://en.wikipedia.org/wiki/Kolbar",
+    "https://en.wikipedia.org/wiki/Kurdistan_Region",
+    "factions/irn.json, krg_peshmerga.json, isr.json situation notes, October 2026"
+  ]
+}

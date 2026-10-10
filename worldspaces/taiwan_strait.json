@@ -1,0 +1,126 @@
+{
+  "id": "taiwan_strait",
+  "name": "Strait Coast and Outer Isles",
+  "inspired_by": "Taiwan's west coast and outlying islands as of 2026: a densely populated coastal plain of rice paddies, fish ponds, industrial parks and towns, beaches fortified against landings, subtropical foothills of the central range, and a granite outer island group just off the mainland coast with old fortifications and tunnels. Cross-strait tension is expressed through large PLA exercises around Taiwan, coast guard and maritime militia pressure near the outer islands, and undersea cable damage. The game's persistent war can escalate it (late game only). All towns are fictional.",
+  "map_size_km": [22, 22],
+  "climate": "Humid subtropical (Koppen Cfa/Cwa). Summers 30-34 C with very high humidity and afternoon thunderstorms; winters 13-20 C with the north-east monsoon bringing wind, drizzle and rough seas; 1,500-2,500 mm rain; typhoons July-October; plum rains May-June.",
+  "seasons": [
+    "North-east monsoon (Oct-Mar): strong winds, rough strait (bad for small boats and landings), drizzle, fog around the islands",
+    "Plum rains (May-Jun): persistent rain and low cloud",
+    "Summer (Jun-Sep): heat, thunderstorms, typhoons",
+    "Calm windows (Apr and Oct): the seas the strait is calmest; exercises and patrols peak"
+  ],
+  "biomes": [
+    {"id": "coastal_plain_paddies_and_fishponds", "share": 0.3, "vegetation": ["rice paddies", "aquaculture fish ponds with paddlewheel aerators", "sugarcane and vegetable plots", "betel nut palms on field edges", "casuarina windbreaks on the coast"], "ground_palette": ["#5f5a40", "#7a7a52", "#3f5a6a", "#8a7a5a", "#a89a78"], "foliage_palette": ["#5f8a3a", "#7da048", "#3f6b2e", "#a8c06a", "#2f5226"]},
+    {"id": "urban_industrial", "share": 0.2, "vegetation": ["street banyans and palms", "parks", "weedy vacant lots"], "ground_palette": ["#8a8577", "#b9b4a8", "#6b6a63", "#d8cfbc"], "foliage_palette": ["#3f6b2e", "#5a8a3a", "#7ba04a", "#2f5226"]},
+    {"id": "subtropical_foothills", "share": 0.22, "vegetation": ["bamboo groves", "betel nut and tea plantations", "camphor and evergreen broadleaf forest", "tree ferns in ravines"], "ground_palette": ["#7a4a34", "#9a5a3c", "#5a3a28", "#b37a5a"], "foliage_palette": ["#2f5a2b", "#4a7a36", "#6d9a48", "#264a22", "#8fb062"]},
+    {"id": "outer_island_granite_scrub", "share": 0.1, "vegetation": ["sorghum fields (for liquor)", "acacia and casuarina plantations", "granite outcrops", "beach morning glory"], "ground_palette": ["#c9b89a", "#a8987a", "#e2d6bc", "#8a7a62"], "foliage_palette": ["#5f7a3a", "#7d9a4a", "#a8a070", "#3f5a2a"]},
+    {"id": "sea_and_tidal_flats", "share": 0.18, "vegetation": ["tidal mudflats", "oyster racks", "mangrove patches in estuaries"], "ground_palette": ["#3f5f6a", "#5a7f8a", "#7a8a7a", "#9a9a82"], "foliage_palette": ["#3f6a5a", "#5a7f6a", "#4a6b3a", "#7a9a7a"]}
+  ],
+  "terrain": {
+    "elevation_range_m": [-60, 900],
+    "relief": "A flat coastal plain 6-12 km wide (0-50 m) behind wide tidal flats and sandy beaches; foothills rising east to 600-900 m with steep ravines; an outer island group of low granite hills (up to 250 m) on the west edge, separated by 8-10 km of water from the main coast (the mainland coast lies just beyond the west edge).",
+    "features": ["wide tidal flats (kilometres at low tide)", "sandy beaches with anti-landing obstacles (spikes, rails)", "estuaries and river mouths", "fish ponds in grids", "foothill ravines and terraces", "granite island hills with coastal tunnels and bunkers", "artificial-reef and sea-wall coastlines"],
+    "water": "The strait on the west; two rivers with wide gravel beds and levees crossing the plain; irrigation channels; reservoirs in the foothills; fish ponds.",
+    "generator": {
+      "approach": "Heightmap at 10 m with bathymetry and tide. Coastal plain as a gentle ramp with river splines and levees; tidal flats as a very low-slope band exposed or covered by a tide variable; foothills from ridged noise masked to the east; outer islands as cellular granite domes in the west sea.",
+      "noise_layers": [
+        {"type": "linear ramp + simplex fbm", "frequency": 0.15, "amplitude_m": 80, "purpose": "coastal plain"},
+        {"type": "ridged multifractal", "frequency": 0.4, "amplitude_m": 750, "purpose": "foothills, masked to the east third"},
+        {"type": "cellular (Worley F1, inverted) + simplex", "frequency": 0.5, "amplitude_m": 200, "purpose": "outer granite islands"},
+        {"type": "simplex", "frequency": 0.2, "amplitude_m": 25, "purpose": "strait bathymetry"},
+        {"type": "grid mask", "frequency": 10.0, "amplitude_m": -1.5, "purpose": "fish pond grid (flat cells with dykes)"}
+      ],
+      "erosion": "Hydraulic erosion on foothills for ravines; none on the plain.",
+      "rivers": "Two river splines with braided gravel beds and levees to the sea; foothill streams by flow accumulation.",
+      "settlement_flattening": "Plain towns flattened; foothill villages per plot on terraces.",
+      "notes": "Tide changes the beaches: at low tide the flats are kilometres wide (a landing obstacle). Typhoon events close the sea and air. The plain is so dense that contract zones are small."
+    }
+  },
+  "settlements": [
+    {"type": "city_district", "share": 0.3, "pop_range": [80000, 400000], "architecture": "Taiwanese city: four- to seven-storey reinforced-concrete shophouses with ground-floor arcades (qilou) and roller shutters, tiled facades, iron window grilles and rooftop add-ons with sheet-metal roofs and water tanks; 15-30 storey apartment towers; night markets; temples with sweeping curved roofs and dragons.", "footprint_m": "shophouse 5x20; tower 30x30", "storeys": [3, 30], "wall_class": "Concrete frames thick; tiled infill medium; rooftop sheet-metal add-ons thin.", "materials": ["CONCRETE", "PAINTED", "GLASS", "STEEL", "CORRUGATED_IRON", "ROOF_TILE"], "palette": ["#c9c1ad", "#e6e0d2", "#8a8577", "#9fbcc4", "#c8402e", "#d8b04a"], "layout_rules": ["dense grid of arcaded streets", "temple and night market as landmarks", "scooter parking everywhere", "rail station and industrial park on the edge"], "example_names": ["Haixia Shi", "Gangkou District", "Haifeng Pu", "Dongshi Hai"]},
+    {"type": "town", "share": 0.2, "pop_range": [10000, 60000], "architecture": "Rural township: three- and four-storey concrete shophouses on the main street, red-brick single-storey courtyard farmhouses (sanheyuan), a temple, a farmers' association building, fish-pond sheds.", "footprint_m": "sanheyuan 25x25; shophouse 5x18", "storeys": [1, 4], "wall_class": "Brick courtyard houses medium; concrete shophouses thick.", "materials": ["CONCRETE", "BRICK", "ROOF_TILE", "CORRUGATED_IRON"], "palette": ["#9c5a3c", "#c9c1ad", "#a4553b", "#8b8e8c", "#3f8f6f"], "layout_rules": ["main street with shophouses", "farmhouses among paddies", "temple square"], "example_names": ["Yuliao Zhen", "Shuitou Cun", "Liyu-Xi", "Shalun Hai"]},
+    {"type": "village", "share": 0.25, "pop_range": [300, 3000], "architecture": "Outer-island villages of Minnan-style granite and red-brick houses with swallowtail roof ridges, courtyards, ancestral halls, wind-lion statues, and Western-style 'Yang-lou' mansions; military-era painted slogans on walls.", "footprint_m": "house 12x15", "storeys": [1, 2], "wall_class": "Granite and brick walls 40-60 cm thick.", "materials": ["STONE", "BRICK", "ROOF_TILE", "PLASTER"], "palette": ["#c9b89a", "#9c5a3c", "#a4553b", "#e6dcc8"], "layout_rules": ["compact clan villages around an ancestral hall", "fields of sorghum around", "bunkers and pillboxes on village edges"], "example_names": ["Shiwan Ao", "Fenglin Cun", "Beishan Dong", "Yanxia Wei"]},
+    {"type": "compound", "share": 0.25, "pop_range": [0, 2000], "architecture": "Military and infrastructure: coastal defence positions with bunkers and anti-landing obstacles, island fortress tunnels with boat channels cut into the rock, radar sites on hills, a power plant, a semiconductor-type industrial park with clean-room halls, an LNG terminal, a cable landing station, an air base (AI aircraft).", "footprint_m": "industrial park 1000x1500; island tunnel 300 m", "storeys": [1, 6], "wall_class": "Bunkers and tunnels thick; factory halls medium; LNG tanks hazards.", "materials": ["CONCRETE", "STEEL", "GLASS", "SANDBAG", "STONE"], "palette": ["#8a8577", "#4a4d50", "#e6e6e2", "#9fbcc4", "#b8a378"], "layout_rules": ["beach positions every 500 m along likely landing beaches", "radar on summits", "industrial park by the highway"], "example_names": ["Headland Boat Tunnel 2", "Coastal Position Haian-7", "Science Park Phase 3", "Cable Station Haiyun Bei"]}
+  ],
+  "infrastructure": {
+    "roads": "A coastal expressway, a north-south freeway, a high-speed rail viaduct, dense local roads and farm lanes on dykes; ferry piers to the outer islands.",
+    "rail": "High-speed rail on viaducts, a conventional main line, an industrial siding.",
+    "power": "A coal/gas power plant and an LNG terminal on the coast, offshore wind farms, transmission lines inland.",
+    "ports": "A commercial harbour, a fishing harbour, ferry piers; outer-island harbours; LHD offshore.",
+    "airfields": "An air base and a domestic airport on the plain (AI only), an outer-island airport.",
+    "checkpoints": "Few in peacetime; coast guard and military posts at harbours and beaches; escalation adds checkpoints on bridges and expressway ramps."
+  },
+  "pois": [
+    {"type": "outer_island_boat_tunnel", "description": "Granite tunnel cut through a headland to shelter patrol boats, with gun positions and an inner harbour; a heritage site still usable.", "contract_use": "reconnaissance of outlying islands (client twn); resupply under pressure", "loot_tier": "low", "intel_chance": 0.3},
+    {"type": "cable_landing_station", "description": "Undersea cable landing building behind a sea wall, with a fenced manhole field; cables to the outer islands and abroad.", "contract_use": "counter-sabotage (undersea cable / infrastructure protection) (client twn)", "loot_tier": "low", "intel_chance": 0.3},
+    {"type": "fortified_beach", "description": "Wide beach with anti-landing spikes, rails and wire; bunkers and trenches behind the dunes; fish ponds inland.", "contract_use": "coastal defence training support (client twn)", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "science_park", "description": "Industrial park of high-tech fab halls, office towers, substations and loading bays; critical to the economy.", "contract_use": "noncombatant evacuation of foreign staff; infrastructure protection", "loot_tier": "low", "intel_chance": 0.2},
+    {"type": "maritime_militia_trawler_group", "description": "Group of fishing trawlers loitering near the outer islands, some suspected of cable damage; coast guard cutters shadowing.", "contract_use": "maritime security escort; evidence recovery from a trawler that dragged anchor (clients twn, jpn)", "loot_tier": "medium", "intel_chance": 0.45},
+    {"type": "radar_hill", "description": "Radar and communications site on a foothill summit, reached by a winding road through bamboo.", "contract_use": "site security; drone incursion response", "loot_tier": "low", "intel_chance": 0.2},
+    {"type": "night_market_district", "description": "Night market streets with food stalls, crowds from 18:00 to midnight, temples and arcades.", "contract_use": "VIP protection; evacuation assembly point", "loot_tier": "low", "intel_chance": 0.1},
+    {"type": "lng_terminal", "description": "LNG import terminal with tanks and jetties; a blockade vulnerability.", "contract_use": "infrastructure protection; maritime escort of an LNG carrier", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "ferry_pier", "description": "Ferry terminal to the outer islands with passenger hall, car ramps and a coast guard station.", "contract_use": "noncombatant evacuation (clients jpn, usa, twn)", "loot_tier": "low", "intel_chance": 0.1},
+    {"type": "temple_fortress_hill", "description": "Hilltop temple with a large plaza, stairs and views over the coast; old pillboxes in the hillside.", "contract_use": "overwatch; observation of landing beaches", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "drone_debris_tidal_flat", "description": "Debris of a surveillance drone on the tidal flats, reachable only at low tide.", "contract_use": "recover debris before the tide (client twn)", "loot_tier": "medium", "intel_chance": 0.4}
+  ],
+  "weather": {
+    "conditions": ["humid heat", "afternoon thunderstorms", "typhoons", "north-east monsoon wind and drizzle", "sea fog around the islands"],
+    "visibility_notes": "Haze and rain reduce visibility; monsoon months make the strait rough; typhoons shut down all air and sea movement.",
+    "dust_or_snow": "No snow; spring haze and occasional dust from the mainland."
+  },
+  "civilians": {
+    "density": "very_high",
+    "behaviour": "Very dense, busy population: scooter traffic peaks 07:00-09:00 and 17:00-19:00; night markets crowded until midnight; temple festivals with processions and firecrackers; air-raid drill days send people to marked shelters. Outer islands quieter and older.",
+    "vehicles": ["scooters (very many)", "private cars", "city buses", "small blue trucks", "garbage trucks playing music", "fishing boats", "ferries"],
+    "casualty_risk_notes": "Extremely dense plain; almost all contracts must be low-violence, and escalation-scenario combat should be kept to beaches, islands and the foothills."
+  },
+  "factions_present": [
+    {"faction_id": "twn", "role": "defender", "strength": "high", "where": "Whole coast: beach positions, outer-island garrisons, radar sites, coast guard at harbours; reservists in towns."},
+    {"faction_id": "chn", "role": "patrol", "strength": "high", "where": "At sea beyond the outer islands and across the strait: coast guard cutters, maritime militia trawlers, navy ships, drones and aircraft (AI only); the mainland coast just off the west edge. Grey-zone only unless escalation."},
+    {"faction_id": "usa", "role": "patrol", "strength": "low", "where": "Trainers with Taiwanese units and an institute-staff evacuation team; naval transit in the strait (AI)."},
+    {"faction_id": "jpn", "role": "patrol", "strength": "low", "where": "Evacuation coordination for Japanese nationals at the ferry pier and science park; coast guard liaison offshore."}
+  ],
+  "frontline": "Grey zone. PLA exercise events surround the map with ships and aircraft and raise alert levels; coast guard and maritime militia pressure events near the outer islands post reconnaissance, resupply and evidence-recovery contracts; cable incidents post counter-sabotage work. The escalation scenario (late game, proposed) is a blockade-and-landing scenario: chn gains sea control in steps, outer islands come under attack first, and beaches become hot zones. The player cannot take chn contracts (hostile).",
+  "contract_hooks": [
+    "Reconnaissance of outlying islands under coast guard pressure (client twn)",
+    "Counter-sabotage at a cable landing station (client twn)",
+    "Coastal defence training support at a fortified beach (client twn)",
+    "Noncombatant evacuation from the science park and ferry pier (clients jpn, usa, twn)",
+    "Maritime security escort of an LNG carrier (client twn)",
+    "Evidence recovery from a trawler that dragged anchor over a cable (clients twn, jpn)",
+    "Recover drone debris from tidal flats before the tide (client twn)",
+    "Escalation scenario: defend an outer island against a landing (late game)"
+  ],
+  "zone_plan": {
+    "contract_zones": [
+      {"name": "Outer island village and tunnel", "area_km2": 3, "anchor": "outer_island_boat_tunnel", "notes": "granite, bunkers, low civilians"},
+      {"name": "Cable station shore", "area_km2": 2, "anchor": "cable_landing_station", "notes": "sea wall and fish ponds"},
+      {"name": "Fortified beach", "area_km2": 3, "anchor": "fortified_beach", "notes": "tidal flats"},
+      {"name": "Science park", "area_km2": 2, "anchor": "science_park", "notes": "industrial, dense"}
+    ],
+    "hot_zones": [
+      {"name": "Outer islands landing (late game)", "area_km2": 12, "layout": "Attacker HQ afloat off the west edge; 3-5 beachheads and captured positions as outposts; checkpoints at island road junctions; roaming landing teams and drones; QRF by sea; Taiwanese garrison as the friendly anchor"}
+    ]
+  },
+  "insertion": {"lhd": true, "fob": "LHD offshore east of the outer islands in peacetime phases (proposed: withdrawn in escalation); inland FOB at a host-nation base in the foothills. Ferries, helicopters and AAVs to the islands."},
+  "early_game_suitable": false,
+  "early_game_notes": "Peer-state grey zone (chn late tier); late-campaign theatre.",
+  "ambient_audio": ["scooter traffic", "temple bells and firecrackers", "cicadas", "surf and gulls", "garbage-truck music", "air-raid drill sirens (events)", "patrol boat engines"],
+  "proposed": [
+    "map_size_km and composite (main coast plus an outer island group near the mainland)",
+    "tide variable on tidal flats",
+    "grey-zone event model and the late-game escalation scenario",
+    "chn role as 'patrol' (grey zone) rather than occupier",
+    "zone_plan and hot zone",
+    "materials: STONE #8f8676, BRICK #9c5a3c, ROOF_TILE #a4553b, PLASTER #e3dccb, CORRUGATED_IRON #8b8e8c, GLASS #9fbcc4, SANDBAG #b8a378"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Geography_of_Taiwan",
+    "https://en.wikipedia.org/wiki/Kinmen",
+    "https://en.wikipedia.org/wiki/Taiwan_Strait",
+    "https://en.wikipedia.org/wiki/Sanheyuan",
+    "https://en.wikipedia.org/wiki/Cross-Strait_relations",
+    "factions/twn.json, chn.json notes"
+  ]
+}
