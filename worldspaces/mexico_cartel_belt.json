@@ -112,8 +112,9 @@
   "captain_confirmed": [
     "map_size_km 24 x 22 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
     "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
-    "materials accepted as the next voxel_world.gd additions (Captain, 2026-10-10); not yet in the game: CINDER_BLOCK #9a978f, MUD_BRICK #a47e57, ROOF_TILE #a4553b, STONE #8f8676, CORRUGATED_IRON #8b8e8c, TARP #3f6d8c, SANDBAG #b8a378, GLASS #9fbcc4",
-    "LHD only with Mexican approval; the restriction stays (Captain, 2026-10-10)"
+    "materials accepted (Captain, 2026-10-10) and added to voxel_world.gd (Contractor dev, commit 1ec1417): CINDER_BLOCK #9a978f, MUD_BRICK #a47e57, ROOF_TILE #a4553b, STONE #8f8676, CORRUGATED_IRON #8b8e8c, TARP #3f6d8c, SANDBAG #b8a378, GLASS #9fbcc4",
+    "LHD only with Mexican approval; the restriction stays (Captain, 2026-10-10)",
+    "usa stays as a low-plausibility listing at low strength: offshore interdiction and a port liaison only, a game what-if (no US forces in Mexico) (Captain, 2026-10-10)"
   ],
   "proposed": [
     "composite layout",

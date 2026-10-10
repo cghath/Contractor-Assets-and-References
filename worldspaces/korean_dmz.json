@@ -113,13 +113,13 @@
   "captain_confirmed": [
     "map_size_km 20 x 18 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
     "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
-    "materials accepted as the next voxel_world.gd additions (Captain, 2026-10-10); not yet in the game: BRICK #9c5a3c, CINDER_BLOCK #9a978f, ROOF_TILE #a4553b, CORRUGATED_IRON #8b8e8c, GLASS #9fbcc4, SANDBAG #b8a378",
-    "the late-game escalation hot zone stays as a what-if, clearly marked fictional; the default state is the real 2026 situation (Captain, 2026-10-10)"
+    "materials accepted (Captain, 2026-10-10) and added to voxel_world.gd (Contractor dev, commit 1ec1417): BRICK #9c5a3c, CINDER_BLOCK #9a978f, ROOF_TILE #a4553b, CORRUGATED_IRON #8b8e8c, GLASS #9fbcc4, SANDBAG #b8a378",
+    "the late-game escalation hot zone stays as a what-if, clearly marked fictional; the default state is the real 2026 situation (Captain, 2026-10-10)",
+    "jpn and chn stay as low-plausibility listings at low strength: jpn as an evacuation-planning liaison, chn only off-map and in escalation intel (Captain, 2026-10-10)"
   ],
   "proposed": [
     "layout",
     "DMZ mask with minefield hazard rule",
-    "jpn and chn presence as liaison/off-map only",
     "zone_plan and hot zone",
     "tunnels as level geometry only"
   ],

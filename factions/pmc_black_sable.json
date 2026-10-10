@@ -169,7 +169,7 @@
       "vehicle_id": "matv",
       "role": "mrap",
       "prevalence": "uncommon",
-      "notes": "Surplus M-ATVs (game assignment proposal)."
+      "notes": "Surplus M-ATVs (game assignment Captain-confirmed 2026-10-10)."
     },
     {
       "vehicle_id": "wing_loong",
@@ -322,13 +322,13 @@
     ],
     "escalation": "Repeated defeats bring Nimr columns and armed-drone overwatch, then a named field commander."
   },
-  "notes": "FICTIONAL company; no real company, funder, logo or person is depicted. Inspired by the reported pattern of Gulf-financed mercenary recruitment (Latin American veterans in Yemen and Sudan, 2015-2026). In game it has business ties to Gulf states (positive relations with are and sau), which never fight alongside it openly. Hostile to the player as a rival, never a client or vendor. Its Nimr, M-ATV and Wing Loong use is a game assignment. Captain chose it as the player's main nemesis (2026-10-10); the rest of the rivalry object stays a proposal.",
+  "notes": "FICTIONAL company; no real company, funder, logo or person is depicted. Inspired by the reported pattern of Gulf-financed mercenary recruitment (Latin American veterans in Yemen and Sudan, 2015-2026). In game it has business ties to Gulf states (positive relations with are and sau), which never fight alongside it openly. Hostile to the player as a rival, never a client or vendor. Its Nimr and Wing Loong use is a game assignment (proposed); its M-ATVs are Captain-confirmed (2026-10-10): the existing voxel models are fielded by the operators listed in their catalogue files. Captain chose it as the player's main nemesis (2026-10-10); the rest of the rivalry object stays a proposal.",
   "proposed": [
     "everything (fictional faction): name, flag_colors, relations, theatres",
     "rivalry (all fields except role; the nemesis role is Captain-confirmed)",
     "doctrine.ai_tuning",
     "unit_templates",
-    "vehicles (Nimr, M-ATV, Wing Loong game assignment)",
+    "vehicles (Nimr, Wing Loong game assignment)",
     "contract_types.as_target",
     "body_armor (game tier mapping)",
     "traits (rival_pmc is a game tag)"

@@ -115,7 +115,7 @@
   "captain_confirmed": [
     "map_size_km 24 x 22 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
     "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
-    "materials accepted as the next voxel_world.gd additions (Captain, 2026-10-10); not yet in the game: THATCH #b49a5e, CORRUGATED_IRON #8b8e8c, CINDER_BLOCK #9a978f, SANDBAG #b8a378",
+    "materials accepted (Captain, 2026-10-10) and added to voxel_world.gd (Contractor dev, commit 1ec1417): THATCH #b49a5e, CORRUGATED_IRON #8b8e8c, CINDER_BLOCK #9a978f, SANDBAG #b8a378",
     "isis is not added here; the phl counter-terror loop moved to the new mindanao_sulu theatre (Captain, 2026-10-10)",
     "the late-game escalation hot zone stays as a what-if, clearly marked fictional; the default state is the real 2026 situation (Captain, 2026-10-10)"
   ],

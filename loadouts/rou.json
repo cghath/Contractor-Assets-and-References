@@ -573,14 +573,7 @@
        "count": 2,
        "game_item_id": "smoke_grenade"
       },
-      {
-       "id": "signal_green",
-       "name": "Green signal smoke, national issue",
-       "kind": "smoke_green",
-       "count": 1,
-       "game_item_id": null,
-       "game_substitute": "smoke_grenade"
-      },
+      {"id": "signal_green", "name": "Green signal smoke, national issue", "kind": "smoke_green", "count": 1, "game_item_id": "smoke_green"},
       {
        "id": "signal_red",
        "name": "Red signal smoke, national issue",
@@ -589,14 +582,7 @@
        "game_item_id": null,
        "game_substitute": "smoke_grenade"
       },
-      {
-       "id": "signal_violet",
-       "name": "Violet signal smoke, national issue",
-       "kind": "smoke_violet",
-       "count": 1,
-       "game_item_id": null,
-       "game_substitute": "smoke_grenade"
-      },
+      {"id": "signal_violet", "name": "Violet signal smoke, national issue", "kind": "smoke_violet", "count": 1, "game_item_id": "smoke_purple"},
       {"id": "stun_nato", "name": "Stun grenade, national issue (M84 class)", "kind": "flash", "count": 1, "game_item_id": "flashbang"}
      ],
      "armor": {
@@ -638,7 +624,9 @@
       ["m17", 1],
       ["mag_9mm", 3],
       ["frag_grenade", 1],
-      ["smoke_grenade", 5],
+      ["smoke_grenade", 3],
+      ["smoke_green", 1],
+      ["smoke_purple", 1],
       ["flashbang", 1],
       ["ifak", 1],
       ["tourniquet", 1],
@@ -849,16 +837,7 @@
       "ammo": {"id": "mag_9mm", "round": "9x19mm FMJ (NATO ball)", "game_round_id": "9x19_fmj", "rounds_per_mag": 15, "count": 3, "game_item_id": "mag_9mm"}
      },
      "launcher": null,
-     "grenades": [
-      {
-       "id": "signal_violet",
-       "name": "Violet signal smoke, national issue",
-       "kind": "smoke_violet",
-       "count": 1,
-       "game_item_id": null,
-       "game_substitute": "smoke_grenade"
-      }
-     ],
+     "grenades": [{"id": "signal_violet", "name": "Violet signal smoke, national issue", "kind": "smoke_violet", "count": 1, "game_item_id": "smoke_purple"}],
      "armor": {
       "vest": {"id": "aircrew_vest", "name": "Aircrew survival armour vest (AIRSAVE class)", "tier": "light", "game_item_id": "plate_carrier_light"},
       "plates": {
@@ -899,7 +878,7 @@
       ["mag_556", 4],
       ["m17", 1],
       ["mag_9mm", 3],
-      ["smoke_grenade", 1],
+      ["smoke_purple", 1],
       ["ifak", 1],
       ["tourniquet", 1],
       ["pressure_bandage", 2],

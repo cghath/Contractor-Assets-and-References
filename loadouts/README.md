@@ -97,7 +97,7 @@ Armor is the regular variant's vest tier (helmet tier); AT is the at role's laun
 
 ## What has to be built
 
-Counted from the 79 loadout files against the game's `data/items.json` (35 items) and `data/rounds.json`. Full lists with users are in the two index files.
+Counted from the 79 loadout files against the game's `data/items.json` (42 items) and `data/rounds.json`. Full lists with users are in the two index files.
 
 | Category | Used | Already in game | To build |
 |---|---|---|---|
@@ -107,7 +107,7 @@ Counted from the 79 loadout files against the game's `data/items.json` (35 items
 | Launchers | 79 | 20 map to the 6 design-doc launchers, which have no items.json entry yet | 6 launcher items (at4, javelin, maaws, nlaw, rpg7, smaw) and 7 round items (ffv441d, ffv551, javelin_missile, mk3_hedp, mk6_heaa, og7v, pg7v); AT4 and NLAW are single-shot; 59 other launchers use a game_substitute |
 | Underbarrel launchers / their ammo | 22 / 5 | 0 | 22 / 5 |
 | Optics (class ids) | 13 | 0 | 13 |
-| Hand grenades | 24 models | frag, white smoke and stun covered by frag_grenade, smoke_grenade, flashbang | 3 signal smokes (smoke_green, smoke_red, smoke_violet) |
+| Hand grenades | 24 models | frag, white smoke, stun and green/violet signal smoke covered by frag_grenade, smoke_grenade, flashbang, smoke_green, smoke_purple | 1 signal smoke (smoke_red) |
 | Helmets | 29 models | 27 map to helmet_bump / helmet / helmet_heavy by tier | 2 cosmetic non-ballistic helmets (helmet_flight, helmet_tanker); models are skins of the tier items |
 | Vests / plate carriers | 24 models | all map to the 3 carrier tiers | visual variants only |
 | Plates | 14 models | ceramic, steel, PE and side plates map to existing plates | 1 new item: plate_steel_light (light-tier steel plate; used by 22 factions: al_qaeda, al_shabaab, aqap, cod, egy, grc, hamas, hezbollah, houthis, iraqi_militias, irn, isis, isis_k, jnim, m23, mda, pak, phl, pij, rus, sahel_aes, vnm). Until it is built, `game_kit` uses plate_pe_l3 in its place |

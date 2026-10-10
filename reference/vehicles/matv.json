@@ -13,6 +13,7 @@
     "ukr",
     "afg_taliban",
     "sau",
+    "pol",
     "pmc_halcyon",
     "pmc_black_sable"
   ],
@@ -63,6 +64,7 @@
     "https://en.wikipedia.org/wiki/Oshkosh_M-ATV"
   ],
   "sources": [
-    "https://en.wikipedia.org/wiki/Oshkosh_M-ATV"
+    "https://en.wikipedia.org/wiki/Oshkosh_M-ATV",
+    "https://militarnyi.com/uk/news/polshha-otrymaye-79-bronemashyn-oshkosh-m-atv-vid-ssha/"
   ]
 }

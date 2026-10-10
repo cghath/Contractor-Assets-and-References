@@ -63,7 +63,7 @@ Biome shares and settlement shares each sum to 1.0. Every biome has 4-6 ground a
 
 ### Materials
 
-The game has four voxel materials today (`voxel_world.gd`): `CONCRETE` #8a8577, `PAINTED` #5f6b58, `WOOD` #8c6a46 and `STEEL` #4a4d50. The files also use these 18 materials, with the same hex everywhere. Captain accepted them (2026-10-10) as the next additions to `voxel_world.gd`; they are not in the game yet, and the game repo is not edited by this pack:
+The game's `voxel_world.gd` started with four voxel materials: `CONCRETE` #8a8577, `PAINTED` #5f6b58, `WOOD` #8c6a46 and `STEEL` #4a4d50. The files also use these 18 materials, with the same hex everywhere. Captain accepted them (2026-10-10), and they were added to `VoxelWorld.Mat` and `PALETTE` on the game's `dev` branch (commit 1ec1417), appended after `STEEL`. In the game they are colours only so far; the wall classes below are not yet modelled:
 
 | Material | Hex | Used for | Wall class |
 |---|---|---|---|
@@ -88,7 +88,7 @@ The game has four voxel materials today (`voxel_world.gd`): `CONCRETE` #8a8577, 
 
 ## Faction coverage
 
-`factions_present` was checked against every faction file's `theatres`, and since Job 7 `tools/validate_pack.py` checks it both ways (a warning for any mismatch). Every listing now agrees: chn and ind, the UNIFIL contributors on lebanon_south, list lebanon_south in their own files since Job 7 (Captain, 2026-10-10). Some listings are thin or need care, and the files mark them as low-strength or edge presences:
+`factions_present` was checked against every faction file's `theatres`, and since Job 7 `tools/validate_pack.py` checks it both ways (a warning for any mismatch). Every listing now agrees: chn and ind, the UNIFIL contributors on lebanon_south, list lebanon_south in their own files since Job 7 (Captain, 2026-10-10). Some listings are thin or need care, and the files mark them as low-strength or edge presences. Captain confirmed on 2026-10-10 that these low-plausibility listings stay at low strength (blr in eastern_ukraine and baltic_coast; fra, bel and esp in sahel; jpn in arctic_north and korean_dmz; chn in korean_dmz and kashmir_loc; are in yemen_red_sea; usa in mexico_cartel_belt), and that rus stays on alpine_europe as a fictional what-if; each file records this in its `captain_confirmed` list:
 
 - **sahel:** fra, bel and esp appear only at the south edge, from a neighbouring partner state, because their forces left the AES states.
 - **baltic_coast:** blr appears only as covert sabotage teams.
@@ -103,7 +103,7 @@ The game has four voxel materials today (`voxel_world.gd`): `CONCRETE` #8a8577, 
 - **eastern_congo:** chn appears as a UN engineer and medical company, a fictional game what-if: China's MONUSCO contingent left in April 2024 (alliance `monusco`, member_status what_if). Captain confirmed on 2026-10-10 that it stays, clearly marked fictional. m23 is a hostile non-client whose units are not attacked by default in ceasefire phases (Captain-confirmed 2026-10-10).
 - **iran_zagros and south_china_sea:** iraqi_militias is not added to iran_zagros and isis is not added to south_china_sea; those gaps are answered by iraq_iran_border and mindanao_sulu (Captain-confirmed 2026-10-10).
 
-The remaining open questions are in [docs/worldspaces_handoff.md](../docs/worldspaces_handoff.md).
+No worldspace question is open any more; the answered ones are listed in [docs/worldspaces_handoff.md](../docs/worldspaces_handoff.md).
 
 ## Sources
 

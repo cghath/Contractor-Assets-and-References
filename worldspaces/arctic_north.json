@@ -117,13 +117,13 @@
   "captain_confirmed": [
     "map_size_km 22 x 20 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
     "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
-    "materials accepted as the next voxel_world.gd additions (Captain, 2026-10-10); not yet in the game: CORRUGATED_IRON #8b8e8c, GLASS #9fbcc4, TARP #3f6d8c, SANDBAG #b8a378",
-    "the late-game escalation hot zone stays as a what-if, clearly marked fictional; the default state is the real 2026 situation (Captain, 2026-10-10)"
+    "materials accepted (Captain, 2026-10-10) and added to voxel_world.gd (Contractor dev, commit 1ec1417): CORRUGATED_IRON #8b8e8c, GLASS #9fbcc4, TARP #3f6d8c, SANDBAG #b8a378",
+    "the late-game escalation hot zone stays as a what-if, clearly marked fictional; the default state is the real 2026 situation (Captain, 2026-10-10)",
+    "jpn stays as a low-plausibility listing at low strength: researchers and observers only (Captain, 2026-10-10)"
   ],
   "proposed": [
     "composite (Norwegian coast, Finnish border valley)",
     "season-dependent snow layer and mobility rules; cold-exposure mechanic",
-    "jpn presence as researchers and observers only",
     "zone_plan and hot zone"
   ],
   "sources": [

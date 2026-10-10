@@ -383,7 +383,7 @@
       "only if the player works for this nation's enemies: ambush a supply convoy"
     ]
   },
-  "notes": "Bradley M2A2 transfer was approved but the first batch was rejected.",
+  "notes": "Bradley M2A2 transfer was approved but the first batch was rejected over its condition, so grc does not field the Bradley in game: the existing voxel models are fielded by their real operators (Captain-confirmed 2026-10-10).",
   "proposed": [
     "campaign_tier",
     "relations.player",

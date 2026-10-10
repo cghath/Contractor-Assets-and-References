@@ -192,7 +192,7 @@
     "m23 is a hostile non-client (relation -50 with the player, never hires or sells) and its units are not attacked by default in ceasefire phases (Captain, 2026-10-10)",
     "map_size_km within the confirmed 16-24 km per side (Captain, 2026-10-10)",
     "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
-    "materials accepted as the next voxel_world.gd additions (Captain, 2026-10-10; not yet in the game): BASALT #4b4845, CINDER_BLOCK #9a978f, CORRUGATED_IRON #8b8e8c, GLASS #9fbcc4, BRICK #9c5a3c, MUD_BRICK #a47e57, THATCH #b49a5e, TARP #3f6d8c, HESCO #a99a6c, SANDBAG #b8a378, DIRT_BERM #8a6f4e"
+    "materials accepted (Captain, 2026-10-10) and added to voxel_world.gd (Contractor dev, commit 1ec1417): BASALT #4b4845, CINDER_BLOCK #9a978f, CORRUGATED_IRON #8b8e8c, GLASS #9fbcc4, BRICK #9c5a3c, MUD_BRICK #a47e57, THATCH #b49a5e, TARP #3f6d8c, HESCO #a99a6c, SANDBAG #b8a378, DIRT_BERM #8a6f4e"
   ],
   "proposed": [
     "composite layout (lake, volcano, highlands, rift savanna and northern forest on one map)",

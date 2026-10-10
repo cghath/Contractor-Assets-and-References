@@ -551,7 +551,7 @@
     "sellable": true,
     "rep_tiers": [
       {
-        "rep": 10,
+        "rep": 5,
         "unlocks": [
           "5.56x45mm and 7.62x51mm ammunition",
           "M67 frags, M18 smoke, M84 flashbangs",
@@ -559,7 +559,7 @@
         ]
       },
       {
-        "rep": 25,
+        "rep": 15,
         "unlocks": [
           "M4A1 accessories, optics, PEQ lasers",
           "M249 SAW",
@@ -568,7 +568,7 @@
         ]
       },
       {
-        "rep": 40,
+        "rep": 30,
         "unlocks": [
           "AT4",
           "M110A1 marksman rifle",
@@ -577,7 +577,7 @@
         ]
       },
       {
-        "rep": 55,
+        "rep": 45,
         "unlocks": [
           "M3E1 MAAWS",
           "side plates (heavy vest)",
@@ -586,7 +586,7 @@
         ]
       },
       {
-        "rep": 70,
+        "rep": 60,
         "unlocks": [
           "Javelin",
           "Mk22 sniper rifle",
@@ -595,7 +595,7 @@
         ]
       },
       {
-        "rep": 85,
+        "rep": 75,
         "unlocks": [
           "AH-1Z / AH-64 CAS calls",
           "fixed-wing strike call",
@@ -623,7 +623,7 @@
       "intel_theft (rival-state fixers)"
     ]
   },
-  "notes": "One faction for the US Army and US Marine Corps. Branch-specific kit: USMC = AH-1Z, ACV (AAV-7 retired Sep 2025), JLTV, M27 IAR, SMAW, MARPAT, HIMARS, no tanks; Army = Abrams, Bradley, Stryker, AH-64E, UH-60, JLTV/M-ATV/MaxxPro, OCP, NGSW (M7/M250) entering service. 2025 Army Transformation Initiative stopped Humvee/JLTV procurement, M10 Booker, Gray Eagle and AH-64D. Early-game patron for counter-terror work in the Middle East and Horn of Africa. Game assignment of which vehicles the US faction fields in each theatre (and whether the player can buy MRAPs/Bradley/Abrams) remains an open design question; the vehicles list records real-world use. Job 7: usa appears in mindanao_sulu at low strength only, as a small non-combat advise-and-assist presence (the counter-terror support mission in the southern Philippines that began as Operation Pacific Eagle-Philippines in 2017), never as a combat force.",
+  "notes": "One faction for the US Army and US Marine Corps. Branch-specific kit: USMC = AH-1Z, ACV (AAV-7 retired Sep 2025), JLTV, M27 IAR, SMAW, MARPAT, HIMARS, no tanks; Army = Abrams, Bradley, Stryker, AH-64E, UH-60, JLTV/M-ATV/MaxxPro, OCP, NGSW (M7/M250) entering service. 2025 Army Transformation Initiative stopped Humvee/JLTV procurement, M10 Booker, Gray Eagle and AH-64D. Early-game patron for counter-terror work in the Middle East and Horn of Africa. The existing voxel models (AH-1Z, MaxxPro, M-ATV, Bradley, Abrams) are fielded in game by their real operators, so usa fields all five (Captain-confirmed 2026-10-10); what the player can buy follows player_trade (the unlock lists stay proposed). Job 7: usa appears in mindanao_sulu at low strength only, as a small non-combat advise-and-assist presence (the counter-terror support mission in the southern Philippines that began as Operation Pacific Eagle-Philippines in 2017), never as a combat force. Sells to the player at rep 5/15/30/45/60/75 (thresholds Captain-confirmed 2026-10-10; were 10/25/40/55/70/85); the unlock lists and prices stay proposed.",
   "proposed": [
     "doctrine.ai_tuning",
     "relations.player",
@@ -631,7 +631,7 @@
     "contract_types",
     "campaign_tier",
     "unit_templates (game squads use 8 men in battle-buddy pairs)",
-    "player_trade.rep_tiers",
+    "player_trade.rep_tiers (unlock lists and prices; the thresholds 5/15/30/45/60/75 are Captain-confirmed 2026-10-10)",
     "relations.player",
     "unit_templates.usa_game_patrol",
     "theatres (mexico_cartel_belt is a game what-if; US forces are not deployed in Mexico)"

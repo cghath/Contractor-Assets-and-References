@@ -166,13 +166,13 @@
       "vehicle_id": "maxxpro",
       "role": "mrap",
       "prevalence": "common",
-      "notes": "Ex-military MaxxPro MRAPs bought surplus, repainted (game assignment proposal)."
+      "notes": "Ex-military MaxxPro MRAPs bought surplus, repainted (game assignment Captain-confirmed 2026-10-10)."
     },
     {
       "vehicle_id": "matv",
       "role": "mrap",
       "prevalence": "uncommon",
-      "notes": "Surplus M-ATVs (game assignment proposal)."
+      "notes": "Surplus M-ATVs (game assignment Captain-confirmed 2026-10-10)."
     },
     {
       "vehicle_id": "armored_suv",
@@ -367,13 +367,12 @@
     ],
     "escalation": "Repeated defeats raise Halcyon's tier: more MRAPs, helicopter QRF, then a named team leader who recurs as a mini-boss."
   },
-  "notes": "FICTIONAL company; no real contractor, logo or person is depicted. Inspired by large Western private security and military contractors. An ordinary rival that mirrors the player most closely (same doctrine, better funding); Captain chose pmc_black_sable as the main nemesis (2026-10-10). The name Halcyon is kept as is: any resemblance to a real security firm is coincidental (Captain-confirmed (2026-10-10)). Relations with usa, gbr and Gulf states are business ties, not alliances; those states never deploy alongside it in game. Its use of MRAPs and M-ATVs is a game assignment proposal (open question on who fields MRAPs).",
+  "notes": "FICTIONAL company; no real contractor, logo or person is depicted. Inspired by large Western private security and military contractors. An ordinary rival that mirrors the player most closely (same doctrine, better funding); Captain chose pmc_black_sable as the main nemesis (2026-10-10). The name Halcyon is kept as is: any resemblance to a real security firm is coincidental (Captain-confirmed (2026-10-10)). Relations with usa, gbr and Gulf states are business ties, not alliances; those states never deploy alongside it in game. Its MaxxPros and M-ATVs are its game assignment, Captain-confirmed (2026-10-10): the existing voxel models are fielded by the operators listed in their catalogue files.",
   "proposed": [
     "everything (fictional faction): name, flag_colors, relations, theatres",
     "rivalry (whole object)",
     "doctrine.ai_tuning",
     "unit_templates (driver is a game role)",
-    "vehicles (MaxxPro/M-ATV game assignment)",
     "contract_types.as_target",
     "body_armor (game tier mapping)",
     "traits (rival_pmc is a game tag)"

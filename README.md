@@ -96,4 +96,4 @@ Colours come from the palette enum `P` and the scheme table `SCHEMES`.
 
 ## Factions, vehicles and worldspaces
 
-Real-world faction data (`factions/`), a real-vehicle catalogue with modelling notes and photo links (`reference/vehicles/`), and proc-gen region specs (`worldspaces/`). Start with [docs/factions_handoff.md](docs/factions_handoff.md). For building and rendering models, see [docs/modelling_guide.md](docs/modelling_guide.md).
+Real-world faction data (`factions/`), a real-vehicle catalogue with modelling notes and photo links (`reference/vehicles/`), and proc-gen region specs (`worldspaces/`). Start with [docs/factions_handoff.md](docs/factions_handoff.md); each folder has a README ([factions](factions/README.md), [vehicles](reference/vehicles/README.md), [worldspaces](worldspaces/README.md)). For building and rendering models, see [docs/modelling_guide.md](docs/modelling_guide.md).

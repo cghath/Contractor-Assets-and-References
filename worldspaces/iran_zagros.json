@@ -200,7 +200,7 @@
   "captain_confirmed": [
     "map_size_km 20 x 20 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
     "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
-    "materials accepted as the next voxel_world.gd additions (Captain, 2026-10-10); not yet in the game: STONE #8f8676, BRICK #9c5a3c, CINDER_BLOCK #9a978f, DIRT_BERM #8a6f4e, SANDBAG #b8a378, CORRUGATED_IRON #8b8e8c, GLASS #9fbcc4",
+    "materials accepted (Captain, 2026-10-10) and added to voxel_world.gd (Contractor dev, commit 1ec1417): STONE #8f8676, BRICK #9c5a3c, CINDER_BLOCK #9a978f, DIRT_BERM #8a6f4e, SANDBAG #b8a378, CORRUGATED_IRON #8b8e8c, GLASS #9fbcc4",
     "iraqi_militias is not added here: the Iraq-Iran border gap is answered by the new iraq_iran_border theatre (Captain, 2026-10-10)"
   ],
   "proposed": [

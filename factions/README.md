@@ -5,7 +5,7 @@ Real-world-inspired factions for Contractor, as of October 2026: 80 ids (the pla
 - `factions/<id>.json`: one file per faction (schema below).
 - [alliances.json](alliances.json): 48 alliances, treaties and blocs, proposed game rules (side-lock, war joining, reputation spill-over, selling) and the full 80 x 80 relations matrix.
 - [ALLIANCES.md](ALLIANCES.md): the same in plain words, with the change log and open questions.
-- Vehicles live in `../reference/vehicles/` and theatres in `../worldspaces/`. Validate with `python3 tools/validate_pack.py`.
+- Vehicles live in `../reference/vehicles/` (index: [README.md](../reference/vehicles/README.md)) and theatres in `../worldspaces/`. Validate with `python3 tools/validate_pack.py`.
 
 ## Faction file schema (short)
 

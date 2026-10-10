@@ -1,6 +1,8 @@
 # Alliances and the relations matrix: handoff sheet
 
-Snapshot as of 2026-10-10 09:30 UTC. Branch `factions-worldspaces` (draft PR #2). This is job 4 of 5, run one job at a time:
+**Status (final, 2026-10-10): done.** Job 4 wrote `factions/alliances.json` (47 alliances; 48 since Job 7 added `monusco`), `factions/ALLIANCES.md` and the relations matrix, now 80 x 80 for the 80-id roster, and reconciled every faction file. All of its open questions were answered by Captain on 2026-10-10 (below). Job 9 (final validation) lowered the usa/gbr/can selling thresholds to 5/15/30/45/60/75 (Captain-confirmed). The validator reports 0 errors and 0 warnings. The brief below is kept as written for the record.
+
+Original brief (snapshot as of 2026-10-10 09:30 UTC). Branch `factions-worldspaces` (draft PR #2). This was job 4 of 5, run one job at a time:
 
 1. middle_east_states
 2. me_terror
@@ -8,7 +10,7 @@ Snapshot as of 2026-10-10 09:30 UTC. Branch `factions-worldspaces` (draft PR #2)
 4. **alliances**
 5. worldspaces
 
-It starts **only after all 76 faction files exist**, because it reconciles all of them. Game rules are in [factions_handoff.md](factions_handoff.md).
+It started only after all faction files existed (77 at the time, not 76 as first written; the roster has 80 since Job 7), because it reconciles all of them. Game rules are in [factions_handoff.md](factions_handoff.md).
 
 ## Why this job matters
 
@@ -17,7 +19,7 @@ The campaign is a persistent war, with contracts negotiated MW5-style, and allia
 - **Side-locking:** working for one side locks the player out of its enemies' contracts for a while. The game needs to know who counts as an "enemy" of whom.
 - **War joining:** when a faction is attacked in the simulated war, its treaty partners may join. That moves fronts and posts contracts.
 - **Reputation spill-over:** helping or hurting a faction moves the player's reputation with its allies and enemies.
-- **Selling to the player:** the USA, GB and Canada sell gear and vehicles once the player has enough reputation. Whether other allies sell too is an open question.
+- **Selling to the player:** the USA, GB and Canada sell gear and vehicles once the player has enough reputation. Whether other allies sell too was an open question. Answered (Captain, 2026-10-10): the non-Five-Eyes NATO members sell at rep 20/40/60/80 (tur does not), sau, are and qat at rep 40/60/80, che and aut at 20/40/60 and krg_peshmerga basic kit at 30/50; usa, gbr and can sell at 5/15/30/45/60/75.
 
 Today each faction file carries its own `relations` (about 1,400 entries across the 41 existing files) and free-form `blocs` tags. These were written by different agents, so they aren't symmetric, and some tags are inconsistent. This job turns them into one source of truth.
 
@@ -155,7 +157,13 @@ Normalise these:
 
 ## Open questions for Captain
 
+All answered by Captain on 2026-10-10 and applied in Job 4 (thresholds for usa/gbr/can in Job 9); see "Captain's decisions (2026-10-10)" in [factions_handoff.md](factions_handoff.md).
+
 - Side-lock length: is a 3-10 in-game-day range right?
-- Should NATO non-Five-Eyes allies (for example pol or fra) sell to the player at high reputation? The default is no for now; it's listed as a proposal.
-- Should reputation spill-over apply across the whole matrix or only within alliances? The default is the whole matrix, weighted as above.
-- Israel and the Gulf states: client-only, or also sellers? The default is client-only.
+  - **Answered:** 2-4 in-game weeks (14-28 days), scaled by contract severity.
+- Should NATO non-Five-Eyes allies (for example pol or fra) sell to the player at high reputation? The default was no.
+  - **Answered:** yes, at higher thresholds than usa/gbr/can (rep 20/40/60/80); tur does not sell.
+- Should reputation spill-over apply across the whole matrix or only within alliances? The default was the whole matrix.
+  - **Answered:** only between factions that share an alliance.
+- Israel and the Gulf states: client-only, or also sellers? The default was client-only.
+  - **Answered:** sau, are and qat sell at high reputation (rep 40/60/80; the unlock lists are proposed); isr hires the player but never sells.

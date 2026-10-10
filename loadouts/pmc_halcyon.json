@@ -565,23 +565,9 @@
      "grenades": [
       {"id": "m67", "name": "M67 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"},
       {"id": "an_m8", "name": "AN-M8 HC white smoke", "kind": "smoke_white", "count": 2, "game_item_id": "smoke_grenade"},
-      {
-       "id": "m18_green",
-       "name": "M18 green signal smoke",
-       "kind": "smoke_green",
-       "count": 1,
-       "game_item_id": null,
-       "game_substitute": "smoke_grenade"
-      },
+      {"id": "m18_green", "name": "M18 green signal smoke", "kind": "smoke_green", "count": 1, "game_item_id": "smoke_green"},
       {"id": "m18_red", "name": "M18 red signal smoke", "kind": "smoke_red", "count": 1, "game_item_id": null, "game_substitute": "smoke_grenade"},
-      {
-       "id": "m18_violet",
-       "name": "M18 violet signal smoke",
-       "kind": "smoke_violet",
-       "count": 1,
-       "game_item_id": null,
-       "game_substitute": "smoke_grenade"
-      },
+      {"id": "m18_violet", "name": "M18 violet signal smoke", "kind": "smoke_violet", "count": 1, "game_item_id": "smoke_purple"},
       {"id": "m84", "name": "M84 stun grenade", "kind": "flash", "count": 1, "game_item_id": "flashbang"}
      ],
      "armor": {
@@ -631,7 +617,9 @@
       ["m17", 1],
       ["mag_9mm", 3],
       ["frag_grenade", 1],
-      ["smoke_grenade", 5],
+      ["smoke_grenade", 3],
+      ["smoke_green", 1],
+      ["smoke_purple", 1],
       ["flashbang", 1],
       ["ifak", 1],
       ["tourniquet", 2],
@@ -826,16 +814,7 @@
       "ammo": {"id": "mag_9mm", "round": "9x19mm FMJ (NATO ball)", "game_round_id": "9x19_fmj", "rounds_per_mag": 15, "count": 3, "game_item_id": "mag_9mm"}
      },
      "launcher": null,
-     "grenades": [
-      {
-       "id": "m18_violet",
-       "name": "M18 violet signal smoke",
-       "kind": "smoke_violet",
-       "count": 1,
-       "game_item_id": null,
-       "game_substitute": "smoke_grenade"
-      }
-     ],
+     "grenades": [{"id": "m18_violet", "name": "M18 violet signal smoke", "kind": "smoke_violet", "count": 1, "game_item_id": "smoke_purple"}],
      "armor": {
       "vest": {"id": "aircrew_vest", "name": "Aircrew survival armour vest (AIRSAVE class)", "tier": "light", "game_item_id": "plate_carrier_light"},
       "plates": {
@@ -877,7 +856,7 @@
       ["mag_556", 4],
       ["m17", 1],
       ["mag_9mm", 3],
-      ["smoke_grenade", 1],
+      ["smoke_purple", 1],
       ["ifak", 1],
       ["tourniquet", 2],
       ["pressure_bandage", 2],
@@ -1425,23 +1404,9 @@
      "grenades": [
       {"id": "m67", "name": "M67 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"},
       {"id": "an_m8", "name": "AN-M8 HC white smoke", "kind": "smoke_white", "count": 2, "game_item_id": "smoke_grenade"},
-      {
-       "id": "m18_green",
-       "name": "M18 green signal smoke",
-       "kind": "smoke_green",
-       "count": 1,
-       "game_item_id": null,
-       "game_substitute": "smoke_grenade"
-      },
+      {"id": "m18_green", "name": "M18 green signal smoke", "kind": "smoke_green", "count": 1, "game_item_id": "smoke_green"},
       {"id": "m18_red", "name": "M18 red signal smoke", "kind": "smoke_red", "count": 1, "game_item_id": null, "game_substitute": "smoke_grenade"},
-      {
-       "id": "m18_violet",
-       "name": "M18 violet signal smoke",
-       "kind": "smoke_violet",
-       "count": 1,
-       "game_item_id": null,
-       "game_substitute": "smoke_grenade"
-      },
+      {"id": "m18_violet", "name": "M18 violet signal smoke", "kind": "smoke_violet", "count": 1, "game_item_id": "smoke_purple"},
       {"id": "m84", "name": "M84 stun grenade", "kind": "flash", "count": 1, "game_item_id": "flashbang"}
      ],
      "armor": {
@@ -1484,7 +1449,9 @@
       ["m17", 1],
       ["mag_9mm", 3],
       ["frag_grenade", 1],
-      ["smoke_grenade", 5],
+      ["smoke_grenade", 3],
+      ["smoke_green", 1],
+      ["smoke_purple", 1],
       ["flashbang", 1],
       ["ifak", 1],
       ["tourniquet", 2],
@@ -1678,16 +1645,7 @@
       "ammo": {"id": "mag_9mm", "round": "9x19mm FMJ (NATO ball)", "game_round_id": "9x19_fmj", "rounds_per_mag": 15, "count": 3, "game_item_id": "mag_9mm"}
      },
      "launcher": null,
-     "grenades": [
-      {
-       "id": "m18_violet",
-       "name": "M18 violet signal smoke",
-       "kind": "smoke_violet",
-       "count": 1,
-       "game_item_id": null,
-       "game_substitute": "smoke_grenade"
-      }
-     ],
+     "grenades": [{"id": "m18_violet", "name": "M18 violet signal smoke", "kind": "smoke_violet", "count": 1, "game_item_id": "smoke_purple"}],
      "armor": {
       "vest": {"id": "aircrew_vest", "name": "Aircrew survival armour vest (AIRSAVE class)", "tier": "light", "game_item_id": "plate_carrier_light"},
       "plates": {
@@ -1729,7 +1687,7 @@
       ["mag_556", 4],
       ["m17", 1],
       ["mag_9mm", 3],
-      ["smoke_grenade", 1],
+      ["smoke_purple", 1],
       ["ifak", 1],
       ["tourniquet", 2],
       ["pressure_bandage", 2],

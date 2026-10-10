@@ -855,14 +855,7 @@
      "grenades": [
       {"id": "m67", "name": "M67 fragmentation grenade", "kind": "frag", "count": 2, "game_item_id": "frag_grenade"},
       {"id": "an_m8", "name": "AN-M8 HC white smoke", "kind": "smoke_white", "count": 1, "game_item_id": "smoke_grenade"},
-      {
-       "id": "m18_green",
-       "name": "M18 green signal smoke",
-       "kind": "smoke_green",
-       "count": 1,
-       "game_item_id": null,
-       "game_substitute": "smoke_grenade"
-      },
+      {"id": "m18_green", "name": "M18 green signal smoke", "kind": "smoke_green", "count": 1, "game_item_id": "smoke_green"},
       {"id": "m18_red", "name": "M18 red signal smoke", "kind": "smoke_red", "count": 1, "game_item_id": null, "game_substitute": "smoke_grenade"}
      ],
      "armor": {
@@ -899,7 +892,8 @@
       ["m17", 1],
       ["mag_9mm", 2],
       ["frag_grenade", 2],
-      ["smoke_grenade", 3],
+      ["smoke_grenade", 2],
+      ["smoke_green", 1],
       ["ifak", 1],
       ["tourniquet", 1],
       ["pressure_bandage", 2],

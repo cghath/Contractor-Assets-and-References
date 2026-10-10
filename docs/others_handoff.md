@@ -1,6 +1,8 @@
 # Neutrals, Africa, Central Asia, cartels and rival PMCs (`others`): handoff sheet
 
-Snapshot as of 2026-10-10 09:30 UTC. Branch `factions-worldspaces` (draft PR #2). This is job 3 of 5, run one job at a time:
+**Status (final, 2026-10-10): done.** Job 3 wrote all 14 files (11:05 UTC) and the catalogue files `rg32m`, `narco_truck` and `armored_suv`; the planned `ascod_ulan` and `dnxi` became variants of `pizarro` (Ulan) and `sandcat` (DN-XI), and `ford_ranger` got its own file in Job 4 (Captain's decision). Captain answered all its open questions on 2026-10-10 (below). Since Job 7, m23 and cod (eastern DR Congo) are in the separate central_africa bloc; this bloc is still these 14. The validator reports 0 errors and 0 warnings. The brief below is kept as written for the record.
+
+Original brief (snapshot as of 2026-10-10 09:30 UTC). Branch `factions-worldspaces` (draft PR #2). This was job 3 of 5, run one job at a time:
 
 1. middle_east_states
 2. me_terror
@@ -43,11 +45,11 @@ Fourteen files, `factions/<id>.json`, plus catalogue files for new vehicles. The
   - `criminal` for the cartels and `pmc` for the PMCs.
 - **Player client:**
   - The neutral states and Mexico can hire the player.
-  - The SDF, Peshmerga, Somalia and sahel_aes can hire the player. sahel_aes works with africa_corps, so expect few contracts or harsh terms; record this as a proposal.
-  - afg_taliban is a case for Captain. The default is `player_client: false` and neutral-to-hostile, as an open question.
+  - The SDF, Peshmerga, Somalia and sahel_aes can hire the player. sahel_aes works with africa_corps, so expect few contracts or harsh terms; record this as a proposal. Answered (Captain, 2026-10-10): sahel_aes stays a rare client on harsh terms, relation -10 with the player.
+  - afg_taliban is a case for Captain. The default is `player_client: false` and neutral-to-hostile, as an open question. Answered (Captain, 2026-10-10): a limited client, see below.
   - The cartels are hostile and never hire the player.
   - Rival PMCs are hostile and never hire the player, but they appear as `rival_pmc` and bounty hunters.
-- **Selling:** che and aut can sell to the player as arms markets, with rep tiers. Record this as a proposal and keep it neutral. The others don't sell, except possibly the Peshmerga for basic kit (a proposal).
+- **Selling:** che and aut can sell to the player as arms markets, with rep tiers. Record this as a proposal and keep it neutral. The others don't sell, except possibly the Peshmerga for basic kit (a proposal). Answered (Captain, 2026-10-10): che and aut sell at rep 20/40/60 and krg_peshmerga sells basic kit at rep 30/50.
 - **Tone:** factual and neutral. Cartel violence and tactics stay at game level: roadblocks, armored "monster" trucks, drones, ambushes. No real operational detail.
 
 ## Roster: baseline facts to verify and expand
@@ -108,9 +110,13 @@ The fictional vehicles (`narco_truck`, `armored_suv`) are inspired-by types. Giv
 
 ## Open questions for Captain
 
-Answered by Captain on 2026-10-10 (Taliban as a limited client; che and aut arms markets on; pmc_black_sable is the nemesis; sahel_aes rare client): see "Captain's decisions (2026-10-10)" in [factions_handoff.md](factions_handoff.md).
+All answered by Captain on 2026-10-10 and applied in Job 4; see "Captain's decisions (2026-10-10)" in [factions_handoff.md](factions_handoff.md).
 
-- Can the Taliban ever hire the player? The default is no: it's neutral-to-hostile and an anti-ISIS-K target-of-opportunity faction.
+- Can the Taliban ever hire the player? The default was no.
+  - **Answered:** yes, as a limited client: player_client true, alignment neutral, relation -10 both ways with the player; as_client counter-ISIS-K operations, convoy escort and infrastructure protection. It never sells gear.
 - Should Switzerland and Austria act as arms markets for the player, and at what reputation?
-- Which rival PMC is the main nemesis? The default proposal is `pmc_halcyon`, since it mirrors the player most closely.
-- Should sahel_aes hire a Western PMC while partnered with africa_corps? The default is rarely, at harsh terms.
+  - **Answered:** yes. che and aut sell at rep 20/40/60, and krg_peshmerga sells basic kit at rep 30/50.
+- Which rival PMC is the main nemesis? The default proposal was `pmc_halcyon`.
+  - **Answered:** pmc_black_sable (the Gulf-funded rival) is the nemesis; pmc_halcyon is an ordinary rival. The rest of each rivalry object stays proposed.
+- Should sahel_aes hire a Western PMC while partnered with africa_corps? The default was rarely, at harsh terms.
+  - **Answered:** yes, rarely and on harsh terms, with relation -10 with the player.

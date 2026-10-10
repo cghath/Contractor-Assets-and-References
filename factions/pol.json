@@ -194,7 +194,7 @@
       "vehicle_id": "abrams",
       "role": "mbt",
       "prevalence": "signature",
-      "notes": "M1A1 FEP and M1A2 SEPv3 (~300); existing voxel model. Real-world operator; game assignment is a proposal."
+      "notes": "M1A1 FEP and M1A2 SEPv3 (~300); existing voxel model. Real-world operator, so it fields it in game (Captain-confirmed 2026-10-10)."
     },
     {
       "vehicle_id": "patria_amv",
@@ -225,6 +225,12 @@
       "role": "ifv",
       "prevalence": "uncommon",
       "notes": "New amphibious IFV, deliveries from 2025."
+    },
+    {
+      "vehicle_id": "matv",
+      "role": "mrap",
+      "prevalence": "uncommon",
+      "notes": "About 124 M-ATVs (M1240A1 with the underbody kit): 45 with the special forces, plus 79 ex-US Army vehicles delivered to the Land Forces in January 2024 under EDA; existing voxel model. Fielded in game by its real operators (Captain-confirmed 2026-10-10)."
     },
     {
       "vehicle_id": "cougar",
@@ -443,7 +449,7 @@
       "only if the player works for this nation's enemies: intel_theft"
     ]
   },
-  "notes": "Early-game hook: Polish contingents in Iraq/Kuwait and UNIFIL can post counter-terror and base-security contracts in mesopotamia and lebanon_south; the main Polish role is mid/late campaign in the suwalki_gap and baltic_coast. Real-world: Poland operates Abrams (M1A1 FEP, M1A2 SEPv3) and is buying 96 AH-64E; it does not operate AH-1Z, Bradley or MaxxPro (it does field M-ATV and Cougar). Weapons that use 7.62x54R are being retired, so most Polish squad weapons cannot disable vehicles under the game rule; the WKW Wilk (.50) can.",
+  "notes": "Early-game hook: Polish contingents in Iraq/Kuwait and UNIFIL can post counter-terror and base-security contracts in mesopotamia and lebanon_south; the main Polish role is mid/late campaign in the suwalki_gap and baltic_coast. Real-world: Poland operates Abrams (M1A1 FEP, M1A2 SEPv3) and is buying 96 AH-64E; it does not operate AH-1Z, Bradley or MaxxPro (it does field M-ATV and Cougar). The existing voxel models are fielded in game by their real operators (Captain-confirmed 2026-10-10). Weapons that use 7.62x54R are being retired, so most Polish squad weapons cannot disable vehicles under the game rule; the WKW Wilk (.50) can.",
   "proposed": [
     "campaign_tier",
     "alignment_to_player",
@@ -462,6 +468,7 @@
     "https://en.wikipedia.org/wiki/Borsuk_(infantry_fighting_vehicle)",
     "https://en.wikipedia.org/wiki/AHS_Krab",
     "https://en.wikipedia.org/wiki/K239_Chunmoo",
-    "https://en.wikipedia.org/wiki/PT-91_Twardy"
+    "https://en.wikipedia.org/wiki/PT-91_Twardy",
+    "https://militarnyi.com/uk/news/polshha-otrymaye-79-bronemashyn-oshkosh-m-atv-vid-ssha/"
   ]
 }

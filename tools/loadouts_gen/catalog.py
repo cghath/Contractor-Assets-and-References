@@ -476,9 +476,11 @@ GRENADES = {
  'signal_violet': ('Violet signal smoke, national issue', 'smoke_violet'),
  'm84': ('M84 stun grenade', 'flash'), 'stun_nato': ('Stun grenade, national issue (M84 class)', 'flash'),
 }
-GRENADE_GAME = {'frag': 'frag_grenade', 'smoke_white': 'smoke_grenade', 'flash': 'flashbang'}
+GRENADE_GAME = {'frag': 'frag_grenade', 'smoke_white': 'smoke_grenade', 'flash': 'flashbang',
+                'smoke_green': 'smoke_green', 'smoke_violet': 'smoke_purple'}
 # proposed new game ids for signal smoke (Q7); game_substitute smoke_grenade
-GRENADE_NEW = {'smoke_green': 'smoke_green', 'smoke_red': 'smoke_red', 'smoke_violet': 'smoke_violet'}
+# green and violet signal smoke exist in the game (smoke_green, smoke_purple); red doesn't yet
+GRENADE_NEW = {'smoke_red': 'smoke_red'}
 
 # ARMOR -------------------------------------------------------------------
 # helmets: id -> (name, default tier, designation 'specific'|'class', real rating text)

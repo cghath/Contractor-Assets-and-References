@@ -480,14 +480,7 @@
        "count": 1,
        "game_item_id": "smoke_grenade"
       },
-      {
-       "id": "signal_green",
-       "name": "Green signal smoke, national issue",
-       "kind": "smoke_green",
-       "count": 1,
-       "game_item_id": null,
-       "game_substitute": "smoke_grenade"
-      },
+      {"id": "signal_green", "name": "Green signal smoke, national issue", "kind": "smoke_green", "count": 1, "game_item_id": "smoke_green"},
       {
        "id": "signal_red",
        "name": "Red signal smoke, national issue",
@@ -536,7 +529,8 @@
       ["m17", 1],
       ["mag_9mm", 2],
       ["frag_grenade", 2],
-      ["smoke_grenade", 3],
+      ["smoke_grenade", 2],
+      ["smoke_green", 1],
       ["ifak", 1],
       ["tourniquet", 1],
       ["pressure_bandage", 2],

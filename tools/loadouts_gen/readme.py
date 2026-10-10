@@ -87,7 +87,7 @@ def write(fids, wi, ai, ri):
     L.append(f"| Launchers | {len(lnch)} | {len(l_in)} map to the 6 design-doc launchers, which have no items.json entry yet | 6 launcher items ({', '.join(GAME_LAUNCHER_IDS[f] for f in fams)}) and {len(lrids)} round items ({', '.join(lrids)}); AT4 and NLAW are single-shot; {len(l_out)} other launchers use a game_substitute |")
     L.append(f"| Underbarrel launchers / their ammo | {len(ugl)} / {len(ugla)} | 0 | {len(ugl)} / {len(ugla)} |")
     L.append(f"| Optics (class ids) | {len(optics)} | 0 | {len(optics)} |")
-    L.append(f"| Hand grenades | {len(wi['grenades'])} models | frag, white smoke and stun covered by frag_grenade, smoke_grenade, flashbang | {len(gren_new)} signal smokes ({', '.join(gren_new)}) |")
+    L.append(f"| Hand grenades | {len(wi['grenades'])} models | frag, white smoke, stun and green/violet signal smoke covered by frag_grenade, smoke_grenade, flashbang, smoke_green, smoke_purple | {len(gren_new)} signal smoke ({', '.join(gren_new)}) |")
     L.append(f"| Helmets | {len(hel)} models | {len(hel) - len(nonbal)} map to helmet_bump / helmet / helmet_heavy by tier | {len(nonbal)} cosmetic non-ballistic helmets ({', '.join(h['proposed_game_id'] for h in nonbal)}); models are skins of the tier items |")
     L.append(f"| Vests / plate carriers | {len(ves)} models | all map to the 3 carrier tiers | visual variants only |")
     L.append(f"| Plates | {len(pla)} models | ceramic, steel, PE and side plates map to existing plates | 1 new item: plate_steel_light (light-tier steel plate; used by {len(lightsteel)} factions: {', '.join(sorted(lightsteel))}). Until it is built, `game_kit` uses plate_pe_l3 in its place |")

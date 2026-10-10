@@ -219,7 +219,7 @@
   "captain_confirmed": [
     "map_size_km 20 x 16 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
     "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
-    "materials accepted as the next voxel_world.gd additions (Captain, 2026-10-10); not yet in the game: CINDER_BLOCK #9a978f, TARP #3f6d8c, PLASTER #e3dccb, LIMESTONE #d6caa8, STONE #8f8676, ROOF_TILE #a4553b, GLASS #9fbcc4, CORRUGATED_IRON #8b8e8c, DIRT_BERM #8a6f4e, SANDBAG #b8a378",
+    "materials accepted (Captain, 2026-10-10) and added to voxel_world.gd (Contractor dev, commit 1ec1417): CINDER_BLOCK #9a978f, TARP #3f6d8c, PLASTER #e3dccb, LIMESTONE #d6caa8, STONE #8f8676, ROOF_TILE #a4553b, GLASS #9fbcc4, CORRUGATED_IRON #8b8e8c, DIRT_BERM #8a6f4e, SANDBAG #b8a378",
     "LHD restricted to evacuation contracts via the fishing harbour; the restriction stays (Captain, 2026-10-10)"
   ],
   "proposed": [

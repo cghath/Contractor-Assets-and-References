@@ -4,6 +4,7 @@ Snapshot as of 2026-10-10 09:25 UTC. Branch `factions-worldspaces` (draft PR #2)
 
 ## Status
 
+- **Job 9 (2026-10-10, final validation):** Captain confirmed that the low-plausibility listings stay at low strength (blr in eastern_ukraine and baltic_coast; fra, bel and esp in sahel; jpn in arctic_north and korean_dmz; chn in korean_dmz and kashmir_loc; are in yemen_red_sea; usa in mexico_cartel_belt) and that rus stays on alpine_europe as a what-if. Each worldspace's `captain_confirmed` list records it. No worldspace question is open. The validator reports 0 errors and 0 warnings.
 - **Job 7 (2026-10-10): 3 new theatres and Captain's decisions.** `mindanao_sulu` (southern Philippines: isis East Asia cells vs phl, usa advisers; coastal, LHD), `iraq_iran_border` (Diyala and Zagros-foothill borderlands: irq, krg_peshmerga, iraqi_militias, irn, isis remnants) and `eastern_congo` (North Kivu and Ituri: cod, m23, adf, with ind and chn as UN peacekeepers) are written; all three are early-game and 22-24 km per side. There are now 26 theatres; 11 are early-game and 14 have `lhd: true`. alpine_europe gained rus (Russian mountain troops) as a fictional what-if hostile force, alongside the generic arms-trafficker NPCs. Every worldspace file now has a `captain_confirmed` list holding the decisions moved out of `proposed` (map size, hot-zone area, the accepted materials, and per-file decisions: grey-zone escalation, LHD restrictions, qalat walls, Kashmir militants, UNIFIL chn/ind, the iran_zagros and south_china_sea gaps). `tools/validate_pack.py` now checks `factions_present` against each faction's `theatres` both ways; it reports 0 errors and 0 warnings.
 - **Done (Job 5, 2026-10-10).** All 23 theatres are written in `worldspaces/<id>.json`, together with [worldspaces/README.md](../worldspaces/README.md), which has the theatre table, the zone fit, the generator approach and the material registry. The validator reports 0 errors and 0 warnings; the missing-worldspace warnings are gone.
   - Pass 1 covers Middle East and Africa (11). Pass 2 covers Europe, Asia and the Americas (12); it was built in the same job, which answers the pass-2 question below for now.
@@ -17,7 +18,7 @@ Snapshot as of 2026-10-10 09:25 UTC. Branch `factions-worldspaces` (draft PR #2)
   - Should isis list south_china_sea, for phl's counter-terror hook?
   - alpine_europe has no hostile faction.
   - kashmir_loc has no militant faction.
-  - Several low-plausibility listings are flagged in the README: blr in eastern_ukraine and baltic_coast, fra, bel and esp in sahel, jpn in arctic_north, and chn in korean_dmz.
+  - Several low-plausibility listings are flagged in the README: blr in eastern_ukraine and baltic_coast, fra, bel and esp in sahel, jpn in arctic_north, and chn in korean_dmz. Answered in Job 9: they stay at low strength (Captain, 2026-10-10; see the end of this sheet).
 - Earlier note: Captain made the worldspaces the final job: they run after the 3 remaining faction blocs and the alliances job land.
 - The job order is: middle_east_states, then me_terror, then others, then alliances, then worldspaces. Only one job runs at a time.
 - Faction files already list their theatres (see the table below), so `factions_present` can be checked against them.
@@ -167,7 +168,7 @@ Answered by Captain (2026-10-10), applied in Job 7:
 - Hot zones are twice the AREA of a contract zone (8-16 km² vs 2-4 km²), not twice the width.
 - Pass 2 (Europe, Asia and Americas) was built in Job 5 and stays.
 - Map sizes of 16-24 km per side are confirmed.
-- The 18 proposed materials and hex colours are accepted as the next additions to `voxel_world.gd` (recorded only; the game repo is not edited).
+- The 18 proposed materials and hex colours are accepted and were added to `voxel_world.gd` on the game's `dev` branch (commit 1ec1417; colours only so far).
 - Grey-zone maps keep the late-game escalation what-if hot zone, clearly marked fictional.
 - Qalat outer walls need breaching charges, grenade launchers or vehicles to breach; small arms cannot.
 - The LHD restrictions on gaza_west_bank, taiwan_strait and mexico_cartel_belt stay.
@@ -180,6 +181,8 @@ Answered by Captain (2026-10-10), applied in a Job 7 follow-up:
 - m23 stays a hostile non-client (relation -50 with the player, never hires or sells, like the cartels; not attacked by default during ceasefire phases). Recorded in eastern_congo's `captain_confirmed`.
 - chn stays on eastern_congo as the what-if returning MONUSCO engineer and medical unit, clearly marked fictional. Recorded in eastern_congo's `captain_confirmed`.
 
-Still open:
+Answered by Captain (2026-10-10), applied in Job 9 (final validation):
 
-- The low-plausibility listings flagged in the README (blr in eastern_ukraine and baltic_coast; fra, bel and esp in sahel; jpn in arctic_north; chn in korean_dmz) and the new what-if listing of rus mountain troops on alpine_europe are kept at low strength or marked as what-ifs; Captain may want to drop any of them. (chn on eastern_congo is settled, see above.)
+- The low-plausibility listings stay at low strength: blr in eastern_ukraine and baltic_coast; fra, bel and esp in sahel; jpn in arctic_north and korean_dmz; chn in korean_dmz and kashmir_loc; are in yemen_red_sea; usa in mexico_cartel_belt. rus stays on alpine_europe as a fictional what-if (its strength, medium, is unchanged and stays proposed). Each is recorded in that worldspace's `captain_confirmed` list and moved out of `proposed`, and in [worldspaces/README.md](../worldspaces/README.md).
+
+No worldspace question is open.

@@ -1,10 +1,12 @@
 # Contractor faction pack: handoff
 
-Snapshot as of 2026-10-10 11:05 UTC. Captain paused all work at 09:34; the queue has since resumed, and Jobs 1 (middle_east_states), 2 (me_terror) and 3 (others) are done (2 and 3 ran in parallel). The pack lives on branch `factions-worldspaces` (draft PR #2 on the original repo; work now continues on the fork `cghath/Contractor-Assets-and-References`), and the folders on the branch are the live state.
+Snapshot as of 2026-10-10, after Job 9 (final validation). All jobs are done: Captain's 09:34 pause was lifted, Jobs 1 (middle_east_states), 2 (me_terror) and 3 (others) finished by 11:05 UTC (2 and 3 ran in parallel), and Jobs 4-7 and 9 followed. The pack lives on branch `factions-worldspaces` (draft PR #2 on the original repo; work now continues on the fork `cghath/Contractor-Assets-and-References`), and the folders on the branch are the live state.
 
 The Contractor design doc (Claude Doc) is the source of truth for game design. Where it disagrees with this pack, the design doc wins. Anything this pack invents for gameplay is listed under `proposed` in each file, so it can be tuned.
 
 ## Handoffs (start here)
+
+**Status (2026-10-10, Job 9: final validation):** the pack is complete. The vehicle catalogue was checked for duplicates: no true duplicate was found, so nothing was merged and it still has **211 vehicles** (38 high, 63 medium, 110 low priority); `type59`/`t55` and `armored_suv`/`toyota_land_cruiser` are listed as possible duplicates in the new [reference/vehicles/README.md](../reference/vehicles/README.md) (schema, full table, counts, existing models, next models to build, how to add a vehicle). Captain's decisions of 2026-10-10 on the existing voxel models, the usa/gbr/can selling thresholds and the low-plausibility worldspace listings are applied (see "Captain's decisions" below), and the answered questions in the alliances, me_terror and others sheets are marked answered. The loadouts generator was re-run and a second run is byte-identical. The validator reports 0 errors and 0 warnings (also with `--strict`).
 
 **Status (2026-10-10, Job 7 follow-up):** Captain answered the three Job 7 questions (see "Captain's decisions" below): m23 stays a hostile non-client, chn stays on eastern_congo as a fictional what-if MONUSCO unit, and adf, m23 and cod now form a new `central_africa` roster bloc (ROSTER and BLOCS in `tools/factions_workflow.js`, `tools/loadouts_gen/s_central_africa.py`). adf carries the trait `hostile_only`, so the validator's hostile-only check still covers it. The validator reports 0 errors and 0 warnings.
 
@@ -33,6 +35,7 @@ Each job has a sheet in this repo and a matching Claude Doc:
 5. ~~worldspaces.~~ Done (2026-10-10).
 6. ~~loadouts.~~ Done on the fork (2026-10-10).
 7. ~~Job 7: three new theatres, the factions they need, and Captain's worldspace decisions.~~ Done on the fork (2026-10-10).
+8. ~~Job 9: final validation (vehicle duplicate review, `reference/vehicles/README.md`, Captain's decisions of 2026-10-10, stale handoff sheets).~~ Done (2026-10-10).
 
 The loadouts were owned by the "Faction loadout questions" thread, which never pushed any `loadouts/` files. On the fork, the job was taken over at the user's request and is now complete. The "don't touch `loadouts/`" rule is lifted; loadouts changes follow [loadouts_handoff.md](loadouts_handoff.md).
 
@@ -47,7 +50,7 @@ The loadouts were owned by the "Faction loadout questions" thread, which never p
 
 ## Settled game decisions the pack follows
 
-- The player faction is a PMC company (`player`). The USA, GB and Canada are friendly, and reputation unlocks buying their gear and vehicles.
+- The player faction is a PMC company (`player`). The USA, GB and Canada are friendly, and reputation unlocks buying their gear and vehicles, at rep 5/15/30/45/60/75 (Captain-confirmed 2026-10-10; prices are still open).
 - Enemy factions use Chinese, Russian, Iranian or terrorist-style gear depending on region.
 - Contracts come from a regional board and from faction fixers, negotiated MW5-style. Working for one side locks you out of its enemies' contracts for a while.
 - The world is persistent. Factions fight simulated operations between missions, and the war posts matching contracts.
@@ -58,7 +61,7 @@ The loadouts were owned by the "Faction loadout questions" thread, which never p
 - Vehicle armor ignores small-calibre fire; 7.62x54R and up can penetrate.
 - In-game launchers: AT4, RPG-7 (PG-7V, OG-7V), Javelin, MAAWS, NLAW, SMAW.
 - Armor tiers follow Captain's light/medium/heavy rules (see the design doc).
-- Existing voxel models: `uh60`, `ah1z`, `aav7`, `maxxpro`, `matv`, `bradley`, `abrams`, `technical_*`. Their real-world operators are recorded as fact. **Which game faction fields the AH-1Z, MRAPs, Bradley and Abrams is still OPEN**; any assignment in the pack is a proposal.
+- Existing voxel models: `uh60`, `ah1z`, `aav7`, `maxxpro`, `matv`, `bradley`, `abrams`, `technical_*`. Their real-world operators are recorded as fact. The AH-1Z, MaxxPro, M-ATV, Bradley and Abrams are fielded in game by their real operators: their `operators` lists are the game assignment (Captain-confirmed 2026-10-10).
 
 ## Defaults this thread picked (Captain can override)
 
@@ -104,7 +107,7 @@ Answers to the open questions of Jobs 1-3, applied during Job 4. Each one was mo
   - Kashmir keeps generic militant NPCs; no new faction.
   - Hot zones are twice the AREA of a contract zone (8-16 km² vs 2-4 km²).
   - Grey-zone maps keep the late-game escalation what-if hot zone, clearly marked fictional.
-  - The 18 proposed materials and hex colours are accepted as the next additions to `voxel_world.gd` (recorded only; the game repo is not edited).
+  - The 18 proposed materials and hex colours are accepted and were added to `voxel_world.gd` on the game's `dev` branch (commit 1ec1417; colours only so far).
   - Qalat outer walls need breaching charges, grenade launchers or vehicles to breach; small arms cannot (afghan_highlands).
   - The LHD restrictions on gaza_west_bank, taiwan_strait and mexico_cartel_belt stay.
   - Map sizes of 16-24 km per side are confirmed.
@@ -115,6 +118,11 @@ Answers to the open questions of Jobs 1-3, applied during Job 4. Each one was mo
   - m23 stays a **hostile non-client**: relation -50 with the player, never hires or sells (player_client false, sellable false), like the cartels; its units are not attacked by default during ceasefire phases. Moved out of m23.json's `proposed` (alignment, player_client, relations.player, ceasefire phases) and noted as Captain-confirmed in its `notes`; campaign_tier mid stays proposed. Also in eastern_congo's `captain_confirmed` and in m23's loadout notes.
   - China stays on eastern_congo as the what-if returning MONUSCO engineer and medical unit, clearly marked fictional. Marked Captain-confirmed in chn.json (`notes`; the eastern_congo entry left `proposed`), in the `monusco` entry of alliances.json (member_status stays what_if), in worldspaces/eastern_congo.json (`captain_confirmed`, and the factions_present text says "fictional game what-if") and in the docs.
   - New roster bloc **`central_africa`** (Central Africa, eastern DR Congo): adf, m23 and cod, moved out of me_terror and others. Faction files keep `blocs` for alliance ids only, so no new alliance was made and no `blocs` changed (adf stays in islamic_state_network, cod in african_union and global_coalition_against_isis); the bloc lives in ROSTER/BLOCS in `tools/factions_workflow.js`. adf gained the trait `hostile_only`; `tools/validate_pack.py` treats the me_terror bloc plus every faction with that trait as hostile-only (player_client must be false), so adf stays covered and m23 and cod are not checked. Loadout specs moved to `tools/loadouts_gen/s_central_africa.py`; the regenerated `loadouts/` differs only in the three rows' bloc label in its README and one m23 note.
+
+- **Final validation (Job 9; Captain's answers of 2026-10-10):**
+  - **Existing voxel models:** the AH-1Z, MaxxPro, M-ATV, Bradley and Abrams are fielded in game by their REAL operators; each catalogue file's `operators` list is the game assignment. Checked against the faction files: grc was dropped from `bradley` (the US transfer was approved but Greece objected to the first batch's condition, so it fields none), pol was added to `matv` (about 124 M-ATVs), ukr.json now lists `abrams` and `matv` and pol.json lists `matv`. The "game assignment is a proposal" text was moved out of `proposed` or reworded as Captain-confirmed in usa, ukr, pol, rou, grc, sau, pmc_halcyon and pmc_black_sable. player.json no longer lists `ah1z`, `maxxpro` or `matv`, because the player is not a real operator: it gets M-ATVs and MaxxPros only by buying them from usa (player_trade) and the AH-1Z only as a usa CAS call. Captured set pieces (isis, isis_k, hezbollah) stay as decided above; afg_taliban's ex-Afghan-army MaxxPros and M-ATVs are real holdings.
+  - **Selling thresholds:** usa, gbr and can sell at rep 5/15/30/45/60/75 (were 10/25/40/55/70/85). Their `player_trade.rep_tiers` values changed; the unlock lists did not and stay proposed. Recorded in each file's `notes` and `proposed`, in `game_rules.player_trade` of `factions/alliances.json` and in [ALLIANCES.md](../factions/ALLIANCES.md). Prices stay open (economy design).
+  - **Low-plausibility listings stay at low strength:** blr in eastern_ukraine and baltic_coast; fra, bel and esp in sahel; jpn in arctic_north and korean_dmz; chn in korean_dmz and kashmir_loc; are in yemen_red_sea; usa in mexico_cartel_belt. rus stays on alpine_europe as a fictional what-if (its strength, medium, is unchanged). Recorded in each worldspace's `captain_confirmed` list (moved out of `proposed`), in [worldspaces/README.md](../worldspaces/README.md) and in [worldspaces_handoff.md](worldspaces_handoff.md).
 
 ## Roster (canonical ids)
 
@@ -160,6 +168,8 @@ Answers to the open questions of Jobs 1-3, applied during Job 4. Each one was mo
   - factions present, how the frontline moves, contract hooks, insertion (LHD/FOB), and whether it suits the early game
 
 ## Status at this snapshot
+
+**Update, 2026-10-10: Job 9 (final validation) is complete.** Vehicle duplicate review: all 211 files compared by id, name, aliases and variants; no true duplicate, so no merge and no reference rewritten (possible duplicates `type59`/`t55` and `armored_suv`/`toyota_land_cruiser` are left for a decision). New `reference/vehicles/README.md`. Captain's decisions of 2026-10-10 applied (existing voxel models fielded by their real operators; usa/gbr/can sell at rep 5/15/30/45/60/75; the low-plausibility worldspace listings stay at low strength). The alliances, me_terror and others sheets now mark every answered question as answered and show their final state. Loadouts regenerated (`python3 -I tools/loadouts_gen/gen.py --game ../Contractor`; a second run is byte-identical); the only difference from the committed files is the game's item count in `loadouts/README.md` (35 -> 42), because the game repo's `data/items.json` grew. Validator: 0 errors, 0 warnings (also `--strict`).
 
 **Update, 2026-10-10: Job 7 is complete on the fork.** New files: `factions/adf.json`, `factions/m23.json`, `factions/cod.json`, `worldspaces/mindanao_sulu.json`, `worldspaces/iraq_iran_border.json`, `worldspaces/eastern_congo.json`, `reference/vehicles/ch4.json` (FARDC CH-4 drones, low priority) and `loadouts/adf.json`, `m23.json`, `cod.json`.
   - Roster 80 ids (adf in the terror bloc; m23 and cod in the others bloc; all three moved to the new central_africa bloc in the follow-up); 26 theatres (11 early-game, 14 with `lhd: true`). ROSTER and THEATRES in `tools/factions_workflow.js` are updated; the validator reads both from there.
@@ -227,13 +237,13 @@ Current state:
   - `irq` is the Iraqi Security Forces (Army, Federal Police, CTS). Its notes define the game boundary: the PMF is part of the Iraqi state and is not a faction; `iraqi_militias` covers the Iran-aligned factions acting outside state command (irq -> iraqi_militias = -20).
   - `pse_pa` is the PA Security Forces. It lists only 3 vehicles (the spec asks for 4-12) because PA forces are limited to light weapons and light vehicles.
   - Cross-check of the 8 earlier files: relation signs agree across all 11, every vehicle id exists, and israel, gaza_west_bank, iran_zagros and persian_gulf_coast are all covered. One fix: `sau` added to the operators of `toyota_land_cruiser`.
-- **Vehicle catalogue:** 211 vehicles since Job 7, which added `ch4` (CASC CH-4 drone, FARDC; low priority). Before that, 210 vehicles. Job 4 added `ford_ranger` (medium; Captain's decision) and moved the Ranger and Mexican patrol-pickup variants out of `toyota_hilux`. Before that: 209 vehicles (38 high, 62 medium, 109 low priority). Job 3 added `rg32m`, `narco_truck` and `armored_suv`, put DN-XI (sandcat), Pandur Evolution (pandur_ii), Ford Ranger and Mexican patrol pickups (toyota_hilux) and Super Puma (sa330) in as variants, and updated operators on 35 files. Job 2 added `technical_m40`, `technical_rockets` and `technical_zpu` (catalogue files for existing voxel models, all high), `motorcycle` (high, no model yet) and `fast_boat` (Houthi skiff, explosive variant as a game hazard only; medium). It also added the bloc's ids to the operators of `toyota_hilux`, `toyota_land_cruiser`, `technical_dshk`, `technical_zu23`, `technical_spg9`, `fpv_drone`, `shahed136`, `humvee`, `m1117`, `m113`, `t55`, `t72b3`, `bmp1` and `bmp2`. Job 1 added `al_jawad` (Jordanian-built PA armoured vehicle, with the Al-Maha as a variant). `ejder_yalcin` got `syr` and the Ejder 6x6 variant, `mi8` got `irq`, and `toyota_land_cruiser` got `sau`. Earlier: `aras` and `wolf_av` were added at 200, and `ah1z`, `dingo` and `t55` got operator updates.
+- **Vehicle catalogue:** 211 vehicles (38 high, 63 medium, 110 low priority; 13 with an existing voxel model), unchanged by the Job 9 duplicate review, which found no true duplicate; see [reference/vehicles/README.md](../reference/vehicles/README.md). Job 7 added `ch4` (CASC CH-4 drone, FARDC; low priority). Before that, 210 vehicles. Job 4 added `ford_ranger` (medium; Captain's decision) and moved the Ranger and Mexican patrol-pickup variants out of `toyota_hilux`. Before that: 209 vehicles (38 high, 62 medium, 109 low priority). Job 3 added `rg32m`, `narco_truck` and `armored_suv`, put DN-XI (sandcat), Pandur Evolution (pandur_ii), Ford Ranger and Mexican patrol pickups (toyota_hilux) and Super Puma (sa330) in as variants, and updated operators on 35 files. Job 2 added `technical_m40`, `technical_rockets` and `technical_zpu` (catalogue files for existing voxel models, all high), `motorcycle` (high, no model yet) and `fast_boat` (Houthi skiff, explosive variant as a game hazard only; medium). It also added the bloc's ids to the operators of `toyota_hilux`, `toyota_land_cruiser`, `technical_dshk`, `technical_zu23`, `technical_spg9`, `fpv_drone`, `shahed136`, `humvee`, `m1117`, `m113`, `t55`, `t72b3`, `bmp1` and `bmp2`. Job 1 added `al_jawad` (Jordanian-built PA armoured vehicle, with the Al-Maha as a variant). `ejder_yalcin` got `syr` and the Ejder 6x6 variant, `mi8` got `irq`, and `toyota_land_cruiser` got `sau`. Earlier: `aras` and `wolf_av` were added at 200, and `ah1z`, `dingo` and `t55` got operator updates.
 - **Worldspaces (26 of 26 written; 3 added in Job 7: mindanao_sulu, iraq_iran_border, eastern_congo, all early-game, mindanao_sulu with LHD):** see `worldspaces/README.md`. The rest of this entry describes the Job 5 state. 8 theatres are early-game (levant_syria, gaza_west_bank, mesopotamia, yemen_red_sea, sahel, horn_of_africa, afghan_highlands, mexico_cartel_belt); `lhd` is true on the 13 coastal maps. Faction-coverage gaps are listed in the README and in the worldspaces handoff's open questions.
-- **Validation:** partly done in Job 4: relation ids and symmetry are fixed and `factions/README.md` (roster and alliance matrix) is written. Still to do: merge duplicate vehicles and write `reference/vehicles/README.md` and `worldspaces/README.md`.
+- **Validation:** done. Job 4 fixed relation ids and symmetry and wrote `factions/README.md` (roster and alliance matrix); Job 5 wrote `worldspaces/README.md`; Job 9 reviewed the vehicle catalogue for duplicates (none merged) and wrote `reference/vehicles/README.md`. `tools/validate_pack.py` reports 0 errors and 0 warnings (also with `--strict`).
 
 ## Next voxel models to build
 
-These are the high-priority vehicles in the catalogue that have no model yet, as of this snapshot:
+These are the high-priority vehicles in the catalogue that have no model yet, as of this snapshot (26; [reference/vehicles/README.md](../reference/vehicles/README.md) ranks them, early game first):
 
 ah64, bmp1, bmp2, bmp3, boxer, btr82a, ch47, cv90, fpv_drone, gaz_tigr, griffon, jltv, leclerc, leopard2a6, m113, merkava4, mi8, motorcycle, stryker, t64bv, t72b3, t90m, toyota_hilux, type99a, vbci, zbd04a.
 
@@ -243,12 +253,13 @@ Early-game (terrorist) theatres lean on the existing technicals, Hiluxes, BMP/BT
 
 ## Open questions for Captain
 
-- Who fields the AH-1Z, MRAPs, Bradley and Abrams in the game (real-world operators are recorded).
-- Reputation thresholds and prices for buying from the USA, GB and Canada; the values in the files are proposals.
+- Prices for buying from the USA, GB and Canada (economy design); the thresholds are Captain-confirmed (5/15/30/45/60/75), and the unlock lists stay proposals.
+- Hamas's mid-strength early-game tuning in gaza_west_bank: hamas stays early tier (Captain's campaign_tier decision), but the strength itself was not ruled on and stays in hamas.json's `proposed`.
+- Possible duplicate vehicles (not merged): `type59` into `t55` as a variant, and `armored_suv` vs the armoured Land Cruiser in `toyota_land_cruiser`. See [reference/vehicles/README.md](../reference/vehicles/README.md).
 
-## How to resume (current plan, 2026-10-10 09:50 UTC)
+## How to resume (plan of 2026-10-10 09:50 UTC; every job in it is now done)
 
-Captain paused everything at 09:34 UTC. Resume only when Captain says so. Run **one job at a time**, in this order, with one subagent per job. Every job has its own handoff sheet. Give the agent that sheet as its brief, and tell it to read the sheet first.
+Captain paused everything at 09:34 UTC and later resumed the queue. Run **one job at a time**, in this order, with one subagent per job. Every job has its own handoff sheet. Give the agent that sheet as its brief, and tell it to read the sheet first.
 
 | # | Job | Handoff sheet | State |
 |---|---|---|---|
@@ -259,6 +270,7 @@ Captain paused everything at 09:34 UTC. Resume only when Captain says so. Run **
 | 5 | worldspaces: 23 theatres, Middle East and Africa first | [worldspaces_handoff.md](worldspaces_handoff.md) | **Done** (23 of 23, 2026-10-10) |
 | n/a | loadouts | [loadouts_handoff.md](loadouts_handoff.md) | **Done** (Job 6, on the fork; 76 of 76; 79 after Job 7). |
 | 7 | three new theatres (mindanao_sulu, iraq_iran_border, eastern_congo), factions adf, m23, cod, Captain's worldspace decisions | This file and [worldspaces_handoff.md](worldspaces_handoff.md) | **Done** (on the fork, 2026-10-10) |
+| 9 | final validation: vehicle duplicate review, `reference/vehicles/README.md`, Captain's decisions of 2026-10-10, stale handoff sheets | This file | **Done** (2026-10-10) |
 
 ### Job 1 details: finishing the Middle East states
 

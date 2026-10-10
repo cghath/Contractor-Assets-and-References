@@ -188,7 +188,7 @@
       "vehicle_id": "abrams",
       "role": "mbt",
       "prevalence": "uncommon",
-      "notes": "54 M1A2 (first battalion); existing voxel model. Real-world operator; game assignment is a proposal."
+      "notes": "54 M1A2 (first battalion); existing voxel model. Real-world operator, so it fields it in game (Captain-confirmed 2026-10-10)."
     },
     {
       "vehicle_id": "mli84",

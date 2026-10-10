@@ -108,14 +108,14 @@
   "captain_confirmed": [
     "map_size_km 20 x 20 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
     "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
-    "materials accepted as the next voxel_world.gd additions (Captain, 2026-10-10); not yet in the game: BRICK #9c5a3c, CORRUGATED_IRON #8b8e8c, STONE #8f8676, SANDBAG #b8a378, DIRT_BERM #8a6f4e, TARP #3f6d8c, GLASS #9fbcc4",
-    "Kashmir keeps generic militant NPCs; no new faction (Captain, 2026-10-10)"
+    "materials accepted (Captain, 2026-10-10) and added to voxel_world.gd (Contractor dev, commit 1ec1417): BRICK #9c5a3c, CORRUGATED_IRON #8b8e8c, STONE #8f8676, SANDBAG #b8a378, DIRT_BERM #8a6f4e, TARP #3f6d8c, GLASS #9fbcc4",
+    "Kashmir keeps generic militant NPCs; no new faction (Captain, 2026-10-10)",
+    "chn stays as a low-plausibility listing at low strength: road-project engineers and company security in the north-east plateau corner only, no PLA units (Captain, 2026-10-10)"
   ],
   "proposed": [
     "composite (gorge across the LoC, valley corner, north-east plateau)",
     "generator numbers and LoC ridge-following spline",
     "alert-level frontline model",
-    "chn presence as project engineers only",
     "zone_plan and hot zone"
   ],
   "sources": [

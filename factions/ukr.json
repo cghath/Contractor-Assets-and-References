@@ -266,6 +266,18 @@
       "notes": "About 440 donated; existing voxel model."
     },
     {
+      "vehicle_id": "abrams",
+      "role": "mbt",
+      "prevalence": "rare",
+      "notes": "M1A1 SA (31 from the US in 2023, many lost; the survivors serve with the 47th Mechanised Brigade) plus the 49 ex-Australian M1A1 AIM pledged in 2024; existing voxel model. Fielded in game by its real operators (Captain-confirmed 2026-10-10)."
+    },
+    {
+      "vehicle_id": "matv",
+      "role": "mrap",
+      "prevalence": "rare",
+      "notes": "A small number of M-ATVs seen in Ukrainian service from March 2023 (not officially confirmed by the US); existing voxel model. Fielded in game by its real operators (Captain-confirmed 2026-10-10)."
+    },
+    {
       "vehicle_id": "bohdana",
       "role": "artillery",
       "prevalence": "signature",
@@ -468,7 +480,7 @@
       "destroy_air_defense_site (Russian fixers)"
     ]
   },
-  "notes": "Ukraine is a mid-campaign client and battlefield for the eastern_ukraine and black_sea_coast theatres; it does not appear in the early counter-terror game. Real-world operators of the open-question vehicles: Ukraine received 31 M1A1 Abrams from the US (22+ remaining, 49 M1A1 AIM pledged by Australia), 300+ M2A2 ODS-SA Bradleys and 440 MaxxPro; it fields no AH-1Z. Other notable donated kit not listed above: Challenger 2, CV90, Marder, Stryker, Leopard 1A5, PzH 2000, CAESAR, Krab, M777, Patriot. The PKM, SVD and NSV use 7.62x54R/12.7 mm, which in game can disable vehicles. Drones are the defining feature: the game should model the FPV threat as an audio-cued hazard countered by jammers, shotguns and cover, not as a scripted kill.",
+  "notes": "Ukraine is a mid-campaign client and battlefield for the eastern_ukraine and black_sea_coast theatres; it does not appear in the early counter-terror game. The existing voxel models are fielded in game by their real operators (Captain-confirmed 2026-10-10): Ukraine received 31 M1A1 Abrams from the US (22+ remaining, 49 M1A1 AIM pledged by Australia), 300+ M2A2 ODS-SA Bradleys, 440 MaxxPro and a small number of M-ATVs (seen from 2023); it fields no AH-1Z. Other notable donated kit not listed above: Challenger 2, CV90, Marder, Stryker, Leopard 1A5, PzH 2000, CAESAR, Krab, M777, Patriot. The PKM, SVD and NSV use 7.62x54R/12.7 mm, which in game can disable vehicles. Drones are the defining feature: the game should model the FPV threat as an audio-cued hazard countered by jammers, shotguns and cover, not as a scripted kill.",
   "proposed": [
     "campaign_tier",
     "alignment_to_player",
@@ -490,6 +502,7 @@
     "https://en.wikipedia.org/wiki/2S22_Bohdana",
     "https://en.wikipedia.org/wiki/Kozak_(armored_personnel_carrier)",
     "https://en.wikipedia.org/wiki/First-person_view_(radio_control)",
-    "https://euromaidanpress.com/2025/03/10/ukraine-plans-to-buy-4-5-million-fpv-drones-in-2025-in-massive-2-8-billion-procurement-surge/"
+    "https://euromaidanpress.com/2025/03/10/ukraine-plans-to-buy-4-5-million-fpv-drones-in-2025-in-massive-2-8-billion-procurement-surge/",
+    "https://mil.in.ua/en/news/oshkosh-m-atv-armored-vehicles-arrive-to-ukraine/"
   ]
 }

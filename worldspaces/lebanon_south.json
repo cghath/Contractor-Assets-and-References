@@ -202,7 +202,7 @@
   "captain_confirmed": [
     "map_size_km 16 x 14 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
     "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
-    "materials accepted as the next voxel_world.gd additions (Captain, 2026-10-10); not yet in the game: LIMESTONE #d6caa8, CINDER_BLOCK #9a978f, PLASTER #e3dccb, GLASS #9fbcc4, HESCO #a99a6c, SANDBAG #b8a378, DIRT_BERM #8a6f4e, CORRUGATED_IRON #8b8e8c",
+    "materials accepted (Captain, 2026-10-10) and added to voxel_world.gd (Contractor dev, commit 1ec1417): LIMESTONE #d6caa8, CINDER_BLOCK #9a978f, PLASTER #e3dccb, GLASS #9fbcc4, HESCO #a99a6c, SANDBAG #b8a378, DIRT_BERM #8a6f4e, CORRUGATED_IRON #8b8e8c",
     "chn and ind stay as UNIFIL contributors, and chn.json and ind.json now list lebanon_south so factions_present matches (Captain, 2026-10-10)"
   ],
   "proposed": [

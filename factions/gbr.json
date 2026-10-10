@@ -441,7 +441,7 @@
     "sellable": true,
     "rep_tiers": [
       {
-        "rep": 10,
+        "rep": 5,
         "unlocks": [
           "5.56/7.62 ammunition",
           "L109 frags, smoke, flashbangs",
@@ -449,7 +449,7 @@
         ]
       },
       {
-        "rep": 25,
+        "rep": 15,
         "unlocks": [
           "L85A3 and accessories",
           "L7A2 GPMG",
@@ -458,7 +458,7 @@
         ]
       },
       {
-        "rep": 40,
+        "rep": 30,
         "unlocks": [
           "NLAW",
           "ILAW",
@@ -467,7 +467,7 @@
         ]
       },
       {
-        "rep": 55,
+        "rep": 45,
         "unlocks": [
           "Foxhound purchase",
           "Jackal purchase (HMG or GMG)",
@@ -475,7 +475,7 @@
         ]
       },
       {
-        "rep": 70,
+        "rep": 60,
         "unlocks": [
           "Javelin",
           "L115A3",
@@ -484,7 +484,7 @@
         ]
       },
       {
-        "rep": 85,
+        "rep": 75,
         "unlocks": [
           "Apache CAS call",
           "naval gunfire support from an RN ship (coastal maps)"
@@ -509,7 +509,7 @@
       "intel_theft (rival-state fixers)"
     ]
   },
-  "notes": "British Army, Royal Marines and RAF Regiment as one faction. Friendly to the player with reputation purchases (settled design). Equipment in transition in 2026: Warrior and Mastiff giving way to Boxer, Challenger 2 to Challenger 3, CVR(T) to Ajax (troubled programme). Recognised the State of Palestine in September 2025; joined US strikes on the Houthis in 2024.",
+  "notes": "British Army, Royal Marines and RAF Regiment as one faction. Friendly to the player with reputation purchases (settled design). Equipment in transition in 2026: Warrior and Mastiff giving way to Boxer, Challenger 2 to Challenger 3, CVR(T) to Ajax (troubled programme). Recognised the State of Palestine in September 2025; joined US strikes on the Houthis in 2024. Sells to the player at rep 5/15/30/45/60/75 (thresholds Captain-confirmed 2026-10-10; were 10/25/40/55/70/85); the unlock lists and prices stay proposed.",
   "proposed": [
     "doctrine.ai_tuning",
     "relations.player",
@@ -517,7 +517,7 @@
     "contract_types",
     "campaign_tier",
     "unit_templates (game squads use 8 men in battle-buddy pairs)",
-    "player_trade.rep_tiers",
+    "player_trade.rep_tiers (unlock lists and prices; the thresholds 5/15/30/45/60/75 are Captain-confirmed 2026-10-10)",
     "relations.player"
   ],
   "sources": [

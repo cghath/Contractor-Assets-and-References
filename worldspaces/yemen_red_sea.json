@@ -217,14 +217,14 @@
   "captain_confirmed": [
     "map_size_km 24 x 24 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
     "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
-    "materials accepted as the next voxel_world.gd additions (Captain, 2026-10-10); not yet in the game: STONE #8f8676, BRICK #9c5a3c, PLASTER #e3dccb, MUD_BRICK #a47e57, THATCH #b49a5e, CINDER_BLOCK #9a978f, TARP #3f6d8c, SANDBAG #b8a378, DIRT_BERM #8a6f4e, GLASS #9fbcc4, CORRUGATED_IRON #8b8e8c"
+    "materials accepted (Captain, 2026-10-10) and added to voxel_world.gd (Contractor dev, commit 1ec1417): STONE #8f8676, BRICK #9c5a3c, PLASTER #e3dccb, MUD_BRICK #a47e57, THATCH #b49a5e, CINDER_BLOCK #9a978f, TARP #3f6d8c, SANDBAG #b8a378, DIRT_BERM #8a6f4e, GLASS #9fbcc4, CORRUGATED_IRON #8b8e8c",
+    "are stays as a low-plausibility listing at low strength: offshore and in contracts only, after the December 2025 UAE withdrawal (Captain, 2026-10-10)"
   ],
   "proposed": [
     "the three-band layout",
     "generator numbers and canyon carving",
     "frontline rules",
     "zone_plan and hot zones",
-    "are presence low/offshore only after the December 2025 withdrawal",
     "Yemeni government, STC and west-coast forces as neutral or allied NPCs (no faction files)",
     "armed civilians as a readable cue (game rule)"
   ],

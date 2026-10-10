@@ -1,8 +1,10 @@
 # Middle East terrorist bloc (`me_terror`): handoff sheet
 
-Snapshot as of 2026-10-10 09:30 UTC. Branch `factions-worldspaces` (draft PR #2). This is job 2 of 5, run one job at a time:
+**Status (final, 2026-10-10): done.** Job 2 wrote all 11 files (10:55 UTC) and the catalogue files `technical_m40`, `technical_rockets`, `technical_zpu`, `motorcycle` and `fast_boat`. Captain answered its open questions on 2026-10-10 (below). Since Job 7, adf (ISCAP) is a hostile-only faction in the separate central_africa bloc; the me_terror bloc itself is still these 11. The validator reports 0 errors and 0 warnings. The brief below is kept as written for the record.
 
-1. middle_east_states (running)
+Original brief (snapshot as of 2026-10-10 09:30 UTC). Branch `factions-worldspaces` (draft PR #2). This was job 2 of 5, run one job at a time:
+
+1. middle_east_states (done, 10:45 UTC)
 2. **me_terror**
 3. others
 4. alliances
@@ -75,7 +77,7 @@ Verify each item on the web (2026 status). Everything here is a starting point, 
 
 ### Catalogue gaps to fill in this job
 
-Check `reference/vehicles/` first. As of this snapshot these are missing:
+Check `reference/vehicles/` first. As of this snapshot these were missing (all were written in Job 2):
 
 - `technical_m40`, `technical_rockets` and `technical_zpu`. These are **existing voxel models with no catalogue file**. Write them with `existing_model` set to their model id, `model_priority: "high"`, and the operators list.
 - `motorcycle`: a generic 125-200 cc motorbike of the Honda CG / Chinese-copy type. Operators are most of this bloc, plus the Sahel and Afghan groups.
@@ -114,8 +116,11 @@ Check `reference/vehicles/` first. As of this snapshot these are missing:
 
 ## Open questions for Captain
 
-Answered by Captain on 2026-10-10: see "Captain's decisions (2026-10-10)" in [factions_handoff.md](factions_handoff.md).
+Answered by Captain on 2026-10-10; see "Captain's decisions (2026-10-10)" in [factions_handoff.md](factions_handoff.md).
 
-- Should `isis` cover IS's Sahel and West Africa provinces too, or should they stay inside `sahel` worldspace text only? The default is to cover them in `isis`.
-- Hamas after the 2025 ceasefire: set it as a mid-strength early-game enemy in `gaza_west_bank`. The default is yes, with tunnels as level geometry.
-- Should captured MRAPs and Humvees appear as enemy vehicles (an ISIS/Taliban look)? The default is yes, as rare.
+- Should `isis` cover IS's Sahel and West Africa provinces too, or should they stay inside `sahel` worldspace text only? The default was to cover them in `isis`.
+  - **Answered:** isis keeps the Sahel and Somalia provinces (its theatres include sahel and horn_of_africa). West Africa Province (Lake Chad) has no theatre in the pack and appears only in isis's notes.
+- Hamas after the 2025 ceasefire: set it as a mid-strength early-game enemy in `gaza_west_bank`. The default was yes, with tunnels as level geometry.
+  - **Answered in part:** hamas stays early tier (Captain's campaign_tier decision: only iraqi_militias moved, from mid to early), and its post-ceasefire status notes were acknowledged with no change. The mid-strength tuning itself was not ruled on: it stays in hamas.json's `proposed` and is listed under "Open questions for Captain" in [factions_handoff.md](factions_handoff.md).
+- Should captured MRAPs and Humvees appear as enemy vehicles (an ISIS/Taliban look)? The default was yes, as rare.
+  - **Answered:** captured Humvees, M1117s and T-55s (isis, isis_k) and ex-Assad-era armour (hezbollah) appear as rare set pieces. afg_taliban's ex-Afghan-army MaxxPros and M-ATVs are real holdings, so it fields them as a real operator (Captain's decision on the existing voxel models, 2026-10-10).

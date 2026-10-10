@@ -187,7 +187,7 @@
     "theatre added (Captain, 2026-10-10): early-game, coastal (LHD allowed); isis vs phl with usa advisers",
     "map_size_km within the confirmed 16-24 km per side (Captain, 2026-10-10)",
     "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
-    "materials accepted as the next voxel_world.gd additions (Captain, 2026-10-10; not yet in the game): CINDER_BLOCK #9a978f, CORRUGATED_IRON #8b8e8c, THATCH #b49a5e, GLASS #9fbcc4, SANDBAG #b8a378, HESCO #a99a6c"
+    "materials accepted (Captain, 2026-10-10) and added to voxel_world.gd (Contractor dev, commit 1ec1417): CINDER_BLOCK #9a978f, CORRUGATED_IRON #8b8e8c, THATCH #b49a5e, GLASS #9fbcc4, SANDBAG #b8a378, HESCO #a99a6c"
   ],
   "proposed": [
     "composite layout (lake plateau, cordillera, marsh, coast and island chain on one map)",

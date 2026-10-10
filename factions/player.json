@@ -221,18 +221,6 @@
   },
   "vehicles": [
     {
-      "vehicle_id": "matv",
-      "role": "mrap",
-      "prevalence": "signature",
-      "notes": "PROPOSAL: first purchasable armoured vehicle (US rep), turret with M2/M240."
-    },
-    {
-      "vehicle_id": "maxxpro",
-      "role": "mrap",
-      "prevalence": "common",
-      "notes": "PROPOSAL: squad carrier for convoy escort contracts (US rep)."
-    },
-    {
       "vehicle_id": "technical_dshk",
       "role": "technical",
       "prevalence": "common",
@@ -249,12 +237,6 @@
       "role": "apc",
       "prevalence": "rare",
       "notes": "PROPOSAL: ex-USMC surplus amphibious carrier for LHD shore landings (USMC retired the AAV in 2025, surplus sold to allies)."
-    },
-    {
-      "vehicle_id": "ah1z",
-      "role": "attack_heli",
-      "prevalence": "rare",
-      "notes": "PROPOSAL: CAS called from an allied USMC LHD at high US rep, not owned by the player."
     }
   ],
   "unit_templates": [
@@ -338,7 +320,7 @@
       "terrorist_ambush_on_convoy (dynamic events)"
     ]
   },
-  "notes": "Starting kit per design: M4, 2 spare magazines, 1 smoke grenade, 1 frag grenade. Contracts come from the regional contract board and faction fixers; taking work from one side locks the player out of that side's enemies' contracts for a while. Civilian casualties caused by the player or AI cost money and reputation; 8 void a contract. Early game is dominated by counter-terror work in the Middle East and affiliate theatres. Which vehicles the player can own (vs hire) is an open design question; all vehicles here are proposals using existing voxel models.",
+  "notes": "Starting kit per design: M4, 2 spare magazines, 1 smoke grenade, 1 frag grenade. Contracts come from the regional contract board and faction fixers; taking work from one side locks the player out of that side's enemies' contracts for a while. Civilian casualties caused by the player or AI cost money and reputation; 8 void a contract. Early game is dominated by counter-terror work in the Middle East and affiliate theatres. Which vehicles the player can own (vs hire) is an open design question; all vehicles here are proposals using existing voxel models. The AH-1Z, MaxxPro, M-ATV, Bradley and Abrams are fielded by their real operators (Captain-confirmed 2026-10-10), so they are not player vehicles: the player gets M-ATVs and MaxxPros only by buying them from usa (player_trade, rep 30 and 45) and AH-1Z support only as a usa CAS call (rep 75); the player_mounted_squad template assumes bought M-ATVs.",
   "proposed": [
     "relations",
     "vehicles",
