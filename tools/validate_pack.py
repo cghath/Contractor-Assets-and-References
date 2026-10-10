@@ -23,6 +23,8 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WORKFLOW = os.path.join(ROOT, "tools", "factions_workflow.js")
 FACTION_KEYS = ["id", "name", "kind", "relations", "theatres", "vehicles"]
+# Files in factions/ that are not faction records.
+NON_FACTION_FILES = {"alliances"}
 
 errors = []
 warnings = []
@@ -84,6 +86,8 @@ def main():
     factions = load_json_dir("factions")
     vehicles = load_json_dir(os.path.join("reference", "vehicles"))
     worlds = load_json_dir("worldspaces")
+    extras = {k: (factions or {}).pop(k) for k in NON_FACTION_FILES if k in (factions or {})}
+    alliances = extras.get("alliances")
 
     if vehicles is None:
         error("reference/vehicles/ is missing")
@@ -160,6 +164,22 @@ def main():
         if stem in terror_ids and d.get("player_client") is not False:
             error("%s: terrorist faction must have player_client false (got %r)"
                   % (path, d.get("player_client")))
+
+    # Alliances: member ids and relations-matrix keys must be canonical faction ids.
+    if alliances is not None:
+        path = "factions/alliances.json"
+        if not isinstance(alliances, dict):
+            error("%s: top level is not an object" % path)
+        else:
+            for a in alliances.get("alliances") or []:
+                for m in (a.get("members") or []) if isinstance(a, dict) else []:
+                    if m not in faction_ids:
+                        error("%s: alliance %r member %r is not a canonical faction id" % (path, a.get("id"), m))
+            matrix = alliances.get("relations_matrix") or {}
+            for a, row in matrix.items() if isinstance(matrix, dict) else []:
+                for b in [a] + list(row if isinstance(row, dict) else []):
+                    if b not in faction_ids:
+                        error("%s: relations_matrix key %r is not a canonical faction id" % (path, b))
 
     for fid in sorted(faction_ids - set(factions)):
         warn("factions/%s.json is missing (still generating?)" % fid)
