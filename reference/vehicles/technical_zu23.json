@@ -1,0 +1,71 @@
+{
+  "id": "technical_zu23",
+  "name": "Toyota technical with ZU-23-2",
+  "aliases": [
+    "ZU-23 technical",
+    "gun truck"
+  ],
+  "origin": "Japan / Soviet Union (weapon)",
+  "type": "technical",
+  "operators": [
+    "syr",
+    "hezbollah",
+    "houthis",
+    "isis",
+    "al_shabaab",
+    "sdf",
+    "sahel_aes",
+    "som",
+    "m23"
+  ],
+  "crew": 3,
+  "passengers": 2,
+  "dimensions_m": {
+    "length": 5.3,
+    "width": 1.9,
+    "height": 2.6
+  },
+  "weight_t": 3.0,
+  "armament": [
+    "ZU-23-2 twin 23 mm autocannon on the bed"
+  ],
+  "protection": "Unarmoured. Game rule still treats the vehicle body as immune to small-calibre, but 7.62x54R and up penetrate; occupants, glass and tyres are exposed to all fire. The 23 mm guns penetrate light armour and MRAPs (game proposal).",
+  "visual_notes": [
+    "Hilux or Land Cruiser 79 pickup with a ZU-23-2 mount bolted in the bed, often with welded side plates",
+    "Gunner seated on the mount, long twin barrels over the cab",
+    "Ammo boxes on both sides of the mount"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Sand overpaint",
+      "palette": [
+        "#C8B48A",
+        "#9B8562",
+        "#5E513A"
+      ]
+    },
+    {
+      "name": "Civilian white",
+      "palette": [
+        "#EDEDEA",
+        "#BFC2C4",
+        "#2A2A2A"
+      ]
+    }
+  ],
+  "variants": [
+    "Hilux",
+    "Land Cruiser 79",
+    "heavy truck (Howo/Ural) mount"
+  ],
+  "existing_model": "technical_zu23",
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Technical_(vehicle)",
+    "https://en.wikipedia.org/wiki/ZU-23-2"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Technical_(vehicle)",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Syrian_Armed_Forces"
+  ]
+}

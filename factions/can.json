@@ -1,0 +1,443 @@
+{
+  "id": "can",
+  "name": "Canada",
+  "short": "CAN",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#FF0000",
+    "#FFFFFF"
+  ],
+  "blocs": [
+    "nato",
+    "five_eyes",
+    "global_coalition_against_isis",
+    "g7"
+  ],
+  "campaign_tier": "early",
+  "alignment_to_player": "friendly",
+  "player_client": true,
+  "relations": {
+    "player": 50,
+    "usa": 70,
+    "gbr": 85,
+    "aus": 80,
+    "nzl": 80,
+    "fra": 80,
+    "deu": 75,
+    "lva": 85,
+    "est": 70,
+    "ltu": 70,
+    "pol": 70,
+    "ukr": 75,
+    "nor": 75,
+    "dnk": 75,
+    "jpn": 60,
+    "kor": 60,
+    "isr": 30,
+    "pse_pa": 25,
+    "irq": 30,
+    "jor": 55,
+    "krg_peshmerga": 50,
+    "ind": 15,
+    "mex": 50,
+    "rus": -75,
+    "blr": -55,
+    "chn": -40,
+    "prk": -70,
+    "irn": -85,
+    "afg_taliban": -60,
+    "cartel_pacifico": -80,
+    "cartel_jalisco_nueva": -80,
+    "al_qaeda": -100,
+    "aqap": -100,
+    "isis": -100,
+    "isis_k": -100,
+    "al_shabaab": -100,
+    "jnim": -95,
+    "hamas": -95,
+    "pij": -95,
+    "hezbollah": -85,
+    "houthis": -80,
+    "iraqi_militias": -70,
+    "bel": 80,
+    "esp": 80,
+    "fin": 80,
+    "grc": 80,
+    "ita": 80,
+    "nld": 80,
+    "swe": 80,
+    "rou": 70,
+    "phl": 45,
+    "twn": 30,
+    "pmc_halcyon": 20,
+    "sau": 15,
+    "africa_corps": -55
+  },
+  "theatres": [
+    "baltic_coast",
+    "suwalki_gap",
+    "arctic_north",
+    "mesopotamia",
+    "levant_syria"
+  ],
+  "languages": [
+    "English",
+    "French"
+  ],
+  "callout_language": "English (with French-Canadian units speaking French)",
+  "doctrine": {
+    "summary": "Mechanised army built around the LAV 6 and Leopard 2, with light battalions for Arctic and air-mobile tasks. Leads the NATO Multinational Brigade Latvia (Canada's largest overseas commitment). Experience from Kandahar (2006-2011) and training/advise missions in Iraq (Op IMPACT) and for Ukraine (Op UNIFIER).",
+    "squad_size": 8,
+    "fireteam": "Section of 8-10 split into two assault groups with a C9/C6 gun group; the LAV crew (3) provides fire support when mounted.",
+    "tactics": [
+      "Mounted advance in LAV 6 with the 25 mm providing overwatch, dismount for the assault",
+      "Leopard 2 tanks lead in open terrain, infantry clears built-up areas",
+      "Assault groups bound in pairs; C9/C6 gun group anchors the base of fire",
+      "Cold-weather and Arctic patrolling (Canadian Rangers as guides)",
+      "Careful IED-aware route discipline learned in Kandahar"
+    ],
+    "ai_tuning": {
+      "aggression": 0.55,
+      "discipline": 0.85,
+      "suppression_resistance": 0.7,
+      "flanking": 0.7,
+      "grenade_use": 0.65,
+      "medical_care": 0.85,
+      "night_capability": 0.8,
+      "marksmanship": 0.8,
+      "morale": 0.8
+    }
+  },
+  "camo": [
+    {
+      "name": "CADPAT MT (Multi-Terrain)",
+      "palette": [
+        "#9A956F",
+        "#6C6B4C",
+        "#4A4635",
+        "#B9AB84",
+        "#2E2B22"
+      ],
+      "use": "New Modernized Combat Uniform, rolling out since 2024"
+    },
+    {
+      "name": "CADPAT TW (Temperate Woodland)",
+      "palette": [
+        "#6D7353",
+        "#454B33",
+        "#2A2B20",
+        "#8D8F6C"
+      ],
+      "use": "Legacy uniform still common in 2026"
+    },
+    {
+      "name": "CADPAT AR (Arid Regions)",
+      "palette": [
+        "#C5B48F",
+        "#A08D6A",
+        "#7B6A4D"
+      ],
+      "use": "Legacy desert pattern for Middle East deployments"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "C7A2 rifle (5.56x45mm)",
+      "C8A3 carbine (5.56x45mm)"
+    ],
+    "autorifleman": [
+      "C9A2 LMG (5.56x45mm)",
+      "C6 FLEX GPMG (7.62x51mm)"
+    ],
+    "marksman": [
+      "C20 DMR (7.62x51mm)"
+    ],
+    "grenadier": [
+      "C7A2 with M203A1 (40x46mm)"
+    ],
+    "at": [
+      "Carl Gustaf M2/M3 (84mm)",
+      "M72 LAW (66mm)"
+    ],
+    "medic": [
+      "C8A3 carbine (5.56x45mm)"
+    ],
+    "squad_leader": [
+      "C8A3 carbine (5.56x45mm)"
+    ],
+    "sniper": [
+      "C14 Timberwolf MRSWS (.338 Lapua Magnum)",
+      "C15 LRSW (.50 BMG)"
+    ],
+    "sidearm": [
+      "C22 (SIG Sauer P320) (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "Carl Gustaf M2/M3 (84mm) [in_game as MAAWS]",
+    "M72 LAW (66mm) [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "ceramic",
+    "notes": "CG634 helmet = medium. Fragmentation vest/plate carrier with front and back ceramic plates = medium tier."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "lav6",
+      "role": "ifv",
+      "prevalence": "signature",
+      "notes": "LAV 6 (25 mm turret) infantry section carrier and ACSV support variants; backbone of the Army."
+    },
+    {
+      "vehicle_id": "leopard2a6",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "Leopard 2A4M CAN, 2A6M CAN and 2A4; a tank squadron deployed to Latvia since 2023."
+    },
+    {
+      "vehicle_id": "tapv",
+      "role": "mrap",
+      "prevalence": "common",
+      "notes": "Textron TAPV reconnaissance/utility patrol vehicle (500 bought)."
+    },
+    {
+      "vehicle_id": "g_wagen",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Mercedes G-Wagen LUVW light utility vehicle."
+    },
+    {
+      "vehicle_id": "m777",
+      "role": "artillery",
+      "prevalence": "common",
+      "notes": "155 mm towed howitzer, used since Kandahar."
+    },
+    {
+      "vehicle_id": "bell412",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": "RCAF CH-146 Griffon utility/escort helicopter with door guns."
+    },
+    {
+      "vehicle_id": "ch47",
+      "role": "transport_heli",
+      "prevalence": "uncommon",
+      "notes": "RCAF CH-147F Chinook heavy lift."
+    },
+    {
+      "vehicle_id": "jltv",
+      "role": "light",
+      "prevalence": "rare",
+      "notes": "Sale of 60 JLTVs approved Aug 2025; not yet widely fielded in 2026."
+    },
+    {
+      "vehicle_id": "himars",
+      "role": "mlrs",
+      "prevalence": "rare",
+      "notes": "26 M142 HIMARS contracted (2026); deliveries from 2029, so absent in early campaign."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "can_rifle_section",
+      "name": "Canadian rifle section",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "team_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "can_lav_section",
+      "name": "LAV 6 mechanised section",
+      "composition": [
+        {
+          "role": "vehicle_crew",
+          "count": 3
+        },
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "lav6"
+    },
+    {
+      "id": "can_tapv_recce",
+      "name": "TAPV recce patrol",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "driver",
+          "count": 1
+        },
+        {
+          "role": "gunner",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "tapv"
+    },
+    {
+      "id": "can_tank_troop",
+      "name": "Leopard 2 troop (2 tanks)",
+      "composition": [
+        {
+          "role": "tank_crew",
+          "count": 8
+        }
+      ],
+      "vehicle_id": "leopard2a6"
+    }
+  ],
+  "support_assets": [
+    "M777 155 mm and 81 mm mortar fire missions",
+    "CH-146 Griffon armed escort and CASEVAC",
+    "CH-147F Chinook lift",
+    "Small ISR drones; counter-UAS jammers (Latvia brigade)",
+    "Allied CAS via NATO JTACs (off-map)"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 5,
+        "unlocks": [
+          "5.56/7.62 ammunition",
+          "grenades, smoke, flashbangs",
+          "medical kits",
+          "cold-weather clothing"
+        ]
+      },
+      {
+        "rep": 15,
+        "unlocks": [
+          "C8A3 carbine",
+          "C9A2 LMG",
+          "CG634 helmet (medium)"
+        ]
+      },
+      {
+        "rep": 30,
+        "unlocks": [
+          "Carl Gustaf M3 (MAAWS)",
+          "C20 DMR",
+          "plate carrier with ceramic plates"
+        ]
+      },
+      {
+        "rep": 45,
+        "unlocks": [
+          "G-Wagen purchase",
+          "TAPV purchase"
+        ]
+      },
+      {
+        "rep": 60,
+        "unlocks": [
+          "C14 Timberwolf",
+          "Griffon lift/escort hire",
+          "mortar fire missions"
+        ]
+      },
+      {
+        "rep": 75,
+        "unlocks": [
+          "LAV 6 purchase (game proposal)",
+          "M777 fire missions"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "counter_terror_raid",
+      "partner_force_support",
+      "convoy_escort",
+      "reconnaissance",
+      "fob_defense",
+      "hostage_rescue",
+      "arctic_search_and_recovery",
+      "border_screen_baltic"
+    ],
+    "as_target": [
+      "sabotage_logistics (rival-state fixers)",
+      "intel_theft (rival-state fixers)"
+    ]
+  },
+  "notes": "Canadian Army plus RCAF tactical aviation. Friendly to the player with reputation purchases (settled design). Recognised the State of Palestine in September 2025; listed Iran's IRGC as a terrorist entity in 2024. Trade friction with the US in 2025 noted as a modest relation dip only. Sells to the player at rep 5/15/30/45/60/75 (thresholds Captain-confirmed 2026-10-10; were 10/25/40/55/70/85); the unlock lists and prices stay proposed.",
+  "proposed": [
+    "doctrine.ai_tuning",
+    "relations.player",
+    "player_trade",
+    "contract_types",
+    "campaign_tier",
+    "unit_templates (game squads use 8 men in battle-buddy pairs)",
+    "player_trade.rep_tiers (unlock lists and prices; the thresholds 5/15/30/45/60/75 are Captain-confirmed 2026-10-10)",
+    "relations.player",
+    "player_trade.rep_tiers[75] LAV 6 purchase"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Canadian_Army",
+    "https://en.wikipedia.org/wiki/LAV_6.0",
+    "https://en.wikipedia.org/wiki/Textron_Tactical_Armoured_Patrol_Vehicle",
+    "https://bc.ctvnews.ca/canada-s-leopard-2-tanks-arrive-in-latvia-to-bolster-growing-nato-mission-1.6654542",
+    "https://www.canada.ca/en/army/news-publications/2026/08/long-range-strike-capability.html",
+    "https://www.cmfmag.ca/policy/modernized-caf-combat-uniform-slowly-rolling-out",
+    "https://en.wikipedia.org/wiki/Joint_Light_Tactical_Vehicle",
+    "https://en.wikipedia.org/wiki/CADPAT",
+    "https://en.wikipedia.org/wiki/Multinational_Brigade_Latvia"
+  ]
+}

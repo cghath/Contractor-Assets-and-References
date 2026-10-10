@@ -1,0 +1,68 @@
+{
+  "id": "g_wagen",
+  "name": "Mercedes-Benz G-Class (military)",
+  "aliases": [
+    "G-Wagen",
+    "LUVW",
+    "Wolf",
+    "Puch G"
+  ],
+  "origin": "Germany / Austria",
+  "type": "light",
+  "operators": [
+    "can",
+    "aus",
+    "deu",
+    "che",
+    "nor",
+    "aut",
+    "nld"
+  ],
+  "crew": 1,
+  "passengers": 4,
+  "dimensions_m": {
+    "length": 4.8,
+    "width": 1.8,
+    "height": 2.0
+  },
+  "weight_t": 3.0,
+  "armament": [
+    "Optional 7.62 mm MG mount"
+  ],
+  "protection": "Unarmoured or lightly armoured; game rule still treats the vehicle body as immune to small-calibre, but 7.62x54R and up penetrate; occupants and tyres exposed.",
+  "visual_notes": [
+    "Boxy upright 4x4 with flat panels and round headlights",
+    "Spare wheel on rear door",
+    "Canvas or hard top; external door hinges"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Canadian Forces green",
+      "palette": [
+        "#475236",
+        "#2E3524"
+      ]
+    },
+    {
+      "name": "NATO three-colour",
+      "palette": [
+        "#4B5320",
+        "#5A4A37",
+        "#1C1C1A"
+      ]
+    }
+  ],
+  "variants": [
+    "LUVW SMP (Canada)",
+    "Wolf (Germany)",
+    "6x6 (Australia)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Mercedes-Benz_G-Class"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Mercedes-Benz_G-Class"
+  ]
+}

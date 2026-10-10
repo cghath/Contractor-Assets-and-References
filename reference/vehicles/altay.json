@@ -1,0 +1,59 @@
+{
+  "id": "altay",
+  "name": "Altay main battle tank",
+  "aliases": [
+    "Altay T1",
+    "Altay T2"
+  ],
+  "origin": "Turkey",
+  "type": "mbt",
+  "operators": [
+    "tur",
+    "qat"
+  ],
+  "crew": 4,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 10.3,
+    "width": 3.9,
+    "height": 2.6
+  },
+  "weight_t": 65,
+  "armament": [
+    "120 mm L55 smoothbore",
+    "7.62 mm coaxial MG",
+    "12.7 mm in Aselsan SARP remote weapon station"
+  ],
+  "protection": "Modular composite armour; Altay T2 adds AKKOR active protection and more armour. Game rule: immune to small-calibre; 7.62x54R and 12.7/14.5 mm only damage optics, tracks and exposed crew; penetration needs launchers (RPG-7 PG-7V, AT4, MAAWS, SMAW, NLAW, Javelin) or cannon, best against side, rear and engine deck.",
+  "visual_notes": [
+    "Long hull with 7 road wheels per side and flat side skirts",
+    "Angular welded turret with large rear bustle, Korean K2-influenced layout",
+    "Remote weapon station and commander sight on the roof",
+    "First deliveries late 2025, so rare on the map"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Turkish three-tone",
+      "palette": [
+        "#5A6140",
+        "#7B6B4C",
+        "#2E2E28"
+      ]
+    }
+  ],
+  "variants": [
+    "Altay T1 (2025 deliveries)",
+    "Altay T2 (APS, upgraded armour)",
+    "Altay T3 (planned unmanned turret)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Altay_(tank)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Altay_(tank)",
+    "https://www.overtdefense.com/2025/10/31/turkiye-finally-receives-its-first-altay-tanks-after-long-delays",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Turkish_Land_Forces"
+  ]
+}

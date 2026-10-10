@@ -1,0 +1,68 @@
+{
+  "id": "2s19",
+  "name": "2S19 Msta-S",
+  "aliases": [
+    "Msta-S",
+    "2S19M2",
+    "2S35 Koalitsiya (successor)"
+  ],
+  "origin": "Russia",
+  "type": "artillery",
+  "operators": [
+    "rus",
+    "aze"
+  ],
+  "crew": 5,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 11.92,
+    "width": 3.38,
+    "height": 2.99
+  },
+  "weight_t": 42.0,
+  "armament": [
+    "152 mm 2A64 howitzer",
+    "12.7 mm NSVT/Kord on commander's hatch"
+  ],
+  "protection": "Light armour on a T-80/T-72-derived chassis. Game: immune to small-calibre; 12.7/14.5 mm can damage the thin turret sides; any launcher kills.",
+  "visual_notes": [
+    "Very large slab-sided box turret mounted on a tank chassis with 6 road wheels",
+    "Long 152 mm barrel with a double-baffle muzzle brake, often over a travel lock",
+    "2026 Russian: heavy netting and anti-drone cage over the turret, branches for concealment; operates from dug-in, covered positions"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Russian protective green with white Z/V/triangle ID marks",
+      "palette": [
+        "#4A5530",
+        "#3B4428",
+        "#2A2E22",
+        "#F0F0F0"
+      ]
+    },
+    {
+      "name": "Azerbaijani desert-green disruptive",
+      "palette": [
+        "#C8B48A",
+        "#8E7B55",
+        "#5C5A3A",
+        "#3A3A2C"
+      ]
+    }
+  ],
+  "variants": [
+    "2S19",
+    "2S19M1",
+    "2S19M2"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/2S19_Msta",
+    "https://commons.wikimedia.org/wiki/Category:2S19_Msta-S"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/2S19_Msta",
+    "https://caliber.az/en/post/military-parade-in-baku-structure-of-armaments-and-their-practical-significance"
+  ]
+}

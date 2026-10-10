@@ -1,0 +1,320 @@
+{
+  "id": "cartel_pacifico",
+  "name": "Liga del Pacífico (fictional)",
+  "short": "La Liga",
+  "kind": "criminal",
+  "inspired_by": "An old, wealthy Pacific-coast drug-trafficking federation of semi-independent factions (the type that grew from the mountain growing regions of north-west Mexico), now split by an internal succession war between rival factions, with heavy investment in synthetic-drug labs, armoured vehicles and drones. No real organisation, leader or faction name is used.",
+  "flag_colors": [
+    "#1C1C1C",
+    "#C9A227",
+    "#7A1F1F"
+  ],
+  "blocs": [],
+  "traits": [
+    "cartel"
+  ],
+  "campaign_tier": "early",
+  "alignment_to_player": "hostile",
+  "player_client": false,
+  "relations": {
+    "player": -65,
+    "mex": -90,
+    "usa": -90,
+    "can": -75,
+    "cartel_jalisco_nueva": -85,
+    "pmc_halcyon": -50,
+    "pmc_kestrel": -10,
+    "pmc_black_sable": -20,
+    "aut": -40,
+    "che": -40
+  },
+  "theatres": [
+    "mexico_cartel_belt"
+  ],
+  "languages": [
+    "Spanish"
+  ],
+  "callout_language": "Mexican Spanish (northern / Pacific slang)",
+  "doctrine": {
+    "summary": "A trafficking federation whose armed wings are semi-autonomous 'cells' loyal to different faction bosses. Since the (fictional) succession split, the two halves fight each other street by street as well as fighting the state. Strengths: money, local informant networks ('halcones', lookouts with radios), armoured trucks and SUVs, .50-calibre rifles and growing use of commercial drones for surveillance and dropped explosives. Fighters range from well-paid veteran gunmen to poorly trained teenage recruits. It avoids open battle with the Army when it can, preferring roadblocks, ambushes on convoys and quick withdrawals into the mountains.",
+    "squad_size": 8,
+    "fireteam": "Cells of 6-12 gunmen in 2-4 vehicles, loosely paired; leaders carry radios; lookouts outside the fight.",
+    "tactics": [
+      "Halcón lookouts and radio relays warn of approaching forces (map hazard: tripping a lookout alerts the area)",
+      "Roadblocks of burning vehicles to cut highways and slow pursuit",
+      "Ambush of convoys from high ground with .50-calibre rifles and belt-fed guns",
+      "Commercial drones for surveillance and dropped small explosives (game hazard)",
+      "Rapid withdrawal in armoured trucks into mountain hamlets and safe houses",
+      "Faction infighting: the player may find two cartel groups fighting each other"
+    ],
+    "ai_tuning": {
+      "aggression": 0.7,
+      "discipline": 0.35,
+      "suppression_resistance": 0.4,
+      "flanking": 0.45,
+      "grenade_use": 0.5,
+      "medical_care": 0.25,
+      "night_capability": 0.35,
+      "marksmanship": 0.45,
+      "morale": 0.45
+    }
+  },
+  "camo": [
+    {
+      "name": "MultiCam-style knock-off tactical kit",
+      "palette": [
+        "#9C8B66",
+        "#6F6248",
+        "#C9B98F",
+        "#4B4433"
+      ],
+      "use": "Armed cells; often with home-made unit patches"
+    },
+    {
+      "name": "Black tactical / civilian clothes",
+      "palette": [
+        "#1C1C1C",
+        "#3A3A3A",
+        "#5B4A3A"
+      ],
+      "use": "Urban gunmen, balaclavas, caps"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "AK-47-pattern rifles (7.62x39mm)",
+      "AR-15 / M4-pattern rifles (5.56x45mm)"
+    ],
+    "autorifleman": [
+      "M249-type LMG (5.56x45mm)",
+      "PKM or M60-type belt-fed MG (7.62mm)"
+    ],
+    "marksman": [
+      "AR-10-pattern DMR (7.62x51mm)"
+    ],
+    "grenadier": [
+      "40 mm underbarrel or standalone grenade launchers",
+      "Hand grenades"
+    ],
+    "at": [
+      "RPG-7 (rare) [in_game]",
+      ".50 BMG anti-materiel rifle as the anti-vehicle weapon"
+    ],
+    "medic": [
+      "AR-15-pattern rifle (no trained medics)"
+    ],
+    "squad_leader": [
+      "AR-15 / M4-pattern rifle with optic, gold-trimmed pistol (status)"
+    ],
+    "sniper": [
+      "Barrett M82-pattern .50 BMG (12.7x99mm)"
+    ],
+    "sidearm": [
+      "5.7x28mm pistols, Glock-pattern 9x19mm, .38 Super"
+    ]
+  },
+  "launchers": [
+    "RPG-7 with PG-7V / OG-7V [in_game] (rare)",
+    "40 mm grenade launchers [not_in_game as launcher class]"
+  ],
+  "body_armor": {
+    "helmet": "light",
+    "vest": "medium",
+    "plates": "steel",
+    "notes": "Commercial plate carriers, often with steel plates (spall risk) and cheap ballistic helmets; many low-level gunmen have none (game: mix of none and medium)."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "narco_truck",
+      "role": "technical",
+      "prevalence": "signature",
+      "notes": "Home-armoured 'monster' trucks with welded plate, firing ports and turrets."
+    },
+    {
+      "vehicle_id": "armored_suv",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Commercially armoured full-size SUVs and pickups for bosses and hit squads, often stolen from or bought from civilian armouring shops."
+    },
+    {
+      "vehicle_id": "toyota_hilux",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Ordinary pickups carrying gunmen in the bed; often stolen."
+    },
+    {
+      "vehicle_id": "fpv_drone",
+      "role": "uav",
+      "prevalence": "uncommon",
+      "notes": "Commercial quadcopters for surveillance and dropped explosives (game hazard)."
+    },
+    {
+      "vehicle_id": "motorcycle",
+      "role": "light",
+      "prevalence": "uncommon",
+      "notes": "Halcón lookouts and couriers on motorbikes."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "cpac_sicario_cell",
+      "name": "Sicario cell",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "armored_suv"
+    },
+    {
+      "id": "cpac_roadblock",
+      "name": "Roadblock (halcón lookouts plus armoured truck)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "lookout",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "narco_truck"
+    },
+    {
+      "id": "cpac_plaza_defence",
+      "name": "Plaza defence (town held by the cartel)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 6
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "sniper",
+          "count": 1
+        },
+        {
+          "role": "lookout",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "narco_truck"
+    },
+    {
+      "id": "cpac_drone_team",
+      "name": "Drone team (hazard)",
+      "composition": [
+        {
+          "role": "drone_operator",
+          "count": 2
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "fpv_drone"
+    },
+    {
+      "id": "cpac_convoy_escort",
+      "name": "Shipment convoy escort",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "sniper",
+          "count": 1
+        },
+        {
+          "role": "driver",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "armored_suv"
+    }
+  ],
+  "support_assets": [
+    "Halcón lookout network (early warning of player movement)",
+    "Commercial drones for surveillance and dropped explosives",
+    "Reinforcement trucks arriving from nearby safe houses",
+    "Burning-vehicle roadblocks that cut roads on the map"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [],
+    "as_target": [
+      "Synthetic-drug lab raid (with mex forces)",
+      "HVT capture of a cell or plaza boss",
+      "Hostage rescue from a safe house",
+      "Convoy interdiction of a shipment",
+      "Clear a cartel roadblock and reopen a highway",
+      "Destroy an armoured-truck workshop"
+    ]
+  },
+  "notes": "FICTIONAL cartel; no real organisation, faction, leader or emblem is depicted. Inspired by the real-world type of an old Pacific-coast trafficking federation torn by an internal succession war (the 2024-2026 internal cartel war in north-west Mexico is the real-world reference for the infighting and drone use). Tone is game-level only: roadblocks, armoured trucks, drones, ambushes; no real operational detail. Hostile to the player, never hires or sells. At war with cartel_jalisco_nueva over trafficking routes, and with the Mexican state. Civilians are everywhere in cartel towns; the casualty penalties apply in full and many 'civilians' are lookouts (radio in hand), which should be a readable cue, never a guess.",
+  "proposed": [
+    "name (fictional)",
+    "flag_colors (fictional insignia)",
+    "campaign_tier",
+    "relations (all, game-level)",
+    "doctrine.ai_tuning",
+    "unit_templates (roles lookout, drone_operator and driver are game roles)",
+    "vehicles[].prevalence",
+    "contract_types.as_target",
+    "body_armor (game tier mapping)",
+    "traits (cartel is a game tag)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Mexican_drug_war",
+    "https://en.wikipedia.org/wiki/Narco_tank",
+    "https://www.cbsnews.com/amp/news/drug-lord-el-chapo-hometown-hit-by-drone-attacks-residents-flee",
+    "https://www.razon.com.mx/mexico/2026/07/10/suman-31-ataques-con-drones-en-lucha-por-cartel-de-sinaloa/",
+    "https://counteriedreport.com/mexico-sinaloa-cartel-clashes-leave-at-least-30-dead/"
+  ]
+}

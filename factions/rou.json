@@ -1,0 +1,436 @@
+{
+  "id": "rou",
+  "name": "Romania",
+  "short": "ROU",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#002B7F",
+    "#FCD116",
+    "#CE1126"
+  ],
+  "blocs": [
+    "nato",
+    "eu",
+    "bucharest_nine",
+    "global_coalition_against_isis"
+  ],
+  "campaign_tier": "mid",
+  "alignment_to_player": "friendly",
+  "player_client": true,
+  "relations": {
+    "player": 25,
+    "usa": 90,
+    "fra": 90,
+    "gbr": 75,
+    "can": 70,
+    "deu": 75,
+    "ita": 75,
+    "esp": 70,
+    "nld": 75,
+    "pol": 85,
+    "est": 70,
+    "lva": 70,
+    "ltu": 70,
+    "ukr": 70,
+    "mda": 95,
+    "tur": 65,
+    "grc": 70,
+    "kor": 75,
+    "isr": 50,
+    "geo": 45,
+    "rus": -80,
+    "blr": -60,
+    "chn": -25,
+    "irn": -50,
+    "prk": -60,
+    "africa_corps": -50,
+    "isis": -95,
+    "isis_k": -90,
+    "al_qaeda": -95,
+    "aqap": -90,
+    "al_shabaab": -85,
+    "jnim": -85,
+    "hamas": -75,
+    "pij": -75,
+    "hezbollah": -65,
+    "houthis": -65,
+    "iraqi_militias": -55,
+    "bel": 70,
+    "dnk": 70,
+    "fin": 70,
+    "nor": 70,
+    "swe": 70
+  },
+  "theatres": [
+    "black_sea_coast"
+  ],
+  "languages": [
+    "Romanian"
+  ],
+  "callout_language": "Romanian",
+  "doctrine": {
+    "summary": "Large NATO army on the Black Sea flank, mid-way through replacing Soviet-era and domestic designs (TR-85, MLI-84, TAB) with Piranha V, Cobra II, Abrams and K9. Hosts the French-led NATO battlegroup and the Mihail Kogalniceanu air base; routinely deals with Russian drone debris and airspace incursions near the Danube.",
+    "squad_size": 9,
+    "fireteam": "9-man squad in two teams plus leader.",
+    "tactics": [
+      "mechanised defence along river lines",
+      "mountain troops (Vanatori de munte) for Carpathian terrain",
+      "Spike ATGM teams and AG-7 anti-armour",
+      "artillery-heavy fires (HIMARS, LAROM, K9)",
+      "coastal and Danube security patrols"
+    ],
+    "ai_tuning": {
+      "aggression": 0.45,
+      "discipline": 0.75,
+      "suppression_resistance": 0.65,
+      "flanking": 0.6,
+      "grenade_use": 0.55,
+      "medical_care": 0.7,
+      "night_capability": 0.65,
+      "marksmanship": 0.65,
+      "morale": 0.7
+    }
+  },
+  "camo": [
+    {
+      "name": "M2017 (Romanian woodland)",
+      "palette": [
+        "#6E6E4C",
+        "#4A5236",
+        "#5A4532",
+        "#26251E"
+      ],
+      "use": "standard since 2017"
+    },
+    {
+      "name": "MultiCam",
+      "palette": [
+        "#A08C6A",
+        "#6B6B47",
+        "#4E4433",
+        "#C9B998"
+      ],
+      "use": "special forces, mountain troops, paratroopers"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "PA md. 86 (5.45x39mm)",
+      "SIG516 G3 (5.56x45mm, replacing PA md. 86 under SAFE/SAI)"
+    ],
+    "autorifleman": [
+      "PM md. 93 (5.45x39mm)",
+      "Mitraliera md. 66 PKM-pattern (7.62x54R)",
+      "M240 (7.62x51mm)"
+    ],
+    "marksman": [
+      "PSL (7.62x54R)"
+    ],
+    "grenadier": [
+      "PA md. 86 with AG-40 (40mm)"
+    ],
+    "at": [
+      "AG-7 (RPG-7 pattern: PG-7V, OG-7V)",
+      "Spike-LR (team)",
+      "FGM-148 Javelin (team, small numbers)",
+      "M72A5 LAW"
+    ],
+    "medic": [
+      "PA md. 86 folding stock (5.45x39mm)"
+    ],
+    "squad_leader": [
+      "PA md. 86 with optic (5.45x39mm)"
+    ],
+    "sniper": [
+      "M110 (7.62x51mm)",
+      "SIG SSG 3000 (7.62x51mm)",
+      "Barrett M82 (12.7x99mm)"
+    ],
+    "sidearm": [
+      "Pistol model 2000 (9x19mm)",
+      "SIG Sauer P320 (9x19mm, incoming)"
+    ]
+  },
+  "launchers": [
+    "RPG-7 / AG-7 (PG-7V, OG-7V) [in_game]",
+    "FGM-148 Javelin [in_game]",
+    "Spike-LR ATGM [not_in_game]",
+    "M72A5 LAW [not_in_game]",
+    "AG-9 recoilless (SPG-9 pattern) [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "mixed",
+    "notes": "Stimpex ST-4 PASGT-type and STI-HC22 high-cut helmets (medium); VST-PC22 plate carriers with level III/IV plates (medium). Rear-echelon troops in soft VST-1 vests (light)."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "piranha",
+      "role": "apc",
+      "prevalence": "signature",
+      "notes": "Piranha V (227) plus older Piranha IIIC."
+    },
+    {
+      "vehicle_id": "cobra",
+      "role": "mrap",
+      "prevalence": "signature",
+      "notes": "Otokar Cobra II, 1,059 ordered, mostly licence-built at Medias; includes pickup, Spike and mortar variants."
+    },
+    {
+      "vehicle_id": "tr85",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "TR-85M1 Bizonul, being upgraded to TR-85M1R."
+    },
+    {
+      "vehicle_id": "abrams",
+      "role": "mbt",
+      "prevalence": "uncommon",
+      "notes": "54 M1A2 (first battalion); existing voxel model. Real-world operator, so it fields it in game (Captain-confirmed 2026-10-10)."
+    },
+    {
+      "vehicle_id": "mli84",
+      "role": "ifv",
+      "prevalence": "common",
+      "notes": "MLI-84M Jderul."
+    },
+    {
+      "vehicle_id": "tab71",
+      "role": "apc",
+      "prevalence": "uncommon",
+      "notes": "Legacy TAB-77 / B33 Zimbru being phased out."
+    },
+    {
+      "vehicle_id": "jltv",
+      "role": "light",
+      "prevalence": "uncommon",
+      "notes": "Small JLTV fleet."
+    },
+    {
+      "vehicle_id": "k9",
+      "role": "artillery",
+      "prevalence": "uncommon",
+      "notes": "K9 Tunet, three battalions planned."
+    },
+    {
+      "vehicle_id": "himars",
+      "role": "mlrs",
+      "prevalence": "uncommon",
+      "notes": "M142 HIMARS."
+    },
+    {
+      "vehicle_id": "sa330",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": "IAR 330 Puma / SOCAT (~57)."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "rou_game_squad",
+      "name": "Romanian infantry squad (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "rou_piranha_squad",
+      "name": "Piranha V mechanised squad",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "piranha"
+    },
+    {
+      "id": "rou_mountain_team",
+      "name": "Vanatori de munte team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "rou_cobra_patrol",
+      "name": "Cobra II patrol",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "cobra"
+    }
+  ],
+  "support_assets": [
+    "K9 / M109-class artillery",
+    "HIMARS and LAROM rockets",
+    "IAR 330 SOCAT gunship (rare)",
+    "Spike ATGM teams",
+    "F-16 (late campaign)"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 20,
+        "unlocks": [
+          "5.45x39mm and 7.62x54R ammunition",
+          "M2017 uniforms",
+          "light helmet and vest"
+        ]
+      },
+      {
+        "rep": 40,
+        "unlocks": [
+          "PSL marksman rifle",
+          "PKM-pattern md. 66",
+          "AG-7 launcher",
+          "medium armour"
+        ]
+      },
+      {
+        "rep": 60,
+        "unlocks": [
+          "Cobra II purchase",
+          "optics and NVGs",
+          "Javelin"
+        ]
+      },
+      {
+        "rep": 80,
+        "unlocks": [
+          "Piranha V hire for one contract",
+          "IAR 330 lift on contracts"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "counter_sabotage_infrastructure_guard",
+      "drone_debris_recovery_and_site_security",
+      "border_security_patrol",
+      "convoy_escort",
+      "counter_smuggling_raid",
+      "train_and_accompany_partner_forces"
+    ],
+    "as_target": [
+      "only if the player works for this nation's enemies: sabotage_logistics_depot",
+      "only if the player works for this nation's enemies: intel_theft"
+    ]
+  },
+  "notes": "Real-world: Romania operates M1A2 Abrams (first battalion), JLTV and Cougar; it has no Bradley, AH-1Z or MaxxPro. PSL and md. 66 fire 7.62x54R, which in game can disable vehicles. Close ally and protector of Moldova.",
+  "proposed": [
+    "campaign_tier",
+    "alignment_to_player",
+    "relations.player",
+    "doctrine.ai_tuning",
+    "unit_templates",
+    "player_trade.rep_tiers",
+    "contract_types",
+    "body_armor (game tier mapping)",
+    "vehicles[].prevalence (game weighting)",
+    "camo[].palette (approximate hex values)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Romanian_Land_Forces",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Romanian_Armed_Forces",
+    "https://en.wikipedia.org/wiki/Romanian_Land_Forces",
+    "https://en.wikipedia.org/wiki/Otokar_Cobra_II",
+    "https://en.wikipedia.org/wiki/TR-85",
+    "https://en.wikipedia.org/wiki/MLI-84",
+    "https://en.wikipedia.org/wiki/IAR_330"
+  ]
+}

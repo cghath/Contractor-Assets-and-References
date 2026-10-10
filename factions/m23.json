@@ -1,0 +1,328 @@
+{
+  "id": "m23",
+  "name": "March 23 Movement (M23) / Alliance Fleuve Congo (AFC)",
+  "short": "M23/AFC",
+  "kind": "non_state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#4B5A36",
+    "#F2F2EE"
+  ],
+  "blocs": [],
+  "traits": [
+    "rebel_movement",
+    "un_sanctioned",
+    "peace_process"
+  ],
+  "campaign_tier": "mid",
+  "alignment_to_player": "hostile",
+  "player_client": false,
+  "relations": {
+    "player": -50,
+    "cod": -90,
+    "adf": -40,
+    "isis": -60,
+    "ind": -45,
+    "chn": -30,
+    "usa": -35,
+    "bel": -45,
+    "fra": -25,
+    "gbr": -25,
+    "qat": 10
+  },
+  "theatres": [
+    "eastern_congo"
+  ],
+  "languages": [
+    "Kinyarwanda",
+    "Swahili",
+    "French"
+  ],
+  "callout_language": "Kinyarwanda and Swahili; French for formal orders.",
+  "doctrine": {
+    "summary": "The March 23 Movement (M23) is a Congolese Tutsi-led rebel group formed in 2012 by mutineers from the national army; it took Goma briefly in 2012, was defeated in 2013 by the FARDC and MONUSCO's Force Intervention Brigade, and resumed fighting in late 2021. Since December 2023 it has been the military core of the Alliance Fleuve Congo (AFC), a political-military coalition led by Corneille Nangaa, with Sultani Makenga as military commander. In January-February 2025 it took Goma and Bukavu and set up parallel administrations across much of North and South Kivu. It fights as a disciplined conventional light-infantry force with mortars, artillery, anti-aircraft weapons and night operations. UN Group of Experts reports (most recently mid-2025) found that Rwanda's army deployed some 3,000-4,000 troops alongside M23 and exercised command and control over its operations; Rwanda denies backing the group and cites the threat from the FDLR (a Rwandan Hutu armed group with roots in the 1994 genocide) and its reported cooperation with the FARDC. Peace process: a US-brokered DRC-Rwanda agreement (June 2025) and the Washington Accords (4 December 2025) between the two governments, and a Qatar-mediated track between Kinshasa and AFC/M23 (Doha Declaration of Principles, July 2025; Doha Framework Agreement, November 2025). M23 took Uvira on 10 December 2025, days after the Washington signing, and withdrew in mid-January 2026 under US pressure; the US sanctioned the Rwanda Defence Force and senior officers for supporting M23. In August 2026 the parties agreed a negotiating roadmap in Switzerland and an expanded ceasefire-verification mechanism (EJVM+), but clashes with the FARDC and pro-government Wazalendo militias continue in Masisi, Walikale and the South Kivu highlands, and mediators call the process fragile.",
+    "squad_size": 8,
+    "fireteam": "Sections of 8-10 in battle-buddy pairs with mortar and heavy-weapons support at company level.",
+    "tactics": [
+      "Ridge-to-ridge advances in hill country, with mortar fire on army positions before the assault",
+      "Night infiltration around defended towns, then encirclement of the road out",
+      "Anti-aircraft weapons against army helicopters and drones (game: air-support denial zones)",
+      "Holding captured towns with checkpoints and a parallel administration",
+      "Ceasefire phases: static lines, verification teams pass through, violations reported on both sides"
+    ],
+    "ai_tuning": {
+      "aggression": 0.6,
+      "discipline": 0.7,
+      "suppression_resistance": 0.65,
+      "flanking": 0.7,
+      "grenade_use": 0.45,
+      "medical_care": 0.45,
+      "night_capability": 0.6,
+      "marksmanship": 0.6,
+      "morale": 0.7
+    }
+  },
+  "camo": [
+    {
+      "name": "Uniform green / olive fatigues with rubber boots",
+      "palette": [
+        "#4B5A36",
+        "#3A4529",
+        "#5E6B44",
+        "#1F241A"
+      ],
+      "use": "Most fighters"
+    },
+    {
+      "name": "Woodland and mixed captured patterns",
+      "palette": [
+        "#5C6038",
+        "#3B3F26",
+        "#7A5E3A",
+        "#1E1E18"
+      ],
+      "use": "Mixed issue and captured FARDC stocks"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "AK-47 / Type 56 (7.62x39mm)"
+    ],
+    "autorifleman": [
+      "PKM (7.62x54R)"
+    ],
+    "marksman": [
+      "SVD Dragunov (7.62x54R)"
+    ],
+    "grenadier": [
+      "AKM with GP-25 (7.62x39mm, 40 mm)"
+    ],
+    "at": [
+      "RPG-7 with PG-7V / OG-7V"
+    ],
+    "medic": [
+      "AK-47 (7.62x39mm)"
+    ],
+    "squad_leader": [
+      "AKM (7.62x39mm)"
+    ],
+    "sniper": [
+      "SVD Dragunov (7.62x54R)"
+    ],
+    "sidearm": [
+      "Makarov-pattern pistols"
+    ]
+  },
+  "launchers": [
+    "RPG-7 (PG-7V, OG-7V) [in_game]",
+    "MANPADS (reported by UN experts; game: air-denial zone, not a carried item) [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "light",
+    "vest": "light",
+    "plates": "steel",
+    "notes": "Many fighters wear chest rigs only; leaders and assault units wear helmets and light vests. Game: light, with a steel plate on assault units (proposed)."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "toyota_land_cruiser",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": "Land Cruiser pickups and troop carriers."
+    },
+    {
+      "vehicle_id": "toyota_hilux",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Pickups moving fighters and supplies."
+    },
+    {
+      "vehicle_id": "motorcycle",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Motorbikes for scouts and liaison on hill tracks."
+    },
+    {
+      "vehicle_id": "technical_zu23",
+      "role": "technical",
+      "prevalence": "uncommon",
+      "notes": "Truck- or pickup-mounted anti-aircraft guns (UN experts reported numerous anti-aircraft weapons)."
+    },
+    {
+      "vehicle_id": "t55",
+      "role": "mbt",
+      "prevalence": "rare",
+      "notes": "Captured FARDC armour reported after the fall of Goma; rare set piece (proposed)."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "m23_section",
+      "name": "M23 section (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "m23_mortar_team",
+      "name": "Mortar team",
+      "composition": [
+        {
+          "role": "mortar_crew",
+          "count": 3
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "toyota_land_cruiser",
+      "notes": "Off-map mortar events until found."
+    },
+    {
+      "id": "m23_aa_crew",
+      "name": "Anti-aircraft gun crew",
+      "composition": [
+        {
+          "role": "driver",
+          "count": 1
+        },
+        {
+          "role": "gunner",
+          "count": 2
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "technical_zu23"
+    },
+    {
+      "id": "m23_checkpoint",
+      "name": "Road checkpoint",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "toyota_hilux"
+    },
+    {
+      "id": "m23_night_infiltration",
+      "name": "Night infiltration team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "m23_captured_armour",
+      "name": "Captured tank crew (set piece)",
+      "composition": [
+        {
+          "role": "tank_crew",
+          "count": 3
+        }
+      ],
+      "vehicle_id": "t55"
+    }
+  ],
+  "support_assets": [
+    "Mortar and light artillery fire as off-map events",
+    "Anti-aircraft weapons: air-support denial zones over M23-held ridges (game-level)",
+    "Ceasefire-phase checkpoints and parallel administration posts"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [],
+    "as_target": [
+      "defend_town_vs_offensive",
+      "retake_ridge_outpost",
+      "mortar_team_hunt",
+      "convoy_escort_through_contested_road",
+      "recover_downed_drone_or_aircrew",
+      "evacuate_civilians_from_frontline"
+    ]
+  },
+  "notes": "Alignment (Captain-confirmed 2026-10-10): M23 is an armed non-state group under UN and US sanctions but is not designated a terrorist organisation by the UN or the US (the DR Congo government labels it a terrorist movement). Following the pack's rules for armed non-state groups, it is a hostile non-client like the cartels rather than hostile-only like the terror groups: player_client false, sellable false, relation with player -50 (not -100), campaign_tier mid because it fights as a well-equipped conventional force. During ceasefire phases on eastern_congo its units are not attacked by default and contracts are verification escorts and evacuations; contracts against M23 come from cod during fighting phases. Rwanda's backing is recorded as the UN Group of Experts reported it (Rwanda denies it); Rwanda is not a roster faction, and RDF units appear only as off-map support events. Situation as of October 2026: AFC/M23 holds the main lake city and much of the highlands; it withdrew from Uvira in January 2026 and from forward Lubero positions in April 2026; the Doha-track roadmap of August 2026 and EJVM+ verification are in place but fighting continues. M23 is not allied with the ADF (m23 -> adf -40). Added in Job 7 (Captain, 2026-10-10). Captain confirmed on 2026-10-10 that m23 stays a hostile non-client (relation -50 with the player, never hires or sells, like the cartels; not attacked by default during ceasefire phases); campaign_tier mid stays a proposal. It sits in the central_africa roster bloc with adf and cod.",
+  "proposed": [
+    "campaign_tier (mid)",
+    "relations values (factual direction, game magnitudes)",
+    "doctrine.ai_tuning (all values)",
+    "unit_templates (game compositions)",
+    "support_assets (game events)",
+    "contract_types.as_target",
+    "vehicles[].prevalence (game weighting)",
+    "vehicles: captured t55 as a rare set piece",
+    "body_armor (game tier mapping)",
+    "camo (approximate palettes)",
+    "flag_colors (generic olive and white; no official flag verified)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/March_23_Movement",
+    "https://en.wikipedia.org/wiki/Alliance_Fleuve_Congo",
+    "https://www.aljazeera.com/news/2025/7/18/un-experts-cast-blame-on-rwanda-and-uganda-what-are-they-doing-in-drc",
+    "https://www.aljazeera.com/news/2025/12/9/drc-accuses-rwanda-of-peace-deal-violations-as-m23-advances-in-the-east",
+    "https://www.theeastafrican.co.ke/tea/news/east-africa/m23-rebels-pull-back-from-uvira-on-washington-s-demands--5299114",
+    "https://www.monitor.co.ug/uganda/news/us-sanctions-rwanda-defense-force-four-top-military-officials-5377688",
+    "https://www.criticalthreats.org/briefs/congo-war-security-review/april-3-2026",
+    "https://www.aa.com.tr/en/africa/dr-congo-m23-rebel-group-agree-on-roadmap-for-comprehensive-peace-talks/4034875",
+    "https://ipisresearch.be/publication/shifting-frontlines-in-2026-new-year-old-challenges-hostilities-in-eastern-drc-continue-amid-increased-diplomatic-efforts/"
+  ]
+}

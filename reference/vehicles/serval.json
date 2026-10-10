@@ -1,0 +1,63 @@
+{
+  "id": "serval",
+  "name": "VBMR-L Serval",
+  "aliases": [
+    "Serval"
+  ],
+  "origin": "France",
+  "type": "apc",
+  "operators": [
+    "fra",
+    "bel"
+  ],
+  "crew": 2,
+  "passengers": 8,
+  "dimensions_m": {
+    "length": 6.2,
+    "width": 2.5,
+    "height": 2.6
+  },
+  "weight_t": 17.0,
+  "armament": [
+    "RWS with 7.62 mm or 12.7 mm MG",
+    "Variants with Mistral 3 or counter-drone turrets"
+  ],
+  "protection": "Light 4x4 armoured vehicle with mine protection. Game: immune to small-calibre rounds; 7.62x54R AP and larger can penetrate side/rear and disable wheels/engine; every launcher in the game list penetrates.",
+  "visual_notes": [
+    "4x4 on a truck-derived chassis, flat-sided hull with large windscreen",
+    "Single rear door, roof RWS",
+    "Shorter and lower than Griffon"
+  ],
+  "colour_schemes": [
+    {
+      "name": "French Centre-Europe three-tone",
+      "palette": [
+        "#555A3E",
+        "#5C4A34",
+        "#1F1F1A"
+      ]
+    },
+    {
+      "name": "Desert sand",
+      "palette": [
+        "#C8B48A",
+        "#A8956C"
+      ]
+    }
+  ],
+  "variants": [
+    "VPB (patrol)",
+    "SA2R (air defence)",
+    "LAD (counter-drone)",
+    "OA (observation)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/VBMR-L_Serval"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/VBMR-L_Serval",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_French_Army"
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "id": "rg32m",
+  "name": "BAE Systems RG-32M",
+  "aliases": [
+    "RG-32 Scout",
+    "Galten (Sweden)",
+    "Patria LTV"
+  ],
+  "origin": "South Africa",
+  "type": "light",
+  "operators": [
+    "irl"
+  ],
+  "crew": 1,
+  "passengers": 4,
+  "dimensions_m": {
+    "length": 5.4,
+    "width": 2.2,
+    "height": 2.2
+  },
+  "weight_t": 7.5,
+  "armament": [
+    "Roof ring mount or RWS for a 7.62 mm GPMG or 12.7 mm HMG"
+  ],
+  "protection": "Monocoque armoured steel hull with V-shaped underside; real-world protection against rifle fire and small anti-tank mines. Game: immune to small-calibre rounds; 7.62x54R AP and larger can penetrate the sides and glass; every launcher in the game list penetrates.",
+  "visual_notes": [
+    "Compact 4x4 armoured SUV with a sloped bonnet and slab-sided monocoque body",
+    "Large flat armoured windscreen in two panes; small thick side windows",
+    "Single rear door with spare wheel; roof hatch with weapon ring",
+    "Irish vehicles in olive drab at home and UN white with black 'UN' on overseas tours"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Irish olive drab",
+      "palette": [
+        "#4F5434",
+        "#2E3122",
+        "#1A1A16"
+      ]
+    },
+    {
+      "name": "UN white",
+      "palette": [
+        "#F2F2EE",
+        "#1F1F1F",
+        "#418FDE"
+      ]
+    }
+  ],
+  "variants": [
+    "RG-32M (Ireland, Sweden as Galten)",
+    "RG-32M LTV (Patria/BAE light tactical vehicle, Finland)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/RG-32_Scout",
+    "https://commons.wikimedia.org/wiki/Category:RG-32"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/RG-32_Scout",
+    "https://thedefensepost.com/2025/02/19/ireland-replace-armored-vehicles/"
+  ]
+}

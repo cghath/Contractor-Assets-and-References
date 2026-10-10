@@ -1,0 +1,64 @@
+{
+  "id": "m1117",
+  "name": "M1117 Guardian",
+  "aliases": [
+    "M1117 ASV"
+  ],
+  "origin": "United States",
+  "type": "apc",
+  "operators": [
+    "grc",
+    "usa",
+    "afg_taliban",
+    "irq",
+    "isis"
+  ],
+  "crew": 3,
+  "passengers": 1,
+  "dimensions_m": {
+    "length": 6.0,
+    "width": 2.6,
+    "height": 2.6
+  },
+  "weight_t": 13.4,
+  "armament": [
+    "Mk19 40 mm and M2HB 12.7 mm in turret"
+  ],
+  "protection": "Ceramic armour. Game: immune to small-calibre rounds; 7.62x54R AP and larger can penetrate side/rear and disable wheels/engine; every launcher in the game list penetrates.",
+  "visual_notes": [
+    "4x4 with faceted, angular armoured hull and large wheels inset in the hull sides",
+    "Small enclosed one-man turret with Mk19 and M2 side by side",
+    "Side doors, small armoured windows, spare wheel at rear",
+    "Captured ex-Afghan examples in Taliban hands show worn tan paint and white Taliban flags",
+    "4x4 with angular armoured hull and small turret"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Greek three-tone",
+      "palette": [
+        "#5A5C3A",
+        "#7A6A48",
+        "#2A2A20"
+      ]
+    },
+    {
+      "name": "Desert sand",
+      "palette": [
+        "#C8B48A",
+        "#A8956C"
+      ]
+    }
+  ],
+  "variants": [
+    "M1117"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/M1117_Armored_Security_Vehicle"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/M1117_Armored_Security_Vehicle",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Hellenic_Army"
+  ]
+}

@@ -1,0 +1,378 @@
+{
+  "id": "bel",
+  "name": "Belgium",
+  "short": "BEL",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#000000",
+    "#FDDA24",
+    "#EF3340"
+  ],
+  "blocs": [
+    "nato",
+    "eu",
+    "benelux",
+    "global_coalition_against_isis"
+  ],
+  "campaign_tier": "mid",
+  "alignment_to_player": "friendly",
+  "player_client": true,
+  "relations": {
+    "player": 25,
+    "usa": 75,
+    "gbr": 85,
+    "can": 80,
+    "aus": 70,
+    "ukr": 75,
+    "pol": 75,
+    "est": 80,
+    "lva": 80,
+    "ltu": 80,
+    "rou": 70,
+    "jpn": 60,
+    "kor": 55,
+    "isr": -5,
+    "tur": 40,
+    "sau": 30,
+    "are": 45,
+    "qat": 35,
+    "egy": 35,
+    "jor": 55,
+    "irq": 35,
+    "krg_peshmerga": 55,
+    "sdf": 30,
+    "syr": 5,
+    "pse_pa": 45,
+    "rus": -80,
+    "blr": -65,
+    "irn": -55,
+    "prk": -60,
+    "chn": -20,
+    "africa_corps": -60,
+    "sahel_aes": -30,
+    "afg_taliban": -60,
+    "isis": -100,
+    "isis_k": -95,
+    "al_qaeda": -100,
+    "aqap": -90,
+    "al_shabaab": -90,
+    "jnim": -90,
+    "hamas": -85,
+    "pij": -85,
+    "hezbollah": -65,
+    "houthis": -70,
+    "iraqi_militias": -55,
+    "fra": 90,
+    "deu": 85,
+    "ita": 85,
+    "esp": 85,
+    "nld": 95,
+    "nor": 85,
+    "dnk": 85,
+    "swe": 85,
+    "fin": 85,
+    "grc": 85,
+    "adf": -85,
+    "m23": -45,
+    "cod": 30
+  },
+  "theatres": [
+    "baltic_coast",
+    "black_sea_coast",
+    "mesopotamia",
+    "sahel"
+  ],
+  "languages": [
+    "French",
+    "Dutch"
+  ],
+  "callout_language": "French",
+  "doctrine": {
+    "summary": "Light and medium motorised forces closely integrated with France (CaMo programme); no tanks since 2014.",
+    "squad_size": 8,
+    "fireteam": "Section of two teams.",
+    "tactics": [
+      "motorised manoeuvre",
+      "paratrooper and commando raids"
+    ],
+    "ai_tuning": {
+      "aggression": 0.55,
+      "discipline": 0.8,
+      "suppression_resistance": 0.7,
+      "flanking": 0.7,
+      "grenade_use": 0.55,
+      "medical_care": 0.85,
+      "night_capability": 0.8,
+      "marksmanship": 0.75,
+      "morale": 0.7
+    }
+  },
+  "camo": [
+    {
+      "name": "MultiCam",
+      "palette": [
+        "#8B7D5B",
+        "#5E5A3B",
+        "#C2B28B",
+        "#3E3427",
+        "#6E6B47"
+      ],
+      "use": "standard since 2022"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "FN SCAR-L (5.56x45mm)"
+    ],
+    "autorifleman": [
+      "FN Minimi Mk3 (5.56x45mm)",
+      "FN Minimi 7.62 Mk3 (7.62x51mm)"
+    ],
+    "marksman": [
+      "FN SCAR-H PR (7.62x51mm)"
+    ],
+    "grenadier": [
+      "SCAR-L with FN40GL (40mm)"
+    ],
+    "at": [
+      "M72 LAW (66mm)",
+      "RGW 90 HH (90mm)",
+      "Spike LR (ATGM)"
+    ],
+    "medic": [
+      "FN SCAR-L"
+    ],
+    "squad_leader": [
+      "FN SCAR-L"
+    ],
+    "sniper": [
+      "Accuracy International AX338 (.338 Lapua Magnum)",
+      "Barrett M107A1 (12.7x99mm)"
+    ],
+    "sidearm": [
+      "FN Five-seveN Mk2 (5.7x28mm)"
+    ]
+  },
+  "launchers": [
+    "M72 LAW (not in game list)",
+    "RGW 90 (not in game list)",
+    "Spike LR (not in game list)",
+    "Akeron MP (on order)"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "ceramic",
+    "notes": "Game mapping."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "griffon",
+      "role": "apc",
+      "prevalence": "signature",
+      "notes": "Deliveries began July 2025."
+    },
+    {
+      "vehicle_id": "jaguar_ebrc",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": "60 ordered."
+    },
+    {
+      "vehicle_id": "serval",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": ""
+    },
+    {
+      "vehicle_id": "piranha",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "Piranha IIIC."
+    },
+    {
+      "vehicle_id": "dingo",
+      "role": "mrap",
+      "prevalence": "common",
+      "notes": "Being replaced by Griffon."
+    },
+    {
+      "vehicle_id": "iveco_lmv",
+      "role": "light",
+      "prevalence": "uncommon",
+      "notes": ""
+    },
+    {
+      "vehicle_id": "caesar",
+      "role": "artillery",
+      "prevalence": "uncommon",
+      "notes": "CAESAR NG on order."
+    },
+    {
+      "vehicle_id": "nh90",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": ""
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "bel_rifle_squad",
+      "name": "Belgian rifle squad (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "bel_mech_squad",
+      "name": "Belgian mechanised squad",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 2
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "griffon"
+    },
+    {
+      "id": "bel_recon_team",
+      "name": "Belgian recon / sniper pair team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "sniper",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "iveco_lmv"
+    }
+  ],
+  "support_assets": [
+    "CAESAR artillery",
+    "drones",
+    "NH90 transport"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 20,
+        "unlocks": [
+          "service rifle and ammunition",
+          "uniforms in national camo",
+          "light helmet and vest"
+        ]
+      },
+      {
+        "rep": 40,
+        "unlocks": [
+          "optics and NVGs",
+          "medium armour",
+          "RGW 90 launcher"
+        ]
+      },
+      {
+        "rep": 60,
+        "unlocks": [
+          "marksman and sniper rifles",
+          "heavy armour",
+          "LMV (light vehicle)"
+        ]
+      },
+      {
+        "rep": 80,
+        "unlocks": [
+          "Griffon (armoured transport)",
+          "fire-support call-ins on contracts"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "counter-terrorist raid",
+      "hostage / personnel recovery",
+      "convoy escort",
+      "HVT capture",
+      "recover lost equipment or sensitive kit",
+      "train and accompany partner forces",
+      "security of embassy or base",
+      "counter-drone site defence"
+    ],
+    "as_target": [
+      "only if the player works for this nation's enemies: sabotage a logistics depot",
+      "only if the player works for this nation's enemies: ambush a supply convoy"
+    ]
+  },
+  "notes": "Belgium retired its tanks in 2014 and is re-equipping with French Scorpion vehicles under the CaMo partnership; contributes to Romania and Lithuania.",
+  "proposed": [
+    "campaign_tier",
+    "relations.player",
+    "doctrine.ai_tuning",
+    "unit_templates",
+    "player_trade.rep_tiers",
+    "contract_types",
+    "body_armor (game tier mapping)",
+    "vehicles[].prevalence (game weighting)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Belgian_Army",
+    "https://en.wikipedia.org/wiki/Belgian_Land_Component"
+  ]
+}

@@ -1,0 +1,384 @@
+{
+  "id": "qat",
+  "name": "State of Qatar (Qatar Armed Forces)",
+  "short": "Qatar",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#8A1538",
+    "#FFFFFF"
+  ],
+  "blocs": [
+    "gcc",
+    "arab_league",
+    "major_non_nato_ally_us",
+    "global_coalition_against_isis"
+  ],
+  "campaign_tier": "early",
+  "alignment_to_player": "friendly",
+  "player_client": true,
+  "relations": {
+    "player": 20,
+    "usa": 70,
+    "tur": 85,
+    "gbr": 50,
+    "fra": 45,
+    "deu": 35,
+    "pak": 40,
+    "chn": 25,
+    "rus": 10,
+    "sau": 55,
+    "are": 30,
+    "egy": 40,
+    "jor": 50,
+    "syr": 60,
+    "irq": 25,
+    "irn": -20,
+    "isr": -40,
+    "pse_pa": 40,
+    "afg_taliban": 30,
+    "som": 40,
+    "hamas": 10,
+    "hezbollah": -20,
+    "houthis": -40,
+    "iraqi_militias": -25,
+    "isis": -95,
+    "isis_k": -80,
+    "al_qaeda": -80,
+    "aqap": -75,
+    "al_shabaab": -60,
+    "bel": 35,
+    "dnk": 35,
+    "esp": 35,
+    "fin": 35,
+    "grc": 35,
+    "ita": 35,
+    "nld": 35,
+    "nor": 35,
+    "swe": 35,
+    "pmc_halcyon": 20,
+    "pmc_black_sable": -10,
+    "adf": -60,
+    "m23": 10,
+    "cod": 40
+  },
+  "theatres": [
+    "persian_gulf_coast"
+  ],
+  "languages": [
+    "Arabic (Gulf dialect)",
+    "English"
+  ],
+  "callout_language": "Gulf Arabic with English military terms; many trainers and specialists are Turkish, Pakistani, French or British, so mixed-language radio is plausible.",
+  "doctrine": {
+    "summary": "A small, rich force focused on defending a peninsula with critical gas infrastructure (Ras Laffan) and the large US air base at Al Udeid. The Emiri Land Force has been rebuilt since 2015 with German armour (Leopard 2A7+, PzH 2000, Boxer, Fennek, Dingo) and a large Turkish MRAP fleet, with a Turkish brigade-size presence and training mission in the country. Real ground-combat experience is limited; strength is in air defence, ISR and partnership. Qatar's diplomatic role is mediation (Gaza ceasefire talks, US-Taliban talks, hosting the Hamas political office), and it was struck both by Israel (September 2025, Doha) and by Iran (2026, including Ras Laffan and Hamad International Airport) while declaring itself not a party to the Iran war.",
+    "squad_size": 8,
+    "fireteam": "Western-style section of 8 in two fireteams, mounted in Ejder Yalçın or Boxer; special forces (Emiri Guard and Internal Security Force Lekhwiya) in teams of 4-8. In game: 8 men in battle-buddy pairs.",
+    "tactics": [
+      "Static defence of key infrastructure (gas plants, ports, airports) with layered counter-drone and air defence",
+      "Mobile MRAP quick-reaction forces patrolling the coast",
+      "Joint operations with Turkish and US forces stationed in the country",
+      "Leopard 2A7+ and PzH 2000 as a high-end deterrent rather than an expeditionary tool"
+    ],
+    "ai_tuning": {
+      "aggression": 0.35,
+      "discipline": 0.6,
+      "suppression_resistance": 0.45,
+      "flanking": 0.45,
+      "grenade_use": 0.45,
+      "medical_care": 0.7,
+      "night_capability": 0.65,
+      "marksmanship": 0.55,
+      "morale": 0.5
+    }
+  },
+  "camo": [
+    {
+      "name": "Qatari desert digital",
+      "palette": [
+        "#CDB892",
+        "#A68F69",
+        "#7C6B4E",
+        "#E1D3B2"
+      ],
+      "use": "Emiri Land Force"
+    },
+    {
+      "name": "Multicam-type",
+      "palette": [
+        "#7A7356",
+        "#A3966F",
+        "#4F4A37",
+        "#C8B992"
+      ],
+      "use": "Special forces and Emiri Guard"
+    },
+    {
+      "name": "Lekhwiya black / dark grey",
+      "palette": [
+        "#2A2B2D",
+        "#4A4C4F",
+        "#1A1A1A"
+      ],
+      "use": "Internal Security Force (urban, VIP protection)"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "FN SCAR-L (5.56x45mm)",
+      "M4 / Colt CAR-15 (5.56x45mm)",
+      "M16A1 (5.56x45mm, reserve)"
+    ],
+    "autorifleman": [
+      "FN Minimi (5.56x45mm)",
+      "FN MAG (7.62x51mm)",
+      "HK21 (7.62x51mm)"
+    ],
+    "marksman": [
+      "HK417 (7.62x51mm)"
+    ],
+    "grenadier": [
+      "M4 with M203 (40 mm)"
+    ],
+    "at": [
+      "AT4 CS (84 mm)",
+      "Carl Gustaf M2 (84 mm)",
+      "Javelin and Kornet ATGM teams"
+    ],
+    "medic": [
+      "M4 (5.56x45mm)"
+    ],
+    "squad_leader": [
+      "FN SCAR-L (5.56x45mm)"
+    ],
+    "sniper": [
+      "HK417 (7.62x51mm)",
+      "Barrett M82A1 (12.7x99mm)"
+    ],
+    "sidearm": [
+      "SIG Sauer P226 (9x19mm)",
+      "Glock 17 (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "AT4 CS [in_game]",
+    "Carl Gustaf M2 (MAAWS family) [in_game]",
+    "FGM-148 Javelin [in_game]",
+    "9M133 Kornet [not_in_game]",
+    "MILAN / HOT [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "ceramic",
+    "notes": "Modern Western helmets and plate carriers; mostly medium tier."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "leopard2a6",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "62 Leopard 2A7+ (ordered 2013). 100 Altay tanks on order but none delivered in 2026."
+    },
+    {
+      "vehicle_id": "ejder_yalcin",
+      "role": "mrap",
+      "prevalence": "signature",
+      "notes": "About 342 Nurol Ejder Yalçın 4x4: the most common Qatari armoured vehicle."
+    },
+    {
+      "vehicle_id": "kirpi",
+      "role": "mrap",
+      "prevalence": "common",
+      "notes": "BMC Kirpi II MRAPs; also BMC Amazon."
+    },
+    {
+      "vehicle_id": "pzh2000",
+      "role": "artillery",
+      "prevalence": "signature",
+      "notes": "24 PzH 2000 (some to be swapped for RCH 155 on Boxer)."
+    },
+    {
+      "vehicle_id": "boxer",
+      "role": "ifv",
+      "prevalence": "uncommon",
+      "notes": "Boxer RCT30 IFVs, first delivered December 2025."
+    },
+    {
+      "vehicle_id": "fennek",
+      "role": "light",
+      "prevalence": "uncommon",
+      "notes": "32 Fennek reconnaissance vehicles."
+    },
+    {
+      "vehicle_id": "dingo",
+      "role": "mrap",
+      "prevalence": "uncommon",
+      "notes": "14 Dingo 2 protected vehicles."
+    },
+    {
+      "vehicle_id": "himars",
+      "role": "mlrs",
+      "prevalence": "rare",
+      "notes": "M142 HIMARS (7 reported); also ASTROS II."
+    },
+    {
+      "vehicle_id": "ah64",
+      "role": "attack_heli",
+      "prevalence": "common",
+      "notes": "AH-64E Apache Guardians."
+    },
+    {
+      "vehicle_id": "nh90",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": "NH90 TTH/NFH transport and naval helicopters."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "qat_mrap_section",
+      "name": "Emiri Land Force MRAP section (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "ejder_yalcin"
+    },
+    {
+      "id": "qat_lekhwiya_team",
+      "name": "Internal Security Force (Lekhwiya) team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "kirpi"
+    },
+    {
+      "id": "qat_infrastructure_guard",
+      "name": "Infrastructure guard post",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "dingo"
+    }
+  ],
+  "support_assets": [
+    "AH-64E gunships",
+    "PzH 2000 and HIMARS fires",
+    "Rafale, F-15QA and Typhoon air cover (off-map)",
+    "Patriot and NASAMS air defence; counter-drone systems at Ras Laffan"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 40,
+        "unlocks": [
+          "5.56x45mm and 7.62x51mm ammunition",
+          "FN SCAR-L rifle",
+          "frags, smoke and flashbangs",
+          "medium helmets and soft vests"
+        ]
+      },
+      {
+        "rep": 60,
+        "unlocks": [
+          "HK417 marksman rifle",
+          "FN Minimi and FN MAG",
+          "plate carriers with ceramic front/back plates",
+          "AT4 CS and Carl Gustaf (MAAWS)"
+        ]
+      },
+      {
+        "rep": 80,
+        "unlocks": [
+          "Ejder Yalcin purchase",
+          "Dingo purchase",
+          "Javelin",
+          "NVGs and thermal optics"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "counter_drone_energy_site",
+      "escort_tanker_convoy",
+      "vip_protection_mediation_talks",
+      "hostage_release_handover_security",
+      "port_security_persian_gulf"
+    ],
+    "as_target": []
+  },
+  "notes": "Mediator state: hosts Al Udeid (largest US base in the region), a Turkish base, the Hamas political office and past US-Taliban talks. A September 2025 Israeli strike on Hamas officials in Doha led to a US executive order pledging to defend Qatar. In 2026 Iranian missile strikes hit Ras Laffan (cutting LNG capacity by about 17% for years) and Hamad International Airport; Qatar says it is not a party to the war and backs diplomacy. Game: neutral-mediator flavour, client for protection and hostage-handover security contracts. Small arms list follows the IISS-based inventory; exact standard-issue rifle is not well documented.",
+  "proposed": [
+    "campaign_tier",
+    "alignment_to_player",
+    "player_client",
+    "contract_types.as_client",
+    "relations.player",
+    "relations.hamas (low positive = hosts political office as mediator, not an ally)",
+    "doctrine.ai_tuning",
+    "unit_templates",
+    "vehicles[].prevalence (game weighting)",
+    "body_armor (game tier mapping)",
+    "alignment_to_player (friendly client and seller)",
+    "player_trade.rep_tiers (40/60/80 thresholds and unlocks; that qat sells at high reputation is Captain-confirmed 2026-10-10)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Qatar_Armed_Forces",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Qatar_Armed_Forces",
+    "https://armyrecognition.com/archives/archives-land-defense/defense-news-army-2025/qatar-receives-first-boxer-rct30-infantry-fighting-vehicles-from-germany",
+    "https://en.wikipedia.org/wiki/2026_Iranian_strikes_on_Qatar",
+    "https://shafaq.com/en/Middle-East/Qatar-says-it-is-not-a-party-to-Iran-US-Israel-war-backs-dialogue",
+    "https://en.wikipedia.org/wiki/2026_Iran_war"
+  ]
+}

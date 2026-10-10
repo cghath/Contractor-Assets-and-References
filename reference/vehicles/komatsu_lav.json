@@ -1,0 +1,54 @@
+{
+  "id": "komatsu_lav",
+  "name": "Komatsu Light Armored Vehicle",
+  "aliases": [
+    "Komatsu LAV",
+    "Type 01 LAV"
+  ],
+  "origin": "Japan (Komatsu)",
+  "type": "light",
+  "operators": [
+    "jpn"
+  ],
+  "crew": 1,
+  "passengers": 3,
+  "dimensions_m": {
+    "length": 4.4,
+    "width": 2.04,
+    "height": 1.85
+  },
+  "weight_t": 4.5,
+  "armament": [
+    "5.56 mm Minimi or 7.62 mm MG on roof hatch",
+    "Type 01 LMAT carried"
+  ],
+  "protection": "Light armour against small arms. Game: immune to small-calibre rounds (5.45/5.56/5.8/7.62x39/7.62x51 ball); 7.62x54R and larger penetrate side/rear and disable tyres and engine; any launcher destroys it.",
+  "visual_notes": [
+    "Small boxy 4x4 with a nearly vertical windscreen and flat panels",
+    "Round roof hatch with pintle MG, four doors with small armoured windows",
+    "Deployed in Iraq and on overseas evacuations; replacement under selection (Eagle V and Hawkei trialled)"
+  ],
+  "colour_schemes": [
+    {
+      "name": "JGSDF two-tone (green/brown)",
+      "palette": [
+        "#4A5236",
+        "#5C4B33",
+        "#2A2C22"
+      ]
+    }
+  ],
+  "variants": [
+    "Komatsu LAV"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Komatsu_LAV",
+    "https://commons.wikimedia.org/wiki/Category:Komatsu_LAV"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Komatsu_LAV",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Japan_Ground_Self-Defense_Force"
+  ]
+}

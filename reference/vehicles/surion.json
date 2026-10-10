@@ -1,0 +1,65 @@
+{
+  "id": "surion",
+  "name": "KAI KUH-1 Surion",
+  "aliases": [
+    "KUH-1",
+    "Surion",
+    "MUH-1 Marineon"
+  ],
+  "origin": "South Korea (KAI)",
+  "type": "transport_heli",
+  "operators": [
+    "kor"
+  ],
+  "crew": 2,
+  "passengers": 9,
+  "dimensions_m": {
+    "length": 19.0,
+    "width": 15.8,
+    "height": 4.5
+  },
+  "weight_t": 8.7,
+  "armament": [
+    "Door-mounted 7.62 mm MGs"
+  ],
+  "protection": "Game: airframe immune to small-calibre rounds; 7.62x54R and 12.7/14.5 mm damage rotor, engines and cockpit glass (forced landing on accumulated hits); launchers and MANPADS (off-list) destroy it.",
+  "visual_notes": [
+    "Medium utility helicopter derived from the Super Puma/Cougar layout",
+    "Four-blade main rotor, fenestron-free conventional tail rotor, retractable wheels",
+    "Large sliding cabin doors; Marineon has folding blades for ships"
+  ],
+  "colour_schemes": [
+    {
+      "name": "ROK Army four-colour",
+      "palette": [
+        "#4C5A36",
+        "#6E5B3E",
+        "#22231D",
+        "#8A8466"
+      ]
+    },
+    {
+      "name": "ROK Army aviation green",
+      "palette": [
+        "#4C5538",
+        "#363C29",
+        "#7F8466"
+      ]
+    }
+  ],
+  "variants": [
+    "KUH-1",
+    "MUH-1 Marineon",
+    "Medevac"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/KAI_Surion",
+    "https://commons.wikimedia.org/wiki/Category:KAI_KUH-1_Surion"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/KAI_Surion",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Republic_of_Korea_Army"
+  ]
+}

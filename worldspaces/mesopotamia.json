@@ -1,0 +1,250 @@
+{
+  "id": "mesopotamia",
+  "name": "Land Between the Rivers",
+  "inspired_by": "Central and northern Iraq as of 2026: the Tigris alluvial plain with date palm groves and irrigation canals, the Jazira and Anbar desert to the west toward the Syrian border, the Hamrin hills and oil-rich disputed foothills to the north-east, and the first Zagros ranges of the Kurdistan Region in the far north-east corner. US forces left federal Iraq by 30 September 2026; ISIS persists as rural cells. All towns are fictional.",
+  "map_size_km": [24, 24],
+  "climate": "Hot desert to semi-arid (Koppen BWh in the south and west, BSh in the north-east). Summers 44-50 C on the plain, among the hottest inhabited places on earth; winters 5-16 C with frost at night; 100-200 mm rain on the plain, up to 500 mm in the foothills, falling November-April.",
+  "seasons": [
+    "Winter (Dec-Feb): cool, rain turns farm tracks and riverbanks to mud, morning fog in the palm groves",
+    "Spring (Mar-May): wheat harvest, frequent dust storms, rising heat",
+    "Summer (Jun-Sep): extreme heat, haze, low river levels, power cuts",
+    "Autumn (Oct-Nov): date harvest, cooling, first rains in the north"
+  ],
+  "biomes": [
+    {
+      "id": "palm_groves_and_canals",
+      "share": 0.24,
+      "vegetation": ["date palm (Phoenix dactylifera) groves with citrus and pomegranate understorey", "Euphrates poplar and willow on banks", "reed (Phragmites) in canals", "vegetable plots and alfalfa"],
+      "ground_palette": ["#7c6a50", "#9a8565", "#5f5240", "#b5a283", "#4c4434"],
+      "foliage_palette": ["#4a6b34", "#62803e", "#2f4a26", "#87a055", "#a8b276"]
+    },
+    {
+      "id": "irrigated_plain_fields",
+      "share": 0.2,
+      "vegetation": ["wheat and barley", "salt-crusted abandoned fields", "camelthorn (Alhagi) on field margins", "eucalyptus rows along roads"],
+      "ground_palette": ["#b29d78", "#c9b893", "#968262", "#e0d6bd", "#7d6c52"],
+      "foliage_palette": ["#c9b56e", "#8d9a52", "#6f7a3c", "#b3a95e", "#e0d29b"]
+    },
+    {
+      "id": "jazira_desert",
+      "share": 0.28,
+      "vegetation": ["sparse dwarf shrubs (Haloxylon, Artemisia)", "seasonal grasses after rain", "bare gravel and gypsum crust", "tamarisk in wadi beds"],
+      "ground_palette": ["#cdb68d", "#bca37a", "#e0d1b0", "#a68e6a", "#ece2c9", "#8f7b5e"],
+      "foliage_palette": ["#a8a27e", "#8f8a68", "#c1b98f", "#6f6c55"]
+    },
+    {
+      "id": "hamrin_foothills",
+      "share": 0.18,
+      "vegetation": ["grassland and wheat on rolling hills", "thorn scrub in gullies", "oak remnants on higher slopes", "oil field clearings"],
+      "ground_palette": ["#a8875f", "#8e7150", "#c4a97f", "#6f5a42", "#d8c6a0"],
+      "foliage_palette": ["#9a9a5a", "#7a8045", "#bdb878", "#5a6236"]
+    },
+    {
+      "id": "kurdistan_front_ranges",
+      "share": 0.1,
+      "vegetation": ["Brant's oak woodland", "walnut and pomegranate orchards in valleys", "poplar stands by streams", "grass slopes with spring flowers"],
+      "ground_palette": ["#8a6f52", "#a5896a", "#6e5640", "#c2a985", "#9a9486"],
+      "foliage_palette": ["#4a5e30", "#627a3c", "#7f8f50", "#3a4a26"]
+    }
+  ],
+  "terrain": {
+    "elevation_range_m": [40, 1300],
+    "relief": "Very flat alluvial plain (40-80 m) across the centre and south, with raised canal levees and river banks the only relief; a low desert plateau rising west to 250 m with wadis and escarpments; the Hamrin ridge (300-500 m) crossing the north-east; foothills and the first Zagros ranges climbing to 1,300 m in the far north-east.",
+    "features": ["meandering Tigris-type river with levees and islands", "dense canal network with earth embankments", "salt-crusted abandoned fields", "a large shallow lake/depression at the west edge", "desert wadis and escarpments", "Hamrin anticline ridge", "oil field pads, pipelines and flares", "ancient city mounds (tells)"],
+    "water": "One large river (200-400 m) meandering north-west to south-east, a tributary from the north-east foothills, a barrage with locks, hundreds of canals and drains, a shallow desert lake at the west edge, marsh patches in the south-east corner.",
+    "generator": {
+      "approach": "Heightmap at 10 m. Mostly flat base with a westward desert rise and a north-east foothill ramp; river carved as a meandering spline with levees (raised 2-4 m) built up on both banks; canals are a procedural network branching off the river (Lindenmayer-style tree, 1-12 m wide, with embankments). Ridges via anisotropic noise masked to the north-east.",
+      "noise_layers": [
+        {"type": "linear ramps", "frequency": 0, "amplitude_m": 250, "purpose": "west desert rise and north-east foothill rise; plain stays at 40-80 m"},
+        {"type": "ridged multifractal, anisotropic (NW-SE, 6:1)", "frequency": 0.25, "amplitude_m": 450, "purpose": "Hamrin ridge and Zagros front ranges, masked to the north-east third"},
+        {"type": "simplex fbm", "frequency": 0.5, "amplitude_m": 30, "purpose": "desert plateau escarpments and wadis"},
+        {"type": "simplex", "frequency": 3.0, "amplitude_m": 1.5, "purpose": "plain micro-relief and levee breaks"},
+        {"type": "value noise", "frequency": 0.4, "amplitude_m": 0, "purpose": "salinity mask: converts some fields to bare salt crust"}
+      ],
+      "erosion": "Hydraulic erosion only on the desert plateau and foothills; the plain is kept flat (no erosion) and shaped by levees and canals.",
+      "rivers": "Main river spline with meander amplitude 1-2 km and levees; tributary from the north-east; canals branch from the river and the barrage and end in drains; wadis on the plateau from flow accumulation.",
+      "settlement_flattening": "Settlements on the plain sit on levees or slightly raised mounds; flatten with 40 m skirts. Foothill villages per plot.",
+      "notes": "On the flat plain, palm groves and canal embankments are the only cover and break line of sight to 50-200 m: ideal ambush and IED-hazard terrain. Bridges over the river (4) and the barrage are convoy chokepoints; canals block vehicles except at culverts and small bridges."
+    }
+  },
+  "settlements": [
+    {
+      "type": "village",
+      "share": 0.35,
+      "pop_range": [200, 3000],
+      "architecture": "Plain villages in the palm groves: one- and two-storey houses of fired yellow brick or cinder block with flat roofs and parapets, walled yards with metal gates, rooftop water tanks and satellite dishes; a few older mud-brick houses; a mosque or husseiniya with a green or blue dome.",
+      "footprint_m": "house 12x14 on 25x30 walled plot",
+      "storeys": [1, 2],
+      "wall_class": "Fired-brick walls 24-36 cm medium; yard walls 25 cm medium; cinder-block additions thin; mud brick thick.",
+      "materials": ["BRICK", "CINDER_BLOCK", "MUD_BRICK", "CONCRETE", "STEEL"],
+      "palette": ["#c9a46e", "#d6bc8a", "#9a978f", "#a47e57", "#8a8577", "#4a4d50"],
+      "layout_rules": ["strung along a canal or levee road", "houses inside palm groves with tracks between", "mosque at the junction with a small shop row", "canal bridges and culverts as the only vehicle crossings"],
+      "example_names": ["Albu Nasr", "Jarf al-Qasab", "Albu Rumman al-Sharqi", "Hawr al-Basha", "Sayyid Ghazi", "Albu Sudah"]
+    },
+    {
+      "type": "town",
+      "share": 0.25,
+      "pop_range": [20000, 120000],
+      "architecture": "River town: two- to four-storey fired-brick and concrete buildings with flat roofs, older houses with wooden shanasheel bay windows in the old quarter, arcaded market streets, a large shrine or mosque with a gold or blue dome, government buildings behind T-walls, a riverside corniche.",
+      "footprint_m": "block 40x80; building 12x20",
+      "storeys": [2, 4],
+      "wall_class": "Brick medium; concrete frames thick; T-walls around government sites thick.",
+      "materials": ["BRICK", "CONCRETE", "CINDER_BLOCK", "WOOD", "STEEL", "GLASS"],
+      "palette": ["#c9a46e", "#9c5a3c", "#8a8577", "#8c6a46", "#2f6f8f", "#9fbcc4"],
+      "layout_rules": ["old quarter of lanes on the riverbank", "grid of newer districts behind", "market street and a main mosque or shrine as landmark", "T-wall compounds for government and security buildings", "bridge to the far bank"],
+      "example_names": ["Qalat al-Rihan", "Madinat al-Qubba al-Zarqa", "Bayt al-Nahrayn", "Shatt al-Ward", "Suwayra al-Jadida"]
+    },
+    {
+      "type": "city_district",
+      "share": 0.1,
+      "pop_range": [100000, 400000],
+      "architecture": "Kurdistan Region city district in the north-east: four- to twelve-storey concrete buildings with stone and glass facades, malls, a citadel mound, hotels and compounds for foreign missions, a sprawl of two-storey villas.",
+      "footprint_m": "block 60x120; building 20x30",
+      "storeys": [2, 12],
+      "wall_class": "Concrete frames thick; glass none; compound walls thick.",
+      "materials": ["CONCRETE", "LIMESTONE", "GLASS", "STEEL", "PAINTED"],
+      "palette": ["#d6caa8", "#c9c1ad", "#9fbcc4", "#8a8577", "#5f6b58"],
+      "layout_rules": ["ring roads around a central citadel mound", "hotel and consulate district with walls", "airport and coalition advisory compound on the edge"],
+      "example_names": ["Shar-i Nwe", "Gulan Khwarw", "Pirde Taza"]
+    },
+    {
+      "type": "farm",
+      "share": 0.1,
+      "pop_range": [10, 60],
+      "architecture": "Farm compounds: a two-storey house, a reed-and-mud livestock shed, a pump house on the canal, hay stacks, a high wall.",
+      "footprint_m": "compound 40x50",
+      "storeys": [1, 2],
+      "wall_class": "Compound wall mud or brick 30-40 cm thick; sheds thin.",
+      "materials": ["MUD_BRICK", "BRICK", "THATCH", "CORRUGATED_IRON"],
+      "palette": ["#a47e57", "#c9a46e", "#b49a5e", "#8b8e8c"],
+      "layout_rules": ["on a canal bank, one access track", "palm grove on one side, fields on the other"],
+      "example_names": ["Mazraat al-Hajj Hamid", "Bayt Abu Kadhim", "Mazraat Albu Ali"]
+    },
+    {
+      "type": "compound",
+      "share": 0.2,
+      "pop_range": [0, 2000],
+      "architecture": "Security, military and oil sites: ISF bases in former Coalition bases (T-walls, HESCO, guard towers, hangar tents), oil field gathering stations and refineries, a power station, Peshmerga hilltop posts, a militia base in a walled former farm.",
+      "footprint_m": "patrol base 150x150; base 800x1000; refinery 1000x1500",
+      "storeys": [1, 3],
+      "wall_class": "T-walls, HESCO and berms thick; prefabs and tents none.",
+      "materials": ["CONCRETE", "HESCO", "SANDBAG", "STEEL", "DIRT_BERM", "CORRUGATED_IRON"],
+      "palette": ["#8a8577", "#a99a6c", "#b8a378", "#4a4d50", "#8a6f4e"],
+      "layout_rules": ["T-wall perimeter with entry control point and serpentine", "watchtowers on corners", "inner HESCO for accommodation"],
+      "example_names": ["Camp Hadid al-Sharqi", "Qaidat al-Nasr", "Haql Gird Sur", "K-2 Pump Station"]
+    }
+  ],
+  "infrastructure": {
+    "roads": "A four-lane north-south highway along the river (with overpasses and checkpoints), an older two-lane river road, desert highways west to the Syrian and Jordanian borders, canal-bank tracks in the groves, mountain roads in the north-east. Four river bridges and a barrage road are chokepoints.",
+    "rail": "Single-track line north-south with a station, sidings at the refinery, and a broken bridge.",
+    "power": "Thermal power station and a refinery on the river, 400 kV lines across the plain, generators everywhere; frequent outages.",
+    "ports": "None (inland). River boats only.",
+    "airfields": "An ex-Coalition air base with long runways and hangars (ISF), a KRG civil airport in the north-east (coalition advisory presence), agricultural strips.",
+    "checkpoints": "ISF checkpoints at highway junctions, bridges and town entrances (T-walls, a shelter, flags); PMF-badged posts on some roads (state forces, not the hostile faction); Peshmerga checkpoints on the disputed-area line; border crossings at the west edge."
+  },
+  "pois": [
+    {"type": "palm_grove_cache", "description": "Weapons and explosives cache buried in a palm grove beside a canal, marked by a rag on a tree; a small hut with a generator nearby. IED-hazard tracks around it.", "contract_use": "cache raid (clients irq, usa, gbr)", "loot_tier": "medium", "intel_chance": 0.45},
+    {"type": "hamrin_hideout", "description": "ISIS cell hideout in Hamrin hill gullies: dug-outs covered with tarps and scrub, a motorbike, food and water stores, an observation post on the crest.", "contract_use": "desert hideout clearance; HVT capture (client irq, krg_peshmerga)", "loot_tier": "medium", "intel_chance": 0.55},
+    {"type": "river_bridge", "description": "Steel truss bridge with an ISF checkpoint at each end, T-walls and a fuel station; the river road passes beneath through palm groves.", "contract_use": "convoy escort chokepoint; ambush defence", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "oil_field_station", "description": "Oil gathering station and pipeline junction in the foothills: tanks, separators, flare, a pump house, workers' prefabs, berm and towers.", "contract_use": "escort oil convoy; protect infrastructure; drone defence (clients irq, krg_peshmerga)", "loot_tier": "medium", "intel_chance": 0.2},
+    {"type": "militia_rocket_site", "description": "Walled farm used by a militia drone and rocket team: launch rails hidden in a shed, a pickup, crates, a generator and a lookout. Map hazard: unexploded rockets.", "contract_use": "recover launch-site intel for a client; defend a site it targets", "loot_tier": "medium", "intel_chance": 0.5},
+    {"type": "ex_coalition_base", "description": "Large base handed to the ISF: hangars, T-wall streets, empty accommodation blocks, a runway; partly abandoned.", "contract_use": "staging; recover lost equipment or sensitive kit left behind", "loot_tier": "medium", "intel_chance": 0.3},
+    {"type": "desert_wadi_route", "description": "Wadi crossing the western desert with a smuggling track, an abandoned police post and a burnt tanker; the route to the Syrian border.", "contract_use": "border interdiction; convoy ambush site", "loot_tier": "low", "intel_chance": 0.3},
+    {"type": "barrage_and_locks", "description": "River barrage with sluice gates, a road across the top, lock chambers and a control building; reed islands upstream.", "contract_use": "protect infrastructure; hot-zone objective", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "peshmerga_hill_post", "description": "Peshmerga post on a ridge overlooking disputed villages: sandbagged positions, a container, a flag, a dirt road.", "contract_use": "reinforce against an ISIS night attack (client krg_peshmerga); train-and-accompany", "loot_tier": "low", "intel_chance": 0.2},
+    {"type": "shrine_town_market", "description": "Busy market around a domed shrine, arcades, pilgrims, blast walls at the entrances.", "contract_use": "VIP protection; counter-terror security during a pilgrimage (high civilian density)", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "abandoned_village", "description": "Village emptied in the 2014-2017 war: damaged houses, booby-trap hazard markers, overgrown groves; used by cells as a waypoint.", "contract_use": "clearance sweep; IED-hazard escort for engineers", "loot_tier": "low", "intel_chance": 0.3},
+    {"type": "coalition_advisory_compound", "description": "Walled compound near the north-east airport housing NATO and coalition advisers: offices, accommodation, helipad.", "contract_use": "contract board for Western clients; VIP escort start", "loot_tier": "low", "intel_chance": 0.05},
+    {"type": "detention_camp_border", "description": "Camp and detention site at the west border edge (shared with the Syrian side): fences, towers, gates, a road to the crossing.", "contract_use": "reinforce against breakout; transfer convoy escort (clients sdf, irq)", "loot_tier": "low", "intel_chance": 0.25}
+  ],
+  "weather": {
+    "conditions": ["clear and extremely hot", "dust storms (haboob and shamal) in spring and summer", "winter rain and mud", "dense fog in the palm groves on winter mornings", "thunderstorms in the foothills"],
+    "visibility_notes": "Dust storms bring visibility under 100 m for hours and ground helicopters and drones; summer heat shimmer; palm groves limit sight to 50-200 m in any weather.",
+    "dust_or_snow": "Dust frequent from March to August; snow only in the north-east ranges in winter."
+  },
+  "civilians": {
+    "density": "medium",
+    "behaviour": "Farmers in fields and groves at dawn; markets 07:00-12:00 and evening; summer afternoons nearly empty; Friday prayers fill mosques at midday; pilgrim crowds around the shrine town on religious dates. Civilians recognise IED-hazard signs and avoid them; after shooting they shelter in walled yards. Herders with sheep and Bedouin in the desert.",
+    "vehicles": ["white Kia and Toyota pickups", "orange-and-white taxis", "Kia minibuses", "tractors with trailers", "motorbikes", "fuel and water tankers", "oil field lorries"],
+    "casualty_risk_notes": "Towns, the shrine market and grove villages are dense; desert and Hamrin zones are nearly empty and suit hard fights."
+  },
+  "factions_present": [
+    {"faction_id": "irq", "role": "defender", "strength": "high", "where": "Towns, highway, bridges, barrage and ex-Coalition base on the plain; CTS raids into groves and the Hamrin hills; Federal Police on the river road."},
+    {"faction_id": "iraqi_militias", "role": "militia", "strength": "medium", "where": "Palm grove villages and walled farms south of the main town, launch sites near the highway, the desert road to the west border; drone and rocket teams."},
+    {"faction_id": "isis", "role": "insurgent", "strength": "medium", "where": "Hamrin hill gullies, the western desert wadis and lake edge, abandoned villages in the disputed foothills; night raids on posts."},
+    {"faction_id": "krg_peshmerga", "role": "defender", "strength": "medium", "where": "North-east foothills and the Kurdistan front ranges, ridge posts on the disputed-area line, the KRG city district and gas/oil sites."},
+    {"faction_id": "sdf", "role": "patrol", "strength": "low", "where": "West edge: the Syrian side of the border detention camp and crossing."},
+    {"faction_id": "syr", "role": "patrol", "strength": "low", "where": "West edge border crossing on the Syrian side."},
+    {"faction_id": "tur", "role": "patrol", "strength": "low", "where": "Hilltop bases in the far north-east ranges (border-zone posts); drones overhead."},
+    {"faction_id": "jor", "role": "patrol", "strength": "low", "where": "South-west corner: the desert highway toward the Jordanian border; anti-smuggling liaison."},
+    {"faction_id": "irn", "role": "patrol", "strength": "low", "where": "East edge border crossing and adviser presence with militia teams (Quds Force-type), never a field force."},
+    {"faction_id": "usa", "role": "patrol", "strength": "low", "where": "No ground bases in federal Iraq after 30 September 2026; possible residual presence at the KRG airport (reports differ); ISR drones and strikes on isis."},
+    {"faction_id": "gbr", "role": "patrol", "strength": "low", "where": "Advisers at the coalition advisory compound and NATO mission staff in the main town."},
+    {"faction_id": "fra", "role": "patrol", "strength": "low", "where": "Advisers at the coalition advisory compound; special-forces liaison with CTS."},
+    {"faction_id": "can", "role": "patrol", "strength": "low", "where": "NATO advisory mission staff (Canada has led it in the past)."},
+    {"faction_id": "aus", "role": "patrol", "strength": "low", "where": "Small advisory detachment at the coalition compound."},
+    {"faction_id": "nzl", "role": "patrol", "strength": "low", "where": "Small staff detachment at the coalition compound."},
+    {"faction_id": "deu", "role": "patrol", "strength": "low", "where": "Trainers with the Peshmerga at the KRG city district."},
+    {"faction_id": "ita", "role": "patrol", "strength": "low", "where": "Trainers and helicopter unit at the KRG airport."},
+    {"faction_id": "esp", "role": "patrol", "strength": "low", "where": "NATO mission advisers in the main town."},
+    {"faction_id": "nld", "role": "patrol", "strength": "low", "where": "Advisers at the coalition compound."},
+    {"faction_id": "bel", "role": "patrol", "strength": "low", "where": "NATO mission staff."},
+    {"faction_id": "nor", "role": "patrol", "strength": "low", "where": "Advisers with the coalition compound."},
+    {"faction_id": "dnk", "role": "patrol", "strength": "low", "where": "NATO mission staff and advisers."},
+    {"faction_id": "pol", "role": "patrol", "strength": "low", "where": "NATO mission contingent and base-security team."},
+    {"faction_id": "est", "role": "patrol", "strength": "low", "where": "Small NATO mission detachment."},
+    {"faction_id": "lva", "role": "patrol", "strength": "low", "where": "Small NATO mission detachment."},
+    {"faction_id": "ltu", "role": "patrol", "strength": "low", "where": "Small NATO mission detachment."},
+    {"faction_id": "pmc_halcyon", "role": "rival_pmc", "strength": "low", "where": "Oil field stations and refinery security under foreign-company contracts; convoy escort competitor."}
+  ],
+  "frontline": "Two dynamics. (1) Counter-isis: isis cells regenerate in the Hamrin hills and western wadis and push into abandoned and grove villages at night; ISF and Peshmerga sweeps (and player contracts) push them back. A cell that survives three campaign days in a zone flips it to 'contested' and starts IED hazards on its roads. (2) Militia pressure: iraqi_militias launch drone and rocket attacks on oil sites, the KRG city and foreign compounds; each attack raises their zones' alert and posts site-defence contracts, while disarmament events (campaign calendar, deadline mid-2027) lower their strength. ISF never fights PMF-badged state units; contracts never target them. Peshmerga-ISF relations shift the disputed-area line only through political events (no combat between them).",
+  "contract_hooks": [
+    "ISIS cell raid on a Hamrin gully hideout (clients irq, krg_peshmerga)",
+    "Palm grove cache raid with IED-hazard approaches (clients irq, usa, gbr)",
+    "Escort an oil convoy from the foothill station to the refinery over a river bridge (client irq)",
+    "Defend an oil or gas site against militia drone and rocket attacks (client krg_peshmerga)",
+    "HVT capture of an isis emir in an abandoned village (clients irq, fra, usa)",
+    "Reinforce the border detention camp against a breakout attempt (clients sdf, irq)",
+    "Recover sensitive kit left at an ex-Coalition base before militias loot it (clients usa, gbr, pol)",
+    "Train and accompany a Peshmerga brigade on a night sweep (clients krg_peshmerga, deu, ita)",
+    "Escort a VIP convoy between the KRG city and a border town (client krg_peshmerga)"
+  ],
+  "zone_plan": {
+    "contract_zones": [
+      {"name": "Grove villages south of town", "area_km2": 3, "anchor": "palm_grove_cache", "notes": "short sightlines, canals, medium civilians"},
+      {"name": "Hamrin gullies", "area_km2": 4, "anchor": "hamrin_hideout", "notes": "low civilians, ridgelines"},
+      {"name": "Foothill oil station", "area_km2": 2, "anchor": "oil_field_station", "notes": "drone threat, berm defence"},
+      {"name": "River bridge and highway", "area_km2": 2.5, "anchor": "river_bridge", "notes": "convoy chokepoint"}
+    ],
+    "hot_zones": [
+      {"name": "Disputed foothills", "area_km2": 14, "layout": "isis HQ in an abandoned village; 4-5 outposts in gullies and ridge caves; isis checkpoints on two tracks at night; motorbike patrols; 1 QRF of pickups and technicals; Peshmerga and ISF posts on the edges as allies"},
+      {"name": "Grove belt", "area_km2": 10, "layout": "iraqi_militias HQ in a walled farm; 3-4 launch sites as outposts; checkpoints on canal bridges; roaming pickups and drone teams; 1 QRF of Land Cruisers"}
+    ]
+  },
+  "insertion": {"lhd": false, "fob": "FOB inside an ISF-held ex-Coalition base on the plain (helipad, workshops). Alternative FOB at the KRG airport for north-east contracts. Players reach zones by highway, canal-bank tracks or helicopter; AAVs can cross canals but not the foothill ranges."},
+  "early_game_suitable": true,
+  "early_game_notes": "isis and iraqi_militias are early-tier; Hamrin and grove contracts are the core early-game loop with many friendly clients (irq, krg_peshmerga, sdf, Western states).",
+  "ambient_audio": ["call to prayer from several mosques", "diesel pumps on canals", "generators", "frogs and birds in the groves", "traffic horns at checkpoints", "distant drone buzz", "wind and dust hiss in storms"],
+  "captain_confirmed": [
+    "map_size_km 24 x 24 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
+    "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
+    "materials accepted (Captain, 2026-10-10) and added to voxel_world.gd (Contractor dev, commit 1ec1417): BRICK #9c5a3c, CINDER_BLOCK #9a978f, MUD_BRICK #a47e57, THATCH #b49a5e, HESCO #a99a6c, SANDBAG #b8a378, DIRT_BERM #8a6f4e, CORRUGATED_IRON #8b8e8c, LIMESTONE #d6caa8, GLASS #9fbcc4"
+  ],
+  "proposed": [
+    "the composite layout",
+    "procedural canal network and generator numbers",
+    "frontline rules (cell survival flips a zone; disarmament lowers militia strength)",
+    "zone_plan and the two hot-zone layouts",
+    "Western nations shown as low-strength advisers only",
+    "IED hazards as marked map hazards only (game-level)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Mesopotamia",
+    "https://en.wikipedia.org/wiki/Tigris",
+    "https://en.wikipedia.org/wiki/Hamrin_Mountains",
+    "https://en.wikipedia.org/wiki/Climate_of_Iraq",
+    "https://en.wikipedia.org/wiki/Shanasheel",
+    "https://en.wikipedia.org/wiki/NATO_Mission_Iraq",
+    "factions/irq.json, iraqi_militias.json, isis.json, krg_peshmerga.json situation notes, October 2026"
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "vamtac",
+  "name": "URO VAMTAC",
+  "aliases": [
+    "VAMTAC ST5"
+  ],
+  "origin": "Spain",
+  "type": "light",
+  "operators": [
+    "esp"
+  ],
+  "crew": 1,
+  "passengers": 4,
+  "dimensions_m": {
+    "length": 5.05,
+    "width": 2.2,
+    "height": 2.0
+  },
+  "weight_t": 7.0,
+  "armament": [
+    "12.7 mm M2, 40 mm GMG or Spike carrier on ring/RWS"
+  ],
+  "protection": "ST5 armoured versions vs small arms and mines. Game: immune to small-calibre rounds; 7.62x54R and larger penetrate the light armour; launchers destroy it outright.",
+  "visual_notes": [
+    "Humvee-like 4x4 with wide stance and armoured cab",
+    "Ring mount behind cab",
+    "Spare wheel and cargo bed at rear"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Spanish green/brown",
+      "palette": [
+        "#4E5637",
+        "#5E4A34",
+        "#1F1F1A"
+      ]
+    },
+    {
+      "name": "Desert sand",
+      "palette": [
+        "#C8B48A",
+        "#A8956C"
+      ]
+    }
+  ],
+  "variants": [
+    "VAMTAC S3",
+    "VAMTAC ST5"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/URO_VAMTAC"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/URO_VAMTAC",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Spanish_Army"
+  ]
+}

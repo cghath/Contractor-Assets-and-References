@@ -1,0 +1,69 @@
+{
+  "id": "patria_amv",
+  "name": "Patria AMV",
+  "aliases": [
+    "XA-360",
+    "Pansarterrangbil 360"
+  ],
+  "origin": "Finland",
+  "type": "apc",
+  "operators": [
+    "fin",
+    "swe",
+    "pol",
+    "jpn"
+  ],
+  "crew": 2,
+  "passengers": 8,
+  "dimensions_m": {
+    "length": 7.7,
+    "width": 2.8,
+    "height": 2.3
+  },
+  "weight_t": 25.0,
+  "armament": [
+    "RWS 12.7 mm"
+  ],
+  "protection": "Modular armour. Game: immune to small-calibre rounds; 7.62x54R AP and larger can penetrate side/rear and disable wheels/engine; every launcher in the game list penetrates.",
+  "visual_notes": [
+    "8x8 with sloped glacis, flat roof and evenly spaced axles",
+    "Driver on front-left, engine beside him on the right",
+    "Rear door, roof RWS (Protector) or 120 mm AMOS twin-mortar turret on some",
+    "8x8 with sloped glacis and flat roof"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Finnish three-tone",
+      "palette": [
+        "#4F5A3A",
+        "#2F3526",
+        "#7A7457"
+      ]
+    },
+    {
+      "name": "Swedish splinter",
+      "palette": [
+        "#4A5838",
+        "#7D8C5E",
+        "#1F2419",
+        "#8C7A57"
+      ]
+    }
+  ],
+  "variants": [
+    "XA-360 (FIN)",
+    "Patgb 360 (SWE)",
+    "AMOS mortar",
+    "KTO Rosomak (POL, licence)",
+    "AMV XP (JPN, Japan Steel Works licence)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Patria_AMV"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Patria_AMV",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Swedish_Army"
+  ]
+}

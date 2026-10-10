@@ -1,0 +1,565 @@
+{
+  "id": "irn",
+  "name": "Islamic Republic of Iran (Artesh and IRGC)",
+  "short": "Iran",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#239F40",
+    "#FFFFFF",
+    "#DA0000"
+  ],
+  "blocs": [
+    "axis_of_resistance",
+    "sco",
+    "brics"
+  ],
+  "campaign_tier": "mid",
+  "alignment_to_player": "hostile",
+  "player_client": false,
+  "relations": {
+    "player": -60,
+    "usa": -100,
+    "isr": -100,
+    "gbr": -70,
+    "can": -60,
+    "fra": -60,
+    "deu": -60,
+    "aus": -50,
+    "sau": -55,
+    "are": -65,
+    "qat": -20,
+    "jor": -50,
+    "egy": -25,
+    "tur": -15,
+    "syr": -60,
+    "irq": 35,
+    "pse_pa": -20,
+    "aze": -25,
+    "arm": 30,
+    "pak": 15,
+    "afg_taliban": 5,
+    "ind": 15,
+    "rus": 65,
+    "chn": 55,
+    "prk": 50,
+    "blr": 40,
+    "hezbollah": 90,
+    "houthis": 85,
+    "iraqi_militias": 90,
+    "hamas": 70,
+    "pij": 85,
+    "isis": -95,
+    "isis_k": -100,
+    "al_qaeda": -60,
+    "aqap": -55,
+    "sdf": -30,
+    "krg_peshmerga": -35,
+    "sahel_aes": 15,
+    "che": 0,
+    "geo": 0,
+    "nzl": -50,
+    "rou": -50,
+    "bel": -55,
+    "dnk": -55,
+    "esp": -55,
+    "fin": -55,
+    "grc": -55,
+    "ita": -55,
+    "ltu": -55,
+    "lva": -55,
+    "nld": -55,
+    "nor": -55,
+    "pol": -55,
+    "swe": -55,
+    "est": -60,
+    "pmc_black_sable": -70,
+    "pmc_halcyon": -70,
+    "ukr": -80
+  },
+  "theatres": [
+    "iran_zagros",
+    "persian_gulf_coast",
+    "mesopotamia",
+    "lebanon_south",
+    "yemen_red_sea",
+    "iraq_iran_border"
+  ],
+  "languages": [
+    "Persian (Farsi)",
+    "Azerbaijani",
+    "Kurdish",
+    "Arabic (Khuzestan, Quds Force liaison)"
+  ],
+  "callout_language": "Persian (Farsi) military radio: 'dosman' (enemy), 'tir-andaz' (shooter), 'pahpad' (drone), 'nar-nadjak' (grenade); IRGC units add religious calls. Quds Force advisers use Arabic with partners.",
+  "doctrine": {
+    "summary": "Two parallel armed forces under one General Staff. The Artesh (regular army, navy, air force and air-defence force) is a conscript-heavy territorial defence force: armoured and infantry divisions with ageing Western and Soviet/Chinese tanks and home-built upgrades (Karrar, Zulfiqar, Tiam, Samsam), defending the borders and the Zagros approaches. The IRGC (Revolutionary Guards) is the politically trusted force: ground force with its own brigades and the Basij militia, the IRGC Aerospace Force (ballistic missiles, Shahed and Mohajer drones), the IRGC Navy (swarming fast attack craft in the Gulf and Hormuz) and the Quds Force that arms and advises partners abroad. Since 28 February 2026 Iran has been at war with the United States and Israel (Operation Epic Fury); Supreme Leader Ali Khamenei was killed on the first day and Mojtaba Khamenei was chosen as his successor in March 2026. Analysts judge the strikes degraded the Artesh's conventional air, air-defence and naval assets disproportionately, while dispersed IRGC missiles, drones and boats remain Iran's main leverage. Ground doctrine is layered 'mosaic defence': dispersed provincial IRGC commands, Basij local defence, mountain and urban positions, anti-armour ambushes, decoys and dispersal against air power.",
+    "squad_size": 9,
+    "fireteam": "Artesh infantry squad (daste) of 9-11 conscripts and NCOs around a PKM and an RPG-7. IRGC squads of 8-10 more motivated volunteers; Basij in loose groups of 6-12. Commando brigades (Artesh 65th Airborne Special Forces 'NOHED', IRGC Saberin) in teams of 6-8. In game: 8-man squads in battle-buddy pairs; Basij groups looser.",
+    "tactics": [
+      "Mosaic defence: dispersed provincial IRGC and Basij units fight independently if cut off",
+      "Anti-armour ambushes from ridgelines, villages and wadis with Toophan (TOW copy), Dehlavieh (Kornet copy) and RPG-7 teams",
+      "Mountain infantry and commando raids in the Zagros; heavy use of night movement and terrain",
+      "Shahed-136 one-way attack drones and Mohajer-6 armed reconnaissance drones (game: drone hazards and spotter drones)",
+      "IRGC Navy swarming of fast attack craft, mines and coastal anti-ship missiles in persian_gulf_coast missions",
+      "Decoys, camouflage nets, tunnels and hardened 'missile cities' against air attack (game: hidden launch sites as objectives)",
+      "Quds Force advisers embedded with partner militias abroad rather than large Iranian ground units",
+      "Basij checkpoint and internal-security duty in towns; riot-control and mass mobilisation"
+    ],
+    "ai_tuning": {
+      "aggression": 0.6,
+      "discipline": 0.55,
+      "suppression_resistance": 0.6,
+      "flanking": 0.5,
+      "grenade_use": 0.55,
+      "medical_care": 0.4,
+      "night_capability": 0.45,
+      "marksmanship": 0.5,
+      "morale": 0.65
+    }
+  },
+  "camo": [
+    {
+      "name": "Artesh digital desert (arid)",
+      "palette": [
+        "#C9B48A",
+        "#9C8460",
+        "#6E5E44",
+        "#4A4033"
+      ],
+      "use": "Artesh ground forces in iran_zagros foothills, Khuzestan and the south"
+    },
+    {
+      "name": "Artesh woodland / digital green",
+      "palette": [
+        "#5D6648",
+        "#3D4430",
+        "#8A7E5A",
+        "#2B2A22"
+      ],
+      "use": "Northern and mountain units, 65th NOHED commandos (with green beret)"
+    },
+    {
+      "name": "IRGC Ground Force digital",
+      "palette": [
+        "#7B7656",
+        "#4F4C38",
+        "#A8A07A",
+        "#2F2D24"
+      ],
+      "use": "IRGC brigades; often with plain olive drab and black head scarves; Saberin commandos in multicam-type copies"
+    },
+    {
+      "name": "Basij plain olive / mixed civilian",
+      "palette": [
+        "#5A5C45",
+        "#3A3B2E",
+        "#2A2A2A",
+        "#8C8A78"
+      ],
+      "use": "Basij militia; olive fatigues, keffiyeh-style scarves, mixed civilian clothing"
+    },
+    {
+      "name": "IRGC Navy blue-grey digital",
+      "palette": [
+        "#5B6876",
+        "#3A4652",
+        "#8E9AA5",
+        "#22292F"
+      ],
+      "use": "IRGC Navy boat crews and coastal units on persian_gulf_coast"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "KL-7.62 (Iranian AKM copy, 7.62x39mm)",
+      "G3A6 (licence-built HK G3, 7.62x51mm, Artesh)",
+      "Masaf-2 (Iranian AR-pattern rifle, 5.56x45mm, elite units)"
+    ],
+    "autorifleman": [
+      "PKM (Iranian copy, 7.62x54R)",
+      "MGA3 (licence MG3, 7.62x51mm)",
+      "RPK-type (7.62x39mm)"
+    ],
+    "marksman": [
+      "Nakhjir (SVD copy, 7.62x54R)"
+    ],
+    "grenadier": [
+      "KL-7.62 with GP-25-type underbarrel launcher (40 mm)",
+      "Iranian AGS-17 copy (30 mm), crew-served"
+    ],
+    "at": [
+      "RPG-7 (Iranian copy)",
+      "Toophan (TOW copy) and Dehlavieh (Kornet copy) ATGM teams",
+      "Saeghe (Dragon copy) ATGM"
+    ],
+    "medic": [
+      "KL-7.62 (7.62x39mm)"
+    ],
+    "squad_leader": [
+      "KL-7.62 (7.62x39mm)",
+      "Masaf-2 (5.56x45mm)"
+    ],
+    "sniper": [
+      "Nakhjir (SVD copy, 7.62x54R)",
+      "AM-50 Sayyad (Steyr HS .50 copy, 12.7x99mm)",
+      "Arash anti-materiel rifle (20 mm)"
+    ],
+    "sidearm": [
+      "ZOAF PC-9 (SIG P228 copy, 9x19mm)",
+      "Makarov-type (9x18mm)"
+    ]
+  },
+  "launchers": [
+    "RPG-7 (Iranian copy) with PG-7V [in_game] and OG-7V [in_game]",
+    "Toophan / Toophan-5 (TOW copy) ATGM [not_in_game]",
+    "Dehlavieh (Kornet copy) ATGM [not_in_game]",
+    "Saeghe (Dragon copy) ATGM [not_in_game]",
+    "Misagh-2 / Misagh-3 MANPADS [not_in_game]",
+    "SPG-9 type recoilless rifles on vehicles [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "light",
+    "plates": "steel",
+    "notes": "Iranian copies of the US ACH helmet (medium) and Ruyin-series vests with steel or ceramic plates are issued to IRGC and commando units (medium vest). Conscript Artesh infantry often has a light vest or none and a light steel helmet. Basij usually unarmoured. Proposed tier mapping only."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "karrar",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "Home-built T-72 derivative with angular ERA-covered turret; Artesh armoured units. Few hundred at most; the T-72S remains more numerous."
+    },
+    {
+      "vehicle_id": "t72b3",
+      "role": "mbt",
+      "prevalence": "common",
+      "notes": "T-72S (Soviet/Russian licence, assembled in Iran); backbone of Artesh armour. Note: the 'T-72Z Safir-74' is actually an upgraded T-54/55/Type 59, not a T-72."
+    },
+    {
+      "vehicle_id": "m60",
+      "role": "mbt",
+      "prevalence": "common",
+      "notes": "Pre-1979 M60A1 upgraded locally as the Samsam; also Chieftain (Mobarez) and Type 59/T-55 (Safir-74) in reserve."
+    },
+    {
+      "vehicle_id": "boragh",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "Iranian BMP-1/Type 86 derivative APC/IFV; BMP-1 and BMP-2 also in service."
+    },
+    {
+      "vehicle_id": "safir_jeep",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": "Ubiquitous IRGC/Artesh light jeep with 106 mm recoilless rifle, Toophan ATGM or 107 mm rockets; also exported to partner militias."
+    },
+    {
+      "vehicle_id": "aras",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Aras / Aras-2 4x4 tactical vehicle delivered to the Artesh Ground Force from 2019; troop carrier and weapons mount."
+    },
+    {
+      "vehicle_id": "toyota_land_cruiser",
+      "role": "technical",
+      "prevalence": "common",
+      "notes": "Land Cruiser 70-series pickups with DShK, ZU-23 or 107 mm rockets for IRGC and Basij mobile units."
+    },
+    {
+      "vehicle_id": "ah1z",
+      "role": "attack_heli",
+      "prevalence": "uncommon",
+      "notes": "Pre-1979 AH-1J International SeaCobras (twin-engine Cobra family), kept flying by local industry as the Toufan; Artesh Aviation. Mi-28NE deliveries are reported but unconfirmed."
+    },
+    {
+      "vehicle_id": "shahed136",
+      "role": "uav",
+      "prevalence": "signature",
+      "notes": "IRGC Aerospace Force one-way attack drones fired in large salvos at Israel, US bases and Gulf targets in 2024-2026; game: long-warning drone hazard."
+    },
+    {
+      "vehicle_id": "mohajer6",
+      "role": "uav",
+      "prevalence": "common",
+      "notes": "Armed reconnaissance drone (Qaem guided bombs); spotter before strikes."
+    },
+    {
+      "vehicle_id": "zolfaghar_fac",
+      "role": "boat",
+      "prevalence": "signature",
+      "notes": "IRGC Navy swarming fast attack craft and speedboats; Hormuz closures and ship seizures 2026."
+    },
+    {
+      "vehicle_id": "fajr5",
+      "role": "mlrs",
+      "prevalence": "uncommon",
+      "notes": "Fajr-5 333 mm truck MLRS; Fajr-3, HM-20 and 107 mm launchers more common at brigade level."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "irn_artesh_infantry_squad",
+      "name": "Artesh conscript infantry squad (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "boragh"
+    },
+    {
+      "id": "irn_irgc_squad",
+      "name": "IRGC Ground Force squad",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 2
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "safir_jeep"
+    },
+    {
+      "id": "irn_basij_group",
+      "name": "Basij local-defence group",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 5
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "toyota_land_cruiser"
+    },
+    {
+      "id": "irn_atgm_ambush",
+      "name": "IRGC anti-armour ambush team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 3
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "drone_operator",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "safir_jeep"
+    },
+    {
+      "id": "irn_nohed_team",
+      "name": "Artesh 65th Airborne Special Forces (NOHED) team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "sniper",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "aras"
+    },
+    {
+      "id": "irn_quds_advisers",
+      "name": "Quds Force advisory cell with partner militia",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 1
+        },
+        {
+          "role": "drone_operator",
+          "count": 1
+        },
+        {
+          "role": "radio_operator",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "toyota_land_cruiser"
+    },
+    {
+      "id": "irn_tank_platoon_section",
+      "name": "Artesh tank section with infantry",
+      "composition": [
+        {
+          "role": "tank_crew",
+          "count": 6
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        }
+      ],
+      "vehicle_id": "karrar"
+    },
+    {
+      "id": "irn_irgcn_boat_team",
+      "name": "IRGC Navy fast-boat team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "zolfaghar_fac"
+    }
+  ],
+  "support_assets": [
+    "IRGC ballistic and cruise missiles (off-map, very long warning; strategic not tactical in game)",
+    "Shahed-136/131 one-way attack drones and Arash-type long-range drones",
+    "Mohajer-6 and Ababil armed or spotter drones",
+    "Tube and rocket artillery (HM-41 155 mm, Raad SPGs, Fajr/HM-20 MLRS)",
+    "IRGC Navy fast-boat swarms, naval mines and coastal anti-ship missiles (persian_gulf_coast)",
+    "Air defence: Bavar-373, Khordad-series and Tor-M1 SAMs (much degraded by the 2025-2026 strikes); MANPADS teams",
+    "EW and GPS jamming around key sites"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [],
+    "as_target": [
+      "destroy_drone_launch_site",
+      "hvt_capture_irgc_officer",
+      "intel_recovery_missile_program",
+      "interdict_arms_shipment",
+      "fast_boat_raid_defence",
+      "rescue_downed_aircrew",
+      "sabotage_air_defence_radar",
+      "escort_tanker_convoy",
+      "recover_seized_ship_crew"
+    ]
+  },
+  "notes": "One faction covers both armed forces; the split matters for spawns: Artesh = conscript regular army with tanks (Karrar, T-72S, M60 Samsam, Chieftain), Boragh/BMP APCs, Aras jeeps, AH-1J Cobras, plain digital camo; IRGC = Safir jeeps and Land Cruiser technicals, ATGM ambush teams, drones, missiles, fast boats and the Basij militia; Quds Force = small advisory cells abroad (Lebanon, Iraq, Yemen). Situation 2026: after the June 2025 12-day war with Israel, the US and Israel launched a major air campaign on 28 February 2026 that killed Ali Khamenei; Mojtaba Khamenei was elected Supreme Leader in March 2026. Iran struck Israel, US bases and Gulf states (UAE, Kuwait, Bahrain, Qatar, Saudi Arabia, Jordan intercepting) and closed or contested the Strait of Hormuz. A ceasefire on 8 April, the Islamabad Memorandum (17 June) and a June-July halt broke down; hostilities resumed in September 2026. In Syria Iran lost its position with the fall of Assad (December 2024) and is hostile to the new Damascus government. Iran is a key supplier of the axis_of_resistance (Hezbollah, Houthis, Iraqi militias, Hamas, PIJ). Iranian kit (Safir jeeps, Toophan ATGMs, Shahed drones) shows up with those groups in the early game. Job 7: iraq_iran_border is added; the IRGC holds the Iranian side of the crossings and foothills and strikes Iranian Kurdish opposition camps across the border (2026). As on iran_zagros, Iranian-side zones are recon and recovery only.",
+  "proposed": [
+    "campaign_tier",
+    "alignment_to_player",
+    "relations.player",
+    "doctrine.ai_tuning",
+    "doctrine.squad_size (game squads of 8)",
+    "body_armor (game tier mapping)",
+    "unit_templates",
+    "vehicles[].prevalence (game weighting)",
+    "contract_types.as_target",
+    "theatres (lebanon_south and yemen_red_sea are Quds Force advisers only)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Islamic_Republic_of_Iran_Army",
+    "https://en.wikipedia.org/wiki/Islamic_Revolutionary_Guard_Corps",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Islamic_Republic_of_Iran_Army",
+    "https://en.wikipedia.org/wiki/2026_Iran_war",
+    "https://en.wikipedia.org/wiki/2026_Iranian_supreme_leader_election",
+    "https://nesa-center.org/constrained-shield-irans-artesh-after-the-12-day-war-and-operation-epic-fury/",
+    "https://www.aljazeera.com/news/liveblog/2026/8/8/iran-war-live-trilateral-mecca-defence-pact-signed-as-hormuz-deal-looms",
+    "https://en.wikipedia.org/wiki/Karrar_(tank)",
+    "https://en.wikipedia.org/wiki/Safir_(vehicle)",
+    "https://www.globalsecurity.org/wmd/library/news/iran/2019/iran-190813-presstv01.htm",
+    "https://en.wikipedia.org/wiki/HESA_Shahed_136",
+    "https://en.wikipedia.org/wiki/Bell_AH-1_SuperCobra"
+  ]
+}

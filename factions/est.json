@@ -1,0 +1,389 @@
+{
+  "id": "est",
+  "name": "Estonia",
+  "short": "EST",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#0072CE",
+    "#000000",
+    "#FFFFFF"
+  ],
+  "blocs": [
+    "nato",
+    "eu",
+    "jef",
+    "bucharest_nine",
+    "nb8",
+    "global_coalition_against_isis"
+  ],
+  "campaign_tier": "late",
+  "alignment_to_player": "friendly",
+  "player_client": true,
+  "relations": {
+    "player": 30,
+    "usa": 85,
+    "gbr": 95,
+    "fra": 90,
+    "can": 75,
+    "deu": 80,
+    "fin": 95,
+    "swe": 90,
+    "nor": 85,
+    "dnk": 90,
+    "nld": 80,
+    "pol": 85,
+    "lva": 95,
+    "ltu": 90,
+    "ukr": 95,
+    "rou": 70,
+    "mda": 70,
+    "geo": 50,
+    "kor": 70,
+    "tur": 55,
+    "isr": 50,
+    "rus": -95,
+    "blr": -80,
+    "chn": -35,
+    "irn": -60,
+    "prk": -70,
+    "africa_corps": -60,
+    "isis": -95,
+    "isis_k": -90,
+    "al_qaeda": -95,
+    "aqap": -90,
+    "al_shabaab": -85,
+    "jnim": -85,
+    "hamas": -75,
+    "pij": -75,
+    "hezbollah": -65,
+    "houthis": -65,
+    "iraqi_militias": -55,
+    "bel": 80,
+    "esp": 80,
+    "grc": 80,
+    "ita": 80
+  },
+  "theatres": [
+    "baltic_coast",
+    "mesopotamia"
+  ],
+  "languages": [
+    "Estonian",
+    "Russian (minority)",
+    "English"
+  ],
+  "callout_language": "Estonian",
+  "doctrine": {
+    "summary": "Small conscript-and-reserve force with a large volunteer Defence League (Kaitseliit), built for total territorial defence alongside the UK-led NATO battlegroup at Tapa. Strong in anti-armour weapons, artillery (K9, CAESAR, HIMARS) and cyber; has served in Iraq, Afghanistan and Mali.",
+    "squad_size": 8,
+    "fireteam": "8-man squad in two 4-man teams.",
+    "tactics": [
+      "total defence: reservists and volunteer defence league ambush along forest roads",
+      "anti-armour teams with Javelin and Carl Gustaf in depth",
+      "dispersal and camouflage against drones",
+      "NATO forward-presence battlegroup integration",
+      "obstacle belts and pre-planned demolitions as map features",
+      "Milrem UGVs for resupply and casevac"
+    ],
+    "ai_tuning": {
+      "aggression": 0.5,
+      "discipline": 0.85,
+      "suppression_resistance": 0.8,
+      "flanking": 0.75,
+      "grenade_use": 0.6,
+      "medical_care": 0.8,
+      "night_capability": 0.8,
+      "marksmanship": 0.75,
+      "morale": 0.85
+    }
+  },
+  "camo": [
+    {
+      "name": "ESTDCU (Estonian digital)",
+      "palette": [
+        "#6F7451",
+        "#45492F",
+        "#2C2A20",
+        "#9A9070"
+      ],
+      "use": "standard"
+    },
+    {
+      "name": "MultiCam",
+      "palette": [
+        "#A08C6A",
+        "#6B6B47",
+        "#4E4433",
+        "#C9B998"
+      ],
+      "use": "special operations, deployments"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "LMT R-20 Rahe (5.56x45mm)"
+    ],
+    "autorifleman": [
+      "IWI Negev (5.56x45mm)",
+      "Negev NG7 (7.62x51mm)",
+      "Ksp 58 / MG3 (7.62x51mm, being replaced)"
+    ],
+    "marksman": [
+      "LMT R-20L Rahe (7.62x51mm)"
+    ],
+    "grenadier": [
+      "R-20 Rahe with 40mm under-barrel launcher (40x46mm)"
+    ],
+    "at": [
+      "Carl Gustaf M4 (84mm)",
+      "Instalaza C90 (90mm)",
+      "FGM-148 Javelin (team)",
+      "Spike-SR"
+    ],
+    "medic": [
+      "LMT R-20 Rahe (5.56x45mm)"
+    ],
+    "squad_leader": [
+      "LMT R-20 Rahe with optic (5.56x45mm)"
+    ],
+    "sniper": [
+      "Sako TRG 42 / TRG M10 (.338 Lapua Magnum)",
+      "PGM Hecate II (12.7x99mm)"
+    ],
+    "sidearm": [
+      "HK USP (9x19mm)",
+      "Glock 19 (9x19mm, SOF)"
+    ]
+  },
+  "launchers": [
+    "Carl Gustaf / MAAWS (84mm) [in_game]",
+    "FGM-148 Javelin [in_game]",
+    "Instalaza C90 [not_in_game]",
+    "Spike-SR / LR [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "ceramic",
+    "notes": "Aramid helmets and plate carriers with front/back ceramic plates (medium). Defence League volunteers often light."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "cv90",
+      "role": "ifv",
+      "prevalence": "signature",
+      "notes": "CV9035EE (44); kept in service after the replacement programme was cancelled in 2026."
+    },
+    {
+      "vehicle_id": "sisu_pasi",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "XA-180EST and ex-Dutch XA-188 (~136)."
+    },
+    {
+      "vehicle_id": "arma",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "Otokar Arma 6x6, deliveries from 2025 (with Nurol NMS 4x4)."
+    },
+    {
+      "vehicle_id": "k9",
+      "role": "artillery",
+      "prevalence": "signature",
+      "notes": "K9EST Kou (36)."
+    },
+    {
+      "vehicle_id": "caesar",
+      "role": "artillery",
+      "prevalence": "uncommon",
+      "notes": "CAESAR Mk1 (12, more on order)."
+    },
+    {
+      "vehicle_id": "himars",
+      "role": "mlrs",
+      "prevalence": "uncommon",
+      "notes": "6 M142, more on order; K239 Chunmoo ordered (first deliveries 2027)."
+    },
+    {
+      "vehicle_id": "themis",
+      "role": "other",
+      "prevalence": "rare",
+      "notes": "Domestic Milrem THeMIS UGV."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "est_game_squad",
+      "name": "Estonian infantry squad (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "est_cv90_squad",
+      "name": "CV90 mechanised squad",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "cv90"
+    },
+    {
+      "id": "est_kaitseliit_team",
+      "name": "Defence League ambush team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 2
+        }
+      ],
+      "vehicle_id": null
+    }
+  ],
+  "support_assets": [
+    "K9 / CAESAR artillery",
+    "HIMARS",
+    "Javelin and Spike teams",
+    "UK battlegroup armour (late campaign)",
+    "UGV casevac"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 20,
+        "unlocks": [
+          "5.56x45mm and 7.62x51mm ammunition",
+          "ESTDCU uniforms",
+          "light helmet and vest"
+        ]
+      },
+      {
+        "rep": 40,
+        "unlocks": [
+          "LMT R-20 Rahe",
+          "optics and NVGs",
+          "medium armour",
+          "Carl Gustaf M4"
+        ]
+      },
+      {
+        "rep": 60,
+        "unlocks": [
+          "Negev NG7",
+          "TRG sniper rifle",
+          "THeMIS cargo UGV hire"
+        ]
+      },
+      {
+        "rep": 80,
+        "unlocks": [
+          "Javelin",
+          "Pasi APC purchase",
+          "artillery call-in on contracts"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "counter_terror_raid",
+      "counter_sabotage_infrastructure_guard",
+      "undersea_cable_site_security",
+      "border_security_patrol",
+      "recover_lost_equipment_or_sensitive_kit",
+      "train_and_accompany_partner_forces"
+    ],
+    "as_target": [
+      "only if the player works for this nation's enemies: sabotage_logistics_depot",
+      "only if the player works for this nation's enemies: intel_theft"
+    ]
+  },
+  "notes": "Late-campaign defender in the baltic_coast escalation scenario; in 2026 the real threat is hybrid (sabotage, cable cutting, GPS jamming, drone incursions), which suits contract-scale missions earlier. Early-game hook: small Estonian contingent in Iraq posts counter-terror support work. Does not operate Abrams, Bradley, AH-1Z or MRAPs.",
+  "proposed": [
+    "campaign_tier",
+    "alignment_to_player",
+    "relations.player",
+    "doctrine.ai_tuning",
+    "unit_templates",
+    "player_trade.rep_tiers",
+    "contract_types",
+    "body_armor (game tier mapping)",
+    "vehicles[].prevalence (game weighting)",
+    "camo[].palette (approximate hex values)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Estonian_Defence_Forces",
+    "https://en.wikipedia.org/wiki/Estonian_Defence_Forces",
+    "https://en.wikipedia.org/wiki/Otokar_Arma",
+    "https://en.wikipedia.org/wiki/THeMIS",
+    "https://en.wikipedia.org/wiki/K239_Chunmoo"
+  ]
+}

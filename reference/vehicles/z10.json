@@ -1,0 +1,69 @@
+{
+  "id": "z10",
+  "name": "CAIC Z-10",
+  "aliases": [
+    "WZ-10",
+    "Z-10ME"
+  ],
+  "origin": "China (CAIC)",
+  "type": "attack_heli",
+  "operators": [
+    "chn",
+    "pak"
+  ],
+  "crew": 2,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 14.2,
+    "width": 4.3,
+    "height": 3.9
+  },
+  "weight_t": 7.0,
+  "armament": [
+    "23 mm chin cannon",
+    "HJ-10/AKD-10 ATGM",
+    "TY-90 air-to-air missiles",
+    "57/90 mm rocket pods"
+  ],
+  "protection": "Armoured tandem cockpit. Game: armoured cockpit/engines resist small-calibre and 7.62x54R; 12.7/14.5 mm and 23 mm damage rotors and engines; launchers only hit it when hovering low; MANPADS destroy it.",
+  "visual_notes": [
+    "Slim tandem-seat attack helicopter (gunner front, pilot rear), five-blade main rotor",
+    "Stub wings with four pylons, chin turret cannon and nose sensor ball",
+    "Z-10ME: larger exhaust IR suppressors, mast/nose radar fairings, scissor tail rotor",
+    "Pakistan Army Aviation receiving Z-10ME from 2025 to replace AH-1F"
+  ],
+  "colour_schemes": [
+    {
+      "name": "PLA Army Aviation grey-green",
+      "palette": [
+        "#5D6650",
+        "#3F4537",
+        "#8A9180"
+      ]
+    },
+    {
+      "name": "Pakistan Army Aviation two-tone",
+      "palette": [
+        "#6F6A50",
+        "#4E4A38",
+        "#9C977E"
+      ]
+    }
+  ],
+  "variants": [
+    "Z-10",
+    "Z-10K (upgraded)",
+    "Z-10ME (export)"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/CAIC_Z-10",
+    "https://commons.wikimedia.org/wiki/Category:CAIC_Z-10"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/CAIC_Z-10",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Pakistan_Army",
+    "https://quwa.org/category/pakistan-army-news"
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "id": "eastern_ukraine",
+  "name": "Donets Steppe Front",
+  "inspired_by": "The Donbas front in eastern Ukraine as of 2026, where full-scale war continues despite truce attempts: open black-earth steppe cut into fields by tree-line windbreaks, coal-mining towns with slag heaps (terrikons) and Soviet panel blocks, chalk hills, a river with pine forest on its sandy bank, and a front line shaped by drones, minefields and trench systems. Frontline towns are largely evacuated and heavily damaged. All towns are fictional.",
+  "map_size_km": [20, 20],
+  "climate": "Humid continental to semi-arid steppe (Koppen Dfa/Dfb). Hot summers (28-35 C), cold winters (-5 to -15 C) with variable snow; 450-550 mm precipitation; spring and autumn rasputitsa mud seasons.",
+  "seasons": [
+    "Winter (Dec-Feb): frozen ground, snow cover some years, bare tree lines give drones a clear view",
+    "Spring (Mar-Apr): rasputitsa mud, vehicles road-bound",
+    "Late spring and summer (May-Sep): tree lines in leaf (concealment), dust, wheat and sunflower fields, field fires",
+    "Autumn (Oct-Nov): leaf fall, mud returns, fog"
+  ],
+  "biomes": [
+    {"id": "steppe_fields_and_tree_lines", "share": 0.46, "vegetation": ["wheat, sunflower and maize fields (many abandoned and overgrown near the front)", "windbreak tree lines of black locust, ash, poplar and oak", "weeds and steppe grass on fallow", "burnt fields"], "ground_palette": ["#3a2e24", "#5a4636", "#2a221c", "#7a6650", "#a8916c", "#4a4a3a"], "foliage_palette": ["#5f7a3a", "#d8b83a", "#7da048", "#3f5a2a", "#a8a070"]},
+    {"id": "mining_town_and_terrikons", "share": 0.16, "vegetation": ["birch and sea buckthorn on slag heaps", "acacia and poplar in streets", "weeds in rubble"], "ground_palette": ["#2e2a28", "#4a4440", "#6a625a", "#8a8577", "#a85a3a"], "foliage_palette": ["#5f7a3a", "#7d9a4a", "#3f5a2a", "#a8b86a"]},
+    {"id": "chalk_hills_and_ravines", "share": 0.14, "vegetation": ["chalk steppe grasses and thyme", "bare white chalk slopes", "oak and ash in ravines (balky)"], "ground_palette": ["#e8e4da", "#d0c9b8", "#b8ae9a", "#8a8070"], "foliage_palette": ["#8a9a58", "#a6aa70", "#5f6e40", "#3f5530"]},
+    {"id": "river_pine_forest", "share": 0.14, "vegetation": ["Scots pine forest on sand", "oak and alder floodplain forest", "reed and willow on the banks"], "ground_palette": ["#c7b998", "#a89a78", "#8a7a5a", "#5a4f3a"], "foliage_palette": ["#2f4a2a", "#3f5e34", "#55703f", "#243a20"]},
+    {"id": "reservoir_and_floodplain", "share": 0.1, "vegetation": ["reed beds", "willow scrub", "open water"], "ground_palette": ["#3f5f6a", "#5a5a40", "#7a7a52", "#2a4a58"], "foliage_palette": ["#7a8a48", "#a0a866", "#5f6e38", "#3f5a2a"]}
+  ],
+  "terrain": {
+    "elevation_range_m": [50, 330],
+    "relief": "Rolling steppe plateau (180-330 m) dissected by ravines (balky) and gullies; a river valley (50-80 m) with steep right-bank chalk bluffs and a flat sandy left bank under pine; conical and flat-topped slag heaps up to 80-100 m above the surrounding ground near mines.",
+    "features": ["windbreak tree lines dividing fields into 0.5-1 km blocks", "ravines and gullies", "slag heaps (terrikons)", "chalk bluffs and quarries", "a river with destroyed bridges and pontoon crossings", "a reservoir with a dam", "trench systems, dugouts and anti-tank ditches", "minefields (marked hazard areas)", "craters"],
+    "water": "One river crossing the map (40-100 m wide) with a reservoir upstream, ponds in ravine bottoms (stavky), canals; the river is the main obstacle.",
+    "generator": {
+      "approach": "Heightmap at 10 m. Plateau from low-frequency fbm; ravines carved by flow accumulation with steep sides; river valley carved as an asymmetric spline (steep right bank, gentle left); slag heaps stamped as cones and truncated cones near mine POIs; tree lines placed as a vector grid along field boundaries (not heightmap). A war-damage pass adds craters (cellular), trench lines and rubble per front proximity.",
+      "noise_layers": [
+        {"type": "simplex fbm", "frequency": 0.15, "amplitude_m": 110, "purpose": "steppe plateau swells"},
+        {"type": "ridged, inverted", "frequency": 1.2, "amplitude_m": -40, "purpose": "ravines (balky), refined by flow accumulation"},
+        {"type": "cone stamps", "frequency": 0, "amplitude_m": 90, "purpose": "slag heaps near mines"},
+        {"type": "cellular (Worley F1, small craters)", "frequency": 60.0, "amplitude_m": -1.5, "purpose": "artillery crater fields, density scaled by distance to the front"},
+        {"type": "simplex", "frequency": 5.0, "amplitude_m": 1.0, "purpose": "field micro-relief"}
+      ],
+      "erosion": "Hydraulic erosion for ravine heads and chalk gullies; none on fields.",
+      "rivers": "River spline with an asymmetric valley; reservoir behind a dam stamp; ravine ponds at dammed gully mouths.",
+      "settlement_flattening": "Towns flattened per block; villages along ravine bottoms per plot; mine complexes as flattened pads.",
+      "notes": "The front is a 2-4 km wide 'grey zone' band across the map where drones dominate: any vehicle movement in daylight is detected. Tree lines are the main cover; ravines the main covered routes. The damage pass is factual in scale (front towns heavily destroyed) without depicting specific real events."
+    }
+  },
+  "settlements": [
+    {"type": "town", "share": 0.3, "pop_range": [5000, 70000], "architecture": "Mining town: five- and nine-storey Soviet panel and brick apartment blocks, a palace of culture with columns, a mine headframe and processing plant, two-storey Stalin-era houses, a central square with a monument plinth; most buildings damaged, windows boarded, upper floors collapsed.", "footprint_m": "block 12x60 to 12x120", "storeys": [2, 9], "wall_class": "Panel and brick blocks thick (basements are shelters); upper floors collapse in stages; private houses thin.", "materials": ["CONCRETE", "BRICK", "GLASS", "STEEL", "FIBRE_CEMENT"], "palette": ["#8a8577", "#b9b4a8", "#9c5a3c", "#6a7a8a", "#4a4440", "#a5a49c"], "layout_rules": ["grid of microdistricts around a central square", "mine and slag heap on the edge", "rail spur and station", "private-house sector (chastnyi sektor) of single-storey houses with gardens around the core"], "example_names": ["Shakhtarske Pole", "Antratsytove Pole", "Krasnyi Terikon", "Zalizna Balka", "Krutyi Yar"]},
+    {"type": "village", "share": 0.4, "pop_range": [50, 1500], "architecture": "Steppe villages along ravines: single-storey houses of brick or plastered adobe with gabled roofs of asbestos-cement slate or tin, painted fences, summer kitchens, sheds and cellars, gardens; a shop, a school, a church with blue or gold domes; many damaged and abandoned near the front.", "footprint_m": "house 8x12 on 25x60 plot", "storeys": [1, 1], "wall_class": "Brick medium; adobe thin-medium; cellars thick (shelters).", "materials": ["BRICK", "PLASTER", "FIBRE_CEMENT", "CORRUGATED_IRON", "WOOD"], "palette": ["#9c5a3c", "#e3dccb", "#a5a49c", "#6a8a9a", "#8c6a46"], "layout_rules": ["single or double street along a ravine with a pond", "gardens and orchards behind each house", "collective-farm buildings at the end", "tree lines lead out to the fields"], "example_names": ["Kreidiane", "Balka Hlyboka", "Lisove Druhe", "Kamianyi Brid", "Topoline", "Sukha Balka"]},
+    {"type": "city_district", "share": 0.1, "pop_range": [40000, 150000], "architecture": "Industrial city edge: a large steel or chemical plant with concrete halls, chimneys and rail sidings; high-rise blocks; shopping centre.", "footprint_m": "plant 1500x2000; block 15x120", "storeys": [3, 14], "wall_class": "Plant halls thick walls but thin roofs; underground utility tunnels as level geometry.", "materials": ["CONCRETE", "STEEL", "BRICK", "GLASS", "CORRUGATED_IRON"], "palette": ["#8a8577", "#4a4d50", "#9c5a3c", "#8b8e8c", "#9fbcc4"], "layout_rules": ["plant on the river with rail sidings", "high-rises behind a park", "industrial zone as the anchor"], "example_names": ["Zavodskyi Raion", "Khimprom Kvartal", "Metalurhiv"]},
+    {"type": "compound", "share": 0.2, "pop_range": [0, 300], "architecture": "Military positions: trench systems with dugouts roofed with logs and earth, fortified tree-line positions, camouflaged artillery positions, anti-drone netting over roads, dragon's teeth and anti-tank ditches behind the front, logistics hubs in farm buildings.", "footprint_m": "platoon position 100x200; trench line km-long", "storeys": [0, 1], "wall_class": "Dugouts and log-earth roofs thick; nets none.", "materials": ["DIRT_BERM", "WOOD", "SANDBAG", "STEEL", "CONCRETE"], "palette": ["#3a2e24", "#8c6a46", "#b8a378", "#4a4d50", "#5f6b58"], "layout_rules": ["positions along tree lines and ravine edges", "communication trenches to the rear", "anti-drone net tunnels over the last km of supply roads"], "example_names": ["Position Lisosmuha-4", "Opornyi Punkt Terikon", "Hub Ferma-12"]}
+  ],
+  "infrastructure": {
+    "roads": "A highway (cratered, with netting tunnels on stretches), regional roads, field tracks along tree lines; most bridges over the river destroyed, replaced by pontoon and improvised crossings.",
+    "rail": "Electrified line with a junction station, damaged; rail bridge down.",
+    "power": "Grid destroyed near the front; generators; a damaged thermal power station on the reservoir.",
+    "ports": "None (inland).",
+    "airfields": "None usable (AI aircraft only from off-map).",
+    "checkpoints": "Military checkpoints on all roads into the front band; the grey zone has none."
+  },
+  "pois": [
+    {"type": "front_village_cellars", "description": "Front-line village with collapsed houses; a few elderly residents in cellars; trenches through gardens.", "contract_use": "evacuate civilians from a front village (client ukr)", "loot_tier": "low", "intel_chance": 0.2},
+    {"type": "tree_line_position", "description": "Fortified tree-line position: trench, dugouts, firing points, anti-drone net; 1 km of open field to the next tree line.", "contract_use": "trench raid; reconnaissance", "loot_tier": "medium", "intel_chance": 0.4},
+    {"type": "slag_heap_observation_post", "description": "Observation post dug into a slag heap with views across the front; very exposed to drones.", "contract_use": "recon; hold during an assault", "loot_tier": "low", "intel_chance": 0.35},
+    {"type": "downed_drone_site", "description": "Crashed reconnaissance or long-range drone in a field between tree lines; mines nearby.", "contract_use": "recover downed drone or sensitive kit (client ukr)", "loot_tier": "medium", "intel_chance": 0.5},
+    {"type": "pontoon_crossing", "description": "Pontoon bridge over the river under netting, a ferry point and a hidden vehicle park in pine forest.", "contract_use": "night convoy escort (client ukr); sabotage logistics (client ukr, on the opposing crossing)", "loot_tier": "low", "intel_chance": 0.2},
+    {"type": "mine_complex", "description": "Coal mine: headframe tower, winding house, processing plant, conveyor galleries, railway loading bunkers.", "contract_use": "hot-zone objective; urban-industrial fight", "loot_tier": "medium", "intel_chance": 0.3},
+    {"type": "counter_drone_site", "description": "Air-defence and electronic-warfare site in a farm: radar, jammers, gun trucks, a generator.", "contract_use": "counter-drone site defence (client ukr)", "loot_tier": "low", "intel_chance": 0.2},
+    {"type": "logistics_hub", "description": "Supply hub in a collective-farm hangar: fuel bowsers, ammunition stacks under nets, workshops.", "contract_use": "sabotage logistics (enemy hub, client ukr); defend a hub", "loot_tier": "medium", "intel_chance": 0.35},
+    {"type": "minefield_belt", "description": "Marked minefield belt across fields with tripwire warnings and burnt vehicle hulks; game hazard that channels movement.", "contract_use": "demining route escort (client ukr)", "loot_tier": "low", "intel_chance": 0.05},
+    {"type": "palace_of_culture", "description": "Large columned Soviet culture house in the town square, damaged roof, basement used as a command post.", "contract_use": "HVT capture (enemy command post); hot-zone HQ", "loot_tier": "medium", "intel_chance": 0.5},
+    {"type": "chalk_quarry", "description": "White chalk quarry with terraces, tunnels and machinery; dazzling in sun, shows dark uniforms.", "contract_use": "cache site; ambush ground", "loot_tier": "low", "intel_chance": 0.25},
+    {"type": "steel_plant", "description": "Industrial plant with halls, chimneys, underground utility tunnels and rail sidings; a defensive fortress.", "contract_use": "late-campaign hot-zone anchor", "loot_tier": "medium", "intel_chance": 0.35}
+  ],
+  "weather": {
+    "conditions": ["clear and hot", "fog in autumn and spring", "rain and mud", "snow and frost", "summer field fires and smoke"],
+    "visibility_notes": "Fog and low cloud are the only time drones are limited, which makes them the preferred windows for movement; winter bare tree lines expose positions; thermal sights see through smoke.",
+    "dust_or_snow": "Dust in summer on tracks; snow some winters."
+  },
+  "civilians": {
+    "density": "low",
+    "behaviour": "Front-line towns and villages largely evacuated: a few elderly residents remain in cellars; volunteers and police evacuate them in armoured vans. Rear towns have normal life with air-raid alerts sending people to shelters. Civilians near the front move only in short dashes between shelters.",
+    "vehicles": ["evacuation vans", "old Ladas and private cars", "volunteer pickups", "bicycles", "tractors (rare)"],
+    "casualty_risk_notes": "Low density, but the remaining civilians are in the same cellars and buildings soldiers use; artillery and drone strikes by other factions do not count against the player."
+  },
+  "factions_present": [
+    {"faction_id": "ukr", "role": "defender", "strength": "high", "where": "Western half: tree-line positions, the river crossings, mining town, counter-drone sites, rear villages; drone units everywhere."},
+    {"faction_id": "rus", "role": "occupier", "strength": "high", "where": "Eastern half: assault groups along tree lines, artillery positions, logistics hubs, command posts in town buildings; drones everywhere."},
+    {"faction_id": "prk", "role": "occupier", "strength": "low", "where": "Russian rear: an attached KPA artillery and engineer contingent at the east edge (proposed game placement)."},
+    {"faction_id": "pmc_kestrel", "role": "rival_pmc", "strength": "medium", "where": "Russian-side assault groups and drone teams on the east side of the front; sabotage teams behind the Ukrainian line."},
+    {"faction_id": "blr", "role": "patrol", "strength": "low", "where": "No Belarusian units on this front in reality; appears only as Russian-attached logistics and training cadre at the east edge (plausibility flagged)."}
+  ],
+  "frontline": "An attritional front across the middle of the map. The war sim advances it in small steps (a tree line, a village street) after assault events; the grey zone between positions is 1-4 km wide and dominated by drones. Each captured tree line moves the front by 0.5-1 km; towns flip block by block. Weather windows (fog) increase assault events. Ukrainian contracts focus on counter-drone defence, evacuation, logistics escort, recovery and recon; raids are short and high-risk. Truce events (campaign calendar) freeze the line and post demining and evacuation contracts.",
+  "contract_hooks": [
+    "Counter-drone site defence at a farm EW site (client ukr)",
+    "Recover a downed drone or sensitive kit between tree lines (client ukr)",
+    "Evacuate civilians from a front village cellar (client ukr)",
+    "Night convoy escort across the pontoon crossing (client ukr)",
+    "Trench raid on a tree-line position (client ukr)",
+    "Sabotage an enemy logistics hub (client ukr)",
+    "Demining route escort for engineers (client ukr)",
+    "HVT capture at an enemy command post in the town (client ukr, late)",
+    "Defend against KPA assault groups at the east edge (client ukr)"
+  ],
+  "zone_plan": {
+    "contract_zones": [
+      {"name": "Front village", "area_km2": 2, "anchor": "front_village_cellars", "notes": "rubble, cellars, drones"},
+      {"name": "Tree-line grid", "area_km2": 3, "anchor": "tree_line_position", "notes": "open fields between tree lines"},
+      {"name": "River crossing", "area_km2": 3, "anchor": "pontoon_crossing", "notes": "pine forest, night ops"},
+      {"name": "Mine complex", "area_km2": 2.5, "anchor": "mine_complex", "notes": "industrial"}
+    ],
+    "hot_zones": [
+      {"name": "Mining town sector", "area_km2": 12, "layout": "rus HQ in the palace of culture basement; 5-6 outposts in tree lines and blocks; checkpoints on two roads behind their line; roaming assault pairs and drone teams; 2 QRF groups with armoured vehicles and cope cages; Ukrainian positions as the friendly anchor"}
+    ]
+  },
+  "insertion": {"lhd": false, "fob": "FOB in a rear village 15-20 km from the front (off the map's west edge), reached by road; final approach on foot or in armoured vans at night. Helicopters are not used near the front (proposed: too dangerous); no AAVs."},
+  "early_game_suitable": false,
+  "early_game_notes": "High-intensity state war (rus late tier); late-campaign theatre.",
+  "ambient_audio": ["constant drone buzz", "distant artillery", "wind in tree lines", "crows", "generators in basements", "radio chatter", "dogs in abandoned villages"],
+  "captain_confirmed": [
+    "map_size_km 20 x 20 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
+    "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
+    "materials accepted (Captain, 2026-10-10) and added to voxel_world.gd (Contractor dev, commit 1ec1417): BRICK #9c5a3c, PLASTER #e3dccb, FIBRE_CEMENT #a5a49c, CORRUGATED_IRON #8b8e8c, GLASS #9fbcc4, SANDBAG #b8a378, DIRT_BERM #8a6f4e",
+    "blr stays as a low-plausibility listing at low strength: Russian-attached logistics and training cadre at the east edge only (Captain, 2026-10-10)"
+  ],
+  "proposed": [
+    "layout",
+    "war-damage pass scaled by front proximity",
+    "front advance rules (tree line steps, block-by-block towns)",
+    "prk placement (see notes)",
+    "no helicopters near the front",
+    "zone_plan and hot zone",
+    "minefields as marked hazard areas only"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Donbas",
+    "https://en.wikipedia.org/wiki/Donets_Ridge",
+    "https://en.wikipedia.org/wiki/Spoil_tip",
+    "https://en.wikipedia.org/wiki/Siverskyi_Donets",
+    "https://en.wikipedia.org/wiki/Rasputitsa",
+    "factions/ukr.json, rus.json, prk.json, blr.json, pmc_kestrel.json notes"
+  ]
+}

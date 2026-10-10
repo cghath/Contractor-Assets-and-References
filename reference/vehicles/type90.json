@@ -1,0 +1,64 @@
+{
+  "id": "type90",
+  "name": "Type 90",
+  "aliases": [
+    "Kyu-maru"
+  ],
+  "origin": "Japan (Mitsubishi Heavy Industries)",
+  "type": "mbt",
+  "operators": [
+    "jpn"
+  ],
+  "crew": 3,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 9.8,
+    "width": 3.4,
+    "height": 2.3
+  },
+  "weight_t": 50.2,
+  "armament": [
+    "120 mm Rheinmetall L/44 (licensed)",
+    "12.7 mm M2",
+    "7.62 mm coaxial MG"
+  ],
+  "protection": "Composite armour; concentrated in Hokkaido (7th Division). Game: immune to all small-calibre rounds; 7.62x54R and 12.7/14.5 mm only damage optics, external stowage, fuel drums and tracks (mobility kill on repeated hits); PG-7V/AT4/MAAWS/SMAW/NLAW penetrate side, rear and turret roof; Javelin top-attack penetrates; frontal arc resists unguided launchers.",
+  "visual_notes": [
+    "Boxy flat-fronted Leopard 2-like turret with bustle autoloader",
+    "Six road wheels per side, side skirts",
+    "Mostly Hokkaido; being reduced in number as Type 16 MCVs take over elsewhere"
+  ],
+  "colour_schemes": [
+    {
+      "name": "JGSDF two-tone (green/brown)",
+      "palette": [
+        "#4A5236",
+        "#5C4B33",
+        "#2A2C22"
+      ]
+    },
+    {
+      "name": "JGSDF winter whitewash",
+      "palette": [
+        "#E4E4DE",
+        "#4A5236",
+        "#2A2C22"
+      ]
+    }
+  ],
+  "variants": [
+    "Type 90",
+    "Type 90 ARV",
+    "Type 91 bridge layer"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Type_90_(tank)",
+    "https://commons.wikimedia.org/wiki/Category:Type_90_(tank)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Type_90_(tank)",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Japan_Ground_Self-Defense_Force"
+  ]
+}

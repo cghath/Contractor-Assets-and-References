@@ -1,0 +1,54 @@
+{
+  "id": "atmos",
+  "name": "ATMOS 2000",
+  "aliases": [
+    "ATMOS"
+  ],
+  "origin": "Israel",
+  "type": "artillery",
+  "operators": [
+    "dnk",
+    "aze",
+    "mda",
+    "phl"
+  ],
+  "crew": 4,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 10.5,
+    "width": 2.55,
+    "height": 3.2
+  },
+  "weight_t": 30.0,
+  "armament": [
+    "155 mm L/52 howitzer"
+  ],
+  "protection": "Armoured cab. Game: light armour on cab/turret only; immune to small-calibre rounds, 7.62x54R and larger disable it; launchers destroy it.",
+  "visual_notes": [
+    "Tatra 6x6/8x8 truck with armoured cab",
+    "155 mm L/52 gun on a rear mount, travelling forward over the cab",
+    "Large rear spade lowered for firing",
+    "Truck-mounted howitzer with long gun over cab",
+    "Rear spade"
+  ],
+  "colour_schemes": [
+    {
+      "name": "NATO three-tone",
+      "palette": [
+        "#3E4A2E",
+        "#4B3A28",
+        "#1E1E1C"
+      ]
+    }
+  ],
+  "variants": [],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/ATMOS_2000"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/ATMOS_2000",
+    "https://www.thedefensepost.com/2023/08/07/denmark-replacements-caesar-howitzers/"
+  ]
+}

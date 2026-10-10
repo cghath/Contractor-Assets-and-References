@@ -1,0 +1,59 @@
+{
+  "id": "caterpillar_d9",
+  "name": "Caterpillar D9 armoured bulldozer (IDF)",
+  "aliases": [
+    "D9R",
+    "D9T",
+    "Doobi",
+    "Panda (unmanned)"
+  ],
+  "origin": "United States (IDF armour kit, Israel)",
+  "type": "other",
+  "operators": [
+    "isr"
+  ],
+  "crew": 2,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 8.1,
+    "width": 4.6,
+    "height": 4.0
+  },
+  "weight_t": 62,
+  "armament": [
+    "FN MAG or Samson RCWS on some",
+    "grenade launcher (some)"
+  ],
+  "protection": "IAI armour kit with armoured cab, bulletproof windows and slat armour. Game rule: immune to small-calibre; 7.62x54R and 12.7/14.5 mm only damage optics, tracks and exposed crew; penetration needs launchers (RPG-7 PG-7V, AT4, MAAWS, SMAW, NLAW, Javelin) or cannon, best against side, rear and engine deck. Game use: clears rubble, berms and IED-suspected routes; destroys map structures.",
+  "visual_notes": [
+    "Huge front dozer blade and rear ripper tine",
+    "Tall armoured cab with small thick armoured windows and roof cage",
+    "Slat armour around engine and cab",
+    "Unmanned 'Panda' version has no crew but carries sensors and antennas"
+  ],
+  "colour_schemes": [
+    {
+      "name": "IDF Sinai grey",
+      "palette": [
+        "#8E8B7A",
+        "#6E6B5C",
+        "#3E3C34"
+      ]
+    }
+  ],
+  "variants": [
+    "D9R",
+    "D9T",
+    "Panda (remote-controlled)"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/IDF_Caterpillar_D9",
+    "https://commons.wikimedia.org/wiki/Category:IDF_Caterpillar_D9"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/IDF_Caterpillar_D9",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Israel_Defense_Forces"
+  ]
+}

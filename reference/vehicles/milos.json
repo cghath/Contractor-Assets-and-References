@@ -1,0 +1,54 @@
+{
+  "id": "milos",
+  "name": "BOV M16 Milos",
+  "aliases": [
+    "Milos",
+    "BOV M16"
+  ],
+  "origin": "Serbia",
+  "type": "mrap",
+  "operators": [
+    "srb"
+  ],
+  "crew": 2,
+  "passengers": 6,
+  "dimensions_m": {
+    "length": 5.45,
+    "width": 2.51,
+    "height": 2.3
+  },
+  "weight_t": 14.0,
+  "armament": [
+    "12.7 mm M15 RWS",
+    "Optional minigun turret, Kornet ATGM"
+  ],
+  "protection": "V-hull, STANAG 4569 Level III front / II-III elsewhere, mine IIa/IIb. Game: immune to small-calibre (5.56/5.45/7.62x39/7.62x51); 7.62x54R AP and larger can penetrate side/rear and disable tyres/engine; every launcher in the game list penetrates.",
+  "visual_notes": [
+    "Compact 4x4 V-hull MRAP with four side doors and a rear hydraulic ramp",
+    "Six roof smoke dischargers and an RWS",
+    "Large aluminium wheels, 420 mm ground clearance"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Serbian three-tone woodland",
+      "palette": [
+        "#4E5B34",
+        "#6D5A3E",
+        "#2A2A24"
+      ]
+    }
+  ],
+  "variants": [
+    "Milos",
+    "Milos minigun"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/BOV_M16_Milo%C5%A1"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/BOV_M16_Milo%C5%A1",
+    "https://en.wikipedia.org/wiki/Serbian_Army"
+  ]
+}

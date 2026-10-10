@@ -1,0 +1,71 @@
+{
+  "id": "csk131",
+  "name": "Dongfeng Mengshi (CSK-131 / CSK-181)",
+  "aliases": [
+    "Mengshi",
+    "EQ2050",
+    "CSK-131",
+    "CSK-181",
+    "Warrior"
+  ],
+  "origin": "China (Dongfeng)",
+  "type": "light",
+  "operators": [
+    "chn"
+  ],
+  "crew": 1,
+  "passengers": 4,
+  "dimensions_m": {
+    "length": 4.9,
+    "width": 2.2,
+    "height": 1.95
+  },
+  "weight_t": 5.5,
+  "armament": [
+    "12.7 mm QJZ-89 HMG or 35 mm QLZ-87 AGL on roof ring/RWS",
+    "HJ-12 / HJ-10 ATGM on some variants"
+  ],
+  "protection": "CSK-131 light armoured version, CSK-181 third-generation protected vehicle with V-shaped belly. Game: immune to small-calibre rounds (5.45/5.56/5.8/7.62x39/7.62x51 ball); 7.62x54R and larger penetrate side/rear and disable tyres and engine; any launcher destroys it.",
+  "visual_notes": [
+    "Humvee-like wide 4x4 with flat bonnet and large grille (first generation), boxier armoured cab on CSK-131/181",
+    "CSK-181: higher V-hull, armoured doors with small windows, roof hatch with gun shield",
+    "Spare wheel on the rear, often slatted cargo racks",
+    "Ubiquitous PLA and PAP utility/patrol vehicle"
+  ],
+  "colour_schemes": [
+    {
+      "name": "PLA digital woodland (vehicle)",
+      "palette": [
+        "#4E5B3A",
+        "#6E7552",
+        "#2F3626",
+        "#8A8762"
+      ]
+    },
+    {
+      "name": "PLA digital desert (Xinjiang/Tibet)",
+      "palette": [
+        "#B49E73",
+        "#8C7752",
+        "#5E5038",
+        "#D2C29A"
+      ]
+    }
+  ],
+  "variants": [
+    "EQ2050 (soft)",
+    "CSK-131 (armoured)",
+    "CSK-181 (3rd generation)",
+    "CTL-181 6x6 (Mengshi 6x6)"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Dongfeng_Mengshi",
+    "https://commons.wikimedia.org/wiki/Category:Dongfeng_Mengshi"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Dongfeng_Mengshi",
+    "https://www.janes.com/defence-intelligence-insights/defence-news/pla-continues-modernising-land-equipment-in-xinjiang-military-command"
+  ]
+}

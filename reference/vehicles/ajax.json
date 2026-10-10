@@ -1,0 +1,59 @@
+{
+  "id": "ajax",
+  "name": "General Dynamics Ajax",
+  "aliases": [
+    "Ares",
+    "Athena",
+    "Ajax recce"
+  ],
+  "origin": "United Kingdom / Spain-Austria (ASCOD)",
+  "type": "ifv",
+  "operators": [
+    "gbr"
+  ],
+  "crew": 3,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 7.62,
+    "width": 3.35,
+    "height": 3.0
+  },
+  "weight_t": 38.0,
+  "armament": [
+    "40 mm CTAS40 cased-telescoped cannon",
+    "7.62 mm L94A1 chain gun",
+    "Kongsberg Protector RWS"
+  ],
+  "protection": "Modular armour. Programme troubled (IOC withdrawn Jan 2026). Game rule: immune to small-calibre; 7.62x54R and 12.7/14.5 mm only damage optics, tracks and exposed crew; penetrating the hull needs launchers (RPG-7 PG-7V, AT4, MAAWS, SMAW, NLAW, Javelin) or cannon.",
+  "visual_notes": [
+    "Large, tall ASCOD-derived hull, 7 road wheels per side",
+    "Big two-man turret with stubby 40 mm cannon",
+    "Many sensor heads on turret",
+    "Ares variant has a raised rear crew compartment and RWS"
+  ],
+  "colour_schemes": [
+    {
+      "name": "British green/black",
+      "palette": [
+        "#3E4A32",
+        "#1E2118"
+      ]
+    }
+  ],
+  "variants": [
+    "Ajax",
+    "Ares",
+    "Athena",
+    "Apollo",
+    "Atlas",
+    "Argus"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/General_Dynamics_Ajax"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/General_Dynamics_Ajax"
+  ]
+}

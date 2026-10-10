@@ -1,0 +1,100 @@
+{
+  "id": "humvee",
+  "name": "HMMWV (Humvee)",
+  "aliases": [
+    "HMMWV",
+    "M998",
+    "M1114",
+    "M1151",
+    "M1167"
+  ],
+  "origin": "United States (AM General)",
+  "type": "light",
+  "operators": [
+    "usa",
+    "ukr",
+    "lva",
+    "ltu",
+    "mda",
+    "geo",
+    "rou",
+    "irq",
+    "afg_taliban",
+    "jor",
+    "egy",
+    "twn",
+    "isr",
+    "sau",
+    "iraqi_militias",
+    "isis",
+    "isis_k",
+    "mex",
+    "sdf",
+    "krg_peshmerga"
+  ],
+  "crew": 1,
+  "passengers": 3,
+  "dimensions_m": {
+    "length": 4.57,
+    "width": 2.18,
+    "height": 1.83
+  },
+  "weight_t": 5.5,
+  "armament": [
+    "Roof ring or gunner's turret: M2 12.7 mm, M240/M249, Mk19 40 mm or TOW (M1167)"
+  ],
+  "protection": "Unarmoured (M998) to up-armoured (M1114/M1151, MAK kits). Game: up-armoured versions immune to small-calibre rounds; 7.62x54R and larger penetrate and disable; any launcher destroys. Soft-skin M998 offers no protection.",
+  "visual_notes": [
+    "Wide, low 4x4 with a flat slab bonnet, louvred grille and the drivetrain hump between the seats",
+    "Four doors; up-armoured versions have thick slab doors with small windows",
+    "Gunner's ring with a shield (O-GPK style) on the roof",
+    "Height given is without weapon station"
+  ],
+  "colour_schemes": [
+    {
+      "name": "NATO three-tone",
+      "palette": [
+        "#4A5130",
+        "#55473A",
+        "#232323"
+      ]
+    },
+    {
+      "name": "Desert tan",
+      "palette": [
+        "#B59E74",
+        "#8C7A55",
+        "#5E5440"
+      ]
+    },
+    {
+      "name": "Plain olive",
+      "palette": [
+        "#4F5534",
+        "#3B402A"
+      ]
+    }
+  ],
+  "variants": [
+    "M998/M1038 (soft)",
+    "M1025/M1043",
+    "M1114 up-armoured",
+    "M1151/M1152",
+    "M1165",
+    "M1167 TOW carrier",
+    "MAK-armoured (MDA)"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Humvee",
+    "https://commons.wikimedia.org/wiki/Category:HMMWV"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Humvee",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Moldovan_Armed_Forces",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Lithuanian_Armed_Forces",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Latvian_Land_Forces",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Defense_Forces_of_Georgia"
+  ]
+}

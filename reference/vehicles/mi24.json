@@ -1,0 +1,85 @@
+{
+  "id": "mi24",
+  "name": "Mil Mi-24 / Mi-35M Hind",
+  "aliases": [
+    "Mi-24P",
+    "Mi-24V",
+    "Mi-35M",
+    "Mi-35P"
+  ],
+  "origin": "Soviet Union / Russia",
+  "type": "attack_heli",
+  "operators": [
+    "rus",
+    "blr",
+    "africa_corps",
+    "kaz",
+    "srb",
+    "arm",
+    "aze",
+    "ukr",
+    "pol",
+    "geo",
+    "irq",
+    "sahel_aes",
+    "cod"
+  ],
+  "crew": 2,
+  "passengers": 8,
+  "dimensions_m": {
+    "length": 17.5,
+    "width": 17.3,
+    "height": 6.5
+  },
+  "weight_t": 12.0,
+  "armament": [
+    "12.7 mm 4-barrel chin turret (Mi-24V) or 30 mm GSh-30K twin cannon (Mi-24P)",
+    "23 mm GSh-23V chin turret (Mi-35M)",
+    "S-8 rocket pods",
+    "Shturm/Ataka ATGM"
+  ],
+  "protection": "Titanium cockpit tub, armoured glass. Game: cockpit/engine armour stops small-calibre; 7.62x54R and 12.7/14.5 mm can damage rotors, engines and tail boom; MANPADS/launchers kill.",
+  "visual_notes": [
+    "Tandem 'double-bubble' stepped cockpits for gunner and pilot",
+    "Stub wings with drooping anhedral, 6 pylons and wingtip ATGM rails",
+    "Small troop cabin behind the cockpit with side doors (carries 8)",
+    "5-blade main rotor; Mi-35M has fixed landing gear and shorter wings"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Two-tone green/brown",
+      "palette": [
+        "#5A6143",
+        "#7D6B48",
+        "#AEB3A1"
+      ]
+    },
+    {
+      "name": "Expeditionary sand/khaki (Africa Corps, Syria)",
+      "palette": [
+        "#B9A27A",
+        "#8F7A55",
+        "#5A4E38"
+      ]
+    }
+  ],
+  "variants": [
+    "Mi-24V",
+    "Mi-24P",
+    "Mi-35M",
+    "Mi-24PU1 (UKR)",
+    "Mi-24W (POL)",
+    "Mi-35M (IRQ)"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Mil_Mi-24",
+    "https://commons.wikimedia.org/wiki/Category:Mil_Mi-24"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Mil_Mi-24",
+    "https://en.wikipedia.org/wiki/Serbian_Armed_Forces",
+    "https://en.wikipedia.org/wiki/Armed_Forces_of_Armenia"
+  ]
+}

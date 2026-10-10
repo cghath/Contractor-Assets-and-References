@@ -1,0 +1,534 @@
+{
+  "id": "gbr",
+  "name": "United Kingdom",
+  "short": "UK",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#012169",
+    "#C8102E",
+    "#FFFFFF"
+  ],
+  "blocs": [
+    "nato",
+    "five_eyes",
+    "aukus",
+    "jef",
+    "fpda",
+    "global_coalition_against_isis",
+    "e3",
+    "g7",
+    "un_security_council_p5"
+  ],
+  "campaign_tier": "early",
+  "alignment_to_player": "friendly",
+  "player_client": true,
+  "relations": {
+    "player": 50,
+    "usa": 90,
+    "can": 85,
+    "aus": 85,
+    "nzl": 80,
+    "fra": 75,
+    "deu": 75,
+    "nor": 80,
+    "est": 85,
+    "pol": 70,
+    "ukr": 75,
+    "jpn": 65,
+    "irl": 55,
+    "isr": 40,
+    "pse_pa": 25,
+    "sau": 45,
+    "qat": 50,
+    "are": 50,
+    "jor": 60,
+    "irq": 30,
+    "krg_peshmerga": 55,
+    "syr": 10,
+    "som": 40,
+    "rus": -75,
+    "blr": -55,
+    "chn": -40,
+    "prk": -70,
+    "irn": -80,
+    "afg_taliban": -60,
+    "africa_corps": -55,
+    "al_qaeda": -100,
+    "aqap": -100,
+    "isis": -100,
+    "isis_k": -100,
+    "al_shabaab": -100,
+    "jnim": -85,
+    "hamas": -95,
+    "pij": -95,
+    "hezbollah": -85,
+    "houthis": -85,
+    "iraqi_militias": -75,
+    "bel": 85,
+    "dnk": 85,
+    "esp": 85,
+    "fin": 85,
+    "grc": 85,
+    "ita": 85,
+    "lva": 85,
+    "nld": 85,
+    "swe": 85,
+    "ltu": 80,
+    "rou": 75,
+    "mda": 60,
+    "kor": 55,
+    "geo": 45,
+    "ind": 45,
+    "phl": 45,
+    "aze": 40,
+    "che": 40,
+    "pmc_halcyon": 40,
+    "tur": 40,
+    "aut": 35,
+    "pak": 30,
+    "twn": 30,
+    "sdf": 25,
+    "pmc_kestrel": -70,
+    "adf": -85,
+    "m23": -25,
+    "cod": 25
+  },
+  "theatres": [
+    "levant_syria",
+    "mesopotamia",
+    "persian_gulf_coast",
+    "yemen_red_sea",
+    "baltic_coast",
+    "arctic_north"
+  ],
+  "languages": [
+    "English"
+  ],
+  "callout_language": "English (British Army voice procedure)",
+  "doctrine": {
+    "summary": "Small, professional expeditionary army: 1st (UK) Division light/light-mechanised brigades, 3rd (UK) Division heavy brigades transitioning from Warrior/Challenger 2 to Boxer/Challenger 3/Ajax, 16 Air Assault Brigade, the Ranger Regiment for partner-force work, and Royal Marines commandos for littoral and Arctic raiding. Forward-leaning NATO role in Estonia (Op Cabrit). Long counter-insurgency experience from Northern Ireland, Iraq and Afghanistan.",
+    "squad_size": 8,
+    "fireteam": "Rifle section of 8: section commander and 2IC each lead a 4-man fireteam (Charlie and Delta) with rifles, UGL, sharpshooter and a GPMG or LMG role; anti-armour (NLAW/ILAW) carried within the section.",
+    "tactics": [
+      "Section battle drills: win the firefight, fireteam fire-and-manoeuvre, assault in pairs",
+      "Aggressive use of UGL and hand grenades in close-quarter clearance; 'pepper-potting' movement",
+      "Mounted patrols in Foxhound/Jackal; Jackal used for fast screening and flank security",
+      "Commandos: small-boat and helicopter raids, cold-weather operations",
+      "Sharpshooters and GPMG as section firepower anchor; snipers at company level",
+      "Thorough casualty drills (Team Medic, rapid CASEVAC by Chinook/Merlin)"
+    ],
+    "ai_tuning": {
+      "aggression": 0.65,
+      "discipline": 0.85,
+      "suppression_resistance": 0.75,
+      "flanking": 0.75,
+      "grenade_use": 0.75,
+      "medical_care": 0.85,
+      "night_capability": 0.85,
+      "marksmanship": 0.75,
+      "morale": 0.85
+    }
+  },
+  "camo": [
+    {
+      "name": "MTP (Multi-Terrain Pattern)",
+      "palette": [
+        "#C9B88F",
+        "#8F8A5F",
+        "#5C5A3E",
+        "#3E3A2B",
+        "#A38F6B"
+      ],
+      "use": "Standard uniform and kit across all theatres"
+    },
+    {
+      "name": "Arctic whites over MTP",
+      "palette": [
+        "#F2F2F0",
+        "#D9DBD8",
+        "#8F8A5F"
+      ],
+      "use": "Royal Marines / Arctic North winter"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "L85A3 (SA80) rifle (5.56x45mm)",
+      "L403A1 KS-1 (5.56x45mm) - Ranger Regiment, Royal Marines and special operations units"
+    ],
+    "autorifleman": [
+      "L7A2 GPMG (7.62x51mm)",
+      "L85A3 with heavy use of UGL/sharpshooter instead of a section LMG (L110 Minimi withdrawn 2018)"
+    ],
+    "marksman": [
+      "L129A1 Sharpshooter (7.62x51mm)"
+    ],
+    "grenadier": [
+      "L85A3 with L123 underslung grenade launcher (40x46mm)"
+    ],
+    "at": [
+      "NLAW (MBT LAW)",
+      "L2A1 ILAW (AT4 CS, 84mm)",
+      "FGM-148 Javelin",
+      "LASM / M72 (66mm)"
+    ],
+    "medic": [
+      "L85A3 (5.56x45mm)"
+    ],
+    "squad_leader": [
+      "L85A3 (5.56x45mm)"
+    ],
+    "sniper": [
+      "L115A3 AWM (.338 Lapua Magnum)",
+      "L121A1 AW50 (.50 BMG)"
+    ],
+    "sidearm": [
+      "L131A1 Glock 17 (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "NLAW [in_game]",
+    "ILAW / AT4 CS (84mm) [in_game]",
+    "FGM-148 Javelin [in_game]",
+    "LASM / M72 (66mm) [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "heavy",
+    "plates": "ceramic",
+    "notes": "Virtus soldier system: Mk7/Virtus helmet = medium; Virtus plate carrier with front/back ceramic plates and optional side plates = heavy (often worn as medium with sides removed)."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "foxhound",
+      "role": "mrap",
+      "prevalence": "signature",
+      "notes": "Light protected patrol vehicle for light infantry and 16 Air Assault; the face of British patrols since Afghanistan."
+    },
+    {
+      "vehicle_id": "jackal",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": "Open-top weapons-mount vehicle (HMG/GMG + GPMG) for light cavalry, Royal Marines and RAF Regiment; Jackal 3 ordered."
+    },
+    {
+      "vehicle_id": "challenger2",
+      "role": "mbt",
+      "prevalence": "common",
+      "notes": "Challenger 2 (rifled 120 mm); 148 being rebuilt as Challenger 3 (smoothbore, APS), IOC around 2027."
+    },
+    {
+      "vehicle_id": "warrior",
+      "role": "ifv",
+      "prevalence": "common",
+      "notes": "Tracked IFV with 30 mm RARDEN; being withdrawn as Boxer arrives."
+    },
+    {
+      "vehicle_id": "boxer",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "8x8 mechanised infantry vehicle (623 ordered) replacing Warrior and Mastiff; first units 2025."
+    },
+    {
+      "vehicle_id": "ajax",
+      "role": "ifv",
+      "prevalence": "uncommon",
+      "notes": "Tracked reconnaissance vehicle family (40 mm CTA). IOC declared Nov 2025 then withdrawn Jan 2026 after noise/vibration injuries; trials restarting 2026."
+    },
+    {
+      "vehicle_id": "cougar",
+      "role": "mrap",
+      "prevalence": "common",
+      "notes": "Mastiff (6x6) and Ridgback (4x4) protected mobility vehicles for heavy mechanised infantry and support; to be replaced by Boxer."
+    },
+    {
+      "vehicle_id": "bvs10",
+      "role": "apc",
+      "prevalence": "uncommon",
+      "notes": "BvS10 Viking articulated tracked carrier, Royal Marines (amphibious, Arctic)."
+    },
+    {
+      "vehicle_id": "ah64",
+      "role": "attack_heli",
+      "prevalence": "common",
+      "notes": "Army Air Corps AH-64E (WAH-64 retired 2024)."
+    },
+    {
+      "vehicle_id": "ch47",
+      "role": "transport_heli",
+      "prevalence": "signature",
+      "notes": "RAF Chinook HC6/HC6A; Joint Helicopter Command workhorse; new H-47ER on order."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "gbr_rifle_section",
+      "name": "British rifle section",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "team_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "grenadier",
+          "count": 2
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "gbr_foxhound_patrol",
+      "name": "Foxhound patrol (2 vehicles)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "driver",
+          "count": 2
+        },
+        {
+          "role": "gunner",
+          "count": 2
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "foxhound"
+    },
+    {
+      "id": "gbr_jackal_screen",
+      "name": "Jackal screening pair",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "driver",
+          "count": 2
+        },
+        {
+          "role": "gunner",
+          "count": 2
+        },
+        {
+          "role": "rifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "jackal"
+    },
+    {
+      "id": "gbr_boxer_section",
+      "name": "Boxer mechanised section",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "team_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "boxer"
+    },
+    {
+      "id": "gbr_commando_section",
+      "name": "Royal Marines commando section",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "grenadier",
+          "count": 2
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "bvs10"
+    },
+    {
+      "id": "gbr_tank_troop",
+      "name": "Challenger troop (2 tanks)",
+      "composition": [
+        {
+          "role": "tank_crew",
+          "count": 8
+        }
+      ],
+      "vehicle_id": "challenger2"
+    }
+  ],
+  "support_assets": [
+    "AH-64E attack helicopter CAS",
+    "Chinook / Merlin / Wildcat lift and CASEVAC",
+    "Watchkeeper-era and small ISR drones (game: quadcopter recon, loitering munition at high rep)",
+    "AS-90 / L119 light gun and 81 mm mortar fire missions",
+    "Royal Navy naval gunfire and Typhoon CAS (off-map)",
+    "EW teams for jamming enemy drones and radios"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 5,
+        "unlocks": [
+          "5.56/7.62 ammunition",
+          "L109 frags, smoke, flashbangs",
+          "medical kits"
+        ]
+      },
+      {
+        "rep": 15,
+        "unlocks": [
+          "L85A3 and accessories",
+          "L7A2 GPMG",
+          "Virtus helmet (medium)",
+          "MTP uniforms"
+        ]
+      },
+      {
+        "rep": 30,
+        "unlocks": [
+          "NLAW",
+          "ILAW",
+          "L129A1 sharpshooter",
+          "Virtus plate carrier with ceramic plates"
+        ]
+      },
+      {
+        "rep": 45,
+        "unlocks": [
+          "Foxhound purchase",
+          "Jackal purchase (HMG or GMG)",
+          "side plates"
+        ]
+      },
+      {
+        "rep": 60,
+        "unlocks": [
+          "Javelin",
+          "L115A3",
+          "Chinook lift hire",
+          "81 mm mortar fire missions"
+        ]
+      },
+      {
+        "rep": 75,
+        "unlocks": [
+          "Apache CAS call",
+          "naval gunfire support from an RN ship (coastal maps)"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "counter_terror_raid",
+      "hvt_capture_or_kill",
+      "hostage_rescue",
+      "maritime_security_boarding",
+      "convoy_escort",
+      "partner_force_support",
+      "reconnaissance",
+      "intel_recovery",
+      "anti_piracy_red_sea"
+    ],
+    "as_target": [
+      "sabotage_logistics (rival-state fixers)",
+      "intel_theft (rival-state fixers)"
+    ]
+  },
+  "notes": "British Army, Royal Marines and RAF Regiment as one faction. Friendly to the player with reputation purchases (settled design). Equipment in transition in 2026: Warrior and Mastiff giving way to Boxer, Challenger 2 to Challenger 3, CVR(T) to Ajax (troubled programme). Recognised the State of Palestine in September 2025; joined US strikes on the Houthis in 2024. Sells to the player at rep 5/15/30/45/60/75 (thresholds Captain-confirmed 2026-10-10; were 10/25/40/55/70/85); the unlock lists and prices stay proposed.",
+  "proposed": [
+    "doctrine.ai_tuning",
+    "relations.player",
+    "player_trade",
+    "contract_types",
+    "campaign_tier",
+    "unit_templates (game squads use 8 men in battle-buddy pairs)",
+    "player_trade.rep_tiers (unlock lists and prices; the thresholds 5/15/30/45/60/75 are Captain-confirmed 2026-10-10)",
+    "relations.player"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/British_Army",
+    "https://ukdefencejournal.org.uk/the-direction-of-the-british-armys-combat-vehicle-fleet/",
+    "https://en.wikipedia.org/wiki/General_Dynamics_Ajax",
+    "https://en.wikipedia.org/wiki/Challenger_3",
+    "https://en.wikipedia.org/wiki/Jackal_(vehicle)",
+    "https://en.wikipedia.org/wiki/General_Dynamics_Ocelot",
+    "https://www.naval-technology.com/news/royal-marines-test-new-l403a1-ks-1-battle-rifle/",
+    "https://en.wikipedia.org/wiki/Multi-Terrain_Pattern",
+    "https://en.wikipedia.org/wiki/Virtus_(body_armour)"
+  ]
+}

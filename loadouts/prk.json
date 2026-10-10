@@ -1,0 +1,517 @@
+{
+ "id": "prk",
+ "faction": "Democratic People's Republic of Korea",
+ "schema_version": 1,
+ "kind": "state",
+ "campaign_tier": "late",
+ "default_variant": "regular",
+ "variants": [
+  {
+   "id": "regular",
+   "name": "Korean People's Army infantry",
+   "camo": "KPA plain olive/khaki",
+   "armor_tier": "none",
+   "medical_level": "minimal",
+   "roles": {
+    "rifleman": {
+     "primary": {
+      "id": "type88_prk",
+      "name": "Type 88 (AK-74 pattern)",
+      "calibre": "5.45x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "iron", "name": "Iron sights"},
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 30,
+       "count": 6,
+       "game_item_id": null
+      },
+      "alternates": ["type58_prk"]
+     },
+     "secondary": null,
+     "launcher": null,
+     "grenades": [
+      {"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"},
+      {"id": "f1", "name": "F-1 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}
+     ],
+     "armor": {
+      "vest": null,
+      "plates": null,
+      "side_plates": null,
+      "helmet": {"id": "kpa_steel_helmet", "name": "KPA steel helmet (SSh-40 pattern)", "tier": "light", "game_rating": "IIA", "game_item_id": "helmet_bump"}
+     },
+     "medical": {"container": null, "items": [{"id": "pressure_bandage", "count": 1, "game_item_id": "pressure_bandage"}]},
+     "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}],
+     "game_kit": [["helmet_bump", 1], ["m4a1", 1], ["mag_556", 6], ["frag_grenade", 2], ["pressure_bandage", 1], ["assault_pack", 1]]
+    },
+    "autorifleman": {
+     "primary": {
+      "id": "type73_prk",
+      "name": "Type 73 / PK-pattern GPMG",
+      "calibre": "7.62x54R",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "iron", "name": "Iron sights"},
+      "ammo": {
+       "id": "belt_762x54r_100",
+       "round": "7.62x54R 57-N-323S LPS (steel core)",
+       "game_round_id": "762x54r_lps",
+       "rounds_per_mag": 100,
+       "count": 3,
+       "game_item_id": null
+      },
+      "alternates": ["rpk74"]
+     },
+     "secondary": null,
+     "launcher": null,
+     "grenades": [{"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}],
+     "armor": {
+      "vest": null,
+      "plates": null,
+      "side_plates": null,
+      "helmet": {"id": "kpa_steel_helmet", "name": "KPA steel helmet (SSh-40 pattern)", "tier": "light", "game_rating": "IIA", "game_item_id": "helmet_bump"}
+     },
+     "medical": {"container": null, "items": [{"id": "pressure_bandage", "count": 1, "game_item_id": "pressure_bandage"}]},
+     "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}],
+     "game_kit": [["helmet_bump", 1], ["m4a1", 1], ["mag_556", 10], ["frag_grenade", 1], ["pressure_bandage", 1], ["assault_pack", 1]]
+    },
+    "marksman": {
+     "primary": {
+      "id": "svd",
+      "name": "SVD Dragunov",
+      "calibre": "7.62x54R",
+      "game_item_id": null,
+      "game_substitute": "m110",
+      "optic": {"id": "pso1", "name": "PSO-1 4x scope"},
+      "ammo": {
+       "id": "mag_762x54r_10",
+       "round": "7.62x54R 57-N-323S LPS (steel core)",
+       "game_round_id": "762x54r_lps",
+       "rounds_per_mag": 10,
+       "count": 6,
+       "game_item_id": null
+      }
+     },
+     "secondary": null,
+     "launcher": null,
+     "grenades": [{"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}],
+     "armor": {
+      "vest": null,
+      "plates": null,
+      "side_plates": null,
+      "helmet": {"id": "kpa_steel_helmet", "name": "KPA steel helmet (SSh-40 pattern)", "tier": "light", "game_rating": "IIA", "game_item_id": "helmet_bump"}
+     },
+     "medical": {"container": null, "items": [{"id": "pressure_bandage", "count": 1, "game_item_id": "pressure_bandage"}]},
+     "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}],
+     "game_kit": [["helmet_bump", 1], ["m110", 1], ["mag_762", 3], ["frag_grenade", 1], ["pressure_bandage", 1], ["assault_pack", 1]]
+    },
+    "grenadier": {
+     "primary": {
+      "id": "type88_prk",
+      "name": "Type 88 (AK-74 pattern)",
+      "calibre": "5.45x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "iron", "name": "Iron sights"},
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 30,
+       "count": 6,
+       "game_item_id": null
+      },
+      "underbarrel": {
+       "id": "gp25",
+       "name": "GP-25 / GP-30",
+       "calibre": "40mm VOG-25 (caseless)",
+       "game_item_id": null,
+       "ammo": [{"id": "gl_vog25", "name": "VOG-25 40mm caseless HE grenade", "count": 10, "game_item_id": null}]
+      }
+     },
+     "secondary": null,
+     "launcher": null,
+     "grenades": [{"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}],
+     "armor": {
+      "vest": null,
+      "plates": null,
+      "side_plates": null,
+      "helmet": {"id": "kpa_steel_helmet", "name": "KPA steel helmet (SSh-40 pattern)", "tier": "light", "game_rating": "IIA", "game_item_id": "helmet_bump"}
+     },
+     "medical": {"container": null, "items": [{"id": "pressure_bandage", "count": 1, "game_item_id": "pressure_bandage"}]},
+     "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}],
+     "game_kit": [["helmet_bump", 1], ["m4a1", 1], ["mag_556", 6], ["frag_grenade", 1], ["pressure_bandage", 1], ["assault_pack", 1]]
+    },
+    "at": {
+     "primary": {
+      "id": "type88_prk",
+      "name": "Type 88 (AK-74 pattern)",
+      "calibre": "5.45x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "iron", "name": "Iron sights"},
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 30,
+       "count": 4,
+       "game_item_id": null
+      }
+     },
+     "secondary": null,
+     "launcher": {
+      "id": "rpg7_prk",
+      "name": "RPG-7 copy (DPRK)",
+      "kind": "rocket",
+      "in_game": true,
+      "game_launcher": "RPG-7",
+      "game_substitute": null,
+      "game_item_id": null,
+      "proposed_game_item_id": "rpg7",
+      "rounds": [
+       {"name": "PG-7V", "type": "HEAT", "count": 2, "proposed_game_item_id": "pg7v"},
+       {"name": "OG-7V", "type": "frag", "count": 1, "proposed_game_item_id": "og7v"}
+      ]
+     },
+     "grenades": [{"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}],
+     "armor": {
+      "vest": null,
+      "plates": null,
+      "side_plates": null,
+      "helmet": {"id": "kpa_steel_helmet", "name": "KPA steel helmet (SSh-40 pattern)", "tier": "light", "game_rating": "IIA", "game_item_id": "helmet_bump"}
+     },
+     "medical": {"container": null, "items": [{"id": "pressure_bandage", "count": 1, "game_item_id": "pressure_bandage"}]},
+     "other": [{"id": "ruck_45", "count": 1, "game_item_id": "ruck_45"}],
+     "game_kit": [["helmet_bump", 1], ["m4a1", 1], ["mag_556", 4], ["frag_grenade", 1], ["pressure_bandage", 1], ["ruck_45", 1]]
+    },
+    "medic": {
+     "primary": {
+      "id": "type88_prk",
+      "name": "Type 88 (AK-74 pattern)",
+      "calibre": "5.45x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "iron", "name": "Iron sights"},
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 30,
+       "count": 4,
+       "game_item_id": null
+      }
+     },
+     "secondary": {
+      "id": "tt33",
+      "name": "TT-33 / Type 68 / K54 (Tokarev pattern)",
+      "calibre": "7.62x25mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {
+       "id": "mag_762x25_8",
+       "round": "7.62x25mm 57-N-134S",
+       "game_round_id": null,
+       "proposed_round_id": "762x25_57n134s",
+       "rounds_per_mag": 8,
+       "count": 2,
+       "game_item_id": null
+      }
+     },
+     "launcher": null,
+     "grenades": [{"id": "rdg2b", "name": "RDG-2B white smoke", "kind": "smoke_white", "count": 1, "game_item_id": "smoke_grenade"}],
+     "armor": {
+      "vest": null,
+      "plates": null,
+      "side_plates": null,
+      "helmet": {"id": "kpa_steel_helmet", "name": "KPA steel helmet (SSh-40 pattern)", "tier": "light", "game_rating": "IIA", "game_item_id": "helmet_bump"}
+     },
+     "medical": {
+      "container": null,
+      "items": [
+       {"id": "tourniquet", "count": 2, "game_item_id": "tourniquet"},
+       {"id": "pressure_bandage", "count": 4, "game_item_id": "pressure_bandage"},
+       {"id": "hemostatic_gauze", "count": 1, "game_item_id": "hemostatic_gauze"},
+       {"id": "morphine", "count": 1, "game_item_id": "morphine"}
+      ]
+     },
+     "other": [{"id": "ruck_45", "count": 1, "game_item_id": "ruck_45"}],
+     "game_kit": [
+      ["helmet_bump", 1],
+      ["m4a1", 1],
+      ["mag_556", 4],
+      ["m17", 1],
+      ["mag_9mm", 2],
+      ["smoke_grenade", 1],
+      ["tourniquet", 2],
+      ["pressure_bandage", 4],
+      ["hemostatic_gauze", 1],
+      ["morphine", 1],
+      ["ruck_45", 1]
+     ]
+    },
+    "squad_leader": {
+     "primary": {
+      "id": "type88_prk",
+      "name": "Type 88 (AK-74 pattern)",
+      "calibre": "5.45x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "collimator", "name": "Collimator (Kobra / 1P87 / EKP-8 class)"},
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 30,
+       "count": 6,
+       "game_item_id": null
+      }
+     },
+     "secondary": {
+      "id": "tt33",
+      "name": "TT-33 / Type 68 / K54 (Tokarev pattern)",
+      "calibre": "7.62x25mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {
+       "id": "mag_762x25_8",
+       "round": "7.62x25mm 57-N-134S",
+       "game_round_id": null,
+       "proposed_round_id": "762x25_57n134s",
+       "rounds_per_mag": 8,
+       "count": 2,
+       "game_item_id": null
+      }
+     },
+     "launcher": null,
+     "grenades": [
+      {"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"},
+      {"id": "f1", "name": "F-1 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"},
+      {"id": "rdg2b", "name": "RDG-2B white smoke", "kind": "smoke_white", "count": 1, "game_item_id": "smoke_grenade"}
+     ],
+     "armor": {
+      "vest": null,
+      "plates": null,
+      "side_plates": null,
+      "helmet": {"id": "kpa_steel_helmet", "name": "KPA steel helmet (SSh-40 pattern)", "tier": "light", "game_rating": "IIA", "game_item_id": "helmet_bump"}
+     },
+     "medical": {"container": null, "items": [{"id": "pressure_bandage", "count": 1, "game_item_id": "pressure_bandage"}]},
+     "other": [
+      {"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"},
+      {"id": "radio", "count": 1, "game_item_id": null},
+      {"id": "binoculars", "count": 1, "game_item_id": null},
+      {"id": "nvg_mono", "count": 1, "game_item_id": null}
+     ],
+     "game_kit": [
+      ["helmet_bump", 1],
+      ["m4a1", 1],
+      ["mag_556", 6],
+      ["m17", 1],
+      ["mag_9mm", 2],
+      ["frag_grenade", 2],
+      ["smoke_grenade", 1],
+      ["pressure_bandage", 1],
+      ["assault_pack", 1]
+     ]
+    },
+    "sniper": {
+     "primary": {
+      "id": "svd",
+      "name": "SVD Dragunov",
+      "calibre": "7.62x54R",
+      "game_item_id": null,
+      "game_substitute": "m110",
+      "optic": {"id": "pso1", "name": "PSO-1 4x scope"},
+      "ammo": {
+       "id": "mag_762x54r_10",
+       "round": "7.62x54R 57-N-323S LPS (steel core)",
+       "game_round_id": "762x54r_lps",
+       "rounds_per_mag": 10,
+       "count": 6,
+       "game_item_id": null
+      },
+      "alternates": ["prk_amr"]
+     },
+     "secondary": {
+      "id": "tt33",
+      "name": "TT-33 / Type 68 / K54 (Tokarev pattern)",
+      "calibre": "7.62x25mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {
+       "id": "mag_762x25_8",
+       "round": "7.62x25mm 57-N-134S",
+       "game_round_id": null,
+       "proposed_round_id": "762x25_57n134s",
+       "rounds_per_mag": 8,
+       "count": 2,
+       "game_item_id": null
+      }
+     },
+     "launcher": null,
+     "grenades": [{"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}],
+     "armor": {
+      "vest": null,
+      "plates": null,
+      "side_plates": null,
+      "helmet": {"id": "kpa_steel_helmet", "name": "KPA steel helmet (SSh-40 pattern)", "tier": "light", "game_rating": "IIA", "game_item_id": "helmet_bump"}
+     },
+     "medical": {"container": null, "items": [{"id": "pressure_bandage", "count": 1, "game_item_id": "pressure_bandage"}]},
+     "other": [{"id": "ruck_45", "count": 1, "game_item_id": "ruck_45"}, {"id": "binoculars", "count": 1, "game_item_id": null}],
+     "game_kit": [["helmet_bump", 1], ["m110", 1], ["mag_762", 3], ["m17", 1], ["mag_9mm", 2], ["frag_grenade", 1], ["pressure_bandage", 1], ["ruck_45", 1]]
+    },
+    "crew": {
+     "primary": {
+      "id": "type58_prk",
+      "name": "Type 58 / Type 68 (AK pattern)",
+      "calibre": "7.62x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "iron", "name": "Iron sights"},
+      "ammo": {
+       "id": "mag_762x39_30",
+       "round": "7.62x39mm 57-N-231 PS (mild steel core)",
+       "game_round_id": "762x39_msc",
+       "rounds_per_mag": 30,
+       "count": 3,
+       "game_item_id": null
+      }
+     },
+     "secondary": {
+      "id": "tt33",
+      "name": "TT-33 / Type 68 / K54 (Tokarev pattern)",
+      "calibre": "7.62x25mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {
+       "id": "mag_762x25_8",
+       "round": "7.62x25mm 57-N-134S",
+       "game_round_id": null,
+       "proposed_round_id": "762x25_57n134s",
+       "rounds_per_mag": 8,
+       "count": 2,
+       "game_item_id": null
+      }
+     },
+     "launcher": null,
+     "grenades": [],
+     "armor": {
+      "vest": null,
+      "plates": null,
+      "side_plates": null,
+      "helmet": {
+       "id": "tsh_tanker",
+       "name": "TSh-series padded tanker helmet (non-ballistic)",
+       "tier": "none",
+       "game_rating": null,
+       "game_item_id": null,
+       "cosmetic": true,
+       "proposed_game_id": "helmet_tanker"
+      }
+     },
+     "medical": {"container": null, "items": [{"id": "pressure_bandage", "count": 1, "game_item_id": "pressure_bandage"}]},
+     "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}],
+     "game_kit": [["m4a1", 1], ["mag_556", 3], ["m17", 1], ["mag_9mm", 2], ["pressure_bandage", 1], ["assault_pack", 1]]
+    },
+    "pilot": {
+     "primary": {
+      "id": "type88_prk",
+      "name": "Type 88 (AK-74 pattern)",
+      "calibre": "5.45x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "iron", "name": "Iron sights"},
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 30,
+       "count": 3,
+       "game_item_id": null
+      }
+     },
+     "secondary": {
+      "id": "tt33",
+      "name": "TT-33 / Type 68 / K54 (Tokarev pattern)",
+      "calibre": "7.62x25mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {
+       "id": "mag_762x25_8",
+       "round": "7.62x25mm 57-N-134S",
+       "game_round_id": null,
+       "proposed_round_id": "762x25_57n134s",
+       "rounds_per_mag": 8,
+       "count": 2,
+       "game_item_id": null
+      }
+     },
+     "launcher": null,
+     "grenades": [],
+     "armor": {
+      "vest": null,
+      "plates": null,
+      "side_plates": null,
+      "helmet": {
+       "id": "flight_helmet",
+       "name": "Aircrew flight helmet (HGU-56/P / ZSh-7 class, non-ballistic)",
+       "tier": "none",
+       "game_rating": null,
+       "game_item_id": null,
+       "cosmetic": true,
+       "proposed_game_id": "helmet_flight"
+      }
+     },
+     "medical": {"container": null, "items": [{"id": "pressure_bandage", "count": 1, "game_item_id": "pressure_bandage"}]},
+     "other": [],
+     "game_kit": [["m4a1", 1], ["mag_556", 3], ["m17", 1], ["mag_9mm", 2], ["pressure_bandage", 1]]
+    }
+   },
+   "team_weapons": [
+    {
+     "id": "bulsae",
+     "name": "Bulsae-2/3 ATGM",
+     "kind": "atgm",
+     "in_game": false,
+     "game_launcher": null,
+     "game_substitute": "Javelin",
+     "game_item_id": null,
+     "rounds": [{"name": "missile", "type": "HEAT", "count": 1}]
+    },
+    {
+     "id": "igla",
+     "name": "9K38 Igla MANPADS",
+     "kind": "manpads",
+     "in_game": false,
+     "game_launcher": null,
+     "game_substitute": null,
+     "game_item_id": null,
+     "rounds": [{"name": "missile", "type": "SAM", "count": 1}]
+    }
+   ]
+  }
+ ],
+ "role_map": {},
+ "notes": [
+  "SVD and RPK-74 ids stand for the KPA's local copies.",
+  "Baekdusan (CZ 75 copy) is a sidearm alternate to the Type 68 (TT-33 copy).",
+  "Special forces and Kursk-deployed troops with Russian helmets and light vests are not a separate variant."
+ ],
+ "proposed": [
+  "mag and medical counts (Q3 default)",
+  "variants and their armor mapping (Q1, Q9 defaults)",
+  "optics as class ids (Q7 default)",
+  "medical levels from doctrine.ai_tuning.medical_care (Q6 default)",
+  "game_kit (stand-in kit from items that exist today)"
+ ],
+ "sources": ["factions/prk.json"]
+}

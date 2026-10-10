@@ -1,0 +1,59 @@
+{
+  "id": "btr60",
+  "name": "BTR-60",
+  "aliases": [
+    "BTR-60PB",
+    "BTR-60PA"
+  ],
+  "origin": "Soviet Union",
+  "type": "apc",
+  "operators": [
+    "vnm",
+    "prk",
+    "sahel_aes",
+    "cod"
+  ],
+  "crew": 2,
+  "passengers": 14,
+  "dimensions_m": {
+    "length": 7.6,
+    "width": 2.8,
+    "height": 2.3
+  },
+  "weight_t": 10.3,
+  "armament": [
+    "14.5 mm KPVT",
+    "7.62 mm PKT"
+  ],
+  "protection": "Thin steel boat hull. Game: immune to small-calibre rounds (5.45/5.56/5.8/7.62x39/7.62x51 ball); 7.62x54R and larger penetrate side/rear and disable tyres and engine; any launcher destroys it.",
+  "visual_notes": [
+    "Boat-shaped 8x8 with evenly spaced axles, sharply pointed nose",
+    "Small cone turret (BTR-60PB) or open top (BTR-60P)",
+    "Roof hatches only (no side doors), twin petrol engines at rear"
+  ],
+  "colour_schemes": [
+    {
+      "name": "VPA green",
+      "palette": [
+        "#4E5B39",
+        "#3A4429",
+        "#262B1D"
+      ]
+    }
+  ],
+  "variants": [
+    "BTR-60P",
+    "BTR-60PA",
+    "BTR-60PB"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/BTR-60",
+    "https://commons.wikimedia.org/wiki/Category:BTR-60"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/BTR-60",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Vietnam_People%27s_Ground_Forces"
+  ]
+}

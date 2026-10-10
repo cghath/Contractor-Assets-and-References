@@ -1,0 +1,68 @@
+{
+  "id": "boragh",
+  "name": "Boragh tracked APC",
+  "aliases": [
+    "Boragh",
+    "Borag",
+    "BMT-2"
+  ],
+  "origin": "Iran",
+  "type": "apc",
+  "operators": [
+    "irn"
+  ],
+  "crew": 3,
+  "passengers": 8,
+  "dimensions_m": {
+    "length": 6.72,
+    "width": 3.1,
+    "height": 1.66
+  },
+  "weight_t": 13,
+  "armament": [
+    "12.7 mm DShK on a pintle mount, some with armoured shield",
+    "options: 30 mm 2A42 turret, BMP-1 73 mm turret, Toophan ATGM, 120 mm mortar"
+  ],
+  "protection": "Welded rolled steel, amphibious. Game rule: immune to small-calibre (5.56/5.45/7.62x39/7.62x51); 7.62x54R AP and 12.7/14.5 mm can penetrate side/rear and disable tyres, engine and optics; every launcher in the game list penetrates.",
+  "visual_notes": [
+    "Low, wedge-nosed BMP-1/Chinese WZ-503-style hull with a long sloped front deck",
+    "6 road wheels per side (M113-type wheels), rubber track pads",
+    "Open DShK mount on the roof instead of a turret on the APC version",
+    "Twin rear doors, roof hatches over the troop compartment"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Iranian sand",
+      "palette": [
+        "#C2A878",
+        "#A68D60",
+        "#5E513A"
+      ]
+    },
+    {
+      "name": "Iranian olive",
+      "palette": [
+        "#5B5E3D",
+        "#44482E",
+        "#2E2F22"
+      ]
+    }
+  ],
+  "variants": [
+    "Boragh APC (DShK)",
+    "Boragh IFV (2A42 30 mm)",
+    "Boragh with BMP-1 turret",
+    "Boragh 120 mm mortar carrier",
+    "Boragh Toophan ATGM carrier",
+    "Raad-1 SPG (2S1 turret)"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Boragh"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Boragh",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Iranian_Army"
+  ]
+}

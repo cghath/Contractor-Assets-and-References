@@ -1,0 +1,929 @@
+{
+ "id": "rou",
+ "faction": "Romania",
+ "schema_version": 1,
+ "kind": "state",
+ "campaign_tier": "mid",
+ "default_variant": "regular",
+ "variants": [
+  {
+   "id": "regular",
+   "name": "Romanian Land Forces infantry",
+   "camo": "M2017 (Romanian woodland)",
+   "armor_tier": "medium",
+   "medical_level": "standard",
+   "roles": {
+    "rifleman": {
+     "primary": {
+      "id": "pa_md86",
+      "name": "PA md. 86",
+      "calibre": "5.45x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "iron", "name": "Iron sights"},
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 30,
+       "count": 7,
+       "game_item_id": null
+      },
+      "alternates": ["sig516"]
+     },
+     "secondary": null,
+     "launcher": null,
+     "grenades": [
+      {
+       "id": "frag_nato",
+       "name": "Fragmentation grenade, national issue (M67 / DM51 / HG 85 class)",
+       "kind": "frag",
+       "count": 2,
+       "game_item_id": "frag_grenade"
+      },
+      {
+       "id": "smoke_white_nato",
+       "name": "White screening smoke, national issue (L83 / DM25 class)",
+       "kind": "smoke_white",
+       "count": 1,
+       "game_item_id": "smoke_grenade"
+      },
+      {"id": "stun_nato", "name": "Stun grenade, national issue (M84 class)", "kind": "flash", "count": 1, "game_item_id": "flashbang"}
+     ],
+     "armor": {
+      "vest": {"id": "vst_pc22", "name": "VST-PC22 plate carrier", "tier": "medium", "game_item_id": "plate_carrier"},
+      "plates": {
+       "id": "sapi_class",
+       "name": "SAPI-class ceramic plates, national issue",
+       "material": "ceramic",
+       "real_rating": "NIJ III+ to IV class",
+       "front": true,
+       "back": true,
+       "game_rating": "IV",
+       "game_item_id": "plate_ceramic_l4"
+      },
+      "side_plates": null,
+      "helmet": {"id": "st4_hc22", "name": "Stimpex ST-4 / STI-HC22 helmet", "tier": "medium", "game_rating": "IIIA", "game_item_id": "helmet"}
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [
+       {"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"},
+       {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"},
+       {"id": "hemostatic_gauze", "count": 1, "game_item_id": "hemostatic_gauze"},
+       {"id": "chest_seal", "count": 1, "game_item_id": "chest_seal"}
+      ]
+     },
+     "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}],
+     "game_kit": [
+      ["plate_carrier", 1],
+      ["plate_ceramic_l4", 2],
+      ["helmet", 1],
+      ["m4a1", 1],
+      ["mag_556", 7],
+      ["frag_grenade", 2],
+      ["smoke_grenade", 1],
+      ["flashbang", 1],
+      ["ifak", 1],
+      ["tourniquet", 1],
+      ["pressure_bandage", 2],
+      ["hemostatic_gauze", 1],
+      ["chest_seal", 1],
+      ["assault_pack", 1]
+     ]
+    },
+    "autorifleman": {
+     "primary": {
+      "id": "pm_md93",
+      "name": "PM md. 93",
+      "calibre": "5.45x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "iron", "name": "Iron sights"},
+      "ammo": {
+       "id": "mag_545x39_45",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 45,
+       "count": 8,
+       "game_item_id": null
+      },
+      "alternates": ["md66", "m240b"]
+     },
+     "secondary": {
+      "id": "pistol_2000",
+      "name": "Pistol model 2000",
+      "calibre": "9x19mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {"id": "mag_9mm", "round": "9x19mm FMJ (NATO ball)", "game_round_id": "9x19_fmj", "rounds_per_mag": 15, "count": 3, "game_item_id": "mag_9mm"}
+     },
+     "launcher": null,
+     "grenades": [
+      {
+       "id": "frag_nato",
+       "name": "Fragmentation grenade, national issue (M67 / DM51 / HG 85 class)",
+       "kind": "frag",
+       "count": 1,
+       "game_item_id": "frag_grenade"
+      },
+      {
+       "id": "smoke_white_nato",
+       "name": "White screening smoke, national issue (L83 / DM25 class)",
+       "kind": "smoke_white",
+       "count": 1,
+       "game_item_id": "smoke_grenade"
+      }
+     ],
+     "armor": {
+      "vest": {"id": "vst_pc22", "name": "VST-PC22 plate carrier", "tier": "medium", "game_item_id": "plate_carrier"},
+      "plates": {
+       "id": "sapi_class",
+       "name": "SAPI-class ceramic plates, national issue",
+       "material": "ceramic",
+       "real_rating": "NIJ III+ to IV class",
+       "front": true,
+       "back": true,
+       "game_rating": "IV",
+       "game_item_id": "plate_ceramic_l4"
+      },
+      "side_plates": null,
+      "helmet": {"id": "st4_hc22", "name": "Stimpex ST-4 / STI-HC22 helmet", "tier": "medium", "game_rating": "IIIA", "game_item_id": "helmet"}
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [
+       {"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"},
+       {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"},
+       {"id": "hemostatic_gauze", "count": 1, "game_item_id": "hemostatic_gauze"},
+       {"id": "chest_seal", "count": 1, "game_item_id": "chest_seal"}
+      ]
+     },
+     "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}],
+     "game_kit": [
+      ["plate_carrier", 1],
+      ["plate_ceramic_l4", 2],
+      ["helmet", 1],
+      ["m4a1", 1],
+      ["mag_556", 12],
+      ["m17", 1],
+      ["mag_9mm", 3],
+      ["frag_grenade", 1],
+      ["smoke_grenade", 1],
+      ["ifak", 1],
+      ["tourniquet", 1],
+      ["pressure_bandage", 2],
+      ["hemostatic_gauze", 1],
+      ["chest_seal", 1],
+      ["assault_pack", 1]
+     ]
+    },
+    "marksman": {
+     "primary": {
+      "id": "psl",
+      "name": "PSL",
+      "calibre": "7.62x54R",
+      "game_item_id": null,
+      "game_substitute": "m110",
+      "optic": {"id": "pso1", "name": "PSO-1 4x scope"},
+      "ammo": {
+       "id": "mag_762x54r_10",
+       "round": "7.62x54R 57-N-323S LPS (steel core)",
+       "game_round_id": "762x54r_lps",
+       "rounds_per_mag": 10,
+       "count": 8,
+       "game_item_id": null
+      }
+     },
+     "secondary": {
+      "id": "pistol_2000",
+      "name": "Pistol model 2000",
+      "calibre": "9x19mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {"id": "mag_9mm", "round": "9x19mm FMJ (NATO ball)", "game_round_id": "9x19_fmj", "rounds_per_mag": 15, "count": 3, "game_item_id": "mag_9mm"}
+     },
+     "launcher": null,
+     "grenades": [
+      {
+       "id": "frag_nato",
+       "name": "Fragmentation grenade, national issue (M67 / DM51 / HG 85 class)",
+       "kind": "frag",
+       "count": 1,
+       "game_item_id": "frag_grenade"
+      },
+      {
+       "id": "smoke_white_nato",
+       "name": "White screening smoke, national issue (L83 / DM25 class)",
+       "kind": "smoke_white",
+       "count": 1,
+       "game_item_id": "smoke_grenade"
+      }
+     ],
+     "armor": {
+      "vest": {"id": "vst_pc22", "name": "VST-PC22 plate carrier", "tier": "medium", "game_item_id": "plate_carrier"},
+      "plates": {
+       "id": "sapi_class",
+       "name": "SAPI-class ceramic plates, national issue",
+       "material": "ceramic",
+       "real_rating": "NIJ III+ to IV class",
+       "front": true,
+       "back": true,
+       "game_rating": "IV",
+       "game_item_id": "plate_ceramic_l4"
+      },
+      "side_plates": null,
+      "helmet": {"id": "st4_hc22", "name": "Stimpex ST-4 / STI-HC22 helmet", "tier": "medium", "game_rating": "IIIA", "game_item_id": "helmet"}
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [
+       {"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"},
+       {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"},
+       {"id": "hemostatic_gauze", "count": 1, "game_item_id": "hemostatic_gauze"},
+       {"id": "chest_seal", "count": 1, "game_item_id": "chest_seal"}
+      ]
+     },
+     "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}, {"id": "nvg_mono", "count": 1, "game_item_id": null}],
+     "game_kit": [
+      ["plate_carrier", 1],
+      ["plate_ceramic_l4", 2],
+      ["helmet", 1],
+      ["m110", 1],
+      ["mag_762", 4],
+      ["m17", 1],
+      ["mag_9mm", 3],
+      ["frag_grenade", 1],
+      ["smoke_grenade", 1],
+      ["ifak", 1],
+      ["tourniquet", 1],
+      ["pressure_bandage", 2],
+      ["hemostatic_gauze", 1],
+      ["chest_seal", 1],
+      ["assault_pack", 1]
+     ]
+    },
+    "grenadier": {
+     "primary": {
+      "id": "pa_md86",
+      "name": "PA md. 86",
+      "calibre": "5.45x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "iron", "name": "Iron sights"},
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 30,
+       "count": 7,
+       "game_item_id": null
+      },
+      "underbarrel": {
+       "id": "ag40_rou",
+       "name": "AG-40",
+       "calibre": "40mm VOG-25 (caseless)",
+       "game_item_id": null,
+       "ammo": [{"id": "gl_vog25", "name": "VOG-25 40mm caseless HE grenade", "count": 10, "game_item_id": null}]
+      }
+     },
+     "secondary": null,
+     "launcher": null,
+     "grenades": [
+      {
+       "id": "frag_nato",
+       "name": "Fragmentation grenade, national issue (M67 / DM51 / HG 85 class)",
+       "kind": "frag",
+       "count": 1,
+       "game_item_id": "frag_grenade"
+      },
+      {
+       "id": "smoke_white_nato",
+       "name": "White screening smoke, national issue (L83 / DM25 class)",
+       "kind": "smoke_white",
+       "count": 1,
+       "game_item_id": "smoke_grenade"
+      }
+     ],
+     "armor": {
+      "vest": {"id": "vst_pc22", "name": "VST-PC22 plate carrier", "tier": "medium", "game_item_id": "plate_carrier"},
+      "plates": {
+       "id": "sapi_class",
+       "name": "SAPI-class ceramic plates, national issue",
+       "material": "ceramic",
+       "real_rating": "NIJ III+ to IV class",
+       "front": true,
+       "back": true,
+       "game_rating": "IV",
+       "game_item_id": "plate_ceramic_l4"
+      },
+      "side_plates": null,
+      "helmet": {"id": "st4_hc22", "name": "Stimpex ST-4 / STI-HC22 helmet", "tier": "medium", "game_rating": "IIIA", "game_item_id": "helmet"}
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [
+       {"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"},
+       {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"},
+       {"id": "hemostatic_gauze", "count": 1, "game_item_id": "hemostatic_gauze"},
+       {"id": "chest_seal", "count": 1, "game_item_id": "chest_seal"}
+      ]
+     },
+     "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}],
+     "game_kit": [
+      ["plate_carrier", 1],
+      ["plate_ceramic_l4", 2],
+      ["helmet", 1],
+      ["m4a1", 1],
+      ["mag_556", 7],
+      ["frag_grenade", 1],
+      ["smoke_grenade", 1],
+      ["ifak", 1],
+      ["tourniquet", 1],
+      ["pressure_bandage", 2],
+      ["hemostatic_gauze", 1],
+      ["chest_seal", 1],
+      ["assault_pack", 1]
+     ]
+    },
+    "at": {
+     "primary": {
+      "id": "pa_md86",
+      "name": "PA md. 86",
+      "calibre": "5.45x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "iron", "name": "Iron sights"},
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 30,
+       "count": 5,
+       "game_item_id": null
+      }
+     },
+     "secondary": null,
+     "launcher": {
+      "id": "ag7",
+      "name": "AG-7 (Romanian RPG-7)",
+      "kind": "rocket",
+      "in_game": true,
+      "game_launcher": "RPG-7",
+      "game_substitute": null,
+      "game_item_id": null,
+      "proposed_game_item_id": "rpg7",
+      "rounds": [
+       {"name": "PG-7V", "type": "HEAT", "count": 2, "proposed_game_item_id": "pg7v"},
+       {"name": "OG-7V", "type": "frag", "count": 1, "proposed_game_item_id": "og7v"}
+      ],
+      "alternates": ["m72"]
+     },
+     "grenades": [
+      {
+       "id": "frag_nato",
+       "name": "Fragmentation grenade, national issue (M67 / DM51 / HG 85 class)",
+       "kind": "frag",
+       "count": 1,
+       "game_item_id": "frag_grenade"
+      },
+      {
+       "id": "smoke_white_nato",
+       "name": "White screening smoke, national issue (L83 / DM25 class)",
+       "kind": "smoke_white",
+       "count": 1,
+       "game_item_id": "smoke_grenade"
+      }
+     ],
+     "armor": {
+      "vest": {"id": "vst_pc22", "name": "VST-PC22 plate carrier", "tier": "medium", "game_item_id": "plate_carrier"},
+      "plates": {
+       "id": "sapi_class",
+       "name": "SAPI-class ceramic plates, national issue",
+       "material": "ceramic",
+       "real_rating": "NIJ III+ to IV class",
+       "front": true,
+       "back": true,
+       "game_rating": "IV",
+       "game_item_id": "plate_ceramic_l4"
+      },
+      "side_plates": null,
+      "helmet": {"id": "st4_hc22", "name": "Stimpex ST-4 / STI-HC22 helmet", "tier": "medium", "game_rating": "IIIA", "game_item_id": "helmet"}
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [
+       {"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"},
+       {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"},
+       {"id": "hemostatic_gauze", "count": 1, "game_item_id": "hemostatic_gauze"},
+       {"id": "chest_seal", "count": 1, "game_item_id": "chest_seal"}
+      ]
+     },
+     "other": [{"id": "ruck_45", "count": 1, "game_item_id": "ruck_45"}],
+     "game_kit": [
+      ["plate_carrier", 1],
+      ["plate_ceramic_l4", 2],
+      ["helmet", 1],
+      ["m4a1", 1],
+      ["mag_556", 5],
+      ["frag_grenade", 1],
+      ["smoke_grenade", 1],
+      ["ifak", 1],
+      ["tourniquet", 1],
+      ["pressure_bandage", 2],
+      ["hemostatic_gauze", 1],
+      ["chest_seal", 1],
+      ["ruck_45", 1]
+     ]
+    },
+    "medic": {
+     "primary": {
+      "id": "pa_md86",
+      "name": "PA md. 86",
+      "calibre": "5.45x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "iron", "name": "Iron sights"},
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 30,
+       "count": 6,
+       "game_item_id": null
+      }
+     },
+     "secondary": {
+      "id": "pistol_2000",
+      "name": "Pistol model 2000",
+      "calibre": "9x19mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {"id": "mag_9mm", "round": "9x19mm FMJ (NATO ball)", "game_round_id": "9x19_fmj", "rounds_per_mag": 15, "count": 3, "game_item_id": "mag_9mm"}
+     },
+     "launcher": null,
+     "grenades": [
+      {
+       "id": "smoke_white_nato",
+       "name": "White screening smoke, national issue (L83 / DM25 class)",
+       "kind": "smoke_white",
+       "count": 2,
+       "game_item_id": "smoke_grenade"
+      }
+     ],
+     "armor": {
+      "vest": {"id": "vst_pc22", "name": "VST-PC22 plate carrier", "tier": "medium", "game_item_id": "plate_carrier"},
+      "plates": {
+       "id": "sapi_class",
+       "name": "SAPI-class ceramic plates, national issue",
+       "material": "ceramic",
+       "real_rating": "NIJ III+ to IV class",
+       "front": true,
+       "back": true,
+       "game_rating": "IV",
+       "game_item_id": "plate_ceramic_l4"
+      },
+      "side_plates": null,
+      "helmet": {"id": "st4_hc22", "name": "Stimpex ST-4 / STI-HC22 helmet", "tier": "medium", "game_rating": "IIIA", "game_item_id": "helmet"}
+     },
+     "medical": {
+      "container": "trauma_kit",
+      "items": [
+       {"id": "tourniquet", "count": 3, "game_item_id": "tourniquet"},
+       {"id": "pressure_bandage", "count": 6, "game_item_id": "pressure_bandage"},
+       {"id": "hemostatic_gauze", "count": 2, "game_item_id": "hemostatic_gauze"},
+       {"id": "chest_seal", "count": 2, "game_item_id": "chest_seal"},
+       {"id": "splint", "count": 1, "game_item_id": "splint"},
+       {"id": "npa", "count": 2, "game_item_id": "npa"},
+       {"id": "decompression_needle", "count": 1, "game_item_id": null},
+       {"id": "iv_18g", "count": 2, "game_item_id": null},
+       {"id": "saline_500", "count": 2, "game_item_id": null},
+       {"id": "morphine", "count": 3, "game_item_id": "morphine"},
+       {"id": "epinephrine", "count": 2, "game_item_id": null},
+       {"id": "adenosine", "count": 1, "game_item_id": null},
+       {"id": "atropine", "count": 1, "game_item_id": null},
+       {"id": "surgical_kit", "count": 1, "game_item_id": null}
+      ]
+     },
+     "other": [{"id": "ruck_45", "count": 1, "game_item_id": "ruck_45"}],
+     "game_kit": [
+      ["plate_carrier", 1],
+      ["plate_ceramic_l4", 2],
+      ["helmet", 1],
+      ["m4a1", 1],
+      ["mag_556", 6],
+      ["m17", 1],
+      ["mag_9mm", 3],
+      ["smoke_grenade", 2],
+      ["trauma_kit", 1],
+      ["tourniquet", 3],
+      ["pressure_bandage", 6],
+      ["hemostatic_gauze", 2],
+      ["chest_seal", 2],
+      ["splint", 1],
+      ["npa", 2],
+      ["morphine", 3],
+      ["ruck_45", 1]
+     ]
+    },
+    "squad_leader": {
+     "primary": {
+      "id": "pa_md86",
+      "name": "PA md. 86",
+      "calibre": "5.45x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "collimator", "name": "Collimator (Kobra / 1P87 / EKP-8 class)"},
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 30,
+       "count": 7,
+       "game_item_id": null
+      }
+     },
+     "secondary": {
+      "id": "pistol_2000",
+      "name": "Pistol model 2000",
+      "calibre": "9x19mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {"id": "mag_9mm", "round": "9x19mm FMJ (NATO ball)", "game_round_id": "9x19_fmj", "rounds_per_mag": 15, "count": 3, "game_item_id": "mag_9mm"}
+     },
+     "launcher": null,
+     "grenades": [
+      {
+       "id": "frag_nato",
+       "name": "Fragmentation grenade, national issue (M67 / DM51 / HG 85 class)",
+       "kind": "frag",
+       "count": 1,
+       "game_item_id": "frag_grenade"
+      },
+      {
+       "id": "smoke_white_nato",
+       "name": "White screening smoke, national issue (L83 / DM25 class)",
+       "kind": "smoke_white",
+       "count": 2,
+       "game_item_id": "smoke_grenade"
+      },
+      {"id": "signal_green", "name": "Green signal smoke, national issue", "kind": "smoke_green", "count": 1, "game_item_id": "smoke_green"},
+      {
+       "id": "signal_red",
+       "name": "Red signal smoke, national issue",
+       "kind": "smoke_red",
+       "count": 1,
+       "game_item_id": null,
+       "game_substitute": "smoke_grenade"
+      },
+      {"id": "signal_violet", "name": "Violet signal smoke, national issue", "kind": "smoke_violet", "count": 1, "game_item_id": "smoke_purple"},
+      {"id": "stun_nato", "name": "Stun grenade, national issue (M84 class)", "kind": "flash", "count": 1, "game_item_id": "flashbang"}
+     ],
+     "armor": {
+      "vest": {"id": "vst_pc22", "name": "VST-PC22 plate carrier", "tier": "medium", "game_item_id": "plate_carrier"},
+      "plates": {
+       "id": "sapi_class",
+       "name": "SAPI-class ceramic plates, national issue",
+       "material": "ceramic",
+       "real_rating": "NIJ III+ to IV class",
+       "front": true,
+       "back": true,
+       "game_rating": "IV",
+       "game_item_id": "plate_ceramic_l4"
+      },
+      "side_plates": null,
+      "helmet": {"id": "st4_hc22", "name": "Stimpex ST-4 / STI-HC22 helmet", "tier": "medium", "game_rating": "IIIA", "game_item_id": "helmet"}
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [
+       {"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"},
+       {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"},
+       {"id": "hemostatic_gauze", "count": 1, "game_item_id": "hemostatic_gauze"},
+       {"id": "chest_seal", "count": 1, "game_item_id": "chest_seal"}
+      ]
+     },
+     "other": [
+      {"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"},
+      {"id": "radio", "count": 1, "game_item_id": null},
+      {"id": "binoculars", "count": 1, "game_item_id": null},
+      {"id": "nvg_mono", "count": 1, "game_item_id": null}
+     ],
+     "game_kit": [
+      ["plate_carrier", 1],
+      ["plate_ceramic_l4", 2],
+      ["helmet", 1],
+      ["m4a1", 1],
+      ["mag_556", 7],
+      ["m17", 1],
+      ["mag_9mm", 3],
+      ["frag_grenade", 1],
+      ["smoke_grenade", 3],
+      ["smoke_green", 1],
+      ["smoke_purple", 1],
+      ["flashbang", 1],
+      ["ifak", 1],
+      ["tourniquet", 1],
+      ["pressure_bandage", 2],
+      ["hemostatic_gauze", 1],
+      ["chest_seal", 1],
+      ["assault_pack", 1]
+     ]
+    },
+    "sniper": {
+     "primary": {
+      "id": "m110",
+      "name": "M110 SASS",
+      "calibre": "7.62x51mm",
+      "game_item_id": "m110",
+      "optic": {"id": "dmr_scope", "name": "3-18x DMR scope"},
+      "ammo": {
+       "id": "mag_762",
+       "round": "7.62x51mm M80 / NATO ball",
+       "game_round_id": "762x51_m80",
+       "rounds_per_mag": 20,
+       "count": 8,
+       "game_item_id": "mag_762"
+      },
+      "alternates": ["m82a1"]
+     },
+     "secondary": {
+      "id": "pistol_2000",
+      "name": "Pistol model 2000",
+      "calibre": "9x19mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {"id": "mag_9mm", "round": "9x19mm FMJ (NATO ball)", "game_round_id": "9x19_fmj", "rounds_per_mag": 15, "count": 3, "game_item_id": "mag_9mm"}
+     },
+     "launcher": null,
+     "grenades": [
+      {
+       "id": "frag_nato",
+       "name": "Fragmentation grenade, national issue (M67 / DM51 / HG 85 class)",
+       "kind": "frag",
+       "count": 1,
+       "game_item_id": "frag_grenade"
+      },
+      {
+       "id": "smoke_white_nato",
+       "name": "White screening smoke, national issue (L83 / DM25 class)",
+       "kind": "smoke_white",
+       "count": 1,
+       "game_item_id": "smoke_grenade"
+      }
+     ],
+     "armor": {
+      "vest": {"id": "vst_pc22", "name": "VST-PC22 plate carrier", "tier": "medium", "game_item_id": "plate_carrier"},
+      "plates": {
+       "id": "sapi_class",
+       "name": "SAPI-class ceramic plates, national issue",
+       "material": "ceramic",
+       "real_rating": "NIJ III+ to IV class",
+       "front": true,
+       "back": true,
+       "game_rating": "IV",
+       "game_item_id": "plate_ceramic_l4"
+      },
+      "side_plates": null,
+      "helmet": {"id": "st4_hc22", "name": "Stimpex ST-4 / STI-HC22 helmet", "tier": "medium", "game_rating": "IIIA", "game_item_id": "helmet"}
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [
+       {"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"},
+       {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"},
+       {"id": "hemostatic_gauze", "count": 1, "game_item_id": "hemostatic_gauze"},
+       {"id": "chest_seal", "count": 1, "game_item_id": "chest_seal"}
+      ]
+     },
+     "other": [
+      {"id": "ruck_45", "count": 1, "game_item_id": "ruck_45"},
+      {"id": "binoculars", "count": 1, "game_item_id": null},
+      {"id": "nvg_mono", "count": 1, "game_item_id": null}
+     ],
+     "game_kit": [
+      ["plate_carrier", 1],
+      ["plate_ceramic_l4", 2],
+      ["helmet", 1],
+      ["m110", 1],
+      ["mag_762", 8],
+      ["m17", 1],
+      ["mag_9mm", 3],
+      ["frag_grenade", 1],
+      ["smoke_grenade", 1],
+      ["ifak", 1],
+      ["tourniquet", 1],
+      ["pressure_bandage", 2],
+      ["hemostatic_gauze", 1],
+      ["chest_seal", 1],
+      ["ruck_45", 1]
+     ]
+    },
+    "crew": {
+     "primary": {
+      "id": "pa_md86",
+      "name": "PA md. 86",
+      "calibre": "5.45x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "iron", "name": "Iron sights"},
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 30,
+       "count": 4,
+       "game_item_id": null
+      }
+     },
+     "secondary": {
+      "id": "pistol_2000",
+      "name": "Pistol model 2000",
+      "calibre": "9x19mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {"id": "mag_9mm", "round": "9x19mm FMJ (NATO ball)", "game_round_id": "9x19_fmj", "rounds_per_mag": 15, "count": 3, "game_item_id": "mag_9mm"}
+     },
+     "launcher": null,
+     "grenades": [
+      {
+       "id": "smoke_white_nato",
+       "name": "White screening smoke, national issue (L83 / DM25 class)",
+       "kind": "smoke_white",
+       "count": 1,
+       "game_item_id": "smoke_grenade"
+      }
+     ],
+     "armor": {
+      "vest": {"id": "vst_pc22", "name": "VST-PC22 plate carrier", "tier": "medium", "game_item_id": "plate_carrier"},
+      "plates": {
+       "id": "sapi_class",
+       "name": "SAPI-class ceramic plates, national issue",
+       "material": "ceramic",
+       "real_rating": "NIJ III+ to IV class",
+       "front": true,
+       "back": true,
+       "game_rating": "IV",
+       "game_item_id": "plate_ceramic_l4"
+      },
+      "side_plates": null,
+      "helmet": {
+       "id": "tsh_tanker",
+       "name": "TSh-series padded tanker helmet (non-ballistic)",
+       "tier": "none",
+       "game_rating": null,
+       "game_item_id": null,
+       "cosmetic": true,
+       "proposed_game_id": "helmet_tanker"
+      }
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [
+       {"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"},
+       {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"},
+       {"id": "hemostatic_gauze", "count": 1, "game_item_id": "hemostatic_gauze"},
+       {"id": "chest_seal", "count": 1, "game_item_id": "chest_seal"}
+      ]
+     },
+     "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}],
+     "game_kit": [
+      ["plate_carrier", 1],
+      ["plate_ceramic_l4", 2],
+      ["m4a1", 1],
+      ["mag_556", 4],
+      ["m17", 1],
+      ["mag_9mm", 3],
+      ["smoke_grenade", 1],
+      ["ifak", 1],
+      ["tourniquet", 1],
+      ["pressure_bandage", 2],
+      ["hemostatic_gauze", 1],
+      ["chest_seal", 1],
+      ["assault_pack", 1]
+     ]
+    },
+    "pilot": {
+     "primary": {
+      "id": "pa_md86",
+      "name": "PA md. 86",
+      "calibre": "5.45x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "iron", "name": "Iron sights"},
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N6M (steel core)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n6m",
+       "rounds_per_mag": 30,
+       "count": 4,
+       "game_item_id": null
+      }
+     },
+     "secondary": {
+      "id": "pistol_2000",
+      "name": "Pistol model 2000",
+      "calibre": "9x19mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {"id": "mag_9mm", "round": "9x19mm FMJ (NATO ball)", "game_round_id": "9x19_fmj", "rounds_per_mag": 15, "count": 3, "game_item_id": "mag_9mm"}
+     },
+     "launcher": null,
+     "grenades": [{"id": "signal_violet", "name": "Violet signal smoke, national issue", "kind": "smoke_violet", "count": 1, "game_item_id": "smoke_purple"}],
+     "armor": {
+      "vest": {"id": "aircrew_vest", "name": "Aircrew survival armour vest (AIRSAVE class)", "tier": "light", "game_item_id": "plate_carrier_light"},
+      "plates": {
+       "id": "pe_light",
+       "name": "UHMWPE plate, level III (front only)",
+       "material": "polyethylene",
+       "real_rating": "NIJ III",
+       "front": true,
+       "back": false,
+       "game_rating": "III",
+       "game_item_id": "plate_pe_l3"
+      },
+      "side_plates": null,
+      "helmet": {
+       "id": "flight_helmet",
+       "name": "Aircrew flight helmet (HGU-56/P / ZSh-7 class, non-ballistic)",
+       "tier": "none",
+       "game_rating": null,
+       "game_item_id": null,
+       "cosmetic": true,
+       "proposed_game_id": "helmet_flight"
+      }
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [
+       {"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"},
+       {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"},
+       {"id": "hemostatic_gauze", "count": 1, "game_item_id": "hemostatic_gauze"},
+       {"id": "chest_seal", "count": 1, "game_item_id": "chest_seal"}
+      ]
+     },
+     "other": [],
+     "game_kit": [
+      ["plate_carrier_light", 1],
+      ["plate_pe_l3", 1],
+      ["m4a1", 1],
+      ["mag_556", 4],
+      ["m17", 1],
+      ["mag_9mm", 3],
+      ["smoke_purple", 1],
+      ["ifak", 1],
+      ["tourniquet", 1],
+      ["pressure_bandage", 2],
+      ["hemostatic_gauze", 1],
+      ["chest_seal", 1]
+     ]
+    }
+   },
+   "team_weapons": [
+    {
+     "id": "spike_lr",
+     "name": "Spike LR / LR2 ATGM",
+     "kind": "atgm",
+     "in_game": false,
+     "game_launcher": null,
+     "game_substitute": "Javelin",
+     "game_item_id": null,
+     "rounds": [{"name": "missile", "type": "tandem HEAT", "count": 1}]
+    },
+    {
+     "id": "javelin",
+     "name": "FGM-148 Javelin",
+     "kind": "atgm",
+     "in_game": true,
+     "game_launcher": "Javelin",
+     "game_substitute": null,
+     "game_item_id": null,
+     "proposed_game_item_id": "javelin",
+     "rounds": [{"name": "FGM-148 missile (tandem HEAT, top attack)", "type": "tandem HEAT", "count": 1, "proposed_game_item_id": "javelin_missile"}]
+    }
+   ]
+  }
+ ],
+ "role_map": {},
+ "notes": [
+  "SIG516 G3 is replacing the PA md. 86 (faction file); it is a rifleman alternate.",
+  "SIG SSG 3000 is not catalogued.",
+  "AG-9 recoilless (SPG-9 pattern) is a vehicle weapon and is left out."
+ ],
+ "proposed": [
+  "mag and medical counts (Q3 default)",
+  "variants and their armor mapping (Q1, Q9 defaults)",
+  "optics as class ids (Q7 default)",
+  "medical levels from doctrine.ai_tuning.medical_care (Q6 default)",
+  "game_kit (stand-in kit from items that exist today)"
+ ],
+ "sources": ["factions/rou.json"]
+}

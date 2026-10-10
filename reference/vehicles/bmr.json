@@ -1,0 +1,61 @@
+{
+  "id": "bmr",
+  "name": "Pegaso BMR-600",
+  "aliases": [
+    "BMR",
+    "VEC-M1"
+  ],
+  "origin": "Spain",
+  "type": "apc",
+  "operators": [
+    "esp"
+  ],
+  "crew": 2,
+  "passengers": 11,
+  "dimensions_m": {
+    "length": 6.15,
+    "width": 2.5,
+    "height": 2.36
+  },
+  "weight_t": 14.0,
+  "armament": [
+    "12.7 mm M2HB in cupola",
+    "VEC-M1 recon: 25 mm turret"
+  ],
+  "protection": "Aluminium armour; being replaced by Dragon 8x8. Game: immune to small-calibre rounds; 7.62x54R AP and larger can penetrate side/rear and disable wheels/engine; every launcher in the game list penetrates.",
+  "visual_notes": [
+    "6x6 with evenly spaced axles and sloped boat-like front",
+    "Low hull, cupola MG, rear ramp"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Spanish green/brown",
+      "palette": [
+        "#4E5637",
+        "#5E4A34",
+        "#1F1F1A"
+      ]
+    },
+    {
+      "name": "Desert sand",
+      "palette": [
+        "#C8B48A",
+        "#A8956C"
+      ]
+    }
+  ],
+  "variants": [
+    "BMR-600",
+    "BMR-M1",
+    "VEC-M1 (recon)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/BMR-600"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/BMR-600",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Spanish_Army"
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "id": "iraq_iran_border",
+  "name": "Hamrin and the Eastern Gate",
+  "inspired_by": "The Iraq-Iran borderlands of Diyala and the Zagros foothills as of 2026: a Diyala-type river plain with palm groves and citrus orchards, the Hamrin-type sandstone ridge and reservoir where Islamic State remnant cells still hide, mixed Arab, Kurdish and Turkmen districts disputed between Baghdad and the Kurdistan Region, a border crossing on the pilgrim road, and Iranian foothill towns below the first Zagros range (Kermanshah-type) on the east edge. Iran has been at war with the US and Israel since February 2026 (hostilities resumed in September 2026); Iran-aligned Iraqi factions hold stretches of the border economy; US forces left federal Iraq by 30 September 2026. All towns are fictional.",
+  "map_size_km": [22, 20],
+  "climate": "Hot semi-arid (Koppen BSh) on the plain, 45-50 C in July and 4-16 C in January with 250-350 mm of winter rain; the Iranian foothills (Csa) are cooler and wetter (400-500 mm, snow on the range in winter). Frequent summer dust storms; winter fog in the palm groves.",
+  "seasons": [
+    "Winter (Dec-Feb): rain and fog, green steppe, snow on the Zagros range, muddy tracks",
+    "Spring (Mar-May): wheat green then gold, wildflowers on Hamrin, dust storms begin",
+    "Summer (Jun-Sep): extreme heat, low reservoir, dust storms, date harvest begins in late summer",
+    "Autumn (Oct-Nov): date and citrus harvest; Arbaeen pilgrim traffic peaks at the crossing (date shifts with the lunar calendar)"
+  ],
+  "biomes": [
+    {"id": "palm_grove_and_orchard_plain", "share": 0.2, "vegetation": ["date palm groves", "citrus and pomegranate orchards under the palms", "eucalyptus windbreaks", "reed and tamarisk on canal banks"], "ground_palette": ["#8a7a5a", "#6e5e44", "#a8946e", "#5a4a34", "#b8a888"], "foliage_palette": ["#4f6a2e", "#6e8a3a", "#3a5a26", "#c9a03a", "#8aa04a"]},
+    {"id": "irrigated_fields", "share": 0.16, "vegetation": ["wheat and barley", "vegetable plots", "irrigation canals with reeds", "fallow fields with camel thorn"], "ground_palette": ["#9a8a66", "#7a6a4a", "#b8a47e", "#c9b88e", "#6a5a40"], "foliage_palette": ["#7a9a3e", "#a8b05a", "#d8c06a", "#5a7a30"]},
+    {"id": "hamrin_badlands", "share": 0.2, "vegetation": ["bare sandstone and conglomerate ridges", "gullies with tamarisk", "sparse steppe grass", "caves and dry wadis"], "ground_palette": ["#c4a47a", "#a8885e", "#d8bc92", "#8a6e4a", "#e6d0aa", "#7a5e3e"], "foliage_palette": ["#a8a27e", "#8f8a68", "#c1b98f", "#6f6c55"]},
+    {"id": "reservoir_and_marsh", "share": 0.08, "vegetation": ["open reservoir water", "reed beds on the shore", "mudflats at low water", "tamarisk thickets"], "ground_palette": ["#5a7a7a", "#3f6a72", "#8a8a6a", "#6e6a52"], "foliage_palette": ["#6a8a4a", "#8aa060", "#4a6a3a", "#a8b07a"]},
+    {"id": "foothill_steppe", "share": 0.2, "vegetation": ["rolling grass steppe", "rain-fed wheat", "thistle and wormwood", "seasonal herds"], "ground_palette": ["#b09a72", "#8f7a56", "#c8b48a", "#7a6648", "#a89070"], "foliage_palette": ["#9aa05a", "#b8b06a", "#7a8a48", "#d8c88a"]},
+    {"id": "zagros_oak_front_range", "share": 0.16, "vegetation": ["Persian oak (Quercus brantii) open woodland", "almond and wild pistachio", "limestone outcrops", "terraced gardens and walnut by streams"], "ground_palette": ["#9a8a72", "#7d6f5a", "#b7a88e", "#5f5444", "#c9bca2"], "foliage_palette": ["#4a6a30", "#5f7a3c", "#3a5a28", "#7a8a4e", "#a8a060"]}
+  ],
+  "terrain": {
+    "elevation_range_m": [70, 1850],
+    "relief": "A flat river plain at 70-150 m in the west; a long, narrow sandstone ridge (Hamrin type) rising to 300-450 m across the centre with a reservoir behind a dam where the river cuts through it; rolling foothill steppe at 200-500 m in the north and east; and the first Zagros range (limestone, 1,200-1,850 m) along the east edge on the Iranian side.",
+    "features": ["palm groves cut by irrigation canals", "the Hamrin-type ridge with gullies, caves and old trenches", "a reservoir and dam", "a river gorge through the ridge", "a border crossing and customs zone in a valley", "oil wells and a shared oil field straddling the border", "old 1980s war berms and trench lines (UXO hazard)", "Zagros limestone anticline with oak woodland"],
+    "water": "A river (Diyala/Sirwan type) crossing the map from the Iranian mountains to the plain, dammed into a reservoir at the ridge; a network of irrigation canals in the plain; seasonal streams in the foothills; wells.",
+    "generator": {
+      "approach": "Heightmap at 10 m. Flat plain with low noise; the Hamrin ridge as an anisotropic ridged stamp along a NW-SE axis with gully erosion; the reservoir as a flood fill behind a dam stamp in the river gap; foothills as low simplex hills; the Zagros front as a folded anticline (sine ridge along NW-SE) with ridged detail. A border line spline runs along the foothills on the east third.",
+      "noise_layers": [
+        {"type": "anisotropic ridged (NW-SE, 6:1)", "frequency": 0.4, "amplitude_m": 320, "purpose": "Hamrin-type sandstone ridge"},
+        {"type": "folded anticline (sine along NW-SE) plus ridged detail", "frequency": 0.15, "amplitude_m": 1500, "purpose": "Zagros front range on the Iranian side"},
+        {"type": "simplex fbm", "frequency": 0.6, "amplitude_m": 80, "purpose": "foothill steppe hills"},
+        {"type": "ridged", "frequency": 6.0, "amplitude_m": 15, "purpose": "badland gullies and rills on the ridge"},
+        {"type": "value noise (mask)", "frequency": 2.0, "amplitude_m": 0, "purpose": "palm grove vs field mask on the plain"}
+      ],
+      "erosion": "Strong hydraulic erosion on the Hamrin ridge (badlands); thermal erosion on the limestone range; minimal on the plain.",
+      "rivers": "Main river spline from the east edge through the foothills and the ridge gap into the plain; reservoir level a seasonal variable; irrigation canals as a grid of straight splines fed from the river below the dam.",
+      "settlement_flattening": "Plain towns and villages flattened as pads among palm groves; foothill villages on terraces; the border crossing on a flattened valley floor.",
+      "notes": "Palm groves give dense cover next to open fields, which shapes ambushes; the ridge gap and the dam road are the main chokepoints; the border crossing and pilgrim road carry heavy traffic. Iranian-side zones are recon and recovery only, as on iran_zagros."
+    }
+  },
+  "settlements": [
+    {
+      "type": "town",
+      "share": 0.2,
+      "pop_range": [15000, 90000],
+      "architecture": "Iraqi market town: two- to four-storey concrete-frame and cinder-block buildings with flat roofs, rooftop water tanks, satellite dishes and rebar stubs, shop shutters, a domed mosque and a husseiniya, a police HQ behind blast walls, and a crowded souq; some brick buildings and older mud-brick houses in the old quarter.",
+      "footprint_m": "block 60x80; house 10x20 with courtyard",
+      "storeys": [1, 4],
+      "wall_class": "Concrete frames medium; cinder-block infill thin (breachable); old mud-brick thick.",
+      "materials": ["CONCRETE", "CINDER_BLOCK", "BRICK", "MUD_BRICK", "PLASTER", "GLASS", "CORRUGATED_IRON"],
+      "palette": ["#c8b89a", "#9a978f", "#9c5a3c", "#a47e57", "#e3dccb", "#2f6f8f"],
+      "layout_rules": ["grid around the souq and main mosque", "blast-walled police and army posts on the main road", "palm groves pressing on the edges", "bus station and fuel depot on the highway"],
+      "example_names": ["Hawsh al-Murad", "Tell Abu Rumman", "Qaryat al-Nakhil al-Sharqiya", "Suq al-Bustan", "Abbara al-Jadida"]
+    },
+    {
+      "type": "village",
+      "share": 0.25,
+      "pop_range": [200, 3000],
+      "architecture": "Palm-grove villages: walled family compounds of cinder block and mud brick with flat roofs, orchards inside the walls, a small mosque, canal footbridges; Kurdish and Turkmen foothill villages of stone and block on terraces.",
+      "footprint_m": "compound 25x30; house 10x12",
+      "storeys": [1, 2],
+      "wall_class": "Compound walls medium (block) or thick (mud brick); interior walls thin.",
+      "materials": ["MUD_BRICK", "CINDER_BLOCK", "STONE", "WOOD", "CORRUGATED_IRON"],
+      "palette": ["#a47e57", "#9a978f", "#8f8676", "#8c6a46", "#8b8e8c"],
+      "layout_rules": ["strung along canals inside palm groves", "foothill villages stepped on slopes with a spring", "mosque and shop at the crossroads"],
+      "example_names": ["Bustan Abu Hilal", "Kani Hanar", "Zard Tappeh", "Gol-e Kuhan", "Albu Jasim al-Gharbi", "Qal'eh Sabz-e Marzi"]
+    },
+    {
+      "type": "town",
+      "share": 0.12,
+      "pop_range": [10000, 40000],
+      "architecture": "Iranian foothill border town: brick and concrete two- to four-storey buildings with flat roofs, Persian signage and murals, a bazaar street, a mosque with a tiled dome, war-memorial portraits, a Basij base and an IRGC border regiment barracks.",
+      "footprint_m": "block 60x70",
+      "storeys": [1, 4],
+      "wall_class": "Brick medium; concrete medium; shopfronts glass none.",
+      "materials": ["BRICK", "CONCRETE", "GLASS", "PLASTER", "STEEL"],
+      "palette": ["#9c5a3c", "#c8a882", "#8a8577", "#e3dccb", "#2f8f9f"],
+      "layout_rules": ["bazaar street along the road from the crossing", "barracks and border-regiment compound on the edge", "terraced gardens on the slope above"],
+      "example_names": ["Darband-e Kuchak", "Shahrak-e Marzi", "Bagh-e Golestan-e Sharqi"]
+    },
+    {
+      "type": "compound",
+      "share": 0.25,
+      "pop_range": [0, 2000],
+      "architecture": "Border crossing complex (customs halls, lorry parks, pilgrim halls, money changers, flags), ISF and Peshmerga posts with HESCO and sandbag towers, a dam with a powerhouse, oil wellpads and a gathering station, faction-held depots behind earth berms, a reservoir fish farm.",
+      "footprint_m": "crossing 400x300; outpost 100x100; gathering station 300x300",
+      "storeys": [1, 3],
+      "wall_class": "HESCO, berms and the dam thick; prefabs, halls and tanks thin.",
+      "materials": ["HESCO", "SANDBAG", "DIRT_BERM", "CONCRETE", "STEEL", "CORRUGATED_IRON"],
+      "palette": ["#a99a6c", "#b8a378", "#8a6f4e", "#8a8577", "#4a4d50", "#8b8e8c"],
+      "layout_rules": ["crossing in the valley on the main road with queues both sides", "outposts on ridge tops and at the dam", "oil field on the foothill steppe straddling the border"],
+      "example_names": ["Bawwabat al-Sharq Crossing", "Sadd al-Tilal Dam", "Haql al-Naft al-Hududi Station", "Outpost Hill 360"]
+    },
+    {
+      "type": "camp",
+      "share": 0.08,
+      "pop_range": [500, 15000],
+      "architecture": "Pilgrim service stations (mawkibs) of tents and steel-frame sheds along the road during Arbaeen; a camp for returning displaced families; an Iranian Kurdish opposition camp on the Iraqi side.",
+      "footprint_m": "mawkib 20x40; camp 300x300",
+      "storeys": [1, 1],
+      "wall_class": "None.",
+      "materials": ["TARP", "STEEL", "CORRUGATED_IRON"],
+      "palette": ["#3f6d8c", "#2a2a2a", "#c8a03a", "#e8e4da"],
+      "layout_rules": ["mawkibs every few hundred metres on the pilgrim road (seasonal)", "displaced-family camp near a town", "opposition camp in a foothill valley (strike-event target)"],
+      "example_names": ["Mawkib Ahl al-Bayt", "Camp Wadi al-Salam", "Kani Shirin Camp"]
+    },
+    {
+      "type": "farm",
+      "share": 0.1,
+      "pop_range": [5, 40],
+      "architecture": "Orchard farms and fish ponds: a block house, a pump house, a walled orchard, a sheep pen.",
+      "footprint_m": "farm 40x60",
+      "storeys": [1, 1],
+      "wall_class": "Block walls thin; mud walls medium.",
+      "materials": ["CINDER_BLOCK", "MUD_BRICK", "CORRUGATED_IRON"],
+      "palette": ["#9a978f", "#a47e57", "#8b8e8c"],
+      "layout_rules": ["along canals and the river below the dam", "track access only"],
+      "example_names": ["Mazra'at al-Rumman", "Bustan Abu Sayf", "Farm 12 Canal"]
+    }
+  ],
+  "infrastructure": {
+    "roads": "A four-lane highway from the plain to the border crossing (the pilgrim road), a dam-crest road through the ridge gap, a road along the foothills between Kurdish and Arab districts, farm tracks and canal-bank roads, ridge tracks.",
+    "rail": "None in service; an abandoned railway embankment on the plain.",
+    "power": "Hydro plant at the dam, pylons on the plain, Iranian electricity imports over a cross-border line; frequent outages in summer.",
+    "ports": "None; fishing boats on the reservoir.",
+    "airfields": "A disused airbase on the plain used as an army helipad; Iranian side off-map.",
+    "checkpoints": "ISF checkpoints on the highway and at the dam; Peshmerga checkpoints on the Kurdish-majority roads; faction-run checkpoints near the crossing; joint ISF-Peshmerga coordination posts in the disputed districts; Iranian border guard and IRGC posts on the east side."
+  },
+  "pois": [
+    {"type": "hamrin_cave_hideout", "description": "Cell hideout in a Hamrin gully: caves with bedding, a lookout on the crest, motorbikes under a tarp, a cache of supplies; trench lines from older wars nearby.", "contract_use": "clear an IS remnant cell (client irq); joint clearance (client krg_peshmerga)", "loot_tier": "medium", "intel_chance": 0.6},
+    {"type": "palm_grove_ambush_road", "description": "Canal road through dense palm groves with a culvert, burnt vehicle hulks and an orchard wall line; IED hazard markers.", "contract_use": "convoy escort through the groves; route clearance (client irq)", "loot_tier": "low", "intel_chance": 0.2},
+    {"type": "border_crossing", "description": "Customs complex with lorry parks, pilgrim halls, money changers and flags; faction-run side yards and warehouses; Iranian posts across the line.", "contract_use": "escort a pilgrim or VIP convoy to the crossing (client irq); observe smuggling yards", "loot_tier": "low", "intel_chance": 0.35},
+    {"type": "dam_and_reservoir", "description": "Earth-fill dam with a crest road, powerhouse and spillway; fishing boats on the reservoir; cells use the reeds and islands.", "contract_use": "secure the dam; reservoir boat patrol against cells (client irq)", "loot_tier": "low", "intel_chance": 0.25},
+    {"type": "border_oil_field", "description": "Wellpads, a gathering station and a pipeline straddling the border on the foothill steppe; drone-strike damage on one tank.", "contract_use": "defend oil infrastructure against drone and rocket attacks (client krg_peshmerga)", "loot_tier": "medium", "intel_chance": 0.3},
+    {"type": "drone_launch_site", "description": "Orchard yard with a pickup, launch rails and crates; moved often; near the crossing road.", "contract_use": "find and stop a drone launch team targeting the oil field (client krg_peshmerga)", "loot_tier": "medium", "intel_chance": 0.5},
+    {"type": "disputed_district_coordination_post", "description": "Joint ISF-Peshmerga coordination post on a hill between an Arab and a Kurdish village, with two flags and two sets of barriers.", "contract_use": "accompany a joint patrol into the gap between the forces (clients irq, krg_peshmerga)", "loot_tier": "low", "intel_chance": 0.3},
+    {"type": "opposition_camp", "description": "Iranian Kurdish opposition camp in a foothill valley on the Iraqi side: block houses, a clinic, a school; strike craters from earlier drone attacks.", "contract_use": "evacuate wounded after a strike event (client krg_peshmerga)", "loot_tier": "low", "intel_chance": 0.2},
+    {"type": "pilgrim_mawkib_road", "description": "Highway lined with pilgrim service tents during Arbaeen: food, water, banners, crowds on foot for kilometres.", "contract_use": "pilgrim-route security (client irq); no fire in the crowd", "loot_tier": "low", "intel_chance": 0.1},
+    {"type": "war_berm_trench_line", "description": "1980s war berms and trench lines on the foothills with rusted hulks; UXO hazard areas marked.", "contract_use": "observation; route survey (client irq)", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "faction_depot", "description": "Walled depot behind earth berms near the crossing: lorries, containers, a watchtower, flags of an armed faction.", "contract_use": "observe and document only (no Iraqi state client attacks it; see faction notes)", "loot_tier": "medium", "intel_chance": 0.4},
+    {"type": "iranian_border_post", "description": "IRGC border regiment post on a foothill spur with a tower, a radar mast and a fortified gate; across the line.", "contract_use": "recon from the Iraqi side only; recovery if a drone falls near the line", "loot_tier": "low", "intel_chance": 0.3}
+  ],
+  "weather": {
+    "conditions": ["extreme summer heat", "dust storms", "winter fog in the palm groves", "winter rain and mud", "snow on the Zagros range", "clear cold winter nights"],
+    "visibility_notes": "Dust storms drop visibility to under 200 m and ground aircraft; palm groves limit sight to 50-100 m; heat shimmer over the plain in summer; fog in winter mornings.",
+    "dust_or_snow": "Dust heavy May-September; snow only on the eastern range in winter."
+  },
+  "civilians": {
+    "density": "medium",
+    "behaviour": "Farmers in the groves at dawn and dusk; busy souqs mornings and evenings; lorry queues at the crossing day and night; shepherds on the steppe and Hamrin slopes (cells sometimes target them); during Arbaeen, huge crowds of pilgrims on foot along the highway. Civilians avoid faction checkpoints and leave villages when ridge operations start.",
+    "vehicles": ["Kia and Hyundai minibuses", "pickups", "lorries and fuel tankers", "Iranian-made Saipa and Peugeot cars", "tractors", "motorbikes", "fishing boats on the reservoir"],
+    "casualty_risk_notes": "Markets, the crossing and the pilgrim road are very dense; shepherds and farmers work in the same gullies and groves where cells hide. The casualty rule bites in palm-grove raids and during Arbaeen."
+  },
+  "factions_present": [
+    {"faction_id": "irq", "role": "defender", "strength": "high", "where": "Towns, highway and dam checkpoints, the disused airbase, ridge-top outposts on Hamrin; the border-crossing customs authority."},
+    {"faction_id": "krg_peshmerga", "role": "defender", "strength": "medium", "where": "Kurdish-majority foothill districts in the north, the border oil field, coordination posts in the disputed districts."},
+    {"faction_id": "isis", "role": "insurgent", "strength": "low", "where": "Remnant cells in the Hamrin gullies and caves, the reservoir reeds and the palm groves at the gap between ISF and Peshmerga lines."},
+    {"faction_id": "iraqi_militias", "role": "militia", "strength": "medium", "where": "Depots and side yards near the border crossing, checkpoints on the pilgrim road, drone launch teams in orchards; shown without PMF markings (see faction notes)."},
+    {"faction_id": "irn", "role": "defender", "strength": "high", "where": "Iranian side (east of the border line): IRGC border regiment posts, the foothill border town, a radar mast on the range; drone and missile events over the map and strikes on the opposition camp."}
+  ],
+  "frontline": "No moving front: a security-gap map. IS cells regenerate in the Hamrin gullies and the reservoir reeds; each cell zone that survives raises attacks on shepherds, checkpoints and the canal roads and posts counter-IS contracts (irq, krg_peshmerga). The disputed districts have a cooperation meter between ISF and Peshmerga: high cooperation shrinks the gap where cells live, while budget or Kirkuk-type disputes lower it. The border economy is held by iraqi_militias: their strength rises with the Iran-US/Israel war phases (drone launches at the oil field, more checkpoints) and falls with Iraqi disarmament progress. Regional-war events put Iranian drones and missiles overhead and strikes on the opposition camp, raising the alert across the map. Iranian-side zones never flip; they are recon and recovery only.",
+  "contract_hooks": [
+    "Clear an IS remnant cell from a Hamrin cave complex (client irq)",
+    "Escort a pilgrim or VIP convoy along the highway to the border crossing (client irq)",
+    "Route clearance on a palm-grove canal road (client irq)",
+    "Reservoir boat patrol against cells in the reeds (client irq)",
+    "Defend the border oil field against drone and rocket attacks (client krg_peshmerga)",
+    "Hunt a drone launch team in the orchards near the crossing (client krg_peshmerga)",
+    "Accompany a joint ISF-Peshmerga patrol into the disputed districts (clients irq, krg_peshmerga)",
+    "Evacuate wounded from the opposition camp after a strike event (client krg_peshmerga)",
+    "Recover a downed drone or crew near the border line before patrols reach it (client irq)"
+  ],
+  "zone_plan": {
+    "contract_zones": [
+      {"name": "Hamrin gullies", "area_km2": 3.5, "anchor": "hamrin_cave_hideout", "notes": "badlands, caves, shepherds"},
+      {"name": "Palm-grove canal road", "area_km2": 2.5, "anchor": "palm_grove_ambush_road", "notes": "dense cover, IED hazards"},
+      {"name": "Border crossing and pilgrim road", "area_km2": 3, "anchor": "border_crossing", "notes": "very dense, faction yards"},
+      {"name": "Border oil field", "area_km2": 3, "anchor": "border_oil_field", "notes": "open steppe, drone events"}
+    ],
+    "hot_zones": [
+      {"name": "Hamrin ridge and reservoir", "area_km2": 14, "layout": "isis HQ in a cave complex on the ridge; 3-5 outposts (gully hides, a reed island, an abandoned farm, a shepherd hut); ISF dam checkpoint and ridge-top outposts as friendly anchors; roaming motorbike pairs and a boat; 1 QRF cell from a palm-grove safe house"}
+    ]
+  },
+  "insertion": {"lhd": false, "fob": "FOB at the disused airbase on the plain next to (but separate from) the ISF helipad, or a Peshmerga base in the northern foothills for krg_peshmerga work. Road moves on the highway and the dam road; helicopters outside dust storms; no AAVs."},
+  "early_game_suitable": true,
+  "early_game_notes": "isis remnant cells and iraqi_militias are early-tier; irq and krg_peshmerga are early-game clients. irn (mid tier) stays on the Iranian side and appears through strike and drone events. Captain-confirmed new theatre (2026-10-10).",
+  "ambient_audio": ["call to prayer from several mosques", "generators and water pumps", "lorry horns at the crossing", "palm fronds in the wind", "sheep and dogs on the steppe", "drone buzz and distant air-defence fire during war phases", "pilgrim chants and loudspeakers during Arbaeen"],
+  "captain_confirmed": [
+    "theatre added (Captain, 2026-10-10): early-game; iraqi_militias, irn, irq, krg_peshmerga and isis remnants",
+    "map_size_km within the confirmed 16-24 km per side (Captain, 2026-10-10)",
+    "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
+    "materials accepted (Captain, 2026-10-10) and added to voxel_world.gd (Contractor dev, commit 1ec1417): CINDER_BLOCK #9a978f, BRICK #9c5a3c, MUD_BRICK #a47e57, PLASTER #e3dccb, GLASS #9fbcc4, CORRUGATED_IRON #8b8e8c, STONE #8f8676, HESCO #a99a6c, SANDBAG #b8a378, DIRT_BERM #8a6f4e, TARP #3f6d8c"
+  ],
+  "proposed": [
+    "composite layout (Diyala-type plain, Hamrin-type ridge, disputed foothills and an Iranian foothill strip on one map)",
+    "generator numbers",
+    "security-gap frontline model, ISF-Peshmerga cooperation meter and militia strength tied to war phases",
+    "zone_plan and hot zone",
+    "Iranian-side zones as recon and recovery only",
+    "Iranian Kurdish opposition camp and pilgrims as neutral NPCs (no faction file)",
+    "UXO fields and IEDs as marked map hazards only (game-level)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Diyala_Governorate",
+    "https://en.wikipedia.org/wiki/Hamrin_Mountains",
+    "https://en.wikipedia.org/wiki/Diyala_River",
+    "https://en.wikipedia.org/wiki/Disputed_territories_of_Northern_Iraq",
+    "https://en.wikipedia.org/wiki/Arba%27een_Pilgrimage",
+    "https://en.wikipedia.org/wiki/Zagros_Mountains",
+    "https://shafaq.com/en/Security/Airstrike-hits-three-ISIS-positions-in-Diyala",
+    "https://www.rudaw.net/english/kurdistan/06052026",
+    "factions/irq.json, iraqi_militias.json, irn.json, krg_peshmerga.json, isis.json situation notes, October 2026"
+  ]
+}

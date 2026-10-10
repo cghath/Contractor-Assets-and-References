@@ -1,0 +1,54 @@
+{
+  "id": "eitan",
+  "name": "Eitan 8x8 APC",
+  "aliases": [
+    "Eitan AFV"
+  ],
+  "origin": "Israel",
+  "type": "apc",
+  "operators": [
+    "isr"
+  ],
+  "crew": 3,
+  "passengers": 9,
+  "dimensions_m": {
+    "length": 8.0,
+    "width": 3.0,
+    "height": 3.0
+  },
+  "weight_t": 35,
+  "armament": [
+    "Samson RCWS with 12.7 mm M2",
+    "7.62 mm FN MAG",
+    "IFV: 30 mm turret with Spike missiles (in development)"
+  ],
+  "protection": "NERA composite armour, high mine-resistant floor, run-flat tyres, Iron Fist APS planned. Sources disagree on weight (about 35 t, up to 50 t listed). Game rule: immune to small-calibre; 7.62x54R AP and 12.7/14.5 mm can disable tyres, optics and an exposed gunner; launchers penetrate.",
+  "visual_notes": [
+    "Tall, boxy 8x8 hull with 4 axles (gap between 2nd and 3rd), steep glacis and driver on the left",
+    "Samson RCWS on the roof; rear ramp",
+    "Big flat armoured side panels with stowage boxes; anti-drone mesh in Gaza use"
+  ],
+  "colour_schemes": [
+    {
+      "name": "IDF Sinai grey",
+      "palette": [
+        "#8E8B7A",
+        "#6E6B5C",
+        "#3E3C34"
+      ]
+    }
+  ],
+  "variants": [
+    "Eitan APC (2023+)",
+    "Eitan IFV (30 mm turret)"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Eitan_AFV"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Eitan_AFV",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Israel_Defense_Forces"
+  ]
+}

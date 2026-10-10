@@ -1,0 +1,129 @@
+{
+  "id": "t72b3",
+  "name": "T-72B3 / T-72 family",
+  "aliases": [
+    "T-72B3M (T-72B3 obr. 2016)",
+    "T-72B",
+    "T-72A",
+    "T-72AV",
+    "T-72BA",
+    "T-72B1MS",
+    "T-72 Aslan",
+    "T-72M1"
+  ],
+  "origin": "Soviet Union / Russia",
+  "type": "mbt",
+  "operators": [
+    "rus",
+    "blr",
+    "africa_corps",
+    "kaz",
+    "srb",
+    "arm",
+    "aze",
+    "ukr",
+    "geo",
+    "ind",
+    "irn",
+    "syr",
+    "irq",
+    "houthis"
+  ],
+  "crew": 3,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 9.53,
+    "width": 3.59,
+    "height": 2.23
+  },
+  "weight_t": 46.0,
+  "armament": [
+    "125 mm 2A46M-5 smoothbore with autoloader (fires 9M119 Refleks ATGM)",
+    "7.62 mm PKTM coaxial",
+    "12.7 mm Kord on commander's remote/manual mount"
+  ],
+  "protection": "Steel/composite hull and turret with Kontakt-5 ERA (B3) or Relikt ERA (B3M) and rear slat/net screens. Game: hull and turret immune to all small-calibre and to 7.62x54R/12.7/14.5 mm (those only break optics, searchlights, external MGs and track pins). Kills need launchers: Javelin/NLAW top-attack, AT4/MAAWS/SMAW or RPG-7 PG-7V to side, rear or roof; frontal ERA defeats single-charge PG-7V.",
+  "visual_notes": [
+    "Low rounded cast turret with brick-shaped Kontakt-5 ERA blocks in a chevron on the turret front and glacis; B3M adds Relikt boxes and side skirts with ERA",
+    "6 large road wheels per side with 3 small return rollers; rubber side skirts",
+    "Sosna-U gunner's sight box on the turret roof front-right, commander's cupola left",
+    "Unditching log and fuel drums on the rear hull; snorkel tube on the turret rear",
+    "2026 field look: welded roof 'cope cage' over the turret, anti-drone mesh/netting draped on frames, sometimes a full 'turtle' shed cover, EW jammer box on the turret, rubber mats over ERA",
+    "White tactical marks (Z, V, triangle) on Russian vehicles; Armenian/Azerbaijani/Serbian/Kazakh T-72s are older A/B/M1 versions without the B3 sight box"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Russian protective green with white Z/V/triangle ID marks",
+      "palette": [
+        "#4A5530",
+        "#3B4428",
+        "#2A2E22",
+        "#F0F0F0"
+      ]
+    },
+    {
+      "name": "Russian three-tone summer",
+      "palette": [
+        "#4B5A2F",
+        "#9C8E5C",
+        "#2B2A22"
+      ]
+    },
+    {
+      "name": "Winter whitewash over green",
+      "palette": [
+        "#E4E4DE",
+        "#4A5530",
+        "#2A2E22"
+      ]
+    },
+    {
+      "name": "Expeditionary sand/khaki (Africa Corps, Syria)",
+      "palette": [
+        "#B9A27A",
+        "#8F7A55",
+        "#5A4E38"
+      ]
+    },
+    {
+      "name": "Azerbaijani desert-green disruptive",
+      "palette": [
+        "#C8B48A",
+        "#8E7B55",
+        "#5C5A3A",
+        "#3A3A2C"
+      ]
+    }
+  ],
+  "variants": [
+    "T-72A / T-72AV (ARM)",
+    "T-72B / T-72B obr. 1989",
+    "T-72B3 (2012)",
+    "T-72B3M / obr. 2016 (RUS, Africa Corps in Mali)",
+    "T-72B3 mod / T-72BM2 (BLR)",
+    "T-72BA (KAZ)",
+    "T-72B1MS 'White Eagle' (SRB)",
+    "T-72M1 / T-72 Aslan (AZE)",
+    "T-72AMT / T-72AV / T-72EA (UKR)",
+    "T-72SIM-1 (GEO)",
+    "T-72M1 Ajeya (IND)",
+    "T-72S / T-72Z Safir-74 (IRN)",
+    "T-72AV / T-72 Adra (SYR, ex-Assad stock)",
+    "T-72M1 (IRQ)"
+  ],
+  "existing_model": null,
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/T-72",
+    "https://en.wikipedia.org/wiki/T-72B3",
+    "https://commons.wikimedia.org/wiki/Category:T-72B3",
+    "https://commons.wikimedia.org/wiki/Category:T-72"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/T-72",
+    "https://en.wikipedia.org/wiki/Cope_cage",
+    "https://defence-blog.com/russian-tanks-and-armored-vehicles-spotted-in-mali/",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Armed_Forces_of_Belarus",
+    "https://en.wikipedia.org/wiki/Serbian_Army"
+  ]
+}

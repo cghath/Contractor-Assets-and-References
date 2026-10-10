@@ -1,0 +1,71 @@
+{
+  "id": "zolfaghar_fac",
+  "name": "IRGC Navy fast attack craft (Zolfaghar / Seraj / Tareq family)",
+  "aliases": [
+    "Zolfaghar",
+    "Seraj-1",
+    "Peykaap",
+    "Tareq",
+    "IRGCN speedboat"
+  ],
+  "origin": "Iran",
+  "type": "boat",
+  "operators": [
+    "irn"
+  ],
+  "crew": 4,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 17.0,
+    "width": 3.5,
+    "height": 2.5
+  },
+  "weight_t": 15,
+  "armament": [
+    "12.7 mm or 14.5 mm heavy machine gun",
+    "107 mm rocket rack (some)",
+    "light anti-ship missiles or torpedoes on larger boats",
+    "naval mines (game: map hazard)"
+  ],
+  "protection": "Unarmoured GRP or aluminium hull. Unarmoured. Game rule still treats the vehicle body as immune to small-calibre, but 7.62x54R and up penetrate; occupants, glass and tyres are exposed to all fire. Swarm boats are the game's main Persian Gulf naval threat.",
+  "visual_notes": [
+    "Low, sharp planing hull with a small enclosed or open cockpit amidships",
+    "Bow-mounted heavy MG; rocket box or missile tubes on the aft deck",
+    "Grey or white hull, often with IRGC Navy pennant numbers; operates in swarms of 4-10",
+    "Dimensions are representative (Zolfaghar class); Seraj boats are ~12-16 m"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Naval grey",
+      "palette": [
+        "#7E848A",
+        "#5C6166",
+        "#2E3135"
+      ]
+    },
+    {
+      "name": "Disruptive blue-grey",
+      "palette": [
+        "#6E7D8C",
+        "#3E4C59",
+        "#A8B3BD"
+      ]
+    }
+  ],
+  "variants": [
+    "Zolfaghar (missile FAC)",
+    "Seraj-1 (Bladerunner-derived)",
+    "Peykaap (torpedo/missile)",
+    "Tareq / Ashura speedboats",
+    "Boghammar-type patrol boats"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Islamic_Revolutionary_Guard_Corps_Navy"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Islamic_Revolutionary_Guard_Corps_Navy",
+    "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis"
+  ]
+}

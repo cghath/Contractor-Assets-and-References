@@ -1,0 +1,474 @@
+{
+  "id": "pol",
+  "name": "Poland",
+  "short": "POL",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#FFFFFF",
+    "#DC143C"
+  ],
+  "blocs": [
+    "nato",
+    "eu",
+    "bucharest_nine",
+    "weimar_triangle",
+    "global_coalition_against_isis",
+    "unifil"
+  ],
+  "campaign_tier": "mid",
+  "alignment_to_player": "friendly",
+  "player_client": true,
+  "relations": {
+    "player": 30,
+    "usa": 90,
+    "gbr": 85,
+    "can": 80,
+    "aus": 65,
+    "fra": 75,
+    "deu": 70,
+    "ita": 75,
+    "esp": 70,
+    "nld": 80,
+    "bel": 75,
+    "nor": 80,
+    "dnk": 85,
+    "swe": 85,
+    "fin": 85,
+    "grc": 70,
+    "ukr": 70,
+    "est": 90,
+    "lva": 90,
+    "ltu": 90,
+    "rou": 85,
+    "mda": 70,
+    "geo": 40,
+    "kor": 85,
+    "jpn": 60,
+    "tur": 55,
+    "isr": 30,
+    "rus": -90,
+    "blr": -85,
+    "irn": -55,
+    "prk": -70,
+    "chn": -25,
+    "africa_corps": -60,
+    "isis": -95,
+    "isis_k": -90,
+    "al_qaeda": -95,
+    "aqap": -90,
+    "al_shabaab": -85,
+    "jnim": -85,
+    "hamas": -75,
+    "pij": -75,
+    "hezbollah": -65,
+    "houthis": -65,
+    "iraqi_militias": -55,
+    "aut": 35,
+    "pmc_kestrel": -80
+  },
+  "theatres": [
+    "suwalki_gap",
+    "baltic_coast",
+    "lebanon_south",
+    "mesopotamia"
+  ],
+  "languages": [
+    "Polish"
+  ],
+  "callout_language": "Polish",
+  "doctrine": {
+    "summary": "Fast-growing NATO frontline army (target 300,000) buying heavily from the US and South Korea: K2 and Abrams tanks, K9 and Krab howitzers, Homar-K and HIMARS rockets. Territorial Defence Forces (WOT) provide a local light-infantry layer. Small contingents serve with UNIFIL in Lebanon and NATO in Iraq.",
+    "squad_size": 9,
+    "fireteam": "Mechanised squad of 8-9 in two sections; WOT light squads of 8.",
+    "tactics": [
+      "combined-arms counterattack with tanks and Rosomak/Borsuk",
+      "heavy artillery and rocket fires",
+      "Territorial Defence ambushes and anti-drone layers in forests",
+      "Spike and Javelin anti-armour teams",
+      "fortified border line (East Shield) obstacles and mines as map features"
+    ],
+    "ai_tuning": {
+      "aggression": 0.55,
+      "discipline": 0.85,
+      "suppression_resistance": 0.75,
+      "flanking": 0.7,
+      "grenade_use": 0.6,
+      "medical_care": 0.8,
+      "night_capability": 0.8,
+      "marksmanship": 0.75,
+      "morale": 0.8
+    }
+  },
+  "camo": [
+    {
+      "name": "wz. 93 Pantera (woodland)",
+      "palette": [
+        "#8B8459",
+        "#4C5A2E",
+        "#5B4630",
+        "#1F1D17"
+      ],
+      "use": "standard"
+    },
+    {
+      "name": "wz. 93 Pantera Pustynna (desert)",
+      "palette": [
+        "#C9B48A",
+        "#9B7C55",
+        "#6E5A3E"
+      ],
+      "use": "Middle East deployments"
+    },
+    {
+      "name": "Lampart",
+      "palette": [
+        "#7A7656",
+        "#4F5536",
+        "#3A3328",
+        "#A39C78"
+      ],
+      "use": "replacement pattern in testing / early issue"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "MSBS Grot C16 FB-A2 (5.56x45mm)",
+      "FB Beryl wz. 96 (5.56x45mm)"
+    ],
+    "autorifleman": [
+      "UKM-2000P (7.62x51mm)",
+      "M240 (7.62x51mm)",
+      "MG3 (7.62x51mm)"
+    ],
+    "marksman": [
+      "MSBS-7.62N (7.62x51mm)"
+    ],
+    "grenadier": [
+      "MSBS Grot with GSBO-40 (40x46mm)"
+    ],
+    "at": [
+      "Carl Gustaf M4 (84mm)",
+      "M72 LAW (66mm)",
+      "FGM-148 Javelin (team)",
+      "Spike-LR (team)"
+    ],
+    "medic": [
+      "MSBS Grot carbine (5.56x45mm)"
+    ],
+    "squad_leader": [
+      "MSBS Grot with optic (5.56x45mm)"
+    ],
+    "sniper": [
+      "Bor (7.62x51mm)",
+      "Sako TRG M10 (.338 Lapua Magnum)",
+      "WKW Wilk (12.7x99mm)"
+    ],
+    "sidearm": [
+      "FB VIS 100 (9x19mm)",
+      "WIST-94 (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "Carl Gustaf M4 / MAAWS (84mm) [in_game]",
+    "FGM-148 Javelin [in_game]",
+    "RPG-7 (being replaced) [in_game]",
+    "M72 LAW [not_in_game]",
+    "Spike-LR ATGM [not_in_game]",
+    "Piorun MANPADS [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "ceramic",
+    "notes": "HP-05 / wz. 2005 aramid helmets (medium); modular vests with front/back ceramic plates (medium). Special forces (GROM, JWK) and assault elements add side plates (heavy) and high-cut helmets."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "k2_black_panther",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "K2GF/K2PL, ~208 in service, more on order."
+    },
+    {
+      "vehicle_id": "abrams",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "M1A1 FEP and M1A2 SEPv3 (~300); existing voxel model. Real-world operator, so it fields it in game (Captain-confirmed 2026-10-10)."
+    },
+    {
+      "vehicle_id": "patria_amv",
+      "role": "apc",
+      "prevalence": "signature",
+      "notes": "KTO Rosomak (licence Patria AMV), incl. Rosomak-S with Spike."
+    },
+    {
+      "vehicle_id": "leopard2a6",
+      "role": "mbt",
+      "prevalence": "common",
+      "notes": "Leopard 2A4, 2A5 and 2PL."
+    },
+    {
+      "vehicle_id": "pt91",
+      "role": "mbt",
+      "prevalence": "common",
+      "notes": "PT-91 Twardy (T-72M1 derivative with ERAWA ERA)."
+    },
+    {
+      "vehicle_id": "bmp1",
+      "role": "ifv",
+      "prevalence": "common",
+      "notes": "BWP-1, about 850, being replaced by Borsuk."
+    },
+    {
+      "vehicle_id": "borsuk",
+      "role": "ifv",
+      "prevalence": "uncommon",
+      "notes": "New amphibious IFV, deliveries from 2025."
+    },
+    {
+      "vehicle_id": "matv",
+      "role": "mrap",
+      "prevalence": "uncommon",
+      "notes": "About 124 M-ATVs (M1240A1 with the underbody kit): 45 with the special forces, plus 79 ex-US Army vehicles delivered to the Land Forces in January 2024 under EDA; existing voxel model. Fielded in game by its real operators (Captain-confirmed 2026-10-10)."
+    },
+    {
+      "vehicle_id": "cougar",
+      "role": "mrap",
+      "prevalence": "common",
+      "notes": "About 300 Cougar 4x4 (plus 79 M-ATV)."
+    },
+    {
+      "vehicle_id": "krab",
+      "role": "artillery",
+      "prevalence": "signature",
+      "notes": "AHS Krab 155 mm."
+    },
+    {
+      "vehicle_id": "k9",
+      "role": "artillery",
+      "prevalence": "common",
+      "notes": "K9A1/K9PL, ~218."
+    },
+    {
+      "vehicle_id": "k239",
+      "role": "mlrs",
+      "prevalence": "common",
+      "notes": "Homar-K on Jelcz 8x8; HIMARS (Homar-A) also in service."
+    },
+    {
+      "vehicle_id": "mi24",
+      "role": "attack_heli",
+      "prevalence": "uncommon",
+      "notes": "Mi-24W/D (~18); AH-64E on order, 8 AH-64D leased for training."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "pol_game_squad",
+      "name": "Polish mechanised squad (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "pol_rosomak_squad",
+      "name": "Rosomak-mounted squad",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "patria_amv"
+    },
+    {
+      "id": "pol_wot_section",
+      "name": "Territorial Defence (WOT) section",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 2
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "pol_recon_team",
+      "name": "Recon / sniper team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "sniper",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "cougar"
+    }
+  ],
+  "support_assets": [
+    "Krab / K9 155 mm artillery",
+    "Homar-K and HIMARS rockets",
+    "Warmate loitering munitions",
+    "FlyEye recon UAV",
+    "Mi-24 CAS (rare)",
+    "F-16 / F-35 strike (late campaign only)"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 20,
+        "unlocks": [
+          "5.56x45mm and 7.62x51mm ammunition",
+          "Pantera uniforms",
+          "light helmet and vest",
+          "MSBS Grot"
+        ]
+      },
+      {
+        "rep": 40,
+        "unlocks": [
+          "optics and NVGs",
+          "medium armour (ceramic)",
+          "Carl Gustaf M4",
+          "UKM-2000"
+        ]
+      },
+      {
+        "rep": 60,
+        "unlocks": [
+          "Bor and TRG sniper rifles",
+          "heavy armour",
+          "Cougar MRAP purchase",
+          "Warmate loitering munition"
+        ]
+      },
+      {
+        "rep": 80,
+        "unlocks": [
+          "Rosomak hire for one contract",
+          "Javelin",
+          "artillery call-in on contracts"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "counter_terror_raid",
+      "border_security_patrol",
+      "counter_sabotage_infrastructure_guard",
+      "recover_lost_equipment_or_sensitive_kit",
+      "convoy_escort",
+      "train_and_accompany_partner_forces",
+      "hostage_rescue",
+      "embassy_or_base_security"
+    ],
+    "as_target": [
+      "only if the player works for this nation's enemies: sabotage_logistics_depot",
+      "only if the player works for this nation's enemies: intel_theft"
+    ]
+  },
+  "notes": "Early-game hook: Polish contingents in Iraq/Kuwait and UNIFIL can post counter-terror and base-security contracts in mesopotamia and lebanon_south; the main Polish role is mid/late campaign in the suwalki_gap and baltic_coast. Real-world: Poland operates Abrams (M1A1 FEP, M1A2 SEPv3) and is buying 96 AH-64E; it does not operate AH-1Z, Bradley or MaxxPro (it does field M-ATV and Cougar). The existing voxel models are fielded in game by their real operators (Captain-confirmed 2026-10-10). Weapons that use 7.62x54R are being retired, so most Polish squad weapons cannot disable vehicles under the game rule; the WKW Wilk (.50) can.",
+  "proposed": [
+    "campaign_tier",
+    "alignment_to_player",
+    "relations.player",
+    "doctrine.ai_tuning",
+    "unit_templates",
+    "player_trade.rep_tiers",
+    "contract_types",
+    "body_armor (game tier mapping)",
+    "vehicles[].prevalence (game weighting)",
+    "camo[].palette (approximate hex values)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Polish_Land_Forces",
+    "https://en.wikipedia.org/wiki/K2_Black_Panther",
+    "https://en.wikipedia.org/wiki/Borsuk_(infantry_fighting_vehicle)",
+    "https://en.wikipedia.org/wiki/AHS_Krab",
+    "https://en.wikipedia.org/wiki/K239_Chunmoo",
+    "https://en.wikipedia.org/wiki/PT-91_Twardy",
+    "https://militarnyi.com/uk/news/polshha-otrymaye-79-bronemashyn-oshkosh-m-atv-vid-ssha/"
+  ]
+}

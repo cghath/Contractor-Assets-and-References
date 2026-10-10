@@ -1,0 +1,393 @@
+{
+  "id": "al_qaeda",
+  "name": "al-Qaeda (core network)",
+  "short": "al-Qaeda",
+  "kind": "non_state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#1C1C1C",
+    "#F2F2EE"
+  ],
+  "blocs": [
+    "al_qaeda_network"
+  ],
+  "campaign_tier": "early",
+  "alignment_to_player": "hostile",
+  "player_client": false,
+  "relations": {
+    "player": -100,
+    "usa": -100,
+    "gbr": -100,
+    "fra": -100,
+    "can": -100,
+    "aus": -100,
+    "deu": -100,
+    "isr": -85,
+    "rus": -90,
+    "chn": -75,
+    "ind": -95,
+    "pak": -85,
+    "kaz": -85,
+    "sau": -90,
+    "are": -90,
+    "egy": -85,
+    "jor": -90,
+    "qat": -75,
+    "tur": -55,
+    "irq": -90,
+    "syr": -55,
+    "pse_pa": -75,
+    "irn": -40,
+    "africa_corps": -90,
+    "afg_taliban": 40,
+    "sahel_aes": -90,
+    "som": -90,
+    "aqap": 90,
+    "al_shabaab": 85,
+    "jnim": 85,
+    "hamas": -20,
+    "pij": -20,
+    "hezbollah": -85,
+    "houthis": -60,
+    "iraqi_militias": -90,
+    "isis": -95,
+    "isis_k": -95,
+    "sdf": -70,
+    "mda": -80,
+    "aut": -85,
+    "che": -85,
+    "geo": -85,
+    "irl": -85,
+    "kor": -85,
+    "krg_peshmerga": -85,
+    "pmc_kestrel": -85,
+    "jpn": -90,
+    "phl": -90,
+    "pmc_black_sable": -90,
+    "ukr": -90,
+    "est": -95,
+    "ltu": -95,
+    "lva": -95,
+    "pol": -95,
+    "rou": -95,
+    "bel": -100,
+    "dnk": -100,
+    "esp": -100,
+    "fin": -100,
+    "grc": -100,
+    "ita": -100,
+    "nld": -100,
+    "nor": -100,
+    "nzl": -100,
+    "pmc_halcyon": -100,
+    "swe": -100,
+    "adf": -80
+  },
+  "theatres": [
+    "afghan_highlands",
+    "levant_syria"
+  ],
+  "languages": [
+    "Arabic",
+    "Pashto",
+    "Dari",
+    "Urdu"
+  ],
+  "callout_language": "Gulf and Levantine Arabic among foreign members; Pashto and Dari with local hosts; minimal radio, couriers and messengers.",
+  "doctrine": {
+    "summary": "The al-Qaeda 'core' (al-Qaeda central) is the leadership and shura of the global network founded by Osama bin Laden in 1988. After the deaths of bin Laden (2011) and Ayman al-Zawahiri (killed in Kabul by a US strike, July 2022) it has not publicly named an emir; UN monitoring reports and the US government assess Saif al-Adel as the de facto leader, based in Iran. The core today is a small, dispersed leadership with training facilities and safe houses in Afghanistan under Taliban tolerance (per UN monitoring reports), and it gives direction to stronger regional affiliates: AQAP (Yemen), al-Shabaab (Somalia), JNIM (Sahel) and AQIS (South Asia). In Syria, Hay'at Tahrir al-Sham broke with al-Qaeda in 2016-2017 and now forms the core of the Syrian government, and the al-Qaeda loyalist group Hurras al-Din announced its dissolution in January 2025, so al-Qaeda's Syrian presence in 2026 is limited to small remnant cells. In the game the core appears as small, well-hidden cells guarding couriers, safe houses and training sites, a classic HVT target set.",
+    "squad_size": 5,
+    "fireteam": "Cells of 3-6 around a courier, trainer or leader; local hosts provide guards. In game: 2-3 battle-buddy pairs.",
+    "tactics": [
+      "Hide in remote compounds and mountain villages; guards fight a delaying action while the leader escapes",
+      "Courier movement by motorbike and civilian car, which the player must track",
+      "Small training sites in valleys guarded by a few fighters",
+      "Ambush from high ground on mountain tracks",
+      "Fall back into villages and among civilians, keeping the casualty rule active",
+      "IED-rigged compound entrances as telegraphed map hazards"
+    ],
+    "ai_tuning": {
+      "aggression": 0.45,
+      "discipline": 0.5,
+      "suppression_resistance": 0.45,
+      "flanking": 0.45,
+      "grenade_use": 0.4,
+      "medical_care": 0.2,
+      "night_capability": 0.3,
+      "marksmanship": 0.45,
+      "morale": 0.6
+    }
+  },
+  "camo": [
+    {
+      "name": "Afghan civilian dress (shalwar kameez, patu shawl)",
+      "palette": [
+        "#B9AE98",
+        "#6E6250",
+        "#3A3A3A",
+        "#8C8C80"
+      ],
+      "use": "Most fighters and hosts in afghan_highlands"
+    },
+    {
+      "name": "Mixed surplus woodland / desert",
+      "palette": [
+        "#4E5A3A",
+        "#C2A878",
+        "#6E5A3A",
+        "#2F3324"
+      ],
+      "use": "Guards and trainees; old ANA, Pakistani and Russian surplus"
+    },
+    {
+      "name": "Levant civilian",
+      "palette": [
+        "#2C2C2C",
+        "#6E6457",
+        "#C9C3B8"
+      ],
+      "use": "Remnant cells in levant_syria"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "AKM / Type 56 (7.62x39mm)",
+      "M4 / M16 (5.56x45mm, ex-Afghan stocks)"
+    ],
+    "autorifleman": [
+      "PKM (7.62x54R)",
+      "RPK (7.62x39mm)"
+    ],
+    "marksman": [
+      "SVD (7.62x54R)"
+    ],
+    "grenadier": [
+      "AKM (7.62x39mm) with hand grenades"
+    ],
+    "at": [
+      "RPG-7 with PG-7V / OG-7V"
+    ],
+    "medic": [
+      "AKM (7.62x39mm)"
+    ],
+    "squad_leader": [
+      "AKMS (7.62x39mm)"
+    ],
+    "sniper": [
+      "SVD (7.62x54R)"
+    ],
+    "sidearm": [
+      "Makarov / Tokarev-pattern pistols"
+    ]
+  },
+  "launchers": [
+    "RPG-7 (PG-7V, OG-7V) [in_game]"
+  ],
+  "body_armor": {
+    "helmet": "none",
+    "vest": "none",
+    "plates": "none",
+    "notes": "Chest rigs; a leader's guards may have captured plate carriers. Game: none, light for HVT guards (proposed)."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "toyota_hilux",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": "Pickups for moving guards and supplies on mountain tracks."
+    },
+    {
+      "vehicle_id": "motorcycle",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": "Motorbikes for couriers and scouts."
+    },
+    {
+      "vehicle_id": "toyota_land_cruiser",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Land Cruiser SUVs for leaders and convoys."
+    },
+    {
+      "vehicle_id": "technical_dshk",
+      "role": "technical",
+      "prevalence": "rare",
+      "notes": "DShK pickup guarding a training site; rare."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "aq_safehouse_cell",
+      "name": "Safe house cell (4-6)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "aq_hvt_guard",
+      "name": "Leader and guard detail",
+      "composition": [
+        {
+          "role": "leader_hvt",
+          "count": 1
+        },
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "toyota_land_cruiser",
+      "notes": "Core HVT contract; guards delay while the leader tries to escape by vehicle or on foot."
+    },
+    {
+      "id": "aq_courier",
+      "name": "Courier and escort",
+      "composition": [
+        {
+          "role": "courier_hvt",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "motorcycle",
+      "notes": "Track-and-intercept contract target."
+    },
+    {
+      "id": "aq_training_site",
+      "name": "Training site guard",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "technical_dshk"
+    },
+    {
+      "id": "aq_mountain_ambush",
+      "name": "Mountain track ambush",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "aq_pickup_team",
+      "name": "Pickup team",
+      "composition": [
+        {
+          "role": "driver",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "toyota_hilux"
+    }
+  ],
+  "support_assets": [
+    "IED-rigged compound entrances (map hazard)",
+    "82 mm mortar from a hidden position (rare)",
+    "Local host fighters as reinforcements (game event)"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [],
+    "as_target": [
+      "hvt_capture_or_kill",
+      "courier_intercept",
+      "training_site_raid",
+      "safe_house_raid",
+      "document_and_intel_recovery",
+      "hostage_rescue"
+    ]
+  },
+  "notes": "al-Qaeda is designated a terrorist organisation by the UN Security Council (1267 sanctions regime) and nearly every state. Affiliates in this pack: aqap (Yemen), al_shabaab (Somalia) and jnim (Sahel) are linked by pledges of allegiance (relations 85-90). Rivals: the Islamic State and its provinces (isis, isis_k) fight al-Qaeda affiliates where they overlap. Taliban: UN monitoring teams report continued al-Qaeda presence and ties in Afghanistan, which the Taliban deny; the positive relation to afg_taliban (an others-bloc faction) reflects that reporting and is low-confidence. Iran: the US and UN assess al-Qaeda leaders, including Saif al-Adel, live in Iran under restrictions; the relation is negative but less hostile than with IS. Syria: HTS (now the core of the Syrian government) split from al-Qaeda and Hurras al-Din dissolved in January 2025, so HTS is NOT part of this faction. Game framing: an early-game HVT and safe-house enemy, rather than a large field force. The value al_qaeda -> afg_taliban +40 is Captain-confirmed (2026-10-10).",
+  "proposed": [
+    "campaign_tier",
+    "relations.player",
+    "doctrine.ai_tuning (all values)",
+    "doctrine.squad_size (game cell size)",
+    "unit_templates (game compositions)",
+    "support_assets (game events and hazards)",
+    "contract_types.as_target",
+    "vehicles[].prevalence (game weighting)",
+    "body_armor (game tier mapping)",
+    "camo (approximate palettes)",
+    "player_trade (hostile-only: not sellable)",
+    "relations.irn (complex: leadership reportedly in Iran under restrictions)",
+    "relations values (factual direction, game magnitudes)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Al-Qaeda",
+    "https://en.wikipedia.org/wiki/Saif_al-Adel",
+    "https://en.wikipedia.org/wiki/Killing_of_Ayman_al-Zawahiri",
+    "https://en.wikipedia.org/wiki/Hurras_al-Din",
+    "https://en.wikipedia.org/wiki/Hay%27at_Tahrir_al-Sham",
+    "https://www.voanews.com/a/us-backs-un-assessment-that-new-al-qaida-leader-is-in-iran/6965397.html",
+    "https://main.un.org/securitycouncil/en/sanctions/1267/monitoring-team/reports"
+  ]
+}

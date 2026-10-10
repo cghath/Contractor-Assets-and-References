@@ -1,0 +1,59 @@
+{
+  "id": "vt4",
+  "name": "VT-4 / Haider",
+  "aliases": [
+    "MBT-3000",
+    "Haider"
+  ],
+  "origin": "China (Norinco), local assembly HIT Pakistan",
+  "type": "mbt",
+  "operators": [
+    "pak"
+  ],
+  "crew": 3,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 11.0,
+    "width": 3.5,
+    "height": 2.4
+  },
+  "weight_t": 52.0,
+  "armament": [
+    "125 mm smoothbore with autoloader (GP2 gun-launched ATGM)",
+    "12.7 mm RWS",
+    "7.62 mm coaxial MG"
+  ],
+  "protection": "Modular composite with FY-4 ERA, soft-kill APS. Game: immune to all small-calibre rounds; 7.62x54R and 12.7/14.5 mm only damage optics, external stowage, fuel drums and tracks (mobility kill on repeated hits); PG-7V/AT4/MAAWS/SMAW/NLAW penetrate side, rear and turret roof; Javelin top-attack penetrates; frontal arc resists unguided launchers.",
+  "visual_notes": [
+    "Angular wedge turret front covered with ERA, large rear bustle",
+    "Six road wheels per side, ERA-covered skirts",
+    "RWS on roof, laser warners on turret sides",
+    "Reports in 2026 of stalled inductions due to reliability and budget problems"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Pakistan Army disruptive",
+      "palette": [
+        "#B8A57A",
+        "#7B6A47",
+        "#4F5235",
+        "#2E2C22"
+      ]
+    }
+  ],
+  "variants": [
+    "VT-4 (Pakistan, Thailand, Nigeria)",
+    "Haider (HIT local assembly)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/VT-4",
+    "https://commons.wikimedia.org/wiki/Category:VT-4"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/VT-4",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Pakistan_Army",
+    "https://www.indiandefensenews.in/2026/08/pakistans-armour-ambitions-stall.html"
+  ]
+}

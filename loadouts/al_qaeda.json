@@ -1,0 +1,759 @@
+{
+ "id": "al_qaeda",
+ "faction": "al-Qaeda (core network)",
+ "schema_version": 1,
+ "kind": "non_state",
+ "campaign_tier": "early",
+ "default_variant": "regular",
+ "variants": [
+  {
+   "id": "regular",
+   "name": "al-Qaeda fighters",
+   "camo": "Afghan civilian dress (shalwar kameez, patu shawl)",
+   "armor_tier": "none",
+   "medical_level": "minimal",
+   "roles": {
+    "rifleman": {
+     "primary": {
+      "id": "akm",
+      "name": "AKM",
+      "calibre": "7.62x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "iron", "name": "Iron sights"},
+      "ammo": {
+       "id": "mag_762x39_30",
+       "round": "7.62x39mm 57-N-231 PS (mild steel core)",
+       "game_round_id": "762x39_msc",
+       "rounds_per_mag": 30,
+       "count": 5,
+       "game_item_id": null
+      },
+      "alternates": ["type56", "m4", "m16a2"]
+     },
+     "secondary": null,
+     "launcher": null,
+     "grenades": [{"id": "f1", "name": "F-1 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}],
+     "armor": {"vest": null, "plates": null, "side_plates": null, "helmet": null},
+     "medical": {"container": null, "items": [{"id": "pressure_bandage", "count": 1, "game_item_id": "pressure_bandage"}]},
+     "other": [],
+     "game_kit": [["m4a1", 1], ["mag_556", 5], ["frag_grenade", 1], ["pressure_bandage", 1]]
+    },
+    "autorifleman": {
+     "primary": {
+      "id": "pkm",
+      "name": "PKM",
+      "calibre": "7.62x54R",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "iron", "name": "Iron sights"},
+      "ammo": {
+       "id": "belt_762x54r_100",
+       "round": "7.62x54R 57-N-323S LPS (steel core)",
+       "game_round_id": "762x54r_lps",
+       "rounds_per_mag": 100,
+       "count": 2,
+       "game_item_id": null
+      },
+      "alternates": ["rpk"]
+     },
+     "secondary": null,
+     "launcher": null,
+     "grenades": [{"id": "f1", "name": "F-1 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}],
+     "armor": {"vest": null, "plates": null, "side_plates": null, "helmet": null},
+     "medical": {"container": null, "items": [{"id": "pressure_bandage", "count": 1, "game_item_id": "pressure_bandage"}]},
+     "other": [],
+     "game_kit": [["m4a1", 1], ["mag_556", 7], ["frag_grenade", 1], ["pressure_bandage", 1]]
+    },
+    "marksman": {
+     "primary": {
+      "id": "svd",
+      "name": "SVD Dragunov",
+      "calibre": "7.62x54R",
+      "game_item_id": null,
+      "game_substitute": "m110",
+      "optic": {"id": "pso1", "name": "PSO-1 4x scope"},
+      "ammo": {
+       "id": "mag_762x54r_10",
+       "round": "7.62x54R 57-N-323S LPS (steel core)",
+       "game_round_id": "762x54r_lps",
+       "rounds_per_mag": 10,
+       "count": 4,
+       "game_item_id": null
+      }
+     },
+     "secondary": null,
+     "launcher": null,
+     "grenades": [],
+     "armor": {"vest": null, "plates": null, "side_plates": null, "helmet": null},
+     "medical": {"container": null, "items": [{"id": "pressure_bandage", "count": 1, "game_item_id": "pressure_bandage"}]},
+     "other": [],
+     "game_kit": [["m110", 1], ["mag_762", 2], ["pressure_bandage", 1]]
+    },
+    "grenadier": {
+     "primary": {
+      "id": "akm",
+      "name": "AKM",
+      "calibre": "7.62x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "iron", "name": "Iron sights"},
+      "ammo": {
+       "id": "mag_762x39_30",
+       "round": "7.62x39mm 57-N-231 PS (mild steel core)",
+       "game_round_id": "762x39_msc",
+       "rounds_per_mag": 30,
+       "count": 5,
+       "game_item_id": null
+      }
+     },
+     "secondary": null,
+     "launcher": null,
+     "grenades": [
+      {"id": "f1", "name": "F-1 fragmentation grenade", "kind": "frag", "count": 2, "game_item_id": "frag_grenade"},
+      {"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 2, "game_item_id": "frag_grenade"}
+     ],
+     "armor": {"vest": null, "plates": null, "side_plates": null, "helmet": null},
+     "medical": {"container": null, "items": [{"id": "pressure_bandage", "count": 1, "game_item_id": "pressure_bandage"}]},
+     "other": [],
+     "game_kit": [["m4a1", 1], ["mag_556", 5], ["frag_grenade", 4], ["pressure_bandage", 1]]
+    },
+    "at": {
+     "primary": {
+      "id": "akm",
+      "name": "AKM",
+      "calibre": "7.62x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "iron", "name": "Iron sights"},
+      "ammo": {
+       "id": "mag_762x39_30",
+       "round": "7.62x39mm 57-N-231 PS (mild steel core)",
+       "game_round_id": "762x39_msc",
+       "rounds_per_mag": 30,
+       "count": 4,
+       "game_item_id": null
+      }
+     },
+     "secondary": null,
+     "launcher": {
+      "id": "rpg7",
+      "name": "RPG-7",
+      "kind": "rocket",
+      "in_game": true,
+      "game_launcher": "RPG-7",
+      "game_substitute": null,
+      "game_item_id": null,
+      "proposed_game_item_id": "rpg7",
+      "rounds": [
+       {"name": "PG-7V", "type": "HEAT", "count": 2, "proposed_game_item_id": "pg7v"},
+       {"name": "OG-7V", "type": "frag", "count": 1, "proposed_game_item_id": "og7v"}
+      ]
+     },
+     "grenades": [],
+     "armor": {"vest": null, "plates": null, "side_plates": null, "helmet": null},
+     "medical": {"container": null, "items": [{"id": "pressure_bandage", "count": 1, "game_item_id": "pressure_bandage"}]},
+     "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}],
+     "game_kit": [["m4a1", 1], ["mag_556", 4], ["pressure_bandage", 1], ["assault_pack", 1]]
+    },
+    "medic": {
+     "primary": {
+      "id": "akm",
+      "name": "AKM",
+      "calibre": "7.62x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "iron", "name": "Iron sights"},
+      "ammo": {
+       "id": "mag_762x39_30",
+       "round": "7.62x39mm 57-N-231 PS (mild steel core)",
+       "game_round_id": "762x39_msc",
+       "rounds_per_mag": 30,
+       "count": 4,
+       "game_item_id": null
+      }
+     },
+     "secondary": null,
+     "launcher": null,
+     "grenades": [],
+     "armor": {"vest": null, "plates": null, "side_plates": null, "helmet": null},
+     "medical": {
+      "container": null,
+      "items": [
+       {"id": "tourniquet", "count": 2, "game_item_id": "tourniquet"},
+       {"id": "pressure_bandage", "count": 4, "game_item_id": "pressure_bandage"},
+       {"id": "hemostatic_gauze", "count": 1, "game_item_id": "hemostatic_gauze"},
+       {"id": "morphine", "count": 1, "game_item_id": "morphine"}
+      ]
+     },
+     "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}],
+     "game_kit": [["m4a1", 1], ["mag_556", 4], ["tourniquet", 2], ["pressure_bandage", 4], ["hemostatic_gauze", 1], ["morphine", 1], ["assault_pack", 1]]
+    },
+    "squad_leader": {
+     "primary": {
+      "id": "akms",
+      "name": "AKMS (folding stock)",
+      "calibre": "7.62x39mm",
+      "game_item_id": null,
+      "game_substitute": "mk18",
+      "optic": {"id": "iron", "name": "Iron sights"},
+      "ammo": {
+       "id": "mag_762x39_30",
+       "round": "7.62x39mm 57-N-231 PS (mild steel core)",
+       "game_round_id": "762x39_msc",
+       "rounds_per_mag": 30,
+       "count": 5,
+       "game_item_id": null
+      }
+     },
+     "secondary": {
+      "id": "pm_makarov",
+      "name": "PM Makarov",
+      "calibre": "9x18mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {
+       "id": "mag_9x18_8",
+       "round": "9x18mm 57-N-181S",
+       "game_round_id": null,
+       "proposed_round_id": "9x18_57n181s",
+       "rounds_per_mag": 8,
+       "count": 2,
+       "game_item_id": null
+      }
+     },
+     "launcher": null,
+     "grenades": [{"id": "f1", "name": "F-1 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}],
+     "armor": {"vest": null, "plates": null, "side_plates": null, "helmet": null},
+     "medical": {"container": null, "items": [{"id": "pressure_bandage", "count": 1, "game_item_id": "pressure_bandage"}]},
+     "other": [],
+     "game_kit": [["mk18", 1], ["mag_556", 5], ["m17", 1], ["mag_9mm", 2], ["frag_grenade", 1], ["pressure_bandage", 1]]
+    },
+    "sniper": {
+     "primary": {
+      "id": "svd",
+      "name": "SVD Dragunov",
+      "calibre": "7.62x54R",
+      "game_item_id": null,
+      "game_substitute": "m110",
+      "optic": {"id": "pso1", "name": "PSO-1 4x scope"},
+      "ammo": {
+       "id": "mag_762x54r_10",
+       "round": "7.62x54R 57-N-323S LPS (steel core)",
+       "game_round_id": "762x54r_lps",
+       "rounds_per_mag": 10,
+       "count": 4,
+       "game_item_id": null
+      }
+     },
+     "secondary": null,
+     "launcher": null,
+     "grenades": [],
+     "armor": {"vest": null, "plates": null, "side_plates": null, "helmet": null},
+     "medical": {"container": null, "items": [{"id": "pressure_bandage", "count": 1, "game_item_id": "pressure_bandage"}]},
+     "other": [],
+     "game_kit": [["m110", 1], ["mag_762", 2], ["pressure_bandage", 1]]
+    }
+   },
+   "team_weapons": []
+  },
+  {
+   "id": "elite",
+   "name": "Leader guard detail (HVT guards)",
+   "camo": "Mixed surplus woodland / desert",
+   "armor_tier": "light",
+   "medical_level": "basic",
+   "roles": {
+    "rifleman": {
+     "primary": {
+      "id": "akm",
+      "name": "AKM",
+      "calibre": "7.62x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "red_dot", "name": "Red dot (Aimpoint CompM4/CompM5 class)"},
+      "ammo": {
+       "id": "mag_762x39_30",
+       "round": "7.62x39mm 57-N-231 PS (mild steel core)",
+       "game_round_id": "762x39_msc",
+       "rounds_per_mag": 30,
+       "count": 5,
+       "game_item_id": null
+      },
+      "alternates": ["type56", "m4", "m16a2"]
+     },
+     "secondary": null,
+     "launcher": null,
+     "grenades": [
+      {"id": "f1", "name": "F-1 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"},
+      {"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}
+     ],
+     "armor": {
+      "vest": {"id": "soft_vest", "name": "Soft armour vest (aramid, NIJ IIIA class)", "tier": "light", "game_item_id": "plate_carrier_light"},
+      "plates": {
+       "id": "steel_light",
+       "name": "Light steel plate, front only (improvised, captured or commercial)",
+       "material": "steel",
+       "real_rating": "NIJ III or below",
+       "front": true,
+       "back": false,
+       "game_rating": "III",
+       "game_item_id": null,
+       "game_substitute": "plate_pe_l3",
+       "proposed_game_id": "plate_steel_light"
+      },
+      "side_plates": null,
+      "helmet": null
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [{"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"}, {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"}]
+     },
+     "other": [],
+     "game_kit": [
+      ["plate_carrier_light", 1],
+      ["plate_pe_l3", 1],
+      ["m4a1", 1],
+      ["mag_556", 5],
+      ["frag_grenade", 2],
+      ["ifak", 1],
+      ["tourniquet", 1],
+      ["pressure_bandage", 2]
+     ]
+    },
+    "autorifleman": {
+     "primary": {
+      "id": "pkm",
+      "name": "PKM",
+      "calibre": "7.62x54R",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "iron", "name": "Iron sights"},
+      "ammo": {
+       "id": "belt_762x54r_100",
+       "round": "7.62x54R 57-N-323S LPS (steel core)",
+       "game_round_id": "762x54r_lps",
+       "rounds_per_mag": 100,
+       "count": 2,
+       "game_item_id": null
+      },
+      "alternates": ["rpk"]
+     },
+     "secondary": null,
+     "launcher": null,
+     "grenades": [
+      {"id": "f1", "name": "F-1 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"},
+      {"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}
+     ],
+     "armor": {
+      "vest": {"id": "soft_vest", "name": "Soft armour vest (aramid, NIJ IIIA class)", "tier": "light", "game_item_id": "plate_carrier_light"},
+      "plates": {
+       "id": "steel_light",
+       "name": "Light steel plate, front only (improvised, captured or commercial)",
+       "material": "steel",
+       "real_rating": "NIJ III or below",
+       "front": true,
+       "back": false,
+       "game_rating": "III",
+       "game_item_id": null,
+       "game_substitute": "plate_pe_l3",
+       "proposed_game_id": "plate_steel_light"
+      },
+      "side_plates": null,
+      "helmet": null
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [{"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"}, {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"}]
+     },
+     "other": [],
+     "game_kit": [
+      ["plate_carrier_light", 1],
+      ["plate_pe_l3", 1],
+      ["m4a1", 1],
+      ["mag_556", 7],
+      ["frag_grenade", 2],
+      ["ifak", 1],
+      ["tourniquet", 1],
+      ["pressure_bandage", 2]
+     ]
+    },
+    "marksman": {
+     "primary": {
+      "id": "svd",
+      "name": "SVD Dragunov",
+      "calibre": "7.62x54R",
+      "game_item_id": null,
+      "game_substitute": "m110",
+      "optic": {"id": "pso1", "name": "PSO-1 4x scope"},
+      "ammo": {
+       "id": "mag_762x54r_10",
+       "round": "7.62x54R 57-N-323S LPS (steel core)",
+       "game_round_id": "762x54r_lps",
+       "rounds_per_mag": 10,
+       "count": 4,
+       "game_item_id": null
+      }
+     },
+     "secondary": null,
+     "launcher": null,
+     "grenades": [],
+     "armor": {
+      "vest": {"id": "soft_vest", "name": "Soft armour vest (aramid, NIJ IIIA class)", "tier": "light", "game_item_id": "plate_carrier_light"},
+      "plates": {
+       "id": "steel_light",
+       "name": "Light steel plate, front only (improvised, captured or commercial)",
+       "material": "steel",
+       "real_rating": "NIJ III or below",
+       "front": true,
+       "back": false,
+       "game_rating": "III",
+       "game_item_id": null,
+       "game_substitute": "plate_pe_l3",
+       "proposed_game_id": "plate_steel_light"
+      },
+      "side_plates": null,
+      "helmet": null
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [{"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"}, {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"}]
+     },
+     "other": [],
+     "game_kit": [["plate_carrier_light", 1], ["plate_pe_l3", 1], ["m110", 1], ["mag_762", 2], ["ifak", 1], ["tourniquet", 1], ["pressure_bandage", 2]]
+    },
+    "grenadier": {
+     "primary": {
+      "id": "akm",
+      "name": "AKM",
+      "calibre": "7.62x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "red_dot", "name": "Red dot (Aimpoint CompM4/CompM5 class)"},
+      "ammo": {
+       "id": "mag_762x39_30",
+       "round": "7.62x39mm 57-N-231 PS (mild steel core)",
+       "game_round_id": "762x39_msc",
+       "rounds_per_mag": 30,
+       "count": 5,
+       "game_item_id": null
+      }
+     },
+     "secondary": null,
+     "launcher": null,
+     "grenades": [
+      {"id": "f1", "name": "F-1 fragmentation grenade", "kind": "frag", "count": 2, "game_item_id": "frag_grenade"},
+      {"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 2, "game_item_id": "frag_grenade"}
+     ],
+     "armor": {
+      "vest": {"id": "soft_vest", "name": "Soft armour vest (aramid, NIJ IIIA class)", "tier": "light", "game_item_id": "plate_carrier_light"},
+      "plates": {
+       "id": "steel_light",
+       "name": "Light steel plate, front only (improvised, captured or commercial)",
+       "material": "steel",
+       "real_rating": "NIJ III or below",
+       "front": true,
+       "back": false,
+       "game_rating": "III",
+       "game_item_id": null,
+       "game_substitute": "plate_pe_l3",
+       "proposed_game_id": "plate_steel_light"
+      },
+      "side_plates": null,
+      "helmet": null
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [{"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"}, {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"}]
+     },
+     "other": [],
+     "game_kit": [
+      ["plate_carrier_light", 1],
+      ["plate_pe_l3", 1],
+      ["m4a1", 1],
+      ["mag_556", 5],
+      ["frag_grenade", 4],
+      ["ifak", 1],
+      ["tourniquet", 1],
+      ["pressure_bandage", 2]
+     ]
+    },
+    "at": {
+     "primary": {
+      "id": "akm",
+      "name": "AKM",
+      "calibre": "7.62x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "red_dot", "name": "Red dot (Aimpoint CompM4/CompM5 class)"},
+      "ammo": {
+       "id": "mag_762x39_30",
+       "round": "7.62x39mm 57-N-231 PS (mild steel core)",
+       "game_round_id": "762x39_msc",
+       "rounds_per_mag": 30,
+       "count": 4,
+       "game_item_id": null
+      }
+     },
+     "secondary": null,
+     "launcher": {
+      "id": "rpg7",
+      "name": "RPG-7",
+      "kind": "rocket",
+      "in_game": true,
+      "game_launcher": "RPG-7",
+      "game_substitute": null,
+      "game_item_id": null,
+      "proposed_game_item_id": "rpg7",
+      "rounds": [
+       {"name": "PG-7V", "type": "HEAT", "count": 2, "proposed_game_item_id": "pg7v"},
+       {"name": "OG-7V", "type": "frag", "count": 1, "proposed_game_item_id": "og7v"}
+      ]
+     },
+     "grenades": [{"id": "f1", "name": "F-1 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}],
+     "armor": {
+      "vest": {"id": "soft_vest", "name": "Soft armour vest (aramid, NIJ IIIA class)", "tier": "light", "game_item_id": "plate_carrier_light"},
+      "plates": {
+       "id": "steel_light",
+       "name": "Light steel plate, front only (improvised, captured or commercial)",
+       "material": "steel",
+       "real_rating": "NIJ III or below",
+       "front": true,
+       "back": false,
+       "game_rating": "III",
+       "game_item_id": null,
+       "game_substitute": "plate_pe_l3",
+       "proposed_game_id": "plate_steel_light"
+      },
+      "side_plates": null,
+      "helmet": null
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [{"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"}, {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"}]
+     },
+     "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}],
+     "game_kit": [
+      ["plate_carrier_light", 1],
+      ["plate_pe_l3", 1],
+      ["m4a1", 1],
+      ["mag_556", 4],
+      ["frag_grenade", 1],
+      ["ifak", 1],
+      ["tourniquet", 1],
+      ["pressure_bandage", 2],
+      ["assault_pack", 1]
+     ]
+    },
+    "medic": {
+     "primary": {
+      "id": "akm",
+      "name": "AKM",
+      "calibre": "7.62x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "red_dot", "name": "Red dot (Aimpoint CompM4/CompM5 class)"},
+      "ammo": {
+       "id": "mag_762x39_30",
+       "round": "7.62x39mm 57-N-231 PS (mild steel core)",
+       "game_round_id": "762x39_msc",
+       "rounds_per_mag": 30,
+       "count": 4,
+       "game_item_id": null
+      }
+     },
+     "secondary": null,
+     "launcher": null,
+     "grenades": [],
+     "armor": {
+      "vest": {"id": "soft_vest", "name": "Soft armour vest (aramid, NIJ IIIA class)", "tier": "light", "game_item_id": "plate_carrier_light"},
+      "plates": {
+       "id": "steel_light",
+       "name": "Light steel plate, front only (improvised, captured or commercial)",
+       "material": "steel",
+       "real_rating": "NIJ III or below",
+       "front": true,
+       "back": false,
+       "game_rating": "III",
+       "game_item_id": null,
+       "game_substitute": "plate_pe_l3",
+       "proposed_game_id": "plate_steel_light"
+      },
+      "side_plates": null,
+      "helmet": null
+     },
+     "medical": {
+      "container": "trauma_kit",
+      "items": [
+       {"id": "tourniquet", "count": 2, "game_item_id": "tourniquet"},
+       {"id": "pressure_bandage", "count": 6, "game_item_id": "pressure_bandage"},
+       {"id": "hemostatic_gauze", "count": 1, "game_item_id": "hemostatic_gauze"},
+       {"id": "chest_seal", "count": 1, "game_item_id": "chest_seal"},
+       {"id": "splint", "count": 1, "game_item_id": "splint"},
+       {"id": "npa", "count": 1, "game_item_id": "npa"},
+       {"id": "iv_18g", "count": 1, "game_item_id": null},
+       {"id": "saline_500", "count": 1, "game_item_id": null},
+       {"id": "morphine", "count": 2, "game_item_id": "morphine"},
+       {"id": "epinephrine", "count": 1, "game_item_id": null}
+      ]
+     },
+     "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}],
+     "game_kit": [
+      ["plate_carrier_light", 1],
+      ["plate_pe_l3", 1],
+      ["m4a1", 1],
+      ["mag_556", 4],
+      ["trauma_kit", 1],
+      ["tourniquet", 2],
+      ["pressure_bandage", 6],
+      ["hemostatic_gauze", 1],
+      ["chest_seal", 1],
+      ["splint", 1],
+      ["npa", 1],
+      ["morphine", 2],
+      ["assault_pack", 1]
+     ]
+    },
+    "squad_leader": {
+     "primary": {
+      "id": "akms",
+      "name": "AKMS (folding stock)",
+      "calibre": "7.62x39mm",
+      "game_item_id": null,
+      "game_substitute": "mk18",
+      "optic": {"id": "red_dot", "name": "Red dot (Aimpoint CompM4/CompM5 class)"},
+      "ammo": {
+       "id": "mag_762x39_30",
+       "round": "7.62x39mm 57-N-231 PS (mild steel core)",
+       "game_round_id": "762x39_msc",
+       "rounds_per_mag": 30,
+       "count": 5,
+       "game_item_id": null
+      }
+     },
+     "secondary": {
+      "id": "pm_makarov",
+      "name": "PM Makarov",
+      "calibre": "9x18mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {
+       "id": "mag_9x18_8",
+       "round": "9x18mm 57-N-181S",
+       "game_round_id": null,
+       "proposed_round_id": "9x18_57n181s",
+       "rounds_per_mag": 8,
+       "count": 2,
+       "game_item_id": null
+      }
+     },
+     "launcher": null,
+     "grenades": [
+      {"id": "f1", "name": "F-1 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"},
+      {"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}
+     ],
+     "armor": {
+      "vest": {"id": "soft_vest", "name": "Soft armour vest (aramid, NIJ IIIA class)", "tier": "light", "game_item_id": "plate_carrier_light"},
+      "plates": {
+       "id": "steel_light",
+       "name": "Light steel plate, front only (improvised, captured or commercial)",
+       "material": "steel",
+       "real_rating": "NIJ III or below",
+       "front": true,
+       "back": false,
+       "game_rating": "III",
+       "game_item_id": null,
+       "game_substitute": "plate_pe_l3",
+       "proposed_game_id": "plate_steel_light"
+      },
+      "side_plates": null,
+      "helmet": {
+       "id": "captured_helmet",
+       "name": "Captured military helmet (ACH / PASGT / SSh-68, mixed)",
+       "tier": "light",
+       "game_rating": "IIA",
+       "game_item_id": "helmet_bump"
+      }
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [{"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"}, {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"}]
+     },
+     "other": [{"id": "radio", "count": 1, "game_item_id": null}, {"id": "nvg_mono", "count": 1, "game_item_id": null}],
+     "game_kit": [
+      ["plate_carrier_light", 1],
+      ["plate_pe_l3", 1],
+      ["helmet_bump", 1],
+      ["mk18", 1],
+      ["mag_556", 5],
+      ["m17", 1],
+      ["mag_9mm", 2],
+      ["frag_grenade", 2],
+      ["ifak", 1],
+      ["tourniquet", 1],
+      ["pressure_bandage", 2]
+     ]
+    },
+    "sniper": {
+     "primary": {
+      "id": "svd",
+      "name": "SVD Dragunov",
+      "calibre": "7.62x54R",
+      "game_item_id": null,
+      "game_substitute": "m110",
+      "optic": {"id": "pso1", "name": "PSO-1 4x scope"},
+      "ammo": {
+       "id": "mag_762x54r_10",
+       "round": "7.62x54R 57-N-323S LPS (steel core)",
+       "game_round_id": "762x54r_lps",
+       "rounds_per_mag": 10,
+       "count": 4,
+       "game_item_id": null
+      }
+     },
+     "secondary": null,
+     "launcher": null,
+     "grenades": [],
+     "armor": {
+      "vest": {"id": "soft_vest", "name": "Soft armour vest (aramid, NIJ IIIA class)", "tier": "light", "game_item_id": "plate_carrier_light"},
+      "plates": {
+       "id": "steel_light",
+       "name": "Light steel plate, front only (improvised, captured or commercial)",
+       "material": "steel",
+       "real_rating": "NIJ III or below",
+       "front": true,
+       "back": false,
+       "game_rating": "III",
+       "game_item_id": null,
+       "game_substitute": "plate_pe_l3",
+       "proposed_game_id": "plate_steel_light"
+      },
+      "side_plates": null,
+      "helmet": null
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [{"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"}, {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"}]
+     },
+     "other": [],
+     "game_kit": [["plate_carrier_light", 1], ["plate_pe_l3", 1], ["m110", 1], ["mag_762", 2], ["ifak", 1], ["tourniquet", 1], ["pressure_bandage", 2]]
+    }
+   },
+   "team_weapons": []
+  }
+ ],
+ "role_map": {"courier_hvt": "rifleman", "driver": "rifleman", "leader_hvt": "squad_leader"},
+ "notes": [
+  "Armor follows the Q9 default: regular fighters none; elites a light vest with an improvised or captured steel plate, and only squad leaders get a helmet.",
+  "Faction file: a leader's guards may have captured plate carriers; game none, light for HVT guards.",
+  "Tokarev-pattern pistols are a sidearm alternate."
+ ],
+ "proposed": [
+  "mag and medical counts (Q3 default)",
+  "variants and their armor mapping (Q1, Q9 defaults)",
+  "optics as class ids (Q7 default)",
+  "medical levels from doctrine.ai_tuning.medical_care (Q6 default)",
+  "game_kit (stand-in kit from items that exist today)"
+ ],
+ "sources": ["factions/al_qaeda.json"]
+}

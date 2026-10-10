@@ -1,0 +1,55 @@
+{
+  "id": "volat_v1",
+  "name": "MZKT Volat V1",
+  "aliases": [
+    "MZKT-490100",
+    "Volat V1"
+  ],
+  "origin": "Belarus",
+  "type": "light",
+  "operators": [
+    "blr"
+  ],
+  "crew": 2,
+  "passengers": 8,
+  "dimensions_m": {
+    "length": 6.4,
+    "width": 3.3,
+    "height": 2.7
+  },
+  "weight_t": 11.0,
+  "armament": [
+    "Shershen-M ATGM launcher (roof)",
+    "Adunok remote weapon station (12.7 mm / 7.62 mm) option",
+    "Groza-S counter-UAV EW station option"
+  ],
+  "protection": "V-hull, GOST Br4 / roughly STANAG 4569 Level 2; mine and IED protection. Game: immune to small-calibre (5.56/5.45/7.62x39/7.62x51); 7.62x54R AP and larger can penetrate side/rear and disable tyres/engine; every launcher in the game list penetrates.",
+  "visual_notes": [
+    "Chunky 4x4 MRAP-like vehicle with a V-hull, very wide stance (3.3 m)",
+    "Two doors each side, large rear door with two windows and a firing port",
+    "Roof-mounted ATGM launcher or remote weapon station"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Belarusian green / digital",
+      "palette": [
+        "#4C5A34",
+        "#2D3324",
+        "#7A7452"
+      ]
+    }
+  ],
+  "variants": [
+    "MZKT-490100 (V1)",
+    "MZKT-490101"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://www.army-technology.com/projects/volat-mzkt-490100-light-armoured-vehicle/"
+  ],
+  "sources": [
+    "https://www.army-technology.com/projects/volat-mzkt-490100-light-armoured-vehicle/",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Armed_Forces_of_Belarus"
+  ]
+}

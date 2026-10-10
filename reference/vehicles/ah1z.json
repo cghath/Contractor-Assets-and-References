@@ -1,0 +1,62 @@
+{
+  "id": "ah1z",
+  "name": "AH-1Z Viper",
+  "aliases": [
+    "AH-1W SuperCobra",
+    "AH-1 Cobra"
+  ],
+  "origin": "United States",
+  "type": "attack_heli",
+  "operators": [
+    "usa",
+    "twn",
+    "jpn",
+    "pak",
+    "irn"
+  ],
+  "crew": 2,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 17.8,
+    "width": 14.6,
+    "height": 4.4
+  },
+  "weight_t": 8.4,
+  "armament": [
+    "20 mm M197 three-barrel cannon (chin)",
+    "AGM-114 Hellfire / JAGM",
+    "70 mm Hydra/APKWS rockets",
+    "AIM-9 Sidewinder"
+  ],
+  "protection": "Aircraft: game rule small-calibre can't down it; 7.62x54R/12.7/14.5 mm, ZU-23 and MANPADS can damage or down it; critical systems (rotor, engines) are the weak points.",
+  "visual_notes": [
+    "Slim tandem-cockpit gunship",
+    "4-blade composite main and tail rotors",
+    "Stub wings with wingtip Sidewinder rails",
+    "Chin gun turret and nose targeting sight ball"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Marine/navy grey",
+      "palette": [
+        "#6E7479",
+        "#8A9095",
+        "#3F4347"
+      ]
+    }
+  ],
+  "variants": [
+    "AH-1Z (USMC)",
+    "AH-1W SuperCobra (Taiwan)",
+    "AH-1S/F (older Cobras: Japan, Pakistan)",
+    "AH-1J International / Toufan (IRN, pre-1979 twin-engine Cobra, locally overhauled)"
+  ],
+  "existing_model": "ah1z",
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Bell_AH-1Z_Viper"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Bell_AH-1Z_Viper"
+  ]
+}

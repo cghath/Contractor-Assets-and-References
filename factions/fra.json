@@ -1,0 +1,435 @@
+{
+  "id": "fra",
+  "name": "France",
+  "short": "FRA",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#002654",
+    "#FFFFFF",
+    "#CE1126"
+  ],
+  "blocs": [
+    "nato",
+    "eu",
+    "un_security_council_p5",
+    "e3",
+    "weimar_triangle",
+    "global_coalition_against_isis",
+    "g7",
+    "unifil"
+  ],
+  "campaign_tier": "early",
+  "alignment_to_player": "friendly",
+  "player_client": true,
+  "relations": {
+    "player": 25,
+    "usa": 70,
+    "gbr": 80,
+    "can": 80,
+    "aus": 70,
+    "ukr": 75,
+    "pol": 75,
+    "est": 80,
+    "lva": 80,
+    "ltu": 80,
+    "rou": 70,
+    "jpn": 60,
+    "kor": 55,
+    "isr": 15,
+    "tur": 15,
+    "sau": 30,
+    "are": 70,
+    "qat": 35,
+    "egy": 50,
+    "jor": 55,
+    "irq": 35,
+    "krg_peshmerga": 55,
+    "sdf": 30,
+    "syr": 5,
+    "pse_pa": 35,
+    "rus": -80,
+    "blr": -65,
+    "irn": -55,
+    "prk": -60,
+    "chn": -20,
+    "africa_corps": -75,
+    "sahel_aes": -55,
+    "afg_taliban": -60,
+    "isis": -100,
+    "isis_k": -95,
+    "al_qaeda": -100,
+    "aqap": -90,
+    "al_shabaab": -90,
+    "jnim": -95,
+    "hamas": -85,
+    "pij": -85,
+    "hezbollah": -60,
+    "houthis": -70,
+    "iraqi_militias": -55,
+    "deu": 85,
+    "ita": 75,
+    "esp": 80,
+    "nld": 80,
+    "bel": 90,
+    "nor": 80,
+    "dnk": 80,
+    "swe": 80,
+    "fin": 80,
+    "grc": 85,
+    "ind": 70,
+    "mda": 75,
+    "arm": 70,
+    "che": 50,
+    "aut": 45,
+    "irl": 45,
+    "geo": 40,
+    "phl": 40,
+    "srb": 35,
+    "vnm": 35,
+    "mex": 20,
+    "aze": -55,
+    "pmc_kestrel": -65,
+    "adf": -85,
+    "m23": -25,
+    "cod": 30
+  },
+  "theatres": [
+    "sahel",
+    "horn_of_africa",
+    "lebanon_south",
+    "levant_syria",
+    "mesopotamia",
+    "persian_gulf_coast",
+    "yemen_red_sea",
+    "baltic_coast",
+    "black_sea_coast",
+    "alpine_europe"
+  ],
+  "languages": [
+    "French"
+  ],
+  "callout_language": "French",
+  "doctrine": {
+    "summary": "Expeditionary army with long counter-terrorism experience in the Sahel (Serval/Barkhane, ended 2022). Mixed medium forces (Scorpion: Griffon, Jaguar, Serval) that move fast over long distances, supported by Tigre helicopters and CAESAR artillery.",
+    "squad_size": 10,
+    "fireteam": "Groupe de combat: leader plus two equipes of four, with the VBCI/Griffon crew as a support element.",
+    "tactics": [
+      "mounted manoeuvre over long distances, dismount close to the target",
+      "helicopter-borne raids against insurgent camps",
+      "close air support from Tigre",
+      "sniper teams with long-range rifles",
+      "combined arms with drones for spotting"
+    ],
+    "ai_tuning": {
+      "aggression": 0.65,
+      "discipline": 0.85,
+      "suppression_resistance": 0.75,
+      "flanking": 0.75,
+      "grenade_use": 0.6,
+      "medical_care": 0.9,
+      "night_capability": 0.85,
+      "marksmanship": 0.8,
+      "morale": 0.8
+    }
+  },
+  "camo": [
+    {
+      "name": "BME (Bariolage Multi-Environnement)",
+      "palette": [
+        "#7A7356",
+        "#4F5236",
+        "#9C8B66",
+        "#3B3428",
+        "#B5A57F"
+      ],
+      "use": "standard since late 2024"
+    },
+    {
+      "name": "CE / BTE (Centre-Europe)",
+      "palette": [
+        "#556B3A",
+        "#5C4A34",
+        "#1F1F1A",
+        "#7A7A52"
+      ],
+      "use": "older temperate pattern, being replaced"
+    },
+    {
+      "name": "Daguet desert",
+      "palette": [
+        "#C8B48A",
+        "#9C7E58",
+        "#6E5B40"
+      ],
+      "use": "desert; Sahel legacy"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "HK416 F (5.56x45mm)"
+    ],
+    "autorifleman": [
+      "FN Minimi (5.56x45mm)",
+      "FN MAG 58 (7.62x51mm)"
+    ],
+    "marksman": [
+      "FN SCAR-H PR (7.62x51mm)",
+      "HK417 (7.62x51mm)"
+    ],
+    "grenadier": [
+      "HK416 F with HK269 F (40mm)"
+    ],
+    "at": [
+      "AT4 CS (84mm)",
+      "Akeron MP (ATGM)"
+    ],
+    "medic": [
+      "HK416 F short (5.56x45mm)"
+    ],
+    "squad_leader": [
+      "HK416 F (5.56x45mm)"
+    ],
+    "sniper": [
+      "PGM Ultima Ratio (7.62x51mm)",
+      "Sako TRG-42 (.338 Lapua Magnum)",
+      "PGM Hecate II (12.7x99mm)"
+    ],
+    "sidearm": [
+      "Glock 17 Gen 5 FR (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "AT4 CS [in game: AT4]",
+    "NLAW [in game: NLAW; deliveries 2026-2030]",
+    "Akeron MP (ATGM, not in game list)",
+    "Eryx (being replaced)"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "heavy",
+    "plates": "ceramic",
+    "notes": "Game mapping: modular front/back/side plates (French SMB family) with F3 ballistic helmet."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "leclerc",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "About 200 in service; XLR upgrade under way."
+    },
+    {
+      "vehicle_id": "vbci",
+      "role": "ifv",
+      "prevalence": "signature",
+      "notes": "Main infantry fighting vehicle, about 630."
+    },
+    {
+      "vehicle_id": "griffon",
+      "role": "apc",
+      "prevalence": "signature",
+      "notes": "Scorpion APC replacing the VAB; around 900 delivered by end of 2025."
+    },
+    {
+      "vehicle_id": "jaguar_ebrc",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Armoured reconnaissance, replacing AMX-10 RC."
+    },
+    {
+      "vehicle_id": "serval",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "Light 4x4 armoured vehicle, over 400 delivered."
+    },
+    {
+      "vehicle_id": "vbl",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Scout car, about 1,370; Ultima upgrade."
+    },
+    {
+      "vehicle_id": "caesar",
+      "role": "artillery",
+      "prevalence": "common",
+      "notes": "Truck howitzer; CAESAR NG deliveries from 2026."
+    },
+    {
+      "vehicle_id": "tiger",
+      "role": "attack_heli",
+      "prevalence": "uncommon",
+      "notes": "Tigre HAP/HAD."
+    },
+    {
+      "vehicle_id": "nh90",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": "NH90 Caiman TTH, replacing Puma/Cougar."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "fra_rifle_squad",
+      "name": "French rifle squad (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "fra_mech_squad",
+      "name": "French mechanised squad",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 2
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "vbci"
+    },
+    {
+      "id": "fra_recon_team",
+      "name": "French recon / sniper pair team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "sniper",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "vbl"
+    }
+  ],
+  "support_assets": [
+    "Tigre gunship CAS",
+    "CAESAR artillery",
+    "Reaper and tactical drones for ISR",
+    "NH90 airmobile insertion",
+    "Rafale fast-air CAS (off-map)"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 20,
+        "unlocks": [
+          "service rifle and ammunition",
+          "uniforms in national camo",
+          "light helmet and vest"
+        ]
+      },
+      {
+        "rep": 40,
+        "unlocks": [
+          "optics and NVGs",
+          "medium armour",
+          "AT4 CS launcher"
+        ]
+      },
+      {
+        "rep": 60,
+        "unlocks": [
+          "marksman and sniper rifles",
+          "heavy armour",
+          "VBL (light vehicle)"
+        ]
+      },
+      {
+        "rep": 80,
+        "unlocks": [
+          "Griffon (armoured transport)",
+          "fire-support call-ins on contracts"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "counter-terrorist raid",
+      "hostage / personnel recovery",
+      "convoy escort",
+      "HVT capture",
+      "recover lost equipment or sensitive kit",
+      "train and accompany partner forces",
+      "security of embassy or base",
+      "counter-drone site defence",
+      "Sahel / West Africa counter-terror strike",
+      "evacuation of nationals"
+    ],
+    "as_target": [
+      "only if the player works for this nation's enemies: sabotage a logistics depot",
+      "only if the player works for this nation's enemies: ambush a supply convoy"
+    ]
+  },
+  "notes": "Since leaving Mali, Burkina Faso and Niger (2022-2023), France keeps bases in Djibouti, the UAE and Gabon (reduced). Leads the NATO battlegroup in Romania and contributes to Estonia. Early-game client for counter-terror work in the Sahel and Levant.",
+  "proposed": [
+    "campaign_tier",
+    "relations.player",
+    "doctrine.ai_tuning",
+    "unit_templates",
+    "player_trade.rep_tiers",
+    "contract_types",
+    "body_armor (game tier mapping)",
+    "vehicles[].prevalence (game weighting)",
+    "theatres (sahel kept as contract theatre despite withdrawal)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_French_Army",
+    "https://en.wikipedia.org/wiki/French_Army",
+    "https://en.wikipedia.org/wiki/Operation_Barkhane"
+  ]
+}

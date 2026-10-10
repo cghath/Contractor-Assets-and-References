@@ -1,0 +1,60 @@
+{
+  "id": "k200",
+  "name": "K200 KIFV",
+  "aliases": [
+    "KIFV",
+    "K200A1",
+    "KAFV"
+  ],
+  "origin": "South Korea (Hanwha/Doosan)",
+  "type": "apc",
+  "operators": [
+    "kor"
+  ],
+  "crew": 3,
+  "passengers": 9,
+  "dimensions_m": {
+    "length": 5.5,
+    "width": 2.85,
+    "height": 2.5
+  },
+  "weight_t": 13.2,
+  "armament": [
+    "12.7 mm K6 HMG behind shield",
+    "7.62 mm M60 pintle"
+  ],
+  "protection": "Aluminium and spaced steel armour. Game: immune to small-calibre rounds (5.45/5.56/5.8/7.62x39/7.62x51 ball); 7.62x54R and larger penetrate side/rear and disable tyres and engine; any launcher destroys it.",
+  "visual_notes": [
+    "M113-derived box hull with a sloped front and five road wheels per side",
+    "Commander's cupola with shielded 12.7 mm; rear ramp",
+    "Many variants: mortar carrier, ambulance, command, Biho/K30 AA base"
+  ],
+  "colour_schemes": [
+    {
+      "name": "ROK Army four-colour",
+      "palette": [
+        "#4C5A36",
+        "#6E5B3E",
+        "#22231D",
+        "#8A8466"
+      ]
+    }
+  ],
+  "variants": [
+    "K200",
+    "K200A1",
+    "K242 mortar",
+    "K277 command",
+    "K288 recovery"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/K200_KIFV",
+    "https://commons.wikimedia.org/wiki/Category:K200_KIFV"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/K200_KIFV",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Republic_of_Korea_Army"
+  ]
+}

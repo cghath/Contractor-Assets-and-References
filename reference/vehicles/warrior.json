@@ -1,0 +1,63 @@
+{
+  "id": "warrior",
+  "name": "FV510 Warrior",
+  "aliases": [
+    "Warrior tracked armoured vehicle"
+  ],
+  "origin": "United Kingdom",
+  "type": "ifv",
+  "operators": [
+    "gbr"
+  ],
+  "crew": 3,
+  "passengers": 7,
+  "dimensions_m": {
+    "length": 6.34,
+    "width": 3.03,
+    "height": 2.8
+  },
+  "weight_t": 25.4,
+  "armament": [
+    "30 mm L21A1 RARDEN cannon",
+    "7.62 mm L94A1 chain gun"
+  ],
+  "protection": "Aluminium armour with appliqué and bar armour in Iraq/Afghanistan. Game rule: immune to small-calibre; 7.62x54R and 12.7/14.5 mm only damage optics, tracks and exposed crew; penetrating the hull needs launchers (RPG-7 PG-7V, AT4, MAAWS, SMAW, NLAW, Javelin) or cannon.",
+  "visual_notes": [
+    "Boxy hull, 6 road wheels per side",
+    "Small two-man turret centred-forward with long thin 30 mm barrel",
+    "Big rear door (not ramp)",
+    "Often fitted with bar armour cages and side add-on armour"
+  ],
+  "colour_schemes": [
+    {
+      "name": "British green/black",
+      "palette": [
+        "#3E4A32",
+        "#1E2118"
+      ]
+    },
+    {
+      "name": "British desert sand",
+      "palette": [
+        "#C8B48A",
+        "#9C8560"
+      ]
+    }
+  ],
+  "variants": [
+    "FV510 section vehicle",
+    "FV511 command",
+    "FV512 repair",
+    "FV513 recovery",
+    "FV514 observation"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Warrior_tracked_armoured_vehicle"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Warrior_tracked_armoured_vehicle",
+    "https://ukdefencejournal.org.uk/the-direction-of-the-british-armys-combat-vehicle-fleet/"
+  ]
+}

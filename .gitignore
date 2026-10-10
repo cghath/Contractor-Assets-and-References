@@ -2,3 +2,6 @@
 *.tmp
 export_presets.cfg
 references/
+renders/
+__pycache__/
+*.pyc

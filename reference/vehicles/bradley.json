@@ -1,0 +1,74 @@
+{
+  "id": "bradley",
+  "name": "M2 Bradley",
+  "aliases": [
+    "M2A3",
+    "M2A4",
+    "M3 Bradley CFV",
+    "Bradley Fighting Vehicle"
+  ],
+  "origin": "United States",
+  "type": "ifv",
+  "operators": [
+    "usa",
+    "ukr",
+    "sau"
+  ],
+  "crew": 3,
+  "passengers": 6,
+  "dimensions_m": {
+    "length": 6.55,
+    "width": 3.61,
+    "height": 3.38
+  },
+  "weight_t": 30.4,
+  "armament": [
+    "25 mm M242 Bushmaster chain gun",
+    "TOW twin missile launcher",
+    "7.62 mm M240C coaxial MG"
+  ],
+  "protection": "Aluminium hull with spaced laminate and optional BRAT reactive tiles. Game rule: immune to small-calibre; 7.62x54R and 12.7/14.5 mm only damage optics, tracks and exposed crew; penetrating the hull needs launchers (RPG-7 PG-7V, AT4, MAAWS, SMAW, NLAW, Javelin) or cannon. 12.7/14.5 mm can damage optics and TOW box.",
+  "visual_notes": [
+    "Boxy high hull with sloped front glacis and big rear ramp",
+    "6 road wheels per side, front drive sprocket, side skirts with armour tiles",
+    "Small two-man turret offset right with folding TOW box on its left side",
+    "Commander's independent viewer (A3) on turret roof",
+    "BUSK/BRAT reactive armour bricks on sides in some configurations"
+  ],
+  "colour_schemes": [
+    {
+      "name": "US desert tan (CARC 686A)",
+      "palette": [
+        "#C2B28A",
+        "#A89670",
+        "#4A4436"
+      ]
+    },
+    {
+      "name": "US forest green (CARC 383)",
+      "palette": [
+        "#4B5320",
+        "#3A4119",
+        "#26281A"
+      ]
+    }
+  ],
+  "variants": [
+    "M2A2 ODS",
+    "M2A3",
+    "M2A4",
+    "M3A3 CFV",
+    "M7 BFIST",
+    "M2A2 ODS-SA (Ukraine)",
+    "M2A2 ODS (SAU)"
+  ],
+  "existing_model": "bradley",
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/M2_Bradley",
+    "https://commons.wikimedia.org/wiki/Category:M2 Bradley"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/M2_Bradley"
+  ]
+}

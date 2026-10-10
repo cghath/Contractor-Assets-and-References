@@ -1,0 +1,122 @@
+{
+  "id": "leopard2a6",
+  "name": "Leopard 2A6",
+  "aliases": [
+    "Leopard 2",
+    "Strv 122",
+    "Strv 123",
+    "Leopard 2E",
+    "Leopard 2A6HEL"
+  ],
+  "origin": "Germany",
+  "type": "mbt",
+  "operators": [
+    "deu",
+    "nld",
+    "esp",
+    "nor",
+    "dnk",
+    "swe",
+    "fin",
+    "grc",
+    "can",
+    "pol",
+    "ukr",
+    "ltu",
+    "tur",
+    "qat",
+    "che",
+    "aut"
+  ],
+  "crew": 4,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 10.97,
+    "width": 3.75,
+    "height": 3.0
+  },
+  "weight_t": 62.3,
+  "armament": [
+    "120 mm Rh-120 L/55 smoothbore (A6 onward; L/44 on 2A4)",
+    "7.62 mm coaxial MG3/MG5/FN MAG",
+    "7.62 mm loader MG or RWS (A7/A8)"
+  ],
+  "protection": "Composite armour with wedge-shaped turret add-on (2A5 onward), A7/A8 add hull add-on armour and Trophy APS on A8. Game: immune to all small arms incl. 7.62x54R and 12.7/14.5 mm on frontal arc; only launchers (Javelin, top-attack) or tank guns kill it; tandem-HEAT launchers (AT4 HEDP no, RPG-7 PG-7V only to sides/rear) can disable tracks, optics and side hull.",
+  "visual_notes": [
+    "Arrowhead wedge armour on turret front (2A5 and later); flat-faced turret on 2A4",
+    "7 road wheels per side with deep side skirts",
+    "Long L/55 gun with thermal sleeve and muzzle reference",
+    "A7/A8: bolt-on hull front armour, RWS on turret, rear air-con unit; A8: Trophy radar panels on turret sides",
+    "Strv 122: extra turret roof armour and Barracuda mats"
+  ],
+  "colour_schemes": [
+    {
+      "name": "NATO three-tone",
+      "palette": [
+        "#3E4A2E",
+        "#4B3A28",
+        "#1E1E1C"
+      ]
+    },
+    {
+      "name": "Swedish splinter",
+      "palette": [
+        "#4A5838",
+        "#7D8C5E",
+        "#1F2419",
+        "#8C7A57"
+      ]
+    },
+    {
+      "name": "Finnish three-tone",
+      "palette": [
+        "#4F5A3A",
+        "#2F3526",
+        "#7A7457"
+      ]
+    },
+    {
+      "name": "Greek three-tone",
+      "palette": [
+        "#5A5C3A",
+        "#7A6A48",
+        "#2A2A20"
+      ]
+    },
+    {
+      "name": "Saab Barracuda (Danish/Swedish)",
+      "palette": [
+        "#4E5A3C",
+        "#2E3527",
+        "#6D6A4E"
+      ]
+    }
+  ],
+  "variants": [
+    "2A4 (FIN, GRC, ESP, NOR 2A4NO)",
+    "2A5 / Strv 122 (SWE)",
+    "2A6 (DEU, FIN ex-Dutch)",
+    "2A6MA2 (NLD leased)",
+    "2E (ESP)",
+    "2A6HEL (GRC)",
+    "2A7 / 2A7V / 2A7DK (DEU, DNK)",
+    "2A8 / 2A8NOR / Strv 123 (DEU, NOR, SWE, NLD on order)",
+    "2PL (POL)",
+    "Leopard 2A4 / 2A4T1 (TUR)",
+    "Leopard 2A7+ (QAT)",
+    "Pz 87 / Pz 87 WE (CHE)",
+    "2A4 (AUT, overhauled)"
+  ],
+  "existing_model": null,
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Leopard_2",
+    "https://commons.wikimedia.org/wiki/Category:Leopard 2"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Leopard_2",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Swedish_Army",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Norwegian_Army",
+    "https://defence-industry.eu/norwegian-army-to-receive-first-leopard-2a8nor-main-battle-tank-from-knds-next-year/"
+  ]
+}

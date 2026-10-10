@@ -1,0 +1,52 @@
+{
+  "id": "kn25",
+  "name": "KN-25 600 mm super-large MLRS",
+  "aliases": [
+    "KN-25",
+    "600 mm MRL"
+  ],
+  "origin": "North Korea",
+  "type": "mlrs",
+  "operators": [
+    "prk"
+  ],
+  "crew": 4,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 12.0,
+    "width": 3.0,
+    "height": 3.5
+  },
+  "weight_t": 35.0,
+  "armament": [
+    "4-6 x 600 mm guided rockets / close-range ballistic missiles"
+  ],
+  "protection": "Game: light armour on cab/turret only; immune to small-calibre rounds; 7.62x54R and larger disable it; launchers destroy it.",
+  "visual_notes": [
+    "Large 8x8 wheeled or tracked chassis with a block of 4-6 large-diameter launch tubes",
+    "Shown on both wheeled TEL and tracked chassis at parades",
+    "Strategic/off-map strike asset in the game"
+  ],
+  "colour_schemes": [
+    {
+      "name": "KPA dark olive",
+      "palette": [
+        "#4A5233",
+        "#353B25",
+        "#1F2217"
+      ]
+    }
+  ],
+  "variants": [
+    "Wheeled 4-tube",
+    "Tracked 6-tube"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/KN-25"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/KN-25"
+  ]
+}

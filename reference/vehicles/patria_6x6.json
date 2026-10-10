@@ -1,0 +1,73 @@
+{
+  "id": "patria_6x6",
+  "name": "Patria 6x6",
+  "aliases": [
+    "XA-300",
+    "CAVS",
+    "Pansarterrangbil 300"
+  ],
+  "origin": "Finland",
+  "type": "apc",
+  "operators": [
+    "fin",
+    "swe",
+    "dnk",
+    "nor",
+    "deu",
+    "lva",
+    "ltu",
+    "ukr"
+  ],
+  "crew": 2,
+  "passengers": 10,
+  "dimensions_m": {
+    "length": 7.5,
+    "width": 2.9,
+    "height": 2.4
+  },
+  "weight_t": 24.0,
+  "armament": [
+    "RWS with 12.7 mm"
+  ],
+  "protection": "Modular armour. Game: immune to small-calibre rounds; 7.62x54R AP and larger can penetrate side/rear and disable wheels/engine; every launcher in the game list penetrates.",
+  "visual_notes": [
+    "6x6 with a high V-shaped hull and sloped nose",
+    "Axle spacing: 1 front, 2 rear",
+    "Roof RWS, rear door, side storage boxes",
+    "6x6 boxy APC with sloped nose",
+    "Side door, rear door"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Finnish three-tone",
+      "palette": [
+        "#4F5A3A",
+        "#2F3526",
+        "#7A7457"
+      ]
+    },
+    {
+      "name": "Swedish splinter",
+      "palette": [
+        "#4A5838",
+        "#7D8C5E",
+        "#1F2419",
+        "#8C7A57"
+      ]
+    }
+  ],
+  "variants": [
+    "XA-300 (FIN)",
+    "Patgb 300 (SWE)",
+    "NEMO mortar (DEU)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Patria_6x6"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Patria_6x6",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Finnish_Army"
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "id": "kirpi",
+  "name": "BMC Kirpi MRAP",
+  "aliases": [
+    "Kirpi I",
+    "Kirpi II"
+  ],
+  "origin": "Turkey",
+  "type": "mrap",
+  "operators": [
+    "tur",
+    "qat",
+    "ukr",
+    "som"
+  ],
+  "crew": 3,
+  "passengers": 10,
+  "dimensions_m": {
+    "length": 7.075,
+    "width": 2.51,
+    "height": 3.2
+  },
+  "weight_t": 20,
+  "armament": [
+    "Shielded manual ring mount with 7.62 or 12.7 mm MG",
+    "or Aselsan SARP remote weapon station"
+  ],
+  "protection": "V-shaped monocoque hull, STANAG 4569 Level 3; Kirpi II adds composite appliqué; cage armour on some. Game rule: immune to small-calibre; 7.62x54R AP and 12.7/14.5 mm can disable tyres, optics and an exposed gunner; launchers penetrate.",
+  "visual_notes": [
+    "Tall, flat-sided box body on a single V-hull, 2 axles with large single tyres",
+    "4 small armoured windows and 5 firing ports per side of the troop compartment",
+    "Big near-vertical windscreen, two roof hatches, shielded gunner position at front",
+    "Hydraulic rear door; front winch"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Turkish three-tone",
+      "palette": [
+        "#5A6140",
+        "#7B6B4C",
+        "#2E2E28"
+      ]
+    },
+    {
+      "name": "Desert tan (QAT)",
+      "palette": [
+        "#C8B48A",
+        "#9B8562",
+        "#5E513A"
+      ]
+    }
+  ],
+  "variants": [
+    "Kirpi 4x4 (short/long)",
+    "Kirpi II (2018)",
+    "Kirpi 6x6",
+    "Kirpi ambulance"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/BMC_Kirpi",
+    "https://commons.wikimedia.org/wiki/Category:BMC_Kirpi"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/BMC_Kirpi",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Turkish_Land_Forces",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Qatar_Armed_Forces"
+  ]
+}

@@ -1,0 +1,431 @@
+{
+  "id": "syr",
+  "name": "Syrian Arab Republic (Transitional Government, Syrian Army / Ministry of Defence)",
+  "short": "Syria",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#007A3D",
+    "#FFFFFF",
+    "#000000",
+    "#CE1126"
+  ],
+  "blocs": [
+    "arab_league",
+    "global_coalition_against_isis"
+  ],
+  "campaign_tier": "early",
+  "alignment_to_player": "neutral",
+  "player_client": true,
+  "relations": {
+    "player": 5,
+    "tur": 80,
+    "qat": 65,
+    "sau": 65,
+    "are": 45,
+    "jor": 50,
+    "egy": 15,
+    "irq": 15,
+    "pse_pa": 30,
+    "usa": 30,
+    "gbr": 15,
+    "fra": 10,
+    "deu": 10,
+    "rus": 0,
+    "africa_corps": -10,
+    "irn": -70,
+    "isr": -35,
+    "hezbollah": -75,
+    "iraqi_militias": -60,
+    "hamas": -10,
+    "pij": -30,
+    "houthis": -30,
+    "sdf": 10,
+    "krg_peshmerga": 10,
+    "isis": -95,
+    "al_qaeda": -50,
+    "bel": 5,
+    "dnk": 5,
+    "esp": 5,
+    "fin": 5,
+    "grc": 5,
+    "ita": 5,
+    "nld": 5,
+    "nor": 5,
+    "swe": 5,
+    "prk": 0,
+    "pmc_kestrel": -10
+  },
+  "theatres": [
+    "levant_syria",
+    "mesopotamia",
+    "lebanon_south"
+  ],
+  "languages": [
+    "Arabic (Levantine / Syrian dialect)",
+    "Kurdish (Kurmanji, integrated SDF units)",
+    "Turkish (liaison with Turkish advisers)"
+  ],
+  "callout_language": "Syrian Arabic, informal and mixed between former rebel-faction habits and new Ministry of Defence procedure; some Turkish terms from Turkish-run training.",
+  "doctrine": {
+    "summary": "The armed forces of the transitional government that took power after the HTS-led offensive toppled Bashar al-Assad on 8 December 2024. The old Syrian Arab Army dissolved; the new Syrian Army under the Ministry of Defence (minister Murhaf Abu Qasra) was built in 2025 by folding Hay'at Tahrir al-Sham (formally dissolved in January 2025), Syrian National Army factions and other ex-rebel groups into numbered divisions, with Ahmed al-Sharaa as transitional president (from 29 January 2025) under a March 2025 constitutional declaration. A separate Interior Ministry General Security force handles internal security. Türkiye is the main military patron (August 2025 training and equipment accord), and Syria joined the Global Coalition against ISIS in November 2025 as US forces withdrew from Syria in early 2026. A January 2026 government offensive in the north-east ended in a ceasefire (29 January) that handed Raqqa and Deir ez-Zor to Damascus and began restructuring the SDF into army brigades. Reporting in mid-2026 describes a planned (not officially confirmed) move from divisions to five regional corps. The force is large but uneven: light-infantry and drone experience from the civil war, captured Assad-era armour of mixed condition, and growing numbers of Turkish-supplied wheeled vehicles. Discipline varies by unit; government-aligned forces were implicated in mass killings of civilians on the coast (March 2025) and in Suwayda (July 2025), which the authorities said they would investigate.",
+    "squad_size": 8,
+    "fireteam": "Loose ex-rebel groups of 6-10 around a PKM gunner and an RPG-7 gunner, now being standardised by Turkish-led training. In game: 8 men in battle-buddy pairs, often mounted in a pickup or a Turkish-supplied 4x4.",
+    "tactics": [
+      "Fast light-infantry raids in pickups and technicals, reinforced by captured armour where available",
+      "Small armed-drone and FPV teams carried over from the 2024 offensive (game: drone hazard at contract edges)",
+      "Checkpoints, cordon-and-search and counter-ISIS sweeps in the eastern desert and Euphrates valley",
+      "Border operations against smugglers on the Lebanese, Jordanian and Iraqi frontiers",
+      "Partnered operations with Turkish advisers providing drones, artillery and planning"
+    ],
+    "ai_tuning": {
+      "aggression": 0.65,
+      "discipline": 0.4,
+      "suppression_resistance": 0.55,
+      "flanking": 0.55,
+      "grenade_use": 0.45,
+      "medical_care": 0.35,
+      "night_capability": 0.3,
+      "marksmanship": 0.45,
+      "morale": 0.6
+    }
+  },
+  "camo": [
+    {
+      "name": "Plain olive / green fatigues",
+      "palette": [
+        "#4F5A3A",
+        "#3C4530",
+        "#6A7350",
+        "#2A2F22"
+      ],
+      "use": "Most army units; mixed with ex-faction gear"
+    },
+    {
+      "name": "Black (General Security and some special units)",
+      "palette": [
+        "#1C1C1E",
+        "#2E2E30",
+        "#45464A"
+      ],
+      "use": "Interior Ministry General Security, urban units"
+    },
+    {
+      "name": "Khaki / desert mix (Multicam-type and Turkish-supplied)",
+      "palette": [
+        "#B5A27A",
+        "#8C7A55",
+        "#6B5E42",
+        "#D3C6A2"
+      ],
+      "use": "Eastern desert and Euphrates units; Turkish-trained formations"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "AKM / AK-47 / Type 56 (7.62x39mm)",
+      "M16 / M4-pattern (5.56x45mm, captured and Turkish-sourced, uncommon)"
+    ],
+    "autorifleman": [
+      "PKM (7.62x54R)",
+      "RPK (7.62x39mm)"
+    ],
+    "marksman": [
+      "SVD Dragunov (7.62x54R)"
+    ],
+    "grenadier": [
+      "AKM with GP-25 (40 mm caseless)"
+    ],
+    "at": [
+      "RPG-7 with PG-7V / OG-7V",
+      "Konkurs / Kornet / Fagot ATGM (captured stocks)"
+    ],
+    "medic": [
+      "AKM (7.62x39mm)"
+    ],
+    "squad_leader": [
+      "AKM / AKMS (7.62x39mm)",
+      "M4-pattern (5.56x45mm)"
+    ],
+    "sniper": [
+      "SVD (7.62x54R)",
+      "Heavy anti-materiel rifle (12.7mm, local and captured)"
+    ],
+    "sidearm": [
+      "Glock-pattern (9x19mm)",
+      "Makarov PM (9x18mm)"
+    ]
+  },
+  "launchers": [
+    "RPG-7 (PG-7V, OG-7V) [in_game]",
+    "Konkurs / Kornet / Fagot ATGM [not_in_game]",
+    "SPG-9 recoilless (vehicle-mounted) [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "light",
+    "vest": "light",
+    "plates": "mixed",
+    "notes": "Highly uneven: many fighters wear a chest rig or soft vest only; Turkish-trained and General Security units have helmets and plate carriers (steel or ceramic). Game: mostly light, with medium for elite and Turkish-trained units (proposed)."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "toyota_hilux",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": "Unarmed pickups are the main troop transport, inherited from the rebel factions."
+    },
+    {
+      "vehicle_id": "technical_dshk",
+      "role": "technical",
+      "prevalence": "signature",
+      "notes": "DShK/KPV pickups, the standard fire support of ex-rebel units."
+    },
+    {
+      "vehicle_id": "technical_zu23",
+      "role": "technical",
+      "prevalence": "common",
+      "notes": "ZU-23-2 on pickups and trucks, used against ground targets and drones."
+    },
+    {
+      "vehicle_id": "technical_spg9",
+      "role": "technical",
+      "prevalence": "uncommon",
+      "notes": "SPG-9 recoilless rifle technicals."
+    },
+    {
+      "vehicle_id": "toyota_land_cruiser",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "LC70-series pickups and SUVs for command and General Security."
+    },
+    {
+      "vehicle_id": "cobra",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Otokar Cobra / Cobra II supplied by Türkiye in 2025 (seen with the 76th Division in Aleppo)."
+    },
+    {
+      "vehicle_id": "ejder_yalcin",
+      "role": "apc",
+      "prevalence": "rare",
+      "notes": "Nurol Ejder 6x6 APCs shown at the 8 December 2025 Liberation Day parade in Damascus (12 vehicles); recorded as a variant in the Ejder family file."
+    },
+    {
+      "vehicle_id": "m113",
+      "role": "apc",
+      "prevalence": "uncommon",
+      "notes": "Ex-Turkish M113s donated in 2025."
+    },
+    {
+      "vehicle_id": "bmp1",
+      "role": "ifv",
+      "prevalence": "common",
+      "notes": "Captured Assad-era BMP-1s, many in poor repair."
+    },
+    {
+      "vehicle_id": "t72b3",
+      "role": "mbt",
+      "prevalence": "uncommon",
+      "notes": "Captured T-72AV / T-72 Adra and other T-72 variants (family file); many were destroyed by Israeli strikes in December 2024."
+    },
+    {
+      "vehicle_id": "t55",
+      "role": "mbt",
+      "prevalence": "uncommon",
+      "notes": "Captured T-55/T-62-era tanks used as fire support."
+    },
+    {
+      "vehicle_id": "fpv_drone",
+      "role": "uav",
+      "prevalence": "common",
+      "notes": "FPV and bomb-dropping drones; HTS drone units were prominent in the 2024 offensive."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "syr_mounted_section",
+      "name": "Mounted infantry section (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "toyota_hilux"
+    },
+    {
+      "id": "syr_technical_crew",
+      "name": "Technical crew with escorts",
+      "composition": [
+        {
+          "role": "driver",
+          "count": 1
+        },
+        {
+          "role": "gunner",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "technical_dshk"
+    },
+    {
+      "id": "syr_checkpoint",
+      "name": "General Security checkpoint (game 6)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "toyota_land_cruiser"
+    },
+    {
+      "id": "syr_drone_team",
+      "name": "FPV / drone team",
+      "composition": [
+        {
+          "role": "drone_operator",
+          "count": 2
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "toyota_hilux"
+    },
+    {
+      "id": "syr_turkish_trained_platoon",
+      "name": "Turkish-trained motorised section",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "cobra"
+    },
+    {
+      "id": "syr_armour_section",
+      "name": "Captured-armour section",
+      "composition": [
+        {
+          "role": "tank_crew",
+          "count": 3
+        },
+        {
+          "role": "ifv_crew",
+          "count": 3
+        }
+      ],
+      "vehicle_id": "t72b3"
+    }
+  ],
+  "support_assets": [
+    "Mortars and captured field artillery / MLRS (limited, mixed condition)",
+    "FPV and bomb-dropping drones",
+    "Turkish drone and artillery support in partnered operations (off-map, proposed)",
+    "Coalition air support against ISIS (off-map, occasional)"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [
+      "isis_cell_raid",
+      "recover_escaped_detainees",
+      "escort_reconstruction_convoy",
+      "clear_uxo_and_ied_hazards",
+      "border_smuggler_interdiction",
+      "train_partner_force"
+    ],
+    "as_target": [
+      "protect_civilians_from_reprisals",
+      "monitor_ceasefire_line"
+    ]
+  },
+  "notes": "Situation as of October 2026: transitional government under President Ahmed al-Sharaa (former HTS leader); People's Assembly chosen by indirect selection in October 2025. Most US sanctions were lifted in 2025 and Syria was removed from the US arms-export ban list in September 2026. US forces left Syria in February-March 2026 (al-Tanf handed over); Syria is a coalition partner against ISIS, which has stepped up attacks in Raqqa and Deir ez-Zor after the 2026 handover of detention sites. SDF integration (agreements of March 2025 and 29 January 2026) is in progress; Qamishli, Hasakah and Kobane were not under government control as of spring 2026, and a Kurdish former YPG commander was made a deputy defence minister. Russia: a 9 August 2026 memorandum hands Hmeimim air base and the Tartus port berth to Syrian administration and turns the military facilities into joint training centres within three months. Iran and Hezbollah lost their position with Assad's fall and are hostile. Israel holds a buffer zone in the south-west and strikes Syrian targets (e.g. Abu al-Duhur air base, 18 August 2026) while US-mediated security talks continue; al-Sharaa demanded Israeli withdrawal at the UN General Assembly on 23 September 2026. The Druze-majority Suwayda region remains outside full government control after the July 2025 fighting. Game framing: an early-game neutral client for counter-ISIS and reconstruction-security work; reprisals against civilians (Alawite, Druze, Kurdish areas) should exist only as contract hazards the player can prevent, with the civilian-casualty rules fully active. player_client true is Captain-confirmed (2026-10-10). Game: syr and sdf are neutral-to-friendly (+10 each way; Captain's decision, 2026-10-10), treating the integration as mostly done.",
+  "proposed": [
+    "campaign_tier",
+    "alignment_to_player",
+    "relations.player",
+    "contract_types",
+    "doctrine.ai_tuning",
+    "camo (approximate; no single standard pattern)",
+    "body_armor (game tier mapping)",
+    "unit_templates",
+    "vehicles[].prevalence (game weighting)",
+    "support_assets (Turkish support as game asset)",
+    "player_trade.sellable (false)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Syrian_Army",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Syrian_Army",
+    "https://en.wikipedia.org/wiki/Murhaf_Abu_Qasra",
+    "https://en.wikipedia.org/wiki/2026_northeastern_Syria_offensive",
+    "https://en.wikipedia.org/wiki/2026_in_Syria",
+    "https://www.janes.com/osint-insights/defence-news/land/syria-parades-new-turkish-apcs",
+    "https://defence-blog.com/syrian-army-parades-turkish-supplied-armored-vehicles/",
+    "https://militarnyi.com/en/news/turkey-supplies-cobra-and-cadillac-gage-commando-armored-vehicles-to-syrian-military/",
+    "https://www.aljazeera.com/news/2026/8/9/syria-says-it-reached-deal-with-moscow-on-future-of-russian-bases",
+    "https://www.aljazeera.com/news/2026/9/23/syrias-al-sharaa-warns-israeli-attacks-endanger-delicate-post-war-recovery",
+    "https://news.un.org/en/story/2026/09/1168411",
+    "https://english.alarabiya.net/News/middle-east/2026/02/11/usled-forces-leave-syria-s-altanf-base-for-jordan-sources-say",
+    "https://m.naharnet.com/stories/en/316389-syria-joins-global-alliance-against-islamic-state",
+    "https://arabcenterdc.org/resource/syrias-fragile-integration-the-sdf-joins-the-army-but-autonomy-remains-elusive/",
+    "https://israel-alma.org/the-syrian-army-reorganization-five-regional-corps-the-same-jihadist-command-structure/"
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "id": "alpine_europe",
+  "name": "High Passes Cantons",
+  "inspired_by": "The Central Alps where Switzerland, Austria, Italy, Germany and France meet, as of 2026: a glacial lake with a conference town, steep valleys with timber chalet villages, alpine pastures and ski areas, high road passes and rail base tunnels, hydro dams and military caverns. A neutral staging region and arms market rather than a war zone; contracts are security, recovery and evacuation work. In a late-game what-if (game fiction, not a real deployment), covert Russian mountain-troop teams use the high passes and old fortress caverns. srb uses this map as a stand-in for a Balkan mountain transit route. All towns are fictional.",
+  "map_size_km": [18, 18],
+  "climate": "Temperate oceanic in the valleys (Koppen Cfb), subarctic and alpine tundra above 1,800 m (Dfc/ET). Valley summers 20-27 C, winters -5 to 3 C; on the passes winter -10 to -20 C. 1,000-2,500 mm precipitation; snow from November to May above 1,500 m; foehn wind events.",
+  "seasons": [
+    "Winter (Dec-Mar): deep snow, avalanche danger, closed passes, ski crowds",
+    "Spring (Apr-Jun): snowmelt, avalanches on steep slopes, passes reopen in late May or June",
+    "Summer (Jul-Sep): hikers, cattle on alpine pastures, thunderstorms in the afternoon",
+    "Autumn (Oct-Nov): cattle drive down, larch gold, first snow, fog in valleys (inversion)"
+  ],
+  "biomes": [
+    {"id": "valley_floor_meadows_and_town", "share": 0.18, "vegetation": ["hay meadows", "orchards", "ash, maple and lime trees", "willow and alder on the river"], "ground_palette": ["#5a6a3a", "#7a8a4a", "#8a7a5a", "#a89a78", "#6e5a40"], "foliage_palette": ["#3f6b2e", "#5a8a3a", "#7ba04a", "#2f5226", "#a8c06a"]},
+    {"id": "montane_conifer_forest", "share": 0.3, "vegetation": ["Norway spruce", "silver fir", "European larch", "beech on lower slopes", "avalanche-path alder scrub"], "ground_palette": ["#4f4432", "#6b5d45", "#3a3226", "#8a7a5c"], "foliage_palette": ["#1f3a24", "#2f4e2e", "#4a6a3a", "#c9a03a", "#7a9a4e"]},
+    {"id": "alpine_pasture", "share": 0.2, "vegetation": ["alpine meadows with gentians and alpenrose", "dwarf pine (Pinus mugo)", "summer cattle pastures with huts"], "ground_palette": ["#7a8a52", "#9aaa66", "#6a6a4a", "#b7b1a3"], "foliage_palette": ["#5f8a3a", "#7da048", "#3f6b2e", "#c84a6a"]},
+    {"id": "rock_scree_glacier", "share": 0.24, "vegetation": ["bare limestone and gneiss", "scree", "glacier ice and firn", "lichens"], "ground_palette": ["#9a9486", "#b7b1a3", "#7d776b", "#e8ecef", "#cfe0ea", "#5f5a50"], "foliage_palette": ["#7a7f58", "#9c9e74", "#5c6644", "#495236"]},
+    {"id": "lake", "share": 0.08, "vegetation": ["none (water)", "reed at the shore"], "ground_palette": ["#2f5a6e", "#3f6f80", "#5a8a9a", "#7aaaba"], "foliage_palette": ["#3f6a5a", "#5a7f6a", "#7a9a7a", "#2a4a3a"]}
+  ],
+  "terrain": {
+    "elevation_range_m": [430, 3600],
+    "relief": "Extreme relief: a glacial lake at 430 m and U-shaped valleys at 500-1,200 m are walled by slopes rising to peaks of 3,000-3,600 m with glaciers; high passes at 2,100-2,500 m connect valleys.",
+    "features": ["U-shaped glacial valleys", "hanging valleys with waterfalls", "glaciers and moraines", "avalanche paths (clear swathes in forest)", "road passes with hairpins and galleries", "rail base tunnel portals", "hydro dams and reservoirs", "military caverns and bunkers (Reduit-type) in rock faces"],
+    "water": "A long glacial lake, a valley river with hydro dams and reservoirs, glacial streams, waterfalls; frozen high lakes in winter.",
+    "generator": {
+      "approach": "Heightmap at 10 m. Ridged multifractal mountain base with a U-shaped valley carving pass (subtract a smoothed parabolic profile along valley splines), glaciers as a material/ice layer above 2,800 m on north faces, the lake as a flat basin. Hairpin roads generated as switchback splines on slopes.",
+      "noise_layers": [
+        {"type": "ridged multifractal (7 octaves)", "frequency": 0.25, "amplitude_m": 2800, "purpose": "Alpine ridges and peaks"},
+        {"type": "U-valley carve along splines", "frequency": 0, "amplitude_m": -1500, "purpose": "glacial valleys and the lake basin"},
+        {"type": "simplex fbm", "frequency": 1.0, "amplitude_m": 150, "purpose": "slope breakup, spurs and terraces"},
+        {"type": "ridged", "frequency": 5.0, "amplitude_m": 25, "purpose": "rock ribs and couloirs"},
+        {"type": "simplex", "frequency": 12.0, "amplitude_m": 1.0, "purpose": "micro-relief"}
+      ],
+      "erosion": "Hydraulic erosion for gullies and alluvial fans; thermal erosion with a high cap (60 degrees) to keep rock faces; talus cones at cliff feet.",
+      "rivers": "Valley river spline along the main valley into the lake; dams stamped with reservoirs; tributary streams by flow accumulation with waterfalls at hanging-valley lips.",
+      "settlement_flattening": "Town on the lake delta flattened; chalet villages on terraces and fans per plot; ski stations on shoulders.",
+      "notes": "Passes and tunnels are the only links between valleys; avalanche events close roads in winter. Helicopters work only in good weather; AAVs useless except on the lake."
+    }
+  },
+  "settlements": [
+    {"type": "town", "share": 0.25, "pop_range": [8000, 40000], "architecture": "Lakeside town: three- to five-storey stone and stucco townhouses with painted shutters and steep tiled roofs, a medieval old town with arcades, a church with a tall spire, grand 19th-century hotels on the lakefront, a modern conference centre of glass and concrete, a railway station.", "footprint_m": "townhouse 10x15; hotel 30x60", "storeys": [2, 6], "wall_class": "Stone and brick walls 40-60 cm thick; modern glass facades none; cellars and civil-defence shelters thick.", "materials": ["STONE", "PLASTER", "ROOF_TILE", "GLASS", "CONCRETE", "WOOD"], "palette": ["#e6dcc8", "#d8c06a", "#a4553b", "#9fbcc4", "#8a8577", "#5f6b58"], "layout_rules": ["old town lanes around a square and church", "lake promenade with hotels and boat piers", "conference centre and station on the edge", "every building has a basement shelter"], "example_names": ["Seeburg am Hang", "Lago di Valcrina", "Wildenmatt", "Sankt Ilgen am See"]},
+    {"type": "village", "share": 0.4, "pop_range": [100, 2000], "architecture": "Alpine villages: chalets with stone ground floors and timber upper floors, wide overhanging shallow roofs with stones or shingles, balconies with flowers, barns of dark larch on stone piers, a white church with an onion or pointed spire, a hotel, a cable car station.", "footprint_m": "chalet 10x12; barn 8x12", "storeys": [2, 4], "wall_class": "Stone ground floors thick; timber upper floors thin.", "materials": ["STONE", "WOOD", "ROOF_TILE", "PLASTER", "GLASS"], "palette": ["#5a3a26", "#8c6a46", "#e6dcc8", "#8f8676", "#a4553b"], "layout_rules": ["clustered on a fan or terrace above the valley floor", "church and inn at the centre", "barns scattered on slopes", "road loops up from the valley"], "example_names": ["Oberwald-Hinterberg", "Sankt Agathen-Tal", "Alpe Cresta", "Brunnmatt", "Val Scuraia", "Hintermoos"]},
+    {"type": "farm", "share": 0.1, "pop_range": [2, 20], "architecture": "Summer alpine huts and dairies (stone and timber), mountain refuges for climbers.", "footprint_m": "hut 8x10", "storeys": [1, 2], "wall_class": "Stone thick; timber thin.", "materials": ["STONE", "WOOD"], "palette": ["#8f8676", "#5a3a26", "#8c6a46"], "layout_rules": ["on pastures above the treeline", "footpath and cable-lift access"], "example_names": ["Alp Gufer", "Rifugio Pizzo Neve", "Hütte am Firn"]},
+    {"type": "compound", "share": 0.25, "pop_range": [0, 500], "architecture": "Infrastructure and military: a concrete arch dam with powerhouse, rail base-tunnel portals with control buildings, pass-top hospice, army fortress caverns with camouflaged doors and gun embrasures in rock faces (some now museums or data centres), a border crossing, an arms factory in the valley.", "footprint_m": "dam crest 400 m; portal 100x200; cavern door 6x6", "storeys": [1, 4], "wall_class": "Dams, caverns and portals effectively indestructible; control buildings medium.", "materials": ["CONCRETE", "STEEL", "STONE", "GLASS"], "palette": ["#8a8577", "#4a4d50", "#8f8676", "#9fbcc4"], "layout_rules": ["dams at gorge narrows", "tunnel portals at valley heads", "caverns in cliff faces above roads", "factory on the valley floor by the railway"], "example_names": ["Staumauer Grünsee", "Portal Nord Basistunnel", "Festung Felsenkopf", "Werk Seetal Waffenfabrik"]}
+  ],
+  "infrastructure": {
+    "roads": "A motorway along the main valley with tunnels and galleries, two high road passes with hairpins (closed in winter), village roads, forestry tracks.",
+    "rail": "A main line with a base-tunnel portal, a narrow-gauge rack railway up a side valley, cable cars and ski lifts.",
+    "power": "Hydro dams and powerhouses, pylons over the passes.",
+    "ports": "Lake ferry piers.",
+    "airfields": "A small military airstrip in the valley (AI aircraft), helipads at the hospital and mountain rescue base.",
+    "checkpoints": "Border crossings on the passes and motorway (customs, police); security perimeters around the conference centre during events."
+  },
+  "pois": [
+    {"type": "conference_centre", "description": "Glass and concrete conference centre on the lakefront with plenary hall, delegation hotels, security fences and a heliport pad on the lake.", "contract_use": "protect a diplomatic conference or protecting-power mission (clients che, aut)", "loot_tier": "low", "intel_chance": 0.25},
+    {"type": "mountain_pass_hospice", "description": "Stone hospice and customs post at a pass with a lake, snow galleries and a border line.", "contract_use": "secure a mountain pass during a crisis (client che)", "loot_tier": "low", "intel_chance": 0.2},
+    {"type": "base_tunnel_portal", "description": "Rail base-tunnel portal with control centre, emergency station, rail yard and maintenance depot.", "contract_use": "secure a tunnel during a crisis; counter-sabotage", "loot_tier": "low", "intel_chance": 0.2},
+    {"type": "arms_factory_warehouse", "description": "Valley arms factory with a proof range in a gallery, warehouses and a loading dock.", "contract_use": "recover stolen or diverted arms (clients che, aut); arms-shipment escort (client srb)", "loot_tier": "medium", "intel_chance": 0.45},
+    {"type": "fortress_cavern", "description": "Decommissioned mountain fortress: camouflaged doors, gun embrasures, long tunnels and barracks inside the rock; partly a private data centre.", "contract_use": "locate diverted weapons stored inside; recover sensitive kit", "loot_tier": "medium", "intel_chance": 0.5},
+    {"type": "dam_and_powerhouse", "description": "Arch dam in a gorge with crest road, powerhouse, transformers and a reservoir.", "contract_use": "counter-sabotage guard", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "ngo_logistics_hub", "description": "Humanitarian logistics warehouse near the railway with lorries loading for an international convoy.", "contract_use": "escort ICRC / UN / NGO convoys (clients che, aut)", "loot_tier": "low", "intel_chance": 0.1},
+    {"type": "ski_resort_station", "description": "Cable-car top station with restaurant, ski lifts, pistes and a hotel; crowded in winter.", "contract_use": "VIP protection; hostage situation", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "border_crossing_motorway", "description": "Motorway customs plaza with lanes, inspection halls and lorry parking.", "contract_use": "interdict a smuggled arms lorry (client aut)", "loot_tier": "medium", "intel_chance": 0.35},
+    {"type": "mountain_hut_meeting", "description": "Isolated climbers' refuge used as a meeting point for an arms deal.", "contract_use": "intel grab; arrest support (client che)", "loot_tier": "medium", "intel_chance": 0.5},
+    {"type": "embassy_villa", "description": "Lakeside villa used as a consulate or protecting-power office: walled garden, boathouse, security cabin.", "contract_use": "evacuate nationals; protect a mission (clients aut, che, srb)", "loot_tier": "low", "intel_chance": 0.25},
+    {"type": "avalanche_blocked_road", "description": "Valley road blocked by an avalanche; cars trapped; a gallery entrance.", "contract_use": "rescue and evacuation during a crisis", "loot_tier": "low", "intel_chance": 0.05}
+  ],
+  "weather": {
+    "conditions": ["clear alpine days", "valley fog (inversion)", "afternoon thunderstorms", "heavy snowfall and blizzards", "foehn wind", "avalanche events"],
+    "visibility_notes": "Valley fog in autumn and winter hides the valley floor while peaks are clear; clouds sit on passes; snow glare; storms ground helicopters.",
+    "dust_or_snow": "Heavy snow above 1,000 m in winter; no dust (rare Saharan dust tint in spring)."
+  },
+  "civilians": {
+    "density": "medium",
+    "behaviour": "Orderly, prosperous population; commuters and tourists; ski crowds in winter, hikers in summer; farmers on pastures. Police respond quickly; civilians call police on armed people. Shelters in every building.",
+    "vehicles": ["private cars", "postbuses", "trains and cable cars", "tractors", "tour coaches", "lake ferries", "police and mountain rescue vehicles"],
+    "casualty_risk_notes": "Any shooting near towns or resorts is high-risk; most contracts here should be low-violence."
+  },
+  "factions_present": [
+    {"faction_id": "che", "role": "defender", "strength": "high", "where": "Central and western valleys: conference town, passes, tunnel portal, arms factory, fortress caverns (militia army units)."},
+    {"faction_id": "aut", "role": "defender", "strength": "medium", "where": "Eastern valley and motorway border crossing; embassy villa district."},
+    {"faction_id": "ita", "role": "patrol", "strength": "low", "where": "Southern pass and border post (Alpini and border police)."},
+    {"faction_id": "fra", "role": "patrol", "strength": "low", "where": "South-western pass border post (mountain troops and gendarmerie)."},
+    {"faction_id": "deu", "role": "patrol", "strength": "low", "where": "Northern edge border police and mountain troops on exercise."},
+    {"faction_id": "srb", "role": "patrol", "strength": "low", "where": "Arms-shipment escort convoys transiting the motorway (Balkan transit stand-in); consular villa."},
+    {"faction_id": "rus", "role": "insurgent", "strength": "medium", "where": "Game what-if (proposed, late game): covert mountain-troop reconnaissance and sabotage teams (34th Mountain Brigade-type kit) hiding in high huts, glacier bivouacs and a disused fortress cavern, moving over the passes at night to cache weapons near the base tunnel, the dam and the conference town. Fictional scenario; Russian forces are not deployed in the Alps."}
+  ],
+  "frontline": "No front. This is a neutral region: the war sim affects it only through events elsewhere (arms diversion, diplomatic conferences, evacuations of nationals, crises that close passes). Event intensity rises with the global war level and posts security, recovery and convoy contracts. Hostiles here are generic armed criminals (arms traffickers, hired teams) not tied to a faction (proposed) and, as a late-game what-if, covert Russian mountain-troop teams (rus; game fiction). Each surviving rus team raises a valley alert level that posts counter-sabotage, pass-security and cache-recovery contracts; che and aut operations (and player contracts) remove teams, which return only with rising global war level. Avalanche and weather events close passes for both sides.",
+  "contract_hooks": [
+    "Protect a diplomatic conference at the lakefront centre (clients che, aut)",
+    "Recover stolen or diverted arms from a fortress cavern (client che)",
+    "Interdict a smuggled arms lorry at the motorway customs plaza (client aut)",
+    "Escort ICRC / UN / NGO convoys from the logistics hub over a pass (clients che, aut)",
+    "Secure a mountain pass or tunnel during a crisis (client che)",
+    "Arms-shipment escort along the motorway (client srb)",
+    "Evacuate nationals from a consulate villa (clients aut, srb)",
+    "Intel grab at a mountain-hut arms meeting (client che)",
+    "Hunt a covert mountain-troop team on a high pass or glacier bivouac (clients che, aut; rus what-if, late game)",
+    "Counter-sabotage at the base-tunnel portal or the dam against a covert team (client che; rus what-if)",
+    "Recover a weapons cache left by a covert team in a fortress cavern (client che)"
+  ],
+  "zone_plan": {
+    "contract_zones": [
+      {"name": "Lakefront conference district", "area_km2": 2, "anchor": "conference_centre", "notes": "dense, low-violence"},
+      {"name": "High pass", "area_km2": 3, "anchor": "mountain_pass_hospice", "notes": "snow, cliffs"},
+      {"name": "Fortress cavern cliff", "area_km2": 2, "anchor": "fortress_cavern", "notes": "tunnels"},
+      {"name": "Motorway border plaza", "area_km2": 2.5, "anchor": "border_crossing_motorway", "notes": "vehicles, lanes"}
+    ],
+    "hot_zones": [
+      {"name": "High-pass incursion (late game, fictional what-if)", "area_km2": 12, "layout": "Covert rus mountain-troop group: HQ in a disused fortress cavern; 3-4 outposts (high hut, glacier bivouac, pass gallery, cache in a barn); Swiss and Austrian checkpoints on the pass roads as friendly anchors; roaming ski and foot patrols; 1 QRF team by night. An arms-trafficker network (generic NPCs) can replace it in earlier phases."}
+    ]
+  },
+  "insertion": {"lhd": false, "fob": "Staging at a hotel or the valley military airstrip (the player's FOB as a rented facility). Roads, rail and cable cars; helicopters in good weather; no AAVs except on the lake."},
+  "early_game_suitable": false,
+  "early_game_notes": "Not an early-game theatre. Generic arms-trafficker NPCs are the everyday threat; rus mountain troops (late tier) are the hostile faction as a fictional what-if added by Captain's decision (2026-10-10). Otherwise a staging region and neutral-contract source at any stage.",
+  "ambient_audio": ["cowbells", "church bells", "rushing streams", "cable-car hum", "trains in tunnels", "wind on the passes", "avalanche blasting (events)"],
+  "captain_confirmed": [
+    "map_size_km 18 x 18 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
+    "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
+    "materials accepted (Captain, 2026-10-10) and added to voxel_world.gd (Contractor dev, commit 1ec1417): STONE #8f8676, PLASTER #e3dccb, ROOF_TILE #a4553b, GLASS #9fbcc4",
+    "generic arms-trafficker NPCs stay, and Russian mountain troops (rus) are added as the hostile force (Captain, 2026-10-10)",
+    "the rus mountain-troop listing stays as a fictional what-if, not a real deployment, kept with the other low-plausibility listings (Captain, 2026-10-10)",
+    "rus mountain troops stay at medium strength as the map's only hostile force, a fictional what-if (Captain, 2026-10-10)"
+  ],
+  "proposed": [
+    "composite tri-border layout",
+    "generator numbers",
+    "generic hostile NPCs (arms traffickers) not tied to a faction",
+    "rus covert mountain-troop details: role, placement and the late-game timing",
+    "zone_plan and the what-if hot zone",
+    "srb presence as a Balkan transit stand-in (from srb.json)",
+    "avalanche road-closure events"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Alps",
+    "https://en.wikipedia.org/wiki/Gotthard_Base_Tunnel",
+    "https://en.wikipedia.org/wiki/National_Redoubt_(Switzerland)",
+    "https://en.wikipedia.org/wiki/Chalet",
+    "https://en.wikipedia.org/wiki/Foehn_wind",
+    "https://en.wikipedia.org/wiki/34th_Separate_Guards_Mountain_Motor_Rifle_Brigade",
+    "factions/che.json, aut.json, srb.json, rus.json notes"
+  ]
+}

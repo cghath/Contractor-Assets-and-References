@@ -1,0 +1,411 @@
+{
+  "id": "ita",
+  "name": "Italy",
+  "short": "ITA",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#009246",
+    "#FFFFFF",
+    "#CE2B37"
+  ],
+  "blocs": [
+    "nato",
+    "eu",
+    "global_coalition_against_isis",
+    "g7",
+    "unifil"
+  ],
+  "campaign_tier": "early",
+  "alignment_to_player": "friendly",
+  "player_client": true,
+  "relations": {
+    "player": 25,
+    "usa": 75,
+    "gbr": 85,
+    "can": 80,
+    "aus": 70,
+    "ukr": 75,
+    "pol": 75,
+    "est": 80,
+    "lva": 80,
+    "ltu": 80,
+    "rou": 70,
+    "jpn": 60,
+    "kor": 55,
+    "isr": 25,
+    "tur": 50,
+    "sau": 30,
+    "are": 45,
+    "qat": 35,
+    "egy": 45,
+    "jor": 55,
+    "irq": 35,
+    "krg_peshmerga": 55,
+    "sdf": 30,
+    "syr": 5,
+    "pse_pa": 35,
+    "rus": -80,
+    "blr": -65,
+    "irn": -55,
+    "prk": -60,
+    "chn": -20,
+    "africa_corps": -60,
+    "sahel_aes": -30,
+    "afg_taliban": -60,
+    "isis": -100,
+    "isis_k": -95,
+    "al_qaeda": -100,
+    "aqap": -90,
+    "al_shabaab": -90,
+    "jnim": -90,
+    "hamas": -85,
+    "pij": -85,
+    "hezbollah": -55,
+    "houthis": -70,
+    "iraqi_militias": -55,
+    "fra": 70,
+    "deu": 80,
+    "esp": 80,
+    "nld": 80,
+    "bel": 80,
+    "nor": 80,
+    "dnk": 80,
+    "swe": 80,
+    "fin": 80,
+    "grc": 80,
+    "mda": 60,
+    "aut": 50,
+    "che": 50,
+    "srb": 25
+  },
+  "theatres": [
+    "lebanon_south",
+    "mesopotamia",
+    "yemen_red_sea",
+    "horn_of_africa",
+    "black_sea_coast",
+    "baltic_coast",
+    "alpine_europe"
+  ],
+  "languages": [
+    "Italian"
+  ],
+  "callout_language": "Italian",
+  "doctrine": {
+    "summary": "Medium-weight army built on wheeled Centauro/Freccia families and mountain troops (Alpini). Long experience in peacekeeping (UNIFIL) and Iraq training.",
+    "squad_size": 8,
+    "fireteam": "Squadra of two four-man teams.",
+    "tactics": [
+      "wheeled medium forces with direct-fire support",
+      "Alpini mountain warfare",
+      "UN peacekeeping posture"
+    ],
+    "ai_tuning": {
+      "aggression": 0.5,
+      "discipline": 0.8,
+      "suppression_resistance": 0.7,
+      "flanking": 0.65,
+      "grenade_use": 0.55,
+      "medical_care": 0.85,
+      "night_capability": 0.8,
+      "marksmanship": 0.75,
+      "morale": 0.7
+    }
+  },
+  "camo": [
+    {
+      "name": "M04 Vegetato",
+      "palette": [
+        "#4B5139",
+        "#7C7553",
+        "#A69878",
+        "#2F2A22"
+      ],
+      "use": "standard temperate"
+    },
+    {
+      "name": "Vegetato deserto",
+      "palette": [
+        "#C8B48C",
+        "#A28C66",
+        "#7B6A4E",
+        "#5F5A42"
+      ],
+      "use": "desert"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "Beretta ARX160 (5.56x45mm)",
+      "Beretta NARP (5.56x45mm), being introduced"
+    ],
+    "autorifleman": [
+      "FN Minimi (5.56x45mm)"
+    ],
+    "marksman": [
+      "Beretta ARX200 (7.62x51mm)"
+    ],
+    "grenadier": [
+      "ARX160 with GLX-160 (40mm)"
+    ],
+    "at": [
+      "Panzerfaust 3 (110mm)",
+      "Spike LR (ATGM)"
+    ],
+    "medic": [
+      "ARX160 (5.56x45mm)"
+    ],
+    "squad_leader": [
+      "ARX160 (5.56x45mm)"
+    ],
+    "sniper": [
+      "Sako TRG-42 (.338 Lapua Magnum)",
+      "Victrix Pugio"
+    ],
+    "sidearm": [
+      "Beretta 92FS (9x19mm)",
+      "Beretta APX (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "Panzerfaust 3 (not in game list)",
+    "Spike LR (ATGM, not in game list)"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "ceramic",
+    "notes": "Game mapping."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "ariete",
+      "role": "mbt",
+      "prevalence": "uncommon",
+      "notes": "About 110, C2 upgrade underway; Panther KF51 planned."
+    },
+    {
+      "vehicle_id": "centauro",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": "Centauro and Centauro II wheeled tank destroyers."
+    },
+    {
+      "vehicle_id": "freccia",
+      "role": "ifv",
+      "prevalence": "signature",
+      "notes": "VBM Freccia 8x8."
+    },
+    {
+      "vehicle_id": "dardo",
+      "role": "ifv",
+      "prevalence": "common",
+      "notes": "Tracked IFV, being replaced by Lynx."
+    },
+    {
+      "vehicle_id": "iveco_lmv",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": "VTLM Lince, about 1,900."
+    },
+    {
+      "vehicle_id": "bv206",
+      "role": "other",
+      "prevalence": "common",
+      "notes": "Alpini over-snow transport."
+    },
+    {
+      "vehicle_id": "aav7",
+      "role": "apc",
+      "prevalence": "rare",
+      "notes": "Lagunari regiment and Navy San Marco."
+    },
+    {
+      "vehicle_id": "pzh2000",
+      "role": "artillery",
+      "prevalence": "uncommon",
+      "notes": ""
+    },
+    {
+      "vehicle_id": "aw129",
+      "role": "attack_heli",
+      "prevalence": "common",
+      "notes": "A129 Mangusta, being replaced by AW249."
+    },
+    {
+      "vehicle_id": "ch47",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": "CH-47F."
+    },
+    {
+      "vehicle_id": "nh90",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": ""
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "ita_rifle_squad",
+      "name": "Italian rifle squad (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "ita_mech_squad",
+      "name": "Italian mechanised squad",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 2
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "freccia"
+    },
+    {
+      "id": "ita_recon_team",
+      "name": "Italian recon / sniper pair team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "sniper",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "iveco_lmv"
+    }
+  ],
+  "support_assets": [
+    "A129 CAS",
+    "PzH 2000 artillery",
+    "Predator / Reaper drones",
+    "CH-47 airmobile insertion"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 20,
+        "unlocks": [
+          "service rifle and ammunition",
+          "uniforms in national camo",
+          "light helmet and vest"
+        ]
+      },
+      {
+        "rep": 40,
+        "unlocks": [
+          "optics and NVGs",
+          "medium armour",
+          "Panzerfaust 3 launcher"
+        ]
+      },
+      {
+        "rep": 60,
+        "unlocks": [
+          "marksman and sniper rifles",
+          "heavy armour",
+          "Lince (light vehicle)"
+        ]
+      },
+      {
+        "rep": 80,
+        "unlocks": [
+          "Freccia (armoured transport)",
+          "fire-support call-ins on contracts"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "counter-terrorist raid",
+      "hostage / personnel recovery",
+      "convoy escort",
+      "HVT capture",
+      "recover lost equipment or sensitive kit",
+      "train and accompany partner forces",
+      "security of embassy or base",
+      "counter-drone site defence",
+      "UNIFIL support in south Lebanon",
+      "Red Sea shipping protection"
+    ],
+    "as_target": [
+      "only if the player works for this nation's enemies: sabotage a logistics depot",
+      "only if the player works for this nation's enemies: ambush a supply convoy"
+    ]
+  },
+  "notes": "Large UNIFIL commitment; Aspides EU naval mission in Red Sea. Early-game client.",
+  "proposed": [
+    "campaign_tier",
+    "relations.player",
+    "doctrine.ai_tuning",
+    "unit_templates",
+    "player_trade.rep_tiers",
+    "contract_types",
+    "body_armor (game tier mapping)",
+    "vehicles[].prevalence (game weighting)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Italian_Army",
+    "https://theaviationist.com/2025/10/29/italy-29-more-aw249-attack-helicopters/"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "id": "pandur_ii",
+  "name": "Pandur II",
+  "aliases": [
+    "Pandur II 8x8",
+    "Sabrah 8x8 (PHL)"
+  ],
+  "origin": "Austria / Czech Republic (GDELS, Excalibur Army)",
+  "type": "ifv",
+  "operators": [
+    "phl",
+    "aut"
+  ],
+  "crew": 3,
+  "passengers": 8,
+  "dimensions_m": {
+    "length": 7.5,
+    "width": 2.7,
+    "height": 2.4
+  },
+  "weight_t": 22.0,
+  "armament": [
+    "Philippine Sabrah: Elbit 105 mm light-tank turret",
+    "Others: 30 mm RCWS or 12.7 mm RWS"
+  ],
+  "protection": "Steel hull with add-on armour. Game: immune to all small-calibre rounds; frontal arc resists 12.7/14.5 mm; 7.62x54R damages optics, tyres/tracks and exposed gear, 12.7/14.5 mm penetrates side and rear; all launchers penetrate.",
+  "visual_notes": [
+    "Angular 8x8 with sloped glacis, two axle groups",
+    "PHL Sabrah wheeled version carries a large Elbit 105 mm turret, making it a wheeled light tank",
+    "Rear door, smoke grenade banks"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Philippine Army green",
+      "palette": [
+        "#4C5536",
+        "#36402A",
+        "#6E6A4A"
+      ]
+    }
+  ],
+  "variants": [
+    "Pandur II 8x8 (CZE, POR, IDN)",
+    "Sabrah wheeled light tank (PHL, 10)",
+    "Pandur I 6x6 (AUT legacy)",
+    "Pandur Evolution 6x6 (AUT, Pandur I lineage; 225 ordered 2024, 36 with Skyranger 30)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Pandur_II",
+    "https://commons.wikimedia.org/wiki/Category:Pandur_II"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Pandur_II",
+    "https://gbp.com.sg/stories/philippine-army-modernisation-on-display/"
+  ]
+}

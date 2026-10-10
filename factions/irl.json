@@ -1,0 +1,280 @@
+{
+  "id": "irl",
+  "name": "Irish Defence Forces (Óglaigh na hÉireann)",
+  "short": "Ireland",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#169B62",
+    "#FFFFFF",
+    "#FF883E"
+  ],
+  "blocs": [
+    "eu",
+    "nato_partnership_for_peace",
+    "global_coalition_against_isis",
+    "unifil"
+  ],
+  "traits": [
+    "neutral",
+    "un_peacekeeping"
+  ],
+  "campaign_tier": "early",
+  "alignment_to_player": "neutral",
+  "player_client": true,
+  "relations": {
+    "player": 15,
+    "gbr": 50,
+    "usa": 45,
+    "fra": 45,
+    "deu": 40,
+    "che": 40,
+    "aut": 40,
+    "fin": 40,
+    "ukr": 40,
+    "pse_pa": 40,
+    "isr": -25,
+    "rus": -45,
+    "hezbollah": -40,
+    "isis": -90,
+    "al_qaeda": -85,
+    "pmc_halcyon": -10,
+    "pmc_kestrel": -35,
+    "pmc_black_sable": -20
+  },
+  "theatres": [
+    "lebanon_south"
+  ],
+  "languages": [
+    "English",
+    "Irish"
+  ],
+  "callout_language": "English (Irish accent; Irish-language drill commands)",
+  "doctrine": {
+    "summary": "A small professional force (about 7,500 personnel in 2026, below its establishment) that has served continuously with UNIFIL in south Lebanon since 1978, alongside other UN and EU missions. It operates as light and motorised infantry: Mowag Piranha III APCs, RG-32M light tactical vehicles, Javelin and 84 mm anti-armour weapons, and a small Army Ranger Wing special-forces unit. A 2022 Commission on the Defence Forces report started a rebuild (new armoured vehicle programme to replace the Piranha III and RG-32M, radars, helicopters), and in 2025 the government moved to remove the 'triple lock' requiring a UN mandate for overseas deployments of more than 12 troops. Ireland is militarily neutral and outside NATO.",
+    "squad_size": 8,
+    "fireteam": "Section of 8 in two fireteams (Charlie and Delta), battle-buddy pairs; Piranha or RG-32M mounted on UN tours.",
+    "tactics": [
+      "Peacekeeping posture: patrols, observation posts, checkpoints, force protection",
+      "Defensive fire and withdrawal under UN rules of engagement; no offensive operations",
+      "Motorised quick reaction force with Piranha APCs",
+      "Army Ranger Wing for hostage rescue and evacuation of nationals"
+    ],
+    "ai_tuning": {
+      "aggression": 0.3,
+      "discipline": 0.85,
+      "suppression_resistance": 0.6,
+      "flanking": 0.5,
+      "grenade_use": 0.4,
+      "medical_care": 0.8,
+      "night_capability": 0.6,
+      "marksmanship": 0.7,
+      "morale": 0.7
+    }
+  },
+  "camo": [
+    {
+      "name": "Irish DPM (woodland)",
+      "palette": [
+        "#5C6038",
+        "#3B3F26",
+        "#7A5E3A",
+        "#1E1E18"
+      ],
+      "use": "Home service uniform"
+    },
+    {
+      "name": "Irish desert DPM",
+      "palette": [
+        "#C9B48C",
+        "#9C8156",
+        "#6F5A3C"
+      ],
+      "use": "UNIFIL and overseas tours"
+    },
+    {
+      "name": "UN white vehicles",
+      "palette": [
+        "#F2F2EE",
+        "#1F1F1F",
+        "#418FDE"
+      ],
+      "use": "Piranha and RG-32M on UN duty, black 'UN' lettering and UN blue berets/helmet covers"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "Steyr AUG A3 (5.56x45mm)"
+    ],
+    "autorifleman": [
+      "FN Minimi (5.56x45mm)",
+      "FN MAG GPMG (7.62x51mm)"
+    ],
+    "marksman": [
+      "HK417 (7.62x51mm)"
+    ],
+    "grenadier": [
+      "Steyr AUG A3 with 40 mm underbarrel launcher"
+    ],
+    "at": [
+      "Javelin [in_game]",
+      "84 mm Carl Gustaf [MAAWS: in_game]"
+    ],
+    "medic": [
+      "Steyr AUG A3 (5.56x45mm)"
+    ],
+    "squad_leader": [
+      "Steyr AUG A3 (5.56x45mm)"
+    ],
+    "sniper": [
+      "Accuracy International AW (7.62x51mm)",
+      "Barrett M82 (12.7x99mm)"
+    ],
+    "sidearm": [
+      "Glock 17 (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "Javelin [in_game]",
+    "Carl Gustaf 84 mm [MAAWS in_game]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "ceramic",
+    "notes": "Plate carriers and ballistic helmets on UN tours (medium); UN blue helmet covers."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "piranha",
+      "role": "apc",
+      "prevalence": "signature",
+      "notes": "Mowag Piranha IIIH 8x8 (about 80), in UN white on UNIFIL tours; replacement programme under way."
+    },
+    {
+      "vehicle_id": "rg32m",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "RG-32M light tactical vehicle (about 27), patrol and reconnaissance."
+    },
+    {
+      "vehicle_id": "toyota_land_cruiser",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Soft-skin patrol and liaison vehicles on UN duty."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "irl_unifil_section",
+      "name": "UNIFIL infantry section (Piranha)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "piranha"
+    },
+    {
+      "id": "irl_op_post",
+      "name": "UN observation post",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "rg32m"
+    },
+    {
+      "id": "irl_arw_team",
+      "name": "Army Ranger Wing team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    }
+  ],
+  "support_assets": [
+    "Mortar section (81 mm)",
+    "UN force-level support (medevac, engineers) on UNIFIL tours",
+    "Air Corps AW139 helicopters at home (not in catalogue)"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [
+      "Protect Irish peacekeepers and UN posts during the UNIFIL drawdown (lebanon_south)",
+      "Escort UN or NGO convoys and withdrawing equipment",
+      "Evacuate Irish and EU nationals",
+      "Recover a kidnapped aid worker or peacekeeper",
+      "Clear unexploded ordnance near UN positions (escort engineers)"
+    ],
+    "as_target": []
+  },
+  "notes": "Neutral state; never a target faction. Lists only 3 vehicles (the spec asks for 4-12) because the Irish Army's armoured fleet is essentially the Piranha III and RG-32M. Situation as of October 2026: about 350 Irish troops serve with UNIFIL until the mission's mandate ends on 31 December 2026 (UN Security Council resolution of August 2025), with the drawdown and withdrawal in 2027. UNIFIL positions were hit during the 2024 Israel-Hezbollah war and an Irish soldier (Pte Seán Rooney) was killed near Al-Aqbiyah in December 2022; irl relations toward isr and hezbollah reflect these incidents and Ireland's recognition of Palestine (May 2024), not open hostility. The armoured vehicle replacement contract is unconfirmed; reports name KNDS (Griffon/Serval) as a frontrunner. Game role: early-game neutral client in lebanon_south with protect-the-peacekeepers and convoy contracts.",
+  "proposed": [
+    "campaign_tier",
+    "relations.player",
+    "doctrine.ai_tuning",
+    "contract_types.as_client",
+    "unit_templates",
+    "vehicles[].prevalence (game weighting)",
+    "body_armor (game tier mapping)",
+    "traits (neutral and un_peacekeeping are game tags)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Irish_Defence_Forces",
+    "https://en.wikipedia.org/wiki/Irish_Army",
+    "https://www.gov.ie/ga/an-roinn-cosanta/preaseisiuinti/government-approves-the-defence-forces-continued-participation-in-unifil-in-line-with-mission-drawdown/",
+    "https://www.irishpost.com/news/irish-defence-forces-in-lebanon-set-to-leave-with-other-un-peacekeepers-in-2027-296844",
+    "https://thedefensepost.com/2025/02/19/ireland-replace-armored-vehicles/",
+    "https://en.wikipedia.org/wiki/United_Nations_Interim_Force_in_Lebanon"
+  ]
+}

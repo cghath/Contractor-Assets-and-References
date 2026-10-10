@@ -1,0 +1,134 @@
+{
+  "id": "mexico_cartel_belt",
+  "name": "Sierra y Costa del Pacifico",
+  "inspired_by": "North-west and western Mexico as of 2026 (Sinaloa, Jalisco and Michoacan types): an irrigated Pacific coastal plain with export farms, shrimp ponds and mangrove estuaries, a port-city edge, Sierra Madre foothills of pine-oak forest and deep barrancas with remote hamlets, and volcanic highland valleys of avocado orchards and agave fields. Two fictional cartels fight each other and the Mexican state with armoured trucks, roadblocks and explosive drones. All towns and both cartels are fictional.",
+  "map_size_km": [24, 22],
+  "climate": "Hot semi-arid to tropical wet-and-dry on the coast (Koppen BSh/Aw), temperate highland in the sierra (Cwb). Coast 30-38 C in summer, 20-28 C in winter; highlands 15-28 C with cool nights. Rainy season July-October (monsoon thunderstorms, hurricanes on the coast); dry season November-June, with smoke from fires in spring.",
+  "seasons": [
+    "Dry winter (Nov-Feb): pleasant, harvest season on the coast (tomato, chilli), clear skies",
+    "Hot dry spring (Mar-Jun): heat, forest fires and haze in the sierra, dry rivers",
+    "Rainy season (Jul-Oct): afternoon storms, flooded arroyos, landslides on sierra roads, hurricane events on the coast",
+    "Holiday peaks (Dec, Holy Week): heavy traffic and crowds in towns"
+  ],
+  "biomes": [
+    {"id": "irrigated_coastal_plain", "share": 0.24, "vegetation": ["tomato, chilli and vegetable fields under shade cloth and greenhouses", "mango orchards", "sugarcane", "canal-side mesquite and huizache"], "ground_palette": ["#8a6a4a", "#a8845a", "#6e5038", "#c4a47a", "#5a4430"], "foliage_palette": ["#5f8a3a", "#7da048", "#3f6b2e", "#a8c06a", "#e8e8e0"]},
+    {"id": "mangrove_and_shrimp_ponds", "share": 0.1, "vegetation": ["red and white mangroves", "salt flats", "shrimp aquaculture ponds"], "ground_palette": ["#6b6250", "#8a7f68", "#3f5f6a", "#c8bfa0"], "foliage_palette": ["#3f6b2e", "#4a6b3a", "#5f7f48", "#7d9a5e"]},
+    {"id": "dry_tropical_forest_foothills", "share": 0.24, "vegetation": ["tropical deciduous forest (leafless in the dry season)", "columnar cacti and agaves", "palo blanco and kapok (ceiba)", "cattle pastures"], "ground_palette": ["#9a6a4a", "#b3845a", "#7a5038", "#c9a07a"], "foliage_palette": ["#7a8a48", "#a0a866", "#5f7038", "#c9b56e", "#8a8a8a"]},
+    {"id": "pine_oak_sierra", "share": 0.26, "vegetation": ["pine-oak forest (Pinus, Quercus)", "madrone", "bromeliads on oaks", "hidden clearings with small fields"], "ground_palette": ["#6a5040", "#8a6a50", "#4a382a", "#a88a6a"], "foliage_palette": ["#2f4a2a", "#3f5e34", "#55703f", "#7a8a58"]},
+    {"id": "avocado_and_agave_highland", "share": 0.16, "vegetation": ["avocado orchards on volcanic slopes", "blue agave fields in rows", "pine remnants", "maize plots"], "ground_palette": ["#5a3a2e", "#7a4a38", "#3e2a22", "#9a6a52"], "foliage_palette": ["#2f5a2b", "#4a7a36", "#7aa0a8", "#3e5a30"]}
+  ],
+  "terrain": {
+    "elevation_range_m": [-20, 2600],
+    "relief": "A flat coastal plain (0-100 m) 6-10 km wide with estuaries and lagoons; foothills and mesas rising to 600-1,200 m; the sierra with deep barrancas (canyons) and ridges to 2,600 m in the east; a volcanic highland basin in the south-east at 1,600-2,000 m.",
+    "features": ["mangrove estuaries and coastal lagoons", "shrimp-pond grids", "irrigation canals and a dam reservoir in the foothills", "deep barrancas with hamlets on benches", "volcanic cinder cones and lava flows (malpais)", "dirt airstrips in the sierra", "highway toll booths and long viaducts", "arroyos dry most of the year"],
+    "water": "The Pacific on the west edge; two rivers from the sierra with a dam and reservoir; irrigation canals on the plain; lagoons and estuaries; arroyos.",
+    "generator": {
+      "approach": "Heightmap at 10 m with coastal bathymetry. Coastal ramp, foothills from fbm, sierra from ridged multifractal masked to the east with barrancas carved by flow accumulation and deepened; volcanic highland as a basin mask with cellular cinder cones and a lava-flow noise texture. Farm field grid and shrimp-pond grid as flat cells on the plain.",
+      "noise_layers": [
+        {"type": "ridged multifractal", "frequency": 0.3, "amplitude_m": 2000, "purpose": "Sierra Madre ridges, masked to the east"},
+        {"type": "simplex fbm", "frequency": 0.6, "amplitude_m": 250, "purpose": "foothills and mesas"},
+        {"type": "cellular (Worley F1, inverted)", "frequency": 1.0, "amplitude_m": 200, "purpose": "volcanic cinder cones in the highland basin"},
+        {"type": "ridged, inverted, deepened", "frequency": 1.2, "amplitude_m": -500, "purpose": "barrancas along flow lines"},
+        {"type": "grid mask", "frequency": 8.0, "amplitude_m": -1.0, "purpose": "shrimp ponds and field grid on the plain"}
+      ],
+      "erosion": "Strong hydraulic erosion in the sierra; landslide scars as a post-pass on steep slopes (rainy-season hazard).",
+      "rivers": "Two river splines from the sierra to the estuaries, one dammed in the foothills; canals branching from below the dam; arroyos by flow accumulation.",
+      "settlement_flattening": "Plain towns flattened; sierra hamlets on benches per plot; highland towns in the basin flattened.",
+      "notes": "Few roads into the sierra (one paved road with switchbacks and a toll highway with viaducts along the coast) make roadblocks decisive. The cartels' armoured trucks are road-bound; drones cross everything."
+    }
+  },
+  "settlements": [
+    {"type": "city_district", "share": 0.2, "pop_range": [50000, 300000], "architecture": "Port-city district: one- and two-storey concrete and block houses painted bright colours with flat roofs and rebar stubs, iron gates and window grilles, OXXO-type corner stores, taco stands, a cathedral plaza with a kiosk, a malecon (sea promenade), gated villas of narco-style ornate design on the edge.", "footprint_m": "house 7x18; block 80x100", "storeys": [1, 3], "wall_class": "Block and concrete medium; ornate villas thick perimeter walls.", "materials": ["CINDER_BLOCK", "CONCRETE", "PAINTED", "STEEL", "GLASS"], "palette": ["#e8c06a", "#c8402e", "#3f8f6f", "#4f8ac0", "#e6e0d2", "#9a978f"], "layout_rules": ["grid of colonias around a central plaza and cathedral", "malecon on the seafront", "industrial port zone", "gated villa compounds on hills"], "example_names": ["Colonia Las Palmas del Puerto", "Puerto Altamar", "Bahia Morena", "Villa del Estero"]},
+    {"type": "town", "share": 0.25, "pop_range": [5000, 60000], "architecture": "Agricultural and highland towns: single-storey adobe and block houses with tile or flat roofs around a plaza with a church and kiosk, a municipal palace, a market, packing houses for produce, avocado and tequila-agave packers in the highland; town entrances sometimes blocked by burnt vehicles.", "footprint_m": "house 8x15", "storeys": [1, 2], "wall_class": "Adobe walls 40-60 cm thick; block medium.", "materials": ["MUD_BRICK", "CINDER_BLOCK", "ROOF_TILE", "PAINTED", "CORRUGATED_IRON"], "palette": ["#a47e57", "#e6dcc8", "#a4553b", "#c8402e", "#3f8f6f"], "layout_rules": ["plaza with church, kiosk and municipal palace", "grid of streets", "packing houses on the highway", "town entrances as roadblock points"], "example_names": ["San Miguel de las Huertas", "Santa Rosa del Aguacate", "El Huizachal Viejo", "Llano Colorado", "Villa Agave"]},
+    {"type": "village", "share": 0.3, "pop_range": [50, 1500], "architecture": "Sierra ranchos and hamlets: adobe and stone houses with tin or tile roofs, corrals, a small chapel, a school; many partially abandoned after displacement; hidden labs in the forest nearby.", "footprint_m": "house 6x10", "storeys": [1, 1], "wall_class": "Adobe and stone thick; tin sheds thin.", "materials": ["MUD_BRICK", "STONE", "CORRUGATED_IRON", "WOOD"], "palette": ["#a47e57", "#8f8676", "#8b8e8c", "#8c6a46"], "layout_rules": ["on barranca benches or ridge saddles", "single dirt road in", "dirt airstrip near some"], "example_names": ["Rancho El Ocote", "La Joya de los Pinos", "Los Tepehuajes", "Arroyo de las Animas", "El Pitayo"]},
+    {"type": "compound", "share": 0.25, "pop_range": [0, 800], "architecture": "Cartel and state sites: walled cartel ranch compounds with watchtowers, safe houses in town, drug labs (tarp-covered sheds, barrels) in the sierra, armoured-truck workshops, Mexican army and National Guard bases and checkpoints, a dam and a port container yard.", "footprint_m": "ranch 150x200; lab 30x40; base 500x600", "storeys": [1, 2], "wall_class": "Ranch perimeter walls thick; labs and sheds thin.", "materials": ["CINDER_BLOCK", "CONCRETE", "STEEL", "CORRUGATED_IRON", "TARP", "SANDBAG"], "palette": ["#9a978f", "#8a8577", "#4a4d50", "#8b8e8c", "#3f6d8c", "#b8a378"], "layout_rules": ["ranches in foothills with one gated road", "labs in sierra forest near water", "military bases on the highway"], "example_names": ["Rancho Los Tres Gallos", "Taller La Herradura", "Base de Operaciones Costa Norte", "Laboratorio Barranca Seca"]}
+  ],
+  "infrastructure": {
+    "roads": "A four-lane toll highway along the coast with viaducts and toll booths, a free federal road, one paved road into the sierra with switchbacks and a long bridge over a barranca, many dirt roads. Burnt-vehicle roadblocks appear in crisis events.",
+    "rail": "A freight line along the coast.",
+    "power": "Power lines, a hydro dam, solar farms on the plain.",
+    "ports": "A commercial port with container yard, a fishing harbour, shrimp-boat docks; LHD offshore (Mexican-approved, proposed).",
+    "airfields": "Regional airport near the city, many clandestine dirt strips in the sierra.",
+    "checkpoints": "Army and National Guard checkpoints on highways; cartel lookouts (halcones) and roadblocks on sierra roads; toll plazas."
+  },
+  "pois": [
+    {"type": "sierra_drug_lab", "description": "Clandestine lab in pine-oak forest near a stream: tarp sheds, barrels, generators, a pickup track; chemical hazard area.", "contract_use": "raid a cartel drug lab with Mexican forces (client mex)", "loot_tier": "medium", "intel_chance": 0.5},
+    {"type": "cartel_ranch", "description": "Walled ranch with a main house, guards, a garage of armoured trucks, a helipad and a watchtower.", "contract_use": "capture or locate a cartel HVT (client mex)", "loot_tier": "medium", "intel_chance": 0.6},
+    {"type": "burnt_vehicle_roadblock", "description": "Highway roadblock of burning lorries and buses, spikes on the road, lookouts on a hill.", "contract_use": "clear a cartel roadblock and reopen a highway (client mex)", "loot_tier": "low", "intel_chance": 0.25},
+    {"type": "armoured_truck_workshop", "description": "Workshop in a town's industrial edge where pickups and lorries are plated into armoured 'monstruos'.", "contract_use": "weapons cache and vehicle raid (client mex)", "loot_tier": "medium", "intel_chance": 0.45},
+    {"type": "kidnap_safe_house", "description": "Ordinary house in a colonia with barred windows, hostages held in a back room, lookouts at the corner.", "contract_use": "rescue kidnapped civilians or officials (client mex)", "loot_tier": "low", "intel_chance": 0.4},
+    {"type": "barranca_bridge", "description": "Long concrete bridge over a deep barranca on the only sierra road; ambush cliffs above.", "contract_use": "escort a fuel, medical or election-material convoy through a blockaded zone (client mex)", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "avocado_packing_plant", "description": "Packing plant with loading docks, cold rooms and lorries; extortion target in the highland.", "contract_use": "protect a site under extortion; intel", "loot_tier": "low", "intel_chance": 0.3},
+    {"type": "clandestine_airstrip", "description": "Dirt strip on a sierra mesa with a shed, fuel drums and a wrecked light aircraft.", "contract_use": "interdict a flight; seize cargo (client mex)", "loot_tier": "medium", "intel_chance": 0.45},
+    {"type": "port_container_yard", "description": "Container yard with gantry cranes, scanners and stacks; chemical precursor shipments.", "contract_use": "intercept precursor containers (client mex)", "loot_tier": "medium", "intel_chance": 0.4},
+    {"type": "drone_launch_hill", "description": "Hilltop where a cartel drone team launches explosive drones on a rival town; antennas and a tent (game hazard).", "contract_use": "counter-drone overwatch of a base or town (client mex)", "loot_tier": "medium", "intel_chance": 0.4},
+    {"type": "army_base", "description": "Mexican army base with barracks, vehicle park and helipad.", "contract_use": "contract board and staging", "loot_tier": "low", "intel_chance": 0.05},
+    {"type": "displaced_hamlet", "description": "Half-empty sierra hamlet after families fled fighting between the two cartels; burnt houses, graffiti, a few residents.", "contract_use": "escort returning families; locate a mass grave site for authorities (briefing-level only)", "loot_tier": "low", "intel_chance": 0.3}
+  ],
+  "weather": {
+    "conditions": ["hot and sunny", "rainy-season thunderstorms", "hurricane events", "spring forest-fire smoke", "coastal morning haze"],
+    "visibility_notes": "Spring smoke haze in the sierra; storms ground helicopters in the rainy season; dense pine-oak forest limits sightlines.",
+    "dust_or_snow": "Dust on dirt roads in the dry season; frost possible in the high sierra in winter, no snow."
+  },
+  "civilians": {
+    "density": "high",
+    "behaviour": "Lively towns: markets in the morning, plazas full in the evening, music and festivals; field workers on the plain at dawn. Lookouts with radios watch roads (a readable cue: radio in hand, never a guess). On shooting or roadblocks, people shelter in shops and homes; during crisis events whole towns shut down and families flee the sierra.",
+    "vehicles": ["pickups (Ford Lobo, Ram, Hilux)", "combis and city buses", "lorries and produce trucks", "motorbikes", "taxis", "shrimp boats and pangas"],
+    "casualty_risk_notes": "Cartel towns are full of civilians and lookouts; the casualty rule applies in full and lookouts must be clearly identified before they count as combatants."
+  },
+  "factions_present": [
+    {"faction_id": "cartel_pacifico", "role": "militia", "strength": "high", "where": "North half: the port city, coastal plain and northern sierra; labs, ranches, airstrips; internal factions fighting each other."},
+    {"faction_id": "cartel_jalisco_nueva", "role": "militia", "strength": "high", "where": "South half: volcanic highland (avocado and agave towns), southern sierra; armoured-truck columns and drone teams pushing north."},
+    {"faction_id": "mex", "role": "defender", "strength": "medium", "where": "Army and National Guard bases and highway checkpoints; the port; operations into the sierra."},
+    {"faction_id": "usa", "role": "patrol", "strength": "low", "where": "No US forces in Mexico (game what-if per usa.json): appears only as maritime interdiction offshore and as an intelligence liaison at the port."},
+    {"faction_id": "pmc_halcyon", "role": "rival_pmc", "strength": "low", "where": "Corporate security for mining and agribusiness clients in the foothills; competes for convoy and site jobs."}
+  ],
+  "frontline": "A three-way turf war. The two cartels contest the middle of the map (the foothill and sierra plazas between their halves); the war sim shifts plaza control after clashes, and contested plazas spawn roadblocks, drone attacks and displacement. Mexican operations (and player contracts for mex) arrest or kill HVTs, which triggers blockades and burnt-vehicle roadblocks across the map for a few days. The state rarely holds the sierra; it holds highways, the port and towns during operations.",
+  "contract_hooks": [
+    "Raid a cartel drug lab with Mexican forces (client mex)",
+    "Capture or locate a cartel HVT at a ranch (client mex)",
+    "Rescue kidnapped civilians or officials from a safe house (client mex)",
+    "Escort a fuel, medical or election-material convoy through a blockaded zone (client mex)",
+    "Clear a cartel roadblock and reopen a highway (client mex)",
+    "Counter-drone overwatch of a base or town (client mex)",
+    "Intercept precursor containers at the port (client mex)",
+    "Interdict a flight at a clandestine airstrip (client mex)"
+  ],
+  "zone_plan": {
+    "contract_zones": [
+      {"name": "Sierra lab", "area_km2": 3, "anchor": "sierra_drug_lab", "notes": "forest, low civilians"},
+      {"name": "Highway roadblock", "area_km2": 2, "anchor": "burnt_vehicle_roadblock", "notes": "open, vehicles"},
+      {"name": "Colonia safe house", "area_km2": 2, "anchor": "kidnap_safe_house", "notes": "very dense civilians"},
+      {"name": "Barranca bridge", "area_km2": 3, "anchor": "barranca_bridge", "notes": "convoy chokepoint"}
+    ],
+    "hot_zones": [
+      {"name": "Highland plaza war", "area_km2": 14, "layout": "cartel_jalisco_nueva HQ in a walled ranch; 4-5 outposts (packing plant, town safe houses, drone hill, workshop); roadblocks on all town entrances; roaming armoured trucks and lookouts; 2 QRF columns of armoured trucks; cartel_pacifico teams as a third party in the north"}
+    ]
+  },
+  "insertion": {"lhd": true, "fob": "LHD offshore with Mexican approval (Captain-confirmed 2026-10-10) for coastal contracts; inland FOB inside a Mexican army base. Sovereignty rule: contracts come only from the Mexican government (no unilateral foreign raids). Roads and helicopters; AAVs on the coast and estuaries."},
+  "early_game_suitable": true,
+  "early_game_notes": "Not a terrorist theatre, but both cartels are early-tier enemies and mex is an early-game client, so it suits early contracts.",
+  "ambient_audio": ["banda and norteño music from cars", "roosters and dogs", "church bells", "trucks on the highway", "cicadas", "drone buzz (threat cue)", "radio chatter of lookouts (when intercepted)"],
+  "captain_confirmed": [
+    "map_size_km 24 x 22 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
+    "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
+    "materials accepted (Captain, 2026-10-10) and added to voxel_world.gd (Contractor dev, commit 1ec1417): CINDER_BLOCK #9a978f, MUD_BRICK #a47e57, ROOF_TILE #a4553b, STONE #8f8676, CORRUGATED_IRON #8b8e8c, TARP #3f6d8c, SANDBAG #b8a378, GLASS #9fbcc4",
+    "LHD only with Mexican approval; the restriction stays (Captain, 2026-10-10)",
+    "usa stays as a low-plausibility listing at low strength: offshore interdiction and a port liaison only, a game what-if (no US forces in Mexico) (Captain, 2026-10-10)"
+  ],
+  "proposed": [
+    "composite layout",
+    "generator numbers",
+    "plaza-control frontline model",
+    "zone_plan and hot zone",
+    "drug labs as chemical hazard areas (game-level, no process detail)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Sierra_Madre_Occidental",
+    "https://en.wikipedia.org/wiki/Sinaloa",
+    "https://en.wikipedia.org/wiki/Tierra_Caliente_(Mexico)",
+    "https://en.wikipedia.org/wiki/Trans-Mexican_Volcanic_Belt",
+    "https://en.wikipedia.org/wiki/Mexican_drug_war",
+    "factions/mex.json, cartel_pacifico.json, cartel_jalisco_nueva.json, usa.json notes"
+  ]
+}

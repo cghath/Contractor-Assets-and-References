@@ -1,0 +1,228 @@
+{
+  "id": "afghan_highlands",
+  "name": "Koh-e Safed Valleys",
+  "inspired_by": "Eastern Afghanistan's Hindu Kush and Spin Ghar borderlands as of 2026 (Nangarhar, Kunar and Logar types): irrigated river valleys with walled qalat compounds and orchards, terraced side valleys climbing to forested and snow-capped ranges, and the Durand Line border with Pakistan along the east edge, where an open Afghanistan-Pakistan border war has run since February 2026. ISIS-K cells exploit the fighting. All towns are fictional.",
+  "map_size_km": [20, 20],
+  "climate": "Continental semi-arid at valley level (Koppen BSk/BSh in the low eastern valleys, Dsb on the ranges). Valley summers 34-42 C (lower valleys) and 28-32 C (higher valleys), winters -5 to 10 C; ranges snow-covered November-April. 200-500 mm precipitation, mostly winter snow and spring rain; a weak summer monsoon fringe reaches the eastern forested slopes.",
+  "seasons": [
+    "Winter (Dec-Feb): snow on ranges and upper valleys, closed passes, cold clear days, smoke from wood stoves",
+    "Spring (Mar-May): snowmelt floods, wheat and poppy-era fields green, orchards in blossom, fighting season starts",
+    "Summer (Jun-Sep): hot dusty valleys, high pastures open, nomad (Kuchi) camps move up",
+    "Autumn (Oct-Nov): harvest of maize, rice, apples and pomegranates, first snow on peaks"
+  ],
+  "biomes": [
+    {
+      "id": "irrigated_valley_floor",
+      "share": 0.24,
+      "vegetation": ["wheat, maize and rice fields on terraced flats", "poplar and willow rows along karez and irrigation ditches", "mulberry, apricot, pomegranate and walnut orchards", "grape walls (drying-house vineyards)"],
+      "ground_palette": ["#8a6f52", "#a58a68", "#6e5640", "#c2a985", "#5a4a3a"],
+      "foliage_palette": ["#4f7a34", "#6a9a3e", "#8fb050", "#3a5e28", "#c9c87a"]
+    },
+    {
+      "id": "barren_foothills",
+      "share": 0.3,
+      "vegetation": ["bare gravel and rock slopes", "camelthorn and Artemisia steppe", "thorny cushion shrubs", "scattered wild almond and pistachio"],
+      "ground_palette": ["#b8a07c", "#a08866", "#cdb994", "#8a7458", "#d9c9a8", "#706050"],
+      "foliage_palette": ["#a8a27e", "#8f8a68", "#c1b98f", "#6f6c55"]
+    },
+    {
+      "id": "holm_oak_and_conifer_slopes",
+      "share": 0.2,
+      "vegetation": ["holm oak (Quercus baloot) woodland on mid slopes", "chilgoza pine (Pinus gerardiana)", "Himalayan cedar (deodar) and blue pine on higher slopes", "juniper near the treeline"],
+      "ground_palette": ["#6e5a46", "#8a7458", "#544636", "#a8927a", "#3e342a"],
+      "foliage_palette": ["#2f4a26", "#3e5e30", "#55703c", "#243a20", "#7a8a58"]
+    },
+    {
+      "id": "high_ranges_and_passes",
+      "share": 0.16,
+      "vegetation": ["alpine meadows above 3,000 m", "scree and bare rock", "snowfields most of the year above 3,800 m"],
+      "ground_palette": ["#9a9486", "#b7b1a3", "#7d776b", "#e8ecef", "#5f5a50"],
+      "foliage_palette": ["#7a7f58", "#9c9e74", "#5c6644", "#495236"]
+    },
+    {
+      "id": "river_gravel_and_floodplain",
+      "share": 0.1,
+      "vegetation": ["sea buckthorn and tamarisk on gravel bars", "willows", "reed in backwaters"],
+      "ground_palette": ["#9a948a", "#b8b2a6", "#7a746a", "#d2ccbe"],
+      "foliage_palette": ["#5f7a3a", "#7d9a4a", "#a8b86a", "#3f5a2a"]
+    }
+  ],
+  "terrain": {
+    "elevation_range_m": [550, 4500],
+    "relief": "A broad river valley (550-900 m) crosses the map, fed by narrow side valleys that climb steeply through barren foothills and forested slopes to ranges at 3,500-4,500 m along the east (border) and south edges. Valley floors are terraced flats; slopes are steep and rocky.",
+    "features": ["wide braided river with gravel bars", "narrow side valleys with stepped field terraces", "karez (underground channel) lines of shafts on alluvial fans", "rock ridges and spurs with cave shelters", "high passes on the border with smuggling and trade trails", "border posts and a border fence on the east ridge line", "alluvial fans at side-valley mouths where villages sit"],
+    "water": "One large river (100-300 m braided channel) with snowmelt floods in spring; side-valley streams; irrigation canals and karez feeding valley-floor fields; a small hydro dam and reservoir in a side valley; springs on the slopes.",
+    "generator": {
+      "approach": "Heightmap at 10 m. Base valley carved as a broad spline trough across the map; mountains from ridged multifractal masked to rise toward the east and south edges; side valleys carved by flow accumulation and widened; alluvial fans deposited at side-valley mouths (cone-shaped add); terraces post-pass on valley flats and lower slopes; snow mask by elevation and aspect.",
+      "noise_layers": [
+        {"type": "ridged multifractal (6 octaves)", "frequency": 0.25, "amplitude_m": 3200, "purpose": "main ranges, masked to rise toward the east and south edges"},
+        {"type": "simplex fbm", "frequency": 0.8, "amplitude_m": 350, "purpose": "spurs, saddles and foothill breakup"},
+        {"type": "ridged", "frequency": 3.0, "amplitude_m": 60, "purpose": "rock ribs, gullies and cave-bearing outcrops"},
+        {"type": "cone stamps", "frequency": 0, "amplitude_m": 40, "purpose": "alluvial fans at side-valley mouths (village sites)"},
+        {"type": "simplex", "frequency": 10.0, "amplitude_m": 1.5, "purpose": "boulders and micro-relief"}
+      ],
+      "erosion": "Strong hydraulic erosion (120 iterations) for side valleys and gullies; thermal erosion capped at 45 degrees with scree aprons; the main valley floor flattened after erosion.",
+      "rivers": "Main river spline along the valley trough, braided 100-300 m; side streams by flow accumulation; irrigation canals contour along the valley sides 5-20 m above the floor; karez as dotted shaft lines on fans (POI-instanced).",
+      "settlement_flattening": "Qalat compounds each flattened to a pad; villages on alluvial fans and valley edges (never on the floodable floor); hillside hamlets per plot on terraces.",
+      "notes": "Few roads: the main valley highway, a border-crossing road and side-valley tracks. Passes, the river bridges and the border crossing are chokepoints. AAVs are useless; helicopters are limited by altitude, weather and border air-defence threat during the border war (proposed)."
+    }
+  },
+  "settlements": [
+    {
+      "type": "compound",
+      "share": 0.35,
+      "pop_range": [10, 80],
+      "architecture": "Qalat family compound: high mud and rammed-earth walls 4-6 m tall and 0.6-1 m thick, sometimes with corner towers, enclosing one-storey mud-brick rooms with flat timber-and-earth roofs around a courtyard with a well and a garden; a single heavy wooden or steel gate.",
+      "footprint_m": "compound 30x30 to 60x60",
+      "storeys": [1, 2],
+      "wall_class": "Outer walls very thick: cover against small arms, which cannot breach them; only breaching charges, grenade launchers or vehicles breach them (Captain-confirmed 2026-10-10). Inner room walls 40 cm medium; roofs medium.",
+      "materials": ["MUD_BRICK", "DIRT_BERM", "WOOD", "STEEL"],
+      "palette": ["#a8875f", "#9a7a52", "#c4a57e", "#8c6a46", "#4a4d50"],
+      "layout_rules": ["scattered 50-300 m apart among fields and orchards", "irrigation ditch and a poplar row along one wall", "one gate facing a track", "towers on wealthier compounds"],
+      "example_names": ["Qala-e Gulab", "Qala-e Haji Nur", "Qala-e Spin Ghar", "Qala-e Mirza Khan"]
+    },
+    {
+      "type": "village",
+      "share": 0.3,
+      "pop_range": [300, 4000],
+      "architecture": "Valley-edge and side-valley villages: clusters of qalat compounds and terraced houses of stone and mud with flat roofs stepping up the slope (the roof of one serving as the yard of the next in steep valleys), a mosque with a small minaret or loudspeaker, a madrasa, a few shops and a bazaar lane.",
+      "footprint_m": "house 10x12; village 400x600",
+      "storeys": [1, 2],
+      "wall_class": "Mud and stone walls 40-70 cm thick; shop fronts thin.",
+      "materials": ["MUD_BRICK", "STONE", "WOOD", "CORRUGATED_IRON"],
+      "palette": ["#a8875f", "#9a9486", "#8c6a46", "#8b8e8c", "#c4a57e"],
+      "layout_rules": ["on an alluvial fan or a slope above the fields", "lanes follow contours; steep footpaths between levels", "mosque near the spring or stream", "orchards and grape-drying houses (kishmish khana, slotted mud towers) at the edge"],
+      "example_names": ["Gul Bagh Khel", "Kot-e Bala", "Chapa Dara Khurd", "Spin Tangi Kalay", "Dara-e Nur Payan", "Zarghun Kalay"]
+    },
+    {
+      "type": "town",
+      "share": 0.15,
+      "pop_range": [10000, 60000],
+      "architecture": "District centre bazaar town: two-storey shop rows of brick and concrete with steel shutters and wooden balconies, a covered bazaar, painted lorries, a large mosque, the district governor's compound and police headquarters behind HESCO and blast walls, a bus and lorry station.",
+      "footprint_m": "block 40x80; shop 4x8",
+      "storeys": [1, 3],
+      "wall_class": "Brick medium; concrete frames thick; HESCO compounds thick.",
+      "materials": ["BRICK", "CONCRETE", "MUD_BRICK", "STEEL", "PAINTED", "HESCO"],
+      "palette": ["#c9a46e", "#9c5a3c", "#8a8577", "#2f6f8f", "#c75b4a", "#a99a6c"],
+      "layout_rules": ["linear bazaar along the highway", "government compounds on the edge with HESCO", "lorry park and fuel stations at the junction", "river bridge at one end"],
+      "example_names": ["Shna Kot-e Naw", "Sarband Bazaar", "Pul-e Zarnigar", "Toot Mandi"]
+    },
+    {
+      "type": "camp",
+      "share": 0.08,
+      "pop_range": [500, 15000],
+      "architecture": "Returnee and nomad camps: tents and mud shelters of families returned or expelled from Pakistan, Kuchi nomad black tents with herds; aid tents and water points.",
+      "footprint_m": "camp 300x500",
+      "storeys": [1, 1],
+      "wall_class": "None.",
+      "materials": ["TARP", "MUD_BRICK", "WOOD"],
+      "palette": ["#3f6d8c", "#e8e4da", "#2e2a26", "#a8875f"],
+      "layout_rules": ["near the border crossing and on valley gravel flats", "high density at aid points"],
+      "example_names": ["Returnee Camp Dara-e Khak", "Kuchi Camp Sra Dagh", "Camp Shin Kalay"]
+    },
+    {
+      "type": "compound",
+      "share": 0.12,
+      "pop_range": [0, 1000],
+      "architecture": "Military and project sites: former Coalition and ANA bases now used by Taliban units (HESCO, guard towers, tents, captured vehicles), Pakistani border posts on the east ridge line (stone and concrete forts with bunkers and a flag), a Chinese-run copper-mine concession, a hydro dam project site, a power substation.",
+      "footprint_m": "border post 60x80; base 400x500; mine 1500x1500",
+      "storeys": [1, 3],
+      "wall_class": "HESCO, stone forts and bunkers thick; prefabs thin.",
+      "materials": ["HESCO", "STONE", "CONCRETE", "SANDBAG", "STEEL", "CORRUGATED_IRON"],
+      "palette": ["#a99a6c", "#9a9486", "#8a8577", "#b8a378", "#4a4d50"],
+      "layout_rules": ["bases on valley flats at junctions", "border posts on ridge crests every 1-2 km along the east edge", "project sites with fenced camps for foreign workers"],
+      "example_names": ["Base Tor Ghar", "Post Spina Ghunday", "Mes-e Sorkh Copper Concession", "Bandar-e Nur Dam Site B"]
+    }
+  ],
+  "infrastructure": {
+    "roads": "One paved highway along the main valley to a border crossing (closed or contested during the border war), gravel roads into side valleys, mule and foot trails over the passes. Three river bridges and the border-crossing road are chokepoints; side-valley roads are single-lane with drop-offs.",
+    "rail": "None (a planned regional railway survey corridor is a proposal POI only).",
+    "power": "Imported power line on pylons along the valley, a small hydro plant, solar panels on compounds, diesel generators in bazaars.",
+    "ports": "None (inland).",
+    "airfields": "A former Coalition airfield with a 2 km runway near the district town (Taliban-held, few aircraft), helipads at bases.",
+    "checkpoints": "Taliban checkpoints on the highway, bridges and valley entrances (a flag, a pickup, a shelter); Pakistani border posts and the border fence on the east ridge; the official border crossing with gates, lorry queues and returnee processing."
+  },
+  "pois": [
+    {"type": "isis_k_safe_house", "description": "Qalat compound in a side valley used by an ISIS-K cell: guard on the roof, motorbikes inside, a room of stored weapons and documents; family compounds nearby.", "contract_use": "counter-ISIS-K raid on a cell or safe house (clients afg_taliban, pak)", "loot_tier": "medium", "intel_chance": 0.6},
+    {"type": "cave_complex", "description": "Cave and tunnel complex in a rock spur above a side valley: several entrances behind stone walls, storage chambers, a spring, an observation point (level geometry only).", "contract_use": "cache raid; HVT location (al_qaeda figure or ISIS-K leader)", "loot_tier": "medium", "intel_chance": 0.55},
+    {"type": "border_crossing", "description": "Border crossing with gates, customs sheds, a lorry queue kilometres long, returnee camp beside it, and fortified posts on both sides; shelled during border-war flare-ups.", "contract_use": "convoy escort through a reopened crossing; extract a person at risk; protect returnee aid", "loot_tier": "low", "intel_chance": 0.25},
+    {"type": "pakistani_border_post", "description": "Stone and concrete fort on a ridge crest with bunkers, mortar pits, a fence line and a flag; artillery and drone fire into the valley during the border war.", "contract_use": "border-war hazard and objective; recon only (contracts on either side lock out the other)", "loot_tier": "medium", "intel_chance": 0.4},
+    {"type": "taliban_border_post", "description": "Afghan-side post below the ridge: sangars, a captured Humvee, a mud barracks, a heavy machine gun position.", "contract_use": "border-war objective seen from the Pakistani side; Taliban client's defence job against ISIS-K infiltration", "loot_tier": "low", "intel_chance": 0.3},
+    {"type": "copper_mine_concession", "description": "Foreign-run mine site: open-cut benches, haul trucks, a fenced workers' camp, a fuel depot and a security perimeter.", "contract_use": "infrastructure protection against ISIS-K attack (clients afg_taliban, pak via Chinese-funded projects)", "loot_tier": "medium", "intel_chance": 0.25},
+    {"type": "hydro_dam_project", "description": "Small dam and powerhouse in a side-valley gorge, a contractor camp and a single access road with tunnels.", "contract_use": "infrastructure protection; convoy escort of equipment", "loot_tier": "low", "intel_chance": 0.2},
+    {"type": "former_coalition_base", "description": "Ex-Coalition/ANA base used by Taliban units: HESCO streets, empty B-huts, a vehicle yard of captured MRAPs and Humvees, a helipad.", "contract_use": "recover captured US-made equipment or sensitive items before they are sold on", "loot_tier": "medium", "intel_chance": 0.45},
+    {"type": "valley_highway_bridge", "description": "Steel bridge on the highway over the braided river, a Taliban checkpoint, a tea house and lorry stop.", "contract_use": "convoy escort chokepoint", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "karez_line", "description": "Line of karez shafts across an alluvial fan, with tunnel access in the dry season (narrow level geometry); used for hiding and movement.", "contract_use": "pursue a fleeing cell; hide site", "loot_tier": "low", "intel_chance": 0.3},
+    {"type": "mountain_pass_trail", "description": "Pass at 3,400 m with a stone hut, cairns, snow patches and a trail down both sides; used by smugglers, returnees and cells.", "contract_use": "intercept a cell crossing; LRRP route", "loot_tier": "low", "intel_chance": 0.35},
+    {"type": "bazaar", "description": "Covered bazaar lane in the district town: stalls, tea houses, money changers, crowded at midday.", "contract_use": "meet a contact; extract a person at risk (high civilian density)", "loot_tier": "low", "intel_chance": 0.3}
+  ],
+  "weather": {
+    "conditions": ["clear and hot (summer valleys)", "dust storms and afternoon winds", "spring rain and snowmelt floods", "winter snow and fog in valleys", "clear cold nights"],
+    "visibility_notes": "Long views across valleys in clear weather (5-15 km); dust and haze in summer afternoons; winter fog in the valley; very dark nights with no grid power in villages. Helicopters limited by altitude and weather.",
+    "dust_or_snow": "Dust in summer; snow on ranges November-April and in the upper valleys December-February."
+  },
+  "civilians": {
+    "density": "medium",
+    "behaviour": "Farmers in fields from dawn; bazaars busy 08:00-13:00; Friday prayers at midday; women are rarely visible in public; boys herd goats on slopes; returnee families on the roads near the border. During border-war shelling, valley villages near the border empty toward the west, and the crossing queue becomes a crowd. Villagers avoid armed foreigners and Taliban patrols alike.",
+    "vehicles": ["Toyota Corolla taxis", "decorated jingle lorries", "Hilux and Ranger pickups", "motorbikes", "donkeys and camels on trails", "returnee lorries loaded with belongings", "tractors"],
+    "casualty_risk_notes": "Qalat compounds hold families; raids on compounds are where the casualty rule bites. The border crossing and returnee camp are very dense."
+  },
+  "factions_present": [
+    {"faction_id": "afg_taliban", "role": "defender", "strength": "high", "where": "Whole Afghan side: checkpoints on the highway and bridges, the district town, ex-Coalition base, border posts below the east ridge; fighting Pakistan on the border and ISIS-K in side valleys."},
+    {"faction_id": "pak", "role": "defender", "strength": "medium", "where": "East ridge line: border forts, fence and the far side of the crossing; artillery, drone and air strikes into the valley during border-war phases (aircraft AI only)."},
+    {"faction_id": "isis_k", "role": "insurgent", "strength": "medium", "where": "Side valleys, cave complexes and safe-house compounds; slips across passes during border-war chaos; attacks on projects, bazaars and Taliban posts."},
+    {"faction_id": "al_qaeda", "role": "insurgent", "strength": "low", "where": "A guest house compound and a cave complex in a remote side valley; HVT-only presence tolerated by local Taliban."},
+    {"faction_id": "chn", "role": "patrol", "strength": "low", "where": "Copper-mine concession: company security staff and engineers; no military units."},
+    {"faction_id": "ind", "role": "patrol", "strength": "low", "where": "Hydro dam project site: engineers and a small embassy-linked liaison team."}
+  ],
+  "frontline": "Two wars at once. (1) The Afghanistan-Pakistan border war (since February 2026, relations -90 both ways): the east ridge line is a live front. Border-war phases (campaign events) bring artillery and air strikes on Afghan-side posts and valley villages near the border, Taliban attacks on Pakistani forts, closure of the crossing and refugee/returnee surges; truce phases reopen the crossing. Neither side takes the other's territory on this map, but posts change hands locally and the crossing's state (open, closed, shelled) drives convoy and evacuation contracts. Contracts for afg_taliban and pak are mutually exclusive and lock each other out for the side-lock period. (2) Counter-ISIS-K: ISIS-K grows in side valleys whenever the border war is hot (the Taliban pull units to the border) and is pushed back by raids. Each campaign week of border war adds an ISIS-K cell to a side-valley zone (proposed).",
+  "contract_hooks": [
+    "Counter-ISIS-K raid on a safe-house compound in a side valley (client afg_taliban, limited client)",
+    "Counter-ISIS-K cell interdiction at a mountain pass on the border (client pak)",
+    "Convoy escort through the highlands when the crossing reopens (clients afg_taliban or pak, mutually exclusive)",
+    "Protect the copper mine or dam project against ISIS-K attack (client afg_taliban; or pak for Chinese-funded projects)",
+    "Recover captured US-made equipment from the ex-Coalition base before it is sold on (Western client, not a Taliban contract)",
+    "Extract a person at risk through Taliban checkpoints to the crossing (Western client)",
+    "HVT capture in a cave complex (client pak)",
+    "Hostage rescue of foreign engineers taken from a project site (clients pak, chn-linked project via pak)",
+    "Border-war casualty: evacuate wounded civilians from a shelled village to the district town (neutral humanitarian)"
+  ],
+  "zone_plan": {
+    "contract_zones": [
+      {"name": "Side valley compounds", "area_km2": 3, "anchor": "isis_k_safe_house", "notes": "qalat raids, families nearby"},
+      {"name": "Border crossing", "area_km2": 2.5, "anchor": "border_crossing", "notes": "border-war hazard, crowds"},
+      {"name": "Copper mine", "area_km2": 3, "anchor": "copper_mine_concession", "notes": "industrial benches, perimeter defence"},
+      {"name": "Highway bridge and bazaar", "area_km2": 2, "anchor": "valley_highway_bridge", "notes": "convoy chokepoint, Taliban checkpoint"}
+    ],
+    "hot_zones": [
+      {"name": "Upper side valleys", "area_km2": 14, "layout": "isis_k HQ in a cave complex; 4 outposts in compounds and ridge sangars; checkpoints on the valley track; roaming motorbike pairs; 1 QRF of pickups; Taliban posts at the valley mouth and Pakistani fire from the ridge as third parties during border-war phases"}
+    ]
+  },
+  "insertion": {"lhd": false, "fob": "Two alternative FOBs depending on the client: an Afghan-side FOB at the district town airfield area for afg_taliban work, or a Pakistan-side FOB beyond the east ridge (reached through the crossing or passes) for pak work. Players move by road, on foot over passes, or by helicopter in good weather and truce phases; no AAVs."},
+  "early_game_suitable": true,
+  "early_game_notes": "isis_k and al_qaeda are early-tier enemies and afg_taliban and pak are both early-game clients (mutually exclusive). The border war adds artillery and strike hazards; early contracts should stay in side valleys away from the ridge during border-war phases.",
+  "ambient_audio": ["call to prayer from loudspeakers", "river rush", "jingle-lorry bells and horns", "goats and donkeys", "wind on the passes", "distant artillery and jets during border-war phases", "motorbike engines"],
+  "captain_confirmed": [
+    "map_size_km 20 x 20 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
+    "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
+    "materials accepted (Captain, 2026-10-10) and added to voxel_world.gd (Contractor dev, commit 1ec1417): MUD_BRICK #a47e57, DIRT_BERM #8a6f4e, STONE #8f8676, BRICK #9c5a3c, HESCO #a99a6c, SANDBAG #b8a378, CORRUGATED_IRON #8b8e8c, TARP #3f6d8c",
+    "Qalat outer walls cannot be breached by small arms; only breaching charges, grenade launchers or vehicles breach them (Captain, 2026-10-10)"
+  ],
+  "proposed": [
+    "layout",
+    "generator numbers",
+    "border-war phases, crossing state and the ISIS-K growth rule",
+    "two client-dependent FOBs",
+    "zone_plan and hot zone",
+    "karez and caves as level geometry only"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Hindu_Kush",
+    "https://en.wikipedia.org/wiki/Spin_Ghar",
+    "https://en.wikipedia.org/wiki/Nangarhar_province",
+    "https://en.wikipedia.org/wiki/Qalat_(fortress)",
+    "https://en.wikipedia.org/wiki/Qanat",
+    "https://en.wikipedia.org/wiki/Durand_Line",
+    "factions/afg_taliban.json, pak.json (relations -90, border war since February 2026), isis_k.json, al_qaeda.json"
+  ]
+}

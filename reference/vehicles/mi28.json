@@ -1,0 +1,70 @@
+{
+  "id": "mi28",
+  "name": "Mil Mi-28 Havoc",
+  "aliases": [
+    "Mi-28N",
+    "Mi-28NE",
+    "Mi-28NM"
+  ],
+  "origin": "Russia",
+  "type": "attack_heli",
+  "operators": [
+    "rus",
+    "irq",
+    "irn"
+  ],
+  "crew": 2,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 17.0,
+    "width": 17.2,
+    "height": 3.8
+  },
+  "weight_t": 11.7,
+  "armament": [
+    "30 mm 2A42 chin cannon",
+    "Ataka / Shturm ATGM",
+    "80 mm S-8 rockets"
+  ],
+  "protection": "Armoured cockpit (titanium/ceramic) rated against 12.7 mm and some 20 mm. Game: small-calibre and 7.62x54R only damage; 12.7 mm/14.5 mm and MANPADS can bring it down.",
+  "visual_notes": [
+    "Tandem stepped cockpits with flat armoured glass panels",
+    "Short stub wings with 4 pylons and wingtip countermeasure pods",
+    "Chin-mounted 30 mm cannon on a turret",
+    "Mast-top radar dome (N/NM versions); five-blade main rotor"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Russian grey-green",
+      "palette": [
+        "#5B6250",
+        "#3E4438",
+        "#8A8E84"
+      ]
+    },
+    {
+      "name": "Iraqi desert",
+      "palette": [
+        "#B7A27C",
+        "#8A7656",
+        "#5A4D38"
+      ]
+    }
+  ],
+  "variants": [
+    "Mi-28N",
+    "Mi-28NE (export: IRQ, IRN)",
+    "Mi-28NM",
+    "Mi-28UB (trainer)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Mil_Mi-28",
+    "https://commons.wikimedia.org/wiki/Category:Mil_Mi-28"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Mil_Mi-28",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Iranian_Army"
+  ]
+}

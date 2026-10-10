@@ -1,0 +1,66 @@
+{
+  "id": "bmp2",
+  "name": "BMP-2",
+  "aliases": [
+    "BMP-2MD"
+  ],
+  "origin": "Soviet Union",
+  "type": "ifv",
+  "operators": [
+    "fin",
+    "rus",
+    "ukr",
+    "blr",
+    "kaz",
+    "arm",
+    "geo",
+    "ind",
+    "vnm",
+    "irn",
+    "houthis"
+  ],
+  "crew": 3,
+  "passengers": 7,
+  "dimensions_m": {
+    "length": 6.74,
+    "width": 3.15,
+    "height": 2.45
+  },
+  "weight_t": 14.0,
+  "armament": [
+    "30 mm 2A42",
+    "9M113 Konkurs launcher",
+    "7.62 mm PKT"
+  ],
+  "protection": "Light armour. Game: immune to 5.56/5.45/7.62x39/7.62x51; 7.62x54R can damage optics and exposed systems; 12.7/14.5 mm can penetrate sides on the lighter variants; any launcher in the game list penetrates.",
+  "visual_notes": [
+    "Low tracked hull with sharp ribbed nose",
+    "6 road wheels per side",
+    "Konkurs tube on the turret",
+    "Russian 2026 field look: welded anti-drone cage over the turret/roof, mesh or netting screens on the flanks, logs and track links on the hull"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Finnish three-tone",
+      "palette": [
+        "#4F5A3A",
+        "#2F3526",
+        "#7A7457"
+      ]
+    }
+  ],
+  "variants": [
+    "BMP-2MD (FIN)",
+    "BMP-2 Sarath (IND, licence-built)"
+  ],
+  "existing_model": null,
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/BMP-2",
+    "https://commons.wikimedia.org/wiki/Category:BMP-2"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/BMP-2",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Finnish_Army"
+  ]
+}

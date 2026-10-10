@@ -1,0 +1,64 @@
+{
+  "id": "z20",
+  "name": "Harbin Z-20",
+  "aliases": [
+    "Z-20",
+    "Z-20T",
+    "Z-20J"
+  ],
+  "origin": "China (Harbin)",
+  "type": "transport_heli",
+  "operators": [
+    "chn"
+  ],
+  "crew": 2,
+  "passengers": 12,
+  "dimensions_m": {
+    "length": 20.0,
+    "width": 16.4,
+    "height": 5.2
+  },
+  "weight_t": 10.0,
+  "armament": [
+    "Door guns (12.7 mm) on some; Z-20T/armed variant with stub wings and ATGMs/rocket pods"
+  ],
+  "protection": "Game: airframe immune to small-calibre rounds; 7.62x54R and 12.7/14.5 mm damage rotor, engines and cockpit glass (forced landing on accumulated hits); launchers and MANPADS (off-list) destroy it.",
+  "visual_notes": [
+    "Black Hawk-class utility helicopter: long cabin, five-blade main rotor (vs four on UH-60)",
+    "Flat-sided cabin with large sliding doors, tail-wheel landing gear",
+    "Canted tail rotor, horizontal stabiliser; armed variant has stub wings"
+  ],
+  "colour_schemes": [
+    {
+      "name": "PLA Army Aviation grey-green",
+      "palette": [
+        "#5D6650",
+        "#3F4537",
+        "#8A9180"
+      ]
+    },
+    {
+      "name": "PLAN grey",
+      "palette": [
+        "#8C949A",
+        "#5E666C",
+        "#B7BDC1"
+      ]
+    }
+  ],
+  "variants": [
+    "Z-20 (army)",
+    "Z-20J (navy)",
+    "Z-20F (ASW)",
+    "Z-20T (armed)"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Harbin_Z-20",
+    "https://commons.wikimedia.org/wiki/Category:Harbin_Z-20"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Harbin_Z-20"
+  ]
+}

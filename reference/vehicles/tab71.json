@@ -1,0 +1,71 @@
+{
+  "id": "tab71",
+  "name": "TAB-71 / Romanian TAB family",
+  "aliases": [
+    "TAB-71M",
+    "TAB-77",
+    "TABC-79",
+    "B33 Zimbru"
+  ],
+  "origin": "Romania (licence BTR-60PB/BTR-70/BTR-80 derivatives)",
+  "type": "apc",
+  "operators": [
+    "rou",
+    "mda",
+    "ukr"
+  ],
+  "crew": 3,
+  "passengers": 8,
+  "dimensions_m": {
+    "length": 7.22,
+    "width": 2.83,
+    "height": 2.7
+  },
+  "weight_t": 11.0,
+  "armament": [
+    "14.5 mm KPVT",
+    "7.62 mm PKT"
+  ],
+  "protection": "Light welded armour, amphibious. Game: immune to 5.56/5.45/7.62x39/7.62x51; 7.62x54R and larger can penetrate side/rear and disable wheels, engine and optics; every launcher in the game list penetrates.",
+  "visual_notes": [
+    "BTR-60 style boat-shaped 8x8 hull with four evenly spaced axles and a sharp nose",
+    "Small conical one-man MG turret on the front half of the roof",
+    "Horizontal exhaust pipes at the rear; TAB-71M has a small side hatch between the 2nd and 3rd axles",
+    "TAB-77 follows the BTR-70 shape; B33 Zimbru the BTR-80 (side doors between axles 2 and 3)"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Romanian olive / M2017-style vehicle green",
+      "palette": [
+        "#4F5A3A",
+        "#3B4430",
+        "#6E6A4C"
+      ]
+    },
+    {
+      "name": "Moldovan army green",
+      "palette": [
+        "#525C3C",
+        "#3A4230",
+        "#2A2A22"
+      ]
+    }
+  ],
+  "variants": [
+    "TAB-71",
+    "TAB-71M (MDA)",
+    "TAB-77",
+    "TABC-79 (4x4)",
+    "B33 Zimbru"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/TAB-71"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/TAB-71",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Moldovan_Armed_Forces",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Romanian_Land_Forces"
+  ]
+}

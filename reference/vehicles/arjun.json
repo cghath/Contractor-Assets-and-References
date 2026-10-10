@@ -1,0 +1,67 @@
+{
+  "id": "arjun",
+  "name": "Arjun Mk1 / Mk1A",
+  "aliases": [
+    "Arjun",
+    "Arjun Mk1A",
+    "Hunter-Killer"
+  ],
+  "origin": "India (DRDO / HVF)",
+  "type": "mbt",
+  "operators": [
+    "ind"
+  ],
+  "crew": 4,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 10.6,
+    "width": 3.9,
+    "height": 2.3
+  },
+  "weight_t": 68.0,
+  "armament": [
+    "120 mm rifled gun (fires LAHAT ATGM on Mk1A)",
+    "12.7 mm HMG",
+    "7.62 mm coaxial MG"
+  ],
+  "protection": "Kanchan composite armour, ERA on Mk1A. Game: immune to all small-calibre rounds; 7.62x54R and 12.7/14.5 mm only damage optics, external stowage, fuel drums and tracks (mobility kill on repeated hits); PG-7V/AT4/MAAWS/SMAW/NLAW penetrate side, rear and turret roof; Javelin top-attack penetrates; frontal arc resists unguided launchers.",
+  "visual_notes": [
+    "Very large slab-sided boxy turret with a flat front",
+    "Seven road wheels per side, side skirts",
+    "Mk1A: ERA panels on the turret and hull front, remote weapon station, track width mine plough option",
+    "Deployed mainly in the Rajasthan desert sector"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Indian Army desert",
+      "palette": [
+        "#C1A774",
+        "#8D744B",
+        "#5B4C35"
+      ]
+    },
+    {
+      "name": "Indian Army three-tone",
+      "palette": [
+        "#5C6440",
+        "#7C6845",
+        "#2E2F24",
+        "#A28F64"
+      ]
+    }
+  ],
+  "variants": [
+    "Arjun Mk1",
+    "Arjun Mk1A"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Arjun_(tank)",
+    "https://commons.wikimedia.org/wiki/Category:Arjun_(tank)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Arjun_(tank)",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Indian_Army"
+  ]
+}

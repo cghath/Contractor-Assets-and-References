@@ -1,0 +1,224 @@
+{
+  "id": "israel",
+  "name": "Coastline to Negev Corridor",
+  "inspired_by": "Israel in 2026, compressed north to south into one fictional map: the Upper Galilee hills along the Lebanese border, the densely built central coastal plain, and the northern Negev desert with agricultural communities near the Gaza perimeter. Mixed Jewish, Arab and Bedouin communities are represented with fictional towns; no real city is reproduced.",
+  "map_size_km": [18, 26],
+  "climate": "Mediterranean in the north and on the coast (Koppen Csa: 600-900 mm rain in the Galilee, 450-550 mm on the coast), grading to semi-arid and arid in the Negev (BSh/BWh: 100-250 mm). Summers 30-36 C on the coast and plain, 38-42 C in the Negev; winters mild, with frost and rare snow on the Galilee ridges.",
+  "seasons": [
+    "Winter (Dec-Feb): rain fronts and green hills in the north and centre, flash floods in Negev wadis",
+    "Spring (Mar-May): wildflowers, hot sharav/hamsin desert winds with dust, wheat harvest in the south",
+    "Summer (Jun-Sep): dry and humid on the coast, very hot and dry inland, brush fires",
+    "Autumn (Oct-Nov): first rains, olive harvest in the Galilee, citrus season starts"
+  ],
+  "biomes": [
+    {
+      "id": "galilee_hills",
+      "share": 0.22,
+      "vegetation": ["Palestine oak and terebinth woodland", "Aleppo pine plantations (JNF-type forests)", "olive groves on terraces", "apple and cherry orchards on high ground", "spiny burnet garrigue"],
+      "ground_palette": ["#a0704c", "#c4a57e", "#d6caa8", "#7e5a3e", "#8f8676"],
+      "foliage_palette": ["#3e5530", "#56703c", "#6f7a48", "#2e4225", "#94a06a"]
+    },
+    {
+      "id": "coastal_plain_urban",
+      "share": 0.26,
+      "vegetation": ["street ficus and jacaranda", "date and Washingtonia palms", "lawns and parks", "citrus and avocado orchards between towns", "kurkar sandstone ridge scrub"],
+      "ground_palette": ["#b8a07a", "#d2bf98", "#9a8466", "#c9c1ad", "#7c6c56"],
+      "foliage_palette": ["#3f6b2e", "#5a8a3a", "#7ba04a", "#2f5226", "#a9b76c"]
+    },
+    {
+      "id": "coastal_dunes",
+      "share": 0.06,
+      "vegetation": ["white broom (Retama raetam)", "sand-stabilising grasses", "acacia (invasive A. saligna)", "sea squill"],
+      "ground_palette": ["#e2d3ad", "#d4c193", "#c7b07e", "#efe4c6"],
+      "foliage_palette": ["#8a9a68", "#a6b07e", "#6c7a50", "#c2c49a"]
+    },
+    {
+      "id": "northern_negev_loess",
+      "share": 0.24,
+      "vegetation": ["rain-fed wheat and barley fields", "planted eucalyptus and tamarisk groves", "anemone fields in late winter", "drip-irrigated vegetable fields and greenhouses"],
+      "ground_palette": ["#c8a978", "#b89565", "#d9c39a", "#a07e55", "#e6d6b0"],
+      "foliage_palette": ["#c9b56e", "#8d9a52", "#5f7a3a", "#b3a95e", "#e0d29b"]
+    },
+    {
+      "id": "negev_desert",
+      "share": 0.22,
+      "vegetation": ["sparse dwarf shrubs (Hammada, Zygophyllum)", "acacia (Vachellia tortilis, V. raddiana) in wadi beds", "bare reg (desert pavement) and chalk badlands"],
+      "ground_palette": ["#cdb48a", "#b39567", "#e2d2ae", "#8e7656", "#a4846a", "#efe3c8"],
+      "foliage_palette": ["#8e8a5e", "#a8a27a", "#6e6a4c", "#c1b98f"]
+    }
+  ],
+  "terrain": {
+    "elevation_range_m": [-5, 1050],
+    "relief": "North: steep limestone and basalt hills to about 1,050 m with deep valleys. Centre: flat to gently rolling coastal plain (0-80 m) behind beaches and low sandstone (kurkar) ridges. South: loess plain at 50-250 m cut by gullies, rising to chalk and flint hills and a small erosion cirque in the south-east corner.",
+    "features": ["dry-stone terraces in the Galilee", "kurkar sandstone ridges parallel to the coast", "coastal cliffs and beaches", "loess gullies (badlands) in the northern Negev", "wide braided wadi beds with acacias", "a small erosion cirque (makhtesh-type) with colourful sandstone", "border fence and security road along the north and south-west edges"],
+    "water": "Mediterranean along the west edge; one small perennial river on the coastal plain with a reed-lined estuary; seasonal Negev wadis prone to winter flash floods; water reservoirs, fish ponds and the national water carrier canal and pipeline crossing north to south.",
+    "generator": {
+      "approach": "Heightmap at 10 m resolution with three latitude bands blended over 2 km transitions (north hills, centre plain, south loess/desert). Each band uses its own noise mix; a coast distance field flattens the west edge and adds a dune strip; wadis carved by flow accumulation in the south band only.",
+      "noise_layers": [
+        {"type": "simplex fbm (5 octaves)", "frequency": 0.12, "amplitude_m": 380, "purpose": "Galilee hill mass, masked to the north band"},
+        {"type": "ridged multifractal", "frequency": 0.6, "amplitude_m": 90, "purpose": "Galilee valleys and spurs"},
+        {"type": "simplex, anisotropic (stretched N-S 4:1)", "frequency": 1.5, "amplitude_m": 15, "purpose": "kurkar ridges parallel to the coast in the centre band"},
+        {"type": "simplex fbm", "frequency": 0.25, "amplitude_m": 120, "purpose": "Negev rise and chalk hills, masked to the south band"},
+        {"type": "cellular (Worley)", "frequency": 5.0, "amplitude_m": 3, "purpose": "loess gully micro-badlands and dunes"}
+      ],
+      "erosion": "Strong hydraulic erosion in the south band (loess gullies), light elsewhere; thermal erosion capped at 40 degrees in the cirque walls.",
+      "rivers": "One coastal river spline with estuary; Negev wadis from flow accumulation, broad flat beds (20-200 m) with gravel, dry except in flash-flood weather events.",
+      "settlement_flattening": "City districts flattened to 2-5 m benches; hill villages per plot; kibbutzim and moshavim flattened as one disc with a 100 m skirt.",
+      "notes": "The centre band is very dense and suits only small contract zones. The north and south bands host the larger zones. The national highway and rail run north-south through all three bands and form the convoy spine."
+    }
+  },
+  "settlements": [
+    {
+      "type": "city_district",
+      "share": 0.25,
+      "pop_range": [40000, 200000],
+      "architecture": "Coastal-plain city: four- to nine-storey apartment blocks on pilotis (open ground floors), white and cream plaster, many balconies, flat roofs with solar water heaters, newer 15-30 storey towers; every apartment has a reinforced-concrete safe room (one thick-walled room per unit). Older core of white-plaster modernist houses; shopping streets with awnings; public shelters marked in parks.",
+      "footprint_m": "block 60x100; building 15x25 (towers 25x25)",
+      "storeys": [4, 30],
+      "wall_class": "Concrete frames thick; block infill thin; safe rooms 20-30 cm reinforced concrete thick (best cover in a building); glass shopfronts no cover.",
+      "materials": ["CONCRETE", "PLASTER", "CINDER_BLOCK", "GLASS", "STEEL", "PAINTED"],
+      "palette": ["#e3dccb", "#d6caa8", "#c9c1ad", "#8a8577", "#9fbcc4", "#5f6b58"],
+      "layout_rules": ["grid streets with a boulevard and a central bus station", "malls and a market hall as landmarks", "parks with public shelters", "multi-lane ring road and an industrial zone on the edge", "very high civilian density"],
+      "example_names": ["Givat Hadarim", "Neve Hof", "Ramat Shikma", "Kiryat Tamar", "Ir Yamit"]
+    },
+    {
+      "type": "town",
+      "share": 0.2,
+      "pop_range": [10000, 60000],
+      "architecture": "Galilee Arab town on a hillside: three- to five-storey family houses of concrete, built floor by floor for grown children, stone cladding, arched windows, flat roofs with water tanks and rebar stubs; a mosque and a church; narrow steep lanes. Also development towns of 1950s-1960s four-storey housing blocks.",
+      "footprint_m": "house 14x16; block 20x60",
+      "storeys": [2, 5],
+      "wall_class": "Concrete frames thick; infill thin; stone cladding medium.",
+      "materials": ["CONCRETE", "LIMESTONE", "CINDER_BLOCK", "PLASTER", "STEEL"],
+      "palette": ["#d6caa8", "#c9c1ad", "#e3dccb", "#9a978f", "#8a8577"],
+      "layout_rules": ["organic on slopes, main street along the contour", "old core with stone houses and a market", "new neighbourhoods spreading uphill", "few vehicle entries; steep pedestrian stairs"],
+      "example_names": ["Kafr Zaytuna", "Ayn Sumaq", "Deir al-Karm al-Sharqi", "Ma'alot Tzafon", "Kiryat Ha-Gal"]
+    },
+    {
+      "type": "village",
+      "share": 0.3,
+      "pop_range": [300, 2000],
+      "architecture": "Kibbutz and moshav agricultural communities: one-storey houses with red-tile or flat roofs and gardens, a dining hall, a water tower, cowsheds, chicken coops, packing houses, a perimeter fence with a security gate and patrol road; each house has a safe room. Border-adjacent communities have extra fences and concrete shelters at bus stops.",
+      "footprint_m": "house 10x12 on 20x30 plot; community 500x700",
+      "storeys": [1, 2],
+      "wall_class": "Houses block or prefab thin, except the safe room thick; shelters thick concrete.",
+      "materials": ["CINDER_BLOCK", "PLASTER", "ROOF_TILE", "CONCRETE", "CORRUGATED_IRON", "STEEL"],
+      "palette": ["#e3dccb", "#a4553b", "#9a978f", "#8a8577", "#8b8e8c", "#5f6b58"],
+      "layout_rules": ["ring road inside a perimeter fence", "central lawn with dining hall and water tower", "fields, orchards and greenhouses outside the fence", "single main gate plus agricultural gates", "eucalyptus windbreak"],
+      "example_names": ["Kfar Shaked", "Nir Eshel", "Moshav Tlalim", "Kibbutz Ein Dekel", "Sde Rimon"]
+    },
+    {
+      "type": "town",
+      "share": 0.15,
+      "pop_range": [5000, 70000],
+      "architecture": "Negev Bedouin town and unrecognised villages: planned neighbourhoods of two-storey concrete houses, plus dispersed hamlets of tin and block shacks, tents and livestock pens without grid utilities; solar panels and water tanks.",
+      "footprint_m": "house 12x14; shack 5x8",
+      "storeys": [1, 2],
+      "wall_class": "Concrete houses medium; shacks and tents no cover.",
+      "materials": ["CINDER_BLOCK", "CORRUGATED_IRON", "TARP", "CONCRETE", "WOOD"],
+      "palette": ["#9a978f", "#8b8e8c", "#3f6d8c", "#c8a978", "#8a8577"],
+      "layout_rules": ["planned town in neighbourhood clusters with wide roads", "unrecognised hamlets scattered on hillsides with dirt tracks", "livestock pens and water tanks"],
+      "example_names": ["Tel Hurshan", "Abu Rumman", "Wadi Na'am al-Gharbi", "Khirbet al-Sidr"]
+    },
+    {
+      "type": "compound",
+      "share": 0.1,
+      "pop_range": [0, 1500],
+      "architecture": "Military bases and installations: fenced bases with hangar sheds and barracks, air-defence battery sites on hills, a desert airbase with hardened shelters (aircraft AI only), border observation posts with camera towers.",
+      "footprint_m": "battery site 150x150; base 600x800",
+      "storeys": [1, 3],
+      "wall_class": "Shelters and berms thick; prefabs thin.",
+      "materials": ["CONCRETE", "STEEL", "DIRT_BERM", "SANDBAG", "CORRUGATED_IRON"],
+      "palette": ["#8a8577", "#4a4d50", "#8a6f4e", "#b8a378", "#5f6b58"],
+      "layout_rules": ["perimeter fence and patrol road", "hilltop placement for observation and air defence", "single main gate with barrier and guard post"],
+      "example_names": ["Base Nahal Gefen", "OP Har Yarden", "Battery Giv'a 312", "Camp Nahal Tzur"]
+    }
+  ],
+  "infrastructure": {
+    "roads": "A north-south six-lane motorway and a parallel older highway; dense urban roads in the centre; winding two-lane roads in the Galilee; straight desert highways and a border security road in the south.",
+    "rail": "Electrified double-track line north-south with stations in the city district and a branch to the Negev; elevated sections and level crossings.",
+    "power": "Gas-fired power station on the coast, high-voltage lines inland, a large solar field in the Negev.",
+    "ports": "One commercial port and marina on the central coast (LHD approach), a desalination plant beside it.",
+    "airfields": "Desert airbase in the south (AI aircraft only, out of bounds), a small civil airfield on the coast.",
+    "checkpoints": "Few internal checkpoints; gates at communities and bases; border crossings for goods at the south-west edge (Gaza perimeter) closed or restricted; army checkpoints along the northern border road during escalations."
+  },
+  "pois": [
+    {"type": "air_defence_battery", "description": "Hilltop air-defence battery: launcher trailers, a radar trailer, a control cabin, a fenced perimeter and an access road. Target of drones in escalations.", "contract_use": "counter-drone site defence; protect from rocket teams", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "border_kibbutz", "description": "Agricultural community 2-3 km from the south-west perimeter: houses with safe rooms, dining hall, water tower, a security fence and a cowshed; partly evacuated.", "contract_use": "escort returning residents; infrastructure repair escort; infiltration-alert defence", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "northern_border_post", "description": "Observation post on a ridge above the northern border: concrete tower, camera masts, bunker, fence and patrol road; overlooking terraced villages across the line.", "contract_use": "recover a downed drone on the slope; observation post resupply under fire", "loot_tier": "low", "intel_chance": 0.25},
+    {"type": "power_station", "description": "Coastal power station with turbine halls, chimneys, a coal jetty, fuel tanks and a fenced switchyard.", "contract_use": "protect infrastructure from drone attack; repair-crew escort", "loot_tier": "low", "intel_chance": 0.1},
+    {"type": "desalination_plant", "description": "Desalination plant by the port: long membrane halls, intake pipes, tank farm and a control building.", "contract_use": "counter-drone defence; protect infrastructure", "loot_tier": "low", "intel_chance": 0.1},
+    {"type": "highway_interchange", "description": "Multi-level motorway interchange with overpasses, concrete sound walls, a gas station and a logistics centre.", "contract_use": "convoy escort chokepoint; aid convoy staging", "loot_tier": "low", "intel_chance": 0.1},
+    {"type": "galilee_forest_ridge", "description": "Pine forest on a ridge with fire breaks, an old stone watchtower and a lookout parking area; drone launch debris after attacks.", "contract_use": "recover a downed drone; search for an infiltrating cell; brush-fire hazard", "loot_tier": "low", "intel_chance": 0.3},
+    {"type": "smuggling_route_wadi", "description": "Negev wadi with acacias and tracks leading to the southern border, abandoned vehicle and drop point. Weapons and drug smuggling interdiction site.", "contract_use": "intel recovery on weapons smuggling (client isr)", "loot_tier": "medium", "intel_chance": 0.5},
+    {"type": "aid_logistics_yard", "description": "Truck inspection yard near the south-west crossing: scanners, warehouses, rows of lorries, a fenced staging area.", "contract_use": "escort aid convoy; secure the yard during a protest or attack", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "industrial_zone", "description": "Industrial park with warehouses, a defence-electronics plant, workshops and loading docks.", "contract_use": "protect a site; recover stolen sensitive kit", "loot_tier": "medium", "intel_chance": 0.3},
+    {"type": "erosion_cirque_viewpoint", "description": "Rim of a desert erosion cirque with a visitor centre, switchback road and cliffs; deep valley floor with coloured sands.", "contract_use": "downed-aircrew or drone recovery in rough terrain; navigation training", "loot_tier": "low", "intel_chance": 0.1},
+    {"type": "army_base", "description": "Fenced base with vehicle sheds, barracks, a helipad, maintenance hangars and a fuel point.", "contract_use": "contract board and briefing location; staging only", "loot_tier": "low", "intel_chance": 0.05}
+  ],
+  "weather": {
+    "conditions": ["clear and hot", "humid coastal haze", "sharav/hamsin heat-and-dust days", "winter storms with heavy rain and hail", "flash floods in Negev wadis", "morning fog on the coastal plain"],
+    "visibility_notes": "Hamsin dust days drop visibility to 500 m-2 km across the south; winter storms ground helicopters for hours; urban areas are lit all night, so NVGs bloom.",
+    "dust_or_snow": "Dust in spring and autumn in the Negev; snow only on the highest Galilee ridges, rarely."
+  },
+  "civilians": {
+    "density": "very_high",
+    "behaviour": "Dense, busy population in the centre at all hours; heavy commuter traffic 07:00-09:00 and 16:00-19:00; Friday afternoon to Saturday evening quieter streets in Jewish towns, Friday busier in Arab towns. Alert sirens send civilians to safe rooms and public shelters within 15-90 seconds, emptying streets; northern and Gaza-perimeter communities may be partly evacuated during escalations. Farm workers in fields at dawn.",
+    "vehicles": ["private cars and taxis", "city buses and intercity coaches", "delivery scooters and e-bikes", "farm tractors and pickups", "lorries", "ambulances and fire trucks"],
+    "casualty_risk_notes": "The highest civilian density of any theatre with israel_gaza: almost every fight in the centre band risks the 8-casualty void. The game should keep zones in the hills, desert and community perimeters."
+  },
+  "factions_present": [
+    {"faction_id": "isr", "role": "defender", "strength": "high", "where": "Whole map: bases, air-defence batteries, border posts on the north and south-west edges, community security teams; patrols on the border roads."},
+    {"faction_id": "hezbollah", "role": "insurgent", "strength": "low", "where": "North edge only: drone launches and ATGM teams across the border ridge, rare infiltration attempts into the Galilee forest ridges."},
+    {"faction_id": "hamas", "role": "insurgent", "strength": "low", "where": "South-west edge only: perimeter infiltration attempts toward border communities, drone and rocket fire as map events."},
+    {"faction_id": "pij", "role": "insurgent", "strength": "low", "where": "South-west edge only: small rocket teams across the perimeter as map events; rare small cells."}
+  ],
+  "frontline": "Static borders, dynamic threat. The persistent war here is mostly fire across the edges: escalation events from hezbollah (north) or hamas and pij (south-west) raise the alert level in border zones, evacuate communities, and post counter-drone, infrastructure-protection and drone-recovery contracts for isr. Ceasefire events lower it and post return-of-residents and repair-escort contracts. No zone inside the map is held by the non-state groups; they only appear as small infiltrating teams or as map hazards (rocket and drone strikes, game-level).",
+  "contract_hooks": [
+    "Counter-drone site defence at an air-defence battery or power station (client isr)",
+    "Recover a downed drone from a northern border slope under observation (client isr)",
+    "Protect a desalination plant or power station from drone and rocket teams (client isr)",
+    "Intel recovery on weapons smuggling in a Negev wadi (client isr)",
+    "Escort an aid convoy from the logistics yard to the crossing (client isr; neutral humanitarian framing)",
+    "Escort residents returning to a partly evacuated border community (client isr)",
+    "Hostage or remains-recovery intel lead follow-up in the perimeter area (client isr; intel only, no strike missions)"
+  ],
+  "zone_plan": {
+    "contract_zones": [
+      {"name": "Northern border ridge", "area_km2": 3, "anchor": "northern_border_post", "notes": "forest and terraces, drone threat"},
+      {"name": "Negev smuggling wadi", "area_km2": 4, "anchor": "smuggling_route_wadi", "notes": "low civilians, long sightlines"},
+      {"name": "Border community perimeter", "area_km2": 2, "anchor": "border_kibbutz", "notes": "defensive, low-medium civilians"},
+      {"name": "Coastal infrastructure", "area_km2": 2, "anchor": "desalination_plant", "notes": "counter-drone, adjacent to very dense city"}
+    ],
+    "hot_zones": [
+      {"name": "Galilee border escalation", "area_km2": 10, "layout": "No enemy HQ on the map: the 'HQ' is across the border edge. 4 enemy launch and observation sites as outposts near the edge, isr checkpoints on ridge roads, roaming isr patrols, 2 drone-attack waves per hour; the player defends sites and recovers assets"}
+    ]
+  },
+  "insertion": {"lhd": true, "fob": "LHD offshore for coastal contracts (via the commercial port). Inland FOB at a host-nation army base in the northern Negev for southern and northern contracts; helicopter transport only in hot zones, and civilian airspace makes AI flights take set corridors (proposed)."},
+  "early_game_suitable": false,
+  "early_game_notes": "Not terrorist-heavy on the map itself: the non-state factions appear only at the edges at low strength. Mostly mid-campaign defensive and recovery contracts for a neutral client.",
+  "ambient_audio": ["traffic and buses", "air-raid sirens (alert events)", "interceptor launches and distant booms (events)", "call to prayer and church bells in Galilee towns", "tractors and irrigation sprinklers", "sea and gulls", "desert wind and silence in the Negev"],
+  "captain_confirmed": [
+    "map_size_km 18 x 26 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
+    "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
+    "materials accepted (Captain, 2026-10-10) and added to voxel_world.gd (Contractor dev, commit 1ec1417): PLASTER #e3dccb, LIMESTONE #d6caa8, CINDER_BLOCK #9a978f, GLASS #9fbcc4, ROOF_TILE #a4553b, CORRUGATED_IRON #8b8e8c, TARP #3f6d8c, DIRT_BERM #8a6f4e, SANDBAG #b8a378"
+  ],
+  "proposed": [
+    "the three-band compression (north, centre, south)",
+    "generator numbers",
+    "zone_plan and the edge-only hot-zone design",
+    "alert-siren civilian behaviour as a game mechanic",
+    "safe rooms as the thick-walled room in every residential unit (game cover rule)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Geography_of_Israel",
+    "https://en.wikipedia.org/wiki/Galilee",
+    "https://en.wikipedia.org/wiki/Negev",
+    "https://en.wikipedia.org/wiki/Climate_of_Israel",
+    "https://en.wikipedia.org/wiki/Kurkar",
+    "https://en.wikipedia.org/wiki/Makhtesh",
+    "https://en.wikipedia.org/wiki/Mamad",
+    "https://en.wikipedia.org/wiki/Kibbutz",
+    "factions/isr.json, hezbollah.json, hamas.json, pij.json situation notes, October 2026"
+  ]
+}

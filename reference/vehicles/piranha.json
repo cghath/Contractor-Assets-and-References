@@ -1,0 +1,78 @@
+{
+  "id": "piranha",
+  "name": "Mowag Piranha",
+  "aliases": [
+    "Piranha IIIC",
+    "Piranha V",
+    "VCR 8x8 Dragon"
+  ],
+  "origin": "Switzerland",
+  "type": "apc",
+  "operators": [
+    "esp",
+    "bel",
+    "dnk",
+    "rou",
+    "mda",
+    "che",
+    "irl"
+  ],
+  "crew": 3,
+  "passengers": 8,
+  "dimensions_m": {
+    "length": 7.8,
+    "width": 3.0,
+    "height": 2.3
+  },
+  "weight_t": 30.0,
+  "armament": [
+    "RWS with 12.7 mm / 40 mm GMG",
+    "Dragon: UT30 Mk2 30 mm turret with Spike LR",
+    "Danish Cardom 120 mm mortar variant"
+  ],
+  "protection": "Modular armour (Piranha V much heavier than IIIC). Game: immune to small-calibre rounds; 7.62x54R AP and larger can penetrate side/rear and disable wheels/engine; every launcher in the game list penetrates.",
+  "visual_notes": [
+    "8x8 with evenly spaced axles, low hull, sloped front",
+    "Piranha V: higher sides, wide cab, rear ramp",
+    "Dragon: two-man 30 mm turret"
+  ],
+  "colour_schemes": [
+    {
+      "name": "NATO three-tone",
+      "palette": [
+        "#3E4A2E",
+        "#4B3A28",
+        "#1E1E1C"
+      ]
+    },
+    {
+      "name": "Saab Barracuda (Danish)",
+      "palette": [
+        "#4E5A3C",
+        "#2E3527",
+        "#6D6A4E"
+      ]
+    }
+  ],
+  "variants": [
+    "Piranha IIIC (BEL, DNK secondary)",
+    "Piranha V (DNK)",
+    "VCR 8x8 Dragon (ESP)",
+    "Luchs 2 6x6 (DEU, on order)",
+    "Piranha IIIH (MDA, ex-DEU)",
+    "Radschützenpanzer 93 / Piranha IIIC 8x8 (CHE)",
+    "Piranha IV: Mörser 16 mortar, engineer vehicle and AGM howitzer carrier (CHE)",
+    "Piranha IIIH 8x8 (IRL, UN white on UNIFIL tours)"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Mowag_Piranha",
+    "https://en.wikipedia.org/wiki/VCR_8x8_Dragon"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Mowag_Piranha",
+    "https://thedefensepost.com/2026/10/05/spain-dragon-combat-vehicle/",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Royal_Danish_Army"
+  ]
+}

@@ -1,0 +1,412 @@
+{
+  "id": "irq",
+  "name": "Republic of Iraq (Iraqi Security Forces)",
+  "short": "Iraq",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#CE1126",
+    "#FFFFFF",
+    "#000000",
+    "#007A3D"
+  ],
+  "blocs": [
+    "arab_league",
+    "global_coalition_against_isis"
+  ],
+  "campaign_tier": "early",
+  "alignment_to_player": "neutral",
+  "player_client": true,
+  "relations": {
+    "player": 15,
+    "usa": 30,
+    "gbr": 30,
+    "fra": 35,
+    "deu": 30,
+    "ita": 30,
+    "rus": 20,
+    "chn": 30,
+    "irn": 40,
+    "tur": 20,
+    "sau": 25,
+    "are": 25,
+    "qat": 25,
+    "jor": 45,
+    "egy": 35,
+    "syr": 15,
+    "pse_pa": 40,
+    "isr": -50,
+    "krg_peshmerga": 40,
+    "sdf": 0,
+    "iraqi_militias": -20,
+    "hezbollah": 0,
+    "hamas": 5,
+    "houthis": 0,
+    "isis": -100,
+    "al_qaeda": -90,
+    "bel": 35,
+    "dnk": 35,
+    "esp": 35,
+    "fin": 35,
+    "grc": 35,
+    "nld": 35,
+    "nor": 35,
+    "swe": 35,
+    "can": 30,
+    "pmc_halcyon": 20
+  },
+  "theatres": [
+    "mesopotamia",
+    "levant_syria",
+    "iraq_iran_border"
+  ],
+  "languages": [
+    "Arabic (Mesopotamian / Iraqi dialect)",
+    "Kurdish (Sorani, Kurmanji)",
+    "English (officers, CTS)"
+  ],
+  "callout_language": "Iraqi Arabic military radio; US-influenced procedure and English loanwords in the Counter Terrorism Service.",
+  "doctrine": {
+    "summary": "The Iraqi Security Forces (ISF) are several forces under different chains of command. The Iraqi Army (Ministry of Defence) holds ground and borders with US- and Russian-sourced armour; the Federal Police and Emergency Response Division (Ministry of Interior) are gendarmerie-style motorised forces; the Counter Terrorism Service (CTS, the 'Golden Division'), reporting directly to the Prime Minister, is the US-trained spearhead that led the 2014-2017 war against ISIS, including the Battle of Mosul; Border Guards and Army Aviation complete the picture. The Popular Mobilization Forces (PMF / Hashd al-Shaabi) are a separate state body under the Popular Mobilization Commission and nominally under the Prime Minister; many PMF brigades belong to Iran-aligned armed factions. The Kurdistan Region's Peshmerga are a separate regional force. ISF operations in 2026 are mainly counter-ISIS sweeps in the deserts of Anbar, Salahuddin, Kirkuk and Diyala and on the Syrian border, plus internal security. The US-led coalition mission ended and US forces left federal Iraq by September 2026. During the 2026 US-Israel war with Iran, Baghdad declared Iraq neutral, closed its airspace and rejected the use of its territory, while Iran-aligned factions attacked US sites and were struck inside Iraq.",
+    "squad_size": 8,
+    "fireteam": "US-style squad of two fireteams in the CTS and trained army brigades; looser Soviet-style sections in second-line units. In game: 8 men in battle-buddy pairs, Humvee- or MRAP-mounted.",
+    "tactics": [
+      "Clearance sweeps through desert wadis and palm groves looking for ISIS hideouts and caches",
+      "Cordon-and-search raids on villages at night, led by CTS teams",
+      "Fixed checkpoints and berms on main supply routes and the Syrian border",
+      "Armoured columns (Abrams, T-72/T-90) in support of infantry",
+      "Heavy reliance on air support (Army Aviation helicopters, F-16IQ, armed drones) once in contact"
+    ],
+    "ai_tuning": {
+      "aggression": 0.5,
+      "discipline": 0.55,
+      "suppression_resistance": 0.5,
+      "flanking": 0.45,
+      "grenade_use": 0.5,
+      "medical_care": 0.45,
+      "night_capability": 0.45,
+      "marksmanship": 0.5,
+      "morale": 0.55
+    }
+  },
+  "camo": [
+    {
+      "name": "Iraqi Army desert digital",
+      "palette": [
+        "#C9B58E",
+        "#A08B64",
+        "#7A6A4C",
+        "#E0D3B3"
+      ],
+      "use": "Standard army field uniform"
+    },
+    {
+      "name": "CTS black / Multicam-type",
+      "palette": [
+        "#1E1E1F",
+        "#7A7356",
+        "#A3966F",
+        "#4F4A37"
+      ],
+      "use": "Counter Terrorism Service ('Golden Division')"
+    },
+    {
+      "name": "Federal Police blue-grey urban digital",
+      "palette": [
+        "#5A6A7E",
+        "#3D4756",
+        "#8A97A8",
+        "#25292F"
+      ],
+      "use": "Federal Police and Emergency Response Division"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "M16A4 / M4 (5.56x45mm)",
+      "AKM / Type 56 (7.62x39mm)"
+    ],
+    "autorifleman": [
+      "PKM (7.62x54R)",
+      "M249 (5.56x45mm)"
+    ],
+    "marksman": [
+      "SVD (7.62x54R)",
+      "M4 / M16A4 with magnified optic (5.56x45mm)"
+    ],
+    "grenadier": [
+      "M4 with M203 (40 mm)",
+      "AKM with GP-25 (40 mm)"
+    ],
+    "at": [
+      "RPG-7 with PG-7V / OG-7V",
+      "AT4 (84 mm)",
+      "Kornet ATGM teams"
+    ],
+    "medic": [
+      "M4 (5.56x45mm)"
+    ],
+    "squad_leader": [
+      "M4 (5.56x45mm)"
+    ],
+    "sniper": [
+      "M24 (7.62x51mm)",
+      "SVD (7.62x54R)"
+    ],
+    "sidearm": [
+      "Glock 19 (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "RPG-7 (PG-7V, OG-7V) [in_game]",
+    "AT4 [in_game]",
+    "Kornet ATGM [not_in_game]",
+    "M72 LAW [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "mixed",
+    "notes": "US-pattern helmets and IOTV/plate carriers in the CTS and front-line army brigades; older steel helmets and soft vests in second-line units and police. Game: CTS medium-to-heavy, army medium, police light (proposed)."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "humvee",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": "Up-armoured M1114/M1151 Humvees, often black for the CTS and sand for the army."
+    },
+    {
+      "vehicle_id": "abrams",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "M1A1M Abrams (140 delivered 2010-2012; dozens lost in 2014-2017 and later rebuilt or replaced) with the 9th Armoured Division."
+    },
+    {
+      "vehicle_id": "maxxpro",
+      "role": "mrap",
+      "prevalence": "common",
+      "notes": "MaxxPro MRAPs from US stocks, used by the army and CTS."
+    },
+    {
+      "vehicle_id": "m1117",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "M1117 Guardian armoured security vehicles, notably with the CTS and army."
+    },
+    {
+      "vehicle_id": "cougar",
+      "role": "mrap",
+      "prevalence": "common",
+      "notes": "Cougar / ILAV Badger MRAPs for route clearance and convoy escort."
+    },
+    {
+      "vehicle_id": "t72b3",
+      "role": "mbt",
+      "prevalence": "common",
+      "notes": "T-72M1 family tanks (catalogue family file), including ex-Hungarian vehicles delivered in 2004-2005."
+    },
+    {
+      "vehicle_id": "t90m",
+      "role": "mbt",
+      "prevalence": "uncommon",
+      "notes": "T-90S delivered from Russia from 2018 (about 73)."
+    },
+    {
+      "vehicle_id": "bmp1",
+      "role": "ifv",
+      "prevalence": "common",
+      "notes": "BMP-1 in army mechanised brigades."
+    },
+    {
+      "vehicle_id": "m113",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "M113A2 tracked carriers in army brigades."
+    },
+    {
+      "vehicle_id": "toyota_hilux",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Pickups and patrol trucks for army, police and Border Guards; often with a PKM or DShK mount."
+    },
+    {
+      "vehicle_id": "mi8",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": "Mi-17 / Mi-171 transport helicopters of Iraqi Army Aviation."
+    },
+    {
+      "vehicle_id": "mi28",
+      "role": "attack_heli",
+      "prevalence": "uncommon",
+      "notes": "Mi-28NE attack helicopters, flown alongside Mi-35M Hinds."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "irq_cts_assault_team",
+      "name": "CTS assault team (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "humvee"
+    },
+    {
+      "id": "irq_army_section",
+      "name": "Army infantry section (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "maxxpro"
+    },
+    {
+      "id": "irq_federal_police_checkpoint",
+      "name": "Federal Police checkpoint (game 6)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "toyota_hilux"
+    },
+    {
+      "id": "irq_border_patrol",
+      "name": "Border Guard patrol",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "toyota_hilux"
+    },
+    {
+      "id": "irq_armour_section",
+      "name": "Armoured section",
+      "composition": [
+        {
+          "role": "tank_crew",
+          "count": 8
+        }
+      ],
+      "vehicle_id": "abrams"
+    }
+  ],
+  "support_assets": [
+    "Army Aviation Mi-28NE, Mi-35M and Mi-17 helicopters",
+    "F-16IQ and Su-25 strikes (off-map)",
+    "Armed drones (CH-4B) for ISR and strikes",
+    "M109 / M198 and D-30 artillery, mortars",
+    "Pantsir-S1 air defence at key sites"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [
+      "isis_cell_raid",
+      "isis_cache_raid",
+      "desert_hideout_clearance",
+      "escort_oil_convoy",
+      "protect_infrastructure_site",
+      "hvt_capture_isis",
+      "train_partner_force"
+    ],
+    "as_target": []
+  },
+  "notes": "Situation as of October 2026: Prime Minister Ali al-Zaidi (Coordination Framework consensus candidate, designated 27 April 2026; parliament approved a partial cabinet without settled interior and defence ministers). US forces completed their withdrawal from federal Iraq by 30 September 2026 under the 2024 agreement ending the coalition mission; reports differ on a residual presence in the Kurdistan Region. On 30 September 2026 the cabinet approved a contested PMF law and sent it to parliament; the government has set a mid-2027 deadline to disarm Iran-backed factions. PMF vs iraqi_militias (game boundary): the PMF is part of the Iraqi state and is NOT modelled as a separate faction. The `iraqi_militias` faction represents the Iran-aligned armed factions (Kataib Hezbollah, Harakat al-Nujaba and similar 'Islamic Resistance in Iraq' groups) acting OUTSIDE state command, e.g. the 2026 drone and rocket attacks on US sites, which drew US and Israeli strikes inside Iraq. The same men can wear PMF badges on duty, so irq's relation with iraqi_militias is tense but not open war (-20): ISF units avoid fighting them and arrests are rare and political. Contracts from irq should never ask the player to attack PMF units; contracts against iraqi_militias come from other clients. The Kurdistan Region's Peshmerga (krg_peshmerga) are a constitutional regional force with sometimes tense ties to Baghdad (Kirkuk, budget disputes). Iraq does not recognise Israel. Iran is Iraq's most influential neighbour (electricity, gas, politics) while the US remains a major arms supplier, so relations with both are positive. Iraq is a natural early-game neutral client for counter-ISIS work in the mesopotamia theatre. player_client true is Captain-confirmed (2026-10-10). Job 7: iraq_iran_border (Diyala-type borderlands) is added as an early-game client theatre: counter-IS operations in the Hamrin hills, border-crossing security and pilgrim-convoy escort.",
+  "proposed": [
+    "campaign_tier",
+    "alignment_to_player",
+    "relations.player",
+    "relations.iraqi_militias (game abstraction of a contested state-militia relationship)",
+    "contract_types.as_client",
+    "doctrine.ai_tuning",
+    "camo (approximate palettes)",
+    "body_armor (game tier mapping)",
+    "unit_templates",
+    "vehicles[].prevalence (game weighting)",
+    "player_trade.sellable (false)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Iraqi_Armed_Forces",
+    "https://en.wikipedia.org/wiki/List_of_current_equipment_of_the_Iraqi_Ground_Forces",
+    "https://en.wikipedia.org/wiki/Iraqi_Counter_Terrorism_Service",
+    "https://en.wikipedia.org/wiki/9th_Armoured_Division_(Iraq)",
+    "https://en.wikipedia.org/wiki/Popular_Mobilization_Forces",
+    "https://en.wikipedia.org/wiki/Withdrawal_of_United_States_troops_from_Iraq_(2025%E2%80%932026)",
+    "https://en.wikipedia.org/wiki/2026_in_Iraq",
+    "https://www.upi.com/Top_News/US/2026/09/30/withdraws-from-Iraq/2421790766971",
+    "https://www.thenationalnews.com/news/mena/2026/09/30/fears-raised-by-critics-as-iraqi-government-approves-controversial-pmf-law/",
+    "https://www.newarab.com/news/iraq-appoints-businessman-ali-al-zaidi-prime-minister",
+    "https://www.newarab.com/news/iraqi-parliament-approves-partial-government-led-pm-zaidi",
+    "https://www.newarab.com/news/strikes-iraq-base-kill-two-kataeb-hezbollah-threatens-us",
+    "https://arabcenterdc.org/resource/shia-militias-in-iraq-a-backgrounder/",
+    "https://defence24.pl/przemysl/ostatnie-t-90s-dla-iraku-dostarczone"
+  ]
+}

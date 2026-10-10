@@ -1,0 +1,217 @@
+{
+  "id": "eastern_congo",
+  "name": "Kivu Highlands and Forest Edge",
+  "inspired_by": "Eastern DR Congo (North Kivu and Ituri) as of 2026, compressed onto one map: a lake shore with a young lava field and a lake city under AFC/M23 control in the south, green pasture highlands (Masisi type) in the west, a rift-valley savanna and national-park belt below an active volcano in the centre, and lowland rainforest with cocoa, oil palm and gold-mining camps (Beni and Mambasa types) in the north where the ADF raids villages. FARDC and pro-government Wazalendo militias hold the northern towns; MONUSCO-type UN peacekeepers protect displacement camps; a fragile ceasefire under the Washington Accords and the Doha track freezes the line between the government and M23 zones. All towns are fictional.",
+  "map_size_km": [24, 24],
+  "climate": "Tropical highland (Koppen Cfb/Aw) in the highlands and lake shore at 1,450-2,500 m: 15-27 C all year, 1,200-1,800 mm of rain; lowland rainforest (Af) in the north at 900-1,100 m: 20-30 C, 1,800-2,200 mm. Two rainy seasons; the volcano's plume and lava lake glow at night.",
+  "seasons": [
+    "Short dry season (Dec-Feb): clearer skies, dusty roads, good flying",
+    "Long rains (Mar-May): daily storms, mudslides on highland roads, swollen rivers",
+    "Long dry season (Jun-Aug): cool mornings in the highlands, haze from field burning, best mobility",
+    "Short rains (Sep-Nov): storms, rivers rise, forest tracks turn to mud"
+  ],
+  "biomes": [
+    {"id": "lake_shore_and_lava_field", "share": 0.14, "vegetation": ["bare black lava flows (pahoehoe and aa)", "pioneer ferns and lichens on young lava", "eucalyptus and banana on older flows", "papyrus and reeds at the lake edge"], "ground_palette": ["#2a2826", "#3a3632", "#4b4845", "#5e5a54", "#1e1c1a"], "foliage_palette": ["#3f6b2e", "#5a8a3a", "#2f5226", "#7ba04a"]},
+    {"id": "highland_pasture_and_terraces", "share": 0.22, "vegetation": ["grazed grass hills (kikuyu grass)", "eucalyptus woodlots", "terraced beans, potatoes and sorghum", "banana groves around homesteads"], "ground_palette": ["#6a4a30", "#7e5a3a", "#5a3e28", "#8e6a48", "#4a3424"], "foliage_palette": ["#4f8a34", "#6aa040", "#3a6a2a", "#8ab85a", "#2f5a26"]},
+    {"id": "rift_savanna_and_park", "share": 0.16, "vegetation": ["tall grass savanna", "Acacia and Euphorbia candelabra trees", "riverine forest", "park bush with charcoal-cutting clearings"], "ground_palette": ["#8a6e4a", "#a8885e", "#6e5638", "#c4a47a", "#5a4630"], "foliage_palette": ["#8a9a4a", "#a8b05a", "#6a7a3a", "#c8c07a", "#4a6a30"]},
+    {"id": "lowland_rainforest", "share": 0.28, "vegetation": ["closed-canopy rainforest (Gilbertiodendron, Uapaca)", "dense undergrowth and lianas", "secondary forest with umbrella trees (Musanga)", "swampy stream valleys"], "ground_palette": ["#3a2a1e", "#4a3624", "#2a2018", "#5a4430", "#6a3e26"], "foliage_palette": ["#16341a", "#1f4a24", "#2f5e2a", "#3f7a34", "#0e2a14"]},
+    {"id": "cocoa_oil_palm_farmland", "share": 0.14, "vegetation": ["cocoa under shade trees", "oil palm plots", "cassava and plantain fields", "fallow regrowth"], "ground_palette": ["#7a4a2a", "#8e5a34", "#6a3e24", "#a86a40"], "foliage_palette": ["#3f7a34", "#5a8a3a", "#2f6a2a", "#7aa04a", "#a8b85a"]},
+    {"id": "lake_water", "share": 0.06, "vegetation": ["open lake water", "papyrus fringe"], "ground_palette": ["#2f5a6e", "#3f6f80", "#24485a", "#5a8a9a"], "foliage_palette": ["#4a7a4a", "#6a8a5a", "#3a5a3a", "#8aa070"]}
+  ],
+  "terrain": {
+    "elevation_range_m": [900, 3470],
+    "relief": "A lake at 1,460 m in the south-west, its shore covered by a young lava field running down from an active stratovolcano (cone to 3,470 m) in the south-centre; steep green highlands at 1,600-2,500 m in the west; the rift-valley floor at 1,000-1,200 m in the centre; and the lowland forest plateau at 900-1,100 m sloping north. A rift escarpment of 400-700 m separates the highlands from the valley.",
+    "features": ["an active volcano with a summit crater and lava lake glow", "lava fields and lava tubes", "the lake with islands and fishing ports", "highland ridges with terraces and steep valleys", "a rift escarpment with hairpin roads", "rivers through the savanna", "dense rainforest with swampy valleys", "artisanal gold and coltan mining pits on hillsides and in the forest"],
+    "water": "A large rift lake, rivers running north through the savanna and forest, highland streams, swamps in forest valleys; the lake is the main transport link in the south.",
+    "generator": {
+      "approach": "Heightmap at 10 m. Rift valley as a lowered central band between two fault steps; the volcano as a large radial cone stamp with a crater and lava-flow splines down to the lake; highlands as ridged noise on the western block; the lake as a flood fill in the south-west depression; the forest plateau as low-relief noise tilted north.",
+      "noise_layers": [
+        {"type": "fault steps (rift)", "frequency": 0, "amplitude_m": 700, "purpose": "rift escarpment between highlands and valley floor"},
+        {"type": "radial cone stamp with crater", "frequency": 0, "amplitude_m": 2000, "purpose": "active stratovolcano and its flanks"},
+        {"type": "ridged multifractal", "frequency": 0.5, "amplitude_m": 600, "purpose": "western highland ridges and valleys"},
+        {"type": "simplex fbm", "frequency": 1.2, "amplitude_m": 40, "purpose": "forest plateau undulation and savanna hummocks"},
+        {"type": "flow splines (mask)", "frequency": 0, "amplitude_m": 3, "purpose": "lava-flow tongues (black rock material) from the volcano to the lake"}
+      ],
+      "erosion": "Hydraulic erosion on the highlands for steep V-valleys and landslide scars; none on young lava; light on the forest plateau.",
+      "rivers": "Rivers by flow accumulation from the highlands and volcano flanks into the valley, then north through the forest as meandering splines; the lake as a flat water plane with a few rocky islands.",
+      "settlement_flattening": "Lake city on the lava-covered shore (terraced pads); highland villages on ridge shoulders and terraces; forest villages in clearings along the road; mining camps cut into hillsides.",
+      "notes": "One paved north-south road (RN2 type) carries almost all traffic and crosses the ceasefire line; side roads are laterite and become impassable in the rains. The forest limits sight to 20-40 m; the highlands give long views. The volcano is a scenery and hazard element (ash and gas events), not an eruption mechanic."
+    }
+  },
+  "settlements": [
+    {
+      "type": "city_district",
+      "share": 0.12,
+      "pop_range": [50000, 300000],
+      "architecture": "Lake-city districts on old lava: one- and two-storey houses of timber planks, cinder block and dressed lava-stone (basalt) walls with corrugated-iron roofs; lava-stone compound walls; a concrete commercial centre with three- to five-storey buildings, banks and churches; lakefront villas; a port and a closed airport.",
+      "footprint_m": "plot 15x20; commercial block 50x60",
+      "storeys": [1, 5],
+      "wall_class": "Lava-stone walls thick; cinder block thin (breachable); plank houses none; concrete frames medium.",
+      "materials": ["BASALT", "CINDER_BLOCK", "WOOD", "CORRUGATED_IRON", "CONCRETE", "GLASS", "PAINTED"],
+      "palette": ["#4b4845", "#9a978f", "#8c6a46", "#8b8e8c", "#2f6f8f", "#c9a03a"],
+      "layout_rules": ["dense informal grid on lava with narrow lanes", "concrete centre along the main road", "lakefront villas, port and churches on the shore", "airport on the edge (closed under M23 control)"],
+      "example_names": ["Kilima Moto", "Lac Rubande", "Mabanga-Lave", "Quartier Nyakasiru"]
+    },
+    {
+      "type": "town",
+      "share": 0.14,
+      "pop_range": [10000, 120000],
+      "architecture": "Forest-edge trading town on the main road: brick and cinder-block shops with tin roofs, a covered market, churches and a mosque, a cathedral or large Catholic mission, a hospital, schools, a MONUSCO-type base with HESCO and a FARDC camp.",
+      "footprint_m": "block 50x70; shop 6x12",
+      "storeys": [1, 3],
+      "wall_class": "Fired brick medium; cinder block thin; tin roofs none.",
+      "materials": ["BRICK", "CINDER_BLOCK", "CORRUGATED_IRON", "PAINTED", "CONCRETE", "WOOD"],
+      "palette": ["#9c5a3c", "#9a978f", "#8b8e8c", "#2f8f6f", "#c75b4a", "#8c6a46"],
+      "layout_rules": ["strung along the paved road for 2-4 km", "market, churches and hospital at the centre", "UN base and army camp on the edges", "displacement camp on the outskirts"],
+      "example_names": ["Mbukasi", "Kitembe-Ville", "Ngandu Centre", "Lubongo"]
+    },
+    {
+      "type": "village",
+      "share": 0.3,
+      "pop_range": [200, 5000],
+      "architecture": "Highland and forest villages: rectangular houses of wattle-and-daub or sun-dried brick with tin or thatch roofs, banana groves around them, a church, a school, a small market; forest villages in clearings along the road with cocoa drying racks.",
+      "footprint_m": "house 5x8; church 12x25",
+      "storeys": [1, 1],
+      "wall_class": "Wattle-and-daub and mud brick medium-thin; thatch none.",
+      "materials": ["MUD_BRICK", "WOOD", "THATCH", "CORRUGATED_IRON", "BRICK"],
+      "palette": ["#8a5a3a", "#a47e57", "#b49a5e", "#8b8e8c", "#9c5a3c"],
+      "layout_rules": ["along the road or a ridge track", "church and school as the centre", "fields and banana groves around", "forest close behind in the north (ADF approach routes)"],
+      "example_names": ["Rusenyi", "Kanyamutara", "Mubiri-Haut", "Bukanga", "Mabuyi", "Ngorero"]
+    },
+    {
+      "type": "camp",
+      "share": 0.14,
+      "pop_range": [2000, 60000],
+      "architecture": "Displacement sites: dense rows of shelters of sticks and white plastic sheeting, water points, latrines, a clinic tent, a food distribution yard, sometimes next to a UN base.",
+      "footprint_m": "site 400x600; shelter 3x4",
+      "storeys": [1, 1],
+      "wall_class": "None.",
+      "materials": ["TARP", "WOOD", "THATCH"],
+      "palette": ["#e8e4da", "#3f6d8c", "#8c6a46", "#b49a5e"],
+      "layout_rules": ["on open ground by a town or UN base", "aid distribution point at the entrance", "very high density"],
+      "example_names": ["Site de Déplacés Mubiri-Bas", "Camp Rusenyi-Lac", "Site Kahindo Ouest"]
+    },
+    {
+      "type": "compound",
+      "share": 0.2,
+      "pop_range": [0, 3000],
+      "architecture": "UN peacekeeper bases (HESCO walls, watchtowers, white vehicles, helipad), FARDC camps and hill positions (trenches, sandbags), M23 hill positions, artisanal mining camps (pits, sluices, tarp shelters, traders), a cocoa warehouse, a hydro plant on a highland river, a park ranger post.",
+      "footprint_m": "UN base 200x250; mining camp 500x800; hill position 80x80",
+      "storeys": [1, 2],
+      "wall_class": "HESCO, berms and trenches thick; prefabs and shelters thin.",
+      "materials": ["HESCO", "SANDBAG", "DIRT_BERM", "CORRUGATED_IRON", "TARP", "STEEL", "CONCRETE"],
+      "palette": ["#a99a6c", "#b8a378", "#8a6f4e", "#e8e8e8", "#4a4d50", "#3f6d8c"],
+      "layout_rules": ["UN bases next to towns and camps", "hill positions on ridge tops facing each other across the ceasefire line", "mining camps in forest clearings and on hillsides"],
+      "example_names": ["Base Kitembe (UN)", "Position Colline 1840", "Carré Minier Mabanga", "Poste Rangers Savane-Nord"]
+    },
+    {
+      "type": "farm",
+      "share": 0.1,
+      "pop_range": [5, 50],
+      "architecture": "Cattle ranches in the highlands (corrals, a block house), cocoa and oil-palm smallholdings in the north, charcoal camps in the park belt.",
+      "footprint_m": "ranch 80x80; smallholding 30x40",
+      "storeys": [1, 1],
+      "wall_class": "Block walls thin; mud walls medium.",
+      "materials": ["CINDER_BLOCK", "MUD_BRICK", "WOOD", "CORRUGATED_IRON"],
+      "palette": ["#9a978f", "#a47e57", "#8c6a46", "#8b8e8c"],
+      "layout_rules": ["ranches on highland pastures", "smallholdings along forest tracks"],
+      "example_names": ["Ferme Kahindo", "Plantation Mbukasi-Sud", "Ranch Kabiri"]
+    }
+  ],
+  "infrastructure": {
+    "roads": "One paved north-south national road (potholed, with bridges and a pass over the rift escarpment) crossing the ceasefire line; laterite roads into the highlands and forest that close in the rains; footpaths and motorbike tracks everywhere.",
+    "rail": "None.",
+    "power": "A small hydro plant in the highlands, generators and solar in towns; the lake city has intermittent supply.",
+    "ports": "Lake port with ferries and wooden cargo boats; fishing landings along the shore.",
+    "airfields": "The lake-city airport (closed to traffic under M23 control); an airstrip at the northern town used by the UN and the army; helipads at UN bases.",
+    "checkpoints": "FARDC and Wazalendo checkpoints on the northern road; M23 checkpoints and a parallel administration post on the southern road; a ceasefire-line crossing with a verification post; UN checkpoints at camps and bases; ADF felled-tree roadblocks on forest roads (hazard events)."
+  },
+  "pois": [
+    {"type": "adf_forest_camp", "description": "ADF camp under rainforest canopy: shelters of poles and tarps, a cooking area, a prayer space, a hostage hut and lookouts on approach trails; reachable only on foot.", "contract_use": "raid a forest camp with army and partner units; HVT capture (client cod)", "loot_tier": "medium", "intel_chance": 0.6},
+    {"type": "forest_road_ambush_stretch", "description": "Stretch of the paved road through forest with a bridge, burnt lorries from earlier attacks, and a village 1 km away; felled-tree and IED hazard markers.", "contract_use": "convoy escort; route clearance (client cod)", "loot_tier": "low", "intel_chance": 0.2},
+    {"type": "gold_mining_camp", "description": "Artisanal gold camp in a forest clearing: hundreds of pits, sluices, tarp shelters, generators, traders and a small chapel; raided by the ADF.", "contract_use": "defend the camp against a raid; evacuate miners (client cod)", "loot_tier": "medium", "intel_chance": 0.35},
+    {"type": "un_base_and_idp_camp", "description": "UN peacekeeper base with HESCO, towers and armoured vehicles next to a displacement site of tens of thousands.", "contract_use": "camp protection and evacuation during an attack (clients cod, ind)", "loot_tier": "low", "intel_chance": 0.25},
+    {"type": "ceasefire_line_crossing", "description": "Road crossing between the government and M23 zones: barriers, a verification post with flags of the mediators, queues of lorries and minibuses; hill positions overlook it.", "contract_use": "escort a ceasefire-verification team (client ind); hostage exchange hand-over", "loot_tier": "low", "intel_chance": 0.3},
+    {"type": "highland_ridge_position", "description": "Hilltop position with trenches, sandbags and a mortar pit overlooking terraced valleys and the opposing line across a ravine.", "contract_use": "retake or hold a ridge position during a fighting phase (client cod)", "loot_tier": "medium", "intel_chance": 0.3},
+    {"type": "lake_port", "description": "Lake port with ferry quays, cargo boats, warehouses and a fish market; M23-administered in the south.", "contract_use": "observe only during ceasefire phases; evacuation of nationals by boat (client ind)", "loot_tier": "low", "intel_chance": 0.2},
+    {"type": "downed_drone_site", "description": "Wreck of an army CH-4 drone in the savanna or on a highland slope near the line.", "contract_use": "recover a downed drone and its sensor before rivals reach it (client cod)", "loot_tier": "medium", "intel_chance": 0.45},
+    {"type": "mission_hospital", "description": "Catholic mission with a hospital, school and church on a hill above a forest town; overflowing with wounded and displaced.", "contract_use": "protect a hospital; escort medical supplies (clients cod, ind)", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "volcano_observatory", "description": "Volcano observatory hut and seismograph station on the flank, with a road to a viewpoint; ash and gas hazard area.", "contract_use": "escort scientists to restore monitoring (client cod; ceasefire phase)", "loot_tier": "low", "intel_chance": 0.1},
+    {"type": "park_ranger_post", "description": "Park ranger post in the savanna belt with an armoury hut and a radio mast; charcoal camps nearby.", "contract_use": "relieve rangers cut off by fighting (client cod)", "loot_tier": "low", "intel_chance": 0.2},
+    {"type": "cocoa_warehouse_village", "description": "Forest village with a cocoa buying warehouse, drying racks and a motorbike park; ADF approach trails behind it.", "contract_use": "village defence against a night raid (client cod)", "loot_tier": "low", "intel_chance": 0.2}
+  ],
+  "weather": {
+    "conditions": ["daily tropical storms in the rains", "highland mist and cool mornings", "humid forest heat", "dry-season haze from field burning", "volcanic gas and ash events near the cone"],
+    "visibility_notes": "Forest limits sight to 20-40 m; highland mist cuts visibility in the morning; storms ground helicopters and drones; long views from ridges in the dry season.",
+    "dust_or_snow": "Dust on laterite roads in the dry season; no snow (the volcano summit is cold at night)."
+  },
+  "civilians": {
+    "density": "very_high",
+    "behaviour": "Crowded roads of people on foot carrying loads, motorbike taxis and minibuses; markets busy every day; hundreds of thousands displaced living in camps; farmers walk to fields at dawn and back before dark because of the ADF. Civilians flee toward towns and UN bases at the first sign of attack; mass displacement events follow fighting. Armed men from many groups (Wazalendo, local militias) are common.",
+    "vehicles": ["motorbike taxis", "minibuses", "overloaded lorries", "chukudu wooden scooters", "Land Cruiser and Hilux pickups", "UN white vehicles", "lake boats and ferries"],
+    "casualty_risk_notes": "Very high density on roads, in camps and in markets, and civilians share villages with every armed group. The casualty rule bites everywhere; camp and village defence contracts need careful fire."
+  },
+  "factions_present": [
+    {"faction_id": "cod", "role": "defender", "strength": "high", "where": "Northern towns, the paved road and its checkpoints, army camps and hill positions on the government side of the ceasefire line; Wazalendo militia auxiliaries in highland and forest villages; CH-4 drones and helicopters overhead."},
+    {"faction_id": "m23", "role": "occupier", "strength": "high", "where": "The lake city and the lava shore, the southern highlands and the road south of the ceasefire line: hill positions, checkpoints and a parallel administration post; anti-aircraft guns on ridges."},
+    {"faction_id": "adf", "role": "insurgent", "strength": "high", "where": "Northern lowland rainforest: forest camps, raids on forest villages, cocoa farms and gold-mining camps, ambushes on the forest road."},
+    {"faction_id": "ind", "role": "patrol", "strength": "medium", "where": "UN peacekeepers (MONUSCO-type): bases next to the northern town and the main displacement camp, and a company near the ceasefire-line crossing supporting verification teams. Neutral units; ind can post camp-protection and escort contracts."},
+    {"faction_id": "chn", "role": "patrol", "strength": "low", "where": "UN engineer and medical company (fictional game what-if, Captain-confirmed 2026-10-10; China's real contingent left in April 2024) repairing the forest road and bridges and running a field hospital near the northern town. Neutral units; never a client here."}
+  ],
+  "frontline": "Two wars on one map. In the south a ceasefire line separates the cod and m23 zones; a peace-process meter (Doha-track talks and EJVM+ verification) sets the phase: in ceasefire phases the line is frozen, m23 units are not attacked by default and contracts are verification escorts, evacuations and humanitarian work; violations lower the meter, and a fighting phase lets each side push for ridge zones (cod contracts to retake positions; m23 offensives threaten the northern road). In the north the ADF regenerates in the forest: each surviving ADF camp raises the raid level of nearby villages and mining camps and posts defence, hostage-rescue and camp-raid contracts. Displacement events follow every fight and grow the camps. UN bases never flip and are neutral ground.",
+  "contract_hooks": [
+    "Raid an ADF forest camp and rescue hostages (client cod)",
+    "Defend a forest village or gold-mining camp against a night raid (client cod)",
+    "Escort a supply or aid convoy on the forest road (client cod)",
+    "Protect a displacement camp and evacuate a hospital during an attack (clients cod, ind)",
+    "Escort a ceasefire-verification team to the line (client ind)",
+    "Recover a downed CH-4 drone near the line (client cod)",
+    "Retake a ridge position from m23 during a fighting phase (client cod)",
+    "Relieve park rangers cut off by fighting (client cod)",
+    "Evacuate foreign nationals by boat from the lake port during a crisis (client ind)"
+  ],
+  "zone_plan": {
+    "contract_zones": [
+      {"name": "Forest road and village", "area_km2": 3, "anchor": "forest_road_ambush_stretch", "notes": "dense forest, ADF raids"},
+      {"name": "Gold-mining camp", "area_km2": 3, "anchor": "gold_mining_camp", "notes": "crowded, forest clearing"},
+      {"name": "UN base and camp", "area_km2": 2, "anchor": "un_base_and_idp_camp", "notes": "very dense, neutral UN units"},
+      {"name": "Ceasefire-line ridge", "area_km2": 3.5, "anchor": "highland_ridge_position", "notes": "terraced hills, phase-dependent"}
+    ],
+    "hot_zones": [
+      {"name": "Northern forest", "area_km2": 15, "layout": "adf HQ in a deep forest camp; 4-5 outposts (forest camps, a hostage hut, a mining-camp lookout, a felled-tree roadblock); FARDC road checkpoints and a UN base as friendly or neutral anchors; roaming forest bands of 8-20 on trails; 1 QRF band on motorbikes"}
+    ]
+  },
+  "insertion": {"lhd": false, "fob": "FOB at the northern-town airstrip next to (but separate from) the UN base and the FARDC camp. Road moves on the paved road and laterite tracks (mud in the rains), on foot in the forest, helicopters in good weather, boats on the lake; no AAVs except on the lake shore."},
+  "early_game_suitable": true,
+  "early_game_notes": "adf (early tier) is the main early-game enemy in the northern forest, and cod is an early-game client. m23 is mid tier: its zones open for fighting contracts only in fighting phases; during ceasefire phases early contracts there are escorts and evacuations. Captain-confirmed new theatre (2026-10-10).",
+  "ambient_audio": ["rain on tin roofs", "forest birds, insects and colobus calls", "motorbike taxis and lorry horns", "church choirs and drums", "camp crowds and loudspeaker announcements", "distant mortar fire during fighting phases", "volcano rumble (events)"],
+  "captain_confirmed": [
+    "theatre added (Captain, 2026-10-10): early-game UN peacekeeping map; chn and ind as UN peacekeepers, with adf, m23 and cod",
+    "cod (FARDC) added as the state client on this map (Captain, 2026-10-10)",
+    "chn stays as a returning MONUSCO-type engineer and medical unit, a fictional what-if clearly marked as such (Captain, 2026-10-10; the real contingent left in April 2024)",
+    "m23 is a hostile non-client (relation -50 with the player, never hires or sells) and its units are not attacked by default in ceasefire phases (Captain, 2026-10-10)",
+    "map_size_km within the confirmed 16-24 km per side (Captain, 2026-10-10)",
+    "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
+    "materials accepted (Captain, 2026-10-10) and added to voxel_world.gd (Contractor dev, commit 1ec1417): BASALT #4b4845, CINDER_BLOCK #9a978f, CORRUGATED_IRON #8b8e8c, GLASS #9fbcc4, BRICK #9c5a3c, MUD_BRICK #a47e57, THATCH #b49a5e, TARP #3f6d8c, HESCO #a99a6c, SANDBAG #b8a378, DIRT_BERM #8a6f4e"
+  ],
+  "proposed": [
+    "composite layout (lake, volcano, highlands, rift savanna and northern forest on one map)",
+    "generator numbers",
+    "two-war frontline model and the peace-process meter (ceasefire and fighting phases)",
+    "zone_plan and hot zone",
+    "Wazalendo militias as cod auxiliaries; UPDF, Burundian troops, FDLR and local militias as neutral or generic NPCs (no faction files); Rwanda's army as off-map support events only",
+    "IEDs and felled-tree roadblocks as marked map hazards only (game-level)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/North_Kivu",
+    "https://en.wikipedia.org/wiki/Ituri_Province",
+    "https://en.wikipedia.org/wiki/Nyiragongo",
+    "https://en.wikipedia.org/wiki/Lake_Kivu",
+    "https://en.wikipedia.org/wiki/Virunga_National_Park",
+    "https://en.wikipedia.org/wiki/Ituri_Rainforest",
+    "https://en.wikipedia.org/wiki/MONUSCO",
+    "https://www.criticalthreats.org/briefs/congo-war-security-review/april-3-2026",
+    "https://www.aa.com.tr/en/africa/dr-congo-m23-rebel-group-agree-on-roadmap-for-comprehensive-peace-talks/4034875",
+    "factions/cod.json, m23.json, adf.json, ind.json, chn.json situation notes, October 2026"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "fuchs",
+  "name": "TPz Fuchs",
+  "aliases": [
+    "Transportpanzer 1 Fuchs"
+  ],
+  "origin": "West Germany",
+  "type": "apc",
+  "operators": [
+    "deu",
+    "nld"
+  ],
+  "crew": 2,
+  "passengers": 10,
+  "dimensions_m": {
+    "length": 6.83,
+    "width": 2.98,
+    "height": 2.3
+  },
+  "weight_t": 19.0,
+  "armament": [
+    "7.62 mm MG3 or 12.7 mm RWS"
+  ],
+  "protection": "Light steel armour vs small arms and splinters. Game: immune to small-calibre rounds; 7.62x54R AP and larger can penetrate side/rear and disable wheels/engine; every launcher in the game list penetrates.",
+  "visual_notes": [
+    "6x6 with boat-shaped, amphibious hull and sloped front",
+    "Wide flat roof with hatches, twin rear doors",
+    "Large wheels close together at rear"
+  ],
+  "colour_schemes": [
+    {
+      "name": "NATO three-tone",
+      "palette": [
+        "#3E4A2E",
+        "#4B3A28",
+        "#1E1E1C"
+      ]
+    }
+  ],
+  "variants": [
+    "Fuchs 1A8",
+    "Fuchs NBC recon",
+    "Fuchs EOD"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/TPz_Fuchs"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/TPz_Fuchs"
+  ]
+}

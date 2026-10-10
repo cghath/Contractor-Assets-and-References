@@ -1,0 +1,64 @@
+{
+  "id": "type96_wapc",
+  "name": "Type 96 Wheeled Armored Personnel Carrier",
+  "aliases": [
+    "Type 96 WAPC",
+    "Kurumaru"
+  ],
+  "origin": "Japan (Komatsu)",
+  "type": "apc",
+  "operators": [
+    "jpn"
+  ],
+  "crew": 2,
+  "passengers": 8,
+  "dimensions_m": {
+    "length": 6.84,
+    "width": 2.48,
+    "height": 1.85
+  },
+  "weight_t": 14.5,
+  "armament": [
+    "40 mm Type 96 AGL or 12.7 mm M2 in a roof cupola"
+  ],
+  "protection": "Welded steel, deployed to Iraq (Samawah) 2004-06 with add-on armour. Game: immune to small-calibre rounds (5.45/5.56/5.8/7.62x39/7.62x51 ball); 7.62x54R and larger penetrate side/rear and disable tyres and engine; any launcher destroys it.",
+  "visual_notes": [
+    "Boxy 8x8 with axles grouped 2+2, flat sides and a slab front",
+    "Commander's cupola with AGL or 12.7 mm, roof hatches over troop compartment",
+    "Rear ramp door; being replaced by the Patria AMV XP"
+  ],
+  "colour_schemes": [
+    {
+      "name": "JGSDF two-tone (green/brown)",
+      "palette": [
+        "#4A5236",
+        "#5C4B33",
+        "#2A2C22"
+      ]
+    },
+    {
+      "name": "Iraq deployment sand",
+      "palette": [
+        "#C4AF83",
+        "#8F7C58",
+        "#5F523C"
+      ]
+    }
+  ],
+  "variants": [
+    "Type A (AGL)",
+    "Type B (12.7 mm)",
+    "Command",
+    "Ambulance"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Type_96_Armored_Personnel_Carrier",
+    "https://commons.wikimedia.org/wiki/Category:Type_96_Armored_Personnel_Carrier"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Type_96_Armored_Personnel_Carrier",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Japan_Ground_Self-Defense_Force"
+  ]
+}

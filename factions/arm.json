@@ -1,0 +1,347 @@
+{
+  "id": "arm",
+  "name": "Republic of Armenia",
+  "short": "Armenia",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#D90012",
+    "#0033A0",
+    "#F2A800"
+  ],
+  "blocs": [
+    "csto",
+    "cis",
+    "eaeu",
+    "eastern_partnership",
+    "nato_partnership_for_peace"
+  ],
+  "campaign_tier": "mid",
+  "alignment_to_player": "neutral",
+  "player_client": true,
+  "relations": {
+    "player": 25,
+    "fra": 70,
+    "ind": 70,
+    "grc": 50,
+    "usa": 45,
+    "irn": 40,
+    "geo": 40,
+    "kaz": 15,
+    "srb": 15,
+    "rus": -15,
+    "blr": -40,
+    "tur": -15,
+    "isr": -20,
+    "aze": -40,
+    "isis": -90,
+    "ukr": 15
+  },
+  "theatres": [
+    "caucasus"
+  ],
+  "languages": [
+    "Armenian",
+    "Russian"
+  ],
+  "callout_language": "Armenian",
+  "doctrine": {
+    "summary": "Defensive mountain army rebuilding after the 2020 war and the 2023 loss of Nagorno-Karabakh. Has frozen participation in the Russian-led CSTO since 2024 (stopped paying dues, skips all events; not formally withdrawn as of 2026, though the government says it will leave when it decides) and is diversifying to India (Pinaka, ATAGS, Akash) and France (Bastion APCs, CAESAR, radars). Russia's 102nd base at Gyumri remains. Peace treaty with Azerbaijan initialled in Washington (Aug 2025) but unsigned; Pashinyan's party kept its majority in June 2026 but lacks the constitutional majority Baku demands.",
+    "squad_size": 8,
+    "fireteam": "Soviet-pattern squad of 8-9; game 8 in pairs.",
+    "tactics": [
+      "Fortified mountain positions, trenches and dug-in armour",
+      "Anti-tank teams on ridgelines",
+      "Counter-drone measures learned the hard way in 2020 (camouflage nets, dispersal, jamming)",
+      "Artillery and new Indian rocket systems for counter-battery"
+    ],
+    "ai_tuning": {
+      "aggression": 0.45,
+      "discipline": 0.6,
+      "suppression_resistance": 0.6,
+      "flanking": 0.45,
+      "grenade_use": 0.55,
+      "medical_care": 0.55,
+      "night_capability": 0.45,
+      "marksmanship": 0.55,
+      "morale": 0.65
+    }
+  },
+  "camo": [
+    {
+      "name": "Armenian digital woodland",
+      "palette": [
+        "#5F6A45",
+        "#3E4531",
+        "#8A855F",
+        "#2B2C24"
+      ],
+      "use": "Standard field uniform"
+    },
+    {
+      "name": "Mountain/khaki pattern (summer)",
+      "palette": [
+        "#9C8F6A",
+        "#6F6A4C",
+        "#4B4A36"
+      ],
+      "use": "Dry mountain summers"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "AK-74 / AKS-74 (5.45x39mm)",
+      "AKM (7.62x39mm, reserve)"
+    ],
+    "autorifleman": [
+      "PKM (7.62x54R)",
+      "RPK-74 (5.45x39mm)"
+    ],
+    "marksman": [
+      "SVD (7.62x54R)"
+    ],
+    "grenadier": [
+      "AK-74 with GP-25"
+    ],
+    "at": [
+      "RPG-7",
+      "RPG-26",
+      "Konkurs / Kornet ATGM"
+    ],
+    "medic": [
+      "AKS-74U (5.45x39mm)"
+    ],
+    "squad_leader": [
+      "AK-74 (5.45x39mm)"
+    ],
+    "sniper": [
+      "SVD (7.62x54R)"
+    ],
+    "sidearm": [
+      "PM Makarov (9x18mm)"
+    ]
+  },
+  "launchers": [
+    "RPG-7 (PG-7V [in_game], OG-7V [in_game]; tandem/thermobaric rounds [not_in_game])",
+    "RPG-26 [not_in_game]",
+    "Konkurs / Kornet ATGM [not_in_game]",
+    "Igla / Mistral MANPADS [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "light",
+    "vest": "medium",
+    "plates": "steel",
+    "notes": "Mostly older steel/aramid helmets (light) and vests with steel plates (medium); some units re-equipped with Western/Indian kit (medium helmets, ceramic plates)."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "t72b3",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "T-72A/AV/B variants (heavy losses in 2020)."
+    },
+    {
+      "vehicle_id": "bmp2",
+      "role": "ifv",
+      "prevalence": "common",
+      "notes": "BMP-2."
+    },
+    {
+      "vehicle_id": "bmp1",
+      "role": "ifv",
+      "prevalence": "common",
+      "notes": "BMP-1 and BRM-1K."
+    },
+    {
+      "vehicle_id": "btr82a",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "BTR-80 / BTR-70."
+    },
+    {
+      "vehicle_id": "mtlb",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "MT-LB carriers and tractors."
+    },
+    {
+      "vehicle_id": "bastion",
+      "role": "apc",
+      "prevalence": "uncommon",
+      "notes": "50 French Bastion APCs ordered, first 24 delivered Nov 2023."
+    },
+    {
+      "vehicle_id": "pinaka",
+      "role": "mlrs",
+      "prevalence": "signature",
+      "notes": "Indian Pinaka ('Shant'), 4 batteries delivered 2023-24; guided rockets from 2026."
+    },
+    {
+      "vehicle_id": "atags",
+      "role": "artillery",
+      "prevalence": "uncommon",
+      "notes": "Indian ATAGS 155 mm; plus truck-mounted 155 mm guns."
+    },
+    {
+      "vehicle_id": "caesar",
+      "role": "artillery",
+      "prevalence": "rare",
+      "notes": "CAESAR contract signed June 2024; delivery status not confirmed."
+    },
+    {
+      "vehicle_id": "mi24",
+      "role": "attack_heli",
+      "prevalence": "uncommon",
+      "notes": "Mi-24 fleet."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "arm_rifle_squad",
+      "name": "Armenian motor-rifle squad (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "bmp2"
+    },
+    {
+      "id": "arm_border_post",
+      "name": "Border post guard section",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "arm_at_team",
+      "name": "Mountain anti-tank team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 2
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "bastion"
+    }
+  ],
+  "support_assets": [
+    "Pinaka rockets and ATAGS/towed artillery",
+    "Akash and Mistral air defence (limits enemy drones in game)",
+    "Small quadcopter ISR",
+    "Mi-24 gunships (limited)"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 20,
+        "unlocks": [
+          "5.45x39mm and 7.62x54R ammunition",
+          "frags, smokes"
+        ]
+      },
+      {
+        "rep": 40,
+        "unlocks": [
+          "AK-74, PKM, SVD",
+          "RPG-7 with PG-7V / OG-7V"
+        ]
+      },
+      {
+        "rep": 60,
+        "unlocks": [
+          "Bastion APC hire/purchase",
+          "artillery fire support call (towed 155 mm)"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "border_post_reinforcement",
+      "demining_escort",
+      "drone_defence_training",
+      "civilian_evacuation",
+      "convoy_escort (Trump Route / TRIPP corridor security)"
+    ],
+    "as_target": []
+  },
+  "notes": "Neutral, Western-leaning client in the Caucasus. Real 2026 status: Armenia-Azerbaijan peace treaty initialled (Washington, August 2025) but unsigned; the 'Trump Route for International Peace and Prosperity' (TRIPP) transit corridor through southern Armenia is under development with US participation; Armenia keeps its CSTO membership frozen and is in a public dispute with Russia while staying in the EAEU. In game: contracts for Armenia lock out Azerbaijani contracts for a while (and vice versa).",
+  "proposed": [
+    "campaign_tier",
+    "relations.player",
+    "player_client",
+    "player_trade",
+    "doctrine.ai_tuning",
+    "unit_templates",
+    "contract_types",
+    "blocs (csto_suspended, eu_partnership are descriptive tags)",
+    "vehicles[].prevalence (game weighting)",
+    "body_armor (game tier mapping)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Armed_Forces_of_Armenia",
+    "https://en.wikipedia.org/wiki/Armenia%E2%80%93CSTO_relations",
+    "https://meduza.io/en/news/2026/06/05/we-ll-decide-and-we-ll-leave-armenian-leader-says-of-russian-led-defense-bloc",
+    "https://pism.pl/publications/pashinyans-party-wins-parliamentary-elections",
+    "https://alphadefense.in/2026/02/08/armenia-showcases-indian-made-weapons-marking-a-new-phase-in-defence-ties/",
+    "https://en.wikipedia.org/wiki/Pinaka_multi-barrel_rocket_launcher",
+    "https://en.wikipedia.org/wiki/Advanced_Towed_Artillery_Gun_System",
+    "https://en.wikipedia.org/wiki/ACMAT_Bastion",
+    "https://www.eurasiantimes.com/french-caesar-indian-atags-to-bolster-armenian"
+  ]
+}

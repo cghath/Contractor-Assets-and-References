@@ -1,0 +1,80 @@
+{
+  "id": "k9",
+  "name": "K9 Thunder",
+  "aliases": [
+    "K9 Moukari",
+    "K9 Vidar"
+  ],
+  "origin": "South Korea",
+  "type": "artillery",
+  "operators": [
+    "fin",
+    "nor",
+    "kor",
+    "pol",
+    "est",
+    "rou",
+    "ind",
+    "vnm",
+    "egy",
+    "tur"
+  ],
+  "crew": 5,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 12.0,
+    "width": 3.4,
+    "height": 2.73
+  },
+  "weight_t": 47.0,
+  "armament": [
+    "155 mm L/52",
+    "12.7 mm M2HB"
+  ],
+  "protection": "Steel armour vs small arms and splinters. Game: light armour on cab/turret only; immune to small-calibre rounds, 7.62x54R and larger disable it; launchers destroy it.",
+  "visual_notes": [
+    "Long flat tracked hull with large slab-sided turret set towards the rear",
+    "Long 155 mm L/52 barrel with double-baffle muzzle brake and travel lock on the glacis",
+    "6 road wheels per side with hydropneumatic suspension",
+    "12.7 mm M2 on the commander's hatch",
+    "Long tracked hull with boxy turret and long barrel",
+    "6 road wheels per side"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Finnish three-tone",
+      "palette": [
+        "#4F5A3A",
+        "#2F3526",
+        "#7A7457"
+      ]
+    },
+    {
+      "name": "Winter whitewash",
+      "palette": [
+        "#E6E6E0",
+        "#4A5838",
+        "#2A2A22"
+      ]
+    }
+  ],
+  "variants": [
+    "K9 Moukari (FIN)",
+    "K9 Vidar (NOR)",
+    "K9 Tunet (ROU)",
+    "K9EST Kou (EST)",
+    "K9 Vajra-T (IND, L&T licence)",
+    "K9 (VNM, 20 ordered 2025)",
+    "T-155 Fırtına / Fırtına II (TUR, K9-derived)",
+    "K9A1EGY (EGY)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/K9_Thunder"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/K9_Thunder",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Finnish_Army"
+  ]
+}

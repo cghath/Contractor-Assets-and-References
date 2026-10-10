@@ -1,0 +1,62 @@
+{
+  "id": "polonez",
+  "name": "Polonez",
+  "aliases": [
+    "Polonez-M"
+  ],
+  "origin": "Belarus",
+  "type": "mlrs",
+  "operators": [
+    "blr",
+    "aze"
+  ],
+  "crew": 3,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 13.0,
+    "width": 3.1,
+    "height": 3.8
+  },
+  "weight_t": 43.0,
+  "armament": [
+    "8 x 300 mm guided rockets in two 4-round pods (A-200 / A-300), range 200-290 km"
+  ],
+  "protection": "Unarmoured truck with protected cab. Game: soft-skin; 7.62x54R and larger disable it, launchers destroy it.",
+  "visual_notes": [
+    "Very large 8x8 MZKT-7930 Astrolog truck chassis with a long flat bonnet-less cab",
+    "Two large rectangular box pods (4 tubes each) on a turntable over the rear axles",
+    "Stabiliser jacks deployed before firing"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Belarusian green / digital",
+      "palette": [
+        "#4C5A34",
+        "#2D3324",
+        "#7A7452"
+      ]
+    },
+    {
+      "name": "Azerbaijani desert-green disruptive",
+      "palette": [
+        "#C8B48A",
+        "#8E7B55",
+        "#5C5A3A",
+        "#3A3A2C"
+      ]
+    }
+  ],
+  "variants": [
+    "Polonez",
+    "Polonez-M"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Polonez_(multiple_rocket_launcher)",
+    "https://commons.wikimedia.org/wiki/Category:Polonez_(MLRS)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Polonez_(multiple_rocket_launcher)"
+  ]
+}

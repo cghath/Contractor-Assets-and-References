@@ -1,0 +1,366 @@
+{
+  "id": "srb",
+  "name": "Republic of Serbia",
+  "short": "Serbia",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#C6363C",
+    "#0C4076",
+    "#FFFFFF"
+  ],
+  "blocs": [
+    "eu",
+    "nato_partnership_for_peace",
+    "unifil"
+  ],
+  "traits": [
+    "csto_pa_observer",
+    "militarily_neutral"
+  ],
+  "campaign_tier": "mid",
+  "alignment_to_player": "neutral",
+  "player_client": true,
+  "relations": {
+    "player": 10,
+    "rus": 50,
+    "chn": 60,
+    "blr": 35,
+    "kaz": 25,
+    "aze": 45,
+    "arm": 15,
+    "isr": 40,
+    "fra": 35,
+    "usa": 15,
+    "deu": 20,
+    "ita": 25,
+    "grc": 50,
+    "ukr": -10,
+    "isis": -90,
+    "pmc_kestrel": 20,
+    "aut": 15
+  },
+  "theatres": [
+    "lebanon_south",
+    "alpine_europe"
+  ],
+  "languages": [
+    "Serbian"
+  ],
+  "callout_language": "Serbian",
+  "doctrine": {
+    "summary": "Militarily neutral since 2007, balancing Russia, China, the EU and NATO (Partnership for Peace) and holding observer status in the CSTO Parliamentary Assembly. Army modernised largely with domestic industry (M-84AS2 tanks, Lazar 3 and Milos MRAPs, Nora B-52 guns) plus Chinese air defence and drones, Russian Mi-35M and French Rafales. Large domestic small-arms industry (Zastava). Contributes to UNIFIL in Lebanon.",
+    "squad_size": 9,
+    "fireteam": "Squad of 9 in two fireteams; game 8 in pairs.",
+    "tactics": [
+      "Mountain and wooded defence with strong anti-tank teams",
+      "Mounted infantry in Lazar/M-80",
+      "Loitering munitions and domestic drones",
+      "Peacekeeping posture on UN deployments"
+    ],
+    "ai_tuning": {
+      "aggression": 0.5,
+      "discipline": 0.65,
+      "suppression_resistance": 0.6,
+      "flanking": 0.55,
+      "grenade_use": 0.6,
+      "medical_care": 0.6,
+      "night_capability": 0.5,
+      "marksmanship": 0.6,
+      "morale": 0.6
+    }
+  },
+  "camo": [
+    {
+      "name": "Serbian M10 digital woodland",
+      "palette": [
+        "#5A6440",
+        "#3B3F2E",
+        "#7D6A4A",
+        "#A4A07A"
+      ],
+      "use": "Standard army uniform"
+    },
+    {
+      "name": "Serbian M10 digital desert",
+      "palette": [
+        "#C8B791",
+        "#9D8865",
+        "#6F6047"
+      ],
+      "use": "UN and arid deployments"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "Zastava M19 (5.56x45mm)",
+      "Zastava M70 (7.62x39mm, reserve)"
+    ],
+    "autorifleman": [
+      "Zastava M84 (7.62x54R)",
+      "Zastava M72 (7.62x39mm)"
+    ],
+    "marksman": [
+      "Zastava M76 (7.92x57mm)",
+      "Zastava M91 (7.62x54R)"
+    ],
+    "grenadier": [
+      "Zastava M19 with underbarrel 40 mm launcher"
+    ],
+    "at": [
+      "M80 Zolja (64mm disposable)",
+      "M79 Osa (90mm)",
+      "Kornet ATGM"
+    ],
+    "medic": [
+      "Zastava M21 (5.56x45mm)"
+    ],
+    "squad_leader": [
+      "Zastava M19 (5.56x45mm)"
+    ],
+    "sniper": [
+      "Zastava M07 / M12 Black Spear (7.62x51mm / 12.7mm)",
+      "Zastava M93 Black Arrow (12.7x108mm)"
+    ],
+    "sidearm": [
+      "CZ 99 / Zastava pistols (9x19mm)",
+      "Glock (9x19mm, special units)"
+    ]
+  },
+  "launchers": [
+    "M80 Zolja (64mm) [not_in_game]",
+    "M79 Osa (90mm) [not_in_game]",
+    "RPG-7 copies (M57 / Zastava RBR) [not_in_game as separate; PG-7V-compatible rounds [in_game]]",
+    "Kornet ATGM [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "ceramic",
+    "notes": "Modern domestic aramid helmets (medium) and plate carriers with front/back ceramic plates (medium) on regular units; reserve/conscript kit lighter."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "m84",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "212 M-84, 26 upgraded M-84AS2 by 2025."
+    },
+    {
+      "vehicle_id": "bvp_m80",
+      "role": "ifv",
+      "prevalence": "signature",
+      "notes": "~325 BVP M-80/M-80AB1."
+    },
+    {
+      "vehicle_id": "lazar3",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "Lazar 3 APC and Lazar 3M IFV."
+    },
+    {
+      "vehicle_id": "milos",
+      "role": "mrap",
+      "prevalence": "common",
+      "notes": "~110 BOV M16 Milos, special forces and paratroopers."
+    },
+    {
+      "vehicle_id": "btr82a",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "108 BTR-80A."
+    },
+    {
+      "vehicle_id": "t72b3",
+      "role": "mbt",
+      "prevalence": "uncommon",
+      "notes": "30 T-72B1MS donated by Russia."
+    },
+    {
+      "vehicle_id": "nora_b52",
+      "role": "artillery",
+      "prevalence": "common",
+      "notes": "Nora B-52 K-I (M15)."
+    },
+    {
+      "vehicle_id": "puls",
+      "role": "mlrs",
+      "prevalence": "uncommon",
+      "notes": "Israeli PULS (20) plus domestic Oganj/Orkan rockets."
+    },
+    {
+      "vehicle_id": "mi24",
+      "role": "attack_heli",
+      "prevalence": "uncommon",
+      "notes": "Mi-35M."
+    },
+    {
+      "vehicle_id": "mi8",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": "Mi-17V-5; H145M also in service."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "srb_rifle_squad",
+      "name": "Serbian rifle squad (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "lazar3"
+    },
+    {
+      "id": "srb_un_patrol",
+      "name": "UNIFIL patrol",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "milos"
+    },
+    {
+      "id": "srb_sof_team",
+      "name": "72nd Special Operations Brigade team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "milos"
+    }
+  ],
+  "support_assets": [
+    "Nora B-52 and Oganj/PULS rockets",
+    "Loitering munitions (Komarac, SkyStriker) and CH-92/CH-95 drones",
+    "Mi-35M gunships, H145M",
+    "Chinese HQ-22/HQ-17 and Pantsir air defence"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 15,
+        "unlocks": [
+          "7.62x39mm, 7.62x54R and 5.56x45mm ammunition",
+          "frags, smokes"
+        ]
+      },
+      {
+        "rep": 30,
+        "unlocks": [
+          "Zastava M70 / M19 rifles",
+          "Zastava M84 GPMG",
+          "M91 marksman rifle"
+        ]
+      },
+      {
+        "rep": 50,
+        "unlocks": [
+          "PG-7V / OG-7V rounds for RPG-7",
+          "medium helmets and ceramic plate carriers",
+          "M93 Black Arrow .50"
+        ]
+      },
+      {
+        "rep": 70,
+        "unlocks": [
+          "Milos MRAP purchase",
+          "Lazar 3 APC purchase"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "un_convoy_escort",
+      "citizen_evacuation",
+      "vip_protection",
+      "arms_shipment_escort"
+    ],
+    "as_target": []
+  },
+  "notes": "Neutral arms-exporting state: in game a grey-market vendor of Zastava small arms and Yugoimport vehicles. Serbian peacekeepers in UNIFIL appear on lebanon_south maps as neutral units. No canonical Balkans theatre exists; alpine_europe is a proposed stand-in for mountain maps.",
+  "proposed": [
+    "campaign_tier",
+    "relations.player",
+    "player_client",
+    "player_trade",
+    "doctrine.ai_tuning",
+    "unit_templates",
+    "contract_types",
+    "theatres (alpine_europe as Balkan stand-in)",
+    "traits (csto_pa_observer, militarily_neutral are descriptive tags)",
+    "vehicles[].prevalence (game weighting)",
+    "body_armor (game tier mapping)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Serbian_Armed_Forces",
+    "https://en.wikipedia.org/wiki/Serbian_Army",
+    "https://en.wikipedia.org/wiki/M-84",
+    "https://en.wikipedia.org/wiki/BVP_M-80",
+    "https://en.wikipedia.org/wiki/Lazar_3",
+    "https://en.wikipedia.org/wiki/BOV_M16_Milo%C5%A1",
+    "https://en.wikipedia.org/wiki/Nora_B-52",
+    "https://www.inform.kz/en/afghan-and-serbian-parliaments-acquire-observer-status-at-csto-pa_a2549816",
+    "https://www.globalsecurity.org/military/library/news/2025/03/mil-250324-sputnik02.htm"
+  ]
+}

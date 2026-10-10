@@ -1,0 +1,347 @@
+{
+ "id": "pse_pa",
+ "faction": "Palestinian Authority Security Forces (State of Palestine)",
+ "schema_version": 1,
+ "kind": "state",
+ "campaign_tier": "early",
+ "default_variant": "regular",
+ "variants": [
+  {
+   "id": "regular",
+   "name": "PA National Security Forces",
+   "camo": "National Security Forces woodland-type",
+   "armor_tier": "light",
+   "medical_level": "basic",
+   "roles": {
+    "rifleman": {
+     "primary": {
+      "id": "akm",
+      "name": "AKM",
+      "calibre": "7.62x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "iron", "name": "Iron sights"},
+      "ammo": {
+       "id": "mag_762x39_30",
+       "round": "7.62x39mm 57-N-231 PS (mild steel core)",
+       "game_round_id": "762x39_msc",
+       "rounds_per_mag": 30,
+       "count": 6,
+       "game_item_id": null
+      },
+      "alternates": ["ak47", "m16a1", "m16a2"]
+     },
+     "secondary": null,
+     "launcher": null,
+     "grenades": [],
+     "armor": {
+      "vest": {"id": "soft_vest", "name": "Soft armour vest (aramid, NIJ IIIA class)", "tier": "light", "game_item_id": "plate_carrier_light"},
+      "plates": null,
+      "side_plates": null,
+      "helmet": {"id": "pasgt", "name": "PASGT-type aramid helmet", "tier": "light", "game_rating": "IIA", "game_item_id": "helmet_bump"}
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [{"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"}, {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"}]
+     },
+     "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}],
+     "game_kit": [
+      ["plate_carrier_light", 1],
+      ["helmet_bump", 1],
+      ["m4a1", 1],
+      ["mag_556", 6],
+      ["ifak", 1],
+      ["tourniquet", 1],
+      ["pressure_bandage", 2],
+      ["assault_pack", 1]
+     ]
+    },
+    "autorifleman": {
+     "primary": {
+      "id": "pkm",
+      "name": "PKM",
+      "calibre": "7.62x54R",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "iron", "name": "Iron sights"},
+      "ammo": {
+       "id": "belt_762x54r_100",
+       "round": "7.62x54R 57-N-323S LPS (steel core)",
+       "game_round_id": "762x54r_lps",
+       "rounds_per_mag": 100,
+       "count": 3,
+       "game_item_id": null
+      }
+     },
+     "secondary": null,
+     "launcher": null,
+     "grenades": [],
+     "armor": {
+      "vest": {"id": "soft_vest", "name": "Soft armour vest (aramid, NIJ IIIA class)", "tier": "light", "game_item_id": "plate_carrier_light"},
+      "plates": null,
+      "side_plates": null,
+      "helmet": {"id": "pasgt", "name": "PASGT-type aramid helmet", "tier": "light", "game_rating": "IIA", "game_item_id": "helmet_bump"}
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [{"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"}, {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"}]
+     },
+     "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}],
+     "game_kit": [
+      ["plate_carrier_light", 1],
+      ["helmet_bump", 1],
+      ["m4a1", 1],
+      ["mag_556", 10],
+      ["ifak", 1],
+      ["tourniquet", 1],
+      ["pressure_bandage", 2],
+      ["assault_pack", 1]
+     ]
+    },
+    "marksman": {
+     "primary": {
+      "id": "akm",
+      "name": "AKM",
+      "calibre": "7.62x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "collimator", "name": "Collimator (Kobra / 1P87 / EKP-8 class)"},
+      "ammo": {
+       "id": "mag_762x39_30",
+       "round": "7.62x39mm 57-N-231 PS (mild steel core)",
+       "game_round_id": "762x39_msc",
+       "rounds_per_mag": 30,
+       "count": 6,
+       "game_item_id": null
+      },
+      "alternates": ["m16a2"]
+     },
+     "secondary": null,
+     "launcher": null,
+     "grenades": [],
+     "armor": {
+      "vest": {"id": "soft_vest", "name": "Soft armour vest (aramid, NIJ IIIA class)", "tier": "light", "game_item_id": "plate_carrier_light"},
+      "plates": null,
+      "side_plates": null,
+      "helmet": {"id": "pasgt", "name": "PASGT-type aramid helmet", "tier": "light", "game_rating": "IIA", "game_item_id": "helmet_bump"}
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [{"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"}, {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"}]
+     },
+     "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}],
+     "game_kit": [
+      ["plate_carrier_light", 1],
+      ["helmet_bump", 1],
+      ["m4a1", 1],
+      ["mag_556", 6],
+      ["ifak", 1],
+      ["tourniquet", 1],
+      ["pressure_bandage", 2],
+      ["assault_pack", 1]
+     ]
+    },
+    "grenadier": {
+     "primary": {
+      "id": "akm",
+      "name": "AKM",
+      "calibre": "7.62x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "iron", "name": "Iron sights"},
+      "ammo": {
+       "id": "mag_762x39_30",
+       "round": "7.62x39mm 57-N-231 PS (mild steel core)",
+       "game_round_id": "762x39_msc",
+       "rounds_per_mag": 30,
+       "count": 6,
+       "game_item_id": null
+      }
+     },
+     "secondary": null,
+     "launcher": null,
+     "grenades": [
+      {
+       "id": "frag_copy",
+       "name": "Locally made or copied fragmentation grenade (RGD-5 / M67 pattern)",
+       "kind": "frag",
+       "count": 4,
+       "game_item_id": "frag_grenade"
+      }
+     ],
+     "armor": {
+      "vest": {"id": "soft_vest", "name": "Soft armour vest (aramid, NIJ IIIA class)", "tier": "light", "game_item_id": "plate_carrier_light"},
+      "plates": null,
+      "side_plates": null,
+      "helmet": {"id": "pasgt", "name": "PASGT-type aramid helmet", "tier": "light", "game_rating": "IIA", "game_item_id": "helmet_bump"}
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [{"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"}, {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"}]
+     },
+     "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}],
+     "game_kit": [
+      ["plate_carrier_light", 1],
+      ["helmet_bump", 1],
+      ["m4a1", 1],
+      ["mag_556", 6],
+      ["frag_grenade", 4],
+      ["ifak", 1],
+      ["tourniquet", 1],
+      ["pressure_bandage", 2],
+      ["assault_pack", 1]
+     ]
+    },
+    "at": {
+     "not_fielded": true,
+     "note": "No AT weapons: PA forces are limited to light weapons under the Oslo-era agreements (faction file).",
+     "stand_in_role": "rifleman"
+    },
+    "medic": {
+     "primary": {
+      "id": "akm",
+      "name": "AKM",
+      "calibre": "7.62x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "iron", "name": "Iron sights"},
+      "ammo": {
+       "id": "mag_762x39_30",
+       "round": "7.62x39mm 57-N-231 PS (mild steel core)",
+       "game_round_id": "762x39_msc",
+       "rounds_per_mag": 30,
+       "count": 4,
+       "game_item_id": null
+      }
+     },
+     "secondary": {
+      "id": "glock17",
+      "name": "Glock 17",
+      "calibre": "9x19mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {"id": "mag_9mm", "round": "9x19mm FMJ (NATO ball)", "game_round_id": "9x19_fmj", "rounds_per_mag": 17, "count": 2, "game_item_id": "mag_9mm"}
+     },
+     "launcher": null,
+     "grenades": [],
+     "armor": {
+      "vest": {"id": "soft_vest", "name": "Soft armour vest (aramid, NIJ IIIA class)", "tier": "light", "game_item_id": "plate_carrier_light"},
+      "plates": null,
+      "side_plates": null,
+      "helmet": {"id": "pasgt", "name": "PASGT-type aramid helmet", "tier": "light", "game_rating": "IIA", "game_item_id": "helmet_bump"}
+     },
+     "medical": {
+      "container": "trauma_kit",
+      "items": [
+       {"id": "tourniquet", "count": 2, "game_item_id": "tourniquet"},
+       {"id": "pressure_bandage", "count": 6, "game_item_id": "pressure_bandage"},
+       {"id": "hemostatic_gauze", "count": 1, "game_item_id": "hemostatic_gauze"},
+       {"id": "chest_seal", "count": 1, "game_item_id": "chest_seal"},
+       {"id": "splint", "count": 1, "game_item_id": "splint"},
+       {"id": "npa", "count": 1, "game_item_id": "npa"},
+       {"id": "iv_18g", "count": 1, "game_item_id": null},
+       {"id": "saline_500", "count": 1, "game_item_id": null},
+       {"id": "morphine", "count": 2, "game_item_id": "morphine"},
+       {"id": "epinephrine", "count": 1, "game_item_id": null}
+      ]
+     },
+     "other": [{"id": "ruck_45", "count": 1, "game_item_id": "ruck_45"}],
+     "game_kit": [
+      ["plate_carrier_light", 1],
+      ["helmet_bump", 1],
+      ["m4a1", 1],
+      ["mag_556", 4],
+      ["m17", 1],
+      ["mag_9mm", 2],
+      ["trauma_kit", 1],
+      ["tourniquet", 2],
+      ["pressure_bandage", 6],
+      ["hemostatic_gauze", 1],
+      ["chest_seal", 1],
+      ["splint", 1],
+      ["npa", 1],
+      ["morphine", 2],
+      ["ruck_45", 1]
+     ]
+    },
+    "squad_leader": {
+     "primary": {
+      "id": "akm",
+      "name": "AKM",
+      "calibre": "7.62x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "collimator", "name": "Collimator (Kobra / 1P87 / EKP-8 class)"},
+      "ammo": {
+       "id": "mag_762x39_30",
+       "round": "7.62x39mm 57-N-231 PS (mild steel core)",
+       "game_round_id": "762x39_msc",
+       "rounds_per_mag": 30,
+       "count": 6,
+       "game_item_id": null
+      },
+      "alternates": ["akms", "m16a2"]
+     },
+     "secondary": {
+      "id": "glock17",
+      "name": "Glock 17",
+      "calibre": "9x19mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {"id": "mag_9mm", "round": "9x19mm FMJ (NATO ball)", "game_round_id": "9x19_fmj", "rounds_per_mag": 17, "count": 2, "game_item_id": "mag_9mm"}
+     },
+     "launcher": null,
+     "grenades": [],
+     "armor": {
+      "vest": {"id": "soft_vest", "name": "Soft armour vest (aramid, NIJ IIIA class)", "tier": "light", "game_item_id": "plate_carrier_light"},
+      "plates": null,
+      "side_plates": null,
+      "helmet": {"id": "pasgt", "name": "PASGT-type aramid helmet", "tier": "light", "game_rating": "IIA", "game_item_id": "helmet_bump"}
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [{"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"}, {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"}]
+     },
+     "other": [
+      {"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"},
+      {"id": "radio", "count": 1, "game_item_id": null},
+      {"id": "binoculars", "count": 1, "game_item_id": null}
+     ],
+     "game_kit": [
+      ["plate_carrier_light", 1],
+      ["helmet_bump", 1],
+      ["m4a1", 1],
+      ["mag_556", 6],
+      ["m17", 1],
+      ["mag_9mm", 2],
+      ["ifak", 1],
+      ["tourniquet", 1],
+      ["pressure_bandage", 2],
+      ["assault_pack", 1]
+     ]
+    },
+    "sniper": {
+     "not_fielded": true,
+     "note": "No sniper rifles are listed in the faction file; designated police marksmen use the marksman role.",
+     "stand_in_role": "rifleman"
+    }
+   },
+   "team_weapons": []
+  }
+ ],
+ "role_map": {"driver": "rifleman", "riot_shield": "rifleman"},
+ "notes": [
+  "Light grenadier (Captain's decision, 2026-10-10): an AKM and 4 hand grenades, no launcher. No PA combat 40 mm launcher is documented: the faction file lists only a 37/40 mm tear-gas launcher for riot control, and PA forces are limited to light weapons.",
+  "at and sniper are marked not_fielded with rifleman as the stand-in role.",
+  "Only the grenadier carries hand grenades (proposed, matching the light-weapons limit).",
+  "Riot helmets and shields (riot_shield template role) map to the rifleman loadout."
+ ],
+ "proposed": [
+  "mag and medical counts (Q3 default)",
+  "variants and their armor mapping (Q1, Q9 defaults)",
+  "optics as class ids (Q7 default)",
+  "medical levels from doctrine.ai_tuning.medical_care (Q6 default)",
+  "game_kit (stand-in kit from items that exist today)"
+ ],
+ "sources": ["factions/pse_pa.json"]
+}

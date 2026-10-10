@@ -1,0 +1,460 @@
+{
+  "id": "sau",
+  "name": "Kingdom of Saudi Arabia (Royal Saudi Land Forces and Saudi Arabian National Guard)",
+  "short": "Saudi Arabia",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#006C35",
+    "#FFFFFF"
+  ],
+  "blocs": [
+    "gcc",
+    "arab_league",
+    "mecca_joint_defence_agreement",
+    "islamic_military_counter_terrorism_coalition",
+    "major_non_nato_ally_us",
+    "global_coalition_against_isis"
+  ],
+  "traits": [
+    "g20"
+  ],
+  "campaign_tier": "early",
+  "alignment_to_player": "friendly",
+  "player_client": true,
+  "relations": {
+    "player": 20,
+    "usa": 70,
+    "gbr": 55,
+    "fra": 40,
+    "can": 15,
+    "chn": 30,
+    "rus": 15,
+    "ind": 35,
+    "pak": 85,
+    "tur": 60,
+    "are": 30,
+    "qat": 55,
+    "egy": 60,
+    "jor": 60,
+    "syr": 55,
+    "irq": 20,
+    "irn": -55,
+    "isr": 5,
+    "pse_pa": 50,
+    "som": 40,
+    "houthis": -80,
+    "hezbollah": -70,
+    "iraqi_militias": -60,
+    "hamas": -30,
+    "pij": -40,
+    "aqap": -90,
+    "al_qaeda": -90,
+    "isis": -95,
+    "isis_k": -80,
+    "al_shabaab": -70,
+    "pmc_black_sable": 40,
+    "bel": 30,
+    "deu": 30,
+    "dnk": 30,
+    "esp": 30,
+    "fin": 30,
+    "grc": 30,
+    "ita": 30,
+    "nld": 30,
+    "nor": 30,
+    "pmc_halcyon": 30,
+    "swe": 30
+  },
+  "theatres": [
+    "yemen_red_sea",
+    "persian_gulf_coast"
+  ],
+  "languages": [
+    "Arabic (Najdi and Gulf dialects)",
+    "English (officer training, foreign advisers)"
+  ],
+  "callout_language": "Gulf Arabic military radio: 'ishtibak' (contact), 'nar' (fire), 'qunbula' (grenade), 'musab' (wounded), 'tayyara bidun tayyar' / 'dron' (drone); English loanwords from US/UK training.",
+  "doctrine": {
+    "summary": "A well-funded Western-equipped force split between the Royal Saudi Land Forces (armoured and mechanised brigades on Abrams, Bradley, M113) and the Saudi Arabian National Guard (a separate tribal-loyal force on LAV wheeled vehicles and CAESAR guns), plus Border Guards and special forces. Combat experience comes from the war in Yemen (2015-2022 intervention, truce since 2022), where air power, local Yemeni allies and border defence carried most of the load. Doctrine leans on air superiority, Patriot/THAAD air defence and fortified border posts. Since February 2026 Saudi Arabia has been struck by Iran, the Houthis and Iraqi militias; it struck back at Iran, signed the Mecca Joint Defence Agreement with Türkiye and Pakistan (August 2026) and in October 2026 agreed to host Turkish and Pakistani deployments under it.",
+    "squad_size": 9,
+    "fireteam": "US-style infantry squad of 9 in two fireteams around a Minimi/MG3, riding in a Bradley, M113 or LAV. Special forces and border guard teams of 6-8. In game: 8 men in battle-buddy pairs.",
+    "tactics": [
+      "Heavy reliance on air strikes and attack helicopters before ground movement",
+      "Fortified border posts and observation towers along the Yemen frontier (yemen_red_sea)",
+      "Mechanised convoys with MRAP and Humvee escorts; route clearance against IEDs",
+      "Local allied Yemeni forces lead infantry assaults while Saudi units provide fire support",
+      "Layered air and drone defence (Patriot, THAAD, Skyguard, counter-UAS) around oil and urban sites",
+      "Special forces raids against AQAP and smuggling networks"
+    ],
+    "ai_tuning": {
+      "aggression": 0.45,
+      "discipline": 0.55,
+      "suppression_resistance": 0.45,
+      "flanking": 0.4,
+      "grenade_use": 0.45,
+      "medical_care": 0.65,
+      "night_capability": 0.6,
+      "marksmanship": 0.55,
+      "morale": 0.5
+    }
+  },
+  "camo": [
+    {
+      "name": "Saudi digital desert",
+      "palette": [
+        "#C9B48D",
+        "#A68F68",
+        "#7D6A4B",
+        "#E0D2B0"
+      ],
+      "use": "Royal Saudi Land Forces standard"
+    },
+    {
+      "name": "SANG desert / tricolour desert",
+      "palette": [
+        "#D2BF96",
+        "#A88E64",
+        "#6E5B40"
+      ],
+      "use": "National Guard"
+    },
+    {
+      "name": "Multicam-type (special forces)",
+      "palette": [
+        "#7A7356",
+        "#A3966F",
+        "#4F4A37",
+        "#C8B992"
+      ],
+      "use": "Special Security Forces and Army special forces"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "HK G36 (licence-built, 5.56x45mm)",
+      "HK G3A3 (7.62x51mm, legacy and reserves)",
+      "Steyr AUG (5.56x45mm, National Guard)"
+    ],
+    "autorifleman": [
+      "FN Minimi (5.56x45mm)",
+      "HK MG3 / FN MAG (7.62x51mm)"
+    ],
+    "marksman": [
+      "HK G3 SG/1-type / HK417 (7.62x51mm)"
+    ],
+    "grenadier": [
+      "G36 with AG36 (40 mm)",
+      "M203 on M4/M16 (40 mm)"
+    ],
+    "at": [
+      "AT4 (84 mm)",
+      "M72 LAW (66 mm)",
+      "TOW-2 ATGM teams"
+    ],
+    "medic": [
+      "HK G36 (5.56x45mm)"
+    ],
+    "squad_leader": [
+      "HK G36 / M4 (5.56x45mm)"
+    ],
+    "sniper": [
+      "Accuracy International AW / AX (7.62x51mm / .338)",
+      "Barrett M82 / M107 (12.7x99mm)"
+    ],
+    "sidearm": [
+      "Glock 17 (9x19mm)",
+      "SIG Sauer P226 (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "AT4 [in_game]",
+    "M72 LAW [not_in_game]",
+    "TOW-2 ATGM [not_in_game]",
+    "Stinger MANPADS [not_in_game]",
+    "RPG-7 captured or for allied Yemeni forces [in_game]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "ceramic",
+    "notes": "Modern aramid helmets and plate carriers with ceramic front/back plates in front-line and special units = medium. Border posts and reservists often lighter."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "abrams",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "M1A2S Abrams (several lost to Houthi ATGMs on the border, 2015-17); M1A2S SEP v3 upgrade ordered."
+    },
+    {
+      "vehicle_id": "bradley",
+      "role": "ifv",
+      "prevalence": "common",
+      "notes": "M2A2 Bradley IFVs of the Royal Saudi Land Forces."
+    },
+    {
+      "vehicle_id": "lav6",
+      "role": "apc",
+      "prevalence": "signature",
+      "notes": "SANG wheeled fleet: LAV-25/LAV II and the large 2014 LAV 6 order (assault, ATGM, mortar, command variants)."
+    },
+    {
+      "vehicle_id": "m60",
+      "role": "mbt",
+      "prevalence": "uncommon",
+      "notes": "M60A3 still in service in reserve/second-line brigades."
+    },
+    {
+      "vehicle_id": "m113",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "M113A2/A3 family and M577 command vehicles."
+    },
+    {
+      "vehicle_id": "humvee",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Up-armoured Humvees with M2/TOW for patrol and border units."
+    },
+    {
+      "vehicle_id": "matv",
+      "role": "mrap",
+      "prevalence": "uncommon",
+      "notes": "M-ATVs and other MRAPs bought for the Yemen border."
+    },
+    {
+      "vehicle_id": "toyota_land_cruiser",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Border Guard and special-forces Land Cruiser pickups with MGs."
+    },
+    {
+      "vehicle_id": "caesar",
+      "role": "artillery",
+      "prevalence": "uncommon",
+      "notes": "SANG CAESAR 155 mm truck-mounted guns; M109A5 with the army."
+    },
+    {
+      "vehicle_id": "ah64",
+      "role": "attack_heli",
+      "prevalence": "signature",
+      "notes": "AH-64D/E Apaches (army aviation and SANG)."
+    },
+    {
+      "vehicle_id": "uh60",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": "UH-60L/M Black Hawks."
+    },
+    {
+      "vehicle_id": "wing_loong",
+      "role": "uav",
+      "prevalence": "uncommon",
+      "notes": "Chinese Wing Loong II armed drones; also domestic Saqr and Turkish drones on order."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "sau_mech_squad",
+      "name": "RSLF mechanised squad (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "bradley"
+    },
+    {
+      "id": "sang_lav_squad",
+      "name": "National Guard LAV squad",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "lav6"
+    },
+    {
+      "id": "sau_border_post",
+      "name": "Border guard post team (game 6)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "toyota_land_cruiser"
+    },
+    {
+      "id": "sau_sf_team",
+      "name": "Special forces team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "radio_operator",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "humvee"
+    },
+    {
+      "id": "sau_tank_section",
+      "name": "Abrams section",
+      "composition": [
+        {
+          "role": "tank_crew",
+          "count": 8
+        }
+      ],
+      "vehicle_id": "abrams"
+    }
+  ],
+  "support_assets": [
+    "Air strikes (F-15SA, Typhoon, Tornado; off-map)",
+    "AH-64 Apache gunships",
+    "Wing Loong armed drones",
+    "CAESAR and M109 artillery",
+    "Patriot / THAAD air defence (visual only)",
+    "Counter-drone systems at oil facilities"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 40,
+        "unlocks": [
+          "5.56x45mm and 7.62x51mm ammunition",
+          "40 mm grenades, frags and smoke",
+          "Steyr AUG and HK G36 rifles",
+          "medium helmets and soft vests"
+        ]
+      },
+      {
+        "rep": 60,
+        "unlocks": [
+          "FN Minimi and FN MAG",
+          "HK417 marksman rifle",
+          "plate carriers with ceramic front/back plates",
+          "AT4"
+        ]
+      },
+      {
+        "rep": 80,
+        "unlocks": [
+          "Toyota Land Cruiser and Humvee purchase (unarmed)",
+          "M-ATV purchase",
+          "NVGs and thermal optics"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "border_post_defence",
+      "escort_aid_convoy_yemen",
+      "hvt_capture_aqap",
+      "counter_drone_oil_facility",
+      "anti_smuggling_raid",
+      "rescue_downed_aircrew",
+      "protect_shipping_red_sea"
+    ],
+    "as_target": []
+  },
+  "notes": "Early-game client: the Yemen frontier and Red Sea coast give counter-AQAP, anti-smuggling and border-defence contracts, and since 2026 counter-drone work against Houthi, Iraqi-militia and Iranian strikes. Political context 2026: Saudi-Houthi truce since 2022 broken by renewed strikes after the Iran war began (28 February 2026) and the Houthi Bab al-Mandab escalation (September 2026); Saudi Arabia struck Iran after being attacked; Mecca Joint Defence Agreement with Türkiye and Pakistan (7 August 2026), collective-defence deployments agreed 5 October 2026; Strategic Mutual Defence Agreement with Pakistan from September 2025. Relations with the UAE cooled after the December 2025 Yemen crisis over the Southern Transitional Council. No diplomatic relations with Israel. Backs Syria's new government. It fields the Abrams, Bradley and M-ATV in game as a real operator (Captain-confirmed 2026-10-10: the existing voxel models are fielded by their real operators).",
+  "proposed": [
+    "campaign_tier",
+    "player_client",
+    "contract_types.as_client",
+    "relations.player",
+    "doctrine.ai_tuning",
+    "unit_templates",
+    "vehicles[].prevalence (game weighting)",
+    "body_armor (game tier mapping)",
+    "alignment_to_player (friendly client and seller)",
+    "player_trade.rep_tiers (40/60/80 thresholds and unlocks; that sau sells at high reputation is Captain-confirmed 2026-10-10)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Royal_Saudi_Land_Forces",
+    "https://en.wikipedia.org/wiki/Saudi_Arabian_National_Guard",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Royal_Saudi_Land_Forces",
+    "https://en.wikipedia.org/wiki/2026_Iran_war",
+    "https://www.inquirer.com/news/nation-world/saudi-arabia-pakistan-turkey-sign-mecca-joint-defense-agreement-20260807.html",
+    "https://www.aljazeera.com/news/2026/10/5/mecca-alliance-agrees-to-activate-collective-deterrence-measures",
+    "https://en.wikipedia.org/wiki/Strategic_Mutual_Defence_Agreement",
+    "https://en.wikipedia.org/wiki/LAV_6.0"
+  ]
+}

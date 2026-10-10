@@ -1,0 +1,63 @@
+{
+  "id": "krab",
+  "name": "AHS Krab",
+  "aliases": [
+    "Krab"
+  ],
+  "origin": "Poland (Huta Stalowa Wola; K9 chassis, AS-90-derived turret)",
+  "type": "artillery",
+  "operators": [
+    "pol",
+    "ukr"
+  ],
+  "crew": 5,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 12.1,
+    "width": 3.63,
+    "height": 3.0
+  },
+  "weight_t": 48.0,
+  "armament": [
+    "155 mm L/52 howitzer (40 rounds)",
+    "12.7 mm WKM-B on roof"
+  ],
+  "protection": "Light armour against splinters and small arms. Game: immune to 5.56/5.45/7.62x39/7.62x51; 7.62x54R and larger can penetrate side/rear and disable wheels, engine and optics; every launcher in the game list penetrates.",
+  "visual_notes": [
+    "K9 Thunder tracked chassis: 6 road wheels per side, driver front-left, engine front-right",
+    "Large slab-sided box turret (AS-90 Braveheart lineage) set well back, long L/52 barrel with a fume extractor and muzzle brake",
+    "Barrel rests in a travel lock on the glacis when moving",
+    "Rear hull door for ammunition resupply; Ukrainian examples heavily netted"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Polish three-tone (green/brown/black)",
+      "palette": [
+        "#4D5B37",
+        "#5E4B33",
+        "#1E1E1A"
+      ]
+    },
+    {
+      "name": "Ukrainian army green with field netting",
+      "palette": [
+        "#4F5534",
+        "#3A4027",
+        "#6B6A45",
+        "#2A2B20"
+      ]
+    }
+  ],
+  "variants": [
+    "Krab (UPG-NG chassis, first 8)",
+    "Krab (K9 chassis, production)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/AHS_Krab"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/AHS_Krab"
+  ]
+}

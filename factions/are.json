@@ -1,0 +1,439 @@
+{
+  "id": "are",
+  "name": "United Arab Emirates (UAE Armed Forces)",
+  "short": "UAE",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#00732F",
+    "#FFFFFF",
+    "#000000",
+    "#FF0000"
+  ],
+  "blocs": [
+    "gcc",
+    "arab_league",
+    "abraham_accords",
+    "brics",
+    "global_coalition_against_isis",
+    "islamic_military_counter_terrorism_coalition"
+  ],
+  "campaign_tier": "early",
+  "alignment_to_player": "friendly",
+  "player_client": true,
+  "relations": {
+    "player": 25,
+    "usa": 75,
+    "gbr": 55,
+    "fra": 65,
+    "ind": 60,
+    "kor": 50,
+    "chn": 40,
+    "rus": 25,
+    "aus": 30,
+    "isr": 45,
+    "sau": 30,
+    "egy": 65,
+    "jor": 60,
+    "qat": 30,
+    "tur": 25,
+    "syr": 45,
+    "irq": 25,
+    "pse_pa": 30,
+    "irn": -65,
+    "som": -15,
+    "hamas": -60,
+    "pij": -60,
+    "hezbollah": -70,
+    "houthis": -85,
+    "iraqi_militias": -60,
+    "aqap": -90,
+    "al_qaeda": -90,
+    "isis": -95,
+    "isis_k": -80,
+    "al_shabaab": -85,
+    "grc": 65,
+    "pak": 50,
+    "pmc_black_sable": 50,
+    "bel": 45,
+    "deu": 45,
+    "dnk": 45,
+    "esp": 45,
+    "fin": 45,
+    "ita": 45,
+    "nld": 45,
+    "nor": 45,
+    "swe": 45,
+    "pmc_halcyon": 35,
+    "cod": 25
+  },
+  "theatres": [
+    "persian_gulf_coast",
+    "yemen_red_sea",
+    "horn_of_africa"
+  ],
+  "languages": [
+    "Arabic (Gulf dialect)",
+    "English (widely used in the forces)"
+  ],
+  "callout_language": "Gulf Arabic mixed with English military terms ('contact', 'reload', 'man down'); the UAE forces train closely with US, French and Australian advisers.",
+  "doctrine": {
+    "summary": "Small, highly funded and combat-experienced ('Little Sparta'): Emirati forces fought in Afghanistan alongside NATO and led ground operations in southern Yemen (2015-2019), relying on Presidential Guard and special forces, MRAP-heavy mechanised task forces, attack helicopters and large numbers of local proxy forces trained and paid by the UAE. Most of the army's manpower is expatriate-supported and conscription began in 2014. Strong in air defence, ISR drones and precision fires. In 2026 the UAE was among the Gulf states hit hardest by Iranian missile and drone strikes and struck back at Iran. It withdrew its remaining forces from Yemen at the end of December 2025 after a crisis with Saudi Arabia over the Southern Transitional Council.",
+    "squad_size": 8,
+    "fireteam": "Western-style 8-9 man section in two fireteams with a Minimi and grenadier, mounted in M-ATVs, Nimr Jais/Ajban or BMP-3s. Presidential Guard and special forces in 4-8 man teams with Western advisers. In game: 8 men in battle-buddy pairs.",
+    "tactics": [
+      "MRAP task forces (M-ATV, MaxxPro, Nimr) with heavy MGs and grenade launchers move fast along coastal roads",
+      "Local partner forces lead infantry assaults; Emirati special forces direct fires and air support",
+      "Apache gunships and armed drones overhead during ground operations",
+      "Leclerc tanks and BMP-3s for the decisive push into towns",
+      "Dense air and counter-drone defence of ports, bases and energy sites (persian_gulf_coast)"
+    ],
+    "ai_tuning": {
+      "aggression": 0.55,
+      "discipline": 0.7,
+      "suppression_resistance": 0.55,
+      "flanking": 0.6,
+      "grenade_use": 0.55,
+      "medical_care": 0.75,
+      "night_capability": 0.75,
+      "marksmanship": 0.65,
+      "morale": 0.6
+    }
+  },
+  "camo": [
+    {
+      "name": "UAE digital desert",
+      "palette": [
+        "#C8B38A",
+        "#A08A63",
+        "#76664A",
+        "#DDCDAA"
+      ],
+      "use": "Land Forces"
+    },
+    {
+      "name": "Multicam-type (Presidential Guard and special forces)",
+      "palette": [
+        "#7A7356",
+        "#A3966F",
+        "#4F4A37",
+        "#C8B992"
+      ],
+      "use": "Presidential Guard, special operations"
+    },
+    {
+      "name": "Plain coyote / tan gear",
+      "palette": [
+        "#A8916A",
+        "#7F6C4E"
+      ],
+      "use": "Load-bearing gear and helmet covers"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "Caracal CAR 816 (5.56x45mm)",
+      "M4A1 / M16A4 (5.56x45mm)"
+    ],
+    "autorifleman": [
+      "FN Minimi (5.56x45mm)",
+      "FN MAG / M240 (7.62x51mm)"
+    ],
+    "marksman": [
+      "Caracal CAR 817 DMR (7.62x51mm)"
+    ],
+    "grenadier": [
+      "CAR 816 / M4 with M203-type launcher (40 mm)",
+      "Mk 19 / Milkor 40 mm on vehicles"
+    ],
+    "at": [
+      "AT4 (84 mm)",
+      "Javelin and Kornet ATGM teams"
+    ],
+    "medic": [
+      "Caracal CAR 816 (5.56x45mm)"
+    ],
+    "squad_leader": [
+      "Caracal CAR 816 (5.56x45mm)"
+    ],
+    "sniper": [
+      "Caracal CSR 338 / CSA 338 (.338 Lapua)",
+      "Barrett M107 (12.7x99mm)"
+    ],
+    "sidearm": [
+      "Caracal Enhanced F (9x19mm)",
+      "Glock 17 (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "AT4 [in_game]",
+    "FGM-148 Javelin [in_game]",
+    "9M133 Kornet [not_in_game]",
+    "Mistral / Igla MANPADS [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "ceramic",
+    "notes": "Modern Western helmets and plate carriers with ceramic plates; Presidential Guard and special forces at heavy tier with side plates (proposed)."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "leclerc",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "Leclerc EAU (MTU engine, desert-optimised); 2015-19 use in Yemen with AZUR urban kit."
+    },
+    {
+      "vehicle_id": "bmp3",
+      "role": "ifv",
+      "prevalence": "signature",
+      "notes": "Largest BMP-3 export fleet; used in Yemen."
+    },
+    {
+      "vehicle_id": "matv",
+      "role": "mrap",
+      "prevalence": "signature",
+      "notes": "Largest export M-ATV fleet (several thousand), the standard UAE task-force vehicle."
+    },
+    {
+      "vehicle_id": "nimr",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": "Domestic EDGE/NIMR Ajban and Jais 4x4/6x6 armoured vehicles."
+    },
+    {
+      "vehicle_id": "arma",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "Rabdan 8x8 (Otokar Arma-derived, built in the UAE) IFV/APC."
+    },
+    {
+      "vehicle_id": "maxxpro",
+      "role": "mrap",
+      "prevalence": "common",
+      "notes": "MaxxPro MRAPs (ex-US), used in Yemen."
+    },
+    {
+      "vehicle_id": "g6",
+      "role": "artillery",
+      "prevalence": "common",
+      "notes": "G6 155 mm wheeled howitzers; also M109A3 and Chinese/Korean MLRS."
+    },
+    {
+      "vehicle_id": "himars",
+      "role": "mlrs",
+      "prevalence": "uncommon",
+      "notes": "M142 HIMARS with ATACMS/GMLRS."
+    },
+    {
+      "vehicle_id": "pantsir",
+      "role": "air_defense",
+      "prevalence": "uncommon",
+      "notes": "Pantsir-S1 on MAN 8x8 trucks; also Patriot, THAAD and Korean Cheongung batteries."
+    },
+    {
+      "vehicle_id": "ah64",
+      "role": "attack_heli",
+      "prevalence": "signature",
+      "notes": "AH-64D Apaches; heavily used in Yemen."
+    },
+    {
+      "vehicle_id": "uh60",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": "UH-60L/M Black Hawks; also CH-47F."
+    },
+    {
+      "vehicle_id": "wing_loong",
+      "role": "uav",
+      "prevalence": "common",
+      "notes": "Wing Loong I/II armed drones (Yemen, Libya); MQ-9B not delivered."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "are_mrap_section",
+      "name": "MRAP task-force section (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "matv"
+    },
+    {
+      "id": "are_mech_squad",
+      "name": "Mechanised squad",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "bmp3"
+    },
+    {
+      "id": "are_pg_team",
+      "name": "Presidential Guard / special forces team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "radio_operator",
+          "count": 1
+        },
+        {
+          "role": "drone_operator",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "nimr"
+    },
+    {
+      "id": "are_tank_section",
+      "name": "Leclerc section",
+      "composition": [
+        {
+          "role": "tank_crew",
+          "count": 6
+        }
+      ],
+      "vehicle_id": "leclerc"
+    }
+  ],
+  "support_assets": [
+    "AH-64 gunships",
+    "Wing Loong armed drones",
+    "F-16E/F and Mirage 2000-9 strikes (off-map)",
+    "G6 and HIMARS precision fires",
+    "Dense air and counter-drone defence (Patriot, THAAD, Pantsir, Cheongung)"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 40,
+        "unlocks": [
+          "5.56x45mm and 7.62x51mm ammunition",
+          "Caracal CAR 816 rifle",
+          "frags, smoke and flashbangs",
+          "medium helmets and soft vests"
+        ]
+      },
+      {
+        "rep": 60,
+        "unlocks": [
+          "Caracal CAR 817 DMR",
+          "FN Minimi and FN MAG",
+          "plate carriers with ceramic front/back plates",
+          "AT4"
+        ]
+      },
+      {
+        "rep": 80,
+        "unlocks": [
+          "NIMR purchase",
+          "M-ATV purchase",
+          "Javelin",
+          "NVGs and thermal optics"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "port_security_persian_gulf",
+      "counter_drone_energy_site",
+      "escort_tanker_convoy",
+      "hvt_capture_aqap",
+      "train_partner_force",
+      "recover_seized_ship_crew",
+      "anti_piracy_horn_of_africa"
+    ],
+    "as_target": []
+  },
+  "notes": "A natural early-game Gulf client for port security, counter-drone and Hormuz-escort work. Context 2026: struck by Iranian missiles and drones after 28 February 2026 (soldiers and civilians killed) and among the states that struck back; Abraham Accords partner of Israel since 2020; withdrew remaining forces from Yemen on 30 December 2025 after Saudi Arabia demanded the UAE-backed STC leave Hadramawt and Mahra; strained ties with the Somali federal government because of its links to Somaliland and Puntland. Wealthy, with Western, Russian, Chinese and Korean kit side by side.",
+  "proposed": [
+    "campaign_tier",
+    "player_client",
+    "contract_types.as_client",
+    "relations.player",
+    "relations.som",
+    "doctrine.ai_tuning",
+    "unit_templates",
+    "vehicles[].prevalence (game weighting)",
+    "body_armor (game tier mapping)",
+    "alignment_to_player (friendly client and seller)",
+    "player_trade.rep_tiers (40/60/80 thresholds and unlocks; that are sells at high reputation is Captain-confirmed 2026-10-10)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/United_Arab_Emirates_Armed_Forces",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_United_Arab_Emirates_Army",
+    "https://en.wikipedia.org/wiki/2026_Iran_war",
+    "https://www.al-monitor.com/originals/2025/12/uae-pull-forces-out-yemen-24-hour-deadline-set",
+    "https://www.rudaw.net/english/middleeast/03012026",
+    "https://en.wikipedia.org/wiki/Caracal_CAR_816",
+    "https://en.wikipedia.org/wiki/Leclerc_tank",
+    "https://en.wikipedia.org/wiki/Oshkosh_M-ATV"
+  ]
+}

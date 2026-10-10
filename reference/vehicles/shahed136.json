@@ -1,0 +1,68 @@
+{
+  "id": "shahed136",
+  "name": "Shahed-136 loitering munition",
+  "aliases": [
+    "Shahed-136",
+    "Geran-2 (Russian production)"
+  ],
+  "origin": "Iran",
+  "type": "uav",
+  "operators": [
+    "irn",
+    "rus",
+    "houthis",
+    "hezbollah",
+    "iraqi_militias"
+  ],
+  "crew": 0,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 3.5,
+    "width": 2.5,
+    "height": 0.6
+  },
+  "weight_t": 0.2,
+  "armament": [
+    "Built-in high-explosive warhead (game: area damage on impact)"
+  ],
+  "protection": "Unarmoured. Game: any hit from any calibre can down it; slow and loud, so it works as a strike/map hazard that infantry can shoot down; EW can divert it.",
+  "visual_notes": [
+    "Cropped delta wing with small vertical fins at the wingtips",
+    "Rear-mounted piston engine with a two-blade pusher propeller",
+    "Launched in salvoes of five from slanted box racks on truck beds",
+    "Usually unpainted grey or black (Russian Geran-2 often matt black)"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Grey composite",
+      "palette": [
+        "#8E9196",
+        "#6B6E72",
+        "#2D2E30"
+      ]
+    },
+    {
+      "name": "Black (Geran-2)",
+      "palette": [
+        "#1E1F21",
+        "#2E3033"
+      ]
+    }
+  ],
+  "variants": [
+    "Shahed-131 (smaller)",
+    "Shahed-136",
+    "Shahed-238 (jet)",
+    "Geran-2 (Russian licence)"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/HESA_Shahed_136",
+    "https://commons.wikimedia.org/wiki/Category:HESA_Shahed_136"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/HESA_Shahed_136",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Iranian_Army"
+  ]
+}

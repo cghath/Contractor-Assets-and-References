@@ -1,0 +1,425 @@
+{
+  "id": "hamas",
+  "name": "Hamas (Izz ad-Din al-Qassam Brigades)",
+  "short": "Hamas",
+  "kind": "non_state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#2E6B3A",
+    "#F2F2EE",
+    "#1C1C1C"
+  ],
+  "blocs": [
+    "axis_of_resistance"
+  ],
+  "campaign_tier": "early",
+  "alignment_to_player": "hostile",
+  "player_client": false,
+  "relations": {
+    "player": -100,
+    "isr": -100,
+    "usa": -90,
+    "gbr": -90,
+    "can": -90,
+    "aus": -90,
+    "fra": -80,
+    "deu": -80,
+    "ita": -80,
+    "pse_pa": -45,
+    "egy": -15,
+    "jor": -20,
+    "sau": -25,
+    "are": -50,
+    "syr": -5,
+    "qat": 20,
+    "tur": 35,
+    "irq": 5,
+    "rus": 10,
+    "irn": 75,
+    "pij": 80,
+    "hezbollah": 70,
+    "houthis": 65,
+    "iraqi_militias": 55,
+    "al_qaeda": -40,
+    "isis": -80,
+    "ukr": -55,
+    "est": -75,
+    "ltu": -75,
+    "lva": -75,
+    "pol": -75,
+    "rou": -75,
+    "nzl": -80,
+    "bel": -85,
+    "dnk": -85,
+    "esp": -85,
+    "fin": -85,
+    "grc": -85,
+    "nld": -85,
+    "nor": -85,
+    "swe": -85
+  },
+  "theatres": [
+    "gaza_west_bank",
+    "israel"
+  ],
+  "languages": [
+    "Arabic (Palestinian / Gazan dialect)"
+  ],
+  "callout_language": "Palestinian Arabic; short coded radio and hand-held phone traffic, much use of runners and wired communications in the game's tunnel levels.",
+  "doctrine": {
+    "summary": "Hamas is a Palestinian Islamist movement that has governed the Gaza Strip since 2007; its armed wing is the Izz ad-Din al-Qassam Brigades, organised before the war into regional brigades, battalions and specialist units (rocket, anti-tank, sniper, naval, engineering). Since the October 2023 war it has fought as a dispersed guerrilla force in dense urban terrain, using a large tunnel network, short-range rockets and mortars, anti-tank teams and small commercial drones. Its pre-war structure was heavily degraded and most of its senior commanders were killed, but it recruited replacements and still controls the part of Gaza not held by the IDF behind the ceasefire 'yellow line'. In the game it is the archetypal early-game urban cell enemy: small teams, few vehicles, close-range ambushes in rubble, and fighters who move between tunnel shafts and civilian buildings, which makes the civilian-casualty rule the player's main constraint.",
+    "squad_size": 6,
+    "fireteam": "Cells of 3-6 under a local commander; anti-tank pairs (RPG gunner plus loader) and sniper pairs attached. In game: pairs of battle buddies, 4-8 per encounter.",
+    "tactics": [
+      "Ambush armoured vehicles at close range from rubble and doorways with RPG-7 pairs, then withdraw underground",
+      "Tunnel network as level geometry: shafts in houses and alleys let cells appear behind the player's line and vanish again",
+      "IED-rigged buildings and roads as telegraphed map hazards that the player can spot and clear",
+      "Quadcopter drone spotting and munition drops as an AI hazard ability against stationary vehicles and groups",
+      "Sniper pairs on upper floors covering approach streets",
+      "Fall back into dense civilian areas (shelters, hospitals, schools) so the player's casualty penalty becomes a real constraint",
+      "Short rocket and mortar salvos as off-map events, launched from concealed positions"
+    ],
+    "ai_tuning": {
+      "aggression": 0.6,
+      "discipline": 0.45,
+      "suppression_resistance": 0.45,
+      "flanking": 0.6,
+      "grenade_use": 0.5,
+      "medical_care": 0.2,
+      "night_capability": 0.3,
+      "marksmanship": 0.4,
+      "morale": 0.65
+    }
+  },
+  "camo": [
+    {
+      "name": "Qassam olive / woodland fatigues",
+      "palette": [
+        "#4E5A3A",
+        "#6B6B45",
+        "#2F3324",
+        "#8C7F5A"
+      ],
+      "use": "Uniformed fighters; olive or woodland-type fatigues with a chest rig, often with a headband (plain colour in game, no slogans)"
+    },
+    {
+      "name": "Civilian clothing",
+      "palette": [
+        "#3B3B3B",
+        "#7A6E5D",
+        "#C9C3B8",
+        "#2C3E50"
+      ],
+      "use": "Most cell members and runners: jeans, tracksuits, jackets"
+    },
+    {
+      "name": "Dust and rubble",
+      "palette": [
+        "#B8AE9C",
+        "#8F8574",
+        "#D6CEC0",
+        "#5E584E"
+      ],
+      "use": "Clothing and gear coated in concrete dust in destroyed urban areas"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "AKM / Type 56 (7.62x39mm)",
+      "M16 / M4-pattern rifles (5.56x45mm)"
+    ],
+    "autorifleman": [
+      "PKM (7.62x54R)",
+      "RPK (7.62x39mm)"
+    ],
+    "marksman": [
+      "SVD (7.62x54R)"
+    ],
+    "grenadier": [
+      "AKM (7.62x39mm) with hand grenades"
+    ],
+    "at": [
+      "RPG-7 with PG-7V / OG-7V and locally made tandem rounds ('Yassin-105')",
+      "Kornet ATGM (team weapon)"
+    ],
+    "medic": [
+      "AKM (7.62x39mm)"
+    ],
+    "squad_leader": [
+      "AKM / AKMS (7.62x39mm)",
+      "M4-pattern carbine (5.56x45mm)"
+    ],
+    "sniper": [
+      "Locally made heavy anti-materiel rifle ('Al-Ghoul', 14.5mm)",
+      "Steyr HS .50-type rifle (12.7mm)"
+    ],
+    "sidearm": [
+      "Makarov / Tokarev-pattern pistols",
+      "Glock-type pistols (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "RPG-7 (PG-7V, OG-7V) [in_game]",
+    "RPG-7 firing locally made tandem rounds ('Yassin-105') [not_in_game: AI uses the RPG-7 model]",
+    "Kornet ATGM [not_in_game: AI threat only]",
+    "Short-range unguided rockets (Qassam family) [not_in_game: off-map event only]"
+  ],
+  "body_armor": {
+    "helmet": "none",
+    "vest": "light",
+    "plates": "none",
+    "notes": "Chest rigs and load-bearing vests are common; ballistic vests are rare and helmets almost never seen. Game: mostly none, some light soft vests on uniformed Qassam fighters (proposed)."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "toyota_hilux",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": "White and coloured Hilux pickups carried assault teams on 7 October 2023; in 2026 Gaza they appear as rare civilian-pattern pickups."
+    },
+    {
+      "vehicle_id": "motorcycle",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": "Small motorbikes used by runners, scouts and two-man raid teams; the most common vehicle in game encounters."
+    },
+    {
+      "vehicle_id": "fpv_drone",
+      "role": "uav",
+      "prevalence": "common",
+      "notes": "Commercial quadcopters used for spotting and dropping small munitions on vehicles and positions (documented from October 2023). AI hazard ability."
+    },
+    {
+      "vehicle_id": "toyota_land_cruiser",
+      "role": "light",
+      "prevalence": "uncommon",
+      "notes": "Older Land Cruisers and SUVs used by commanders' details."
+    },
+    {
+      "vehicle_id": "technical_dshk",
+      "role": "technical",
+      "prevalence": "rare",
+      "notes": "Pickup-mounted heavy machine guns were used on 7 October 2023; in Gaza they are rare and mostly appear in the israel border scenario."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "hamas_urban_cell",
+      "name": "Urban cell (4-6)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "hamas_rpg_ambush",
+      "name": "Anti-armour ambush team",
+      "composition": [
+        {
+          "role": "at",
+          "count": 2
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null,
+      "notes": "Waits in rubble near a tunnel shaft; fires on vehicles at close range then retreats underground."
+    },
+    {
+      "id": "hamas_tunnel_defence",
+      "name": "Tunnel shaft defence squad",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null,
+      "notes": "Defends a tunnel entrance in a held building; contract target for tunnel-entrance demolition."
+    },
+    {
+      "id": "hamas_sniper_pair",
+      "name": "Sniper pair",
+      "composition": [
+        {
+          "role": "sniper",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "hamas_drone_team",
+      "name": "Drone team (AI hazard)",
+      "composition": [
+        {
+          "role": "drone_operator",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "fpv_drone",
+      "notes": "Spots for mortar and rocket events and drops small munitions on stationary vehicles; killing the operator ends the hazard."
+    },
+    {
+      "id": "hamas_moto_raid",
+      "name": "Motorbike raid pair",
+      "composition": [
+        {
+          "role": "rifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "motorcycle"
+    },
+    {
+      "id": "hamas_pickup_team",
+      "name": "Pickup assault team",
+      "composition": [
+        {
+          "role": "driver",
+          "count": 1
+        },
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "toyota_hilux"
+    },
+    {
+      "id": "hamas_hvt_guard",
+      "name": "Commander and guard detail",
+      "composition": [
+        {
+          "role": "leader_hvt",
+          "count": 1
+        },
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "toyota_land_cruiser",
+      "notes": "HVT capture/kill contracts; guards try to move the commander underground or into civilian buildings."
+    }
+  ],
+  "support_assets": [
+    "Short-range rocket salvo (off-map event, telegraphed by launch trails)",
+    "60/82 mm mortar fire from concealed positions",
+    "Quadcopter munition-drop drone hazard",
+    "Tunnel ambush spawns (cells appear from shafts behind the player)",
+    "IED-rigged buildings and roads as map hazards",
+    "Sniper overwatch from high-rise ruins"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [],
+    "as_target": [
+      "tunnel_entrance_demolition",
+      "hostage_rescue",
+      "hvt_capture_or_kill",
+      "weapons_cache_raid",
+      "drone_team_hunt",
+      "rocket_launch_site_clearance",
+      "ied_route_clearance",
+      "aid_convoy_ambush_defence"
+    ]
+  },
+  "notes": "Hamas is a Palestinian Islamist movement founded in 1987 and in control of Gaza since 2007; its 7 October 2023 attack on Israel killed about 1,200 people and took about 250 hostages, starting the Gaza war. It is designated a terrorist organisation by the US, EU, UK, Canada and others (Qatar, Turkey and Russia keep political contacts). Status as of October 2026: a ceasefire has held in broad terms since October 2025 under the US 20-point plan; the IDF holds roughly half the Strip behind the 'yellow line'; a US-led Board of Peace and the National Committee for the Administration of Gaza exist but the technocratic committee had not entered Gaza by mid-2026 and the International Stabilization Force has not fully deployed. In late July 2026 Hamas accepted a roadmap for phased disarmament tied to Israeli withdrawal, but said it would not act first, and implementation was stalled. Game framing: an early-game, mid-strength urban enemy in gaza_west_bank (Captain's default), with tunnels as level geometry. Contracts against Hamas come from other clients; hostage rescue and aid-convoy protection are the most factual hooks. Content rule: no slogans, flags or imagery beyond neutral colour hexes; tactics are game abstractions only. Captain confirmed (2026-10-10) mid-strength tuning among the early-game enemies in gaza_west_bank, with tunnels as level geometry.",
+  "proposed": [
+    "campaign_tier",
+    "relations.player",
+    "doctrine.ai_tuning (all values)",
+    "doctrine.squad_size (game cell size)",
+    "unit_templates (game compositions)",
+    "support_assets (game events and hazards)",
+    "contract_types.as_target",
+    "vehicles[].prevalence (game weighting)",
+    "body_armor (game tier mapping)",
+    "camo (approximate palettes)",
+    "player_trade (hostile-only: not sellable)",
+    "Tunnel network as level geometry with spawn shafts",
+    "fpv_drone as an AI hazard ability",
+    "relations values (factual direction, game magnitudes)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Hamas",
+    "https://en.wikipedia.org/wiki/Al-Qassam_Brigades",
+    "https://en.wikipedia.org/wiki/Gaza_war",
+    "https://en.wikipedia.org/wiki/Gaza_war_peace_plan",
+    "https://en.wikipedia.org/wiki/Palestinian_tunnel_warfare_in_the_Gaza_Strip",
+    "https://en.wikipedia.org/wiki/Al-Yassin_105",
+    "https://today.lorientlejour.com/article/1543080/hamas-agrees-to-deal-for-disarmament-israels-withdrawal-from-gaza.html",
+    "https://www.aa.com.tr/en/world/hamas-says-no-disarmament-before-israeli-withdrawal-from-gaza/4014465",
+    "https://www.arabnews.pk/node/2643461",
+    "https://www.fdd.org/analysis/2025/12/10/top-hamas-officials-contradict-each-other-over-disarmament/"
+  ]
+}

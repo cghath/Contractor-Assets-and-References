@@ -1,0 +1,71 @@
+{
+  "id": "tiger",
+  "name": "Eurocopter Tiger",
+  "aliases": [
+    "Tigre",
+    "Tiger UHT",
+    "Tigre HAD"
+  ],
+  "origin": "France/Germany",
+  "type": "attack_heli",
+  "operators": [
+    "fra",
+    "deu",
+    "esp",
+    "aus"
+  ],
+  "crew": 2,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 14.08,
+    "width": 4.53,
+    "height": 3.83
+  },
+  "weight_t": 6.0,
+  "armament": [
+    "30 mm GIAT 30 chin turret (HAP/HAD)",
+    "Hellfire (FRA HAD), Spike ER (ESP HAD-E), PARS 3 / HOT (DEU UHT)",
+    "68/70 mm rocket pods",
+    "Mistral / Stinger air-to-air"
+  ],
+  "protection": "Composite airframe with cockpit protection against light rounds. Game: airframe is not armoured against heavy MGs; 7.62x54R and larger damage it, 12.7/14.5 mm and MANPADS bring it down; small-calibre rounds only to cockpit glass if the game enables that.",
+  "visual_notes": [
+    "Slim tandem two-seat attack helicopter, pilot in front, gunner behind (raised)",
+    "Stub wings with two pylons each",
+    "Chin turret (HAP/HAD) or mast-mounted sight (German UHT)",
+    "4-blade main rotor, 3-blade tail rotor"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Helicopter grey",
+      "palette": [
+        "#5F6468",
+        "#4A4E52"
+      ]
+    },
+    {
+      "name": "Olive green",
+      "palette": [
+        "#4E553C",
+        "#3A3F2D"
+      ]
+    }
+  ],
+  "variants": [
+    "Tigre HAP",
+    "Tigre HAD",
+    "Tigre HAD-E (Spain)",
+    "Tiger UHT (Germany)",
+    "Tiger ARH (Australia, retiring)"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Eurocopter_Tiger",
+    "https://commons.wikimedia.org/wiki/Category:Eurocopter Tiger"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Eurocopter_Tiger",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_French_Army"
+  ]
+}

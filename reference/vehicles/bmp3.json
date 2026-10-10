@@ -1,0 +1,79 @@
+{
+  "id": "bmp3",
+  "name": "BMP-3",
+  "aliases": [
+    "BMP-3M"
+  ],
+  "origin": "Soviet Union / Russia",
+  "type": "ifv",
+  "operators": [
+    "rus",
+    "africa_corps",
+    "aze",
+    "are"
+  ],
+  "crew": 3,
+  "passengers": 7,
+  "dimensions_m": {
+    "length": 7.14,
+    "width": 3.15,
+    "height": 2.3
+  },
+  "weight_t": 18.7,
+  "armament": [
+    "100 mm 2A70 gun-launcher (fires 9M117 ATGM)",
+    "30 mm 2A72 coaxial autocannon",
+    "3 x 7.62 mm PKT (1 coaxial, 2 bow)"
+  ],
+  "protection": "Aluminium hull with steel appliqué, optional ERA/slat kits. Game: immune to small-calibre; 7.62x54R damages optics; 12.7/14.5 mm penetrates sides; any launcher kills.",
+  "visual_notes": [
+    "Low boxy hull with flat sloped glacis; engine at the rear, troops exit over the engine through two rear doors and roof hatches",
+    "Small low turret with the stubby 100 mm gun and long thin 30 mm cannon side by side",
+    "6 road wheels per side, amphibious trim vane folded on the nose",
+    "2026 Russian: anti-drone cage over the turret and roof, slat panels on hull sides, netting"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Russian protective green with white Z/V/triangle ID marks",
+      "palette": [
+        "#4A5530",
+        "#3B4428",
+        "#2A2E22",
+        "#F0F0F0"
+      ]
+    },
+    {
+      "name": "Expeditionary sand/khaki (Africa Corps, Syria)",
+      "palette": [
+        "#B9A27A",
+        "#8F7A55",
+        "#5A4E38"
+      ]
+    },
+    {
+      "name": "Azerbaijani desert-green disruptive",
+      "palette": [
+        "#C8B48A",
+        "#8E7B55",
+        "#5C5A3A",
+        "#3A3A2C"
+      ]
+    }
+  ],
+  "variants": [
+    "BMP-3",
+    "BMP-3M",
+    "BMP-3 with Kurganets-style ERA/slat kit"
+  ],
+  "existing_model": null,
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/BMP-3",
+    "https://commons.wikimedia.org/wiki/Category:BMP-3"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/BMP-3",
+    "https://frontelligence.substack.com/p/special-report-a-convoy-of-over-one",
+    "https://caliber.az/en/post/military-parade-in-baku-structure-of-armaments-and-their-practical-significance"
+  ]
+}

@@ -1,0 +1,391 @@
+{
+  "id": "nor",
+  "name": "Norway",
+  "short": "NOR",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#BA0C2F",
+    "#FFFFFF",
+    "#00205B"
+  ],
+  "blocs": [
+    "nato",
+    "jef",
+    "nordefco",
+    "global_coalition_against_isis",
+    "nb8"
+  ],
+  "campaign_tier": "late",
+  "alignment_to_player": "friendly",
+  "player_client": true,
+  "relations": {
+    "player": 25,
+    "usa": 85,
+    "gbr": 90,
+    "can": 80,
+    "aus": 70,
+    "ukr": 75,
+    "pol": 75,
+    "est": 80,
+    "lva": 80,
+    "ltu": 80,
+    "rou": 70,
+    "jpn": 60,
+    "kor": 55,
+    "isr": -5,
+    "tur": 40,
+    "sau": 30,
+    "are": 45,
+    "qat": 35,
+    "egy": 35,
+    "jor": 55,
+    "irq": 35,
+    "krg_peshmerga": 55,
+    "sdf": 30,
+    "syr": 5,
+    "pse_pa": 45,
+    "rus": -60,
+    "blr": -65,
+    "irn": -55,
+    "prk": -60,
+    "chn": -20,
+    "africa_corps": -60,
+    "sahel_aes": -30,
+    "afg_taliban": -60,
+    "isis": -100,
+    "isis_k": -95,
+    "al_qaeda": -100,
+    "aqap": -90,
+    "al_shabaab": -90,
+    "jnim": -90,
+    "hamas": -85,
+    "pij": -85,
+    "hezbollah": -65,
+    "houthis": -70,
+    "iraqi_militias": -55,
+    "fra": 85,
+    "deu": 85,
+    "ita": 85,
+    "esp": 85,
+    "nld": 85,
+    "bel": 85,
+    "dnk": 90,
+    "swe": 95,
+    "fin": 90,
+    "grc": 85
+  },
+  "theatres": [
+    "arctic_north",
+    "baltic_coast",
+    "mesopotamia"
+  ],
+  "languages": [
+    "Norwegian"
+  ],
+  "callout_language": "Norwegian",
+  "doctrine": {
+    "summary": "Arctic-focused army built around Brigade Nord and conscripts; excellent cold-weather and ski capability.",
+    "squad_size": 8,
+    "fireteam": "Lag of two teams.",
+    "tactics": [
+      "arctic manoeuvre on skis and Bv206",
+      "mechanised defence with CV90 and Leopard 2"
+    ],
+    "ai_tuning": {
+      "aggression": 0.5,
+      "discipline": 0.85,
+      "suppression_resistance": 0.8,
+      "flanking": 0.7,
+      "grenade_use": 0.55,
+      "medical_care": 0.85,
+      "night_capability": 0.9,
+      "marksmanship": 0.8,
+      "morale": 0.8
+    }
+  },
+  "camo": [
+    {
+      "name": "M98",
+      "palette": [
+        "#5E6448",
+        "#2F3326",
+        "#8A8662",
+        "#4A3C2C"
+      ],
+      "use": "temperate"
+    },
+    {
+      "name": "M23 Norsk skog",
+      "palette": [
+        "#56593F",
+        "#34372A",
+        "#7E7A5C",
+        "#9C9579"
+      ],
+      "use": "new temperate from 2025"
+    },
+    {
+      "name": "Winter",
+      "palette": [
+        "#E8E8E4",
+        "#A3A39D",
+        "#5B5E55"
+      ],
+      "use": "snow"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "HK416 (5.56x45mm)"
+    ],
+    "autorifleman": [
+      "FN Minimi (5.56x45mm)",
+      "FN Minimi 7.62 Mk3 (7.62x51mm)"
+    ],
+    "marksman": [
+      "HK417 (7.62x51mm)"
+    ],
+    "grenadier": [
+      "HK416 with 40mm underbarrel launcher"
+    ],
+    "at": [
+      "Carl Gustaf M4 (84mm)",
+      "M72 (66mm)",
+      "Javelin"
+    ],
+    "medic": [
+      "HK416"
+    ],
+    "squad_leader": [
+      "HK416"
+    ],
+    "sniper": [
+      ".338 Lapua Magnum bolt-action rifle"
+    ],
+    "sidearm": [
+      "Glock 17 (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "Carl Gustaf [in game: MAAWS]",
+    "Javelin [in game: Javelin]",
+    "M72 (not in game list)"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "ceramic",
+    "notes": "Game mapping."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "cv90",
+      "role": "ifv",
+      "prevalence": "signature",
+      "notes": "CV9030N."
+    },
+    {
+      "vehicle_id": "leopard2a6",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "Leopard 2A8NOR first delivered April 2026; 2A4NO still in service."
+    },
+    {
+      "vehicle_id": "bv206",
+      "role": "other",
+      "prevalence": "signature",
+      "notes": "About 970."
+    },
+    {
+      "vehicle_id": "k9",
+      "role": "artillery",
+      "prevalence": "common",
+      "notes": "K9 Vidar."
+    },
+    {
+      "vehicle_id": "m113",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": ""
+    },
+    {
+      "vehicle_id": "sisu_pasi",
+      "role": "apc",
+      "prevalence": "uncommon",
+      "notes": "XA-186 and XA-203N."
+    },
+    {
+      "vehicle_id": "patria_6x6",
+      "role": "apc",
+      "prevalence": "rare",
+      "notes": "On order."
+    },
+    {
+      "vehicle_id": "uh60",
+      "role": "transport_heli",
+      "prevalence": "rare",
+      "notes": "21 UH-60M approved August 2026."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "nor_rifle_squad",
+      "name": "Norwegian rifle squad (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "nor_mech_squad",
+      "name": "Norwegian mechanised squad",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 2
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "cv90"
+    },
+    {
+      "id": "nor_recon_team",
+      "name": "Norwegian recon / sniper pair team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "sniper",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "bv206"
+    }
+  ],
+  "support_assets": [
+    "K9 artillery",
+    "NASAMS air defence",
+    "drones"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 20,
+        "unlocks": [
+          "service rifle and ammunition",
+          "uniforms in national camo",
+          "light helmet and vest"
+        ]
+      },
+      {
+        "rep": 40,
+        "unlocks": [
+          "optics and NVGs",
+          "medium armour",
+          "Carl Gustaf M4 [MAAWS]"
+        ]
+      },
+      {
+        "rep": 60,
+        "unlocks": [
+          "marksman and sniper rifles",
+          "heavy armour",
+          "Bv206 (light vehicle)"
+        ]
+      },
+      {
+        "rep": 80,
+        "unlocks": [
+          "CV90 (armoured transport)",
+          "fire-support call-ins on contracts"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "counter-terrorist raid",
+      "hostage / personnel recovery",
+      "convoy escort",
+      "HVT capture",
+      "recover lost equipment or sensitive kit",
+      "train and accompany partner forces",
+      "security of embassy or base",
+      "counter-drone site defence",
+      "Arctic infrastructure security"
+    ],
+    "as_target": [
+      "only if the player works for this nation's enemies: sabotage a logistics depot",
+      "only if the player works for this nation's enemies: ambush a supply convoy"
+    ]
+  },
+  "notes": "Norway shares an Arctic border with Russia; it returned its NH90s and is buying UH-60M. Late-game Arctic contracts.",
+  "proposed": [
+    "campaign_tier",
+    "relations.player",
+    "doctrine.ai_tuning",
+    "unit_templates",
+    "player_trade.rep_tiers",
+    "contract_types",
+    "body_armor (game tier mapping)",
+    "vehicles[].prevalence (game weighting)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Norwegian_Army",
+    "https://theaviationist.com/2026/08/23/norway-uh60m-blackhawk-fms/"
+  ]
+}

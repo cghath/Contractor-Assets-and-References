@@ -1,0 +1,77 @@
+{
+  "id": "leclerc",
+  "name": "Leclerc",
+  "aliases": [
+    "AMX-56 Leclerc",
+    "Leclerc XLR"
+  ],
+  "origin": "France",
+  "type": "mbt",
+  "operators": [
+    "fra",
+    "are",
+    "jor"
+  ],
+  "crew": 3,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 9.87,
+    "width": 3.71,
+    "height": 2.53
+  },
+  "weight_t": 57.0,
+  "armament": [
+    "120 mm CN120-26/52 smoothbore with autoloader",
+    "12.7 mm coaxial M2HB",
+    "7.62 mm roof MG (XLR: RWS)"
+  ],
+  "protection": "Modular composite armour, XLR adds side/rear protection kits and slat. Game: immune to all small arms incl. 7.62x54R and 12.7/14.5 mm on frontal arc; only launchers (Javelin, top-attack) or tank guns kill it; tandem-HEAT launchers (AT4 HEDP no, RPG-7 PG-7V only to sides/rear) can disable tracks, optics and side hull.",
+  "visual_notes": [
+    "Low angular turret with flat sides and a long rear bustle holding the autoloader",
+    "6 road wheels per side, side skirts with bolted armour modules",
+    "3-man crew: no loader hatch; commander's panoramic sight on a raised pedestal",
+    "XLR: slat cages on rear hull, remote weapon station on the roof, new side panels",
+    "Gun with thermal sleeve and muzzle reference sensor"
+  ],
+  "colour_schemes": [
+    {
+      "name": "French Centre-Europe three-tone",
+      "palette": [
+        "#555A3E",
+        "#5C4A34",
+        "#1F1F1A"
+      ]
+    },
+    {
+      "name": "French vert armee",
+      "palette": [
+        "#555A3E",
+        "#454A32"
+      ]
+    },
+    {
+      "name": "Desert sand",
+      "palette": [
+        "#C8B48A",
+        "#A8956C"
+      ]
+    }
+  ],
+  "variants": [
+    "Leclerc Serie 2",
+    "Leclerc XLR (upgrade in progress)",
+    "Leclerc DCL (recovery)",
+    "Leclerc EAU (UAE)",
+    "Leclerc (ex-UAE, JOR)"
+  ],
+  "existing_model": null,
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Leclerc_tank",
+    "https://commons.wikimedia.org/wiki/Category:Leclerc (tank)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Leclerc_tank",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_French_Army"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "id": "didgori",
+  "name": "Didgori",
+  "aliases": [
+    "Didgori-1",
+    "Didgori-2",
+    "Didgori-3",
+    "Didgori Meomari"
+  ],
+  "origin": "Georgia (STC Delta)",
+  "type": "mrap",
+  "operators": [
+    "geo"
+  ],
+  "crew": 1,
+  "passengers": 8,
+  "dimensions_m": {
+    "length": 5.75,
+    "width": 2.38,
+    "height": 2.2
+  },
+  "weight_t": 8.9,
+  "armament": [
+    "7.62 mm M134 minigun or 12.7 mm NSV on roof",
+    "ATGM options"
+  ],
+  "protection": "Steel monocoque V-hull rated by the maker against 7.62x54R AP and small mines. Game: immune to small-calibre; 7.62x54R damages but rarely penetrates; 12.7 mm and launchers penetrate.",
+  "visual_notes": [
+    "Armoured 4x4 built around a US full-size pickup chassis: long bonnet, upright armoured cab and box rear",
+    "Front and rear thermal/day cameras on small mounts; blow-away front wheel arches",
+    "Roof gunner position with minigun or NSV",
+    "Georgian woodland or sand paint"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Georgian four-colour woodland",
+      "palette": [
+        "#59613F",
+        "#3C4430",
+        "#6E5A3E",
+        "#1F1F1A"
+      ]
+    },
+    {
+      "name": "Desert tan",
+      "palette": [
+        "#B59E74",
+        "#8C7A55",
+        "#5E5440"
+      ]
+    }
+  ],
+  "variants": [
+    "Didgori-1",
+    "Didgori-2",
+    "Didgori-3",
+    "Didgori Meomari"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Didgori-1"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Didgori-1"
+  ]
+}

@@ -1,0 +1,353 @@
+{
+  "id": "isis_k",
+  "name": "Islamic State Khorasan Province",
+  "short": "ISIS-K",
+  "kind": "non_state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#1C1C1C",
+    "#F2F2EE"
+  ],
+  "blocs": [
+    "islamic_state_network"
+  ],
+  "campaign_tier": "early",
+  "alignment_to_player": "hostile",
+  "player_client": false,
+  "relations": {
+    "player": -100,
+    "usa": -100,
+    "gbr": -100,
+    "can": -100,
+    "aus": -100,
+    "fra": -95,
+    "deu": -95,
+    "afg_taliban": -100,
+    "pak": -95,
+    "irn": -95,
+    "rus": -95,
+    "chn": -85,
+    "ind": -90,
+    "kaz": -85,
+    "tur": -75,
+    "sau": -75,
+    "are": -75,
+    "qat": -75,
+    "jor": -70,
+    "isr": -70,
+    "isis": 90,
+    "al_qaeda": -90,
+    "geo": -80,
+    "est": -90,
+    "ltu": -90,
+    "lva": -90,
+    "pol": -90,
+    "rou": -90,
+    "ukr": -90,
+    "bel": -95,
+    "dnk": -95,
+    "esp": -95,
+    "fin": -95,
+    "grc": -95,
+    "ita": -95,
+    "nld": -95,
+    "nor": -95,
+    "nzl": -95,
+    "swe": -95,
+    "adf": 60
+  },
+  "theatres": [
+    "afghan_highlands"
+  ],
+  "languages": [
+    "Pashto",
+    "Dari",
+    "Urdu",
+    "Tajik and Uzbek (Central Asian recruits)",
+    "Arabic (some leaders)"
+  ],
+  "callout_language": "Pashto and Dari; Central Asian languages among foreign recruits.",
+  "doctrine": {
+    "summary": "Islamic State Khorasan Province (ISKP, ISIS-K) was announced in January 2015 by former Pakistani Taliban and Afghan militants in Nangarhar. After losing most of its rural strongholds in Nangarhar and Kunar to US, Afghan government and Taliban pressure (2019-2020), it shifted to urban cells and mass-casualty attacks: the August 2021 Kabul airport bombing, attacks on Shia, Hazara and Sufi communities, the January 2024 Kerman bombing in Iran and the March 2024 Crocus City Hall attack near Moscow. It fights the Taliban, which has degraded its networks inside Afghanistan; UN monitors say it keeps a presence and recruits widely in Central Asia. In June 2026 the Taliban claimed airstrikes on ISKP sites inside Pakistan, which Pakistan denied. In the game ISIS-K appears as small mountain and urban cells in afghan_highlands, fighting both the player and the Taliban. Mass-casualty attacks exist only in briefing text, never as playable content.",
+    "squad_size": 5,
+    "fireteam": "Cells of 3-6 in towns, small mountain groups of 6-12 in the eastern provinces. In game: 2-3 battle-buddy pairs.",
+    "tactics": [
+      "Urban cells hiding in residential compounds, fighting room to room when raided",
+      "Mountain ambushes on tracks in steep valleys (Kunar and Nangarhar-type terrain)",
+      "IED hazards on roads and compound entrances, telegraphed for the player",
+      "Targeted attacks on Taliban checkpoints, which the player can encounter as a three-way fight",
+      "Motorbike scouts and couriers",
+      "Fall back into crowded markets and villages, keeping the casualty rule active"
+    ],
+    "ai_tuning": {
+      "aggression": 0.7,
+      "discipline": 0.4,
+      "suppression_resistance": 0.45,
+      "flanking": 0.5,
+      "grenade_use": 0.5,
+      "medical_care": 0.15,
+      "night_capability": 0.35,
+      "marksmanship": 0.45,
+      "morale": 0.7
+    }
+  },
+  "camo": [
+    {
+      "name": "Afghan dress (shalwar kameez, patu)",
+      "palette": [
+        "#B9AE98",
+        "#6E6250",
+        "#3A3A3A",
+        "#8C8C80"
+      ],
+      "use": "Most fighters"
+    },
+    {
+      "name": "Black and dark clothing",
+      "palette": [
+        "#1C1C1C",
+        "#2E2E2E",
+        "#4A4A4A"
+      ],
+      "use": "Urban cell members"
+    },
+    {
+      "name": "Ex-ANA / ex-Pakistani surplus",
+      "palette": [
+        "#7E7A5A",
+        "#5A5A3E",
+        "#B5A67E",
+        "#3A3A2A"
+      ],
+      "use": "Mixed surplus uniforms in mountain groups"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "AKM / Type 56 (7.62x39mm)",
+      "M4 / M16A2 (5.56x45mm, ex-Afghan army stocks)"
+    ],
+    "autorifleman": [
+      "PKM (7.62x54R)"
+    ],
+    "marksman": [
+      "SVD (7.62x54R)"
+    ],
+    "grenadier": [
+      "AKM (7.62x39mm) with hand grenades"
+    ],
+    "at": [
+      "RPG-7 with PG-7V / OG-7V"
+    ],
+    "medic": [
+      "AKM (7.62x39mm)"
+    ],
+    "squad_leader": [
+      "M4 (5.56x45mm)",
+      "AKMS (7.62x39mm)"
+    ],
+    "sniper": [
+      "SVD (7.62x54R)"
+    ],
+    "sidearm": [
+      "Makarov / Tokarev-pattern pistols"
+    ]
+  },
+  "launchers": [
+    "RPG-7 (PG-7V, OG-7V) [in_game]"
+  ],
+  "body_armor": {
+    "helmet": "none",
+    "vest": "none",
+    "plates": "none",
+    "notes": "Chest rigs only; captured vests are rare. Game: none (proposed)."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "motorcycle",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": "Motorbikes for couriers, scouts and urban cells."
+    },
+    {
+      "vehicle_id": "toyota_hilux",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Pickups in mountain districts."
+    },
+    {
+      "vehicle_id": "toyota_land_cruiser",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "SUVs and older Land Cruisers."
+    },
+    {
+      "vehicle_id": "technical_dshk",
+      "role": "technical",
+      "prevalence": "rare",
+      "notes": "DShK pickup in mountain groups; rare."
+    },
+    {
+      "vehicle_id": "humvee",
+      "role": "light",
+      "prevalence": "rare",
+      "notes": "Ex-Afghan army Humvees captured from or abandoned by the former ANDSF; rare."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "isk_urban_cell",
+      "name": "Urban cell (4-6)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "isk_mountain_group",
+      "name": "Mountain group (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "isk_moto_pair",
+      "name": "Motorbike pair",
+      "composition": [
+        {
+          "role": "rifleman",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "motorcycle"
+    },
+    {
+      "id": "isk_ied_team",
+      "name": "IED hazard team",
+      "composition": [
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "squad_leader",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "motorcycle",
+      "notes": "Pre-placed IED hazards plus a watcher pair."
+    },
+    {
+      "id": "isk_pickup_team",
+      "name": "Pickup team",
+      "composition": [
+        {
+          "role": "driver",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "toyota_hilux"
+    },
+    {
+      "id": "isk_hvt_guard",
+      "name": "Leader and guard detail",
+      "composition": [
+        {
+          "role": "leader_hvt",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "toyota_land_cruiser"
+    }
+  ],
+  "support_assets": [
+    "IED hazards on roads and compound entrances",
+    "Mortar fire from mountain positions (rare)",
+    "Sniper overwatch over valley tracks"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [],
+    "as_target": [
+      "cell_clear_out",
+      "hvt_capture_or_kill",
+      "safe_house_raid",
+      "ied_route_clearance",
+      "hostage_rescue",
+      "mountain_hideout_raid"
+    ]
+  },
+  "notes": "ISIS-K is a province of the Islamic State (relation isis +90) and an enemy of the al-Qaeda network and of the Taliban (afg_taliban, an others-bloc faction). It is UN-listed and US-designated. Its mass-casualty attacks (Kabul airport 2021, Kerman 2024, Crocus City Hall 2024) belong only in briefing text. Status 2026: weakened inside Afghanistan by Taliban operations but still active, with networks in Pakistan and Central Asian recruitment per UN monitoring; Taliban claimed strikes on ISKP sites in Pakistan in June 2026 (denied by Pakistan). Game framing: early-game cell enemy in afghan_highlands, often a three-way encounter with Taliban units. Captured Humvees as rare set-piece vehicles are Captain-confirmed (2026-10-10).",
+  "proposed": [
+    "campaign_tier",
+    "relations.player",
+    "doctrine.ai_tuning (all values)",
+    "doctrine.squad_size (game cell size)",
+    "unit_templates (game compositions)",
+    "support_assets (game events and hazards)",
+    "contract_types.as_target",
+    "vehicles[].prevalence (game weighting)",
+    "body_armor (game tier mapping)",
+    "camo (approximate palettes)",
+    "player_trade (hostile-only: not sellable)",
+    "Three-way encounters with afg_taliban units",
+    "relations values (factual direction, game magnitudes)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Islamic_State_%E2%80%93_Khorasan_Province",
+    "https://en.wikipedia.org/wiki/2021_Kabul_airport_attack",
+    "https://en.wikipedia.org/wiki/Crocus_City_Hall_attack",
+    "https://www.businesstoday.in/world/story/taliban-claims-airstrikes-on-isis-k-sites-in-pakistan-as-cross-border-tensions-deepen-540149-2026-07-01",
+    "https://www.albawaba.com/news/taliban-claims-strikes-isis-targets-1630703"
+  ]
+}

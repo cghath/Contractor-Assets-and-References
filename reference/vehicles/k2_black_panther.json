@@ -1,0 +1,79 @@
+{
+  "id": "k2_black_panther",
+  "name": "K2 Black Panther",
+  "aliases": [
+    "K2",
+    "K2GF",
+    "K2PL"
+  ],
+  "origin": "South Korea (Hyundai Rotem)",
+  "type": "mbt",
+  "operators": [
+    "kor",
+    "pol"
+  ],
+  "crew": 3,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 10.8,
+    "width": 3.6,
+    "height": 2.4
+  },
+  "weight_t": 56.0,
+  "armament": [
+    "120 mm CN08 L/55 smoothbore with bustle autoloader (40 rounds)",
+    "12.7 mm K6 HMG",
+    "7.62 mm coaxial MG"
+  ],
+  "protection": "Modular composite armour with ERA on turret and hull sides; soft-kill smoke, radar and laser warners (K2PL adds hard-kill APS). Game: immune to all small-calibre rounds; 7.62x54R and 12.7/14.5 mm can only damage optics, external stowage, fuel drums and tracks (mobility kill on repeated hits); PG-7V/AT4/MAAWS/SMAW penetrate side, rear and turret roof; Javelin top-attack penetrates; frontal arc resists unguided launchers.",
+  "visual_notes": [
+    "Length 10.8 m is gun forward; hull 7.5 m",
+    "Wedge-fronted angular welded turret with a large rear bustle (autoloader), long L/55 gun with thermal sleeve",
+    "Small radar panels and sensor clusters on the turret front corners; commander's panoramic sight on a mast at turret rear-right",
+    "Six road wheels per side on in-arm hydropneumatic suspension (hull can kneel or tilt); K2PL hull lengthened by one road-wheel station",
+    "Polish vehicles in Polish three-tone or plain olive with white Polish checkerboard insignia"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Polish three-tone (green/brown/black)",
+      "palette": [
+        "#4D5B37",
+        "#5E4B33",
+        "#1E1E1A"
+      ]
+    },
+    {
+      "name": "Polish olive",
+      "palette": [
+        "#4F5435",
+        "#3B402A",
+        "#24261C"
+      ]
+    },
+    {
+      "name": "ROK Army four-colour",
+      "palette": [
+        "#4C5A36",
+        "#6E5B3E",
+        "#22231D",
+        "#8A8466"
+      ]
+    }
+  ],
+  "variants": [
+    "K2 (ROK)",
+    "K2 PIP",
+    "K2GF (POL, first batches)",
+    "K2PL (POL, local production from 2026)"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/K2_Black_Panther",
+    "https://commons.wikimedia.org/wiki/Category:K2_Black_Panther"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/K2_Black_Panther",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Polish_Land_Forces"
+  ]
+}

@@ -1,0 +1,333 @@
+{
+  "id": "kaz",
+  "name": "Republic of Kazakhstan",
+  "short": "Kazakhstan",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#00AFCA",
+    "#FEC50C"
+  ],
+  "blocs": [
+    "csto",
+    "cis",
+    "eaeu",
+    "sco",
+    "organization_of_turkic_states",
+    "nato_partnership_for_peace",
+    "brics",
+    "abraham_accords",
+    "unifil"
+  ],
+  "campaign_tier": "mid",
+  "alignment_to_player": "neutral",
+  "player_client": true,
+  "relations": {
+    "player": 10,
+    "rus": 55,
+    "blr": 45,
+    "chn": 55,
+    "tur": 55,
+    "aze": 50,
+    "usa": 30,
+    "kor": 30,
+    "ind": 30,
+    "arm": 20,
+    "ukr": 10,
+    "afg_taliban": 10,
+    "isis_k": -90,
+    "isis": -90,
+    "al_qaeda": -90,
+    "geo": 30,
+    "srb": 25
+  },
+  "theatres": [
+    "levant_syria",
+    "lebanon_south"
+  ],
+  "languages": [
+    "Kazakh",
+    "Russian"
+  ],
+  "callout_language": "Russian (Kazakh increasingly used in procedure)",
+  "doctrine": {
+    "summary": "Soviet-derived mechanised army modernising with a multi-vector mix: Russian (BTR-82A, Mi-35M, Tigr), Turkish (Cobra, Anka) and South African-licensed (Arlan) equipment, plus Israeli drones. CSTO member that stayed neutral on the Ukraine war. Contributes UN peacekeepers (UNDOF Golan, UNIFIL with the Indian battalion). Focus on border security toward Central Asia and counter-terrorism.",
+    "squad_size": 9,
+    "fireteam": "Soviet-pattern 9-man squad; game 8 in pairs.",
+    "tactics": [
+      "Mounted patrols in Arlan/Cobra",
+      "Checkpoint and border security",
+      "Counter-terror raids by special forces with helicopter insertion",
+      "Peacekeeping posture: hold fire unless attacked"
+    ],
+    "ai_tuning": {
+      "aggression": 0.4,
+      "discipline": 0.6,
+      "suppression_resistance": 0.5,
+      "flanking": 0.45,
+      "grenade_use": 0.5,
+      "medical_care": 0.55,
+      "night_capability": 0.45,
+      "marksmanship": 0.5,
+      "morale": 0.5
+    }
+  },
+  "camo": [
+    {
+      "name": "Kazakh digital woodland",
+      "palette": [
+        "#5E6A45",
+        "#3C4330",
+        "#8D8762",
+        "#2B2C24"
+      ],
+      "use": "Ground forces"
+    },
+    {
+      "name": "Kazakh digital desert",
+      "palette": [
+        "#C3B087",
+        "#9B855E",
+        "#6C5E44"
+      ],
+      "use": "Steppe and desert units, UN deployments"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "AK-74 / AKS-74 (5.45x39mm)",
+      "AKM (7.62x39mm)"
+    ],
+    "autorifleman": [
+      "PKM (7.62x54R)",
+      "RPK-74 (5.45x39mm)"
+    ],
+    "marksman": [
+      "SVD (7.62x54R)"
+    ],
+    "grenadier": [
+      "AK-74 with GP-25"
+    ],
+    "at": [
+      "RPG-7",
+      "Konkurs / Kornet ATGM"
+    ],
+    "medic": [
+      "AKS-74U (5.45x39mm)"
+    ],
+    "squad_leader": [
+      "AK-74 (5.45x39mm)"
+    ],
+    "sniper": [
+      "SVD (7.62x54R)"
+    ],
+    "sidearm": [
+      "PM Makarov (9x18mm)",
+      "Glock 17 (9x19mm, special forces)"
+    ]
+  },
+  "launchers": [
+    "RPG-7 (PG-7V [in_game], OG-7V [in_game]; tandem/thermobaric rounds [not_in_game])",
+    "RPG-26 [not_in_game]",
+    "Konkurs / Kornet ATGM [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "light",
+    "vest": "medium",
+    "plates": "steel",
+    "notes": "Line troops: older helmets (light) and vests with steel plates (medium). Special forces (Arlan-mounted) use modern ceramic plate carriers and medium helmets."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "marauder",
+      "role": "mrap",
+      "prevalence": "signature",
+      "notes": "Arlan: licence-built Marauder (200+), Kazakhstan Paramount Engineering."
+    },
+    {
+      "vehicle_id": "btr82a",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "BTR-82/82A and BTR-80A."
+    },
+    {
+      "vehicle_id": "bmp2",
+      "role": "ifv",
+      "prevalence": "common",
+      "notes": "~280 BMP-2."
+    },
+    {
+      "vehicle_id": "t72b3",
+      "role": "mbt",
+      "prevalence": "uncommon",
+      "notes": "T-72BA (modernised T-72B); much of the fleet stored."
+    },
+    {
+      "vehicle_id": "cobra",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Otokar Cobra / Cobra II, partly built locally."
+    },
+    {
+      "vehicle_id": "gaz_tigr",
+      "role": "light",
+      "prevalence": "uncommon",
+      "notes": "Small numbers."
+    },
+    {
+      "vehicle_id": "mi24",
+      "role": "attack_heli",
+      "prevalence": "uncommon",
+      "notes": "Mi-35M."
+    },
+    {
+      "vehicle_id": "mi8",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": "Mi-17V-5 / Mi-171Sh."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "kaz_patrol",
+      "name": "Mechanised patrol (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "btr82a"
+    },
+    {
+      "id": "kaz_un_patrol",
+      "name": "UN peacekeeping patrol",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "marauder"
+    },
+    {
+      "id": "kaz_sof_team",
+      "name": "Special forces team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "marauder"
+    }
+  ],
+  "support_assets": [
+    "Mi-35M gunships and Mi-17 lift",
+    "Anka and Wing Loong drones, Orlan-10 spotters",
+    "Tube artillery and Grad rockets"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 20,
+        "unlocks": [
+          "5.45x39mm and 7.62x39mm ammunition",
+          "RGD-5 grenades, smoke"
+        ]
+      },
+      {
+        "rep": 40,
+        "unlocks": [
+          "AK-74 / AKM rifles",
+          "PKM",
+          "steel-plate vests"
+        ]
+      },
+      {
+        "rep": 60,
+        "unlocks": [
+          "RPG-7 with PG-7V / OG-7V",
+          "Arlan MRAP purchase (unarmed)"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "un_convoy_escort",
+      "hostage_rescue (citizens abroad)",
+      "counter_terror_support",
+      "vip_protection"
+    ],
+    "as_target": []
+  },
+  "notes": "Neutral, multi-vector CSTO member. Kazakh peacekeepers serve on the Golan (UNDOF, since 2024) and with the Indian battalion in UNIFIL, which places them in levant_syria and lebanon_south maps as neutral blue-helmet units the player must not harm. Barys 8x8 (Mbombe-based) exists in small numbers. In game: an occasional client and a cheap source of Soviet-pattern gear; contracts for Kazakhstan do not lock out Western work but may annoy Russia.",
+  "proposed": [
+    "campaign_tier",
+    "relations.player",
+    "player_client",
+    "player_trade",
+    "doctrine.ai_tuning",
+    "unit_templates",
+    "contract_types",
+    "vehicles[].prevalence (game weighting)",
+    "body_armor (game tier mapping)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Kazakh_Ground_Forces",
+    "https://en.wikipedia.org/wiki/Armed_Forces_of_the_Republic_of_Kazakhstan",
+    "https://en.wikipedia.org/wiki/Paramount_Marauder",
+    "https://en.wikipedia.org/wiki/Otokar_Cobra",
+    "https://astanatimes.com/2025/04/kazakhstan-sends-second-peacekeeping-contingent-to-golan-heights/"
+  ]
+}

@@ -1,0 +1,335 @@
+{
+  "id": "krg_peshmerga",
+  "name": "Kurdistan Region Peshmerga (Ministry of Peshmerga Affairs)",
+  "short": "Peshmerga",
+  "kind": "non_state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#ED2024",
+    "#FFFFFF",
+    "#278E43",
+    "#FEBD11"
+  ],
+  "blocs": [
+    "global_coalition_against_isis"
+  ],
+  "campaign_tier": "early",
+  "alignment_to_player": "friendly",
+  "player_client": true,
+  "relations": {
+    "player": 30,
+    "usa": 65,
+    "gbr": 55,
+    "deu": 60,
+    "fra": 55,
+    "ita": 50,
+    "nld": 50,
+    "can": 50,
+    "irq": 35,
+    "tur": 40,
+    "syr": 10,
+    "sdf": 25,
+    "irn": -30,
+    "iraqi_militias": -60,
+    "isis": -100,
+    "al_qaeda": -85,
+    "pmc_halcyon": 20,
+    "pmc_kestrel": -30,
+    "pmc_black_sable": -10,
+    "bel": 55,
+    "dnk": 55,
+    "esp": 55,
+    "fin": 55,
+    "grc": 55,
+    "nor": 55,
+    "swe": 55
+  },
+  "theatres": [
+    "mesopotamia",
+    "iran_zagros",
+    "iraq_iran_border"
+  ],
+  "languages": [
+    "Kurdish (Sorani)",
+    "Kurdish (Kurmanji / Badini)",
+    "Arabic"
+  ],
+  "callout_language": "Kurdish (Sorani)",
+  "doctrine": {
+    "summary": "The armed forces of the Kurdistan Region of Iraq, recognised in the Iraqi constitution as the region's guard force. For decades they were split between party forces (the KDP's Unit 80 and the PUK's Unit 70) alongside a smaller set of unified Ministry of Peshmerga Affairs (MoPA) brigades. Under US- and coalition-backed reform (2022 US-KRG memorandum), the ministry announced on 10 September 2026 that the two forces had been unified, and the first and second regional commands began operating under the ministry at a ceremony in Erbil on 21 September 2026; analysts question how far party influence will fade. The Peshmerga held the front against the Islamic State in 2014-2017 with German- and US-supplied weapons (MILAN, G36, Panzerfaust 3, Dingo, MRAPs, Humvees) and today hold the line in the disputed territories and hunt IS remnants in the Qarachogh and Hamrin hills, with joint coordination centres with the Iraqi army. They are mostly light and motorised infantry; artillery and armour are limited.",
+    "squad_size": 8,
+    "fireteam": "Sections of 8-10, battle-buddy pairs; Humvee or MRAP mounted; Zeravani (KDP) and Counter-Terrorism / CTD units are better equipped.",
+    "tactics": [
+      "Fixed defensive lines, berms and outposts in the disputed territories",
+      "Joint counter-IS sweeps of hills and valleys with Iraqi forces and coalition advisers",
+      "Mounted patrols in MRAPs and Humvees; MILAN against suicide vehicles",
+      "Counter-drone defence of Erbil-area sites against militia drones",
+      "Mountain operations along the Iran and Türkiye borders"
+    ],
+    "ai_tuning": {
+      "aggression": 0.45,
+      "discipline": 0.6,
+      "suppression_resistance": 0.6,
+      "flanking": 0.5,
+      "grenade_use": 0.45,
+      "medical_care": 0.5,
+      "night_capability": 0.45,
+      "marksmanship": 0.55,
+      "morale": 0.65
+    }
+  },
+  "camo": [
+    {
+      "name": "Peshmerga brown-tan woodland",
+      "palette": [
+        "#7B6A4A",
+        "#4E4430",
+        "#A89670",
+        "#2F2A20"
+      ],
+      "use": "Common field uniform"
+    },
+    {
+      "name": "Desert digital / MultiCam-type",
+      "palette": [
+        "#B8A57D",
+        "#8A7A55",
+        "#5E5A40"
+      ],
+      "use": "Zeravani, CTD and commando units"
+    },
+    {
+      "name": "Traditional Kurdish dress (shal u shapik)",
+      "palette": [
+        "#6B6550",
+        "#3E3B30",
+        "#8C8270"
+      ],
+      "use": "Older volunteers and local units"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "AK-47 / AKM (7.62x39mm)",
+      "M16A4 / M4 (5.56x45mm, US-supplied)",
+      "G36 (5.56x45mm, German-supplied)"
+    ],
+    "autorifleman": [
+      "PKM (7.62x54R)",
+      "MG3 (7.62x51mm, German-supplied)"
+    ],
+    "marksman": [
+      "SVD Dragunov (7.62x54R)",
+      "G3 (7.62x51mm)"
+    ],
+    "grenadier": [
+      "AK with GP-25 / M4 with M203"
+    ],
+    "at": [
+      "RPG-7 [in_game]",
+      "Panzerfaust 3 (German-supplied) [not_in_game]"
+    ],
+    "medic": [
+      "AK-47 (7.62x39mm)"
+    ],
+    "squad_leader": [
+      "M4 or G36 with optic"
+    ],
+    "sniper": [
+      "Barrett M82 / M107 (12.7x99mm)",
+      "SVD"
+    ],
+    "sidearm": [
+      "Glock / P1 (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "RPG-7 with PG-7V / OG-7V [in_game]",
+    "AT4 [in_game]",
+    "Panzerfaust 3 [not_in_game]",
+    "MILAN ATGM [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "light",
+    "plates": "mixed",
+    "notes": "Coalition-supplied helmets and vests in regular units (light-to-medium); Zeravani/CTD with plate carriers (medium)."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "humvee",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": "US-supplied up-armoured Humvees."
+    },
+    {
+      "vehicle_id": "technical_dshk",
+      "role": "technical",
+      "prevalence": "common",
+      "notes": "Pickups with DShK on the front lines."
+    },
+    {
+      "vehicle_id": "toyota_land_cruiser",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Land Cruiser pickups and SUVs."
+    },
+    {
+      "vehicle_id": "maxxpro",
+      "role": "mrap",
+      "prevalence": "common",
+      "notes": "MRAPs supplied by the US-led coalition."
+    },
+    {
+      "vehicle_id": "cougar",
+      "role": "mrap",
+      "prevalence": "uncommon",
+      "notes": "Cougar-family MRAPs."
+    },
+    {
+      "vehicle_id": "dingo",
+      "role": "mrap",
+      "prevalence": "uncommon",
+      "notes": "Dingo 1 vehicles supplied by Germany (2014-2016)."
+    },
+    {
+      "vehicle_id": "t55",
+      "role": "mbt",
+      "prevalence": "rare",
+      "notes": "A few old T-55 / T-62-era tanks captured from Iraqi stocks (game rarity)."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "pesh_section",
+      "name": "Peshmerga section (Humvee)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "humvee"
+    },
+    {
+      "id": "pesh_outpost",
+      "name": "Front-line outpost",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "technical_dshk"
+    },
+    {
+      "id": "pesh_ctd_raid",
+      "name": "Counter-terrorism (CTD / Zeravani commando) raid team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "maxxpro"
+    }
+  ],
+  "support_assets": [
+    "Mortars and limited artillery",
+    "MILAN anti-tank teams against suicide vehicles",
+    "Coalition air support and advisers (game: available on some contracts)",
+    "Counter-drone systems around Erbil-area sites"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 30,
+        "unlocks": [
+          "Basic kit: AK-pattern rifles, PKM, ammunition, chest rigs"
+        ]
+      },
+      {
+        "rep": 50,
+        "unlocks": [
+          "RPG-7 and rounds",
+          "Used soft-skin pickups"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "Counter-IS sweep in the disputed hills with Peshmerga units",
+      "Defend an oil or gas site against militia drone and rocket attacks",
+      "Escort an aid or VIP convoy between Erbil, Duhok and Sulaymaniyah-type towns",
+      "Recover a kidnapped Peshmerga officer or foreign worker",
+      "Train and accompany a unified-command brigade"
+    ],
+    "as_target": []
+  },
+  "notes": "Kind non_state chosen because the game models the KRG as a sub-state regional government inside Iraq (it is a constitutional regional force, so 'state' is also defensible). Situation as of October 2026: unification of the KDP and PUK forces under the Ministry of Peshmerga Affairs announced in September 2026; US forces left federal Iraq by 30 September 2026 and reports differ on a residual presence in the Kurdistan Region; Iran-aligned militias have attacked Kurdistan Region oil and gas fields and Erbil with drones and rockets (2025-2026); relations with Baghdad are cooperative but strained over Kirkuk, budgets and oil exports. Iran strikes Iranian Kurdish opposition groups based in the region, hence the iran_zagros border theatre. Player trade of basic kit at rep 30/50 is Captain-confirmed (2026-10-10). Job 7: iraq_iran_border is added; Peshmerga hold the Kurdish-majority north of the map and the disputed districts they share uneasily with the ISF, where IS cells exploit the gap.",
+  "proposed": [
+    "kind (non_state vs state)",
+    "campaign_tier",
+    "alignment_to_player",
+    "relations.player",
+    "doctrine.ai_tuning",
+    "contract_types.as_client",
+    "unit_templates",
+    "vehicles[].prevalence",
+    "body_armor (game tier mapping)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Peshmerga",
+    "https://thenationalnews.com/news/mena/2026/09/21/iraqs-kurdistan-region-unifies-peshmerga-forces-under-one-command",
+    "https://kurdistanchronicle.com/babat/4914",
+    "https://peregraf.com/en/news/11036",
+    "https://www.noonpost.com/en/384674/amp/",
+    "https://en.wikipedia.org/wiki/American-led_intervention_in_Iraq_(2014%E2%80%932021)"
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "zbd04a",
+  "name": "ZBD-04A",
+  "aliases": [
+    "Type 04A",
+    "ZBD-04",
+    "Type 04 IFV"
+  ],
+  "origin": "China (Norinco)",
+  "type": "ifv",
+  "operators": [
+    "chn"
+  ],
+  "crew": 3,
+  "passengers": 7,
+  "dimensions_m": {
+    "length": 7.2,
+    "width": 3.2,
+    "height": 2.5
+  },
+  "weight_t": 24.0,
+  "armament": [
+    "100 mm 2A70-type low-pressure gun/launcher (ZBD-04) or 30 mm cannon with HJ-73/ATGM",
+    "30 mm coaxial autocannon",
+    "7.62 mm coaxial MG"
+  ],
+  "protection": "Welded aluminium/steel hull with bolt-on appliqué armour on the 04A, rear troop door. Game: immune to all small-calibre rounds; frontal arc resists 12.7/14.5 mm; 7.62x54R damages optics, tyres/tracks and exposed gear, 12.7/14.5 mm penetrates side and rear; all launchers penetrate.",
+  "visual_notes": [
+    "BMP-3-like turret (100 mm + 30 mm) on a longer, higher hull with a conventional front engine",
+    "Six/seven road wheels per side, slab appliqué armour panels on the hull sides of the 04A",
+    "Large rear ramp door; vision blocks along the troop compartment",
+    "Smoke grenade banks either side of the turret"
+  ],
+  "colour_schemes": [
+    {
+      "name": "PLA digital woodland (vehicle)",
+      "palette": [
+        "#4E5B3A",
+        "#6E7552",
+        "#2F3626",
+        "#8A8762"
+      ]
+    },
+    {
+      "name": "PLA digital desert (Xinjiang/Tibet)",
+      "palette": [
+        "#B49E73",
+        "#8C7752",
+        "#5E5038",
+        "#D2C29A"
+      ]
+    }
+  ],
+  "variants": [
+    "ZBD-04",
+    "ZBD-04A"
+  ],
+  "existing_model": null,
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/ZBD-04",
+    "https://commons.wikimedia.org/wiki/Category:ZBD-04"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/ZBD-04",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_People%27s_Liberation_Army_Ground_Force"
+  ]
+}

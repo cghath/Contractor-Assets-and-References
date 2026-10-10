@@ -1,0 +1,56 @@
+{
+  "id": "ch4",
+  "name": "CASC CH-4 Rainbow",
+  "aliases": [
+    "CH-4",
+    "Cai Hong 4",
+    "CH-4B"
+  ],
+  "origin": "China",
+  "type": "uav",
+  "operators": [
+    "cod"
+  ],
+  "crew": 0,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 8.5,
+    "width": 18.0,
+    "height": 3.4
+  },
+  "weight_t": 1.33,
+  "armament": [
+    "Light guided air-to-ground missiles (AR-1 type) and small guided bombs on underwing pylons (game: off-map strike)"
+  ],
+  "protection": "Game: any calibre can damage it; 7.62x54R and 12.7 mm or anti-aircraft guns can bring it down; EW support assets can jam or force it down.",
+  "visual_notes": [
+    "MQ-9-like layout: slim fuselage with a bulged nose, long straight high-aspect wing",
+    "V-tail with a small ventral fin, rear pusher propeller",
+    "Belly EO/IR ball turret",
+    "Two or four underwing pylons"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Light grey",
+      "palette": [
+        "#B8BCC0",
+        "#8E9196"
+      ]
+    }
+  ],
+  "variants": [
+    "CH-4A (reconnaissance)",
+    "CH-4B (strike)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/CASC_Rainbow",
+    "https://commons.wikimedia.org/wiki/Category:CASC_Rainbow_CH-4"
+  ],
+  "notes": "Added in Job 7 for cod (FARDC), whose CH-4 strike drones are a signature asset of the 2024-2026 Kivu fighting. Other real-world operators (Iraq, Saudi Arabia, Jordan, Algeria and others) are not listed because their faction files do not reference this id.",
+  "sources": [
+    "https://en.wikipedia.org/wiki/CASC_Rainbow",
+    "https://military.africa/2024/01/m23-rebels-downs-dr-congo-ch-34-drone/"
+  ]
+}

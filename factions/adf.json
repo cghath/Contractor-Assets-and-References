@@ -1,0 +1,348 @@
+{
+  "id": "adf",
+  "name": "Allied Democratic Forces (ADF) / Islamic State Central Africa Province (ISCAP)",
+  "short": "ADF",
+  "kind": "non_state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#1C1C1C",
+    "#F2F2EE"
+  ],
+  "blocs": [
+    "islamic_state_network"
+  ],
+  "traits": [
+    "us_designated_fto",
+    "hostile_only"
+  ],
+  "campaign_tier": "early",
+  "alignment_to_player": "hostile",
+  "player_client": false,
+  "relations": {
+    "player": -100,
+    "cod": -100,
+    "m23": -40,
+    "isis": 85,
+    "isis_k": 60,
+    "al_qaeda": -80,
+    "al_shabaab": -75,
+    "jnim": -75,
+    "usa": -100,
+    "ind": -90,
+    "chn": -85,
+    "bel": -85,
+    "fra": -85,
+    "gbr": -85,
+    "qat": -60,
+    "som": -80,
+    "egy": -75
+  },
+  "theatres": [
+    "eastern_congo"
+  ],
+  "languages": [
+    "Swahili",
+    "Luganda",
+    "Kinande",
+    "Arabic (religious and formal use)"
+  ],
+  "callout_language": "Swahili, with Luganda among Ugandan cadres; Arabic for formal orders.",
+  "doctrine": {
+    "summary": "The Allied Democratic Forces began in the mid-1990s as a Ugandan Islamist rebel group that moved into the Rwenzori and Beni forests of eastern DR Congo. Under Musa Baluku it pledged allegiance to the Islamic State, which has claimed its attacks as Islamic State Central Africa Province (ISCAP) since 2019; the US designated it a Foreign Terrorist Organization (as ISIS-DRC) in March 2021. Since the joint Ugandan-Congolese Operation Shujaa began in November 2021 the group has split into mobile units that moved north and west into Ituri (Mambasa, Irumu) and Lubero. It fights as small forest bands on foot and motorbike: raids on villages, farms, gold-mining sites and road traffic, kidnappings, and attacks on army posts; civilians are its main victims. Status 2026: attacks continued through the year in Beni, Lubero and Mambasa territories (Bafwakoa, April 2026, at least 43 killed; a gold-mine attack in March; the first attack inside Beni town in more than three years around June), with a UN official reporting more than 260 people killed between October 2025 and early 2026. In the game the ADF is the main early-game enemy of eastern_congo: forest ambushes, raids on villages and mining camps, hostage-taking and IED hazards on roads, all at game-design level.",
+    "squad_size": 8,
+    "fireteam": "Forest bands of 6-30 that split and merge; raids of several bands on foot. In game: 8 in battle-buddy pairs.",
+    "tactics": [
+      "Night and dawn raids on villages, farms and mining camps from the forest edge (civilians present: the casualty rule bites)",
+      "Ambushes on forest roads with a felled tree or IED hazard to stop the lead vehicle",
+      "Attacks on isolated army posts, then withdrawal into dense forest",
+      "Hostage-taking and kidnap of travellers (hostage-rescue contracts)",
+      "Dispersal into small groups under pressure; camps moved often",
+      "Bomb attacks in towns as rare telegraphed set-piece hazards (real-world 2021 Kampala bombings)"
+    ],
+    "ai_tuning": {
+      "aggression": 0.7,
+      "discipline": 0.4,
+      "suppression_resistance": 0.45,
+      "flanking": 0.65,
+      "grenade_use": 0.3,
+      "medical_care": 0.15,
+      "night_capability": 0.45,
+      "marksmanship": 0.35,
+      "morale": 0.6
+    }
+  },
+  "camo": [
+    {
+      "name": "Mixed civilian clothes and captured FARDC fatigues",
+      "palette": [
+        "#4E5A3A",
+        "#6B5B3E",
+        "#2F3324",
+        "#8C7A5A"
+      ],
+      "use": "Most fighters"
+    },
+    {
+      "name": "Forest dark (rubber boots, dark rain gear)",
+      "palette": [
+        "#2A3324",
+        "#3E4A30",
+        "#1E1E18",
+        "#5A4A32"
+      ],
+      "use": "Forest bands"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "AK-47 / Type 56 (7.62x39mm)"
+    ],
+    "autorifleman": [
+      "PKM (7.62x54R)"
+    ],
+    "marksman": [
+      "AKM (7.62x39mm)"
+    ],
+    "grenadier": [
+      "AKM (7.62x39mm) with hand grenades"
+    ],
+    "at": [
+      "RPG-7 with PG-7V / OG-7V"
+    ],
+    "medic": [
+      "AK-47 (7.62x39mm)"
+    ],
+    "squad_leader": [
+      "AKM / AKMS (7.62x39mm)"
+    ],
+    "sniper": [],
+    "sidearm": [
+      "Assorted pistols (Makarov-pattern)"
+    ]
+  },
+  "launchers": [
+    "RPG-7 (PG-7V, OG-7V) [in_game]"
+  ],
+  "body_armor": {
+    "helmet": "none",
+    "vest": "none",
+    "plates": "none",
+    "notes": "Chest rigs and ammunition belts; no body armour. Game: none (proposed)."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "motorcycle",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": "Motorbikes for scouts, raids and moving between forest camps; stolen from victims."
+    },
+    {
+      "vehicle_id": "toyota_hilux",
+      "role": "light",
+      "prevalence": "uncommon",
+      "notes": "Seized pickups used briefly in raids, then abandoned."
+    },
+    {
+      "vehicle_id": "toyota_land_cruiser",
+      "role": "light",
+      "prevalence": "rare",
+      "notes": "Seized from army or traffic on the main road; short-lived."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "adf_forest_band",
+      "name": "Forest band (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 5
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "adf_village_raid",
+      "name": "Village raid group",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 2
+        },
+        {
+          "role": "rifleman",
+          "count": 10
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null,
+      "notes": "Night or dawn raid; civilians flee toward the road; casualty rule active."
+    },
+    {
+      "id": "adf_road_ambush",
+      "name": "Forest road ambush team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        }
+      ],
+      "vehicle_id": null,
+      "notes": "Opens with a felled tree or a telegraphed IED hazard on the lead vehicle."
+    },
+    {
+      "id": "adf_moto_scouts",
+      "name": "Motorbike scout pair",
+      "composition": [
+        {
+          "role": "rifleman",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "motorcycle"
+    },
+    {
+      "id": "adf_camp_guard",
+      "name": "Forest camp guard",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "lookout",
+          "count": 2
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "adf_hostage_guard",
+      "name": "Hostage guard detail",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null,
+      "notes": "Holds hostages in a forest camp; hostage-rescue contracts."
+    },
+    {
+      "id": "adf_hvt_guard",
+      "name": "Commander and guard detail",
+      "composition": [
+        {
+          "role": "leader_hvt",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 5
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    }
+  ],
+  "support_assets": [
+    "IED hazards on forest roads (game-level, telegraphed)",
+    "Felled-tree roadblocks",
+    "Rare telegraphed bomb hazard in towns (set piece)"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [],
+    "as_target": [
+      "forest_camp_raid",
+      "village_defence_vs_raid",
+      "hostage_rescue",
+      "convoy_ambush_defence",
+      "mining_site_defence",
+      "hvt_capture_or_kill",
+      "ied_route_clearance"
+    ]
+  },
+  "notes": "The ADF is designated a Foreign Terrorist Organization by the US (as ISIS-DRC, March 2021) and its leaders are under UN sanctions. It is the Islamic State's Central Africa Province (ISCAP) in DR Congo (the Mozambique branch became a separate province in 2022), hence membership of islamic_state_network and isis +85. It fights the FARDC (cod), the Ugandan army in the joint Operation Shujaa (Uganda is not a roster faction; UPDF units appear as neutral-allied NPCs), local militias and MONUSCO peacekeepers (ind, chn on this map). It is not allied with M23 (adf -> m23 -40); the two operate in different areas and the value is a game magnitude. Status 2026: high civilian death tolls in Beni, Lubero and Mambasa territories through July 2026, including attacks on gold-mining sites. Game framing: hostile-only like the other terror groups (player_client false, sellable false), the main early-game enemy in eastern_congo. Tactics are described at game-design level only. Added in Job 7 (Captain, 2026-10-10). Since Captain's decision of 2026-10-10 it sits in the central_africa roster bloc with m23 and cod; trait hostile_only keeps it under the validator's hostile-only check.",
+  "proposed": [
+    "campaign_tier",
+    "relations.player",
+    "relations values (factual direction, game magnitudes)",
+    "doctrine.ai_tuning (all values)",
+    "doctrine.squad_size (game cell size)",
+    "unit_templates (game compositions)",
+    "support_assets (game events and hazards)",
+    "contract_types.as_target",
+    "vehicles[].prevalence (game weighting)",
+    "body_armor (game tier mapping)",
+    "camo (approximate palettes)",
+    "player_trade (hostile-only: not sellable)",
+    "small_arms.sniper empty (no dedicated snipers documented; marksman uses an AKM)",
+    "vehicles: only 3 listed because the group moves mostly on foot"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Allied_Democratic_Forces",
+    "https://en.wikipedia.org/wiki/Islamic_State_%E2%80%93_Central_Africa_Province",
+    "https://www.aljazeera.com/news/2026/4/2/at-least-43-people-killed-in-adf-attack-in-northeast-dr-congo-army-says",
+    "https://acleddata.com/expert-comment/ladd-serwat-iscap-involvement-deadly-eastern-drc-attacks",
+    "https://fr.allafrica.com/stories/202607240169.html",
+    "https://observer.ug/news/adf-rebels-kill-43-civilians-in-drc/"
+  ]
+}

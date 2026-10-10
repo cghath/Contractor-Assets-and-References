@@ -1,0 +1,56 @@
+{
+  "id": "pinaka",
+  "name": "Pinaka MBRL",
+  "aliases": [
+    "Shant (Armenian name)",
+    "Guided Pinaka"
+  ],
+  "origin": "India",
+  "type": "mlrs",
+  "operators": [
+    "arm",
+    "ind"
+  ],
+  "crew": 6,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 12.0,
+    "width": 3.0,
+    "height": 3.3
+  },
+  "weight_t": 40.0,
+  "armament": [
+    "12 x 214 mm rockets in two 6-round pods (37-75 km)"
+  ],
+  "protection": "Soft-skin truck with armoured cab option. Game: 7.62x54R+ disables it, launchers destroy it.",
+  "visual_notes": [
+    "BEML-Tatra 8x8 truck with a forward cab",
+    "Two rectangular 6-tube pods on a rotating launcher over the rear",
+    "Stabiliser jacks; reload truck with crane"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Armenian olive green",
+      "palette": [
+        "#4D5A36",
+        "#3A4329",
+        "#6E6A4A"
+      ]
+    }
+  ],
+  "variants": [
+    "Pinaka Mk-I",
+    "Enhanced",
+    "Guided Pinaka"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Pinaka_multi-barrel_rocket_launcher",
+    "https://commons.wikimedia.org/wiki/Category:Pinaka_multi-barrel_rocket_launcher"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Pinaka_multi-barrel_rocket_launcher",
+    "https://alphadefense.in/2026/02/08/armenia-showcases-indian-made-weapons-marking-a-new-phase-in-defence-ties/"
+  ]
+}

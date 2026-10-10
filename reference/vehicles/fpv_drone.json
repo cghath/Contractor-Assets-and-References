@@ -1,0 +1,83 @@
+{
+  "id": "fpv_drone",
+  "name": "FPV strike drone (family)",
+  "aliases": [
+    "FPV kamikaze drone",
+    "fibre-optic FPV",
+    "bomber multicopter"
+  ],
+  "origin": "Ukraine and Russia (mass-produced by both sides from commercial components)",
+  "type": "uav",
+  "operators": [
+    "ukr",
+    "rus",
+    "syr",
+    "hamas",
+    "pij",
+    "hezbollah",
+    "houthis",
+    "iraqi_militias",
+    "aqap",
+    "isis",
+    "jnim",
+    "cartel_pacifico",
+    "cartel_jalisco_nueva",
+    "sdf",
+    "pmc_halcyon",
+    "pmc_kestrel"
+  ],
+  "crew": 0,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 0.35,
+    "width": 0.35,
+    "height": 0.12
+  },
+  "weight_t": 0.002,
+  "armament": [
+    "One small anti-armour or fragmentation warhead (game abstraction)",
+    "Bomber variants drop small munitions from a hover"
+  ],
+  "protection": "None. Game: one hit from any calibre or a shotgun brings it down; jammed by EW support assets (fibre-optic variant ignores jamming but trails a visible spool line). Proposal: an FPV hit counts as a light launcher hit against vehicles (disables tracks, wheels, optics; penetrates roofs and rear decks of light armour) and is lethal to infantry in the open.",
+  "visual_notes": [
+    "Small X-frame quadcopter (7-10 inch propellers) with a cylindrical warhead strapped under or in front of the frame",
+    "Bright antennas at the rear; fibre-optic version carries a spool canister under the body and leaves a thin line",
+    "Heavy bomber variant is a 1-1.5 m hexa/octocopter with drop mechanism under the body (used at night)",
+    "Audio cue matters more than the model: high-pitched buzz rising as it dives"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Raw carbon / black",
+      "palette": [
+        "#1A1A1A",
+        "#3A3A3A",
+        "#C9302C"
+      ]
+    },
+    {
+      "name": "Olive-painted warhead",
+      "palette": [
+        "#4F5534",
+        "#1A1A1A"
+      ]
+    }
+  ],
+  "variants": [
+    "Radio-controlled FPV",
+    "Fibre-optic FPV",
+    "FPV interceptor (anti-drone)",
+    "Grenade-dropping quadcopter",
+    "Heavy bomber multicopter"
+  ],
+  "existing_model": null,
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/First-person_view_(radio_control)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/First-person_view_(radio_control)",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Armed_Forces_of_Ukraine",
+    "https://euromaidanpress.com/2025/03/10/ukraine-plans-to-buy-4-5-million-fpv-drones-in-2025-in-massive-2-8-billion-procurement-surge/",
+    "https://news.liga.net/en/all/news/ukraines-defense-ministry-allocates-1-billion-for-fpv-drones-including-fiber-optic-models"
+  ]
+}

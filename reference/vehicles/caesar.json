@@ -1,0 +1,69 @@
+{
+  "id": "caesar",
+  "name": "CAESAR",
+  "aliases": [
+    "CAmion Equipe d'un Systeme d'ARtillerie",
+    "CAESAR NG",
+    "CAESAR MkII"
+  ],
+  "origin": "France",
+  "type": "artillery",
+  "operators": [
+    "fra",
+    "bel",
+    "dnk",
+    "arm",
+    "est",
+    "ltu",
+    "ukr",
+    "sau"
+  ],
+  "crew": 5,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 10.0,
+    "width": 2.55,
+    "height": 3.7
+  },
+  "weight_t": 17.7,
+  "armament": [
+    "155 mm/52 howitzer on rear mount with spade"
+  ],
+  "protection": "Cab only lightly armoured (MkII/NG adds armoured cab). Denmark donated its CAESAR 8x8 to Ukraine. Game: light armour on cab/turret only; immune to small-calibre rounds, 7.62x54R and larger disable it; launchers destroy it.",
+  "visual_notes": [
+    "6x6 truck (8x8 Tatra in Danish/Czech versions) with a long 155 mm gun lying over the cab",
+    "Large rear spade lowered for firing",
+    "Ammo boxes along chassis sides"
+  ],
+  "colour_schemes": [
+    {
+      "name": "French Centre-Europe three-tone",
+      "palette": [
+        "#555A3E",
+        "#5C4A34",
+        "#1F1F1A"
+      ]
+    },
+    {
+      "name": "Desert sand",
+      "palette": [
+        "#C8B48A",
+        "#A8956C"
+      ]
+    }
+  ],
+  "variants": [
+    "CAESAR 6x6",
+    "CAESAR 8x8 (Tatra)",
+    "CAESAR MkII / NG"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/CAESAR_self-propelled_howitzer"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/CAESAR_self-propelled_howitzer",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Belgian_Army"
+  ]
+}

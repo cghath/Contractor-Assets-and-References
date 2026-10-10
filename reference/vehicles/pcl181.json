@@ -1,0 +1,76 @@
+{
+  "id": "pcl181",
+  "name": "PCL-181 155 mm wheeled SPH",
+  "aliases": [
+    "SH-15",
+    "PCL-181"
+  ],
+  "origin": "China (Norinco)",
+  "type": "artillery",
+  "operators": [
+    "chn",
+    "pak"
+  ],
+  "crew": 6,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 11.0,
+    "width": 2.5,
+    "height": 3.3
+  },
+  "weight_t": 25.0,
+  "armament": [
+    "155 mm L/52 howitzer",
+    "12.7 mm HMG (cab roof, some)"
+  ],
+  "protection": "Armoured cab only. Game: light armour on cab/turret only; immune to small-calibre rounds; 7.62x54R and larger disable it; launchers destroy it.",
+  "visual_notes": [
+    "6x6 truck with a flat-fronted armoured four-door cab",
+    "155 mm L/52 gun on an open rear mount with large muzzle brake, travelling forward over the cab",
+    "Two rear stabiliser spades; ammunition lockers behind the cab",
+    "Pakistan's SH-15 export version is near identical"
+  ],
+  "colour_schemes": [
+    {
+      "name": "PLA digital woodland (vehicle)",
+      "palette": [
+        "#4E5B3A",
+        "#6E7552",
+        "#2F3626",
+        "#8A8762"
+      ]
+    },
+    {
+      "name": "PLA digital desert (Xinjiang/Tibet)",
+      "palette": [
+        "#B49E73",
+        "#8C7752",
+        "#5E5038",
+        "#D2C29A"
+      ]
+    },
+    {
+      "name": "Pakistan Army disruptive",
+      "palette": [
+        "#B8A57A",
+        "#7B6A47",
+        "#4F5235",
+        "#2E2C22"
+      ]
+    }
+  ],
+  "variants": [
+    "PCL-181 (PLA)",
+    "SH-15 (export: Pakistan, others)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/PCL-181",
+    "https://commons.wikimedia.org/wiki/Category:PCL-181"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/PCL-181",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Pakistan_Army"
+  ]
+}

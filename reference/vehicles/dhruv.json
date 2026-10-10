@@ -1,0 +1,58 @@
+{
+  "id": "dhruv",
+  "name": "HAL Dhruv / Rudra",
+  "aliases": [
+    "ALH",
+    "Dhruv",
+    "Rudra",
+    "ALH Mk IV"
+  ],
+  "origin": "India (HAL)",
+  "type": "transport_heli",
+  "operators": [
+    "ind"
+  ],
+  "crew": 2,
+  "passengers": 12,
+  "dimensions_m": {
+    "length": 15.9,
+    "width": 13.2,
+    "height": 4.98
+  },
+  "weight_t": 5.5,
+  "armament": [
+    "Utility: door MG",
+    "Rudra (ALH Mk IV WSI): 20 mm chin cannon, 70 mm rockets, Helina ATGM"
+  ],
+  "protection": "Game: airframe immune to small-calibre rounds; 7.62x54R and 12.7/14.5 mm damage rotor, engines and cockpit glass (forced landing on accumulated hits); launchers and MANPADS (off-list) destroy it.",
+  "visual_notes": [
+    "Twin-engine utility helicopter with a rounded cabin and four-blade hingeless rotor",
+    "Skid (army) or wheeled gear (air force/navy) versions",
+    "Rudra: stub wings and chin gun turret"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Indian Army Aviation olive",
+      "palette": [
+        "#4C5338",
+        "#363C29",
+        "#8A8D72"
+      ]
+    }
+  ],
+  "variants": [
+    "Dhruv Mk I-III",
+    "Rudra (Mk IV, armed)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/HAL_Dhruv",
+    "https://en.wikipedia.org/wiki/HAL_Rudra",
+    "https://commons.wikimedia.org/wiki/Category:HAL_Dhruv"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/HAL_Dhruv",
+    "https://en.wikipedia.org/wiki/HAL_Rudra"
+  ]
+}

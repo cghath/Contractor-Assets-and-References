@@ -1,0 +1,71 @@
+{
+  "id": "mtlb",
+  "name": "MT-LB",
+  "aliases": [
+    "MT-LBu"
+  ],
+  "origin": "Soviet Union",
+  "type": "apc",
+  "operators": [
+    "fin",
+    "rus",
+    "ukr",
+    "blr",
+    "arm",
+    "kaz",
+    "mda",
+    "geo"
+  ],
+  "crew": 2,
+  "passengers": 11,
+  "dimensions_m": {
+    "length": 6.45,
+    "width": 2.86,
+    "height": 1.87
+  },
+  "weight_t": 11.9,
+  "armament": [
+    "7.62 mm PKT"
+  ],
+  "protection": "Light armour. Game: immune to small-calibre rounds; 7.62x54R AP and larger can penetrate side/rear and disable wheels/engine; every launcher in the game list penetrates.",
+  "visual_notes": [
+    "Very low flat-topped tracked hull (about 1.9 m tall) with a box-shaped crew cab at the front",
+    "6 large road wheels per side, no return rollers, wide tracks (snow-capable)",
+    "Small one-man conical MG turret on the front-right of the roof",
+    "Two large rear doors and two roof hatches over the troop space",
+    "Finnish vehicles often in white winter wash or three-tone green",
+    "Flat tracked hull, 6 road wheels, small MG turret",
+    "Russian 2026 field look: improvised anti-drone cage/roof shed over the troop compartment, mesh netting, often towing guns or mounting ZU-23-2 on the roof"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Finnish three-tone",
+      "palette": [
+        "#4F5A3A",
+        "#2F3526",
+        "#7A7457"
+      ]
+    },
+    {
+      "name": "Winter whitewash",
+      "palette": [
+        "#E6E6E0",
+        "#4A5838",
+        "#2A2A22"
+      ]
+    }
+  ],
+  "variants": [
+    "MT-LB",
+    "MT-LBu"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/MT-LB"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/MT-LB",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Finnish_Army"
+  ]
+}

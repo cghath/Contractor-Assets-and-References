@@ -1,0 +1,526 @@
+{
+  "id": "isr",
+  "name": "State of Israel (Israel Defense Forces)",
+  "short": "Israel",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#FFFFFF",
+    "#0038B8"
+  ],
+  "blocs": [
+    "major_non_nato_ally_us",
+    "abraham_accords"
+  ],
+  "campaign_tier": "mid",
+  "alignment_to_player": "neutral",
+  "player_client": true,
+  "relations": {
+    "player": 10,
+    "usa": 85,
+    "gbr": 35,
+    "deu": 50,
+    "can": 25,
+    "fra": 10,
+    "ind": 50,
+    "aze": 60,
+    "grc": 40,
+    "ukr": 10,
+    "rus": -10,
+    "chn": -15,
+    "egy": 30,
+    "jor": 25,
+    "are": 45,
+    "sau": 5,
+    "qat": -15,
+    "tur": -50,
+    "syr": -25,
+    "irq": -50,
+    "pse_pa": -20,
+    "irn": -100,
+    "hamas": -100,
+    "pij": -100,
+    "hezbollah": -100,
+    "houthis": -95,
+    "iraqi_militias": -85,
+    "isis": -90,
+    "al_qaeda": -85,
+    "aqap": -80,
+    "isis_k": -70,
+    "est": 50,
+    "rou": 50,
+    "srb": 40,
+    "pol": 30,
+    "vnm": 30,
+    "aus": 25,
+    "ita": 25,
+    "dnk": 20,
+    "fin": 20,
+    "nzl": 20,
+    "nld": 15,
+    "swe": 15,
+    "che": 10,
+    "bel": -5,
+    "nor": -5,
+    "esp": -10,
+    "arm": -20,
+    "irl": -25,
+    "pak": -70
+  },
+  "theatres": [
+    "israel",
+    "gaza_west_bank",
+    "lebanon_south",
+    "levant_syria",
+    "iran_zagros",
+    "yemen_red_sea"
+  ],
+  "languages": [
+    "Hebrew",
+    "Arabic",
+    "English",
+    "Russian (many soldiers)",
+    "Amharic (some soldiers)"
+  ],
+  "callout_language": "Hebrew military slang: 'mechabel' (terrorist / gunman), 'tsiyud' (gear), 'kadima' (forward), 'zehirut' (careful), 'rimon' (grenade), 'piguah' (hit); radio numbers and callsigns. Units in the field often use Arabic phrases with civilians.",
+  "doctrine": {
+    "summary": "A small professional core of conscripts plus a very large reserve, built for short, high-intensity wars on several fronts. Ground manoeuvre is combined-arms at company level: Merkava tanks, Namer and Eitan heavy APCs, armoured D9 bulldozers and combat engineers, with drones, precision artillery and close air support on call. Since October 2023 the IDF has fought in Gaza (ceasefire from October 2025, with Israeli troops holding a large part of the Strip pending a July 2026 disarmament framework), in southern Lebanon (re-occupied from March 2026 after Hezbollah resumed fire) and in the West Bank (large raids in the northern refugee camps), struck Iran in June 2025 and has been at war with Iran alongside the US since 28 February 2026. Israeli troops also hold a buffer zone in southern Syria. Strong air and missile defence (Iron Dome, David's Sling, Arrow) and intelligence-led raids by special units.",
+    "squad_size": 8,
+    "fireteam": "Infantry squad (kita) of 7-9 around a Negev LMG, an MAG, a grenadier and a marksman, mounted in a Namer, Eitan or armoured Humvee/Wolf. Pairs and fours in room clearing. Special units (Sayeret Matkal, Shayetet 13, Duvdevan, Yamam) in small teams. In game: 8 men in 4 battle-buddy pairs.",
+    "tactics": [
+      "Tank, heavy APC and armoured-bulldozer teams clear routes and buildings; D9s breach walls and clear IED-laden streets (game: destructible walls)",
+      "Drone overwatch over every company; quadcopters search buildings and tunnels before entry",
+      "Tunnel detection and denial (tunnels as map hazards and objectives)",
+      "Wall-breaching 'mouse-holing' through buildings instead of using streets",
+      "Precision artillery, mortars and air strikes on call with very short warning",
+      "Night raids by special units in the West Bank; snatch operations",
+      "Active protection (Trophy) on Merkava/Namer/Eitan defeats many RPG and ATGM hits",
+      "Grenades, flashbangs and smokes used heavily in room clearing"
+    ],
+    "ai_tuning": {
+      "aggression": 0.7,
+      "discipline": 0.75,
+      "suppression_resistance": 0.7,
+      "flanking": 0.7,
+      "grenade_use": 0.7,
+      "medical_care": 0.85,
+      "night_capability": 0.85,
+      "marksmanship": 0.7,
+      "morale": 0.75
+    }
+  },
+  "camo": [
+    {
+      "name": "IDF olive green 'Zayit' (Madei Alef)",
+      "palette": [
+        "#5B5E3F",
+        "#4A4D33",
+        "#6E7050",
+        "#2F3022"
+      ],
+      "use": "Standard uniform for all branches in the field"
+    },
+    {
+      "name": "Mitznefet helmet cover (lumpy cloth cover)",
+      "palette": [
+        "#6B6A48",
+        "#8C875E",
+        "#4B4A33",
+        "#A39C72"
+      ],
+      "use": "Distinctive floppy camouflage helmet cover worn by infantry, very recognisable silhouette"
+    },
+    {
+      "name": "Special-forces multicam-type",
+      "palette": [
+        "#7A7356",
+        "#A3966F",
+        "#4F4A37",
+        "#C8B992"
+      ],
+      "use": "Sayeret, Shayetet 13, Oketz and some reservist units"
+    },
+    {
+      "name": "Border Police (Magav) green-grey",
+      "palette": [
+        "#58614E",
+        "#3C4237",
+        "#8A8E7C"
+      ],
+      "use": "Magav units in gaza_west_bank and israel"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "IWI Tavor X95 / Micro Tavor (5.56x45mm)",
+      "M4A1 / Colt M4 (5.56x45mm)",
+      "M16A4 / M16 carbine variants (5.56x45mm, reserves)"
+    ],
+    "autorifleman": [
+      "IWI Negev NG5 (5.56x45mm)",
+      "IWI Negev NG7 (7.62x51mm)",
+      "FN MAG 58 (7.62x51mm)"
+    ],
+    "marksman": [
+      "M4 / Tavor with magnified optic (5.56x45mm)",
+      "Mk 11 / SR-25 type (7.62x51mm)"
+    ],
+    "grenadier": [
+      "M4A1 or X95 with M203 (40 mm)"
+    ],
+    "at": [
+      "MATADOR (90 mm shoulder-fired, wall-breaching)",
+      "M72 LAW (66 mm)",
+      "Spike-SR/MR (Gil) ATGM teams"
+    ],
+    "medic": [
+      "Micro Tavor X95 (5.56x45mm)"
+    ],
+    "squad_leader": [
+      "M4A1 / X95 (5.56x45mm)"
+    ],
+    "sniper": [
+      "M24 SWS (7.62x51mm)",
+      "Barrett M82 / M107 (12.7x99mm)",
+      "HTR 2000 / Mk 14 type (7.62x51mm)"
+    ],
+    "sidearm": [
+      "Glock 17 / 19 (9x19mm)",
+      "IWI Jericho 941 (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "MATADOR / RGW 90 [not_in_game]",
+    "M72 LAW [not_in_game]",
+    "Spike-SR / MR / LR ATGM [not_in_game]",
+    "Shipon shoulder-fired (entering service) [not_in_game]",
+    "None of the in-game list is standard IDF issue; closest analogue for gameplay is AT4/SMAW [in_game]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "ceramic",
+    "notes": "Kevlar/aramid helmets (Orlite OR-201-type, 'Mitznefet' cover) = medium. Combat vests ('Ephod'/'Kasda'-style carriers) with ceramic front and back plates = medium; some reservists and support troops wear lighter kit. Special units wear modern plate carriers and high-cut helmets with NVG mounts."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "merkava4",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "Merkava Mk 4M Windbreaker with Trophy APS; Mk 4 Barak entering service from 2023; Mk 3 in reserve. Rear troop door is a game feature."
+    },
+    {
+      "vehicle_id": "namer",
+      "role": "apc",
+      "prevalence": "signature",
+      "notes": "Heavy tracked APC on Merkava hull with Trophy; Golani, Givati and engineer units; Namer IFV with 30 mm turret entering service."
+    },
+    {
+      "vehicle_id": "eitan",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "8x8 wheeled APC with Trophy, delivered from 2023 to Nahal and other brigades; first combat use in Gaza."
+    },
+    {
+      "vehicle_id": "caterpillar_d9",
+      "role": "other",
+      "prevalence": "signature",
+      "notes": "Armoured D9R/D9T bulldozer of the combat engineers; also remote-controlled Panda; iconic in Gaza, West Bank and Lebanon."
+    },
+    {
+      "vehicle_id": "humvee",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Armoured Humvees ('Hummer') with RWS for patrol and border units; being replaced by the Ze'ev (Wolf) and other Israeli-built vehicles."
+    },
+    {
+      "vehicle_id": "wolf_av",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "Ze'ev (Wolf) armoured vehicle on Ford F-550 chassis; IDF and security units in West Bank raids; very common sight in gaza_west_bank."
+    },
+    {
+      "vehicle_id": "m113",
+      "role": "apc",
+      "prevalence": "uncommon",
+      "notes": "M113 Zelda / Nagmash largely phased out of front-line combat after 2014 but still used by support, engineers and reserves."
+    },
+    {
+      "vehicle_id": "polaris_mrzr",
+      "role": "light",
+      "prevalence": "uncommon",
+      "notes": "Light all-terrain vehicles for special units and search-and-rescue."
+    },
+    {
+      "vehicle_id": "ah64",
+      "role": "attack_heli",
+      "prevalence": "signature",
+      "notes": "AH-64A Peten and AH-64D Saraf; AH-64E on order; close air support over Gaza and Lebanon."
+    },
+    {
+      "vehicle_id": "uh60",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": "S-70A / UH-60 'Yanshuf' for assault transport and casualty evacuation (Unit 669)."
+    },
+    {
+      "vehicle_id": "hermes450",
+      "role": "uav",
+      "prevalence": "signature",
+      "notes": "Hermes 450 'Zik' and Hermes 900 'Kochav' armed reconnaissance drones; plus countless small quadcopters at company level."
+    },
+    {
+      "vehicle_id": "iron_dome",
+      "role": "air_defense",
+      "prevalence": "signature",
+      "notes": "Iron Dome batteries intercept rockets and drones; game: visible interceptor trails over israel maps; Iron Beam laser entering service."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "isr_infantry_squad",
+      "name": "IDF infantry squad (Golani / Givati / Nahal, game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "namer"
+    },
+    {
+      "id": "isr_wheeled_squad",
+      "name": "IDF wheeled infantry squad",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "eitan"
+    },
+    {
+      "id": "isr_armoured_team",
+      "name": "Tank pair with engineer bulldozer",
+      "composition": [
+        {
+          "role": "tank_crew",
+          "count": 8
+        },
+        {
+          "role": "engineer",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "merkava4"
+    },
+    {
+      "id": "isr_engineer_team",
+      "name": "Combat engineer (Yahalom / brigade engineers) team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "engineer",
+          "count": 3
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "drone_operator",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "caterpillar_d9"
+    },
+    {
+      "id": "isr_raid_team",
+      "name": "West Bank raid team (Duvdevan-style undercover / Magav)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "wolf_av"
+    },
+    {
+      "id": "isr_sf_team",
+      "name": "Special-forces team (Sayeret / Shayetet 13 style)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "sniper",
+          "count": 1
+        },
+        {
+          "role": "drone_operator",
+          "count": 1
+        },
+        {
+          "role": "radio_operator",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "polaris_mrzr"
+    },
+    {
+      "id": "isr_border_patrol",
+      "name": "Border patrol (game 6)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "humvee"
+    }
+  ],
+  "support_assets": [
+    "Close air support and precision strikes (F-16I, F-15I, F-35I off-map; very short warning)",
+    "AH-64 Apache gunships",
+    "Hermes 450/900 armed drones and company-level quadcopters (spot and drop)",
+    "Precision artillery and mortars (M109 Doher, Roem/Sigma on order; Iron Sting guided mortar)",
+    "Iron Dome / David's Sling / Arrow air and missile defence (visual only in game)",
+    "Armoured D9 bulldozers and engineers for breaching and route clearance",
+    "Signals intelligence and EW; drone jamming"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [
+      "hostage_or_body_recovery_intel",
+      "counter_drone_site_defence",
+      "escort_aid_convoy",
+      "recover_downed_drone",
+      "intel_recovery_weapons_smuggling",
+      "protect_infrastructure_from_rocket_teams"
+    ],
+    "as_target": []
+  },
+  "notes": "Israel is a central faction for the israel, gaza_west_bank and lebanon_south theatres and the main actor (with the US) against Iran since February 2026. 2026 situation: Gaza ceasefire since October 2025 with the IDF holding a large part of the Strip behind a 'yellow line', an International Stabilization Force and a Board of Peace planned under the US 20-point plan, and a July 2026 framework on Hamas disarmament and phased Israeli withdrawal not yet complete; West Bank raids continue; southern Lebanon re-occupied from March 2026; buffer zone in southern Syria while Damascus seeks a security agreement; Israeli elections due by 27 October 2026. Real-world US contractors guarded aid distribution sites in Gaza in 2025, which is the basis for proposing Israel as an occasional (neutral) client. The game should keep the civilian-casualty penalties fully active in Israel-related maps and frame contracts neutrally. Israeli kit visible on maps: Mitznefet helmet covers, olive uniforms, Tavor rifles, Merkava/Namer with Trophy, D9 bulldozers. Captain decided (2026-10-10) that Israel hires the player but never sells to them.",
+  "proposed": [
+    "campaign_tier",
+    "alignment_to_player (neutral)",
+    "player_client (occasional neutral client, e.g. counter-drone or aid-escort contracts)",
+    "contract_types.as_client",
+    "relations.player",
+    "doctrine.ai_tuning",
+    "unit_templates",
+    "vehicles[].prevalence (game weighting)",
+    "body_armor (game tier mapping)",
+    "theatres (iran_zagros and yemen_red_sea are strike/special-forces only)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Israel_Defense_Forces",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Israel_Defense_Forces",
+    "https://en.wikipedia.org/wiki/Merkava",
+    "https://en.wikipedia.org/wiki/Namer",
+    "https://en.wikipedia.org/wiki/Eitan_AFV",
+    "https://en.wikipedia.org/wiki/IDF_Caterpillar_D9",
+    "https://en.wikipedia.org/wiki/Wolf_Armoured_Vehicle",
+    "https://en.wikipedia.org/wiki/Mitznefet",
+    "https://en.wikipedia.org/wiki/IWI_Tavor_X95",
+    "https://en.wikipedia.org/wiki/2026_Iran_war",
+    "https://jewishinsider.com/2026/07/trump-deal-hamas-disarmament-board-of-peace-idf-withdrawal/",
+    "https://www.newarab.com/analysis/does-gazas-international-stabilisation-force-have-future",
+    "https://www.aljazeera.com/news/2026/7/26/president-ahmed-al-sharaa-syria-seeking-security-deal-with-israel"
+  ]
+}

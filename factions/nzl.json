@@ -1,0 +1,344 @@
+{
+  "id": "nzl",
+  "name": "New Zealand",
+  "short": "NZ",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#012169",
+    "#C8102E",
+    "#FFFFFF"
+  ],
+  "blocs": [
+    "five_eyes",
+    "fpda",
+    "anzus",
+    "major_non_nato_ally_us",
+    "global_coalition_against_isis"
+  ],
+  "campaign_tier": "mid",
+  "alignment_to_player": "friendly",
+  "player_client": true,
+  "relations": {
+    "player": 25,
+    "aus": 95,
+    "usa": 65,
+    "gbr": 80,
+    "can": 75,
+    "jpn": 60,
+    "kor": 55,
+    "phl": 50,
+    "ukr": 55,
+    "isr": 20,
+    "pse_pa": 20,
+    "chn": -10,
+    "rus": -55,
+    "prk": -60,
+    "irn": -50,
+    "isis": -100,
+    "al_qaeda": -100,
+    "isis_k": -95,
+    "hamas": -80,
+    "houthis": -60
+  },
+  "theatres": [
+    "south_china_sea",
+    "korean_dmz",
+    "mesopotamia",
+    "levant_syria"
+  ],
+  "languages": [
+    "English",
+    "Maori"
+  ],
+  "callout_language": "English (NZ Army voice procedure, Maori unit names)",
+  "doctrine": {
+    "summary": "Small light-infantry army optimised for Pacific stabilisation, peacekeeping and coalition niches (Afghanistan PRT Bamyan, Iraq training at Taji, UNTSO observers, UN Command Korea). Motorised by Bushmasters, NZLAVs and MRZRs; relies on allies (mainly Australia) for heavy fires and air.",
+    "squad_size": 8,
+    "fireteam": "Section of 8 in two fireteams of four, each with a MAG 58 or marksman element; pairs within teams.",
+    "tactics": [
+      "Light-infantry fire and movement, jungle patrolling",
+      "Community engagement and restrained use of force (peace-support heritage)",
+      "Bushmaster-mounted patrols; MRZR for light, fast SOF-style movement",
+      "NZSAS small-team raids with high night capability"
+    ],
+    "ai_tuning": {
+      "aggression": 0.5,
+      "discipline": 0.85,
+      "suppression_resistance": 0.7,
+      "flanking": 0.7,
+      "grenade_use": 0.6,
+      "medical_care": 0.85,
+      "night_capability": 0.8,
+      "marksmanship": 0.8,
+      "morale": 0.8
+    }
+  },
+  "camo": [
+    {
+      "name": "NZMCU (New Zealand Multi-terrain Camouflage Uniform)",
+      "palette": [
+        "#BDAF87",
+        "#8C8762",
+        "#5B5A40",
+        "#3F3B2E"
+      ],
+      "use": "Standard uniform since 2020"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "MARS-L (LMT CQB16) (5.56x45mm)"
+    ],
+    "autorifleman": [
+      "MAG 58 (7.62x51mm)"
+    ],
+    "marksman": [
+      "Designated Marksman Weapon - LMT MARS-H (7.62x51mm)"
+    ],
+    "grenadier": [
+      "MARS-L with 40 mm underbarrel launcher (40x46mm)"
+    ],
+    "at": [
+      "FGM-148 Javelin",
+      "Carl Gustaf M3 (84mm)"
+    ],
+    "medic": [
+      "MARS-L (5.56x45mm)"
+    ],
+    "squad_leader": [
+      "MARS-L (5.56x45mm)"
+    ],
+    "sniper": [
+      "Barrett MRAD (.338 Lapua Magnum)",
+      "M107A1 (.50 BMG)"
+    ],
+    "sidearm": [
+      "Glock 17 Gen 4 (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "FGM-148 Javelin [in_game]",
+    "Carl Gustaf M3 (84mm) [in_game as MAAWS]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "ceramic",
+    "notes": "Modern combat helmet = medium; plate carrier with front/back ceramic plates = medium tier."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "lav6",
+      "role": "ifv",
+      "prevalence": "signature",
+      "notes": "NZLAV (LAV III family, 25 mm turret); about 73 remained in service after sales to Chile."
+    },
+    {
+      "vehicle_id": "bushmaster",
+      "role": "mrap",
+      "prevalence": "signature",
+      "notes": "43 Bushmaster NZ5.5 (delivered 2022-2023) replaced the Pinzgauer protected variants; 5 more for NZSAS."
+    },
+    {
+      "vehicle_id": "polaris_mrzr",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Polaris MRZR-D light all-terrain vehicles, introduced 2020."
+    },
+    {
+      "vehicle_id": "pinzgauer",
+      "role": "light",
+      "prevalence": "uncommon",
+      "notes": "Pinzgauer light operational vehicles, being withdrawn."
+    },
+    {
+      "vehicle_id": "nh90",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": "RNZAF NH90 TTH (8) for army lift."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "nzl_rifle_section",
+      "name": "NZ rifle section",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "team_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "nzl_bushmaster_section",
+      "name": "Bushmaster mounted section",
+      "composition": [
+        {
+          "role": "driver",
+          "count": 1
+        },
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "bushmaster"
+    },
+    {
+      "id": "nzl_lav_section",
+      "name": "NZLAV section",
+      "composition": [
+        {
+          "role": "vehicle_crew",
+          "count": 3
+        },
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "lav6"
+    },
+    {
+      "id": "nzl_mrzr_patrol",
+      "name": "MRZR light patrol",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 1
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "polaris_mrzr"
+    }
+  ],
+  "support_assets": [
+    "L119 105 mm light gun and 81 mm mortar fire missions",
+    "NH90 lift and CASEVAC",
+    "Small ISR drones",
+    "Allied (Australian) CAS on call (off-map)"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 25,
+        "unlocks": [
+          "5.56/7.62 ammunition",
+          "smoke, frags",
+          "medical kits"
+        ]
+      },
+      {
+        "rep": 50,
+        "unlocks": [
+          "MARS-L rifle",
+          "NZMCU uniforms",
+          "medium helmet"
+        ]
+      },
+      {
+        "rep": 75,
+        "unlocks": [
+          "Carl Gustaf M3 (MAAWS)",
+          "MRZR purchase"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "noncombatant_evacuation",
+      "disaster_relief_security",
+      "peacekeeping_escort",
+      "reconnaissance",
+      "hostage_rescue"
+    ],
+    "as_target": []
+  },
+  "notes": "New Zealand Army and RNZAF lift. A minor ally: occasional low-intensity contracts, limited sales. Bought five MH-60R Seahawks (Aug 2025, navy) and no announced NZLAV replacement as of 2026. Did not recognise Palestine in September 2025 (unlike UK/Canada/Australia).",
+  "proposed": [
+    "doctrine.ai_tuning",
+    "relations.player",
+    "player_trade",
+    "contract_types",
+    "campaign_tier",
+    "unit_templates (game squads use 8 men in battle-buddy pairs)",
+    "alignment_to_player",
+    "player_client",
+    "player_trade.sellable",
+    "player_trade.rep_tiers",
+    "relations.player",
+    "theatres"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/New_Zealand_Army",
+    "https://en.wikipedia.org/wiki/NZLAV",
+    "https://defence.govt.nz/news/new-bushmaster-armoured-vehicles-hit-the-production-line",
+    "https://en.wikipedia.org/wiki/Bushmaster_Protected_Mobility_Vehicle",
+    "https://www.nzdf.mil.nz/army/our-equipment/firepower/",
+    "https://www.1news.co.nz/2025/08/21/new-planes-helicopters-for-defence-force/",
+    "https://en.wikipedia.org/wiki/NHIndustries_NH90"
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "id": "lav6",
+  "name": "LAV 6.0",
+  "aliases": [
+    "LAV III",
+    "NZLAV",
+    "LAV 6 ACSV",
+    "Kodiak"
+  ],
+  "origin": "Canada",
+  "type": "ifv",
+  "operators": [
+    "can",
+    "nzl",
+    "sau",
+    "ukr"
+  ],
+  "crew": 3,
+  "passengers": 7,
+  "dimensions_m": {
+    "length": 7.0,
+    "width": 2.7,
+    "height": 2.8
+  },
+  "weight_t": 25.0,
+  "armament": [
+    "25 mm M242 Bushmaster chain gun",
+    "7.62 mm C6/MAG coaxial",
+    "7.62 mm roof MG",
+    "smoke dischargers"
+  ],
+  "protection": "Steel hull with ceramic add-on and double-V hull (LAV 6); slat armour option. Game rule: immune to small-calibre; 7.62x54R AP and 12.7/14.5 mm can disable tyres, optics and gunner; launchers penetrate.",
+  "visual_notes": [
+    "8x8, four axles",
+    "Long sloped front glacis, driver front-left",
+    "Two-man turret with 25 mm and grenade dischargers (four-tube clusters)",
+    "Add-on armour panels, rear ramp",
+    "ACSV variants have no turret, RWS only"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Canadian Forces green",
+      "palette": [
+        "#475236",
+        "#2E3524"
+      ]
+    },
+    {
+      "name": "NZ Army green",
+      "palette": [
+        "#4A5137",
+        "#2D3122"
+      ]
+    }
+  ],
+  "variants": [
+    "LAV III",
+    "NZLAV",
+    "LAV 6 ISC",
+    "LAV 6 Recce",
+    "LAV 6 ACSV (TCV, ambulance, CP, EW, MRV)"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/LAV_6.0",
+    "https://en.wikipedia.org/wiki/NZLAV"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/LAV_6.0",
+    "https://en.wikipedia.org/wiki/NZLAV"
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "id": "vuran",
+  "name": "BMC Vuran",
+  "aliases": [
+    "Vuran 4x4"
+  ],
+  "origin": "Turkey (BMC)",
+  "type": "mrap",
+  "operators": [
+    "tur",
+    "geo"
+  ],
+  "crew": 2,
+  "passengers": 8,
+  "dimensions_m": {
+    "length": 6.0,
+    "width": 2.5,
+    "height": 3.2
+  },
+  "weight_t": 14.0,
+  "armament": [
+    "7.62 or 12.7 mm MG, or Aselsan SARP RWS",
+    "120 mm mortar and SHORAD variants"
+  ],
+  "protection": "STANAG 4569 Level 3 MRAP. Length, width, weight and seating are approximate (not published on the reference page). Game: armoured cab/hull immune to small-calibre rounds; 7.62x54R and larger penetrate and can disable it; any launcher destroys it.",
+  "visual_notes": [
+    "Tall 4x4 MRAP with a steep V-hull, large single tyres and high ground clearance",
+    "Big armoured windscreen panels, side doors with thick glass, roof RWS",
+    "Rear door with step; Georgian vehicles in Georgian camouflage"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Georgian four-colour woodland",
+      "palette": [
+        "#59613F",
+        "#3C4430",
+        "#6E5A3E",
+        "#1F1F1A"
+      ]
+    },
+    {
+      "name": "Desert tan",
+      "palette": [
+        "#B59E74",
+        "#8C7A55",
+        "#5E5440"
+      ]
+    }
+  ],
+  "variants": [
+    "Vuran APC",
+    "Vuran 120 mm mortar",
+    "Vuran SHORAD"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/BMC_Vuran"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/BMC_Vuran",
+    "https://overtdefense.com/2024/06/13/georgia-receives-46-bmc-produced-vuran-4x4-armored-personnel-carriers-from-turkey"
+  ]
+}

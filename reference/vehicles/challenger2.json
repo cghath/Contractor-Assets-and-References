@@ -1,0 +1,71 @@
+{
+  "id": "challenger2",
+  "name": "Challenger 2",
+  "aliases": [
+    "CR2",
+    "Challenger 3",
+    "CR3",
+    "FV4034"
+  ],
+  "origin": "United Kingdom",
+  "type": "mbt",
+  "operators": [
+    "gbr",
+    "ukr",
+    "jor"
+  ],
+  "crew": 4,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 11.55,
+    "width": 3.5,
+    "height": 2.49
+  },
+  "weight_t": 62.5,
+  "armament": [
+    "120 mm L30A1 rifled gun (CR2) / 120 mm L55A1 smoothbore (CR3)",
+    "7.62 mm L94A1 coaxial chain gun",
+    "7.62 mm L37A2 GPMG"
+  ],
+  "protection": "Dorchester (Chobham 2nd gen) composite; TES kit adds ERA and bar armour; CR3 adds new modular armour and APS. Game rule: immune to small-calibre; 7.62x54R and 12.7/14.5 mm only damage optics, tracks and exposed crew; penetrating the hull needs launchers (RPG-7 PG-7V, AT4, MAAWS, SMAW, NLAW, Javelin) or cannon.",
+  "visual_notes": [
+    "Very flat, slab-sided angular turret with sloped front",
+    "6 road wheels per side, rear sprocket, side skirts",
+    "Long gun with thermal sleeve and fume extractor (CR2)",
+    "Commander's panoramic sight on turret roof",
+    "TES: bar armour on rear, add-on blocks on hull front and sides"
+  ],
+  "colour_schemes": [
+    {
+      "name": "British green/black",
+      "palette": [
+        "#3E4A32",
+        "#1E2118"
+      ]
+    },
+    {
+      "name": "British desert sand",
+      "palette": [
+        "#C8B48A",
+        "#9C8560"
+      ]
+    }
+  ],
+  "variants": [
+    "Challenger 2",
+    "Challenger 2 TES ('Megatron')",
+    "Challenger 3 (IOC ~2027)",
+    "Challenger 1 / Al-Hussein (JOR, legacy, being replaced)"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Challenger_2",
+    "https://en.wikipedia.org/wiki/Challenger_3"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Challenger_2",
+    "https://en.wikipedia.org/wiki/Challenger_3",
+    "https://ukdefencejournal.org.uk/the-direction-of-the-british-armys-combat-vehicle-fleet/"
+  ]
+}

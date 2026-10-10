@@ -1,0 +1,392 @@
+{
+  "id": "jor",
+  "name": "Hashemite Kingdom of Jordan (Jordanian Armed Forces - Arab Army)",
+  "short": "Jordan",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#000000",
+    "#FFFFFF",
+    "#007A3D",
+    "#CE1126"
+  ],
+  "blocs": [
+    "arab_league",
+    "major_non_nato_ally_us",
+    "global_coalition_against_isis",
+    "islamic_military_counter_terrorism_coalition"
+  ],
+  "campaign_tier": "early",
+  "alignment_to_player": "friendly",
+  "player_client": true,
+  "relations": {
+    "player": 25,
+    "usa": 75,
+    "gbr": 70,
+    "fra": 50,
+    "deu": 40,
+    "can": 30,
+    "ita": 30,
+    "nld": 30,
+    "sau": 60,
+    "are": 60,
+    "qat": 50,
+    "egy": 70,
+    "tur": 35,
+    "isr": 20,
+    "pse_pa": 70,
+    "syr": 40,
+    "irq": 45,
+    "irn": -50,
+    "hamas": -30,
+    "pij": -40,
+    "hezbollah": -50,
+    "houthis": -40,
+    "iraqi_militias": -60,
+    "isis": -95,
+    "al_qaeda": -90,
+    "isis_k": -70,
+    "bel": 55,
+    "dnk": 55,
+    "esp": 55,
+    "fin": 55,
+    "grc": 55,
+    "nor": 55,
+    "swe": 55
+  },
+  "theatres": [
+    "levant_syria",
+    "gaza_west_bank",
+    "mesopotamia"
+  ],
+  "languages": [
+    "Arabic (Levantine / Jordanian dialect)",
+    "English (officers, special forces)"
+  ],
+  "callout_language": "Jordanian Arabic military radio with British- and US-style procedure; English terms common in special forces ('contact', 'move', 'cover').",
+  "doctrine": {
+    "summary": "A small, professional, well-regarded army trained to British and US standards, organised around border defence of long desert frontiers with Syria and Iraq, counter-terrorism and internal security. The King Abdullah II Special Operations Training Center and the Quick Reaction Force are regional training hubs, and Jordanian special forces have long partnered with US and UK units. In 2024-2026 Jordan has shot down Iranian missiles and drones crossing its airspace (including attacks on Azraq air base in 2026), fought heavily armed drug- and arms-smuggling gangs on the Syrian border (now in cooperation with the new Syrian government) and air-dropped aid into Gaza. It banned the Muslim Brotherhood in April 2025.",
+    "squad_size": 8,
+    "fireteam": "British-style section of 8 in two fireteams with a Minimi and a grenadier, mounted in M113s, Marders or MRAPs; special forces in 4-man patrols. In game: 8 men in battle-buddy pairs.",
+    "tactics": [
+      "Border berms, towers and fast mobile patrols with rules of engagement that allow firing on armed smugglers",
+      "Quick reaction forces with MRAPs and helicopters responding to border incursions",
+      "Special forces raids against ISIS cells, often with partner forces",
+      "Air defence and drone interception (Jordanian F-16s, counter-drone systems)",
+      "Disciplined, methodical infantry movement with good fire control"
+    ],
+    "ai_tuning": {
+      "aggression": 0.5,
+      "discipline": 0.75,
+      "suppression_resistance": 0.6,
+      "flanking": 0.6,
+      "grenade_use": 0.55,
+      "medical_care": 0.65,
+      "night_capability": 0.65,
+      "marksmanship": 0.65,
+      "morale": 0.7
+    }
+  },
+  "camo": [
+    {
+      "name": "Jordanian KA2 digital desert",
+      "palette": [
+        "#C6B28B",
+        "#9C8662",
+        "#6D5E45",
+        "#DCCEAE"
+      ],
+      "use": "Standard army uniform"
+    },
+    {
+      "name": "Jordanian KA2 digital woodland",
+      "palette": [
+        "#5F6448",
+        "#3F4232",
+        "#8A8462",
+        "#2A2A22"
+      ],
+      "use": "Northern units, special forces"
+    },
+    {
+      "name": "Multicam-type (special forces)",
+      "palette": [
+        "#7A7356",
+        "#A3966F",
+        "#4F4A37",
+        "#C8B992"
+      ],
+      "use": "Special operations, QRF"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "M16A2 / M16A4 (5.56x45mm)",
+      "M4A1 (5.56x45mm)"
+    ],
+    "autorifleman": [
+      "FN Minimi / M249 (5.56x45mm)",
+      "FN MAG / M240 (7.62x51mm)"
+    ],
+    "marksman": [
+      "M16 / M4 with magnified optic (5.56x45mm)",
+      "M110-type (7.62x51mm)"
+    ],
+    "grenadier": [
+      "M4 / M16 with M203 (40 mm)"
+    ],
+    "at": [
+      "RPG-32 Hashim (105 mm, co-developed with Russia, made in Jordan)",
+      "AT4 (84 mm)",
+      "Javelin and TOW ATGM teams"
+    ],
+    "medic": [
+      "M4A1 (5.56x45mm)"
+    ],
+    "squad_leader": [
+      "M4A1 (5.56x45mm)"
+    ],
+    "sniper": [
+      "M24 SWS (7.62x51mm)",
+      "Barrett M82 / M107 (12.7x99mm)"
+    ],
+    "sidearm": [
+      "Glock 17 (9x19mm)",
+      "CZ 75 (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "RPG-32 Hashim [not_in_game]",
+    "AT4 [in_game]",
+    "FGM-148 Javelin [in_game]",
+    "M72 LAW [not_in_game]",
+    "TOW [not_in_game]",
+    "RPG-7 in reserve stocks [in_game]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "ceramic",
+    "notes": "US/UK-pattern aramid helmets and plate carriers with ceramic plates; special forces at heavy tier with side plates (proposed)."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "m60",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "M60A3 'Phoenix' with Raytheon fire-control upgrade (about 180)."
+    },
+    {
+      "vehicle_id": "challenger2",
+      "role": "mbt",
+      "prevalence": "common",
+      "notes": "Al-Hussein (ex-British Challenger 1, about 190 in service); listed as a variant in the Challenger catalogue file."
+    },
+    {
+      "vehicle_id": "leclerc",
+      "role": "mbt",
+      "prevalence": "common",
+      "notes": "About 80 Leclerc donated by the UAE in 2020."
+    },
+    {
+      "vehicle_id": "m113",
+      "role": "apc",
+      "prevalence": "signature",
+      "notes": "M113A1/A2 Mk1J in large numbers; the standard tracked carrier."
+    },
+    {
+      "vehicle_id": "marder",
+      "role": "ifv",
+      "prevalence": "common",
+      "notes": "Marder 1A3 donated by Germany (2016-18)."
+    },
+    {
+      "vehicle_id": "acv15",
+      "role": "ifv",
+      "prevalence": "uncommon",
+      "notes": "AIFV / YPR-765 family vehicles (ex-Dutch / Belgian)."
+    },
+    {
+      "vehicle_id": "centauro",
+      "role": "light",
+      "prevalence": "uncommon",
+      "notes": "B1 Centauro 105 mm wheeled tank destroyers (ex-Italian)."
+    },
+    {
+      "vehicle_id": "cougar",
+      "role": "mrap",
+      "prevalence": "common",
+      "notes": "Cougar MRAPs for border and QRF units."
+    },
+    {
+      "vehicle_id": "maxxpro",
+      "role": "mrap",
+      "prevalence": "common",
+      "notes": "MaxxPro MRAPs donated by the US."
+    },
+    {
+      "vehicle_id": "humvee",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": "Humvees with M2/Mk19 on desert border patrols."
+    },
+    {
+      "vehicle_id": "uh60",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": "UH-60A/L/M Black Hawks; also AH-1F Cobras (being retired)."
+    },
+    {
+      "vehicle_id": "himars",
+      "role": "mlrs",
+      "prevalence": "rare",
+      "notes": "M142 HIMARS (small battery)."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "jor_infantry_section",
+      "name": "Infantry section (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "m113"
+    },
+    {
+      "id": "jor_border_patrol",
+      "name": "Desert border patrol (game 6)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "humvee"
+    },
+    {
+      "id": "jor_qrf_team",
+      "name": "Quick Reaction Force / special forces team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "radio_operator",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "cougar"
+    },
+    {
+      "id": "jor_tank_section",
+      "name": "Tank section",
+      "composition": [
+        {
+          "role": "tank_crew",
+          "count": 8
+        }
+      ],
+      "vehicle_id": "m60"
+    }
+  ],
+  "support_assets": [
+    "F-16 strikes and drone interceptions (off-map)",
+    "AH-1F Cobra and UH-60 helicopters",
+    "M109 and HIMARS fires",
+    "Counter-drone systems at border posts and Azraq air base",
+    "Partnered US/UK ISR"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [
+      "border_smuggler_interdiction",
+      "isis_cache_raid",
+      "train_partner_force",
+      "escort_aid_convoy_gaza",
+      "counter_drone_base_defence",
+      "hvt_capture_isis"
+    ],
+    "as_target": []
+  },
+  "notes": "Strong early-game client: Western-trained, close to the US and UK, fighting smugglers on the Syrian border and ISIS remnants, and intercepting Iranian missiles and drones in 2026 (Iran's IRGC claimed strikes on Azraq air base). Peace treaty with Israel (1994) but relations are cold because of the Gaza war; Jordan is the custodian of Jerusalem's Muslim holy sites and trains Palestinian Authority security forces. Arms flow to PA forces (e.g. Al-Jawad armoured vehicles) has passed through Jordan with Israeli approval.",
+  "proposed": [
+    "campaign_tier",
+    "alignment_to_player (friendly client; could be a candidate non-Five-Eyes seller)",
+    "player_client",
+    "contract_types.as_client",
+    "relations.player",
+    "doctrine.ai_tuning",
+    "unit_templates",
+    "vehicles[].prevalence (game weighting)",
+    "body_armor (game tier mapping)",
+    "player_trade.sellable (false until Captain decides)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Royal_Jordanian_Army",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Royal_Jordanian_Army",
+    "https://www.globalmilitary.net/armies/jor/",
+    "https://www.lalibre.be/dernieres-depeches/2026/07/30/guerre-au-moyen-orient-larmee-jordanienne-annonce-avoir-intercepte-cinq-missiles-iraniens-PED45BA2LVE7FGAXCWBKXW6H64/",
+    "https://www.arabnews.pk/node/2652594/middle-east",
+    "https://en.wikipedia.org/wiki/RPG-32",
+    "https://en.wikipedia.org/wiki/KA2_camouflage"
+  ]
+}

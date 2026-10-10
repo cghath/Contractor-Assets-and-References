@@ -1,0 +1,73 @@
+{
+  "id": "griffon",
+  "name": "VBMR Griffon",
+  "aliases": [
+    "Griffon"
+  ],
+  "origin": "France",
+  "type": "apc",
+  "operators": [
+    "fra",
+    "bel"
+  ],
+  "crew": 2,
+  "passengers": 8,
+  "dimensions_m": {
+    "length": 7.8,
+    "width": 2.55,
+    "height": 3.4
+  },
+  "weight_t": 24.5,
+  "armament": [
+    "Remote weapon station with 7.62 mm MG, 12.7 mm M2HB or 40 mm grenade launcher",
+    "Optional Akeron MP missile post"
+  ],
+  "protection": "Ballistic and mine protection, acoustic gunshot detector and soft-kill sensors. Game: immune to small-calibre rounds; 7.62x54R AP and larger can penetrate side/rear and disable wheels/engine; every launcher in the game list penetrates.",
+  "visual_notes": [
+    "Very tall 6x6 with a high V-shaped hull and big windscreen-like front glass on driver/commander",
+    "Front axle well forward, two rear axles close together",
+    "Remote weapon station on roof with Antares sensor block",
+    "Rear door with steps; side doors absent, many roof hatches"
+  ],
+  "colour_schemes": [
+    {
+      "name": "French Centre-Europe three-tone",
+      "palette": [
+        "#555A3E",
+        "#5C4A34",
+        "#1F1F1A"
+      ]
+    },
+    {
+      "name": "French vert armee",
+      "palette": [
+        "#555A3E",
+        "#454A32"
+      ]
+    },
+    {
+      "name": "Desert sand",
+      "palette": [
+        "#C8B48A",
+        "#A8956C"
+      ]
+    }
+  ],
+  "variants": [
+    "VTT (troop carrier)",
+    "EPC (command)",
+    "VOA (artillery observation)",
+    "SAN (ambulance)",
+    "MEPAC (120 mm mortar)",
+    "VBMR Griffon Belgian versions"
+  ],
+  "existing_model": null,
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/VBMR_Griffon"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/VBMR_Griffon",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Belgian_Army"
+  ]
+}

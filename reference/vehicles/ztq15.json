@@ -1,0 +1,70 @@
+{
+  "id": "ztq15",
+  "name": "ZTQ-15 (Type 15) light tank",
+  "aliases": [
+    "Type 15",
+    "ZTQ-15",
+    "VT5 (export)",
+    "Black Panther (nickname)"
+  ],
+  "origin": "China (Norinco)",
+  "type": "mbt",
+  "operators": [
+    "chn"
+  ],
+  "crew": 3,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 9.2,
+    "width": 3.3,
+    "height": 2.5
+  },
+  "weight_t": 36.0,
+  "armament": [
+    "105 mm rifled gun with autoloader (gun-launched ATGM capable)",
+    "12.7 mm HMG on RWS",
+    "7.62 mm coaxial MG"
+  ],
+  "protection": "Light steel/composite hull with modular add-on armour and ERA packages for the turret; hydropneumatic suspension for high-altitude terrain. Game: treated as an IFV-class hull: immune to small-calibre rounds, 12.7/14.5 mm penetrates side and rear, every launcher penetrates.",
+  "visual_notes": [
+    "Compact angular turret with slab-sided add-on armour modules and a rear bustle",
+    "Six road wheels per side, hydropneumatic suspension, side skirts",
+    "Long 105 mm gun with fume extractor and muzzle brake",
+    "RWS with 12.7 mm on turret roof, smoke dischargers in banks on turret sides",
+    "Built for the Tibetan plateau and Xinjiang; often in desert/high-altitude camouflage"
+  ],
+  "colour_schemes": [
+    {
+      "name": "PLA digital desert (Xinjiang/Tibet)",
+      "palette": [
+        "#B49E73",
+        "#8C7752",
+        "#5E5038",
+        "#D2C29A"
+      ]
+    },
+    {
+      "name": "PLA digital woodland (vehicle)",
+      "palette": [
+        "#4E5B3A",
+        "#6E7552",
+        "#2F3626",
+        "#8A8762"
+      ]
+    }
+  ],
+  "variants": [
+    "ZTQ-15",
+    "VT5 (export, Bangladesh)"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Type_15_tank",
+    "https://commons.wikimedia.org/wiki/Category:ZTQ-15"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Type_15_tank",
+    "https://www.janes.com/defence-intelligence-insights/defence-news/pla-continues-modernising-land-equipment-in-xinjiang-military-command"
+  ]
+}

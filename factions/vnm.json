@@ -1,0 +1,311 @@
+{
+  "id": "vnm",
+  "name": "Socialist Republic of Vietnam",
+  "short": "VNM",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#DA251D",
+    "#FFFF00"
+  ],
+  "blocs": [
+    "asean",
+    "brics"
+  ],
+  "campaign_tier": "mid",
+  "alignment_to_player": "neutral",
+  "player_client": true,
+  "relations": {
+    "player": 0,
+    "rus": 50,
+    "ind": 50,
+    "kor": 45,
+    "jpn": 40,
+    "usa": 35,
+    "aus": 35,
+    "fra": 35,
+    "isr": 30,
+    "phl": 30,
+    "chn": -10,
+    "isis": -60
+  },
+  "theatres": [
+    "south_china_sea"
+  ],
+  "languages": [
+    "Vietnamese"
+  ],
+  "callout_language": "Vietnamese (VPA voice procedure)",
+  "doctrine": {
+    "summary": "Vietnam People's Army: a large conscript force following an 'all-people's national defence' doctrine with deep reserves and militia, the 'four no's' policy (no alliances, no foreign bases, no siding with one country against another, no use of force in international relations) and a long combat legacy (wars with France, the US and China). Mostly Soviet-era equipment being modernised with Russian, Israeli, Korean and domestic (Viettel) systems; heavy focus on the Spratly garrisons and coastal defence.",
+    "squad_size": 9,
+    "fireteam": "Rifle squad of 9 with RPK/PKM and B41 (RPG-7). Game: 8 in four pairs.",
+    "tactics": [
+      "Layered defence of fortified islands and coastlines",
+      "Jungle ambush and infiltration doctrine, strong fieldcraft",
+      "Massed militia and reserves in defensive depth",
+      "Domestic drones for spotting and munition drops (shown 2025)"
+    ],
+    "ai_tuning": {
+      "aggression": 0.55,
+      "discipline": 0.75,
+      "suppression_resistance": 0.75,
+      "flanking": 0.7,
+      "grenade_use": 0.55,
+      "medical_care": 0.45,
+      "night_capability": 0.6,
+      "marksmanship": 0.6,
+      "morale": 0.8
+    }
+  },
+  "camo": [
+    {
+      "name": "VPA plain olive (K03/K08-style)",
+      "palette": [
+        "#5A6A43",
+        "#4A5837",
+        "#33402A"
+      ],
+      "use": "Standard field uniform"
+    },
+    {
+      "name": "VPA special forces / naval infantry pattern",
+      "palette": [
+        "#566643",
+        "#7A7350",
+        "#2E3626",
+        "#9C9673"
+      ],
+      "use": "Special forces (Dac Cong), naval infantry"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "STV-380 / STV-215 (7.62x39mm, Z111 factory)",
+      "AKM (7.62x39mm)"
+    ],
+    "autorifleman": [
+      "RPK (7.62x39mm)",
+      "PKM (7.62x54R)"
+    ],
+    "marksman": [
+      "Dragunov SVD (7.62x54R)"
+    ],
+    "grenadier": [
+      "AK with GP-25 (40 mm)"
+    ],
+    "at": [
+      "B41 / RPG-7 (PG-7V, OG-7V)",
+      "9K111/9M113-family ATGM"
+    ],
+    "medic": [
+      "STV-215 (7.62x39mm)"
+    ],
+    "squad_leader": [
+      "STV-380 (7.62x39mm)"
+    ],
+    "sniper": [
+      "Dragunov SVD (7.62x54R)"
+    ],
+    "sidearm": [
+      "K54 (7.62x25mm TT)"
+    ]
+  },
+  "launchers": [
+    "B41 / RPG-7 with PG-7V / OG-7V [in_game as RPG-7]",
+    "Konkurs/Fagot-family ATGM [not_in_game]",
+    "Igla MANPADS [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "light",
+    "vest": "light",
+    "plates": "steel",
+    "notes": "Mostly pith helmets or steel/composite helmets (light); limited soft vests with steel plates for front-line and special forces (light)."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "t55",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "T-54/T-55 (~350) incl. modernised T-54B/T-54M3."
+    },
+    {
+      "vehicle_id": "t90m",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "T-90S/SK (64), shown at the 2025 National Day parade."
+    },
+    {
+      "vehicle_id": "type59",
+      "role": "mbt",
+      "prevalence": "common",
+      "notes": "Type 59 (~300)."
+    },
+    {
+      "vehicle_id": "pt76",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "PT-76 (~200) and Type 63 amphibious tanks."
+    },
+    {
+      "vehicle_id": "bmp1",
+      "role": "ifv",
+      "prevalence": "common",
+      "notes": "BMP-1 (~150)."
+    },
+    {
+      "vehicle_id": "bmp2",
+      "role": "ifv",
+      "prevalence": "common",
+      "notes": "BMP-2 (~150)."
+    },
+    {
+      "vehicle_id": "btr60",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "BTR-60PB (~500)."
+    },
+    {
+      "vehicle_id": "k9",
+      "role": "artillery",
+      "prevalence": "rare",
+      "notes": "K9 (20 ordered 2025), first SE Asian customer."
+    },
+    {
+      "vehicle_id": "mi8",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": "Mi-8/Mi-17 transport helicopters."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "vnm_rifle_squad",
+      "name": "VPA rifle squad (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "vnm_naval_infantry",
+      "name": "Naval infantry squad with BTR-60",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "btr60"
+    },
+    {
+      "id": "vnm_dac_cong",
+      "name": "Dac Cong special forces team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "sniper",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    }
+  ],
+  "support_assets": [
+    "BM-21 / EXTRA rocket fire",
+    "D-20 / 2S3 152 mm fire missions",
+    "Domestic drones (Viettel)",
+    "Coastal anti-ship missiles (Bastion-P, VCM-01; off-map)",
+    "Mi-17 lift"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [
+      "maritime_security_escort",
+      "reconnaissance (Spratly reefs)",
+      "protect_infrastructure (offshore oil platforms)",
+      "disaster_relief_security"
+    ],
+    "as_target": []
+  },
+  "notes": "Neutral mid-tier state (proposal). Vietnam hires discreetly for maritime/infrastructure security in the south_china_sea theatre, never sells gear. Real-world: Comprehensive Strategic Partnerships with China, Russia, India, Korea, Japan and the USA (2023); active reclamation in the Spratlys 2024-25. 80th anniversary parade 2 September 2025 displayed T-90SK, modernised T-54/55, XCB-01 IFV, BTR-60 and domestic drones.",
+  "proposed": [
+    "doctrine.ai_tuning",
+    "relations.player",
+    "campaign_tier",
+    "alignment_to_player",
+    "player_client",
+    "player_trade",
+    "contract_types",
+    "unit_templates (game squads use 8 men in battle-buddy pairs)",
+    "player_trade.sellable"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Vietnam_People%27s_Ground_Forces",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Vietnam_People%27s_Ground_Forces",
+    "https://a80.hanoi.gov.vn/en/modern-military-weapons-and-vehicles-serving-national-grand-parade-101250806150629313.htm",
+    "https://www.asianmilitaryreview.com/2025/08/vietnam-is-confirmed-as-k9-sphs-first-southeast-asian-customer-foc/",
+    "https://www.armyrecognition.com/archives/archives-land-defense/defense-news-army-2025/vietnam-signs-historic-250-million-contract-with-south-korea-for-20-k9-self-propelled-howitzers"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "id": "marder",
+  "name": "Marder 1",
+  "aliases": [
+    "Schutzenpanzer Marder",
+    "Marder 1A3",
+    "Marder 1A5"
+  ],
+  "origin": "West Germany",
+  "type": "ifv",
+  "operators": [
+    "deu",
+    "grc",
+    "ukr",
+    "jor"
+  ],
+  "crew": 3,
+  "passengers": 6,
+  "dimensions_m": {
+    "length": 6.79,
+    "width": 3.24,
+    "height": 2.99
+  },
+  "weight_t": 35.0,
+  "armament": [
+    "20 mm Rh 202 autocannon",
+    "7.62 mm MG3 coaxial",
+    "MILAN launcher (on turret side)"
+  ],
+  "protection": "Steel armour, protected against 20 mm frontally; A5 adds anti-mine kit. Game: immune to 5.56/5.45/7.62x39/7.62x51; 7.62x54R can damage optics and exposed systems; 12.7/14.5 mm can penetrate sides on the lighter variants; any launcher in the game list penetrates.",
+  "visual_notes": [
+    "Tall boxy tracked hull with small two-man turret",
+    "6 road wheels per side, return rollers",
+    "Rear ramp, side skirts on later models",
+    "MILAN tube on the turret side"
+  ],
+  "colour_schemes": [
+    {
+      "name": "NATO three-tone",
+      "palette": [
+        "#3E4A2E",
+        "#4B3A28",
+        "#1E1E1C"
+      ]
+    },
+    {
+      "name": "Greek three-tone",
+      "palette": [
+        "#5A5C3A",
+        "#7A6A48",
+        "#2A2A20"
+      ]
+    }
+  ],
+  "variants": [
+    "Marder 1A3",
+    "Marder 1A5",
+    "Marder 1A3 (JOR)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Marder_(IFV)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Marder_(IFV)",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Hellenic_Army"
+  ]
+}

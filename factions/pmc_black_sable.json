@@ -1,0 +1,341 @@
+{
+  "id": "pmc_black_sable",
+  "name": "Black Sable Services (fictional)",
+  "short": "Black Sable",
+  "kind": "pmc",
+  "inspired_by": "Gulf-financed mercenary forces of the 2015-2026 era: contractors recruited internationally (Latin American, African and Eastern European veterans) under Western or Gulf-registered front companies, paid by Gulf investors and client governments to fight in Yemen, the Horn of Africa and the Sahel, with Emirati-style vehicles and Chinese-built armed drones in support. No real company, state funder, logo or person is depicted.",
+  "flag_colors": [
+    "#111111",
+    "#6B5B3A",
+    "#C0A060"
+  ],
+  "blocs": [],
+  "traits": [
+    "rival_pmc"
+  ],
+  "campaign_tier": "mid",
+  "alignment_to_player": "hostile",
+  "player_client": false,
+  "relations": {
+    "player": -45,
+    "are": 50,
+    "sau": 40,
+    "usa": 10,
+    "qat": -10,
+    "tur": -20,
+    "som": -30,
+    "sahel_aes": 10,
+    "africa_corps": -20,
+    "irn": -70,
+    "houthis": -90,
+    "iraqi_militias": -60,
+    "aqap": -90,
+    "al_shabaab": -85,
+    "isis": -95,
+    "al_qaeda": -90,
+    "jnim": -85,
+    "pmc_halcyon": -35,
+    "pmc_kestrel": -30,
+    "cartel_pacifico": -20,
+    "cartel_jalisco_nueva": -20,
+    "krg_peshmerga": -10,
+    "aut": -20,
+    "che": -20,
+    "irl": -20,
+    "mex": -20,
+    "sdf": -20,
+    "afg_taliban": -40
+  },
+  "theatres": [
+    "yemen_red_sea",
+    "horn_of_africa",
+    "persian_gulf_coast",
+    "sahel"
+  ],
+  "languages": [
+    "English",
+    "Spanish",
+    "Arabic",
+    "French"
+  ],
+  "callout_language": "Spanish and English mix",
+  "doctrine": {
+    "summary": "A large, well-paid but mixed-quality force: Latin American ex-soldiers make up the assault companies, Western and Eastern European veterans lead them, and local auxiliaries hold ground. It brings money and hardware that most local forces lack: Nimr armoured vehicles, armoured Land Cruisers, gun trucks and Chinese-built armed drones flown by contractor crews. Leadership is competent; the rank and file are uneven and loyalty follows the pay. It fights hard for ports, airfields and coastal towns and is ruthless in protecting its clients' commercial interests.",
+    "squad_size": 8,
+    "fireteam": "Sections of 8 under a Western or East European team leader; Spanish-speaking pairs; local auxiliaries as extra rifles.",
+    "tactics": [
+      "Mounted assaults in Nimrs with gun-truck support",
+      "Armed-drone strikes ahead of assaults (Wing Loong-class, game support asset)",
+      "Seizing and holding ports, airfields and coastal roads",
+      "Night raids by a small elite team",
+      "Bounty-hunter pursuits with fast gun trucks across open desert"
+    ],
+    "ai_tuning": {
+      "aggression": 0.7,
+      "discipline": 0.55,
+      "suppression_resistance": 0.6,
+      "flanking": 0.6,
+      "grenade_use": 0.6,
+      "medical_care": 0.6,
+      "night_capability": 0.6,
+      "marksmanship": 0.6,
+      "morale": 0.5
+    }
+  },
+  "camo": [
+    {
+      "name": "Desert digital / arid MultiCam-type",
+      "palette": [
+        "#C8B48A",
+        "#9C8156",
+        "#6F5A3C",
+        "#E0D3B0"
+      ],
+      "use": "Yemen and the Gulf"
+    },
+    {
+      "name": "Black and coyote (company look)",
+      "palette": [
+        "#111111",
+        "#81613C",
+        "#C0A060"
+      ],
+      "use": "Elite teams and protective details"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "Caracal CAR 816 / M4-pattern (5.56x45mm)",
+      "AK-103 (7.62x39mm)"
+    ],
+    "autorifleman": [
+      "FN Minimi (5.56x45mm)",
+      "PKM / FN MAG (7.62mm)"
+    ],
+    "marksman": [
+      "CAR 817 / SR-25-pattern DMR (7.62x51mm)"
+    ],
+    "grenadier": [
+      "CAR 816 with 40 mm underbarrel launcher"
+    ],
+    "at": [
+      "RPG-7 [in_game]",
+      "AT4 [in_game]"
+    ],
+    "medic": [
+      "CAR 816 (5.56x45mm)"
+    ],
+    "squad_leader": [
+      "CAR 816 with optic"
+    ],
+    "sniper": [
+      "Barrett M107-pattern (12.7x99mm)"
+    ],
+    "sidearm": [
+      "Caracal F / Glock (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "RPG-7 with PG-7V / OG-7V [in_game]",
+    "AT4 [in_game]",
+    "Kornet ATGM (rare) [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "mixed",
+    "notes": "Ballistic helmets and plate carriers for contractors (medium, ceramic or steel); local auxiliaries light or none."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "nimr",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": "Nimr Ajban/Hafeet armoured vehicles (game assignment)."
+    },
+    {
+      "vehicle_id": "toyota_land_cruiser",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Armoured and soft-skin Land Cruisers."
+    },
+    {
+      "vehicle_id": "technical_dshk",
+      "role": "technical",
+      "prevalence": "common",
+      "notes": "Gun trucks with 12.7 mm guns."
+    },
+    {
+      "vehicle_id": "matv",
+      "role": "mrap",
+      "prevalence": "uncommon",
+      "notes": "Surplus M-ATVs (game assignment Captain-confirmed 2026-10-10)."
+    },
+    {
+      "vehicle_id": "wing_loong",
+      "role": "uav",
+      "prevalence": "uncommon",
+      "notes": "Chinese-built armed drones flown by contractor crews (game support asset)."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "sable_assault_section",
+      "name": "Black Sable assault section (8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "nimr"
+    },
+    {
+      "id": "sable_gun_truck",
+      "name": "Gun-truck patrol",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "technical_dshk"
+    },
+    {
+      "id": "sable_elite_team",
+      "name": "Elite night-raid team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "toyota_land_cruiser"
+    },
+    {
+      "id": "sable_bounty_team",
+      "name": "Bounty-hunter pursuit team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "sniper",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "technical_dshk"
+    }
+  ],
+  "support_assets": [
+    "Armed-drone strikes (Wing Loong-class)",
+    "Local auxiliary infantry",
+    "Gun-truck reinforcements",
+    "Client-provided helicopters on some contracts"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [],
+    "as_target": [
+      "rival_contractor_race (port, airfield or VIP objective)",
+      "Retake a port or coastal town Black Sable seized for a rival client",
+      "Recover recruits held in debt bondage or abandoned by the company (rescue)",
+      "Gather evidence of abuses for an NGO or UN client",
+      "Survive a Black Sable bounty-hunter pursuit during extraction"
+    ]
+  },
+  "rivalry": {
+    "role": "nemesis (Captain-confirmed (2026-10-10)): big-budget rival with the most hardware and the least cohesion",
+    "bids_on": [
+      "Port, airfield and coastal-road security in yemen_red_sea and horn_of_africa",
+      "Counter-terror contracts paid by Gulf clients",
+      "Mine and logistics security in the sahel"
+    ],
+    "bidding_behaviour": "Overbids on hardware (offers drones and armour) and wins Gulf-funded contracts unless the player's rep with the client is high.",
+    "shows_up_as_enemy_when": [
+      "The player works against Black Sable's client in Yemen or the Horn of Africa",
+      "Black Sable holds a counter-contract on the same port or VIP",
+      "The player rescues recruits from a Black Sable camp (story beat)"
+    ],
+    "bounty_hunter_trigger": "When the player damages a Black Sable client's assets, the company posts a bounty and sends fast gun-truck pursuit teams with drone overwatch.",
+    "defeat_rewards": [
+      "Salvage of Western and Gulf kit (CAR 816-pattern rifles, plate carriers) at loot caps",
+      "Captured drone ground-control intel (temporary drone-free window in the theatre)",
+      "Recruits who defect to the player as hireable squadmates (proposal)",
+      "Reputation with Somali and UN clients"
+    ],
+    "escalation": "Repeated defeats bring Nimr columns and armed-drone overwatch, then a named field commander."
+  },
+  "notes": "FICTIONAL company; no real company, funder, logo or person is depicted. Inspired by the reported pattern of Gulf-financed mercenary recruitment (Latin American veterans in Yemen and Sudan, 2015-2026). In game it has business ties to Gulf states (positive relations with are and sau), which never fight alongside it openly. Hostile to the player as a rival, never a client or vendor. Its Nimr and Wing Loong use is a game assignment (proposed); its M-ATVs are Captain-confirmed (2026-10-10): the existing voxel models are fielded by the operators listed in their catalogue files. Captain chose it as the player's main nemesis (2026-10-10); the rest of the rivalry object stays a proposal.",
+  "proposed": [
+    "everything (fictional faction): name, flag_colors, relations, theatres",
+    "rivalry (all fields except role; the nemesis role is Captain-confirmed)",
+    "doctrine.ai_tuning",
+    "unit_templates",
+    "vehicles (Nimr, Wing Loong game assignment)",
+    "contract_types.as_target",
+    "body_armor (game tier mapping)",
+    "traits (rival_pmc is a game tag)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Private_military_company",
+    "https://en.wikipedia.org/wiki/Mercenary",
+    "https://en.wikipedia.org/wiki/Saudi_Arabian%E2%80%93led_intervention_in_the_Yemeni_civil_war"
+  ]
+}

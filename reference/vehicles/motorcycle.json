@@ -1,0 +1,94 @@
+{
+  "id": "motorcycle",
+  "name": "Light motorcycle (125-200 cc Honda CG type)",
+  "aliases": [
+    "motorbike",
+    "moto",
+    "Honda CG125 copy"
+  ],
+  "origin": "Japan (design) / China, India and others (copies)",
+  "type": "light",
+  "operators": [
+    "hamas",
+    "pij",
+    "hezbollah",
+    "al_qaeda",
+    "aqap",
+    "isis",
+    "isis_k",
+    "al_shabaab",
+    "jnim",
+    "afg_taliban",
+    "sahel_aes",
+    "cartel_pacifico",
+    "cartel_jalisco_nueva",
+    "adf",
+    "m23"
+  ],
+  "crew": 1,
+  "passengers": 1,
+  "dimensions_m": {
+    "length": 2.0,
+    "width": 0.75,
+    "height": 1.05
+  },
+  "weight_t": 0.12,
+  "armament": [
+    "None; the passenger fires a rifle or carries an RPG-7"
+  ],
+  "protection": "None. Rider and passenger fully exposed; any hit can disable the bike. Treated as a soft target (not under the vehicle armour rule).",
+  "visual_notes": [
+    "Simple commuter motorbike: round headlight, tank, flat bench seat for two, rear rack",
+    "Spoked wheels, upswept exhaust on Sahel bikes, mudguards",
+    "Load: jerrycans, sacks or a rifle strapped to the rack; riders with face scarves",
+    "Common civilian vehicle on all Middle East, Africa and Afghan maps"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Red",
+      "palette": [
+        "#A3231F",
+        "#1F1F1F",
+        "#BFBFBF"
+      ]
+    },
+    {
+      "name": "Black",
+      "palette": [
+        "#1F1F1F",
+        "#5A5A5A",
+        "#BFBFBF"
+      ]
+    },
+    {
+      "name": "Blue",
+      "palette": [
+        "#2A4A8A",
+        "#1F1F1F",
+        "#BFBFBF"
+      ]
+    },
+    {
+      "name": "Dusty",
+      "palette": [
+        "#8A7A62",
+        "#3A3A3A"
+      ]
+    }
+  ],
+  "variants": [
+    "Honda CG125-type",
+    "Chinese 150-200 cc copies (Sanili, Haojue-type)",
+    "Off-road trail bike (rare)"
+  ],
+  "existing_model": null,
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Honda_CG125",
+    "https://commons.wikimedia.org/wiki/Category:Honda_CG125"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Honda_CG125",
+    "https://en.wikipedia.org/wiki/Jama%27at_Nasr_al-Islam_wal_Muslimin"
+  ]
+}

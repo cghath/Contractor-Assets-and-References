@@ -1,0 +1,66 @@
+{
+  "id": "v22",
+  "name": "Bell Boeing V-22 Osprey",
+  "aliases": [
+    "MV-22B",
+    "CV-22",
+    "Osprey"
+  ],
+  "origin": "United States",
+  "type": "transport_heli",
+  "operators": [
+    "usa",
+    "jpn"
+  ],
+  "crew": 3,
+  "passengers": 24,
+  "dimensions_m": {
+    "length": 17.5,
+    "width": 25.8,
+    "height": 6.7
+  },
+  "weight_t": 15.0,
+  "armament": [
+    "Ramp-mounted 7.62 mm or 12.7 mm MG; optional belly turret"
+  ],
+  "protection": "Game: airframe immune to small-calibre rounds; 7.62x54R and 12.7/14.5 mm damage rotor, engines and cockpit glass (forced landing on accumulated hits); launchers and MANPADS (off-list) destroy it.",
+  "visual_notes": [
+    "Tilt-rotor: high wing with two rotating nacelles and 3-blade proprotors",
+    "Twin vertical fins on a high tail, rear loading ramp",
+    "Nose refuelling probe; folding wing/rotor for ship stowage",
+    "JGSDF operates 17 MV-22B from Camp Saga supporting the Amphibious Rapid Deployment Brigade"
+  ],
+  "colour_schemes": [
+    {
+      "name": "USMC/JGSDF grey",
+      "palette": [
+        "#6F767A",
+        "#4E5458",
+        "#9AA0A3"
+      ]
+    },
+    {
+      "name": "JGSDF two-tone (green/brown)",
+      "palette": [
+        "#4A5236",
+        "#5C4B33",
+        "#2A2C22"
+      ]
+    }
+  ],
+  "variants": [
+    "MV-22B (USMC, JGSDF)",
+    "CV-22B (USAF SOF)",
+    "CMV-22B (USN)"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Bell_Boeing_V-22_Osprey",
+    "https://commons.wikimedia.org/wiki/Category:Bell_Boeing_V-22_Osprey"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Bell_Boeing_V-22_Osprey",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Japan_Ground_Self-Defense_Force"
+  ]
+}

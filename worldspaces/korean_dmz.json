@@ -1,0 +1,134 @@
+{
+  "id": "korean_dmz",
+  "name": "Imjin Border Hills",
+  "inspired_by": "The western sector of the Korean Demilitarized Zone as of 2026: forested granite hills and rice-paddy valleys along a large river, the 4 km wide DMZ with its fences and guard posts, a river estuary on the west, South Korean border towns and military bases to the south, and North Korean fortified hills to the north. The DPRK declared the ROK a 'hostile state' in 2024 and has fortified its side further. All towns are fictional.",
+  "map_size_km": [20, 18],
+  "climate": "Humid continental with monsoon (Koppen Dwa). Hot humid summers (28-32 C) with the monsoon rains (changma) in July-August; cold dry winters (-5 to -15 C) with Siberian winds and frozen rivers; 1,200-1,400 mm rain, 60% in summer.",
+  "seasons": [
+    "Winter (Dec-Feb): very cold, dry, snow patches, frozen paddies and river edges, clear skies",
+    "Spring (Mar-May): yellow dust from the continent, azaleas on hills, rice planting",
+    "Monsoon summer (Jun-Aug): heavy rain, river floods, humid heat, dense green cover",
+    "Autumn (Sep-Nov): clear and crisp, rice harvest, red maples, migratory cranes in the DMZ"
+  ],
+  "biomes": [
+    {"id": "rice_paddy_valleys", "share": 0.26, "vegetation": ["rice paddies (flooded in summer, stubble in winter)", "vinyl greenhouses", "ginseng fields under black shade cloth", "persimmon trees around farmhouses"], "ground_palette": ["#6a5a40", "#8a7454", "#5a6a4a", "#a8916c", "#3f5a6a"], "foliage_palette": ["#5f8a3a", "#7da048", "#d8b83a", "#3f6b2e", "#a8c06a"]},
+    {"id": "oak_pine_hills", "share": 0.34, "vegetation": ["Mongolian and sawtooth oak", "Korean red pine", "azalea and bush clover understorey", "chestnut trees"], "ground_palette": ["#7a5a40", "#9a7a5a", "#5a4230", "#b39a7a"], "foliage_palette": ["#2f4a26", "#3e5e30", "#55703c", "#c84a2a", "#7a8a58"]},
+    {"id": "dmz_regrown_wilderness", "share": 0.2, "vegetation": ["dense regrown scrub and forest on former fields", "reed and wetland in old paddies", "grasslands burned for visibility near fences", "minefield-marked areas"], "ground_palette": ["#6a6040", "#8a7a52", "#4a4430", "#a8986a"], "foliage_palette": ["#4a6a3a", "#6a8a4a", "#3a5530", "#a0a866"]},
+    {"id": "river_and_estuary", "share": 0.12, "vegetation": ["sandbars and reed beds", "willows on banks", "tidal mudflats at the estuary"], "ground_palette": ["#3f5f6a", "#7a7a5a", "#9a9a82", "#5a7f8a"], "foliage_palette": ["#7a8a48", "#a0a866", "#5f6e38", "#3f5a2a"]},
+    {"id": "town_and_base", "share": 0.08, "vegetation": ["ginkgo and cherry street trees", "lawns in bases"], "ground_palette": ["#8a8577", "#b9b4a8", "#6b6a63", "#d8cfbc"], "foliage_palette": ["#3f6b2e", "#5a8a3a", "#d8c84a", "#e8b8c8"]}
+  ],
+  "terrain": {
+    "elevation_range_m": [-10, 650],
+    "relief": "Steep granite hills (200-650 m) with sharp ridgelines and narrow valleys of flat rice paddies at 10-50 m, a large meandering river with high bluffs crossing the map west to the estuary.",
+    "features": ["steep forested ridges with rock outcrops", "flat paddy valleys", "a large river with basalt cliffs and sandbars", "the estuary and tidal flats", "the 4 km DMZ band with the Military Demarcation Line in its centre", "southern limit fence (triple fence with cameras), guard posts (GP) on hilltops", "infiltration tunnels (level geometry) under the DMZ", "anti-tank walls and dragon's teeth on valley roads"],
+    "water": "One large river with a tributary, an estuary on the west edge (neutral-zone waters), reservoirs, paddy irrigation channels; the river freezes partially in winter.",
+    "generator": {
+      "approach": "Heightmap at 10 m. Ridged multifractal hills with steep sides, valleys flattened to paddy terraces (quantised 0.5-1 m steps) where slope is low; river carved as a deep meandering spline with bluffs; estuary as tidal flats on the west edge. The DMZ band (4 km wide, east-west) is a mask: vegetation regrowth and minefield hazard tags inside, fences on its edges.",
+      "noise_layers": [
+        {"type": "ridged multifractal", "frequency": 0.6, "amplitude_m": 500, "purpose": "granite hills and ridgelines"},
+        {"type": "simplex fbm", "frequency": 1.5, "amplitude_m": 60, "purpose": "spurs and knolls"},
+        {"type": "valley-floor flattening by slope threshold", "frequency": 0, "amplitude_m": 0, "purpose": "paddy valleys (terraced in 0.5-1 m steps)"},
+        {"type": "ridged", "frequency": 6.0, "amplitude_m": 10, "purpose": "rock outcrops"},
+        {"type": "simplex", "frequency": 0.3, "amplitude_m": 6, "purpose": "estuary flats and river bed"}
+      ],
+      "erosion": "Hydraulic erosion (60 iterations) for steep gullies; thermal cap 45 degrees with rock faces.",
+      "rivers": "Main river spline west to the estuary with bluffs; tributaries by flow accumulation; reservoirs at valley dams.",
+      "settlement_flattening": "Villages at valley edges at the foot of hills; towns on river terraces; bases on flattened hill shoulders.",
+      "notes": "Movement funnels into valley roads guarded by anti-tank walls; ridges give observation. The DMZ band is mined and only GPs and patrol paths are safe (hazard rule). Tunnels are level geometry for set-piece contracts."
+    }
+  },
+  "settlements": [
+    {"type": "town", "share": 0.3, "pop_range": [10000, 80000], "architecture": "South Korean border town: four- to six-storey concrete buildings with neon signs on every floor (restaurants, academies, PC rooms), 15-25 storey apartment blocks with numbered facades, a traditional market, churches with red neon crosses, military uniform shops near bases.", "footprint_m": "commercial building 15x20; apartment tower 20x60", "storeys": [2, 25], "wall_class": "Concrete thick; glass shopfronts none.", "materials": ["CONCRETE", "GLASS", "PAINTED", "STEEL"], "palette": ["#e6e0d2", "#c9c1ad", "#9fbcc4", "#c8402e", "#4f6f8a", "#8a8577"], "layout_rules": ["commercial core along the main road and station", "apartment complexes in clusters", "base gates on the edge with shops", "civil-defence shelter signs on basements"], "example_names": ["Haneul-eup", "Gangbyeon-ri Sinsigaji", "Seonbawi-dong", "Dolmaru-eup", "Pureun-ri"]},
+    {"type": "village", "share": 0.3, "pop_range": [100, 1500], "architecture": "Farming villages: single-storey houses with blue, green or red tiled or metal roofs, some traditional hanok with curved tile roofs, vinyl greenhouses, storage sheds, a village hall and a pavilion; 'civilian control line' villages with military checkpoints.", "footprint_m": "house 10x12", "storeys": [1, 2], "wall_class": "Block and brick medium; hanok timber and mud walls thin; greenhouses none.", "materials": ["BRICK", "CINDER_BLOCK", "ROOF_TILE", "WOOD", "CORRUGATED_IRON"], "palette": ["#3f6f9a", "#3f8f6f", "#c8402e", "#9c5a3c", "#e6e0d2"], "layout_rules": ["at the foot of a hill facing south over paddies", "village hall and a big zelkova tree", "greenhouses and fields around"], "example_names": ["Byeolbit-ri", "Haemaru", "Songdal-ri", "Dumilmaeul", "Sanbit-ri"]},
+    {"type": "compound", "share": 0.3, "pop_range": [0, 3000], "architecture": "Military sites: South Korean and US bases (barracks, motor pools, hangars), DMZ guard posts (GP) as small concrete forts on hilltops, observation posts with viewing decks, the southern-limit triple fence with cameras and patrol paths, North Korean GPs and bunkers on the opposite hills, anti-tank wall structures on roads, the joint-security-type truce village with blue huts (neutral).", "footprint_m": "GP 50x60; base 1000x1200", "storeys": [1, 4], "wall_class": "GPs and bunkers thick; huts thin.", "materials": ["CONCRETE", "STEEL", "SANDBAG", "PAINTED"], "palette": ["#8a8577", "#4a4d50", "#b8a378", "#4f8ac0", "#5f6b58"], "layout_rules": ["GPs on hilltops inside the DMZ every 1-2 km", "fences along the DMZ edges", "bases 5-15 km south of the line", "anti-tank walls on every valley road"], "example_names": ["GP Baram", "OP Haemaji-Bong", "Camp Haesong", "Truce Village Hut Row"]},
+    {"type": "farm", "share": 0.1, "pop_range": [2, 20], "architecture": "Farm compounds in the civilian-control zone: a house, a cattle shed, greenhouses; farmers need passes to enter.", "footprint_m": "farm 40x60", "storeys": [1, 1], "wall_class": "Thin.", "materials": ["CINDER_BLOCK", "CORRUGATED_IRON", "STEEL"], "palette": ["#9a978f", "#8b8e8c", "#3f6f9a"], "layout_rules": ["isolated in paddy valleys near the line", "checkpoint-controlled road access"], "example_names": ["Tongil Nongjang", "Haetsal Farm"]}
+  ],
+  "infrastructure": {
+    "roads": "A freeway and a national road running toward the line (ending at checkpoints), valley roads with anti-tank walls, military patrol roads along fences, a road and rail bridge over the river (one ends at the DMZ).",
+    "rail": "A line ending at a border station near the DMZ (unused cross-border link).",
+    "power": "Power lines, a substation; DPRK side dark at night.",
+    "ports": "None for shipping (the estuary is a neutral zone); small fishing harbours south of the estuary; LHD offshore of the estuary mouth.",
+    "airfields": "Army aviation base with helicopters (AI), helipads at bases.",
+    "checkpoints": "Civilian control line checkpoints, bridge checkpoints, the DMZ fence gates; DPRK side unseen except GPs."
+  },
+  "pois": [
+    {"type": "dmz_guard_post", "description": "South Korean GP on a hilltop inside the DMZ: concrete fort with firing ports, towers, a helipad and a single fenced road through minefields.", "contract_use": "counter-infiltration sweep from a GP (client kor)", "loot_tier": "low", "intel_chance": 0.25},
+    {"type": "infiltration_tunnel", "description": "Discovered infiltration tunnel under the DMZ: an intercept shaft, a narrow rock tunnel with rails, water and a concrete plug (level geometry).", "contract_use": "counter-infiltration sweep; recover sensors", "loot_tier": "low", "intel_chance": 0.4},
+    {"type": "southern_limit_fence", "description": "Triple fence with razor wire, cameras, sensors, lights and a patrol path; breach marks found.", "contract_use": "counter-infiltration sweep after a breach (client kor)", "loot_tier": "low", "intel_chance": 0.3},
+    {"type": "observation_post", "description": "OP with a viewing deck, telescopes and bunkers overlooking the DPRK propaganda village and GPs.", "contract_use": "reconnaissance; VIP protection on a visit (clients kor, usa)", "loot_tier": "low", "intel_chance": 0.25},
+    {"type": "truce_village", "description": "Neutral joint-security-type area with blue conference huts on the line and buildings on both sides; ceremonial guards.", "contract_use": "VIP protection during talks (client kor, high sensitivity)", "loot_tier": "low", "intel_chance": 0.3},
+    {"type": "river_bridge", "description": "Road and rail bridge over the river with checkpoints, anti-tank structures and a bunker.", "contract_use": "hold the bridge in escalation; convoy chokepoint", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "drone_crash_paddy", "description": "Crashed DPRK reconnaissance drone in a paddy field near a village; police and army cordon.", "contract_use": "recover a downed drone (client kor)", "loot_tier": "medium", "intel_chance": 0.45},
+    {"type": "estuary_islet", "description": "Islet in the estuary with a marine post, tidal flats and a lighthouse; neutral-zone waters around.", "contract_use": "reconnaissance; small-boat infiltration interception", "loot_tier": "low", "intel_chance": 0.3},
+    {"type": "us_rok_base", "description": "Combined base with motor pools, barracks, hangars and a helipad.", "contract_use": "contract board; noncombatant evacuation assembly (clients usa, aus, nzl)", "loot_tier": "low", "intel_chance": 0.05},
+    {"type": "border_station", "description": "Unused border railway station with a big terminal hall and a car park, near the DMZ.", "contract_use": "noncombatant evacuation assembly point; hold in escalation", "loot_tier": "low", "intel_chance": 0.1},
+    {"type": "balloon_landing_site", "description": "Field where trash balloons from the north came down; debris and a sensor package.", "contract_use": "secure site and recover debris (client kor)", "loot_tier": "low", "intel_chance": 0.3},
+    {"type": "dprk_gp_hill", "description": "North Korean guard post on a facing hill: concrete fort, loudspeakers, trenches. Escalation objective only.", "contract_use": "observe; escalation scenario objective", "loot_tier": "medium", "intel_chance": 0.5}
+  ],
+  "weather": {
+    "conditions": ["monsoon downpours and floods", "humid heat", "dry cold and snow", "spring yellow dust", "autumn clear skies", "river fog"],
+    "visibility_notes": "River and valley fog at dawn; monsoon rain grounds helicopters; dense summer foliage limits sight to metres; clear winters give long views.",
+    "dust_or_snow": "Yellow dust in spring; light snow in winter."
+  },
+  "civilians": {
+    "density": "high",
+    "behaviour": "Busy border towns with soldiers on leave; farmers in civilian-control-line villages work only in daylight with passes; tourists at observation posts. Civil-defence drills send people to shelters. North of the line, no civilians are encountered on the map.",
+    "vehicles": ["Hyundai and Kia cars", "city and intercity buses", "1-tonne Porter trucks", "tractors and rice harvesters", "military trucks and buses", "bicycles"],
+    "casualty_risk_notes": "Towns are dense; the DMZ and DPRK sector have no civilians; civilian-control villages are small and sensitive."
+  },
+  "factions_present": [
+    {"faction_id": "kor", "role": "defender", "strength": "high", "where": "South of the line: GPs, fences, OPs, bases, bridges; marines at the estuary."},
+    {"faction_id": "usa", "role": "defender", "strength": "medium", "where": "Combined base and aviation; truce village staff."},
+    {"faction_id": "prk", "role": "occupier", "strength": "high", "where": "North of the line: GPs and bunkers on facing hills, artillery positions in hillsides, infiltration teams, drones and balloons."},
+    {"faction_id": "aus", "role": "patrol", "strength": "low", "where": "UN Command staff and liaison officers at the truce village and combined base."},
+    {"faction_id": "nzl", "role": "patrol", "strength": "low", "where": "UN Command staff at the truce village."},
+    {"faction_id": "jpn", "role": "patrol", "strength": "low", "where": "Evacuation planning team for Japanese nationals (plausibility: no Japanese forces in Korea; liaison only)."},
+    {"faction_id": "chn", "role": "patrol", "strength": "low", "where": "No forces on the DMZ; appears only in escalation intel and as an off-map factor beyond the north edge (plausibility flagged)."}
+  ],
+  "frontline": "An armed truce. The line does not move in the default state; prk provocation events (drones, balloons, fence incidents, GP fire, infiltration teams) raise alert and post counter-infiltration, recovery and site-security contracts. A late-game escalation scenario (proposed) sees artillery and assaults across the DMZ toward the bridges, with valley roads and anti-tank walls as the defence.",
+  "contract_hooks": [
+    "Counter-infiltration sweep after a fence breach (client kor)",
+    "Recover a downed drone from a paddy (client kor)",
+    "Reconnaissance from an OP or estuary islet (clients kor, usa)",
+    "Noncombatant evacuation assembly at the combined base or border station (clients usa, aus, nzl, jpn)",
+    "VIP protection at the truce village during talks (client kor)",
+    "Secure a balloon landing site (client kor)",
+    "Escalation scenario: hold the river bridge (late game)"
+  ],
+  "zone_plan": {
+    "contract_zones": [
+      {"name": "Fence and GP sector", "area_km2": 3, "anchor": "southern_limit_fence", "notes": "hills, mines, fence"},
+      {"name": "Paddy village", "area_km2": 2, "anchor": "drone_crash_paddy", "notes": "civilians, open paddies"},
+      {"name": "Estuary islet", "area_km2": 3, "anchor": "estuary_islet", "notes": "tides, boats"},
+      {"name": "Tunnel intercept", "area_km2": 2, "anchor": "infiltration_tunnel", "notes": "underground set piece"}
+    ],
+    "hot_zones": [
+      {"name": "DMZ escalation (late game, fictional what-if)", "area_km2": 14, "layout": "prk HQ in a hillside bunker complex north of the line; 5 GPs and artillery sites as outposts; checkpoints at valley mouths; infiltration and drone teams; 2 QRF groups; the river bridge as the friendly anchor"}
+    ]
+  },
+  "insertion": {"lhd": true, "fob": "LHD offshore of the estuary mouth (outside the neutral zone, proposed); inland FOB at the combined base. Roads through checkpoints; helicopters in good weather; AAVs on the estuary and river."},
+  "early_game_suitable": false,
+  "early_game_notes": "Peer-state theatre (prk late tier); late campaign.",
+  "ambient_audio": ["DPRK and ROK loudspeaker broadcasts (events)", "cranes and geese in the DMZ", "cicadas", "military trucks", "helicopters", "river sounds", "town neon hum"],
+  "captain_confirmed": [
+    "map_size_km 20 x 18 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
+    "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
+    "materials accepted (Captain, 2026-10-10) and added to voxel_world.gd (Contractor dev, commit 1ec1417): BRICK #9c5a3c, CINDER_BLOCK #9a978f, ROOF_TILE #a4553b, CORRUGATED_IRON #8b8e8c, GLASS #9fbcc4, SANDBAG #b8a378",
+    "the late-game escalation hot zone stays as a what-if, clearly marked fictional; the default state is the real 2026 situation (Captain, 2026-10-10)",
+    "jpn and chn stay as low-plausibility listings at low strength: jpn as an evacuation-planning liaison, chn only off-map and in escalation intel (Captain, 2026-10-10)"
+  ],
+  "proposed": [
+    "layout",
+    "DMZ mask with minefield hazard rule",
+    "zone_plan and hot zone",
+    "tunnels as level geometry only"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Korean_Demilitarized_Zone",
+    "https://en.wikipedia.org/wiki/Imjin_River",
+    "https://en.wikipedia.org/wiki/Han_River_Estuary",
+    "https://en.wikipedia.org/wiki/Korean_Demilitarized_Zone#Incursions_and_tunnels",
+    "https://en.wikipedia.org/wiki/Climate_of_South_Korea",
+    "factions/kor.json, prk.json, usa.json notes"
+  ]
+}

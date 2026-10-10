@@ -1,0 +1,58 @@
+{
+  "id": "puls",
+  "name": "PULS",
+  "aliases": [
+    "Precise and Universal Launching System",
+    "Silam"
+  ],
+  "origin": "Israel",
+  "type": "mlrs",
+  "operators": [
+    "nld",
+    "dnk",
+    "esp",
+    "deu",
+    "srb"
+  ],
+  "crew": 3,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 10.5,
+    "width": 2.55,
+    "height": 3.3
+  },
+  "weight_t": 30.0,
+  "armament": [
+    "Two pods: 122 mm, 160 mm, 306 mm EXTRA or Predator Hawk missiles"
+  ],
+  "protection": "Truck chassis with armoured cab. Game: light armour on cab/turret only; immune to small-calibre rounds, 7.62x54R and larger disable it; launchers destroy it.",
+  "visual_notes": [
+    "Military 8x8 truck (Tatra/RMMV class) with armoured cab",
+    "Traversing launcher at the rear carrying two rectangular rocket pods side by side",
+    "Stabiliser jacks behind the rear axles",
+    "8x8 truck with two box pods on a traversing rear launcher"
+  ],
+  "colour_schemes": [
+    {
+      "name": "NATO three-tone",
+      "palette": [
+        "#3E4A2E",
+        "#4B3A28",
+        "#1E1E1C"
+      ]
+    }
+  ],
+  "variants": [
+    "Silam (ESP)",
+    "EuroPULS"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/PULS_(multiple_rocket_launcher)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/PULS_(multiple_rocket_launcher)",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Royal_Netherlands_Army"
+  ]
+}

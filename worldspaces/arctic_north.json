@@ -1,0 +1,137 @@
+{
+  "id": "arctic_north",
+  "name": "High Fjell Border",
+  "inspired_by": "The European High North as of 2026: a Finnmark-type fjord coast and fell plateau in northern Norway, a Lapland-type birch and pine border valley with Finland, and the land border with Russia's Kola peninsula on the east edge, where the Northern Fleet is based. Allied winter exercises, GPS jamming, cable and infrastructure incidents and Arctic shipping define the grey zone. All towns are fictional.",
+  "map_size_km": [22, 20],
+  "climate": "Subarctic (Koppen Dfc) inland, subpolar oceanic (Cfc) on the coast warmed by the Atlantic current. Winters -10 to -30 C inland, -3 to -10 C on the coast; summers 10-18 C. Polar night for about 2 months, midnight sun for about 2.5 months. 350-700 mm precipitation, much as snow; snow cover October/November-May.",
+  "seasons": [
+    "Polar night (late Nov-mid Jan): no sunrise, blue twilight at midday, aurora, deep cold",
+    "Late winter (Feb-Apr): returning light, best snow for skis and snowmobiles, frozen lakes and rivers, blizzards",
+    "Spring thaw (May-Jun): slush, flooding rivers, ice break-up, impassable terrain",
+    "Midnight sun (Jun-Aug): 24 h daylight, mosquitoes, reindeer on the coast",
+    "Autumn (Sep-Oct): ruska colours, first snow, storms on the coast"
+  ],
+  "biomes": [
+    {"id": "fjord_coast", "share": 0.18, "vegetation": ["bare rock and lichen on headlands", "crowberry and dwarf birch heath", "kelp on the shore", "grass around fishing villages"], "ground_palette": ["#5f5a50", "#7d776b", "#9a9486", "#3e3a34", "#e8ecef"], "foliage_palette": ["#5a6a40", "#7a7f58", "#3e4a2e", "#a07a3a"]},
+    {"id": "fell_tundra_plateau", "share": 0.3, "vegetation": ["reindeer lichen (Cladonia) carpets", "dwarf birch (Betula nana) and willow scrub", "crowberry and bilberry heath", "bare boulder fields"], "ground_palette": ["#c9c4a8", "#a8a488", "#8a8672", "#e8ecef", "#6e6a5a", "#f4f6f8"], "foliage_palette": ["#7a7f58", "#9c9e74", "#a0522d", "#5c6644", "#c9a03a"]},
+    {"id": "mountain_birch_forest", "share": 0.22, "vegetation": ["mountain birch (Betula pubescens ssp. czerepanovii)", "willow along streams", "dwarf shrubs and mosses"], "ground_palette": ["#6b5d45", "#8a7a5c", "#4f4432", "#e8ecef", "#a89a78"], "foliage_palette": ["#5f7a3a", "#7d9a4a", "#d8a83a", "#3f5a2a"]},
+    {"id": "pine_taiga_valley", "share": 0.18, "vegetation": ["Scots pine forest", "spruce in moist hollows", "bogs (aapa mires) with sedge and cloudberry", "river ice in winter"], "ground_palette": ["#4f4432", "#6b5d45", "#a89a78", "#e8ecef", "#3a3226"], "foliage_palette": ["#1f3a24", "#2f4e2e", "#4a6a3a", "#7a9a4e"]},
+    {"id": "sea_and_fjord_water", "share": 0.12, "vegetation": ["none (water): deep fjords, drift ice in sheltered heads in winter"], "ground_palette": ["#1e3a4a", "#2a4a58", "#3f5f6a", "#d8e4ea"], "foliage_palette": ["#2a4a3a", "#3f6a5a", "#5a7f6a", "#7a9a7a"]}
+  ],
+  "terrain": {
+    "elevation_range_m": [-200, 1100],
+    "relief": "Steep fjords cut into a rolling fell plateau at 300-600 m with rounded summits to 1,100 m in the west; the plateau falls south-east into a wide forested river valley (50-150 m) that forms the border on the east edge; countless lakes and boulder fields.",
+    "features": ["deep fjords with steep walls", "rounded fells and plateau", "glacial lakes and eskers", "boulder fields", "aapa mires", "a border river with a hydro dam and a single crossing", "coastal radar on a headland", "snowmobile tracks and reindeer fences"],
+    "water": "Fjords and the sea on the north and west edges; a border river with a hydro dam; hundreds of lakes; everything frozen from November to May except the sea and fast water.",
+    "generator": {
+      "approach": "Heightmap at 10 m with bathymetry. Plateau from fbm; fjords carved as deep U-shaped troughs along ridged-noise valleys reaching the coast; glacial lakes as many cellular depressions; border river valley as a wide spline basin. Snow cover is a season-dependent material layer over everything (depth 0.3-1.5 m) that changes mobility.",
+      "noise_layers": [
+        {"type": "simplex fbm", "frequency": 0.2, "amplitude_m": 450, "purpose": "fell plateau and summits"},
+        {"type": "ridged multifractal, inverted, U-profile", "frequency": 0.3, "amplitude_m": -650, "purpose": "fjord troughs near the coast"},
+        {"type": "cellular (Worley F1, inverted)", "frequency": 2.5, "amplitude_m": -15, "purpose": "glacial lake basins"},
+        {"type": "simplex", "frequency": 6.0, "amplitude_m": 2.5, "purpose": "boulder fields and hummocks"},
+        {"type": "ridged, domain-warped", "frequency": 1.0, "amplitude_m": 12, "purpose": "eskers"}
+      ],
+      "erosion": "Glacial look rather than fluvial: smooth with a low-pass filter on the plateau, steepen fjord walls; light hydraulic pass for streams.",
+      "rivers": "Border river spline along the east edge with rapids and a dam; streams by flow accumulation into lakes; lake levels by basin fill.",
+      "settlement_flattening": "Fishing villages on fjord-side terraces; border-valley villages along the river road.",
+      "notes": "Cold and darkness are the main hazards: snowmobiles, skis and tracked vehicles (BV206/BvS10-type) are the mobility layer; AAVs useless off the coast; helicopters grounded in blizzards. Proposed cold-exposure mechanic ties to the medical model."
+    }
+  },
+  "settlements": [
+    {"type": "village", "share": 0.4, "pop_range": [100, 1500], "architecture": "Fishing villages on the fjords: one- and two-storey timber houses painted red, white and yellow with steep metal roofs, fish-drying racks, a harbour with quays, a fish processing plant, a church, a school and a shop; houses on concrete foundations with storm porches.", "footprint_m": "house 8x12", "storeys": [1, 2], "wall_class": "Timber thin; concrete foundations and plant walls medium.", "materials": ["WOOD", "PAINTED", "CORRUGATED_IRON", "CONCRETE", "GLASS"], "palette": ["#8a2e22", "#f2ede2", "#d8b04a", "#4f6f8a", "#4a4d50"], "layout_rules": ["linear along the fjord road", "harbour and fish plant as the centre", "church on a rise"], "example_names": ["Skarvvika", "Lillefjord-Havn", "Gamvikbotn", "Reinøyhamn", "Kvalnes Nordre"]},
+    {"type": "town", "share": 0.2, "pop_range": [3000, 12000], "architecture": "Border-region town: timber and concrete houses, a 1950s-rebuilt centre of two- to four-storey concrete blocks, a garrison, a hotel, a port with an ice-free quay, a mining or hydro industry site.", "footprint_m": "block 12x40", "storeys": [1, 4], "wall_class": "Concrete blocks thick; timber houses thin.", "materials": ["CONCRETE", "WOOD", "PAINTED", "GLASS", "STEEL"], "palette": ["#c9c4b4", "#8a2e22", "#4f6f8a", "#9fbcc4", "#8a8577"], "layout_rules": ["compact centre around a square", "port and industrial strip on the fjord", "garrison on the edge", "airport on a plateau"], "example_names": ["Grenseby", "Vardnes", "Isfjordsentrum", "Malmhavn"]},
+    {"type": "camp", "share": 0.1, "pop_range": [20, 300], "architecture": "Sami reindeer-herding sites and hut camps: timber cabins, lavvu tents, corrals and fences; seasonal.", "footprint_m": "cabin 5x6; corral 100 m", "storeys": [1, 1], "wall_class": "None to thin.", "materials": ["WOOD", "TARP"], "palette": ["#8c6a46", "#5a4f3a", "#3f6d8c", "#e8e4da"], "layout_rules": ["by a lake or river", "snowmobile track in"], "example_names": ["Čáhppesjávri Camp", "Ruoŋasvárri Huts", "Guolledievvá Corral"]},
+    {"type": "compound", "share": 0.3, "pop_range": [0, 800], "architecture": "Military and infrastructure: a border garrison with barracks and vehicle sheds, a coastal radar station with domes, a hydro dam and powerhouse, a satellite ground station of white domes, a deep-water port, an army winter-training camp of tents and huts, border posts with towers.", "footprint_m": "radar 200x200; garrison 600x700", "storeys": [1, 3], "wall_class": "Concrete thick; sheds and tents thin.", "materials": ["CONCRETE", "STEEL", "WOOD", "CORRUGATED_IRON", "SANDBAG"], "palette": ["#8a8577", "#4a4d50", "#f2f2f0", "#8c6a46", "#5f6b58"], "layout_rules": ["radar and satellite domes on summits and headlands", "garrison near the border crossing", "winter camp in the birch forest"], "example_names": ["Grensestasjon Nord", "Radarstasjon Hornneset", "Camp Viking Frost", "Bakkestasjon Isdalen"]}
+  ],
+  "infrastructure": {
+    "roads": "One coastal road with tunnels and a ferry, one road along the border river to the crossing, few others; winter snowmobile trails.",
+    "rail": "Iron-ore railway to a port at the south-west edge (electrified single track, snow sheds).",
+    "power": "Hydro dam on the border river, power lines across the fells, wind farm on a plateau.",
+    "ports": "Deep-water ice-free port, fishing harbours, a coastguard base; LHD in a fjord.",
+    "airfields": "Small regional airport on a plateau (AI aircraft); helipads.",
+    "checkpoints": "One border crossing (closed to most traffic) with a fence and posts; police checks on the coastal road during exercises."
+  },
+  "pois": [
+    {"type": "satellite_ground_station", "description": "Field of white antenna domes on a summit plateau with a control building, a fence and a road; cable to the coast.", "contract_use": "Arctic infrastructure security; counter-sabotage guard (clients nor, usa)", "loot_tier": "low", "intel_chance": 0.25},
+    {"type": "coastal_radar", "description": "Radar station on a headland with domes, a mast, a bunker and a winding road; GPS-jamming monitoring.", "contract_use": "site security; recover a sensor buoy that washed ashore", "loot_tier": "low", "intel_chance": 0.3},
+    {"type": "border_crossing", "description": "The single crossing with gates, a customs hall, a fence and towers; a garrison nearby; Russian posts visible across the river.", "contract_use": "border security patrol; drone incursion response (clients nor, fin)", "loot_tier": "low", "intel_chance": 0.3},
+    {"type": "hydro_dam", "description": "Dam on the border river with a powerhouse, a spillway and a road across; Russia-side bank in view.", "contract_use": "counter-sabotage guard", "loot_tier": "low", "intel_chance": 0.2},
+    {"type": "crashed_aircraft_site", "description": "Crash site on the fell plateau of a light aircraft or helicopter in snow; survivors in a snow shelter.", "contract_use": "Arctic search and recovery (clients can, nor, usa)", "loot_tier": "low", "intel_chance": 0.25},
+    {"type": "lost_equipment_site", "description": "Exercise equipment lost in a blizzard (sensor kit, a tracked vehicle through lake ice) on a frozen lake.", "contract_use": "recover lost equipment or sensitive kit (clients usa, gbr, nor)", "loot_tier": "medium", "intel_chance": 0.35},
+    {"type": "fishing_harbour", "description": "Fishing harbour with a fish plant, quays, trawlers and drying racks.", "contract_use": "port security; boarding of a suspicious trawler", "loot_tier": "low", "intel_chance": 0.25},
+    {"type": "suspicious_trawler", "description": "Foreign-flagged trawler loitering over a seabed cable route; crew refuses inspection.", "contract_use": "boarding support for the coastguard (clients nor, dnk)", "loot_tier": "medium", "intel_chance": 0.45},
+    {"type": "winter_training_camp", "description": "Allied winter-training camp: tents, huts, snowmobile park, tracked carriers, a range.", "contract_use": "contract board and staging", "loot_tier": "low", "intel_chance": 0.05},
+    {"type": "ore_port", "description": "Iron-ore loading port with conveyor gantries, ship loader, rail yard and storage halls.", "contract_use": "counter-sabotage guard on the rail line", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "border_lake_cabin", "description": "Remote cabin on a border lake, used by a sabotage team as a hide; snowmobile tracks lead to the border.", "contract_use": "counter-sabotage raid; intel grab", "loot_tier": "medium", "intel_chance": 0.5},
+    {"type": "research_station", "description": "Small polar research station with labs, a weather mast and accommodation; international scientists.", "contract_use": "evacuation in a storm; protect researchers", "loot_tier": "low", "intel_chance": 0.15}
+  ],
+  "weather": {
+    "conditions": ["polar-night darkness", "blizzards and whiteouts", "extreme cold (-30 C)", "coastal storms", "midnight sun", "fog on the fjords"],
+    "visibility_notes": "Whiteout drops visibility to metres and grounds aircraft; polar night needs NVGs or white light; snow glare in spring; aurora gives faint light.",
+    "dust_or_snow": "Snow cover October/November-May; drifting snow in wind."
+  },
+  "civilians": {
+    "density": "low",
+    "behaviour": "Small, spread-out population; fishermen, miners, reindeer herders with herds on the plateau, tourists in summer. People shelter indoors in storms; herders move with reindeer on seasonal routes and may be on the plateau in any weather.",
+    "vehicles": ["snowmobiles", "4x4 cars and pickups", "fishing boats", "coastal express ships", "ore trains", "reindeer sleds (rare)"],
+    "casualty_risk_notes": "Low density; reindeer herders on the plateau are the main risk in open-terrain fights."
+  },
+  "factions_present": [
+    {"faction_id": "nor", "role": "defender", "strength": "high", "where": "Coast, border garrison and crossing, radar and satellite stations, ports."},
+    {"faction_id": "fin", "role": "defender", "strength": "medium", "where": "South-east border valley and forest (the Finnish side of the composite map)."},
+    {"faction_id": "swe", "role": "patrol", "strength": "low", "where": "Contingent at the winter-training camp; ore railway security at the south-west edge."},
+    {"faction_id": "usa", "role": "patrol", "strength": "medium", "where": "Marines with prepositioned equipment at the winter camp; maritime patrol aircraft (AI)."},
+    {"faction_id": "gbr", "role": "patrol", "strength": "low", "where": "Commando winter-training detachment at the camp."},
+    {"faction_id": "can", "role": "patrol", "strength": "low", "where": "Arctic training detachment and search-and-rescue liaison."},
+    {"faction_id": "dnk", "role": "patrol", "strength": "low", "where": "Naval patrol vessel and Arctic command liaison."},
+    {"faction_id": "jpn", "role": "patrol", "strength": "low", "where": "Researchers at the polar research station and an observer team (plausibility: Japan's Arctic role is research and diplomacy)."},
+    {"faction_id": "rus", "role": "occupier", "strength": "medium", "where": "Beyond the east-edge border: posts, the Kola-side garrison; GPS jamming, drones, sabotage teams, trawlers over cables."}
+  ],
+  "frontline": "Grey zone. The border does not move; rus events (GPS jamming, drone overflights of infrastructure, sabotage teams, cable incidents, airspace probes) raise alert levels and post infrastructure-security, recovery and boarding contracts. Weather drives availability: blizzards pause operations and post search-and-rescue contracts. A late-game escalation scenario (proposed) sees rus cross the border river, with the fell plateau as the battle space.",
+  "contract_hooks": [
+    "Arctic search and recovery of a crashed aircraft crew in a blizzard (clients can, nor)",
+    "Satellite ground station security against sabotage (clients nor, usa)",
+    "Recover lost equipment from lake ice after an exercise (clients usa, gbr, nor)",
+    "Boarding support on a trawler loitering over a cable route (clients nor, dnk)",
+    "Counter-sabotage raid on a border lake cabin (clients nor, fin)",
+    "Border security patrol during a drone incursion (clients nor, fin)",
+    "Evacuate researchers from the polar station ahead of a storm (clients jpn, nor)",
+    "Escalation scenario: delay an advance across the fell plateau (late game)"
+  ],
+  "zone_plan": {
+    "contract_zones": [
+      {"name": "Satellite station plateau", "area_km2": 3, "anchor": "satellite_ground_station", "notes": "open, cold, long views"},
+      {"name": "Border crossing valley", "area_km2": 3, "anchor": "border_crossing", "notes": "forest, river"},
+      {"name": "Fjord harbour", "area_km2": 2, "anchor": "fishing_harbour", "notes": "boarding and port"},
+      {"name": "Frozen lake", "area_km2": 3, "anchor": "lost_equipment_site", "notes": "ice, recovery"}
+    ],
+    "hot_zones": [
+      {"name": "Fell plateau escalation (late game, fictional what-if)", "area_km2": 16, "layout": "rus HQ across the border; 4 outposts on summits and at lake narrows; checkpoints at the crossing and dam; roaming ski and snowmobile patrols; 1-2 QRF tracked-vehicle groups"}
+    ]
+  },
+  "insertion": {"lhd": true, "fob": "LHD in a fjord for coastal contracts (ice-free); inland FOB at the allied winter-training camp. Mobility by tracked carriers, snowmobiles and skis; helicopters weather-limited; AAVs only in fjords."},
+  "early_game_suitable": false,
+  "early_game_notes": "Peer-state grey zone and extreme environment; late-campaign theatre.",
+  "ambient_audio": ["wind over snow", "snowmobile engines", "creaking ice", "sea and gulls in fjords", "reindeer bells", "aurora-night silence", "distant jets on exercise"],
+  "captain_confirmed": [
+    "map_size_km 22 x 20 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
+    "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
+    "materials accepted (Captain, 2026-10-10) and added to voxel_world.gd (Contractor dev, commit 1ec1417): CORRUGATED_IRON #8b8e8c, GLASS #9fbcc4, TARP #3f6d8c, SANDBAG #b8a378",
+    "the late-game escalation hot zone stays as a what-if, clearly marked fictional; the default state is the real 2026 situation (Captain, 2026-10-10)",
+    "jpn stays as a low-plausibility listing at low strength: researchers and observers only (Captain, 2026-10-10)"
+  ],
+  "proposed": [
+    "composite (Norwegian coast, Finnish border valley)",
+    "season-dependent snow layer and mobility rules; cold-exposure mechanic",
+    "zone_plan and hot zone"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Finnmark",
+    "https://en.wikipedia.org/wiki/Lapland_(Finland)",
+    "https://en.wikipedia.org/wiki/Kola_Peninsula",
+    "https://en.wikipedia.org/wiki/Polar_night",
+    "https://en.wikipedia.org/wiki/Aapa_mire",
+    "factions/nor.json, fin.json, rus.json, jpn.json notes"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "id": "zbl08",
+  "name": "ZBL-08 (Type 08 family)",
+  "aliases": [
+    "ZBL-09",
+    "Type 08",
+    "VN1 (export)",
+    "ZTL-11",
+    "PLL-09"
+  ],
+  "origin": "China (Norinco)",
+  "type": "ifv",
+  "operators": [
+    "chn"
+  ],
+  "crew": 3,
+  "passengers": 7,
+  "dimensions_m": {
+    "length": 8.0,
+    "width": 3.0,
+    "height": 2.1
+  },
+  "weight_t": 21.0,
+  "armament": [
+    "30 mm ZPT-99 cannon",
+    "HJ-73D ATGM (on some)",
+    "7.62 mm coaxial MG"
+  ],
+  "protection": "Welded steel hull with bolt-on armour; amphibious. Game: immune to all small-calibre rounds; frontal arc resists 12.7/14.5 mm; 7.62x54R damages optics, tyres/tracks and exposed gear, 12.7/14.5 mm penetrates side and rear; all launchers penetrate.",
+  "visual_notes": [
+    "Large 8x8 hull with four evenly spaced axles and a sloped nose with trim vane",
+    "Small two-man turret with 30 mm cannon set mid-hull",
+    "Rear ramp, side vision blocks and stowage boxes along the hull",
+    "Family base for ZTL-11 105 mm assault gun, PLL-09 122 mm SPH and command variants"
+  ],
+  "colour_schemes": [
+    {
+      "name": "PLA digital woodland (vehicle)",
+      "palette": [
+        "#4E5B3A",
+        "#6E7552",
+        "#2F3626",
+        "#8A8762"
+      ]
+    },
+    {
+      "name": "PLA digital desert (Xinjiang/Tibet)",
+      "palette": [
+        "#B49E73",
+        "#8C7752",
+        "#5E5038",
+        "#D2C29A"
+      ]
+    }
+  ],
+  "variants": [
+    "ZBL-08 IFV",
+    "ZTL-11 assault gun (105 mm)",
+    "PLL-09 122 mm SPH",
+    "ZBL-08 command/ambulance"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/ZBL-08",
+    "https://commons.wikimedia.org/wiki/Category:ZBL-08"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/ZBL-08",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_People%27s_Liberation_Army_Ground_Force"
+  ]
+}

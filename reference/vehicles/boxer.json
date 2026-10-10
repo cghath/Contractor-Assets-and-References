@@ -1,0 +1,81 @@
+{
+  "id": "boxer",
+  "name": "Boxer",
+  "aliases": [
+    "GTK Boxer",
+    "Boxer RCT30 Schakal"
+  ],
+  "origin": "Germany/Netherlands",
+  "type": "apc",
+  "operators": [
+    "deu",
+    "nld",
+    "gbr",
+    "aus",
+    "ltu",
+    "qat"
+  ],
+  "crew": 3,
+  "passengers": 8,
+  "dimensions_m": {
+    "length": 7.93,
+    "width": 2.99,
+    "height": 2.37
+  },
+  "weight_t": 36.5,
+  "armament": [
+    "FLW 200 RWS with 12.7 mm or 40 mm GMG (APC)",
+    "30 mm RCT30 turret (Schakal)",
+    "Mission modules: RCH 155 howitzer, Skyranger 30 air defence"
+  ],
+  "protection": "Modular armour on drive module; mission modules swap in hours. Game: immune to small-calibre rounds; 7.62x54R AP and larger can penetrate side/rear and disable wheels/engine; every launcher in the game list penetrates.",
+  "visual_notes": [
+    "Large slab-sided 8x8 with evenly spaced axles",
+    "Clear joint line between drive module and the box-shaped mission module behind the driver",
+    "Rear ramp, RWS on roof",
+    "Very tall and long silhouette"
+  ],
+  "colour_schemes": [
+    {
+      "name": "NATO three-tone",
+      "palette": [
+        "#3E4A2E",
+        "#4B3A28",
+        "#1E1E1C"
+      ]
+    },
+    {
+      "name": "Bronze green RAL 6031",
+      "palette": [
+        "#3D4532"
+      ]
+    },
+    {
+      "name": "Dutch green",
+      "palette": [
+        "#4C5536",
+        "#3A3F2D"
+      ]
+    }
+  ],
+  "variants": [
+    "GTK Boxer A1/A2 APC",
+    "Schakal (RCT30 IFV)",
+    "Sanitat (ambulance)",
+    "JFST (fire support)",
+    "RCH 155",
+    "Skyranger 30",
+    "Boxer RCT30 (NLD)",
+    "Vilkas (LTU)",
+    "Boxer RCT30 (QAT)"
+  ],
+  "existing_model": null,
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Boxer_(armoured_fighting_vehicle)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Boxer_(armoured_fighting_vehicle)",
+    "https://en.wikipedia.org/wiki/Future_equipment_of_the_German_Army"
+  ]
+}

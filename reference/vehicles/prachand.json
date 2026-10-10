@@ -1,0 +1,63 @@
+{
+  "id": "prachand",
+  "name": "HAL Prachand (LCH)",
+  "aliases": [
+    "Light Combat Helicopter",
+    "LCH Prachand"
+  ],
+  "origin": "India (HAL)",
+  "type": "attack_heli",
+  "operators": [
+    "ind"
+  ],
+  "crew": 2,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 15.8,
+    "width": 13.3,
+    "height": 4.7
+  },
+  "weight_t": 5.8,
+  "armament": [
+    "20 mm M621 chin cannon",
+    "70 mm rockets",
+    "Helina ATGM",
+    "Mistral air-to-air missiles"
+  ],
+  "protection": "Armoured tandem cockpit. Game: armoured cockpit/engines resist small-calibre and 7.62x54R; 12.7/14.5 mm and 23 mm damage rotors and engines; launchers only hit it when hovering low; MANPADS destroy it.",
+  "visual_notes": [
+    "Narrow tandem-seat cockpit grafted onto the Dhruv dynamic system",
+    "Stub wings, chin turret, nose sensor ball",
+    "Designed for Himalayan altitudes (Siachen-capable); 156 ordered 2025"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Indian Army Aviation olive",
+      "palette": [
+        "#4C5338",
+        "#363C29",
+        "#8A8D72"
+      ]
+    },
+    {
+      "name": "IAF grey",
+      "palette": [
+        "#6C7275",
+        "#4B5053",
+        "#A1A6A8"
+      ]
+    }
+  ],
+  "variants": [
+    "LCH Prachand"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/HAL_Prachand",
+    "https://commons.wikimedia.org/wiki/Category:HAL_Light_Combat_Helicopter"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/HAL_Prachand"
+  ]
+}

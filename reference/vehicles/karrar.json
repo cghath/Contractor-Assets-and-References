@@ -1,0 +1,66 @@
+{
+  "id": "karrar",
+  "name": "Karrar main battle tank",
+  "aliases": [
+    "Karrar",
+    "Kerrar"
+  ],
+  "origin": "Iran",
+  "type": "mbt",
+  "operators": [
+    "irn"
+  ],
+  "crew": 3,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 9.5,
+    "width": 3.6,
+    "height": 2.3
+  },
+  "weight_t": 51,
+  "armament": [
+    "125 mm 2A46-type smoothbore with autoloader, can fire gun-launched ATGM",
+    "7.62 mm coaxial MG",
+    "12.7 mm MG in roof remote weapon station"
+  ],
+  "protection": "Composite turret armour plus Iranian ERA on glacis, turret and side skirts; slat armour at the rear; some carry laser-warning 'dazzler' boxes. Game rule: immune to small-calibre; 7.62x54R and 12.7/14.5 mm only damage optics, tracks and exposed crew; penetration needs launchers (RPG-7 PG-7V, AT4, MAAWS, SMAW, NLAW, Javelin) or cannon, best against side, rear and engine deck.",
+  "visual_notes": [
+    "T-72 lower hull: 6 large road wheels per side, rubber side skirts covered in ERA bricks",
+    "Welded angular turret in the style of the T-90MS with a thick, flat-faced front and a large rear bustle",
+    "125 mm gun with fume extractor and thermal sleeve (service tanks have no barrel sheet)",
+    "Remote weapon station on the turret roof, sighting heads and four dazzler boxes on some tanks",
+    "Slat cage over the engine deck rear; usually painted plain sand/tan"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Iranian service sand",
+      "palette": [
+        "#C2A878",
+        "#A68D60",
+        "#5E513A"
+      ]
+    },
+    {
+      "name": "Iranian three-tone desert disruptive",
+      "palette": [
+        "#C9B183",
+        "#8D7650",
+        "#55503A"
+      ]
+    }
+  ],
+  "variants": [
+    "Karrar (2017 prototype)",
+    "Karrar production (2020+, tan, upgraded optics)",
+    "Karrar with dazzler soft-kill set"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Karrar_(tank)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Karrar_(tank)",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Iranian_Army"
+  ]
+}

@@ -1,0 +1,397 @@
+{
+  "id": "aze",
+  "name": "Republic of Azerbaijan",
+  "short": "Azerbaijan",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#0092BC",
+    "#E4002B",
+    "#00AF66",
+    "#FFFFFF"
+  ],
+  "blocs": [
+    "organization_of_turkic_states",
+    "cis",
+    "nato_partnership_for_peace",
+    "eastern_partnership",
+    "guam",
+    "tur_aze"
+  ],
+  "traits": [
+    "non_aligned_movement"
+  ],
+  "campaign_tier": "mid",
+  "alignment_to_player": "neutral",
+  "player_client": true,
+  "relations": {
+    "player": 15,
+    "tur": 95,
+    "isr": 70,
+    "pak": 70,
+    "kaz": 50,
+    "blr": 45,
+    "srb": 40,
+    "ukr": 35,
+    "usa": 35,
+    "gbr": 40,
+    "geo": 58,
+    "rus": 0,
+    "irn": -25,
+    "ind": -35,
+    "fra": -55,
+    "arm": -40,
+    "isis": -90,
+    "mda": 30,
+    "grc": -10
+  },
+  "theatres": [
+    "caucasus"
+  ],
+  "languages": [
+    "Azerbaijani",
+    "Russian",
+    "Turkish (training)"
+  ],
+  "callout_language": "Azerbaijani",
+  "doctrine": {
+    "summary": "Oil-funded army trained to Turkish standards that won the 2020 war and took Nagorno-Karabakh in 2023 through drones (Bayraktar TB2, Harop and other Israeli loitering munitions), precision artillery and special forces infiltration in mountains. Equipment mixes Russian armour (T-90S, T-72, BMP-3, BTR-82A), Israeli and Turkish systems and Serbian guns. Relations with Russia were badly damaged in 2025 (AZAL airliner, Yekaterinburg deaths) and are now a 'cold' formal normalisation.",
+    "squad_size": 9,
+    "fireteam": "Turkish-style 9-man squad (two fireteams); special forces in small teams. Game: 8 in pairs.",
+    "tactics": [
+      "Drone-first: ISR and loitering munitions hit armour, artillery and air defence before ground moves",
+      "Special forces infiltrate mountain ridgelines at night",
+      "Precision artillery and MLRS on located targets",
+      "Mechanised follow-up with T-90/T-72 and BMP-3"
+    ],
+    "ai_tuning": {
+      "aggression": 0.6,
+      "discipline": 0.65,
+      "suppression_resistance": 0.6,
+      "flanking": 0.65,
+      "grenade_use": 0.6,
+      "medical_care": 0.6,
+      "night_capability": 0.6,
+      "marksmanship": 0.6,
+      "morale": 0.7
+    }
+  },
+  "camo": [
+    {
+      "name": "Azerbaijani digital woodland",
+      "palette": [
+        "#5D6845",
+        "#3C4330",
+        "#8C8761",
+        "#2B2C24"
+      ],
+      "use": "Ground forces"
+    },
+    {
+      "name": "Azerbaijani digital desert / mountain",
+      "palette": [
+        "#C2B088",
+        "#9A875F",
+        "#6C6045",
+        "#4A4537"
+      ],
+      "use": "Dry mountain and lowland summers, special forces"
+    },
+    {
+      "name": "Multicam-type (special forces)",
+      "palette": [
+        "#9C8B66",
+        "#6F6248",
+        "#C9B98F",
+        "#4B4433"
+      ],
+      "use": "Special forces"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "AK-74M, incl. locally licence-produced copies (5.45x39mm)",
+      "AKM (7.62x39mm)"
+    ],
+    "autorifleman": [
+      "PKM (7.62x54R)"
+    ],
+    "marksman": [
+      "SVD (7.62x54R)"
+    ],
+    "grenadier": [
+      "AK-74M with GP-25"
+    ],
+    "at": [
+      "RPG-7",
+      "Spike ATGM",
+      "Skif ATGM"
+    ],
+    "medic": [
+      "AKS-74U (5.45x39mm)"
+    ],
+    "squad_leader": [
+      "AK-74M (5.45x39mm)"
+    ],
+    "sniper": [
+      "Istiglal (14.5x114mm anti-materiel, domestic)",
+      "SVD (7.62x54R)"
+    ],
+    "sidearm": [
+      "PM Makarov (9x18mm)",
+      "Glock / Turkish pistols (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "RPG-7 (PG-7V [in_game], OG-7V [in_game]; tandem/thermobaric rounds [not_in_game])",
+    "Spike ATGM [not_in_game]",
+    "Skif ATGM [not_in_game]",
+    "Igla MANPADS [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "ceramic",
+    "notes": "Turkish-pattern aramid helmets (medium) and plate carriers with front/back plates (medium); special forces wear the most modern kit."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "bayraktar_tb2",
+      "role": "uav",
+      "prevalence": "signature",
+      "notes": "Symbol of the 2020 war; Akinci also in service."
+    },
+    {
+      "vehicle_id": "harop",
+      "role": "uav",
+      "prevalence": "signature",
+      "notes": "Israeli loitering munition; also SkyStriker, Hero-120, Orbiter."
+    },
+    {
+      "vehicle_id": "t90m",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "T-90S (export version, cast turret with Shtora)."
+    },
+    {
+      "vehicle_id": "t72b3",
+      "role": "mbt",
+      "prevalence": "common",
+      "notes": "T-72M1 and upgraded T-72 'Aslan'; many captured Armenian T-72s."
+    },
+    {
+      "vehicle_id": "bmp3",
+      "role": "ifv",
+      "prevalence": "common",
+      "notes": "BMP-3."
+    },
+    {
+      "vehicle_id": "btr82a",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "BTR-82A."
+    },
+    {
+      "vehicle_id": "cobra",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Otokar Cobra II, incl. Skif ATGM carriers."
+    },
+    {
+      "vehicle_id": "sandcat",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Plasan SandCat (since 2016)."
+    },
+    {
+      "vehicle_id": "marauder",
+      "role": "mrap",
+      "prevalence": "common",
+      "notes": "Marauder and Matador (100+, local production)."
+    },
+    {
+      "vehicle_id": "polonez",
+      "role": "mlrs",
+      "prevalence": "uncommon",
+      "notes": "Belarusian 300 mm Polonez; also Israeli LAR-160/EXTRA/LORA, Turkish TRG-300, and ATMOS/Nora B-52/2S19 guns."
+    },
+    {
+      "vehicle_id": "mi24",
+      "role": "attack_heli",
+      "prevalence": "uncommon",
+      "notes": "Mi-35M."
+    },
+    {
+      "vehicle_id": "mi8",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": "Mi-17."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "aze_rifle_squad",
+      "name": "Azerbaijani rifle squad (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "btr82a"
+    },
+    {
+      "id": "aze_sof_team",
+      "name": "Special forces mountain team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "drone_operator",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "sandcat"
+    },
+    {
+      "id": "aze_mech_platoon_lead",
+      "name": "Mechanised section with tank",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        },
+        {
+          "role": "tank_crew",
+          "count": 3
+        }
+      ],
+      "vehicle_id": "t90m"
+    }
+  ],
+  "support_assets": [
+    "Bayraktar TB2 / Akinci armed drones",
+    "Harop / SkyStriker loitering munitions",
+    "Precision MLRS (Polonez, LORA, TRG-300) and artillery (ATMOS, Nora B-52, 2S19)",
+    "Barak-8 and S-300 air defence",
+    "Mi-35M gunships"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 20,
+        "unlocks": [
+          "5.45x39mm and 7.62x54R ammunition",
+          "frags, smokes"
+        ]
+      },
+      {
+        "rep": 45,
+        "unlocks": [
+          "AK-74M, PKM",
+          "RPG-7 with PG-7V / OG-7V",
+          "ceramic plate carriers"
+        ]
+      },
+      {
+        "rep": 65,
+        "unlocks": [
+          "Istiglal anti-materiel rifle",
+          "Cobra II purchase (unarmed)"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "demining_escort",
+      "infrastructure_protection (pipelines, ports)",
+      "border_security",
+      "hostage_rescue"
+    ],
+    "as_target": []
+  },
+  "notes": "Neutral, drone-heavy client in the Caucasus. Taking Azerbaijani work locks out Armenian work for a while (and vice versa). Border tensions with Armenia are low since the 2025 peace process but unresolved (treaty unsigned; Baku demands an Armenian constitutional change). Relations with France and India are hostile because both arm Armenia; with Iran wary.",
+  "proposed": [
+    "campaign_tier",
+    "relations.player",
+    "player_client",
+    "player_trade",
+    "doctrine.ai_tuning",
+    "unit_templates",
+    "contract_types",
+    "vehicles[].prevalence (game weighting)",
+    "body_armor (game tier mapping)"
+  ],
+  "sources": [
+    "https://caliber.az/en/post/military-parade-in-baku-structure-of-armaments-and-their-practical-significance",
+    "https://en.wikipedia.org/wiki/Azerbaijani_Land_Forces",
+    "https://en.wikipedia.org/wiki/IAI_Harop",
+    "https://en.wikipedia.org/wiki/Baykar_Bayraktar_TB2",
+    "https://en.wikipedia.org/wiki/Plasan_Sand_Cat",
+    "https://en.wikipedia.org/wiki/Paramount_Marauder",
+    "https://en.wikipedia.org/wiki/Nora_B-52",
+    "https://oc-media.org/explainer-have-russia-and-azerbaijan-buried-the-hatchet",
+    "https://novayagazeta.eu/amp/articles/2026/07/20/kak-do-samoleta-uzhe-ne-budet",
+    "https://pism.pl/publications/pashinyans-party-wins-parliamentary-elections"
+  ]
+}

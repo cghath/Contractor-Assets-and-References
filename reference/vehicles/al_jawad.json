@@ -1,0 +1,76 @@
+{
+  "id": "al_jawad",
+  "name": "JLVM Al-Jawad armoured security vehicle",
+  "aliases": [
+    "KADDB Al-Jawad",
+    "JODDB Al-Jawad",
+    "Al-Jawad MK IV",
+    "Al-Jawad ('The Horse')"
+  ],
+  "origin": "Jordan",
+  "type": "light",
+  "operators": [
+    "pse_pa"
+  ],
+  "crew": 2,
+  "passengers": 10,
+  "dimensions_m": {
+    "length": 6.4,
+    "width": 2.4,
+    "height": 2.8
+  },
+  "weight_t": 8.6,
+  "armament": [
+    "Open-top or armoured ring/turret mount for a 7.62 mm machine gun (often unarmed in PA service)"
+  ],
+  "protection": "Armoured steel body on a Ford F-550 truck chassis (Janes: 8.6 t gross weight), built as an internal-security vehicle against rifle fire and fragments; no MRAP-grade blast protection. Game: immune to small-calibre rounds; 7.62x54R AP and larger penetrate the sides and disable tyres and engine; any launcher destroys it. Dimensions are approximate (F-550 chassis), pending a reference photo match.",
+  "visual_notes": [
+    "Boxy armoured body on a conventional heavy-pickup chassis: separate long bonnet with a large grille, cab-forward box behind",
+    "4x4 with single rear wheels per side on the MK IV (two axles), large off-road tyres",
+    "Small armoured windows with thick glass, side and rear doors with firing ports",
+    "Roof hatch with ring mount or small open turret",
+    "PA vehicles usually plain sand or white/blue police livery with Arabic 'Palestinian National Security Forces' markings"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Sand (PA National Security Forces)",
+      "palette": [
+        "#C9B58E",
+        "#A08B64",
+        "#2B2B2B"
+      ]
+    },
+    {
+      "name": "Police white and blue",
+      "palette": [
+        "#F1F1EE",
+        "#1F4E8C",
+        "#2B2B2B"
+      ]
+    },
+    {
+      "name": "Jordanian desert",
+      "palette": [
+        "#C6B28B",
+        "#9C8662",
+        "#4A4232"
+      ]
+    }
+  ],
+  "variants": [
+    "Al-Jawad MK IV (Ford F-550 chassis)",
+    "Al-Maha light armoured vehicle (Toyota Land Cruiser chassis, about 5.5 t; ordered for PA forces in 2022)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://armyrecognition.com/archives/archives-land-defense/land-defense-2019/jordan-has-delivered-al-jawad-4x4-armored-vehicles-to-palestinian-security-forces",
+    "https://www.janes.com/defence-news/land-forces/latest/us-funding-jordanian-armoured-vehicles-for-palestinian-forces",
+    "https://www.joint-forces.com/features/56662-12th-awc-kasotc-special-operations-display-part-five"
+  ],
+  "sources": [
+    "https://www.janes.com/defence-news/land-forces/latest/us-funding-jordanian-armoured-vehicles-for-palestinian-forces",
+    "https://armyrecognition.com/archives/archives-land-defense/land-defense-2019/jordan-has-delivered-al-jawad-4x4-armored-vehicles-to-palestinian-security-forces",
+    "https://www.dailyalert.org/rss/Mainissues.php?id=4128"
+  ]
+}

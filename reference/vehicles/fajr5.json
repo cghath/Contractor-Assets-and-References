@@ -1,0 +1,55 @@
+{
+  "id": "fajr5",
+  "name": "Fajr-5 333 mm MLRS",
+  "aliases": [
+    "Fajr-5",
+    "Fadjr-5"
+  ],
+  "origin": "Iran",
+  "type": "mlrs",
+  "operators": [
+    "irn"
+  ],
+  "crew": 3,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 10.0,
+    "width": 2.5,
+    "height": 3.3
+  },
+  "weight_t": 15,
+  "armament": [
+    "4 x 333 mm unguided or guided rockets (game: off-map strike or a map set piece)"
+  ],
+  "protection": "Unarmoured truck cab. Unarmoured. Game rule still treats the vehicle body as immune to small-calibre, but 7.62x54R and up penetrate; occupants, glass and tyres are exposed to all fire.",
+  "visual_notes": [
+    "Mercedes-Benz 2624-style 6x6 truck chassis with a flat-fronted cab",
+    "Four very large rocket tubes in a 2x2 box on a rear turntable",
+    "Stabiliser jacks lowered before firing"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Iranian sand",
+      "palette": [
+        "#C2A878",
+        "#A68D60",
+        "#5E513A"
+      ]
+    }
+  ],
+  "variants": [
+    "Fajr-5 (unguided)",
+    "Fajr-5C (guided)",
+    "Fajr-3 240 mm (12 tubes)",
+    "Fajr-1 107 mm (towed/jeep)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Fajr-5"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Fajr-5",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Iranian_Army"
+  ]
+}

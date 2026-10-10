@@ -1,0 +1,139 @@
+{
+  "id": "black_sea_coast",
+  "name": "Delta and Liman Coast",
+  "inspired_by": "The north-western Black Sea coast as of 2026: the Danube delta with its reed marshes and channels, coastal lagoons (limans) and the flat Budjak steppe of south-west Ukraine's Odesa region, the Romanian bank of the delta, and a strip of Moldova on the north edge near a Russian-garrisoned breakaway region. Russian drones strike ports and the Danube grain route; sea mines drift; NATO's eastern flank lies across the river. All towns are fictional.",
+  "map_size_km": [22, 20],
+  "climate": "Humid continental to semi-arid steppe (Koppen Dfa/BSk) with maritime influence. Summers 27-32 C, winters -2 to -6 C with occasional snow and icing on the lagoons; 400-500 mm precipitation; strong winds and fog on the coast in autumn and spring.",
+  "seasons": [
+    "Winter (Dec-Feb): cold winds off the sea, fog, ice at lagoon edges, short days",
+    "Spring (Mar-May): high water in the delta, migrating birds, mud",
+    "Summer (Jun-Sep): hot, dry steppe, beach towns, vineyards and sunflowers, mosquitoes in the delta",
+    "Autumn (Oct-Nov): grape harvest, storms, fog over the reeds"
+  ],
+  "biomes": [
+    {"id": "delta_reed_marsh", "share": 0.24, "vegetation": ["common reed (Phragmites) beds", "floating reed islands (plaur)", "willow and poplar galleries on levees", "water lilies and water chestnut in lakes"], "ground_palette": ["#5a5a40", "#7a7a52", "#3f4a3a", "#a39360"], "foliage_palette": ["#7a8a48", "#a0a866", "#5f6e38", "#c9b56e", "#3f5a2a"]},
+    {"id": "budjak_steppe_farmland", "share": 0.32, "vegetation": ["wheat, sunflower and maize fields", "vineyards", "windbreak tree lines of acacia and walnut", "feather-grass steppe remnants"], "ground_palette": ["#3a2e24", "#5a4636", "#7a6650", "#a8916c", "#c9b47a"], "foliage_palette": ["#5f7a3a", "#d8b83a", "#7da048", "#3f5a2a", "#6a4a6a"]},
+    {"id": "liman_shores_and_sandbars", "share": 0.12, "vegetation": ["salt marsh (Salicornia)", "sandbar dune grass", "tamarisk", "bare mudflats"], "ground_palette": ["#d6c9a6", "#c4b48c", "#8a7a5a", "#e6dcc0"], "foliage_palette": ["#8a9a68", "#a65a4a", "#6c7a50", "#c4c49a"]},
+    {"id": "sea", "share": 0.24, "vegetation": ["none (water): shallow sandy shelf", "mussel beds"], "ground_palette": ["#2a4a58", "#3f5f6a", "#5a7f8a", "#7a9aa0"], "foliage_palette": ["#3f6a5a", "#5a7f6a", "#2a4a3a", "#7a9a7a"]},
+    {"id": "town_and_port", "share": 0.08, "vegetation": ["chestnut and plane street trees", "acacia", "gardens with grapevines"], "ground_palette": ["#8a8577", "#b9b4a8", "#6b6a63", "#d8cfbc"], "foliage_palette": ["#3f6b2e", "#5a8a3a", "#7ba04a", "#2f5226"]}
+  ],
+  "terrain": {
+    "elevation_range_m": [-25, 150],
+    "relief": "Almost flat. The delta and lagoons sit at 0-3 m with levees and sandbars; the steppe plateau rises gently to 80-150 m in the north with loess bluffs (20-40 m) above the lagoons and the river.",
+    "features": ["delta channels (one main navigable arm, many side channels and lakes)", "floating reed islands", "coastal lagoons (limans) separated from the sea by sandbars", "loess bluffs and ravines", "a river port and a sea port", "sea mines (drifting hazard)", "the river as an international border"],
+    "water": "The river's main arm and distributaries, delta lakes, three limans, the sea on the south-east edge; the river is the Ukraine-Romania border on this map.",
+    "generator": {
+      "approach": "Heightmap at 10 m with bathymetry. Plateau from fbm in the north, dropping to the delta through a bluff step; delta built as a branching spline network on a near-flat plane with levees; lagoons as basins below sea level enclosed by sandbar splines; sea shelf gently sloping. Reed beds as a water-surface vegetation layer.",
+      "noise_layers": [
+        {"type": "simplex fbm", "frequency": 0.2, "amplitude_m": 70, "purpose": "steppe plateau"},
+        {"type": "step (bluff line) with simplex warp", "frequency": 0.5, "amplitude_m": 35, "purpose": "loess bluffs above lagoons and river"},
+        {"type": "ridged, inverted", "frequency": 1.5, "amplitude_m": -20, "purpose": "ravines in the bluffs"},
+        {"type": "simplex", "frequency": 2.0, "amplitude_m": 1.5, "purpose": "delta levees and islands micro-relief"},
+        {"type": "simplex", "frequency": 0.3, "amplitude_m": 8, "purpose": "sea shelf bathymetry"}
+      ],
+      "erosion": "Light hydraulic pass for bluff ravines; none in the delta.",
+      "rivers": "Main river arm as a wide spline (300-500 m) along the south-west, distributaries branching to the sea, side channels 10-60 m; water level fixed at 0.5-2 m with seasonal variation.",
+      "settlement_flattening": "Delta villages on levees; steppe villages on the plateau; port on reclaimed flat ground.",
+      "notes": "Boats and AAVs are central in the delta; roads run on levees and dams. Drone strikes on ports are frequent map events; sea mines drift along the coast (hazard for boats)."
+    }
+  },
+  "settlements": [
+    {"type": "town", "share": 0.3, "pop_range": [10000, 60000], "architecture": "Port town on the river or a liman: 19th-century one- and two-storey limestone and plastered houses with tin roofs and courtyards, Soviet five-storey blocks, an Orthodox cathedral, grain elevators and port cranes, a market.", "footprint_m": "house 10x14; block 12x60; elevator 30x60", "storeys": [1, 5], "wall_class": "Limestone shell-rock (coquina) houses medium-thick; blocks thick; port sheds thin.", "materials": ["LIMESTONE", "PLASTER", "CONCRETE", "CORRUGATED_IRON", "STEEL", "GLASS"], "palette": ["#d6caa8", "#e3dccb", "#8a8577", "#6a8a9a", "#8b8e8c", "#d8c06a"], "layout_rules": ["grid of streets from the waterfront", "port, elevators and rail sidings along the river", "cathedral and market square in the centre", "block district on the edge"], "example_names": ["Dunaiska Prystan", "Bilokamianka-Limanna", "Ochereteve", "Port Kanalne", "Stuful Mare"]},
+    {"type": "village", "share": 0.35, "pop_range": [100, 3000], "architecture": "Delta fishing villages of reed-thatched and tin-roofed houses painted white and blue on levees, wooden boat landings, channels as streets (Lipovan style); steppe villages of single-storey houses with gardens and vineyards, Bulgarian- and Moldovan-style gates, a church.", "footprint_m": "house 7x10", "storeys": [1, 1], "wall_class": "Reed-and-clay walls thin; brick medium.", "materials": ["PLASTER", "THATCH", "WOOD", "BRICK", "CORRUGATED_IRON"], "palette": ["#e3dccb", "#4f6f8a", "#b49a5e", "#8c6a46", "#9c5a3c"], "layout_rules": ["delta villages linear along a channel with footbridges", "steppe villages on a grid with gardens behind", "church and shop at the centre"], "example_names": ["Zaplavne", "Ostriv Chaiok", "Kamyshevka", "Solonchakove", "Satu Nou de Deltă"]},
+    {"type": "farm", "share": 0.15, "pop_range": [5, 50], "architecture": "Agro-holding farms and wineries: steel grain sheds, silos, a winery with cellars, workers' houses.", "footprint_m": "complex 200x300", "storeys": [1, 2], "wall_class": "Steel sheds thin; cellars thick.", "materials": ["STEEL", "CONCRETE", "BRICK", "CORRUGATED_IRON"], "palette": ["#8b8e8c", "#8a8577", "#9c5a3c", "#4a4d50"], "layout_rules": ["on the plateau by a road; vineyards around"], "example_names": ["Vynarnia Zolota Loza", "Ahrofirma Zoria Stepu", "Ferma Limanna"]},
+    {"type": "compound", "share": 0.2, "pop_range": [0, 2000], "architecture": "Military and infrastructure: Ukrainian coastal defence and air-defence sites, a ferry crossing, a Romanian-side NATO base (barracks, vehicle sheds), border posts, a grain terminal, a power substation, Moldovan border post on the north edge, the breakaway region's checkpoint beyond.", "footprint_m": "AD site 150x150; NATO base 900x900", "storeys": [1, 3], "wall_class": "Bunkers thick; sheds thin.", "materials": ["CONCRETE", "STEEL", "SANDBAG", "DIRT_BERM", "CORRUGATED_IRON"], "palette": ["#8a8577", "#4a4d50", "#b8a378", "#8a6f4e", "#5f6b58"], "layout_rules": ["AD sites on bluffs", "NATO base on the Romanian bank behind the river", "border posts at crossings"], "example_names": ["Baza Deltei Nord", "Coastal Battery Liman-3", "Ferry Point Prychal-2", "Border Post Hranychne-Est"]}
+  ],
+  "infrastructure": {
+    "roads": "A coastal highway across lagoon dams and bridges (a long liman bridge is a chokepoint), levee roads in the delta, steppe roads; a ferry across the river to Romania.",
+    "rail": "Single-track line to the port with a lift bridge over a liman; grain wagons.",
+    "power": "Overhead lines, a substation, wind farms on the steppe and sandbars.",
+    "ports": "Danube river port with grain terminals, a small sea port, fishing harbours; Romanian port across the river.",
+    "airfields": "None on the map (AI aircraft only).",
+    "checkpoints": "Ukrainian military checkpoints on the coastal highway and port entries; river border crossings and ferry; Moldovan border post and breakaway-region checkpoint on the north edge."
+  },
+  "pois": [
+    {"type": "grain_terminal", "description": "River port grain terminal with silos, conveyors, barges at the quay, rail sidings; repeated drone-strike damage.", "contract_use": "counter-drone defence; drone debris recovery and site security (clients ukr, rou)", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "liman_bridge", "description": "Long road and rail bridge across a liman with a lift span; damaged and repaired; the only coastal road link.", "contract_use": "convoy chokepoint; counter-sabotage guard", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "delta_channel_village", "description": "Fishing village where channels are streets; boats moored at every house; reed beds all around.", "contract_use": "small-boat ops; counter-smuggling raid (clients mda, rou, ukr)", "loot_tier": "low", "intel_chance": 0.3},
+    {"type": "drone_debris_romanian_bank", "description": "Debris of a strike drone in a field on the Romanian bank; police cordon; villagers.", "contract_use": "drone debris recovery and site security (client rou)", "loot_tier": "medium", "intel_chance": 0.4},
+    {"type": "coastal_air_defence", "description": "Air-defence site on a bluff with radar, launcher trailers and mobile fire groups with gun trucks and searchlights.", "contract_use": "counter-drone site defence (client ukr)", "loot_tier": "low", "intel_chance": 0.2},
+    {"type": "beached_sea_mine", "description": "Sea mine washed onto a sandbar near a beach town; cordon and divers' boat (game hazard).", "contract_use": "escort EOD divers; secure the beach (clients ukr, tur, rou)", "loot_tier": "low", "intel_chance": 0.1},
+    {"type": "nato_base_romanian_bank", "description": "Allied base: barracks, vehicle sheds, a helipad, air-defence battery, fences.", "contract_use": "contract board and staging (clients fra, bel, ita)", "loot_tier": "low", "intel_chance": 0.05},
+    {"type": "breakaway_checkpoint", "description": "Checkpoint on the north edge road into a breakaway region with a Russian garrison post, flags, concrete blocks and a bridge.", "contract_use": "counter-smuggling patrol (client mda); observe a garrison", "loot_tier": "low", "intel_chance": 0.35},
+    {"type": "winery_cellars", "description": "Winery with long underground cellars; used by a smuggling ring as a store.", "contract_use": "counter-smuggling raid (clients mda, ukr)", "loot_tier": "medium", "intel_chance": 0.45},
+    {"type": "sandbar_resort", "description": "Beach resort on a sandbar between the sea and a liman: wooden cabins, cafes, a road on the bar.", "contract_use": "evacuation; VIP protection", "loot_tier": "low", "intel_chance": 0.1},
+    {"type": "ferry_crossing", "description": "Ferry crossing to Romania with lorry queues, customs and a pontoon landing.", "contract_use": "convoy escort; election-security VIP movement (client mda)", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "sabotage_cell_house", "description": "House in a steppe village where a sabotage cell assembles drone parts; car in the yard.", "contract_use": "counter-sabotage raid (clients ukr, mda, rou)", "loot_tier": "medium", "intel_chance": 0.55}
+  ],
+  "weather": {
+    "conditions": ["clear and hot (summer)", "sea and river fog", "strong winds and storms", "winter frost and ice", "summer thunderstorms"],
+    "visibility_notes": "Fog over the delta and lagoons is common at dawn and in autumn; reeds limit ground sight to a few metres but give no protection; flat steppe gives long views.",
+    "dust_or_snow": "Dust on steppe roads in summer; light snow some winters."
+  },
+  "civilians": {
+    "density": "medium",
+    "behaviour": "Ports and towns busy by day; air-raid alerts at night send people to shelters; fishermen out at dawn; summer beachgoers on sandbars; farm workers in vineyards. Civilians on the Romanian and Moldovan sides live normally, with occasional drone debris incidents.",
+    "vehicles": ["private cars", "minibuses (marshrutky)", "grain lorries", "tractors", "fishing boats and motor launches", "river barges", "ferries"],
+    "casualty_risk_notes": "Port towns and beach resorts are dense; delta villages are small but on the only dry ground."
+  },
+  "factions_present": [
+    {"faction_id": "ukr", "role": "defender", "strength": "high", "where": "Ukrainian bank: ports, coastal air defence, liman bridge, steppe villages, delta channels."},
+    {"faction_id": "rou", "role": "defender", "strength": "medium", "where": "Romanian bank of the delta: border posts, a port, the allied base, debris-recovery teams."},
+    {"faction_id": "mda", "role": "defender", "strength": "low", "where": "North edge: Moldovan border post and villages near the breakaway region."},
+    {"faction_id": "rus", "role": "occupier", "strength": "medium", "where": "Off-map strikes (drones, missiles) on ports; a garrison post in the breakaway region on the north edge; sabotage cells; naval drones at sea."},
+    {"faction_id": "tur", "role": "patrol", "strength": "low", "where": "Mine-countermeasures vessels offshore (Black Sea mine-clearing group with rou)."},
+    {"faction_id": "fra", "role": "patrol", "strength": "low", "where": "Allied base on the Romanian bank (French-led battlegroup type)."},
+    {"faction_id": "bel", "role": "patrol", "strength": "low", "where": "Contingent at the allied base on the Romanian bank."},
+    {"faction_id": "ita", "role": "patrol", "strength": "low", "where": "Air policing and a contingent at the allied base."},
+    {"faction_id": "grc", "role": "patrol", "strength": "low", "where": "Liaison at the allied base and a supply ship in the Romanian port (no warships in the Black Sea under the Montreux rules)."},
+    {"faction_id": "pmc_kestrel", "role": "rival_pmc", "strength": "low", "where": "Sabotage and smuggling teams operating from the breakaway region and steppe safe houses."}
+  ],
+  "frontline": "No land front on the map: the war reaches it as strikes and sabotage. Russian strike events damage ports and the grain terminal (posting debris recovery, counter-drone and repair-escort contracts); sabotage cells from the north edge target bridges and rail; sea mines close beaches and channels until cleared. Romanian and Moldovan zones flip only in alert level. In the late-game escalation scenario (proposed), naval landings or a push from the north edge create a land front at the liman bridge.",
+  "contract_hooks": [
+    "Counter-drone defence of the grain terminal (clients ukr, rou)",
+    "Drone debris recovery and site security on the Romanian bank (client rou)",
+    "Counter-smuggling raid on a winery cellar or delta village (clients mda, rou, ukr)",
+    "Counter-sabotage raid on a cell house in a steppe village (clients ukr, mda)",
+    "Escort EOD divers to a beached sea mine (clients ukr, rou)",
+    "Guard the liman bridge against sabotage (client ukr)",
+    "Election-security VIP movement through the ferry crossing (client mda)",
+    "Train and accompany a border unit on a delta patrol (clients rou, mda)"
+  ],
+  "zone_plan": {
+    "contract_zones": [
+      {"name": "River port", "area_km2": 2.5, "anchor": "grain_terminal", "notes": "urban-industrial, drone strikes"},
+      {"name": "Delta channels", "area_km2": 4, "anchor": "delta_channel_village", "notes": "boats, reeds"},
+      {"name": "North edge villages", "area_km2": 3, "anchor": "breakaway_checkpoint", "notes": "smuggling, garrison nearby"},
+      {"name": "Liman bridge", "area_km2": 2, "anchor": "liman_bridge", "notes": "chokepoint"}
+    ],
+    "hot_zones": [
+      {"name": "Steppe sabotage network (mid-late)", "area_km2": 10, "layout": "pmc_kestrel and rus sabotage HQ in a winery; 3-4 safe houses as outposts; checkpoints run by friendly forces; roaming cars and drone teams; 1 QRF van group; escalation adds naval-drone attacks on the coast"}
+    ]
+  },
+  "insertion": {"lhd": true, "fob": "LHD offshore (Ukrainian or Romanian waters, proposed) for coastal contracts; inland FOB at the allied base on the Romanian bank or a Ukrainian-side port compound. Boats and AAVs are key in the delta."},
+  "early_game_suitable": false,
+  "early_game_notes": "State-on-state strike war and sabotage (rus late, pmc_kestrel mid); mid-to-late campaign.",
+  "ambient_audio": ["frogs and birds in reeds", "boat outboards", "gulls", "air-raid sirens and air-defence fire (events)", "grain conveyors", "church bells", "wind over the steppe"],
+  "captain_confirmed": [
+    "map_size_km 22 x 20 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
+    "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
+    "materials accepted (Captain, 2026-10-10) and added to voxel_world.gd (Contractor dev, commit 1ec1417): LIMESTONE #d6caa8, PLASTER #e3dccb, THATCH #b49a5e, BRICK #9c5a3c, CORRUGATED_IRON #8b8e8c, GLASS #9fbcc4, SANDBAG #b8a378, DIRT_BERM #8a6f4e",
+    "the late-game escalation hot zone stays as a what-if, clearly marked fictional; the default state is the real 2026 situation (Captain, 2026-10-10)"
+  ],
+  "proposed": [
+    "composite layout (Ukrainian, Romanian and Moldovan sectors)",
+    "generator numbers",
+    "strike and sabotage as the frontline model",
+    "LHD in Ukrainian or Romanian waters",
+    "zone_plan and hot zone",
+    "sea mines as drifting hazards only"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Danube_Delta",
+    "https://en.wikipedia.org/wiki/Budjak",
+    "https://en.wikipedia.org/wiki/Liman_(landform)",
+    "https://en.wikipedia.org/wiki/Black_Sea_Mine_Countermeasures_Task_Group",
+    "https://en.wikipedia.org/wiki/Montreux_Convention_Regarding_the_Regime_of_the_Straits",
+    "factions/ukr.json, rou.json, mda.json, rus.json notes"
+  ]
+}

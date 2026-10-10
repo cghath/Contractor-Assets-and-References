@@ -1,0 +1,383 @@
+{
+  "id": "lva",
+  "name": "Latvia",
+  "short": "LVA",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#9E3039",
+    "#FFFFFF"
+  ],
+  "blocs": [
+    "nato",
+    "eu",
+    "jef",
+    "bucharest_nine",
+    "nb8",
+    "global_coalition_against_isis"
+  ],
+  "campaign_tier": "late",
+  "alignment_to_player": "friendly",
+  "player_client": true,
+  "relations": {
+    "player": 30,
+    "usa": 85,
+    "can": 95,
+    "gbr": 85,
+    "fra": 75,
+    "deu": 80,
+    "swe": 85,
+    "fin": 85,
+    "nor": 80,
+    "dnk": 85,
+    "nld": 80,
+    "esp": 80,
+    "ita": 80,
+    "pol": 85,
+    "est": 95,
+    "ltu": 90,
+    "ukr": 95,
+    "rou": 70,
+    "mda": 70,
+    "geo": 50,
+    "tur": 55,
+    "rus": -95,
+    "blr": -85,
+    "chn": -35,
+    "irn": -55,
+    "prk": -70,
+    "africa_corps": -60,
+    "isis": -95,
+    "isis_k": -90,
+    "al_qaeda": -95,
+    "aqap": -90,
+    "al_shabaab": -85,
+    "jnim": -85,
+    "hamas": -75,
+    "pij": -75,
+    "hezbollah": -65,
+    "houthis": -65,
+    "iraqi_militias": -55,
+    "bel": 80,
+    "grc": 80
+  },
+  "theatres": [
+    "baltic_coast",
+    "mesopotamia"
+  ],
+  "languages": [
+    "Latvian",
+    "Russian (minority)",
+    "English"
+  ],
+  "callout_language": "Latvian",
+  "doctrine": {
+    "summary": "Small professional army plus conscripts (reintroduced 2023) and the National Guard (Zemessardze); hosts the Canada-led NATO multinational brigade at Adazi. Re-equipping with ASCOD IFVs, Patria 6x6 APCs, HIMARS, Archer and IRIS-T air defence.",
+    "squad_size": 8,
+    "fireteam": "8-man squad in two teams.",
+    "tactics": [
+      "total defence: reservists and volunteer defence league ambush along forest roads",
+      "anti-armour teams with Javelin and Carl Gustaf in depth",
+      "dispersal and camouflage against drones",
+      "NATO forward-presence battlegroup integration",
+      "obstacle belts and pre-planned demolitions as map features"
+    ],
+    "ai_tuning": {
+      "aggression": 0.5,
+      "discipline": 0.8,
+      "suppression_resistance": 0.75,
+      "flanking": 0.7,
+      "grenade_use": 0.55,
+      "medical_care": 0.75,
+      "night_capability": 0.75,
+      "marksmanship": 0.7,
+      "morale": 0.8
+    }
+  },
+  "camo": [
+    {
+      "name": "LatPat / WoodLatPat (Latvian digital woodland)",
+      "palette": [
+        "#6B6E4A",
+        "#4A4E36",
+        "#8A7E5C",
+        "#2D2C24"
+      ],
+      "use": "standard"
+    },
+    {
+      "name": "Multi-LatPat",
+      "palette": [
+        "#9A8B6B",
+        "#6E6448",
+        "#4D4636",
+        "#BFB08C"
+      ],
+      "use": "multi-terrain issue"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "HK G36 (5.56x45mm)"
+    ],
+    "autorifleman": [
+      "FN Minimi Para (5.56x45mm)",
+      "FN MAG 58 (7.62x51mm)"
+    ],
+    "marksman": [
+      "HK417A2 (7.62x51mm)"
+    ],
+    "grenadier": [
+      "G36 with AG36 (40x46mm)"
+    ],
+    "at": [
+      "AT4 (84mm)",
+      "Carl Gustaf M2/M4 (84mm)",
+      "Spike (team)"
+    ],
+    "medic": [
+      "HK G36K (5.56x45mm)"
+    ],
+    "squad_leader": [
+      "HK G36 with optic (5.56x45mm)"
+    ],
+    "sniper": [
+      "Accuracy International AXMC (.338 Lapua Magnum)",
+      "PGM Hecate II / Barrett M107A1 (12.7x99mm)"
+    ],
+    "sidearm": [
+      "Glock 17 (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "AT4 [in_game]",
+    "Carl Gustaf / MAAWS (84mm) [in_game]",
+    "Spike ATGM [not_in_game]",
+    "Piorun / RBS 70 MANPADS [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "ceramic",
+    "notes": "Medium tier for regulars; National Guard often light."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "patria_6x6",
+      "role": "apc",
+      "prevalence": "signature",
+      "notes": "About 100 in service, ~256 on order (Latvia is the CAVS lead customer)."
+    },
+    {
+      "vehicle_id": "cvrt",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Ex-British Scimitar/Spartan/Sultan (~180); some donated to Ukraine."
+    },
+    {
+      "vehicle_id": "m109",
+      "role": "artillery",
+      "prevalence": "common",
+      "notes": "M109A5O (47, ex-Austrian); Archer on order."
+    },
+    {
+      "vehicle_id": "humvee",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Mixed HMMWV fleet."
+    },
+    {
+      "vehicle_id": "bv206",
+      "role": "other",
+      "prevalence": "common",
+      "notes": "Over-snow / amphibious tracked carrier (100+)."
+    },
+    {
+      "vehicle_id": "uh60",
+      "role": "transport_heli",
+      "prevalence": "uncommon",
+      "notes": "4 UH-60M (from 2022); existing voxel model."
+    },
+    {
+      "vehicle_id": "pizarro",
+      "role": "ifv",
+      "prevalence": "rare",
+      "notes": "ASCOD 2 IFV, 84 on order, deliveries 2026-2027."
+    },
+    {
+      "vehicle_id": "himars",
+      "role": "mlrs",
+      "prevalence": "rare",
+      "notes": "6 on order."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "lva_game_squad",
+      "name": "Latvian infantry squad (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "lva_patria_squad",
+      "name": "Patria-mounted squad",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "patria_6x6"
+    },
+    {
+      "id": "lva_zemessardze_team",
+      "name": "National Guard team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    }
+  ],
+  "support_assets": [
+    "M109 artillery",
+    "Spike ATGM teams",
+    "Canadian-led NATO brigade (late campaign)",
+    "UH-60M lift"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 20,
+        "unlocks": [
+          "5.56x45mm ammunition",
+          "LatPat uniforms",
+          "light helmet and vest"
+        ]
+      },
+      {
+        "rep": 40,
+        "unlocks": [
+          "HK G36 and HK417",
+          "optics",
+          "medium armour",
+          "AT4"
+        ]
+      },
+      {
+        "rep": 60,
+        "unlocks": [
+          "Carl Gustaf",
+          "AXMC sniper rifle",
+          "Humvee purchase"
+        ]
+      },
+      {
+        "rep": 80,
+        "unlocks": [
+          "Patria 6x6 hire for one contract",
+          "UH-60M lift on contracts"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "counter_sabotage_infrastructure_guard",
+      "border_security_patrol",
+      "convoy_escort",
+      "recover_lost_equipment_or_sensitive_kit",
+      "train_and_accompany_partner_forces"
+    ],
+    "as_target": [
+      "only if the player works for this nation's enemies: sabotage_logistics_depot"
+    ]
+  },
+  "notes": "Real-world: Latvia operates UH-60M and HMMWV; it has no Abrams, Bradley, AH-1Z or MRAP fleet. Latvia orders Patria 6x6 for Ukraine as well. Late-campaign theatre is baltic_coast; early hook is NATO Mission Iraq support.",
+  "proposed": [
+    "campaign_tier",
+    "alignment_to_player",
+    "relations.player",
+    "doctrine.ai_tuning",
+    "unit_templates",
+    "player_trade.rep_tiers",
+    "contract_types",
+    "body_armor (game tier mapping)",
+    "vehicles[].prevalence (game weighting)",
+    "camo[].palette (approximate hex values)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Latvian_Land_Forces",
+    "https://en.wikipedia.org/wiki/Latvian_Land_Forces",
+    "https://ac.nato.int/archive/2022/latvian-air-force-receives-new-black-hawk-helicopters",
+    "https://en.wikipedia.org/wiki/Combat_Vehicle_Reconnaissance_(Tracked)"
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "id": "himars",
+  "name": "M142 HIMARS",
+  "aliases": [
+    "High Mobility Artillery Rocket System"
+  ],
+  "origin": "United States",
+  "type": "mlrs",
+  "operators": [
+    "usa",
+    "aus",
+    "can",
+    "est",
+    "lva",
+    "ltu",
+    "pol",
+    "rou",
+    "ukr",
+    "twn",
+    "jor",
+    "are",
+    "ita",
+    "swe",
+    "qat"
+  ],
+  "crew": 3,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 6.94,
+    "width": 2.44,
+    "height": 3.18
+  },
+  "weight_t": 16.25,
+  "armament": [
+    "One pod: 6 GMLRS rockets, 2 PrSM or 1 ATACMS"
+  ],
+  "protection": "Armoured cab only. Unarmoured or lightly armoured; game rule still treats the vehicle body as immune to small-calibre, but 7.62x54R and up penetrate; occupants and tyres exposed.",
+  "visual_notes": [
+    "FMTV 6x6 truck chassis with flat armoured cab",
+    "Single boxy launcher pod on rear turntable",
+    "Elevating pod for firing"
+  ],
+  "colour_schemes": [
+    {
+      "name": "US desert tan (CARC 686A)",
+      "palette": [
+        "#C2B28A",
+        "#A89670",
+        "#4A4436"
+      ]
+    },
+    {
+      "name": "US forest green (CARC 383)",
+      "palette": [
+        "#4B5320",
+        "#3A4119",
+        "#26281A"
+      ]
+    }
+  ],
+  "variants": [
+    "M142"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/M142_HIMARS",
+    "https://commons.wikimedia.org/wiki/Category:M142 HIMARS"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/M142_HIMARS",
+    "https://www.canada.ca/en/army/news-publications/2026/08/long-range-strike-capability.html"
+  ]
+}

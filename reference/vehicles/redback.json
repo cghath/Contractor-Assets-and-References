@@ -1,0 +1,55 @@
+{
+  "id": "redback",
+  "name": "Hanwha AS21 Redback",
+  "aliases": [
+    "AS21",
+    "Redback IFV"
+  ],
+  "origin": "South Korea / Australia",
+  "type": "ifv",
+  "operators": [
+    "aus"
+  ],
+  "crew": 3,
+  "passengers": 8,
+  "dimensions_m": {
+    "length": 7.5,
+    "width": 3.6,
+    "height": 3.6
+  },
+  "weight_t": 42.0,
+  "armament": [
+    "30 mm Mk44S Bushmaster II in EOS T-2000 turret",
+    "2x Spike LR2 ATGM",
+    "7.62 mm MAG58 coaxial"
+  ],
+  "protection": "Modular armour, APS provision, rubber tracks. Dimensions approximate. Game rule: immune to small-calibre; 7.62x54R and 12.7/14.5 mm only damage optics, tracks and exposed crew; penetrating the hull needs launchers (RPG-7 PG-7V, AT4, MAAWS, SMAW, NLAW, Javelin) or cannon.",
+  "visual_notes": [
+    "Large tracked IFV derived from K21",
+    "6 road wheels per side with continuous composite rubber tracks",
+    "Big angular T-2000 turret with twin Spike launcher box",
+    "Rear ramp, wire-mesh stowage"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Australian disruptive (green/brown/black)",
+      "palette": [
+        "#4F5338",
+        "#6B5A3E",
+        "#262622"
+      ]
+    }
+  ],
+  "variants": [
+    "IFV"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/K21"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/K21",
+    "https://www.army-technology.com/news/australian-government-signs-deal-for-redback-vehicles/"
+  ]
+}

@@ -1,0 +1,469 @@
+{
+  "id": "houthis",
+  "name": "Houthis (Ansar Allah)",
+  "short": "Houthis",
+  "kind": "non_state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#2E7D32",
+    "#C62828",
+    "#F2F2EE"
+  ],
+  "blocs": [
+    "axis_of_resistance"
+  ],
+  "campaign_tier": "mid",
+  "alignment_to_player": "hostile",
+  "player_client": false,
+  "relations": {
+    "player": -100,
+    "isr": -100,
+    "usa": -95,
+    "gbr": -85,
+    "can": -80,
+    "aus": -75,
+    "fra": -70,
+    "ita": -70,
+    "deu": -70,
+    "ind": -45,
+    "jpn": -35,
+    "kor": -35,
+    "sau": -85,
+    "are": -85,
+    "egy": -45,
+    "jor": -35,
+    "qat": -35,
+    "tur": -10,
+    "syr": -30,
+    "irq": 0,
+    "rus": 15,
+    "irn": 85,
+    "hezbollah": 80,
+    "iraqi_militias": 75,
+    "hamas": 65,
+    "pij": 65,
+    "al_shabaab": 10,
+    "aqap": -60,
+    "al_qaeda": -60,
+    "isis": -90,
+    "som": -30,
+    "ukr": -50,
+    "nzl": -60,
+    "est": -65,
+    "ltu": -65,
+    "lva": -65,
+    "pol": -65,
+    "rou": -65,
+    "bel": -70,
+    "dnk": -70,
+    "esp": -70,
+    "fin": -70,
+    "nld": -70,
+    "nor": -70,
+    "swe": -70,
+    "grc": -75,
+    "pmc_halcyon": -80,
+    "pmc_black_sable": -90
+  },
+  "theatres": [
+    "yemen_red_sea"
+  ],
+  "languages": [
+    "Arabic (Yemeni dialects)"
+  ],
+  "callout_language": "Yemeni Arabic (northern highland dialects); tribal and religious honorifics in radio traffic.",
+  "doctrine": {
+    "summary": "Ansar Allah, known as the Houthis after its founding family, is a Zaydi Shia movement from Saada in northern Yemen led by Abdul-Malik al-Houthi. It took Sanaa in September 2014, fought a Saudi- and UAE-led coalition from 2015 (UN-brokered truce from April 2022) and controls most of northern Yemen's population. Its forces mix tribal fighters, a large body of former Yemeni Army units and equipment taken over in 2014-2015 (T-55, T-62, T-72, BMP and BTR vehicles, artillery), mass-produced technicals, and an Iranian-supported missile, drone and naval-attack capability. From November 2023 it attacked Red Sea shipping and Israel, drawing US, UK and Israeli strikes. In 2026 it joined Iran's war, imposed a naval blockade on Saudi Arabia (July), and in September 2026 took Mocha, the rest of the Red Sea coast and Perim Island at Bab al-Mandab, with the Saudi-backed government reportedly recovering some ground. In the game the Houthis are the best-equipped early-to-mid enemy in yemen_red_sea: mountain and coastal infantry with technicals, old army armour, drones and explosive boats as hazards.",
+    "squad_size": 8,
+    "fireteam": "Light-infantry groups of 6-12 with PKM and RPG; ex-army units keep Soviet-style sections and vehicle crews. In game: 8 in battle-buddy pairs.",
+    "tactics": [
+      "Mountain ambushes from terraced slopes and wadis on road columns",
+      "Technical shoot-and-scoot with ZU-23 and DShK pickups, using the ZU-23 against ground targets",
+      "Snipers and machine guns in stone villages and on ridgelines",
+      "Drone spotting and one-way attack drones as AI hazard abilities",
+      "Explosive and armed fast boats as coastal hazards; anti-ship missile launches as off-map events",
+      "Roadside IED and landmine fields as telegraphed map hazards (Yemen is heavily mined)",
+      "Old army tanks dug in as static fire points"
+    ],
+    "ai_tuning": {
+      "aggression": 0.65,
+      "discipline": 0.6,
+      "suppression_resistance": 0.7,
+      "flanking": 0.6,
+      "grenade_use": 0.5,
+      "medical_care": 0.3,
+      "night_capability": 0.4,
+      "marksmanship": 0.55,
+      "morale": 0.75
+    }
+  },
+  "camo": [
+    {
+      "name": "Yemeni woodland",
+      "palette": [
+        "#5B6B3A",
+        "#3E4A2A",
+        "#7E6E48",
+        "#2A2A1E"
+      ],
+      "use": "Ex-army and regular Houthi fighters"
+    },
+    {
+      "name": "Desert ex-army pattern",
+      "palette": [
+        "#C2A878",
+        "#9A7F54",
+        "#6E5A3A",
+        "#DCCBA6"
+      ],
+      "use": "Coastal and Marib front units"
+    },
+    {
+      "name": "Tribal civilian dress (thobe, jacket, shawl)",
+      "palette": [
+        "#E3DCCB",
+        "#6B5B45",
+        "#2F2F2F",
+        "#8A2E2A"
+      ],
+      "use": "Tribal fighters; jacket over a thobe with a shawl and a janbiya belt"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "AKM / Type 56 (7.62x39mm)",
+      "G3-pattern rifles from Yemeni army stocks (7.62x51mm)"
+    ],
+    "autorifleman": [
+      "PKM (7.62x54R)",
+      "RPK (7.62x39mm)"
+    ],
+    "marksman": [
+      "SVD (7.62x54R)"
+    ],
+    "grenadier": [
+      "AKM with GP-25 (40 mm)"
+    ],
+    "at": [
+      "RPG-7 with PG-7V / OG-7V",
+      "Kornet / Dehlavieh ATGM teams",
+      "Toophan ATGM teams"
+    ],
+    "medic": [
+      "AKM (7.62x39mm)"
+    ],
+    "squad_leader": [
+      "AKMS / Type 56 (7.62x39mm)"
+    ],
+    "sniper": [
+      "SVD (7.62x54R)",
+      "Iranian AM-50 Sayyad (12.7mm)"
+    ],
+    "sidearm": [
+      "Makarov-pattern pistols (9x18mm)"
+    ]
+  },
+  "launchers": [
+    "RPG-7 (PG-7V, OG-7V) [in_game]",
+    "Kornet and Dehlavieh (Iranian Kornet copy) ATGMs [not_in_game: AI threat only]",
+    "Toophan / Konkurs-type ATGMs [not_in_game: AI threat only]",
+    "SPG-9 recoilless gun on technicals [not_in_game: vehicle weapon]"
+  ],
+  "body_armor": {
+    "helmet": "none",
+    "vest": "light",
+    "plates": "none",
+    "notes": "Mostly chest rigs; ex-army units sometimes wear old steel helmets and soft vests. Game: none-to-light (proposed)."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "technical_zu23",
+      "role": "technical",
+      "prevalence": "signature",
+      "notes": "ZU-23-2 on pickups, used against ground and air targets; a common Houthi image."
+    },
+    {
+      "vehicle_id": "technical_dshk",
+      "role": "technical",
+      "prevalence": "signature",
+      "notes": "DShK pickups in large numbers."
+    },
+    {
+      "vehicle_id": "toyota_hilux",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": "Hilux pickups for moving tribal fighters."
+    },
+    {
+      "vehicle_id": "toyota_land_cruiser",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Land Cruiser 70-series pickups and SUVs, often with a mounted gun."
+    },
+    {
+      "vehicle_id": "shahed136",
+      "role": "uav",
+      "prevalence": "common",
+      "notes": "The Houthi 'Waid' is a Shahed-136-type one-way attack drone; the Samad series is a longer-range Houthi type. Off-map hazard."
+    },
+    {
+      "vehicle_id": "fpv_drone",
+      "role": "uav",
+      "prevalence": "common",
+      "notes": "Quadcopters and small drones for spotting and munition drops on front lines. AI hazard ability."
+    },
+    {
+      "vehicle_id": "fast_boat",
+      "role": "boat",
+      "prevalence": "common",
+      "notes": "Fibreglass skiffs as armed or explosive boats used against shipping; game hazard only."
+    },
+    {
+      "vehicle_id": "t55",
+      "role": "mbt",
+      "prevalence": "uncommon",
+      "notes": "Ex-Yemeni Army T-55s (and T-62s) used as dug-in fire points and support tanks."
+    },
+    {
+      "vehicle_id": "bmp2",
+      "role": "ifv",
+      "prevalence": "uncommon",
+      "notes": "Ex-Yemeni Army BMP-2s (also BMP-1s and BTR-60/80s)."
+    },
+    {
+      "vehicle_id": "t72b3",
+      "role": "mbt",
+      "prevalence": "rare",
+      "notes": "Ex-Yemeni Army T-72 (T-72M-type, catalogue family file); few remain."
+    },
+    {
+      "vehicle_id": "technical_spg9",
+      "role": "technical",
+      "prevalence": "uncommon",
+      "notes": "SPG-9 recoilless guns on pickups for fire support."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "hou_mountain_section",
+      "name": "Mountain infantry group (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "hou_technical_crew",
+      "name": "ZU-23 technical crew",
+      "composition": [
+        {
+          "role": "driver",
+          "count": 1
+        },
+        {
+          "role": "gunner",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "technical_zu23"
+    },
+    {
+      "id": "hou_dshk_crew",
+      "name": "DShK technical crew",
+      "composition": [
+        {
+          "role": "driver",
+          "count": 1
+        },
+        {
+          "role": "gunner",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "technical_dshk"
+    },
+    {
+      "id": "hou_wadi_ambush",
+      "name": "Wadi ambush team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "hou_atgm_team",
+      "name": "ATGM team",
+      "composition": [
+        {
+          "role": "at",
+          "count": 2
+        },
+        {
+          "role": "rifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "toyota_land_cruiser"
+    },
+    {
+      "id": "hou_drone_team",
+      "name": "Drone team (AI hazard)",
+      "composition": [
+        {
+          "role": "drone_operator",
+          "count": 2
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "fpv_drone"
+    },
+    {
+      "id": "hou_boat_team",
+      "name": "Fast boat team (coastal hazard)",
+      "composition": [
+        {
+          "role": "driver",
+          "count": 1
+        },
+        {
+          "role": "gunner",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "fast_boat",
+      "notes": "Armed skiff; the explosive-boat variant is a telegraphed hazard the player must stop at range."
+    },
+    {
+      "id": "hou_armour_point",
+      "name": "Dug-in tank fire point",
+      "composition": [
+        {
+          "role": "tank_crew",
+          "count": 4
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        }
+      ],
+      "vehicle_id": "t55"
+    },
+    {
+      "id": "hou_checkpoint",
+      "name": "Road checkpoint",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "toyota_hilux"
+    }
+  ],
+  "support_assets": [
+    "One-way attack drone hazard (Waid / Samad types)",
+    "Quadcopter spotting and munition-drop hazard",
+    "Anti-ship missile or drone launch (off-map event, coastal maps)",
+    "Explosive-boat hazard (coastal maps)",
+    "Mortars and old army artillery (D-30, M-46) as off-map fire",
+    "Landmine and IED fields as map hazards"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [],
+    "as_target": [
+      "shipping_escort_vs_boat_attacks",
+      "drone_launch_site_raid",
+      "missile_launcher_hunt",
+      "convoy_ambush_defence",
+      "hvt_capture_or_kill",
+      "weapons_smuggling_interdiction",
+      "hostage_or_detained_crew_rescue",
+      "ied_and_mine_route_clearance"
+    ]
+  },
+  "notes": "The Houthis were designated a Foreign Terrorist Organization by the US in 2025 (re-designation after a 2021 revocation); they are the de facto authority in Sanaa and most of northern Yemen, opposed by the internationally recognised Presidential Leadership Council government and its allies (Saudi-backed forces, the UAE-linked Southern Transitional Council, Tareq Saleh's National Resistance on the west coast). Iran supplies missile, drone and weapons components; seizures of Iranian shipments are well documented. From November 2023 they attacked merchant ships (seizing the Galaxy Leader and sinking several ships) and fired at Israel; a US-Houthi truce on shipping (May 2025) did not cover Israel. Status 2026: joined Iran's war from March 2026, naval blockade of Saudi Arabia from July, attacks on Saudi-linked ships in August, and in September 2026 captured Mocha, the remaining Red Sea coast and Perim Island at Bab al-Mandab, with Saudi airstrikes in response. AQAP and the Houthis are enemies, though a UN panel reported limited tactical coordination in 2024; al-Shabaab contacts (arms) were also reported by UN experts; both values are low-confidence. Game framing: mid-tier enemy in yemen_red_sea (Captain's brief allows mid), the theatre's main conventional-style opponent. campaign_tier mid and the single-source values houthis <-> aqap -60 and houthis <-> al_shabaab +10 are Captain-confirmed (2026-10-10).",
+  "proposed": [
+    "relations.player",
+    "doctrine.ai_tuning (all values)",
+    "doctrine.squad_size (game cell size)",
+    "unit_templates (game compositions)",
+    "support_assets (game events and hazards)",
+    "contract_types.as_target",
+    "vehicles[].prevalence (game weighting)",
+    "body_armor (game tier mapping)",
+    "camo (approximate palettes)",
+    "player_trade (hostile-only: not sellable)",
+    "fast_boat explosive variant as a telegraphed hazard",
+    "relations values (factual direction, game magnitudes)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Houthis",
+    "https://en.wikipedia.org/wiki/Red_Sea_crisis",
+    "https://www.fdd.org/analysis/2026/09/14/houthis-take-yemens-red-sea-coast-and-key-bab-al-mandeb-islands/",
+    "https://english.ahram.org.eg/News/576459.aspx",
+    "https://english.ahram.org.eg/News/576405.aspx",
+    "https://tribune.com.pk/story/2624515/houthis-attack-saudi-vessels",
+    "https://www.aljazeera.com/video/newsfeed/2026/9/7/yemen-fighting-escalates-as-forces-battle-for-bab-al-mandeb-strait"
+  ]
+}

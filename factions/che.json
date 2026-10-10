@@ -1,0 +1,364 @@
+{
+  "id": "che",
+  "name": "Swiss Armed Forces (Schweizer Armee)",
+  "short": "Switzerland",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#DA291C",
+    "#FFFFFF"
+  ],
+  "blocs": [
+    "nato_partnership_for_peace"
+  ],
+  "traits": [
+    "neutral",
+    "efta",
+    "schengen"
+  ],
+  "campaign_tier": "mid",
+  "alignment_to_player": "neutral",
+  "player_client": true,
+  "relations": {
+    "player": 15,
+    "aut": 60,
+    "deu": 55,
+    "fra": 50,
+    "ita": 50,
+    "irl": 40,
+    "gbr": 40,
+    "usa": 30,
+    "ukr": 40,
+    "nld": 40,
+    "swe": 40,
+    "rus": -35,
+    "blr": -25,
+    "chn": 10,
+    "irn": 0,
+    "isr": 10,
+    "afg_taliban": -30,
+    "isis": -90,
+    "al_qaeda": -85,
+    "cartel_pacifico": -40,
+    "cartel_jalisco_nueva": -40,
+    "pmc_halcyon": 0,
+    "pmc_kestrel": -35,
+    "pmc_black_sable": -20
+  },
+  "theatres": [
+    "alpine_europe"
+  ],
+  "languages": [
+    "German (Swiss German)",
+    "French",
+    "Italian",
+    "Romansh"
+  ],
+  "callout_language": "Swiss German",
+  "doctrine": {
+    "summary": "A militia army under armed neutrality: a small professional cadre plus conscripts and reservists who keep their personal rifle at home and mobilise fast to defend the Alpine terrain. After decades of cuts the army is rebuilding defensive capability (the 2023 'Strengthening defence capability' plan): new Piranha IV variants (Mörser 16 mortar, engineer vehicles), the AGM wheeled howitzer on Piranha IV ordered in June 2026 to replace the M109 from 2031, F-35A fighters and Patriot air defence. Combat units are mechanised brigades with Pz 87 Leopard 2 tanks and Spz 2000 (CV9030) IFVs, and infantry battalions in Piranha APCs and Eagle scout cars. Switzerland is not in NATO or the EU but cooperates through the Partnership for Peace and sends peacekeepers (Swisscoy in Kosovo, UN observers). Its arms-export law was eased by parliament in December 2025; a referendum on the change is scheduled for November 2026.",
+    "squad_size": 8,
+    "fireteam": "Gruppe of 8-10 in two fireteams; battle-buddy pairs, Piranha or Eagle mounted.",
+    "tactics": [
+      "Defence in depth of valleys, passes, tunnels and bridges; prepared positions and demolitions",
+      "Mechanised counter-attacks with Pz 87 and Spz 2000 on the valley floors",
+      "Mountain infantry and special forces (AAD 10) in rugged terrain",
+      "Protection of critical infrastructure and conferences (security support to civil authorities)",
+      "Peacekeeping posture abroad: patrols, observation posts, no offensive operations"
+    ],
+    "ai_tuning": {
+      "aggression": 0.35,
+      "discipline": 0.85,
+      "suppression_resistance": 0.6,
+      "flanking": 0.55,
+      "grenade_use": 0.5,
+      "medical_care": 0.8,
+      "night_capability": 0.65,
+      "marksmanship": 0.75,
+      "morale": 0.65
+    }
+  },
+  "camo": [
+    {
+      "name": "TAZ 90 (Tarnanzug 90)",
+      "palette": [
+        "#6D7552",
+        "#3F4A2E",
+        "#6B4E32",
+        "#1F1F1A"
+      ],
+      "use": "Standard four-colour woodland-alpine uniform"
+    },
+    {
+      "name": "Winter white overwhites",
+      "palette": [
+        "#F2F2EE",
+        "#C9CCC8"
+      ],
+      "use": "Alpine winter and high-altitude units"
+    },
+    {
+      "name": "Vehicle olive with disruptive green/black",
+      "palette": [
+        "#4F5636",
+        "#2E3324",
+        "#1E1E1A"
+      ],
+      "use": "Piranha, Eagle, Leopard and CV90"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "Stgw 90 / SIG SG 550 (5.56x45mm)"
+    ],
+    "autorifleman": [
+      "LMg 05 / FN Minimi (5.56x45mm)",
+      "MG 51 (7.62x51mm, vehicles and support)"
+    ],
+    "marksman": [
+      "Stgw 90 with magnified optic (5.56x45mm)"
+    ],
+    "grenadier": [
+      "Stgw 90 with GL 40 / Gw 97 launcher (40mm)"
+    ],
+    "at": [
+      "Panzerfaust 3 [not_in_game]",
+      "NLAW [in_game]"
+    ],
+    "medic": [
+      "Stgw 90 (5.56x45mm)"
+    ],
+    "squad_leader": [
+      "Stgw 90 (5.56x45mm)"
+    ],
+    "sniper": [
+      "PG 04 / Sako TRG-42 (.338 Lapua Magnum)"
+    ],
+    "sidearm": [
+      "Pist 75 / SIG P220 (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "NLAW [in_game] (reported procurement; verify)",
+    "Panzerfaust 3 [not_in_game]",
+    "Spike / BGM-71 TOW on vehicles [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "ceramic",
+    "notes": "Modern ballistic helmets and plate carriers for deployed and active units (medium); reservists on guard duty may wear soft vests only (light)."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "piranha",
+      "role": "apc",
+      "prevalence": "signature",
+      "notes": "Mowag Piranha family (Swiss-built): Radschützenpanzer 93 (IIIC 8x8) for infantry, Piranha IV for Mörser 16 mortars and engineer vehicles, and the AGM howitzer carrier from 2031."
+    },
+    {
+      "vehicle_id": "cv90",
+      "role": "ifv",
+      "prevalence": "common",
+      "notes": "Spz 2000 (CV9030CH), mechanised infantry."
+    },
+    {
+      "vehicle_id": "leopard2a6",
+      "role": "mbt",
+      "prevalence": "common",
+      "notes": "Pz 87 WE (Leopard 2A4 upgraded to a 2A6-like standard in the 2000s)."
+    },
+    {
+      "vehicle_id": "eagle",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Mowag Eagle I-IV scout and liaison cars (Aufkl Fz 93/97/11)."
+    },
+    {
+      "vehicle_id": "m109",
+      "role": "artillery",
+      "prevalence": "uncommon",
+      "notes": "Pz Hb 79/88/95 KAWEST; being replaced by AGM on Piranha IV from 2031."
+    },
+    {
+      "vehicle_id": "g_wagen",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Puch/Mercedes G-Class utility vehicles."
+    },
+    {
+      "vehicle_id": "pinzgauer",
+      "role": "truck",
+      "prevalence": "uncommon",
+      "notes": "Legacy Swiss-made Pinzgauer utility trucks, alongside Duro trucks."
+    },
+    {
+      "vehicle_id": "sa330",
+      "role": "transport_heli",
+      "prevalence": "uncommon",
+      "notes": "AS332 Super Puma / AS532 Cougar of the Swiss Air Force (Puma family)."
+    },
+    {
+      "vehicle_id": "hermes450",
+      "role": "uav",
+      "prevalence": "rare",
+      "notes": "ADS 15 (Hermes 900 HFE) reconnaissance drone, delayed programme."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "che_infantry_gruppe",
+      "name": "Infantry group (Piranha)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "piranha"
+    },
+    {
+      "id": "che_mech_section",
+      "name": "Mechanised section (Spz 2000)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "cv90"
+    },
+    {
+      "id": "che_recon_patrol",
+      "name": "Reconnaissance patrol (Eagle)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "eagle"
+    },
+    {
+      "id": "che_guard_post",
+      "name": "Infrastructure guard post (militia)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "g_wagen"
+    }
+  ],
+  "support_assets": [
+    "Mörser 16 (120 mm on Piranha IV) and M109 artillery",
+    "Super Puma / Cougar air transport and medevac",
+    "ADS 15 reconnaissance drones (limited)",
+    "Fortified alpine positions, demolition-prepared bridges and tunnels as map features"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 20,
+        "unlocks": [
+          "Swiss-made commercial gear: optics, radios, plate carriers, medical kits",
+          "SIG-pattern 5.56 rifles and 9 mm pistols (civilian-legal export versions)"
+        ]
+      },
+      {
+        "rep": 40,
+        "unlocks": [
+          "Ammunition (5.56, 7.62, 9 mm) and 40 mm grenades",
+          "Precision rifles (.338)"
+        ]
+      },
+      {
+        "rep": 60,
+        "unlocks": [
+          "Eagle protected vehicle",
+          "Used Piranha APC (subject to export licence, game-level)"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "Escort ICRC / UN / NGO convoys whose staff are Swiss nationals",
+      "Evacuate Swiss nationals from a collapsing theatre",
+      "Recover stolen or diverted Swiss-made arms (re-export violation investigation)",
+      "Protect a diplomatic conference or protecting-power mission",
+      "Secure a mountain pass or tunnel during a crisis (alpine_europe)"
+    ],
+    "as_target": []
+  },
+  "notes": "Neutral state; never a target faction. In game it is mainly a staging area (alpine_europe), a source of neutral contracts (humanitarian convoys, evacuations, diplomatic security) and an arms market for the player at rep 20/40/60 (Captain-confirmed (2026-10-10)). Situation as of October 2026: neutrality is under debate. Parliament eased the War Material Act in December 2025 (automatic re-export permission for 25 mostly European partner states, with a Federal Council veto), opponents forced a referendum scheduled for November 2026, and Switzerland suspended some arms exports to the USA during the 2026 US-Israel war with Iran. Switzerland applies EU sanctions on Russia, which lists it as an unfriendly state (rus -> che = -40). Switzerland is the protecting power for US interests in Iran.",
+  "proposed": [
+    "campaign_tier",
+    "relations.player",
+    "doctrine.ai_tuning",
+    "contract_types.as_client",
+    "unit_templates",
+    "vehicles[].prevalence (game weighting)",
+    "body_armor (game tier mapping)",
+    "traits (neutral is a game tag)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Swiss_Armed_Forces",
+    "https://en.wikipedia.org/wiki/Mowag_Piranha_IV",
+    "https://defensemirror.com/news/41601/Swiss_Army_Procures_New_Artillery_System_from_KNDS",
+    "https://www.eurointegration.com.ua/eng/news/2026/01/30/7230158/",
+    "https://news.bloomberglaw.com/international-trade/swiss-to-vote-on-easing-weapon-export-rules-in-november",
+    "https://militarnyi.com/en/news/switzerland-suspends-exports-usa-war-iran/",
+    "https://en.wikipedia.org/wiki/SIG_SG_550"
+  ]
+}

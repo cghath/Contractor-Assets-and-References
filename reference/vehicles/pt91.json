@@ -1,0 +1,70 @@
+{
+  "id": "pt91",
+  "name": "PT-91 Twardy",
+  "aliases": [
+    "PT-91MA",
+    "PT-91MA1",
+    "PT-91M Pendekar"
+  ],
+  "origin": "Poland (Bumar-\u0141ab\u0119dy, T-72M1 derivative)",
+  "type": "mbt",
+  "operators": [
+    "pol",
+    "ukr"
+  ],
+  "crew": 3,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 9.67,
+    "width": 3.59,
+    "height": 2.19
+  },
+  "weight_t": 45.9,
+  "armament": [
+    "125 mm 2A46 smoothbore with autoloader",
+    "7.62 mm PKT coaxial",
+    "12.7 mm NSVT on cupola",
+    "24 smoke/grenade dischargers"
+  ],
+  "protection": "T-72M1 armour plus ERAWA-1/2 ERA (394 tiles) and steel side screens. Game: immune to all small-calibre rounds; 7.62x54R and 12.7/14.5 mm can only damage optics, external stowage, fuel drums and tracks (mobility kill on repeated hits); PG-7V/AT4/MAAWS/SMAW penetrate side, rear and turret roof; Javelin top-attack penetrates; frontal arc resists unguided launchers.",
+  "visual_notes": [
+    "T-72 hull and turret (6 large road wheels, 3 return rollers) - hull 6.95 m, 9.67 m gun forward",
+    "Turret front and roof tiled almost gaplessly with flat rectangular ERAWA blocks in a neat chequer pattern",
+    "Steel side skirts (not rubber) carrying ERA blocks along the upper run",
+    "Two banks of 12 grenade dischargers on the turret sides",
+    "Polish three-tone or olive; Ukrainian PT-91s carry Ukrainian ID marks"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Polish three-tone (green/brown/black)",
+      "palette": [
+        "#4D5B37",
+        "#5E4B33",
+        "#1E1E1A"
+      ]
+    },
+    {
+      "name": "Polish olive",
+      "palette": [
+        "#4F5435",
+        "#3B402A",
+        "#24261C"
+      ]
+    }
+  ],
+  "variants": [
+    "PT-91",
+    "PT-91MA",
+    "PT-91MA1 (rebuilt T-72M1 hulls)",
+    "PT-91M Pendekar (Malaysia)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/PT-91_Twardy",
+    "https://commons.wikimedia.org/wiki/Category:PT-91_Twardy"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/PT-91_Twardy"
+  ]
+}

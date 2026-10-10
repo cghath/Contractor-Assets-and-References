@@ -1,0 +1,59 @@
+{
+  "id": "archer",
+  "name": "Archer",
+  "aliases": [
+    "FH77BW L52",
+    "Artillerisystem 08"
+  ],
+  "origin": "Sweden",
+  "type": "artillery",
+  "operators": [
+    "swe",
+    "gbr",
+    "ukr"
+  ],
+  "crew": 4,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 14.1,
+    "width": 3.0,
+    "height": 3.3
+  },
+  "weight_t": 33.5,
+  "armament": [
+    "155 mm L/52 automatic howitzer",
+    "RWS 12.7 mm"
+  ],
+  "protection": "Armoured cab. Game: light armour on cab/turret only; immune to small-calibre rounds, 7.62x54R and larger disable it; launchers destroy it.",
+  "visual_notes": [
+    "Volvo A30D 6x6 articulated dump-truck chassis: armoured cab on front unit, gun on rear unit",
+    "155 mm barrel travels lying forward over the cab and is covered/stowed in a cradle",
+    "Automatic magazine in the rear body; roof RWS on the cab",
+    "Large rear stabiliser legs lowered when firing",
+    "Articulated 6x6 hauler with an armoured cab and a covered 155 mm gun on the rear unit"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Swedish splinter",
+      "palette": [
+        "#4A5838",
+        "#7D8C5E",
+        "#1F2419",
+        "#8C7A57"
+      ]
+    }
+  ],
+  "variants": [
+    "Archer 6x6",
+    "Archer 8x8 (on order)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Archer_Artillery_System"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Archer_Artillery_System",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Swedish_Army"
+  ]
+}

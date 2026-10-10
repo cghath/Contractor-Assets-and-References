@@ -1,0 +1,382 @@
+{
+  "id": "dnk",
+  "name": "Denmark",
+  "short": "DNK",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#C8102E",
+    "#FFFFFF"
+  ],
+  "blocs": [
+    "nato",
+    "eu",
+    "jef",
+    "nordefco",
+    "global_coalition_against_isis",
+    "nb8"
+  ],
+  "campaign_tier": "mid",
+  "alignment_to_player": "friendly",
+  "player_client": true,
+  "relations": {
+    "player": 25,
+    "usa": 55,
+    "gbr": 85,
+    "can": 80,
+    "aus": 70,
+    "ukr": 90,
+    "pol": 75,
+    "est": 80,
+    "lva": 80,
+    "ltu": 80,
+    "rou": 70,
+    "jpn": 60,
+    "kor": 55,
+    "isr": 20,
+    "tur": 40,
+    "sau": 30,
+    "are": 45,
+    "qat": 35,
+    "egy": 35,
+    "jor": 55,
+    "irq": 35,
+    "krg_peshmerga": 55,
+    "sdf": 30,
+    "syr": 5,
+    "pse_pa": 35,
+    "rus": -85,
+    "blr": -65,
+    "irn": -55,
+    "prk": -60,
+    "chn": -20,
+    "africa_corps": -60,
+    "sahel_aes": -30,
+    "afg_taliban": -60,
+    "isis": -100,
+    "isis_k": -95,
+    "al_qaeda": -100,
+    "aqap": -90,
+    "al_shabaab": -90,
+    "jnim": -90,
+    "hamas": -85,
+    "pij": -85,
+    "hezbollah": -65,
+    "houthis": -70,
+    "iraqi_militias": -55,
+    "fra": 85,
+    "deu": 85,
+    "ita": 85,
+    "esp": 85,
+    "nld": 85,
+    "bel": 85,
+    "nor": 90,
+    "swe": 90,
+    "fin": 85,
+    "grc": 85
+  },
+  "theatres": [
+    "arctic_north",
+    "baltic_coast",
+    "mesopotamia",
+    "yemen_red_sea"
+  ],
+  "languages": [
+    "Danish"
+  ],
+  "callout_language": "Danish",
+  "doctrine": {
+    "summary": "Small professional army with a heavy brigade; long Helmand and Iraq experience.",
+    "squad_size": 8,
+    "fireteam": "Gruppe of two teams.",
+    "tactics": [
+      "mechanised infantry",
+      "Arctic patrol (Greenland)"
+    ],
+    "ai_tuning": {
+      "aggression": 0.55,
+      "discipline": 0.85,
+      "suppression_resistance": 0.75,
+      "flanking": 0.7,
+      "grenade_use": 0.6,
+      "medical_care": 0.85,
+      "night_capability": 0.85,
+      "marksmanship": 0.8,
+      "morale": 0.75
+    }
+  },
+  "camo": [
+    {
+      "name": "M/11 MTS",
+      "palette": [
+        "#6F6A4C",
+        "#4A4734",
+        "#9C9474",
+        "#2F2C22"
+      ],
+      "use": "standard"
+    },
+    {
+      "name": "M/84",
+      "palette": [
+        "#4A5532",
+        "#2A2A1E",
+        "#6D7A45"
+      ],
+      "use": "older gear"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "Gevaer M/25 (Colt Canada C8 MRR, 5.56x45mm)"
+    ],
+    "autorifleman": [
+      "M/60E6 (7.62x51mm)"
+    ],
+    "marksman": [
+      "Colt Canada C20 DMR (7.62x51mm)"
+    ],
+    "grenadier": [
+      "M/10 with GRK M/13 (40mm)"
+    ],
+    "at": [
+      "Carl Gustaf M4 (84mm)",
+      "M72 (66mm)",
+      "Spike LR2 (ATGM)"
+    ],
+    "medic": [
+      "M/10"
+    ],
+    "squad_leader": [
+      "M/25"
+    ],
+    "sniper": [
+      "Sako TRG (M/04)",
+      "AI AX50 (12.7x99mm)"
+    ],
+    "sidearm": [
+      "SIG P320 (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "Carl Gustaf [in game: MAAWS]",
+    "AT4 [in game: AT4]",
+    "M72 (not in game list)"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "ceramic",
+    "notes": "Game mapping."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "leopard2a6",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "Leopard 2A7DK."
+    },
+    {
+      "vehicle_id": "cv90",
+      "role": "ifv",
+      "prevalence": "signature",
+      "notes": "CV9035DK."
+    },
+    {
+      "vehicle_id": "piranha",
+      "role": "apc",
+      "prevalence": "signature",
+      "notes": "Piranha V."
+    },
+    {
+      "vehicle_id": "eagle",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Eagle V."
+    },
+    {
+      "vehicle_id": "atmos",
+      "role": "artillery",
+      "prevalence": "common",
+      "notes": ""
+    },
+    {
+      "vehicle_id": "puls",
+      "role": "mlrs",
+      "prevalence": "uncommon",
+      "notes": ""
+    },
+    {
+      "vehicle_id": "patria_6x6",
+      "role": "apc",
+      "prevalence": "uncommon",
+      "notes": "130 XA-300 ordered 2025."
+    },
+    {
+      "vehicle_id": "m113",
+      "role": "apc",
+      "prevalence": "rare",
+      "notes": "Ranges only."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "dnk_rifle_squad",
+      "name": "Danish rifle squad (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "dnk_mech_squad",
+      "name": "Danish mechanised squad",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 2
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "cv90"
+    },
+    {
+      "id": "dnk_recon_team",
+      "name": "Danish recon / sniper pair team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "sniper",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "eagle"
+    }
+  ],
+  "support_assets": [
+    "ATMOS artillery",
+    "PULS rockets",
+    "drones"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 20,
+        "unlocks": [
+          "service rifle and ammunition",
+          "uniforms in national camo",
+          "light helmet and vest"
+        ]
+      },
+      {
+        "rep": 40,
+        "unlocks": [
+          "optics and NVGs",
+          "medium armour",
+          "Carl Gustaf M4 [MAAWS]"
+        ]
+      },
+      {
+        "rep": 60,
+        "unlocks": [
+          "marksman and sniper rifles",
+          "heavy armour",
+          "Eagle (light vehicle)"
+        ]
+      },
+      {
+        "rep": 80,
+        "unlocks": [
+          "Piranha V (armoured transport)",
+          "fire-support call-ins on contracts"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "counter-terrorist raid",
+      "hostage / personnel recovery",
+      "convoy escort",
+      "HVT capture",
+      "recover lost equipment or sensitive kit",
+      "train and accompany partner forces",
+      "security of embassy or base",
+      "counter-drone site defence",
+      "Arctic security"
+    ],
+    "as_target": [
+      "only if the player works for this nation's enemies: sabotage a logistics depot",
+      "only if the player works for this nation's enemies: ambush a supply convoy"
+    ]
+  },
+  "notes": "US-Danish tensions over Greenland in 2025-26 lowered usa relation.",
+  "proposed": [
+    "campaign_tier",
+    "relations.player",
+    "doctrine.ai_tuning",
+    "unit_templates",
+    "player_trade.rep_tiers",
+    "contract_types",
+    "body_armor (game tier mapping)",
+    "vehicles[].prevalence (game weighting)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Royal_Danish_Army",
+    "https://www.thedefensepost.com/2023/08/07/denmark-replacements-caesar-howitzers/"
+  ]
+}

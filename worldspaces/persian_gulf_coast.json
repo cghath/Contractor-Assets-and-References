@@ -1,0 +1,234 @@
+{
+  "id": "persian_gulf_coast",
+  "name": "Strait of Khawr Sabah",
+  "inspired_by": "The Strait of Hormuz and the Gulf littoral as of 2026: an arid Iranian coast of bare mountains, windcatcher port towns and mangrove creeks to the north; a fjord-cut limestone peninsula (Musandam type) and a flat, wealthy Arab Gulf coast with ports, oil and LNG terminals to the south; and small contested islands in the channel. Iran contested or closed the strait during the 2026 war. The channel is narrowed and all towns are fictional.",
+  "map_size_km": [24, 22],
+  "climate": "Hot desert (Koppen BWh) with very high humidity on the coast. Summers 38-46 C with 60-90% humidity and heat index above 50 C; winters 15-25 C; rain under 150 mm, in a few winter storms that cause flash floods off the mountains.",
+  "seasons": [
+    "Winter (Dec-Feb): pleasant, occasional storms and flash floods, shamal winds with rough seas",
+    "Spring (Mar-May): heating up, dust storms from the interior",
+    "Summer (Jun-Sep): extreme humid heat, haze, calm seas at dawn, sea fog some mornings",
+    "Autumn (Oct-Nov): cooling, clear air, fishing season"
+  ],
+  "biomes": [
+    {
+      "id": "sea_and_channel",
+      "share": 0.38,
+      "vegetation": ["none (water): shallow turquoise shelves near shore", "coral patches", "deep blue channel"],
+      "ground_palette": ["#2a6f86", "#3d8ea3", "#7fc4c8", "#1e4d63", "#d9e6dc"],
+      "foliage_palette": ["#4e8f86", "#6aa79a", "#2d6e66", "#a7d0c4"]
+    },
+    {
+      "id": "barren_coastal_mountains",
+      "share": 0.22,
+      "vegetation": ["almost bare limestone and ophiolite rock", "acacia and Ziziphus spina-christi in gullies", "wild fig in shaded wadis", "salt-tolerant shrubs on talus"],
+      "ground_palette": ["#a8927a", "#8a7664", "#6e5f52", "#c6b49c", "#5a4e45", "#b9a48a"],
+      "foliage_palette": ["#8e8a5e", "#6e6a4c", "#a8a27a", "#5c5e42"]
+    },
+    {
+      "id": "coastal_plain_and_sabkha",
+      "share": 0.16,
+      "vegetation": ["sabkha salt flats (bare)", "Prosopis cineraria (ghaf) and Prosopis juliflora thickets", "saltbush (Suaeda, Salsola)", "date palm gardens near wells"],
+      "ground_palette": ["#e8dcc0", "#d6c7a2", "#c2ad86", "#efe8d6", "#a8946f"],
+      "foliage_palette": ["#7c8b55", "#5f6e40", "#a6a676", "#3e5530", "#c1c091"]
+    },
+    {
+      "id": "mangrove_creeks",
+      "share": 0.06,
+      "vegetation": ["grey mangrove (Avicennia marina) stands", "tidal mudflats", "saltmarsh"],
+      "ground_palette": ["#6b6250", "#8a7f68", "#4f493c", "#a59c84"],
+      "foliage_palette": ["#4a6b3a", "#5f7f48", "#3a5530", "#7d9a5e"]
+    },
+    {
+      "id": "urban_industrial_coast",
+      "share": 0.18,
+      "vegetation": ["irrigated street palms and neem", "lawns and municipal parks", "oleander and bougainvillea hedges"],
+      "ground_palette": ["#d8cfbc", "#b9b0a0", "#8a8577", "#e6e0d2", "#6b6a63"],
+      "foliage_palette": ["#3f6b2e", "#5a8a3a", "#7ba04a", "#c0507a"]
+    }
+  ],
+  "terrain": {
+    "elevation_range_m": [-60, 1400],
+    "relief": "Steep mountains drop straight into the sea on the peninsula (south-east) with deep drowned valleys (khors) and cliffs; the Iranian north coast has a narrow plain under bare ridges up to 1,400 m; the south-west is a flat coastal plain with sabkha. The channel between is 6-8 km wide and 40-60 m deep, with three small islands.",
+    "features": ["fjord-like khors with cliffs", "rocky headlands and small coves", "sabkha salt flats", "mangrove creeks and tidal flats", "alluvial fans and wadis from the mountains", "small islands with a lighthouse and a military post", "dredged shipping lanes, breakwaters and reclaimed land"],
+    "water": "Sea covers roughly 40% of the map (channel and bays); no rivers; wadis flood briefly after storms; desalination supplies towns; wells and falaj-type channels feed old palm gardens.",
+    "generator": {
+      "approach": "Heightmap at 10 m including bathymetry (negative heights). A coastline mask defines land; the channel is a smoothed corridor carved to -40 to -60 m with shelves; khors are drowned ridged-noise valleys on the peninsula (land carved below sea level near the coast). Islands are cellular bumps in the channel.",
+      "noise_layers": [
+        {"type": "ridged multifractal", "frequency": 0.4, "amplitude_m": 900, "purpose": "peninsula and north-coast mountains, masked by distance from the flat south-west plain"},
+        {"type": "simplex fbm (4 octaves)", "frequency": 1.2, "amplitude_m": 120, "purpose": "spurs, cliffs and headlands"},
+        {"type": "cellular (Worley F1, inverted)", "frequency": 0.6, "amplitude_m": 60, "purpose": "islands in the channel"},
+        {"type": "simplex", "frequency": 0.2, "amplitude_m": 25, "purpose": "bathymetry variation and shelf edges"},
+        {"type": "simplex", "frequency": 6.0, "amplitude_m": 1.0, "purpose": "sabkha and dune micro-relief"}
+      ],
+      "erosion": "Thermal erosion only on mountains (capped 55 degrees: cliffs stay); hydraulic pass light, to cut wadis and build alluvial fans at the coast.",
+      "rivers": "None. Wadis from flow accumulation, dry except during storm events; drowned valleys (khors) placed by lowering terrain below sea level along ridged-noise troughs that meet the coast.",
+      "settlement_flattening": "Ports and industrial areas on reclaimed flat land at 2-4 m with straight quay edges; fishing villages on cove beaches flattened to 1-3 m; mountain villages per plot on terraces.",
+      "notes": "Naval traffic (tankers, dhows, fast boats) is a big part of the map and needs a sea-lane spline layer. AAVs and boats are key; boarding a ship is a POI built of STEEL structure voxels."
+    }
+  },
+  "settlements": [
+    {
+      "type": "city_district",
+      "share": 0.25,
+      "pop_range": [50000, 250000],
+      "architecture": "South-coast Gulf city district: walled two-storey villas in sand and white render with flat roofs and parapets, shaded courtyards and car ports; five- to fifteen-storey apartment and office towers with glass; malls; mosques with domes and pencil minarets; wide roads and roundabouts.",
+      "footprint_m": "villa plot 30x40; block 100x150; tower 30x30",
+      "storeys": [2, 15],
+      "wall_class": "Villa compound walls 25 cm block render medium; concrete frames thick; glass facades none.",
+      "materials": ["CONCRETE", "PLASTER", "CINDER_BLOCK", "GLASS", "STEEL", "PAINTED"],
+      "palette": ["#e6dcc8", "#d8c7a4", "#f2ede2", "#8a8577", "#9fbcc4", "#4a4d50"],
+      "layout_rules": ["superblock grid with roundabouts", "corniche and marina on the shore", "souq and old quarter near the creek", "mall and towers on the main highway", "villas inside compound walls"],
+      "example_names": ["Ras Khawr Sabah", "Hisn al-Murjan", "Madinat al-Murjan", "Khor Fawwaz"]
+    },
+    {
+      "type": "town",
+      "share": 0.2,
+      "pop_range": [10000, 60000],
+      "architecture": "North-coast Iranian port town: older houses of coral stone and gypsum plaster with windcatcher towers (badgir), wooden-latticed windows, narrow shaded lanes; newer two- to four-storey concrete and brick buildings; a fishing harbour, a bazaar, an IRGC Navy jetty.",
+      "footprint_m": "courtyard house 12x14; building 14x18",
+      "storeys": [1, 4],
+      "wall_class": "Coral stone 50-60 cm thick; newer brick 20 cm medium; concrete frames thick.",
+      "materials": ["CORAL_STONE", "PLASTER", "BRICK", "CONCRETE", "WOOD"],
+      "palette": ["#cbbf9f", "#e8e0cc", "#c9a46e", "#8a8577", "#8c6a46"],
+      "layout_rules": ["organic old core of lanes around a bazaar and a Friday mosque", "windcatcher towers as skyline", "harbour with dhow slipways", "newer grid on the edge, IRGC naval base fenced off on the shore"],
+      "example_names": ["Bandar-e Golbad", "Gelaru-e Now", "Bandar-e Nakhlestan", "Badgir-e Bandar"]
+    },
+    {
+      "type": "village",
+      "share": 0.2,
+      "pop_range": [100, 1500],
+      "architecture": "Fishing villages in coves and khors: one-storey stone and block houses with flat roofs, a small mosque, boat ramps, dhows and fiberglass skiffs, nets drying; some reachable only by boat. Mountain villages of stone houses and terraced plots.",
+      "footprint_m": "house 8x10",
+      "storeys": [1, 2],
+      "wall_class": "Stone houses thick; block houses thin.",
+      "materials": ["STONE", "CINDER_BLOCK", "PLASTER", "WOOD"],
+      "palette": ["#a8927a", "#9a978f", "#e8e0cc", "#8c6a46"],
+      "layout_rules": ["on a cove beach between cliffs", "single track or boat-only access", "boat ramp and fish market as the centre"],
+      "example_names": ["Khor Sakhr", "Ghubbat Najm", "Jazirat Safra Cove", "Sharm Fanar", "Gheyl-e Darya"]
+    },
+    {
+      "type": "camp",
+      "share": 0.1,
+      "pop_range": [2000, 20000],
+      "architecture": "Labour accommodation for migrant workers near industrial sites: rows of two- to three-storey prefab or block dormitory buildings, canteens, a fenced perimeter, bus parks.",
+      "footprint_m": "dormitory 12x60; camp 300x400",
+      "storeys": [2, 3],
+      "wall_class": "Prefabs very thin; block dorms thin.",
+      "materials": ["CINDER_BLOCK", "CORRUGATED_IRON", "STEEL", "PAINTED"],
+      "palette": ["#9a978f", "#8b8e8c", "#e6e0d2", "#4a4d50"],
+      "layout_rules": ["grid of dormitory rows", "gated, buses at shift change (05:00 and 18:00)", "next to refineries and the port"],
+      "example_names": ["Workers City 4", "Al-Nakhla Labour Camp", "Port Accommodation B"]
+    },
+    {
+      "type": "compound",
+      "share": 0.25,
+      "pop_range": [0, 3000],
+      "architecture": "Energy and military compounds: an oil export terminal with tank farms and jetties, an LNG plant with spherical tanks and flare stacks, a container port with cranes, a coastal naval base, an island garrison with bunkers, a fast-boat base in a khor with boat shelters cut into the cliffs.",
+      "footprint_m": "tank 60 m diameter; terminal 1500x2000; boat base 300x400",
+      "storeys": [1, 6],
+      "wall_class": "Tank walls steel (thin, hazard); concrete bunkers and boat shelters thick; berms thick.",
+      "materials": ["STEEL", "CONCRETE", "DIRT_BERM", "HESCO", "CORRUGATED_IRON"],
+      "palette": ["#e6e6e2", "#4a4d50", "#8a8577", "#8a6f4e", "#a99a6c", "#c8402e"],
+      "layout_rules": ["on reclaimed land with straight quays", "tank farms in bunded cells", "jetties into deep water", "boat shelters at the foot of cliffs"],
+      "example_names": ["Jebel Sabah Oil Terminal", "Ras Murjan LNG", "Mina Sabah Container Port", "Jazireh-ye Sorkh Garrison"]
+    }
+  ],
+  "infrastructure": {
+    "roads": "South: six-lane coastal highway, dual carriageways and roundabouts, a mountain road through tunnels and hairpins on the peninsula. North: a two-lane coastal road and tracks into the mountains. No road link across the strait.",
+    "rail": "None (a freight spur into the container port is proposed).",
+    "power": "Gas-fired power and desalination plants on both coasts; pylons along the highway.",
+    "ports": "Container port and oil terminal (south), LNG jetties, fishing harbours, a naval base on each coast, a fast-boat base in a khor, dhow harbours.",
+    "airfields": "One international airport on the south-west plain (out of bounds), one military airstrip on the north coast, helipads at terminals.",
+    "checkpoints": "Port and terminal gates with vehicle scanners, coast-guard posts, IRGC checkpoints on the north coastal road, an island garrison controlling the channel."
+  },
+  "pois": [
+    {"type": "tanker_at_anchor", "description": "Crude tanker (300 m) anchored in the channel: deck pipework, a superstructure block of 6 decks, lifeboats, a pilot ladder. Ship interior is STEEL structure voxels.", "contract_use": "maritime security boarding; retake a seized ship and recover the crew", "loot_tier": "medium", "intel_chance": 0.4},
+    {"type": "oil_terminal", "description": "Export terminal with tank farm, pump stations, control room and jetties; drone-strike scars; air-defence trailers.", "contract_use": "counter-drone defence of an oil facility (clients are, sau)", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "lng_plant", "description": "LNG trains with spherical tanks, pipe racks, flare stacks and a control building; a damaged section after earlier missile strikes.", "contract_use": "counter-drone energy-site defence (client qat or are)", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "fast_boat_base", "description": "IRGC Navy fast-boat base in a khor: boat shelters cut into the cliff, floating pontoons, fuel tanks, a radar mast on the headland.", "contract_use": "recon and document for a client; hot-zone HQ (enemy)", "loot_tier": "medium", "intel_chance": 0.5},
+    {"type": "island_garrison", "description": "Small island with a lighthouse, a helipad, bunkers, anti-ship missile shelters and a jetty; fishermen's huts on the beach.", "contract_use": "observation from a boat; recover a downed drone on the reef", "loot_tier": "medium", "intel_chance": 0.4},
+    {"type": "container_port", "description": "Container port with gantry cranes, stacked containers in canyons, a customs yard and a warehouse district.", "contract_use": "port security; cache interdiction in a container; VIP arrival protection", "loot_tier": "medium", "intel_chance": 0.35},
+    {"type": "dhow_harbour", "description": "Old harbour with wooden dhows moored three deep, ice sheds, a fish market and a souq; smuggling of goods across the strait.", "contract_use": "anti-smuggling raid; meet a contact; small-boat chase start", "loot_tier": "low", "intel_chance": 0.35},
+    {"type": "mangrove_creek", "description": "Mangrove creek network with channels 5-20 m wide, mudflats, a hidden boat landing and a fisherman's hut.", "contract_use": "small-boat insertion; ambush site; recover a seized skiff", "loot_tier": "low", "intel_chance": 0.25},
+    {"type": "mountain_radar_site", "description": "Radar and comms site on a peninsula summit reached by a single hairpin road and tunnel; overlooks the strait.", "contract_use": "protect site for client; overwatch for a convoy at sea", "loot_tier": "low", "intel_chance": 0.2},
+    {"type": "mediation_venue", "description": "Waterfront hotel and conference villa with marina, lawns and a helipad, used for talks and hostage hand-overs.", "contract_use": "VIP protection during mediation talks; hostage hand-over security (client qat)", "loot_tier": "low", "intel_chance": 0.25},
+    {"type": "labour_camp", "description": "Gated workers' accommodation next to the terminal; buses at shift change; very high density.", "contract_use": "evacuate workers after a strike; no-fire environment", "loot_tier": "low", "intel_chance": 0.05},
+    {"type": "coastal_naval_base", "description": "Allied naval base: quays with frigates, warehouses, a fuel pier, barracks and a fenced perimeter.", "contract_use": "staging and contract board for escort jobs", "loot_tier": "low", "intel_chance": 0.05}
+  ],
+  "weather": {
+    "conditions": ["clear and extremely hot", "humid haze", "sea fog at dawn (summer)", "shamal wind with rough seas and dust", "rare winter thunderstorms with flash floods"],
+    "visibility_notes": "Haze limits long-range optics to 3-8 km in summer; shamal days ground small boats and helicopters; strong glare off water and white buildings; heat drains stamina (proposed heat stress for heavy armour).",
+    "dust_or_snow": "Dust from the interior in spring and summer; no snow."
+  },
+  "civilians": {
+    "density": "high",
+    "behaviour": "City life shifts to early morning and after sunset in summer; malls and souqs busy in the evening; fishermen out before dawn; migrant workers commute by bus at shift changes; on attack alerts, residents shelter indoors and port workers evacuate to assembly points. Fishing skiffs and dhows crowd the channel and are easily mistaken for fast attack boats.",
+    "vehicles": ["Land Cruisers and Nissan Patrols", "luxury saloons", "white pickups", "worker buses", "fuel and water tankers", "dhows and fibreglass fishing skiffs", "jet skis and yachts"],
+    "casualty_risk_notes": "The sea is crowded with civilian boats; identification at sea is the main casualty risk. Labour camps and city districts are very dense."
+  },
+  "factions_present": [
+    {"faction_id": "irn", "role": "defender", "strength": "high", "where": "North coast and islands: IRGC Navy fast-boat bases in khors, island garrisons, coastal missile and drone sites, the port town; fast-boat swarms in the channel."},
+    {"faction_id": "are", "role": "defender", "strength": "high", "where": "South-east peninsula and city: ports, naval base, terminal security, air defence."},
+    {"faction_id": "qat", "role": "defender", "strength": "low", "where": "LNG plant concession and the mediation venue on the south-west coast (fictional composite: Qatari-owned sites on this coast)."},
+    {"faction_id": "sau", "role": "defender", "strength": "low", "where": "Oil export terminal concession on the south-west coast and patrol vessels."},
+    {"faction_id": "usa", "role": "patrol", "strength": "medium", "where": "Warships and helicopters in the channel, escort of tankers, the allied naval base."},
+    {"faction_id": "gbr", "role": "patrol", "strength": "low", "where": "Frigate and mine-countermeasure vessels in the channel; staff at the allied naval base."},
+    {"faction_id": "fra", "role": "patrol", "strength": "low", "where": "European maritime-awareness mission frigate; base facilities on the south coast."},
+    {"faction_id": "aus", "role": "patrol", "strength": "low", "where": "Escort frigate and boarding teams in the channel."},
+    {"faction_id": "grc", "role": "patrol", "strength": "low", "where": "Frigate with the European escort mission."},
+    {"faction_id": "ind", "role": "patrol", "strength": "low", "where": "Destroyer escorting Indian-flagged tankers through the channel."},
+    {"faction_id": "kor", "role": "patrol", "strength": "low", "where": "Destroyer of the anti-piracy unit escorting Korean ships."},
+    {"faction_id": "pak", "role": "patrol", "strength": "low", "where": "Patrol vessel escorting Pakistani shipping at the map's east edge."},
+    {"faction_id": "pmc_black_sable", "role": "rival_pmc", "strength": "medium", "where": "Contracted security at ports and terminals for Gulf business clients; armed escort boats; competes for the same jobs."},
+    {"faction_id": "pmc_halcyon", "role": "rival_pmc", "strength": "low", "where": "Embarked security teams on tankers and VIP protection at the mediation venue."}
+  ],
+  "frontline": "A sea frontline. The channel's control state (open, contested, closed) is the main variable: Iranian escalation events raise fast-boat swarms, drone attacks on terminals and ship seizures, moving the channel to contested or closed; escort convoys, boarding successes and destroyed boat bases move it back toward open. Land zones on the north coast are Iranian and never flip; south-coast zones flip only in alert level. The war sim posts escort, counter-drone and ship-recovery contracts from Gulf and naval clients; rival PMCs bid on the same jobs and may sabotage the player's.",
+  "contract_hooks": [
+    "Escort a tanker convoy through the channel against fast-boat harassment (clients are, qat, usa)",
+    "Retake a seized ship at anchor and recover the crew (clients are, gbr, usa)",
+    "Counter-drone defence of an oil terminal or LNG plant (clients sau, qat, are)",
+    "Port security sweep and container cache interdiction (client are)",
+    "VIP protection and hostage hand-over security at the mediation venue (client qat)",
+    "Anti-smuggling raid on a dhow harbour network (client are)",
+    "Recover a downed drone from an island reef under garrison observation (client usa)",
+    "Evacuate migrant workers from a labour camp after a strike (client are)"
+  ],
+  "zone_plan": {
+    "contract_zones": [
+      {"name": "Oil terminal", "area_km2": 3, "anchor": "oil_terminal", "notes": "counter-drone defence, industrial cover"},
+      {"name": "Anchorage", "area_km2": 4, "anchor": "tanker_at_anchor", "notes": "mostly sea, boarding"},
+      {"name": "Container port", "area_km2": 2.5, "anchor": "container_port", "notes": "container canyons, dense"},
+      {"name": "Dhow harbour and creek", "area_km2": 2, "anchor": "dhow_harbour", "notes": "boat chases, civilians"}
+    ],
+    "hot_zones": [
+      {"name": "Strait channel and islands", "area_km2": 16, "layout": "IRGC fast-boat base in a khor as HQ; island garrisons and a coastal missile site as 3-4 outposts; patrol boat 'checkpoints' on the lanes; roaming fast-boat pairs; 1 QRF (boat swarm) at the base. Player operates by boat, helicopter and LHD."}
+    ]
+  },
+  "insertion": {"lhd": true, "fob": "LHD offshore in the south of the channel is the primary base (helicopters, boats, AAVs). An optional FOB at the allied naval base on the south coast for land contracts."},
+  "early_game_suitable": false,
+  "early_game_notes": "The main threat is a state navy and missile force (irn, mid) plus rival PMCs (mid); Gulf client port-security jobs can be offered early as low-intensity work.",
+  "ambient_audio": ["ship horns and engine thrum", "dhow diesel engines", "call to prayer over the water", "gulls and terns", "flare-stack roar", "air conditioning units", "fast-boat outboards (threat cue)"],
+  "captain_confirmed": [
+    "map_size_km 24 x 22 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
+    "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
+    "materials accepted (Captain, 2026-10-10) and added to voxel_world.gd (Contractor dev, commit 1ec1417): CORAL_STONE #cbbf9f, PLASTER #e3dccb, BRICK #9c5a3c, CINDER_BLOCK #9a978f, GLASS #9fbcc4, CORRUGATED_IRON #8b8e8c, HESCO #a99a6c, DIRT_BERM #8a6f4e, STONE #8f8676"
+  ],
+  "proposed": [
+    "the narrowed channel",
+    "bathymetry-in-heightmap approach and generator numbers",
+    "channel control state (open/contested/closed) as the frontline variable",
+    "qat and sau presence as site concessions on a fictional composite coast",
+    "zone_plan; sea hot zone",
+    "heat-stress stamina modifier"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Strait_of_Hormuz",
+    "https://en.wikipedia.org/wiki/Musandam_Peninsula",
+    "https://en.wikipedia.org/wiki/Hormozgan_province",
+    "https://en.wikipedia.org/wiki/Windcatcher",
+    "https://en.wikipedia.org/wiki/Avicennia_marina",
+    "https://en.wikipedia.org/wiki/Sabkha",
+    "factions/irn.json, are.json, qat.json, sau.json, pmc_black_sable.json situation notes, October 2026"
+  ]
+}

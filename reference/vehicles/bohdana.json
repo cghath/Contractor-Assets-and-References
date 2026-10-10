@@ -1,0 +1,59 @@
+{
+  "id": "bohdana",
+  "name": "2S22 Bohdana",
+  "aliases": [
+    "Bohdana",
+    "2P22 Bohdana-B (towed)"
+  ],
+  "origin": "Ukraine (Kramatorsk Heavy Duty Machine Tool Plant)",
+  "type": "artillery",
+  "operators": [
+    "ukr",
+    "dnk"
+  ],
+  "crew": 5,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 11.0,
+    "width": 2.6,
+    "height": 3.4
+  },
+  "weight_t": 28.0,
+  "armament": [
+    "155 mm L/52 howitzer (about 42 km conventional, 60 km rocket-assisted, Excalibur capable), 20 rounds carried"
+  ],
+  "protection": "Armoured cab only; gun crew works in the open. Dimensions are approximate (not published). Game: armoured cab/hull immune to small-calibre rounds; 7.62x54R and larger penetrate and can disable it; any launcher destroys it.",
+  "visual_notes": [
+    "Truck-mounted howitzer: armoured cab at the front, long 155 mm barrel laid forward over the cab in travel",
+    "Gun mounted on an open turntable over the rear axles with hydraulic stabiliser spades at the back",
+    "Chassis changed by production batch: KrAZ-6322 6x6 (1.0), MAZ 6x6 (2.0), Tatra 815-7 8x8 with Czech cab (3.0), Tatra Phoenix 8x8 with Ukrainian cab (4.0/5.0)",
+    "Ammunition lockers along the chassis sides; usually heavily netted in the field"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Ukrainian army green with field netting",
+      "palette": [
+        "#4F5534",
+        "#3A4027",
+        "#6B6A45",
+        "#2A2B20"
+      ]
+    }
+  ],
+  "variants": [
+    "Bohdana 1.0 (KrAZ 6x6)",
+    "Bohdana 2.0 (MAZ 6x6)",
+    "Bohdana 3.0 (Tatra 815-7 8x8)",
+    "Bohdana 4.0 (Tatra Phoenix 8x8)",
+    "Bohdana 5.0 (Tatra Force, local cab)",
+    "2P22 Bohdana-B towed"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/2S22_Bohdana"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/2S22_Bohdana"
+  ]
+}

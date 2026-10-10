@@ -1,0 +1,69 @@
+{
+  "id": "zbd05",
+  "name": "ZBD-05 amphibious IFV",
+  "aliases": [
+    "Type 05",
+    "VN18 (export)",
+    "ZTD-05"
+  ],
+  "origin": "China (Norinco)",
+  "type": "ifv",
+  "operators": [
+    "chn"
+  ],
+  "crew": 3,
+  "passengers": 8,
+  "dimensions_m": {
+    "length": 9.5,
+    "width": 3.4,
+    "height": 2.7
+  },
+  "weight_t": 26.5,
+  "armament": [
+    "30 mm cannon",
+    "HJ-73C ATGM",
+    "7.62 mm coaxial MG"
+  ],
+  "protection": "Aluminium hull optimised for high-speed water planing. Game: immune to all small-calibre rounds; frontal arc resists 12.7/14.5 mm; 7.62x54R damages optics, tyres/tracks and exposed gear, 12.7/14.5 mm penetrates side and rear; all launchers penetrate.",
+  "visual_notes": [
+    "Long boat-shaped hull with a large folding bow plate (trim vane) for planing at sea",
+    "Six road wheels per side; tracks retract partially when planing",
+    "Small low turret mid-hull; ZTD-05 variant carries a 105 mm gun turret",
+    "PLA Marine Corps and amphibious combined-arms brigades; seen on Taiwan Strait exercises"
+  ],
+  "colour_schemes": [
+    {
+      "name": "PLA Marine Corps ocean digital",
+      "palette": [
+        "#3E5468",
+        "#6C7E8C",
+        "#2A3440",
+        "#9AA6AE"
+      ]
+    },
+    {
+      "name": "PLA digital woodland (vehicle)",
+      "palette": [
+        "#4E5B3A",
+        "#6E7552",
+        "#2F3626",
+        "#8A8762"
+      ]
+    }
+  ],
+  "variants": [
+    "ZBD-05 IFV",
+    "ZTD-05 assault gun (105 mm)",
+    "Command variant"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/ZBD-05",
+    "https://commons.wikimedia.org/wiki/Category:ZBD-05"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/ZBD-05",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_People%27s_Liberation_Army_Ground_Force"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "id": "m109",
+  "name": "M109",
+  "aliases": [
+    "M109A5E"
+  ],
+  "origin": "United States",
+  "type": "artillery",
+  "operators": [
+    "esp",
+    "grc",
+    "lva",
+    "pak",
+    "twn",
+    "isr",
+    "egy",
+    "jor",
+    "che",
+    "aut"
+  ],
+  "crew": 6,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 9.1,
+    "width": 3.15,
+    "height": 3.25
+  },
+  "weight_t": 27.5,
+  "armament": [
+    "155 mm/39 howitzer",
+    "12.7 mm M2HB"
+  ],
+  "protection": "Aluminium armour. Game: light armour on cab/turret only; immune to small-calibre rounds, 7.62x54R and larger disable it; launchers destroy it.",
+  "visual_notes": [
+    "Large rectangular turret on tracked hull, 7 road wheels",
+    "Long barrel with bore evacuator and muzzle brake",
+    "Rear doors on turret"
+  ],
+  "colour_schemes": [
+    {
+      "name": "NATO three-tone",
+      "palette": [
+        "#3E4A2E",
+        "#4B3A28",
+        "#1E1E1C"
+      ]
+    }
+  ],
+  "variants": [
+    "M109A5E (ESP)",
+    "M109A5O (LVA, ex-AUT)",
+    "M109A2/A5 (PAK, TWN)",
+    "M109 Doher (ISR)",
+    "Pz Hb 79/88/95 KAWEST (CHE)",
+    "M109A5Ö (AUT)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/M109_howitzer"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/M109_howitzer",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Spanish_Army"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "id": "dana",
+  "name": "ShKH vz. 77 DANA",
+  "aliases": [
+    "DANA",
+    "DANA M2"
+  ],
+  "origin": "Czechoslovakia",
+  "type": "artillery",
+  "operators": [
+    "geo",
+    "pol",
+    "ukr"
+  ],
+  "crew": 5,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 11.16,
+    "width": 3.0,
+    "height": 3.63
+  },
+  "weight_t": 29.25,
+  "armament": [
+    "152 mm howitzer with autoloader (60 rounds)",
+    "12.7 mm DShK"
+  ],
+  "protection": "Light armour on cab and turret halves. Game: immune to 5.56/5.45/7.62x39/7.62x51; 7.62x54R and larger can penetrate side/rear and disable wheels, engine and optics; every launcher in the game list penetrates.",
+  "visual_notes": [
+    "Tatra 815 8x8 truck chassis: armoured cab at the front, engine at the rear",
+    "Turret split into two separate armoured halves left and right of the gun, open channel between them for the recoiling barrel",
+    "Long barrel over the cab in travel, roof crane for ammunition",
+    "Polish and Georgian vehicles in three-colour camouflage"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Georgian four-colour woodland",
+      "palette": [
+        "#59613F",
+        "#3C4430",
+        "#6E5A3E",
+        "#1F1F1A"
+      ]
+    },
+    {
+      "name": "Polish three-tone (green/brown/black)",
+      "palette": [
+        "#4D5B37",
+        "#5E4B33",
+        "#1E1E1A"
+      ]
+    }
+  ],
+  "variants": [
+    "vz. 77 DANA",
+    "DANA M1",
+    "DANA M2"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/152_mm_SpGH_DANA"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/152_mm_SpGH_DANA"
+  ]
+}

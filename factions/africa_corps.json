@@ -1,0 +1,329 @@
+{
+  "id": "africa_corps",
+  "name": "Africa Corps (Afrikansky Korpus)",
+  "short": "Africa Corps",
+  "kind": "pmc",
+  "inspired_by": null,
+  "flag_colors": [
+    "#1F1F1F",
+    "#B9A27A",
+    "#D52B1E"
+  ],
+  "blocs": [
+    "aes"
+  ],
+  "traits": [
+    "russian_state_expeditionary"
+  ],
+  "campaign_tier": "mid",
+  "alignment_to_player": "hostile",
+  "player_client": false,
+  "relations": {
+    "player": -75,
+    "rus": 100,
+    "blr": 50,
+    "sahel_aes": 80,
+    "syr": -10,
+    "jnim": -100,
+    "isis": -100,
+    "al_qaeda": -95,
+    "fra": -75,
+    "usa": -60,
+    "gbr": -60,
+    "ukr": -90,
+    "can": -55,
+    "pmc_kestrel": 20,
+    "pmc_black_sable": -20,
+    "rou": -50,
+    "bel": -60,
+    "deu": -60,
+    "dnk": -60,
+    "esp": -60,
+    "est": -60,
+    "fin": -60,
+    "grc": -60,
+    "ita": -60,
+    "ltu": -60,
+    "lva": -60,
+    "nld": -60,
+    "nor": -60,
+    "pmc_halcyon": -60,
+    "pol": -60,
+    "swe": -60
+  },
+  "theatres": [
+    "sahel"
+  ],
+  "languages": [
+    "Russian",
+    "French (local liaison)",
+    "Bambara (interpreters)"
+  ],
+  "callout_language": "Russian",
+  "doctrine": {
+    "summary": "Russian Ministry of Defence-controlled expeditionary force (created 2023, overseen by Deputy Defence Minister Yevkurov, GRU-linked) that absorbed Wagner's African operations; took over Mali when Wagner left in June 2025 and operates in Burkina Faso, Niger, Libya, CAR and elsewhere. Fights alongside Sahel junta forces against JNIM and Islamic State Sahel, with heavier kit than Wagner had (T-72B3M, BMP-3, BTR-82A, Tigr, armoured KamAZ trucks shipped through West African ports such as Conakry and Lome). Relies on convoys, helicopter support and drones; reported heavy-handed counter-insurgency, with documented civilian killings (HRW 2026).",
+    "squad_size": 8,
+    "fireteam": "Ex-army contract soldiers in 6-8 man sections, battle-buddy pairs, mounted in Tigr or pickups with local forces attached.",
+    "tactics": [
+      "Mounted convoys with Tigr/BTR escort and local partner troops",
+      "Village cordon-and-search operations with partner forces (high civilian-harm risk on maps)",
+      "Helicopter-supported raids and quick reaction forces",
+      "Drone ISR over convoy routes",
+      "Base defence of airports and mines; protection of junta leaders",
+      "Will race the player for the same objective (rival contractor)"
+    ],
+    "ai_tuning": {
+      "aggression": 0.7,
+      "discipline": 0.6,
+      "suppression_resistance": 0.65,
+      "flanking": 0.6,
+      "grenade_use": 0.65,
+      "medical_care": 0.55,
+      "night_capability": 0.55,
+      "marksmanship": 0.6,
+      "morale": 0.6
+    }
+  },
+  "camo": [
+    {
+      "name": "Desert EMR / khaki",
+      "palette": [
+        "#C2AE85",
+        "#9A825B",
+        "#6E5C3F"
+      ],
+      "use": "Issued desert uniforms in the Sahel"
+    },
+    {
+      "name": "Multicam-type and coyote private kit",
+      "palette": [
+        "#9C8B66",
+        "#6F6248",
+        "#C9B98F",
+        "#4B4433"
+      ],
+      "use": "Ex-Wagner veterans, plate carriers and chest rigs"
+    },
+    {
+      "name": "Olive Gorka suit",
+      "palette": [
+        "#5E6345",
+        "#3B3B2C"
+      ],
+      "use": "Older Wagner-era look"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "AK-74M / AK-12 (5.45x39mm)",
+      "AKM (7.62x39mm)"
+    ],
+    "autorifleman": [
+      "PKM / PKP (7.62x54R)"
+    ],
+    "marksman": [
+      "SVD (7.62x54R)"
+    ],
+    "grenadier": [
+      "AK-74M with GP-25 (VOG-25)"
+    ],
+    "at": [
+      "RPG-7",
+      "RPG-26"
+    ],
+    "medic": [
+      "AK-74M (5.45x39mm)"
+    ],
+    "squad_leader": [
+      "AK-12 (5.45x39mm)"
+    ],
+    "sniper": [
+      "Orsis T-5000 (.338 Lapua)",
+      "SVD (7.62x54R)"
+    ],
+    "sidearm": [
+      "PM / Grach (9x18 / 9x19mm)"
+    ]
+  },
+  "launchers": [
+    "RPG-7 (PG-7V [in_game], OG-7V [in_game]; tandem/thermobaric rounds [not_in_game])",
+    "RPG-26 [not_in_game]",
+    "Kornet ATGM [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "ceramic",
+    "notes": "Ratnik 6B47 or commercial ballistic helmets (medium); plate carriers with ceramic front/back plates (medium). Heat drives many to drop helmets/side plates on base duty."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "gaz_tigr",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": "Seen in the January 2025 Bamako convoy and on Sahel patrols."
+    },
+    {
+      "vehicle_id": "btr82a",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "BTR-82A in the 2025 Mali deliveries."
+    },
+    {
+      "vehicle_id": "technical_dshk",
+      "role": "technical",
+      "prevalence": "common",
+      "notes": "Pickups (Hilux/Land Cruiser) with DShK/PKM, shared with partner forces."
+    },
+    {
+      "vehicle_id": "t72b3",
+      "role": "mbt",
+      "prevalence": "uncommon",
+      "notes": "T-72B3M with cope cage seen in Mali (Jan 2025)."
+    },
+    {
+      "vehicle_id": "bmp3",
+      "role": "ifv",
+      "prevalence": "uncommon",
+      "notes": "Two BMP-3 platoons in the Bamako convoy."
+    },
+    {
+      "vehicle_id": "mi8",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": "Helicopter support with Malian/Russian crews; one shot down by FLA in 2026."
+    },
+    {
+      "vehicle_id": "mi24",
+      "role": "attack_heli",
+      "prevalence": "uncommon",
+      "notes": "Gunship support reported alongside Malian Air Force airframes; exact ownership varies."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "afc_patrol",
+      "name": "Africa Corps mounted patrol (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "gaz_tigr"
+    },
+    {
+      "id": "afc_qrf",
+      "name": "Helicopter QRF",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "mi8"
+    },
+    {
+      "id": "afc_convoy_escort",
+      "name": "Convoy escort section",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "btr82a"
+    }
+  ],
+  "support_assets": [
+    "Mi-8 / Mi-24 helicopter QRF and gunship support",
+    "ISR drones over convoys",
+    "Partner-force (junta army) infantry and pickups",
+    "Occasional armour (T-72B3M, BMP-3) for big pushes"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [],
+    "as_target": [
+      "rival_contractor_race (both sides chase the same objective)",
+      "convoy_interdiction",
+      "evidence_recovery (document abuses for an NGO/UN client)",
+      "civilian_protection_escort",
+      "hostage_recovery_from_rivals"
+    ]
+  },
+  "notes": "Real organisation: the Russian state-controlled successor to Wagner in Africa (kind pmc). In game: hostile rival contractor in the Sahel, where the early-game war against JNIM and IS-Sahel happens - three-way battles (player, jihadists, Africa Corps + junta forces) are possible. 2026 context: 2026 Mali offensives by jihadists and Azawad separatists forced the abandonment of Kidal; Africa Corps also intervened in Niger (Niamey airport attack and coup attempt). Never a client or vendor of the player. Contract locks: work for Western/ECOWAS-aligned clients locks out AES contracts.",
+  "proposed": [
+    "campaign_tier",
+    "relations.player",
+    "doctrine.ai_tuning",
+    "unit_templates",
+    "contract_types.as_target",
+    "flag_colors (no official flag; game insignia colours)",
+    "traits (russian_state_expeditionary is a game tag)",
+    "vehicles[].prevalence (game weighting)",
+    "body_armor (game tier mapping)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Africa_Corps_(Russia)",
+    "https://en.wikipedia.org/wiki/Wagner_Group",
+    "https://defence-blog.com/russian-tanks-and-armored-vehicles-spotted-in-mali/",
+    "https://frontelligence.substack.com/p/special-report-a-convoy-of-over-one",
+    "https://nationalinterest.org/blog/buzz/russian-africa-corps-has-new-armored-vehicles"
+  ]
+}

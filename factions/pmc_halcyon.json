@@ -1,0 +1,384 @@
+{
+  "id": "pmc_halcyon",
+  "name": "Halcyon Global Risk (fictional)",
+  "short": "Halcyon",
+  "kind": "pmc",
+  "inspired_by": "Large Western (US and UK) private security and military contractors of the type that grew during the Iraq and Afghanistan wars: well-funded, ex-special-forces operators, government and energy-sector clients, MRAPs and armoured Land Cruisers, contracted helicopters, and a corporate public face. No real company, logo or person is used.",
+  "flag_colors": [
+    "#1B2A3A",
+    "#8FA3B5",
+    "#E6E6E6"
+  ],
+  "blocs": [],
+  "traits": [
+    "rival_pmc"
+  ],
+  "campaign_tier": "mid",
+  "alignment_to_player": "hostile",
+  "player_client": false,
+  "relations": {
+    "player": -40,
+    "usa": 40,
+    "gbr": 40,
+    "can": 20,
+    "are": 35,
+    "sau": 30,
+    "qat": 20,
+    "irq": 20,
+    "krg_peshmerga": 25,
+    "som": 10,
+    "mex": -10,
+    "irn": -70,
+    "rus": -50,
+    "africa_corps": -60,
+    "pmc_kestrel": -60,
+    "pmc_black_sable": -35,
+    "afg_taliban": -60,
+    "iraqi_militias": -80,
+    "houthis": -80,
+    "isis": -100,
+    "al_qaeda": -100,
+    "aqap": -100,
+    "al_shabaab": -95,
+    "cartel_pacifico": -50,
+    "cartel_jalisco_nueva": -50,
+    "sdf": 5,
+    "aut": 0,
+    "che": 0,
+    "irl": -10,
+    "sahel_aes": -40
+  },
+  "theatres": [
+    "mesopotamia",
+    "persian_gulf_coast",
+    "horn_of_africa",
+    "yemen_red_sea",
+    "levant_syria",
+    "mexico_cartel_belt"
+  ],
+  "languages": [
+    "English"
+  ],
+  "callout_language": "English (US and British mix)",
+  "doctrine": {
+    "summary": "The player's mirror image: a bigger, richer Western contractor with ex-special-forces team leaders, corporate legal cover and better kit. It fights the way the player does (8-strong teams in battle-buddy pairs, frags, flashbangs and smoke, deliberate casualty evacuation) but with more money: armoured Land Cruisers and MRAPs, a contracted helicopter, small ISR drones and heavier armour. It wins contracts on reputation and price, and when it loses one it may turn up anyway, to recover the objective for its own client or to collect a bounty on the player's team. It avoids civilian casualties when cameras might be watching, and is careless when they are not.",
+    "squad_size": 8,
+    "fireteam": "Two 4-man fireteams of two battle-buddy pairs each, team leader and 2IC; medic in every team; vehicle crews separate.",
+    "tactics": [
+      "Deliberate, well-coordinated room clearing with frags, flashbangs and smoke",
+      "Overwatch from a marksman pair plus small ISR drone before every move",
+      "Armoured convoy movement with a lead MRAP and a QRF on standby",
+      "Helicopter insertion and casualty evacuation (contracted Bell 412)",
+      "Racing the player to the objective, then defending it",
+      "Bounty-hunter ambushes on the player's extraction route"
+    ],
+    "ai_tuning": {
+      "aggression": 0.6,
+      "discipline": 0.85,
+      "suppression_resistance": 0.7,
+      "flanking": 0.75,
+      "grenade_use": 0.7,
+      "medical_care": 0.85,
+      "night_capability": 0.75,
+      "marksmanship": 0.75,
+      "morale": 0.7
+    }
+  },
+  "camo": [
+    {
+      "name": "MultiCam-type",
+      "palette": [
+        "#C2B48D",
+        "#8E8A62",
+        "#5E5B40",
+        "#3F3A2C"
+      ],
+      "use": "Field contracts"
+    },
+    {
+      "name": "Corporate low-profile (grey/khaki, company polo)",
+      "palette": [
+        "#3A3F45",
+        "#B5AFA4",
+        "#1B2A3A"
+      ],
+      "use": "Protective details and urban contracts"
+    },
+    {
+      "name": "Ranger green / black",
+      "palette": [
+        "#4A5130",
+        "#1F1F1F",
+        "#81613C"
+      ],
+      "use": "Night raids and cartel-belt work"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "M4A1 / HK416-pattern carbine (5.56x45mm)"
+    ],
+    "autorifleman": [
+      "M249 / Mk 48 (5.56 / 7.62x51mm)"
+    ],
+    "marksman": [
+      "SR-25 / M110-pattern DMR (7.62x51mm)"
+    ],
+    "grenadier": [
+      "M4 with M320 (40x46mm)"
+    ],
+    "at": [
+      "AT4 [in_game]",
+      "Carl Gustaf M4 [MAAWS: in_game]"
+    ],
+    "medic": [
+      "Short-barrel M4 (5.56x45mm)"
+    ],
+    "squad_leader": [
+      "HK416-pattern carbine with LPVO and suppressor"
+    ],
+    "sniper": [
+      "Accuracy International AXMC (.338 Lapua Magnum)"
+    ],
+    "sidearm": [
+      "Glock 19 (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "AT4 [in_game]",
+    "Carl Gustaf M4 / MAAWS [in_game]",
+    "Javelin [in_game] (rare, only on contracts with a state sponsor)"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "heavy",
+    "plates": "ceramic",
+    "notes": "High-cut ballistic helmets with NVG mounts (medium); plate carriers with ceramic front/back/side plates (heavy) for assault teams, medium for drivers and protective details."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "toyota_land_cruiser",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": "Armoured (B6) Land Cruiser SUVs and 70-series pickups in company white or grey."
+    },
+    {
+      "vehicle_id": "maxxpro",
+      "role": "mrap",
+      "prevalence": "common",
+      "notes": "Ex-military MaxxPro MRAPs bought surplus, repainted (game assignment Captain-confirmed 2026-10-10)."
+    },
+    {
+      "vehicle_id": "matv",
+      "role": "mrap",
+      "prevalence": "uncommon",
+      "notes": "Surplus M-ATVs (game assignment Captain-confirmed 2026-10-10)."
+    },
+    {
+      "vehicle_id": "armored_suv",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Armoured full-size SUVs for protective details and the cartel belt."
+    },
+    {
+      "vehicle_id": "polaris_mrzr",
+      "role": "light",
+      "prevalence": "uncommon",
+      "notes": "Light tactical buggies for raids."
+    },
+    {
+      "vehicle_id": "bell412",
+      "role": "transport_heli",
+      "prevalence": "uncommon",
+      "notes": "Contracted Bell 412 for insertion and medevac."
+    },
+    {
+      "vehicle_id": "fpv_drone",
+      "role": "uav",
+      "prevalence": "common",
+      "notes": "Commercial quadcopters for ISR; armed only on some contracts (game hazard)."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "halcyon_assault_team",
+      "name": "Halcyon assault team (8, player mirror)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "maxxpro"
+    },
+    {
+      "id": "halcyon_pair_overwatch",
+      "name": "Overwatch pair",
+      "composition": [
+        {
+          "role": "sniper",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "halcyon_psd",
+      "name": "Protective security detail (PSD)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "medic",
+          "count": 1
+        },
+        {
+          "role": "driver",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "armored_suv"
+    },
+    {
+      "id": "halcyon_heli_qrf",
+      "name": "Helicopter QRF",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "bell412"
+    },
+    {
+      "id": "halcyon_bounty_team",
+      "name": "Bounty-hunter team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "toyota_land_cruiser"
+    }
+  ],
+  "support_assets": [
+    "Contracted Bell 412 for insertion and medevac",
+    "Small ISR drones on every operation",
+    "Armoured QRF in MRAPs",
+    "Client-provided air support on some state-sponsored contracts"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [],
+    "as_target": [
+      "rival_contractor_race (both sides chase the same objective)",
+      "Steal back a contract objective Halcyon has secured",
+      "Expose a Halcyon cover-up for an NGO or journalist client",
+      "Ambush a Halcyon convoy (only for clients hostile to its sponsors)",
+      "Survive a bounty-hunter ambush during extraction"
+    ]
+  },
+  "rivalry": {
+    "role": "ordinary rival: the most player-like rival (same doctrine, better funding)",
+    "bids_on": [
+      "Counter-terror raids and HVT captures for Western and Gulf clients",
+      "Oil, gas and port security in mesopotamia and persian_gulf_coast",
+      "Convoy and protective-detail work in horn_of_africa and yemen_red_sea",
+      "Kidnap-for-ransom recovery and executive protection in mexico_cartel_belt"
+    ],
+    "bidding_behaviour": "Underbids the player by 10-20% on contracts with Western or Gulf clients; outbid on reputation when the player's rep with the client is low.",
+    "shows_up_as_enemy_when": [
+      "The player takes a contract Halcyon bid on and lost (chance to appear as rival_pmc on the map)",
+      "The player works for a client hostile to Halcyon's current sponsor",
+      "The player exposes or embarrasses Halcyon (story beat)"
+    ],
+    "bounty_hunter_trigger": "When the player's notoriety with Halcyon's clients passes a threshold, or after the player kills Halcyon operators in two consecutive contracts, a bounty team may ambush the player's extraction route.",
+    "defeat_rewards": [
+      "Salvage of Western kit (HK416-pattern carbines, plate carriers, NVGs) at loot caps",
+      "Captured intel revealing upcoming contract bids (first pick on the next board)",
+      "Reputation gain with clients hostile to Halcyon",
+      "Halcyon's market share in the theatre drops for a time (more contracts for the player)"
+    ],
+    "escalation": "Repeated defeats raise Halcyon's tier: more MRAPs, helicopter QRF, then a named team leader who recurs as a mini-boss."
+  },
+  "notes": "FICTIONAL company; no real contractor, logo or person is depicted. Inspired by large Western private security and military contractors. An ordinary rival that mirrors the player most closely (same doctrine, better funding); Captain chose pmc_black_sable as the main nemesis (2026-10-10). The name Halcyon is kept as is: any resemblance to a real security firm is coincidental (Captain-confirmed (2026-10-10)). Relations with usa, gbr and Gulf states are business ties, not alliances; those states never deploy alongside it in game. Its MaxxPros and M-ATVs are its game assignment, Captain-confirmed (2026-10-10): the existing voxel models are fielded by the operators listed in their catalogue files.",
+  "proposed": [
+    "everything (fictional faction): name, flag_colors, relations, theatres",
+    "rivalry (whole object)",
+    "doctrine.ai_tuning",
+    "unit_templates (driver is a game role)",
+    "contract_types.as_target",
+    "body_armor (game tier mapping)",
+    "traits (rival_pmc is a game tag)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Private_military_company",
+    "https://en.wikipedia.org/wiki/Private_security_contractors_in_Iraq"
+  ]
+}

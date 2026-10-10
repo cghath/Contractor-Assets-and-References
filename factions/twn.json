@@ -1,0 +1,398 @@
+{
+  "id": "twn",
+  "name": "Republic of China (Taiwan)",
+  "short": "ROC",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#FE0000",
+    "#000095",
+    "#FFFFFF"
+  ],
+  "blocs": [
+    "taiwan_relations_act",
+    "major_non_nato_ally_us",
+    "global_coalition_against_isis"
+  ],
+  "campaign_tier": "late",
+  "alignment_to_player": "friendly",
+  "player_client": true,
+  "relations": {
+    "player": 25,
+    "usa": 75,
+    "jpn": 55,
+    "phl": 40,
+    "aus": 30,
+    "gbr": 30,
+    "can": 30,
+    "kor": 20,
+    "ukr": 40,
+    "ltu": 40,
+    "chn": -95,
+    "prk": -60,
+    "rus": -40
+  },
+  "theatres": [
+    "taiwan_strait",
+    "south_china_sea"
+  ],
+  "languages": [
+    "Mandarin Chinese",
+    "Taiwanese Hokkien"
+  ],
+  "callout_language": "Mandarin Chinese (ROC Army voice procedure)",
+  "doctrine": {
+    "summary": "ROC Army reorganising around an asymmetric 'porcupine' defence of the island: beach and urban defence, mobile anti-armour and anti-ship missiles, HIMARS, drones and a large reserve, with conscription restored to one year from 2024. Being equipped with M1A2T Abrams (108 by 2026), AH-64E, Javelin and Stinger; annual Han Kuang exercises rehearse defeating a landing.",
+    "squad_size": 9,
+    "fireteam": "Rifle squad of 9 with T75 LMG and grenadier; anti-armour teams with Javelin/Kestrel. Game: 8 in four pairs.",
+    "tactics": [
+      "Beach and port defence: obstacles, mines and fortified positions as map features",
+      "Mobile shoot-and-scoot anti-armour teams (Javelin, Kestrel, TOW)",
+      "Urban defence using reserve and civil-defence forces",
+      "HIMARS and drone strikes on landing forces",
+      "Rapid counter-attack by Abrams and CM-34 against beachheads"
+    ],
+    "ai_tuning": {
+      "aggression": 0.45,
+      "discipline": 0.75,
+      "suppression_resistance": 0.6,
+      "flanking": 0.55,
+      "grenade_use": 0.6,
+      "medical_care": 0.75,
+      "night_capability": 0.7,
+      "marksmanship": 0.7,
+      "morale": 0.75
+    }
+  },
+  "camo": [
+    {
+      "name": "ROC Army digital",
+      "palette": [
+        "#5E6A47",
+        "#7E7656",
+        "#3D4430",
+        "#2B2C22",
+        "#9A9474"
+      ],
+      "use": "Standard ROC Army pattern since 2009"
+    },
+    {
+      "name": "ROC Marine Corps digital",
+      "palette": [
+        "#4F6040",
+        "#7A7652",
+        "#2D3526",
+        "#9C9878"
+      ],
+      "use": "ROC Marine Corps"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "T91 (5.56x45mm)",
+      "T112 (5.56x45mm, entering service)"
+    ],
+    "autorifleman": [
+      "T75 SAW (5.56x45mm)",
+      "T74 GPMG (7.62x51mm)"
+    ],
+    "marksman": [
+      "T91 / XT112 with magnified optic (5.56x45mm)",
+      "M14-type DMR (7.62x51mm)"
+    ],
+    "grenadier": [
+      "T91 with T85 40 mm underbarrel launcher"
+    ],
+    "at": [
+      "FGM-148 Javelin",
+      "Kestrel 66 mm (indigenous)",
+      "M72 LAW"
+    ],
+    "medic": [
+      "T91 (5.56x45mm)"
+    ],
+    "squad_leader": [
+      "T91 (5.56x45mm)"
+    ],
+    "sniper": [
+      "T93 (7.62x51mm)",
+      "Barrett M107A1 (.50 BMG)"
+    ],
+    "sidearm": [
+      "T75 pistol (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "FGM-148 Javelin [in_game]",
+    "Kestrel 66 mm [not_in_game]",
+    "M72 LAW [not_in_game]",
+    "BGM-71 TOW 2B [not_in_game]",
+    "FIM-92 Stinger [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "ceramic",
+    "notes": "New aramid combat helmets (medium); domestic plate carriers with front/back plates (medium); reserve units often light."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "abrams",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "M1A2T (108; final batch due 2026), 269th Mech Inf Brigade, 584th Armoured Brigade."
+    },
+    {
+      "vehicle_id": "cm32",
+      "role": "ifv",
+      "prevalence": "signature",
+      "notes": "CM-32 Clouded Leopard family incl. CM-34 30 mm IFV; 105/120 mm fire-support version not yet accepted."
+    },
+    {
+      "vehicle_id": "m60",
+      "role": "mbt",
+      "prevalence": "common",
+      "notes": "M60A3 TTS (~460) awaiting upgrade."
+    },
+    {
+      "vehicle_id": "cm11",
+      "role": "mbt",
+      "prevalence": "common",
+      "notes": "CM-11 Brave Tiger (~450)."
+    },
+    {
+      "vehicle_id": "himars",
+      "role": "mlrs",
+      "prevalence": "uncommon",
+      "notes": "M142 HIMARS (29 ordered, 11 delivered in 2024), 58th Artillery Command."
+    },
+    {
+      "vehicle_id": "ah64",
+      "role": "attack_heli",
+      "prevalence": "uncommon",
+      "notes": "AH-64E (29)."
+    },
+    {
+      "vehicle_id": "ah1z",
+      "role": "attack_heli",
+      "prevalence": "uncommon",
+      "notes": "AH-1W SuperCobra (~60)."
+    },
+    {
+      "vehicle_id": "uh60",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": "UH-60M Black Hawk."
+    },
+    {
+      "vehicle_id": "humvee",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "M1151/M1167 Humvee incl. TOW carriers."
+    },
+    {
+      "vehicle_id": "m109",
+      "role": "artillery",
+      "prevalence": "uncommon",
+      "notes": "M109A2/A5 155 mm SPH (M109A7 under consideration)."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "twn_rifle_squad",
+      "name": "ROC rifle squad (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 2
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "twn_javelin_team",
+      "name": "Mobile anti-armour team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "driver",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 2
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "drone_operator",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "humvee"
+    },
+    {
+      "id": "twn_mech_squad",
+      "name": "Mechanised squad with CM-34",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "cm32"
+    },
+    {
+      "id": "twn_marine_squad",
+      "name": "ROC Marine squad",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "team_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    }
+  ],
+  "support_assets": [
+    "HIMARS precision strikes",
+    "AH-64E / AH-1W CAS",
+    "Coastal anti-ship missiles (Harpoon, Hsiung Feng; off-map)",
+    "Recon and loitering-munition drones (Switchblade, ALTIUS)",
+    "155 mm fire missions"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 30,
+        "unlocks": [
+          "5.56 ammunition",
+          "grenades, smoke",
+          "medical kits"
+        ]
+      },
+      {
+        "rep": 55,
+        "unlocks": [
+          "T91 rifle",
+          "T75 SAW",
+          "ROC digital uniforms",
+          "medium helmet"
+        ]
+      },
+      {
+        "rep": 80,
+        "unlocks": [
+          "Kestrel launchers (if added)",
+          "plate carriers",
+          "drone kits"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "coastal_defence_training_support",
+      "reconnaissance (outlying islands)",
+      "counter_sabotage (undersea cable / infrastructure protection)",
+      "noncombatant_evacuation",
+      "maritime_security_escort"
+    ],
+    "as_target": []
+  },
+  "notes": "Friendly late-campaign state (proposal). Taking Taiwanese contracts locks the player out of PRC-aligned work. Represent cross-strait tensions factually: PLA 'Strait Thunder' / 'Joint Sword' exercises around Taiwan since 2022; undersea cable cuts attributed to Chinese-linked ships in 2023-25.",
+  "proposed": [
+    "doctrine.ai_tuning",
+    "relations.player",
+    "campaign_tier",
+    "alignment_to_player",
+    "player_client",
+    "player_trade",
+    "contract_types",
+    "unit_templates (game squads use 8 men in battle-buddy pairs)",
+    "player_trade.sellable",
+    "player_trade.rep_tiers"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Republic_of_China_Army",
+    "https://en.wikipedia.org/wiki/CM-32_Armoured_Vehicle",
+    "https://en.wikipedia.org/wiki/CM-11_Brave_Tiger",
+    "https://en.wikipedia.org/wiki/T91_assault_rifle",
+    "https://www.asianmilitaryreview.com/2025/09/taiwan-displays-new-land-combat-equipment-at-tadte-2025-foc/",
+    "https://www.janes.com/defence-intelligence-insights/defence-news/land/taiwan-receives-final-batch-of-m1a2t-abrams-tanks"
+  ]
+}

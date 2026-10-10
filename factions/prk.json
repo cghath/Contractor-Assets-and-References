@@ -1,0 +1,379 @@
+{
+  "id": "prk",
+  "name": "Democratic People's Republic of Korea",
+  "short": "DPRK",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#024FA2",
+    "#ED1C27",
+    "#FFFFFF"
+  ],
+  "blocs": [
+    "rus_prk_treaty",
+    "chn_prk_treaty"
+  ],
+  "campaign_tier": "late",
+  "alignment_to_player": "hostile",
+  "player_client": false,
+  "relations": {
+    "player": -80,
+    "rus": 85,
+    "chn": 55,
+    "irn": 40,
+    "blr": 30,
+    "syr": 0,
+    "kor": -90,
+    "usa": -90,
+    "jpn": -85,
+    "ukr": -80,
+    "aus": -60,
+    "gbr": -60,
+    "can": -60,
+    "bel": -60,
+    "deu": -60,
+    "dnk": -60,
+    "esp": -60,
+    "fin": -60,
+    "fra": -60,
+    "grc": -60,
+    "ita": -60,
+    "nld": -60,
+    "nor": -60,
+    "nzl": -60,
+    "rou": -60,
+    "swe": -60,
+    "twn": -60,
+    "est": -70,
+    "ltu": -70,
+    "lva": -70,
+    "pol": -70
+  },
+  "theatres": [
+    "korean_dmz",
+    "eastern_ukraine"
+  ],
+  "languages": [
+    "Korean (Munhwaŏ, North Korean standard)"
+  ],
+  "callout_language": "Korean (KPA voice procedure)",
+  "doctrine": {
+    "summary": "Korean People's Army Ground Force: a very large conscript army (service of up to 10 years) with heavily fortified positions along the DMZ, massed artillery and rocket forces, extensive tunnels and underground facilities, and very large light-infantry and special-operations forces. From late 2024 roughly 11,000-15,000 KPA troops were deployed to Russia's Kursk region to fight Ukraine, where they suffered heavy losses but adapted quickly to drone warfare; Pyongyang supplied shells, KN-23 missiles, Koksan guns and 240 mm rocket launchers to Russia.",
+    "squad_size": 10,
+    "fireteam": "Rifle squad of 9-10 with a squad machine gun and RPG; light-infantry and sniper brigades operate in small teams. Game: 8 in four pairs.",
+    "tactics": [
+      "Dense human-wave-style dismounted assaults across open ground (observed in Kursk), accepting high losses",
+      "Hardened bunker and tunnel networks along the DMZ (map hazard and spawn points)",
+      "Massed tube and rocket artillery preparation (Koksan, 240 mm, KN-25 off-map)",
+      "Special-operations and light-infantry infiltration behind lines in small teams",
+      "Rapid learning of counter-drone tactics: shooting at drones, spreading out, using decoy soldiers",
+      "Strong political discipline: units rarely surrender"
+    ],
+    "ai_tuning": {
+      "aggression": 0.8,
+      "discipline": 0.8,
+      "suppression_resistance": 0.75,
+      "flanking": 0.45,
+      "grenade_use": 0.55,
+      "medical_care": 0.3,
+      "night_capability": 0.45,
+      "marksmanship": 0.55,
+      "morale": 0.85
+    }
+  },
+  "camo": [
+    {
+      "name": "KPA plain olive/khaki",
+      "palette": [
+        "#5A5B3C",
+        "#6E6A4A",
+        "#3E3F2A"
+      ],
+      "use": "Line infantry field uniform"
+    },
+    {
+      "name": "KPA woodland/'tiger' style (special forces)",
+      "palette": [
+        "#5E6440",
+        "#7A6A45",
+        "#2F3022",
+        "#9A9268"
+      ],
+      "use": "Special-operations and parade units"
+    },
+    {
+      "name": "Russian EMR / Russian-issued kit",
+      "palette": [
+        "#5C6A45",
+        "#7E7350",
+        "#3B4231",
+        "#2A2A22"
+      ],
+      "use": "KPA troops deployed to Kursk (2024-25) wore Russian uniforms"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "Type 88 (5.45x39mm, AK-74 pattern)",
+      "Type 58 / Type 68 (7.62x39mm, AK/AKM pattern, reserve)"
+    ],
+    "autorifleman": [
+      "Type 73 / PK-pattern GPMG (7.62x54R)",
+      "RPK-74-pattern LMG (5.45x39mm)"
+    ],
+    "marksman": [
+      "Dragunov SVD copy (7.62x54R)"
+    ],
+    "grenadier": [
+      "Type 88 with underbarrel 40 mm (GP-25 pattern)"
+    ],
+    "at": [
+      "RPG-7 copy (PG-7V, OG-7V)",
+      "Bulsae-2/3 ATGM"
+    ],
+    "medic": [
+      "Type 88 (5.45x39mm)"
+    ],
+    "squad_leader": [
+      "Type 88 (5.45x39mm)"
+    ],
+    "sniper": [
+      "Dragunov SVD copy (7.62x54R)",
+      "Locally made 12.7 mm anti-materiel rifle"
+    ],
+    "sidearm": [
+      "Type 68 (7.62x25mm TT copy)",
+      "Baekdusan (9x19mm, CZ 75 copy)"
+    ]
+  },
+  "launchers": [
+    "RPG-7 copy with PG-7V / OG-7V [in_game as RPG-7]",
+    "Bulsae ATGM family [not_in_game]",
+    "Igla/Strela-type MANPADS [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "light",
+    "vest": "none",
+    "plates": "none",
+    "notes": "Most line troops wear steel helmets (light) and no body armour; special forces and Kursk-deployed troops received some Russian helmets and light vests (light/steel)."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "chonma",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "Chonma family (Chonma-ho T-62 derivatives, Pokpung-ho/Chonma-216, new Chonma-20 shown Oct 2025 with APS). >1,000 Chonma-ho plus ~800 T-62."
+    },
+    {
+      "vehicle_id": "vtt323",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "VTT-323 tracked APC with twin 14.5 mm."
+    },
+    {
+      "vehicle_id": "m2010",
+      "role": "apc",
+      "prevalence": "uncommon",
+      "notes": "M-2010 6x6/8x8 wheeled APC."
+    },
+    {
+      "vehicle_id": "type59",
+      "role": "mbt",
+      "prevalence": "common",
+      "notes": "Type 59 / T-55 series in second-line units."
+    },
+    {
+      "vehicle_id": "koksan",
+      "role": "artillery",
+      "prevalence": "signature",
+      "notes": "M1978/M1989 Koksan 170 mm SPG; also supplied to Russia."
+    },
+    {
+      "vehicle_id": "kn25",
+      "role": "mlrs",
+      "prevalence": "uncommon",
+      "notes": "KN-25 600 mm super-large rocket launcher (off-map strategic fires)."
+    },
+    {
+      "vehicle_id": "btr60",
+      "role": "apc",
+      "prevalence": "uncommon",
+      "notes": "BTR-60PB in older mechanised units."
+    },
+    {
+      "vehicle_id": "pt76",
+      "role": "light",
+      "prevalence": "rare",
+      "notes": "PT-76 / Type 82 amphibious light tanks for river crossings."
+    },
+    {
+      "vehicle_id": "md500",
+      "role": "attack_heli",
+      "prevalence": "rare",
+      "notes": "Hughes/MD 500 helicopters acquired by sanctions evasion in 1985; can be painted to resemble ROK aircraft."
+    },
+    {
+      "vehicle_id": "mi8",
+      "role": "transport_heli",
+      "prevalence": "rare",
+      "notes": "Small Mi-8/Mi-17 fleet."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "prk_rifle_squad",
+      "name": "KPA rifle squad (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "prk_light_infantry",
+      "name": "Light-infantry infiltration team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "sniper",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "prk_mech_squad",
+      "name": "Mechanised squad in VTT-323",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "vtt323"
+    },
+    {
+      "id": "prk_kursk_assault",
+      "name": "Assault group (Kursk 2024-25 pattern)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 5
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    }
+  ],
+  "support_assets": [
+    "Massed 170 mm and 240 mm artillery barrages",
+    "KN-25 / KN-23 strategic strikes (off-map)",
+    "Tunnel networks for reinforcement and ambush",
+    "Small number of drones (growing after Kursk experience)",
+    "GPS jamming along the DMZ"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [],
+    "as_target": [
+      "defend_against_infiltration (kor client)",
+      "recon_of_tunnel_entrance",
+      "destroy_artillery_battery",
+      "rescue_hostages_or_defectors",
+      "intercept_sanctions_smuggling_ship (maritime)",
+      "eastern_ukraine: defend against KPA assault groups (ukr client)"
+    ]
+  },
+  "notes": "Hostile late-campaign state. Real-world: Russia-DPRK Comprehensive Strategic Partnership treaty (June 2024) with mutual-defence clause; KPA combat deployment to Kursk 2024-25 acknowledged by Pyongyang in April 2025. In 2024 the DPRK constitutionally declared the ROK a 'hostile state'. Represent factually; no glorification.",
+  "proposed": [
+    "doctrine.ai_tuning",
+    "relations.player",
+    "campaign_tier",
+    "alignment_to_player",
+    "player_client",
+    "player_trade",
+    "contract_types",
+    "unit_templates (game squads use 8 men in battle-buddy pairs)",
+    "theatres.eastern_ukraine (KPA contingent as Russian-attached unit)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Korean_People%27s_Army_Ground_Force",
+    "https://en.wikipedia.org/wiki/Chonma-ho",
+    "https://en.wikipedia.org/wiki/Koksan_(artillery)",
+    "https://en.wikipedia.org/wiki/KN-25",
+    "https://en.wikipedia.org/wiki/North_Korean_involvement_in_the_Russian_invasion_of_Ukraine",
+    "https://view.asiae.co.kr/en/article/2026032007275998613",
+    "https://www.kyivindependent.com/north-korean-losses-exceed-half-of-total-troops-deployed-to-russias-kursk-oblast-uk-intelligence-reports"
+  ]
+}

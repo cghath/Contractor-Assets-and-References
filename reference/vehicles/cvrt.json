@@ -1,0 +1,62 @@
+{
+  "id": "cvrt",
+  "name": "CVR(T) Scimitar / Spartan family",
+  "aliases": [
+    "Scimitar",
+    "Spartan",
+    "Sultan",
+    "Samaritan",
+    "Samson"
+  ],
+  "origin": "United Kingdom (Alvis)",
+  "type": "light",
+  "operators": [
+    "lva",
+    "ukr"
+  ],
+  "crew": 3,
+  "passengers": 4,
+  "dimensions_m": {
+    "length": 4.79,
+    "width": 2.23,
+    "height": 2.1
+  },
+  "weight_t": 8.1,
+  "armament": [
+    "Scimitar: 30 mm RARDEN cannon + 7.62 mm coaxial GPMG",
+    "Spartan/Sultan: pintle GPMG"
+  ],
+  "protection": "Aluminium armour, light. Game: immune to 5.56/5.45/7.62x39/7.62x51; 7.62x54R and larger can penetrate side/rear and disable wheels, engine and optics; every launcher in the game list penetrates.",
+  "visual_notes": [
+    "Very small low tracked vehicle, five road wheels per side, front drive sprocket",
+    "Scimitar: small two-man turret with a slim 30 mm gun; Spartan: taller box troop body, no turret",
+    "Sultan/Samaritan: high box roof, Samaritan with red-cross panels",
+    "Latvian vehicles in NATO green or Latvian camouflage"
+  ],
+  "colour_schemes": [
+    {
+      "name": "NATO three-tone",
+      "palette": [
+        "#4A5130",
+        "#55473A",
+        "#232323"
+      ]
+    }
+  ],
+  "variants": [
+    "FV107 Scimitar",
+    "FV103 Spartan",
+    "FV105 Sultan",
+    "FV104 Samaritan",
+    "FV106 Samson"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Combat_Vehicle_Reconnaissance_(Tracked)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Combat_Vehicle_Reconnaissance_(Tracked)",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Latvian_Land_Forces"
+  ]
+}

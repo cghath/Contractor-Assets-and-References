@@ -1,0 +1,53 @@
+{
+  "id": "mohajer6",
+  "name": "Qods Mohajer-6 UAV",
+  "aliases": [
+    "Mohajer-6"
+  ],
+  "origin": "Iran",
+  "type": "uav",
+  "operators": [
+    "irn",
+    "rus"
+  ],
+  "crew": 0,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 5.7,
+    "width": 10.0,
+    "height": 1.0
+  },
+  "weight_t": 0.67,
+  "armament": [
+    "Qaem-5 or Almas precision-guided munitions (2-4)"
+  ],
+  "protection": "Game: any calibre can damage it; 7.62x54R and 12.7 mm can bring it down; EW support assets can jam or force it down.",
+  "visual_notes": [
+    "Twin-boom layout with an inverted-V or H tail joining the booms",
+    "Rear pusher propeller between the booms",
+    "Chin EO/IR sensor ball",
+    "High straight wing with two underwing pylons"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Light grey",
+      "palette": [
+        "#B8BCC0",
+        "#8E9196"
+      ]
+    }
+  ],
+  "variants": [
+    "Mohajer-6",
+    "Mohajer-10 (larger)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Qods_Mohajer-6"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Qods_Mohajer-6",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Iranian_Army"
+  ]
+}

@@ -1,0 +1,519 @@
+{
+  "id": "rus",
+  "name": "Russian Federation",
+  "short": "Russia",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#FFFFFF",
+    "#0039A6",
+    "#D52B1E"
+  ],
+  "blocs": [
+    "csto",
+    "cis",
+    "brics",
+    "sco",
+    "union_state",
+    "eaeu",
+    "rus_prk_treaty",
+    "un_security_council_p5"
+  ],
+  "campaign_tier": "late",
+  "alignment_to_player": "hostile",
+  "player_client": false,
+  "relations": {
+    "player": -60,
+    "blr": 95,
+    "africa_corps": 95,
+    "kaz": 50,
+    "srb": 50,
+    "arm": -15,
+    "aze": 5,
+    "chn": 70,
+    "prk": 85,
+    "irn": 70,
+    "ind": 35,
+    "sahel_aes": 75,
+    "afg_taliban": 30,
+    "syr": 10,
+    "tur": 15,
+    "geo": -30,
+    "mda": -45,
+    "hamas": 5,
+    "hezbollah": 15,
+    "houthis": 15,
+    "ukr": -100,
+    "usa": -65,
+    "gbr": -85,
+    "can": -75,
+    "fra": -75,
+    "deu": -75,
+    "pol": -90,
+    "est": -90,
+    "lva": -90,
+    "ltu": -90,
+    "fin": -85,
+    "swe": -80,
+    "nor": -65,
+    "dnk": -75,
+    "nld": -75,
+    "rou": -70,
+    "jpn": -55,
+    "isr": -10,
+    "isis": -100,
+    "isis_k": -100,
+    "al_qaeda": -90,
+    "jnim": -95,
+    "che": -40,
+    "pmc_kestrel": 70,
+    "vnm": 50,
+    "egy": 30,
+    "are": 25,
+    "irq": 20,
+    "sau": 15,
+    "qat": 10,
+    "mex": 0,
+    "sdf": -5,
+    "aut": -30,
+    "kor": -40,
+    "twn": -40,
+    "grc": -45,
+    "irl": -45,
+    "pmc_halcyon": -50,
+    "nzl": -55,
+    "aus": -60,
+    "bel": -80,
+    "esp": -80,
+    "ita": -80,
+    "cod": 15
+  },
+  "theatres": [
+    "eastern_ukraine",
+    "black_sea_coast",
+    "baltic_coast",
+    "suwalki_gap",
+    "arctic_north",
+    "caucasus",
+    "levant_syria",
+    "alpine_europe"
+  ],
+  "languages": [
+    "Russian"
+  ],
+  "callout_language": "Russian (army slang and radio procedure: 'kontakt', 'dvesti/trista' casualty codes, 'ptur', 'ptitsa' for drone)",
+  "doctrine": {
+    "summary": "Mass, firepower and attrition. Artillery and glide bombs prepare the ground, then small assault groups (often 3-6 men, sometimes on motorcycles, buggies or a single armoured vehicle) probe and infiltrate under drone observation; larger armoured pushes still happen but cost heavy losses to FPV drones and mines. Every vehicle carries anti-drone cages/screens and EW jammers. Professional VDV, naval infantry and special forces (Spetsnaz) are markedly better trained than mobilised or contract 'Storm' units.",
+    "squad_size": 8,
+    "fireteam": "Motor-rifle squad (otdeleniye) of 8-9 tied to a BMP/BTR: squad leader, machine gunner, grenadier (RPG) and assistant, sniper/marksman, riflemen, plus vehicle crew. Assault (shturm) groups of 3-6 men in battle-buddy pairs. In game: 8-man squads in 4 pairs; 'Storm' variants of 4-6.",
+    "tactics": [
+      "Artillery, mortar and glide-bomb preparation before any infantry move",
+      "Small assault groups infiltrate tree lines and ruins in pairs, then consolidate with reinforcements",
+      "Fast light-vehicle dashes (motorcycles, buggies, single BTR/MT-LB) to cross open ground under drone cover",
+      "FPV and Lancet-type loitering munitions against vehicles and positions; Orlan/Supercam drones spot for artillery",
+      "Heavy EW jamming around positions; anti-drone cages and netting on every vehicle",
+      "Mines and anti-tank obstacles in depth on defence (map hazards)",
+      "Thermobaric weapons (TOS-1A, RPO-A) against fortified buildings",
+      "Grenades and RGD-5/F-1 frags in trench clearing; smokes used to cover casualty pulls"
+    ],
+    "ai_tuning": {
+      "aggression": 0.7,
+      "discipline": 0.5,
+      "suppression_resistance": 0.65,
+      "flanking": 0.55,
+      "grenade_use": 0.7,
+      "medical_care": 0.4,
+      "night_capability": 0.55,
+      "marksmanship": 0.55,
+      "morale": 0.55
+    }
+  },
+  "camo": [
+    {
+      "name": "EMR summer ('Tsifra' digital flora)",
+      "palette": [
+        "#6B7148",
+        "#3E4330",
+        "#A39B72",
+        "#2A2A22"
+      ],
+      "use": "Ratnik-issue uniform, temperate theatres (Ukraine, Baltic, Caucasus)"
+    },
+    {
+      "name": "Private-purchase 'Moss'/multicam-type and olive Gorka suits",
+      "palette": [
+        "#5E6345",
+        "#7B6F4C",
+        "#3B3B2C",
+        "#8F8A66"
+      ],
+      "use": "Very common on assault troops, volunteers and special forces; olive/green Gorka smocks"
+    },
+    {
+      "name": "EMR desert",
+      "palette": [
+        "#C2AE85",
+        "#9A825B",
+        "#6E5C3F"
+      ],
+      "use": "Syria, Africa, arid deployments"
+    },
+    {
+      "name": "White over-suit (winter)",
+      "palette": [
+        "#ECEDEA",
+        "#C9CCC8",
+        "#6B6F66"
+      ],
+      "use": "Arctic North and winter Baltic/Ukraine maps"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "AK-74M (5.45x39mm)",
+      "AK-12 / AK-12K (5.45x39mm)",
+      "AK-74 / AKS-74 older stocks (5.45x39mm)"
+    ],
+    "autorifleman": [
+      "PKP Pecheneg / PKM (7.62x54R)",
+      "RPK-16 / RPK-74 (5.45x39mm)"
+    ],
+    "marksman": [
+      "SVD / SVDM Dragunov (7.62x54R)",
+      "SVCh Chukavin (7.62x54R)"
+    ],
+    "grenadier": [
+      "AK-74M / AK-12 with GP-25 / GP-34 underbarrel launcher (VOG-25)",
+      "AGS-17 / AGS-30 crew-served (30x29mm)"
+    ],
+    "at": [
+      "RPG-7V2",
+      "RPG-26 / RPG-30 disposables",
+      "Kornet / Metis-M teams"
+    ],
+    "medic": [
+      "AK-74M (5.45x39mm)"
+    ],
+    "squad_leader": [
+      "AK-12 (5.45x39mm)",
+      "AK-74M (5.45x39mm)"
+    ],
+    "sniper": [
+      "Orsis T-5000 / SV-98 (.338 Lapua / 7.62x54R)",
+      "ASVK Kord (12.7x108mm)",
+      "VSS Vintorez / AS Val (9x39mm, special forces)"
+    ],
+    "sidearm": [
+      "PM Makarov (9x18mm)",
+      "MP-443 Grach (9x19mm)",
+      "PL-15 (9x19mm, entering service)"
+    ]
+  },
+  "launchers": [
+    "RPG-7V2 (PG-7V [in_game], OG-7V [in_game]; also PG-7VL, PG-7VR tandem and TBG-7V thermobaric [not_in_game])",
+    "RPG-26 / RPG-30 / RPG-32 disposable or reloadable launchers [not_in_game]",
+    "RPO-A Shmel thermobaric launcher [not_in_game]",
+    "9M133 Kornet and 9K115-2 Metis-M ATGMs [not_in_game]",
+    "9K38 Igla / 9K333 Verba MANPADS [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "mixed",
+    "notes": "Ratnik 6B47 aramid helmet = medium tier. 6B45/6B23 vests with front/back plates = medium (ceramic Granit plates on Ratnik, steel in older 6B23 and many privately bought vests); assault troops and Spetsnaz add groin/side protection = heavy. Mobilised and penal 'Storm' units often wear older or lighter kit (light vest, light helmet)."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "t72b3",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "Most numerous Russian tank in 2026 (T-72B3/B3M), plus refurbished T-72B/T-62 from storage. Cope cage, anti-drone screens and EW jammer standard."
+    },
+    {
+      "vehicle_id": "t90m",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "T-90M Proryv, Russia's best tank in serial production; anti-drone mesh/cage fitted at the factory in 2025-26 batches."
+    },
+    {
+      "vehicle_id": "btr82a",
+      "role": "apc",
+      "prevalence": "signature",
+      "notes": "Standard wheeled APC of motor-rifle and naval-infantry units; cages and slat screens."
+    },
+    {
+      "vehicle_id": "mtlb",
+      "role": "apc",
+      "prevalence": "signature",
+      "notes": "Ubiquitous tracked carrier: troop carrier, gun tractor, ZU-23-2 or mortar mount, frequently caged."
+    },
+    {
+      "vehicle_id": "bmp2",
+      "role": "ifv",
+      "prevalence": "common",
+      "notes": "BMP-2/2M with Berezhok turret upgrades; caged."
+    },
+    {
+      "vehicle_id": "bmp3",
+      "role": "ifv",
+      "prevalence": "common",
+      "notes": "Main tracked IFV still in production."
+    },
+    {
+      "vehicle_id": "t80bvm",
+      "role": "mbt",
+      "prevalence": "common",
+      "notes": "Gas-turbine tank, VDV and northern/Western MD units; Arctic North theatre."
+    },
+    {
+      "vehicle_id": "gaz_tigr",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Light armoured car for recon, Spetsnaz, military police and command."
+    },
+    {
+      "vehicle_id": "ka52",
+      "role": "attack_heli",
+      "prevalence": "signature",
+      "notes": "Ka-52/52M fires long-range ATGMs (Vikhr, LMUR) from stand-off distance."
+    },
+    {
+      "vehicle_id": "mi8",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": "Mi-8AMTSh / MTV-5 transport and assault; also Mi-28N and Mi-35M gunships in service."
+    },
+    {
+      "vehicle_id": "2s19",
+      "role": "artillery",
+      "prevalence": "common",
+      "notes": "2S19 Msta-S and towed 152 mm guns; D-30 122 mm also widespread."
+    },
+    {
+      "vehicle_id": "orlan10",
+      "role": "uav",
+      "prevalence": "common",
+      "notes": "Artillery spotting drone; in game it precedes artillery strikes. Lancet loitering munitions and FPV drones in every unit."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "rus_motor_rifle_squad",
+      "name": "Motor-rifle squad (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "btr82a"
+    },
+    {
+      "id": "rus_storm_group",
+      "name": "Assault (shturm) group",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "drone_operator",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "mtlb"
+    },
+    {
+      "id": "rus_moto_assault",
+      "name": "Motorcycle assault pairs",
+      "composition": [
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "at",
+          "count": 2
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "rus_vdv_section",
+      "name": "VDV airborne section",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "bmp3"
+    },
+    {
+      "id": "rus_spetsnaz_team",
+      "name": "GRU Spetsnaz recon team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        },
+        {
+          "role": "drone_operator",
+          "count": 1
+        },
+        {
+          "role": "sniper",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "gaz_tigr"
+    },
+    {
+      "id": "rus_tank_section",
+      "name": "Tank pair with infantry escort",
+      "composition": [
+        {
+          "role": "tank_crew",
+          "count": 6
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        }
+      ],
+      "vehicle_id": "t72b3"
+    }
+  ],
+  "support_assets": [
+    "Massed tube and rocket artillery (2S19, D-30, BM-21/Tornado-G), TOS-1A thermobaric rockets",
+    "Glide bombs (UMPK-kit FAB) from Su-34 off-map - game: heavy off-map strike with a long warning",
+    "Lancet loitering munitions and FPV kamikaze drones; Orlan-10 / Supercam spotters",
+    "Pervasive EW: drone jamming bubbles around positions, GPS spoofing, radio direction finding (player radio use can be triangulated)",
+    "Ka-52 and Mi-28 attack helicopters firing from stand-off",
+    "Dense minefields (map hazard) and engineer obstacle belts"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [],
+    "as_target": [
+      "destroy_ew_station",
+      "artillery_raid",
+      "drone_team_hunt",
+      "hvt_capture_officer",
+      "intel_recovery",
+      "sabotage_logistics",
+      "defend_partner_position",
+      "downed_aircrew_recovery",
+      "evacuate_civilians_from_frontline"
+    ]
+  },
+  "notes": "Main late-game peer enemy; full-scale war against Ukraine continues in 2026 despite US-mediated truce attempts (May 2026). Field look in 2026: every vehicle wears welded anti-drone cages ('mangals'), mesh screens and sometimes full 'turtle' shed covers; fibre-optic and FPV drones are everywhere. Russia recognised the Taliban government in 2025 and in August 2026 agreed with Syria's new government to convert Hmeimim and Tartus into joint training centres (reduced presence in levant_syria). Africa Corps (separate faction) is its expeditionary arm in Africa. Russian kit (AK-74M, PKM, RPG-7, BTR/BMP, T-72) also equips many Middle East and Central Asian enemies in early game via other factions. Job 7 (Captain, 2026-10-10): rus is added to alpine_europe as the hostile force: Russian mountain troops (34th Separate Guards Mountain Motor Rifle Brigade type) in a covert what-if presence. This is game fiction, not a real deployment, and is marked proposed.",
+  "proposed": [
+    "campaign_tier",
+    "relations.player",
+    "alignment_to_player",
+    "player_client",
+    "doctrine.ai_tuning",
+    "unit_templates",
+    "contract_types.as_target",
+    "vehicles[].prevalence (game weighting)",
+    "body_armor (game tier mapping)",
+    "theatres (baltic_coast/suwalki_gap/arctic_north are what-if escalation theatres)",
+    "theatres (alpine_europe: a covert mountain-troop presence is a game what-if; adding the theatre is Captain-confirmed 2026-10-10)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Russian_Ground_Forces",
+    "https://en.wikipedia.org/wiki/Russian_invasion_of_Ukraine",
+    "https://en.wikipedia.org/wiki/Cope_cage",
+    "https://en.wikipedia.org/wiki/T-90",
+    "https://en.wikipedia.org/wiki/T-72",
+    "https://en.wikipedia.org/wiki/BTR-80",
+    "https://en.wikipedia.org/wiki/Ratnik_(program)",
+    "https://en.wikipedia.org/wiki/AK-12",
+    "https://en.wikipedia.org/wiki/EMR_camouflage",
+    "https://www.thedefensenews.com/news-details/Russia-Receives-New-Batch-of-T-90M-T-80BVM-and-T-72B3M-Tanks-With-Anti-Drone-Upgrades/",
+    "https://www.strategypage.com/htmw/htlead/articles/2025061003119.aspx",
+    "https://euromaidanpress.com/2025/07/02/isw-russia-includes-new-military-training-focus-motorcycles-they-evade-drones-better/",
+    "https://www.defensenews.com/news/pentagon-congress/2026/05/11/ukraine-and-russia-fight-on-despite-us-mediated-ceasefire/",
+    "https://www.aljazeera.com/news/2026/8/9/syria-says-it-reached-deal-with-moscow-on-future-of-russian-bases"
+  ]
+}

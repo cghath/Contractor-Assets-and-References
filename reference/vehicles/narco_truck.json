@@ -1,0 +1,78 @@
+{
+  "id": "narco_truck",
+  "name": "Improvised armoured cartel truck ('monstruo')",
+  "aliases": [
+    "narco tank",
+    "monstruo",
+    "rhino truck",
+    "home-armoured pickup"
+  ],
+  "origin": "improvised",
+  "type": "technical",
+  "operators": [
+    "cartel_pacifico",
+    "cartel_jalisco_nueva"
+  ],
+  "crew": 3,
+  "passengers": 8,
+  "dimensions_m": {
+    "length": 6.8,
+    "width": 2.6,
+    "height": 3.2
+  },
+  "weight_t": 12,
+  "armament": [
+    "Rifles and belt-fed machine guns fired through ports in the hull",
+    "Roof turret or open ring with a .50 BMG rifle or machine gun (some vehicles)"
+  ],
+  "protection": "Real-world type: civilian heavy pickups or medium trucks (Ford F-series, Ram, Kenworth/International cab-overs) clad in welded steel plate, sometimes layered with gaps, with slit vision blocks and run-flat or caged tyres. Protection is uneven and seams are weak. Game: immune to small-calibre rounds like all vehicles; 7.62x54R and larger penetrate easily; every launcher in the game list penetrates; tyres, engine grille and vision slits are weak points.",
+  "visual_notes": [
+    "Generic inspired-by type, not a specific photographed vehicle",
+    "Base: a full-size crew-cab pickup or a 2-axle medium truck, entirely boxed in flat welded steel plates",
+    "Angular slab sides with rows of small square firing ports; narrow slits replacing the windscreen",
+    "Wedge-shaped front plate or ram bar over the grille; plates hanging low over the wheels",
+    "Roof hatch or box turret on some; fictional unit initials painted on the sides",
+    "Paint: matt black, olive or crude camouflage over bare welded seams and rust"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Matt black",
+      "palette": [
+        "#1E1E1E",
+        "#3A3A3A",
+        "#6B5A48"
+      ]
+    },
+    {
+      "name": "Crude olive camouflage",
+      "palette": [
+        "#5E6A3F",
+        "#3E4429",
+        "#8A7A55"
+      ]
+    },
+    {
+      "name": "Bare steel and rust",
+      "palette": [
+        "#6E6E6A",
+        "#8A5A3A",
+        "#3C3C38"
+      ]
+    }
+  ],
+  "variants": [
+    "Armoured crew-cab pickup (small, fast)",
+    "Armoured medium truck with troop box (large 'monstruo')",
+    "Turret truck with roof gun position"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Narco_tank",
+    "https://commons.wikimedia.org/wiki/Category:Narco_tanks"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Narco_tank",
+    "https://en.wikipedia.org/wiki/Mexican_drug_war"
+  ]
+}

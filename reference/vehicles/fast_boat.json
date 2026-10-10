@@ -1,0 +1,74 @@
+{
+  "id": "fast_boat",
+  "name": "Fibreglass skiff / fast boat",
+  "aliases": [
+    "skiff",
+    "panga",
+    "explosive boat (game hazard variant)"
+  ],
+  "origin": "Various (local and Gulf builders)",
+  "type": "boat",
+  "operators": [
+    "houthis",
+    "isis"
+  ],
+  "crew": 2,
+  "passengers": 4,
+  "dimensions_m": {
+    "length": 8.0,
+    "width": 2.2,
+    "height": 1.4
+  },
+  "weight_t": 1.5,
+  "armament": [
+    "Crew rifles and a PKM or DShK on a bow mount",
+    "Uncrewed explosive variant: game hazard only"
+  ],
+  "protection": "None. Fibreglass hull; 7.62x54R and up disable it in game, and small-calibre fire hits crew and engines.",
+  "visual_notes": [
+    "Open fibreglass hull with raised bow, centre or tiller steering",
+    "One or two outboard motors at the stern",
+    "Bow-mounted machine gun on armed boats",
+    "Uncrewed explosive variant: covered deck, no crew, low profile (telegraphed hazard)"
+  ],
+  "colour_schemes": [
+    {
+      "name": "White fishing skiff",
+      "palette": [
+        "#E8E6E0",
+        "#2A6FA0",
+        "#1F1F1F"
+      ]
+    },
+    {
+      "name": "Grey",
+      "palette": [
+        "#7A7E82",
+        "#3A3E42"
+      ]
+    },
+    {
+      "name": "Blue",
+      "palette": [
+        "#2A5A8A",
+        "#E8E6E0"
+      ]
+    }
+  ],
+  "variants": [
+    "Armed skiff with bow PKM/DShK",
+    "Uncrewed explosive boat (game hazard)",
+    "Fishing skiff (civilian)"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Red_Sea_crisis",
+    "https://en.wikipedia.org/wiki/Skiff",
+    "https://commons.wikimedia.org/wiki/Category:Skiffs"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Red_Sea_crisis",
+    "https://en.wikipedia.org/wiki/Houthis"
+  ]
+}

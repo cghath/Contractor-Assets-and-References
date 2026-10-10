@@ -1,0 +1,65 @@
+{
+  "id": "iveco_lmv",
+  "name": "Iveco LMV",
+  "aliases": [
+    "Lince",
+    "LMV Lynx",
+    "VTLM"
+  ],
+  "origin": "Italy",
+  "type": "light",
+  "operators": [
+    "ita",
+    "esp",
+    "bel",
+    "ukr",
+    "aut"
+  ],
+  "crew": 1,
+  "passengers": 4,
+  "dimensions_m": {
+    "length": 4.87,
+    "width": 2.05,
+    "height": 1.95
+  },
+  "weight_t": 6.5,
+  "armament": [
+    "Hitrole RWS or ring mount: 7.62 mm or 12.7 mm MG"
+  ],
+  "protection": "Light armour with V-shaped mine-protected cell. Game: immune to small-calibre rounds; 7.62x54R and larger penetrate the light armour; launchers destroy it outright.",
+  "visual_notes": [
+    "Compact 4x4 with a separate crew cell and small cargo bed at the back",
+    "Thick armoured windows, short bonnet",
+    "Roof ring or RWS"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Italian Army green/brown/black",
+      "palette": [
+        "#4D5534",
+        "#5E4A33",
+        "#1E1E1A"
+      ]
+    },
+    {
+      "name": "Desert sand",
+      "palette": [
+        "#C8B48A",
+        "#A8956C"
+      ]
+    }
+  ],
+  "variants": [
+    "VTLM Lince",
+    "VTLM 2"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Iveco_LMV"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Iveco_LMV",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Italian_Army"
+  ]
+}

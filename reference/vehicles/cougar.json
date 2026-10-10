@@ -1,0 +1,87 @@
+{
+  "id": "cougar",
+  "name": "Cougar (Mastiff / Ridgback)",
+  "aliases": [
+    "Mastiff",
+    "Ridgback",
+    "Wolfhound",
+    "Cougar HE",
+    "Cougar JERRV"
+  ],
+  "origin": "United States",
+  "type": "mrap",
+  "operators": [
+    "gbr",
+    "usa",
+    "can",
+    "irq",
+    "ita",
+    "pol",
+    "ukr",
+    "krg_peshmerga",
+    "pak",
+    "geo",
+    "aze",
+    "dnk",
+    "rou",
+    "jor"
+  ],
+  "crew": 2,
+  "passengers": 8,
+  "dimensions_m": {
+    "length": 7.08,
+    "width": 2.53,
+    "height": 2.64
+  },
+  "weight_t": 22.7,
+  "armament": [
+    "7.62 mm GPMG, 12.7 mm HMG or 40 mm GMG on RWS/hatch"
+  ],
+  "protection": "Monocoque V-hull MRAP; bar armour common. Game rule: immune to small-calibre; 7.62x54R AP and 12.7/14.5 mm can disable tyres, optics and gunner; launchers penetrate.",
+  "visual_notes": [
+    "Long tall 6x6 (Mastiff) or 4x4 (Ridgback) box body",
+    "Steep V-shaped bonnet",
+    "Rear door, small windows",
+    "Often surrounded by bar/slat armour"
+  ],
+  "colour_schemes": [
+    {
+      "name": "British desert sand",
+      "palette": [
+        "#C8B48A",
+        "#9C8560"
+      ]
+    },
+    {
+      "name": "British green/black",
+      "palette": [
+        "#3E4A32",
+        "#1E2118"
+      ]
+    },
+    {
+      "name": "US desert tan (CARC 686A)",
+      "palette": [
+        "#C2B28A",
+        "#A89670",
+        "#4A4436"
+      ]
+    }
+  ],
+  "variants": [
+    "Mastiff 2 (6x6)",
+    "Ridgback (4x4)",
+    "Wolfhound (cargo)",
+    "Cougar HE",
+    "Cougar JERRV"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Cougar_(MRAP)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Cougar_(MRAP)",
+    "https://ukdefencejournal.org.uk/the-direction-of-the-british-armys-combat-vehicle-fleet/"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "id": "stryker",
+  "name": "Stryker",
+  "aliases": [
+    "M1126 ICV",
+    "M1296 Dragoon",
+    "M-SHORAD",
+    "LAV III family"
+  ],
+  "origin": "United States / Canada",
+  "type": "apc",
+  "operators": [
+    "usa",
+    "ukr"
+  ],
+  "crew": 2,
+  "passengers": 9,
+  "dimensions_m": {
+    "length": 6.95,
+    "width": 2.72,
+    "height": 2.64
+  },
+  "weight_t": 16.5,
+  "armament": [
+    "12.7 mm M2 or 40 mm Mk 19 on RWS (ICV)",
+    "30 mm XM813 cannon (M1296 Dragoon)",
+    "TOW (M1134 ATGM)",
+    "30 mm + Stinger (M-SHORAD)"
+  ],
+  "protection": "Steel hull with ceramic add-on; slat armour against RPGs; double-V hull on later builds. Game rule: immune to small-calibre; 7.62x54R AP and 12.7/14.5 mm can disable tyres, optics and gunner; launchers penetrate.",
+  "visual_notes": [
+    "8x8, four evenly spaced axles",
+    "Angular faceted hull, driver front-left, engine front-right",
+    "Slat-armour cage around entire hull on deployed vehicles",
+    "Low RWS on roof (ICV) or unmanned 30 mm turret (Dragoon)",
+    "Large rear ramp"
+  ],
+  "colour_schemes": [
+    {
+      "name": "US desert tan (CARC 686A)",
+      "palette": [
+        "#C2B28A",
+        "#A89670",
+        "#4A4436"
+      ]
+    },
+    {
+      "name": "US forest green (CARC 383)",
+      "palette": [
+        "#4B5320",
+        "#3A4119",
+        "#26281A"
+      ]
+    }
+  ],
+  "variants": [
+    "M1126 ICV",
+    "M1296 Dragoon",
+    "M1134 ATGM",
+    "M1129 mortar carrier",
+    "M-SHORAD",
+    "M1133 MEV"
+  ],
+  "existing_model": null,
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Stryker"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Stryker"
+  ]
+}

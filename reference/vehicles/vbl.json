@@ -1,0 +1,65 @@
+{
+  "id": "vbl",
+  "name": "Panhard VBL",
+  "aliases": [
+    "VBL",
+    "VBL Ultima"
+  ],
+  "origin": "France",
+  "type": "light",
+  "operators": [
+    "fra",
+    "grc",
+    "sahel_aes"
+  ],
+  "crew": 3,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 3.87,
+    "width": 2.02,
+    "height": 1.7
+  },
+  "weight_t": 3.6,
+  "armament": [
+    "7.62 mm MG or 12.7 mm M2HB on a ring/RWS",
+    "Some carry an Eryx or MILAN post"
+  ],
+  "protection": "Light armour against small arms and shell splinters. Game: immune to small-calibre rounds; 7.62x54R and larger penetrate the light armour; launchers destroy it outright.",
+  "visual_notes": [
+    "Very small boxy 4x4 scout car with steeply sloped front",
+    "Open roof ring mount behind the cab",
+    "Spare wheel, jerrycans and stowage on rear",
+    "Ultima upgrade: new bumpers, RWS on some"
+  ],
+  "colour_schemes": [
+    {
+      "name": "French Centre-Europe three-tone",
+      "palette": [
+        "#555A3E",
+        "#5C4A34",
+        "#1F1F1A"
+      ]
+    },
+    {
+      "name": "Desert sand",
+      "palette": [
+        "#C8B48A",
+        "#A8956C"
+      ]
+    }
+  ],
+  "variants": [
+    "VBL Ultima",
+    "VB2L (long)"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Panhard_VBL",
+    "https://commons.wikimedia.org/wiki/Category:Panhard VBL"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Panhard_VBL",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_French_Army"
+  ]
+}

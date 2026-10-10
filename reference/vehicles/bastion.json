@@ -1,0 +1,55 @@
+{
+  "id": "bastion",
+  "name": "ACMAT Bastion",
+  "aliases": [
+    "Bastion APC"
+  ],
+  "origin": "France",
+  "type": "apc",
+  "operators": [
+    "arm",
+    "sahel_aes"
+  ],
+  "crew": 2,
+  "passengers": 8,
+  "dimensions_m": {
+    "length": 6.0,
+    "width": 2.2,
+    "height": 2.4
+  },
+  "weight_t": 12.0,
+  "armament": [
+    "7.62 mm or 12.7 mm MG on ring or RWS"
+  ],
+  "protection": "STANAG 4569 Level 1-3. Game: immune to small-calibre (5.56/5.45/7.62x39/7.62x51); 7.62x54R AP and larger can penetrate side/rear and disable tyres/engine; every launcher in the game list penetrates.",
+  "visual_notes": [
+    "Boxy 4x4 armoured body on an ACMAT VLRA truck chassis, upright flat windscreen panels",
+    "Roof ring mount, side and rear doors",
+    "Armenian vehicles in plain green"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Armenian olive green",
+      "palette": [
+        "#4D5A36",
+        "#3A4329",
+        "#6E6A4A"
+      ]
+    }
+  ],
+  "variants": [
+    "Bastion",
+    "Bastion PATSAS (SOF)",
+    "Fortress (Bastion HM)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/ACMAT_Bastion",
+    "https://commons.wikimedia.org/wiki/Category:ACMAT_Bastion"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/ACMAT_Bastion",
+    "https://militarnyi.com/en/news/france-ships-a-batch-of-bastion-armored-vehicles-to-armenia/"
+  ]
+}

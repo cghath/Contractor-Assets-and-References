@@ -1,0 +1,59 @@
+{
+  "id": "t129",
+  "name": "TAI T129 ATAK",
+  "aliases": [
+    "T129",
+    "ATAK"
+  ],
+  "origin": "Turkey (AW129-derived)",
+  "type": "attack_heli",
+  "operators": [
+    "tur"
+  ],
+  "crew": 2,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 14.5,
+    "width": 11.9,
+    "height": 3.4
+  },
+  "weight_t": 5.0,
+  "armament": [
+    "20 mm three-barrel chin cannon",
+    "UMTAS / L-UMTAS ATGM",
+    "Cirit 70 mm laser-guided rockets",
+    "Stinger AAM"
+  ],
+  "protection": "Armoured crew seats and self-sealing tanks. Game: small-calibre only damages; 12.7 mm and MANPADS can bring it down.",
+  "visual_notes": [
+    "Very slim tandem-seat fuselage with stepped canopy (gunner front)",
+    "Stub wings with 4 pylons; chin turret cannon",
+    "Four-blade main rotor and tail rotor on the left; nose sensor ball above the gun",
+    "Larger engine housings than the Italian A129"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Turkish Army Aviation grey-green",
+      "palette": [
+        "#5C6355",
+        "#3E4339",
+        "#8A8F86"
+      ]
+    }
+  ],
+  "variants": [
+    "T129A (early)",
+    "T129B (full weapons fit)",
+    "T129 Phase-2 (domestic engine)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/TAI/AgustaWestland_T129_ATAK",
+    "https://commons.wikimedia.org/wiki/Category:TAI_T129_ATAK"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/TAI/AgustaWestland_T129_ATAK",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Turkish_Land_Forces"
+  ]
+}

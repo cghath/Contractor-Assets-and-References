@@ -1,0 +1,57 @@
+{
+  "id": "hermes450",
+  "name": "Elbit Hermes 450",
+  "aliases": [
+    "Zik",
+    "Hermes 450"
+  ],
+  "origin": "Israel",
+  "type": "uav",
+  "operators": [
+    "isr",
+    "che",
+    "mex"
+  ],
+  "crew": 0,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 6.1,
+    "width": 10.5,
+    "height": 2.0
+  },
+  "weight_t": 0.45,
+  "armament": [
+    "Reconnaissance; reported to carry small guided missiles (game: designator / light strike)"
+  ],
+  "protection": "Game: any calibre can damage it; 7.62x54R and 12.7 mm can bring it down; EW support assets can jam or force it down.",
+  "visual_notes": [
+    "Slender fuselage, long straight high wing",
+    "V-tail",
+    "Rear pusher propeller",
+    "Belly EO/IR turret"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Light grey",
+      "palette": [
+        "#B8BCC0",
+        "#8E9196"
+      ]
+    }
+  ],
+  "variants": [
+    "Hermes 450",
+    "Hermes 900 (larger)",
+    "Watchkeeper WK450 (UK derivative)",
+    "ADS 15 / Hermes 900 HFE (CHE)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Elbit_Hermes_450",
+    "https://commons.wikimedia.org/wiki/Category:Elbit_Hermes_450"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Elbit_Hermes_450"
+  ]
+}

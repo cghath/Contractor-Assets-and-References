@@ -1,0 +1,62 @@
+{
+  "id": "sa330",
+  "name": "SA 330 Puma / IAR 330",
+  "aliases": [
+    "IAR 330 SOCAT",
+    "IAR 330L",
+    "Puma"
+  ],
+  "origin": "France (licence-built in Romania by IAR)",
+  "type": "transport_heli",
+  "operators": [
+    "rou",
+    "ukr",
+    "che"
+  ],
+  "crew": 3,
+  "passengers": 16,
+  "dimensions_m": {
+    "length": 18.15,
+    "width": 15.0,
+    "height": 5.14
+  },
+  "weight_t": 7.4,
+  "armament": [
+    "Door-mounted 7.62 mm MGs",
+    "SOCAT: chin 20 mm THL-20 cannon, 57 mm rocket pods, Spike-ER ATGM on stub pylons"
+  ],
+  "protection": "Unarmoured airframe. Game: any calibre can damage; 7.62x54R and larger can bring it down with sustained fire; MANPADS and launchers destroy it.",
+  "visual_notes": [
+    "Width given is main-rotor diameter (15 m); fuselage 14.06 m",
+    "Four-blade main rotor, twin turbines in a fairing above the cabin, tail rotor on the right of the tail boom",
+    "Large sliding cabin doors on both sides, retractable tricycle undercarriage with sponson fairings",
+    "SOCAT: chin turret cannon, stub pylons with rockets and missiles, nose sensor turret"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Romanian Air Force camouflage",
+      "palette": [
+        "#5B6440",
+        "#7A6A48",
+        "#3C4230",
+        "#B9B9AA"
+      ]
+    }
+  ],
+  "variants": [
+    "IAR 330L",
+    "IAR 330 SOCAT",
+    "IAR 330 Naval",
+    "SA 330 Puma",
+    "AS332 Super Puma / AS532 Cougar (CHE, Puma family)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/IAR_330"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/IAR_330",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Romanian_Armed_Forces"
+  ]
+}
