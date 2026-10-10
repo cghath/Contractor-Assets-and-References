@@ -25,7 +25,7 @@ def write(fids, wi, ai, ri):
     early = {f for f, d in docs.items() if d.get('campaign_tier') == 'early'}
     L = []
     L.append('# AI default loadouts\n')
-    L.append('Default AI loadouts for the 76 non-player factions in `factions/` (every faction id except `player`), as of 2026-10-10. '
+    L.append(f'Default AI loadouts for the {len(fids)} non-player factions in `factions/` (every faction id except `player`), as of 2026-10-10. '
              'Weapons, ammunition, armor and helmets use real-world designations (Captain, 2026-10-10); fictional cartels and PMCs use real gear. '
              'The schema is in [docs/loadouts_handoff.md](../docs/loadouts_handoff.md). Counts, optics, medical levels and the game kits are proposals (`proposed` in each file).\n')
     L.append('- `loadouts/<faction id>.json`: one file per faction: variants, each with every role\'s weapons, ammunition, launcher, grenades, armor, medical kit, other kit and a `game_kit` built only from items that exist in the game today.')

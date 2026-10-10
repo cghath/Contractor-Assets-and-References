@@ -89,7 +89,10 @@
     "vnm": 35,
     "mex": 20,
     "aze": -55,
-    "pmc_kestrel": -65
+    "pmc_kestrel": -65,
+    "adf": -85,
+    "m23": -25,
+    "cod": 30
   },
   "theatres": [
     "sahel",

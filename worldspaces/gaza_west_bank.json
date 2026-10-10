@@ -212,18 +212,22 @@
       {"name": "Sector A central districts", "area_km2": 9, "layout": "hamas command node in a tunnel-shaft quarter; 3-4 outposts in damaged blocks; aid-route checkpoints; roaming 2-4 man cells and drone teams; demarcation-line posts as the third party. Proposed only for late in the early game, given the civilian density."}
     ]
   },
-  "insertion": {"lhd": true, "fob": "Coastal map but LHD operations are restricted by the client (proposed: LHD only for evacuation contracts via the fishing harbour). Normal entry is by road through the southern crossing (Sector A) or the Jordan River crossing (Sector B), from a FOB on the far side of each crossing; helicopters only for medical evacuation."},
+  "insertion": {"lhd": true, "fob": "Coastal map but LHD operations are restricted by the client (Captain-confirmed 2026-10-10: LHD only for evacuation contracts via the fishing harbour). Normal entry is by road through the southern crossing (Sector A) or the Jordan River crossing (Sector B), from a FOB on the far side of each crossing; helicopters only for medical evacuation."},
   "early_game_suitable": true,
   "early_game_notes": "hamas and pij are early-tier (pij is the lowest-ramp enemy in the game), but civilian density is extreme, so early contracts here should be escort, election security and UXO work rather than raids.",
   "ambient_audio": ["drone buzz overhead (constant in Sector A)", "generators", "crowds at aid points", "call to prayer", "sea surf", "donkey carts on rubble", "church bells (Sector B towns)", "checkpoint loudspeakers"],
+  "captain_confirmed": [
+    "map_size_km 20 x 16 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
+    "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
+    "materials accepted as the next voxel_world.gd additions (Captain, 2026-10-10); not yet in the game: CINDER_BLOCK #9a978f, TARP #3f6d8c, PLASTER #e3dccb, LIMESTONE #d6caa8, STONE #8f8676, ROOF_TILE #a4553b, GLASS #9fbcc4, CORRUGATED_IRON #8b8e8c, DIRT_BERM #8a6f4e, SANDBAG #b8a378",
+    "LHD restricted to evacuation contracts via the fishing harbour; the restriction stays (Captain, 2026-10-10)"
+  ],
   "proposed": [
     "two-sector layout on one map file and the off-map link between sectors",
-    "map_size_km and all generator numbers",
+    "all generator numbers",
     "destruction mask percentages (based on reported damage scale, tuned for play)",
     "disarmament-progress meter and phased-withdrawal events",
-    "LHD restriction rule for this theatre",
     "International Stabilization Force not modelled (no faction file)",
-    "materials: CINDER_BLOCK #9a978f, TARP #3f6d8c, PLASTER #e3dccb, LIMESTONE #d6caa8, STONE #8f8676, ROOF_TILE #a4553b, GLASS #9fbcc4, CORRUGATED_IRON #8b8e8c, DIRT_BERM #8a6f4e, SANDBAG #b8a378",
     "tunnels as level geometry only"
   ],
   "sources": [

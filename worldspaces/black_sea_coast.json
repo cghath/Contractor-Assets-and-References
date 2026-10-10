@@ -114,13 +114,18 @@
   "early_game_suitable": false,
   "early_game_notes": "State-on-state strike war and sabotage (rus late, pmc_kestrel mid); mid-to-late campaign.",
   "ambient_audio": ["frogs and birds in reeds", "boat outboards", "gulls", "air-raid sirens and air-defence fire (events)", "grain conveyors", "church bells", "wind over the steppe"],
+  "captain_confirmed": [
+    "map_size_km 22 x 20 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
+    "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
+    "materials accepted as the next voxel_world.gd additions (Captain, 2026-10-10); not yet in the game: LIMESTONE #d6caa8, PLASTER #e3dccb, THATCH #b49a5e, BRICK #9c5a3c, CORRUGATED_IRON #8b8e8c, GLASS #9fbcc4, SANDBAG #b8a378, DIRT_BERM #8a6f4e",
+    "the late-game escalation hot zone stays as a what-if, clearly marked fictional; the default state is the real 2026 situation (Captain, 2026-10-10)"
+  ],
   "proposed": [
-    "map_size_km and composite layout (Ukrainian, Romanian and Moldovan sectors)",
+    "composite layout (Ukrainian, Romanian and Moldovan sectors)",
     "generator numbers",
-    "strike and sabotage as the frontline model; land front only in a late escalation",
+    "strike and sabotage as the frontline model",
     "LHD in Ukrainian or Romanian waters",
     "zone_plan and hot zone",
-    "materials: LIMESTONE #d6caa8, PLASTER #e3dccb, THATCH #b49a5e, BRICK #9c5a3c, CORRUGATED_IRON #8b8e8c, GLASS #9fbcc4, SANDBAG #b8a378, DIRT_BERM #8a6f4e",
     "sea mines as drifting hazards only"
   ],
   "sources": [

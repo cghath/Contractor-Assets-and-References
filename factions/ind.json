@@ -14,7 +14,8 @@
     "quad",
     "brics",
     "sco",
-    "unifil"
+    "unifil",
+    "monusco"
   ],
   "campaign_tier": "mid",
   "alignment_to_player": "neutral",
@@ -46,13 +47,18 @@
     "houthis": -50,
     "egy": 35,
     "kaz": 30,
-    "can": 15
+    "can": 15,
+    "adf": -90,
+    "m23": -45,
+    "cod": 35
   },
   "theatres": [
     "kashmir_loc",
     "afghan_highlands",
     "persian_gulf_coast",
-    "yemen_red_sea"
+    "yemen_red_sea",
+    "eastern_congo",
+    "lebanon_south"
   ],
   "languages": [
     "Hindi",
@@ -409,7 +415,7 @@
       "intel_theft (pak-aligned fixers)"
     ]
   },
-  "notes": "Neutral mid-tier state (proposal). India and Pakistan should be mutually exclusive clients with a long lockout. Proposal: India does NOT hire PMCs for operations inside Kashmir (sovereignty); contracts are overseas evacuation, maritime and counter-terror work. Real-world: April 2025 Pahalgam attack and May 2025 India-Pakistan conflict; India-China border disengagement deal October 2024.",
+  "notes": "Neutral mid-tier state (proposal). India and Pakistan should be mutually exclusive clients with a long lockout. Proposal: India does NOT hire PMCs for operations inside Kashmir (sovereignty); contracts are overseas evacuation, maritime and counter-terror work. Real-world: April 2025 Pahalgam attack and May 2025 India-Pakistan conflict; India-China border disengagement deal October 2024. Job 7 (Captain, 2026-10-10): ind appears as UN peacekeepers on eastern_congo (MONUSCO; India is a long-standing troop contributor, about 1,100-1,200 troops around Goma and Sake in January 2025) and on lebanon_south (UNIFIL; now also listed in theatres so factions_present matches). Peacekeepers are neutral units on those maps.",
   "proposed": [
     "doctrine.ai_tuning",
     "relations.player",

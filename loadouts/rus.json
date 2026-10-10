@@ -3723,11 +3723,751 @@
     }
    ],
    "notes": ["Faction file: mobilised units often wear older or lighter kit (light vest, light helmet); older AK-74s and Soviet-era ATGMs."]
+  },
+  {
+   "id": "mountain",
+   "name": "Mountain motor rifle troops (34th Separate Guards Mountain Motor Rifle Brigade type)",
+   "camo": "Private-purchase 'Moss'/multicam-type and olive Gorka suits",
+   "armor_tier": "medium",
+   "medical_level": "basic",
+   "roles": {
+    "rifleman": {
+     "primary": {
+      "id": "ak74m",
+      "name": "AK-74M",
+      "calibre": "5.45x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "collimator", "name": "Collimator (Kobra / 1P87 / EKP-8 class)"},
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N10 (enhanced penetration)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n10",
+       "rounds_per_mag": 30,
+       "count": 6,
+       "game_item_id": null
+      },
+      "alternates": ["ak12"]
+     },
+     "secondary": null,
+     "launcher": {
+      "id": "rpg26",
+      "name": "RPG-26 Aglen (72.5mm)",
+      "kind": "disposable",
+      "in_game": false,
+      "game_launcher": null,
+      "game_substitute": "AT4",
+      "game_item_id": null,
+      "rounds": [{"name": "72.5mm HEAT", "type": "HEAT", "count": 1}]
+     },
+     "grenades": [
+      {"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"},
+      {"id": "f1", "name": "F-1 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}
+     ],
+     "armor": {
+      "vest": {"id": "6b45", "name": "6B45 Ratnik body armour", "tier": "medium", "game_item_id": "plate_carrier"},
+      "plates": {
+       "id": "6b45_plates",
+       "name": "6B45 ceramic plates (GOST Br5)",
+       "material": "ceramic",
+       "real_rating": "GOST Br5 (7.62x54R B32 API)",
+       "front": true,
+       "back": true,
+       "game_rating": "IV",
+       "game_item_id": "plate_ceramic_l4"
+      },
+      "side_plates": null,
+      "helmet": {"id": "6b47", "name": "6B47 Ratnik helmet", "tier": "medium", "game_rating": "IIIA", "game_item_id": "helmet"}
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [{"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"}, {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"}]
+     },
+     "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}],
+     "game_kit": [
+      ["plate_carrier", 1],
+      ["plate_ceramic_l4", 2],
+      ["helmet", 1],
+      ["m4a1", 1],
+      ["mag_556", 6],
+      ["frag_grenade", 2],
+      ["ifak", 1],
+      ["tourniquet", 1],
+      ["pressure_bandage", 2],
+      ["assault_pack", 1]
+     ]
+    },
+    "autorifleman": {
+     "primary": {
+      "id": "pkp",
+      "name": "PKP Pecheneg",
+      "calibre": "7.62x54R",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "iron", "name": "Iron sights"},
+      "ammo": {
+       "id": "belt_762x54r_100",
+       "round": "7.62x54R 7N13 (steel core), 7N1 for the SVD",
+       "game_round_id": "762x54r_lps",
+       "proposed_round_id": "762x54r_7n13",
+       "rounds_per_mag": 100,
+       "count": 3,
+       "game_item_id": null
+      },
+      "alternates": ["pkm", "rpk16"]
+     },
+     "secondary": null,
+     "launcher": null,
+     "grenades": [{"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}],
+     "armor": {
+      "vest": {"id": "6b45", "name": "6B45 Ratnik body armour", "tier": "medium", "game_item_id": "plate_carrier"},
+      "plates": {
+       "id": "6b45_plates",
+       "name": "6B45 ceramic plates (GOST Br5)",
+       "material": "ceramic",
+       "real_rating": "GOST Br5 (7.62x54R B32 API)",
+       "front": true,
+       "back": true,
+       "game_rating": "IV",
+       "game_item_id": "plate_ceramic_l4"
+      },
+      "side_plates": null,
+      "helmet": {"id": "6b47", "name": "6B47 Ratnik helmet", "tier": "medium", "game_rating": "IIIA", "game_item_id": "helmet"}
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [{"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"}, {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"}]
+     },
+     "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}],
+     "game_kit": [
+      ["plate_carrier", 1],
+      ["plate_ceramic_l4", 2],
+      ["helmet", 1],
+      ["m4a1", 1],
+      ["mag_556", 10],
+      ["frag_grenade", 1],
+      ["ifak", 1],
+      ["tourniquet", 1],
+      ["pressure_bandage", 2],
+      ["assault_pack", 1]
+     ]
+    },
+    "marksman": {
+     "primary": {
+      "id": "svdm",
+      "name": "SVDM Dragunov",
+      "calibre": "7.62x54R",
+      "game_item_id": null,
+      "game_substitute": "m110",
+      "optic": {"id": "pso1", "name": "PSO-1 4x scope"},
+      "ammo": {
+       "id": "mag_762x54r_10",
+       "round": "7.62x54R 7N13 (steel core), 7N1 for the SVD",
+       "game_round_id": "762x54r_lps",
+       "proposed_round_id": "762x54r_7n13",
+       "rounds_per_mag": 10,
+       "count": 6,
+       "game_item_id": null
+      },
+      "alternates": ["svd"]
+     },
+     "secondary": null,
+     "launcher": null,
+     "grenades": [{"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}],
+     "armor": {
+      "vest": {"id": "6b45", "name": "6B45 Ratnik body armour", "tier": "medium", "game_item_id": "plate_carrier"},
+      "plates": {
+       "id": "6b45_plates",
+       "name": "6B45 ceramic plates (GOST Br5)",
+       "material": "ceramic",
+       "real_rating": "GOST Br5 (7.62x54R B32 API)",
+       "front": true,
+       "back": true,
+       "game_rating": "IV",
+       "game_item_id": "plate_ceramic_l4"
+      },
+      "side_plates": null,
+      "helmet": {"id": "6b47", "name": "6B47 Ratnik helmet", "tier": "medium", "game_rating": "IIIA", "game_item_id": "helmet"}
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [{"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"}, {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"}]
+     },
+     "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}, {"id": "nvg_mono", "count": 1, "game_item_id": null}],
+     "game_kit": [
+      ["plate_carrier", 1],
+      ["plate_ceramic_l4", 2],
+      ["helmet", 1],
+      ["m110", 1],
+      ["mag_762", 3],
+      ["frag_grenade", 1],
+      ["ifak", 1],
+      ["tourniquet", 1],
+      ["pressure_bandage", 2],
+      ["assault_pack", 1]
+     ]
+    },
+    "grenadier": {
+     "primary": {
+      "id": "ak74m",
+      "name": "AK-74M",
+      "calibre": "5.45x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "collimator", "name": "Collimator (Kobra / 1P87 / EKP-8 class)"},
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N10 (enhanced penetration)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n10",
+       "rounds_per_mag": 30,
+       "count": 6,
+       "game_item_id": null
+      },
+      "underbarrel": {
+       "id": "gp34",
+       "name": "GP-34",
+       "calibre": "40mm VOG-25 (caseless)",
+       "game_item_id": null,
+       "ammo": [{"id": "gl_vog25", "name": "VOG-25 40mm caseless HE grenade", "count": 10, "game_item_id": null}]
+      }
+     },
+     "secondary": null,
+     "launcher": null,
+     "grenades": [{"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}],
+     "armor": {
+      "vest": {"id": "6b45", "name": "6B45 Ratnik body armour", "tier": "medium", "game_item_id": "plate_carrier"},
+      "plates": {
+       "id": "6b45_plates",
+       "name": "6B45 ceramic plates (GOST Br5)",
+       "material": "ceramic",
+       "real_rating": "GOST Br5 (7.62x54R B32 API)",
+       "front": true,
+       "back": true,
+       "game_rating": "IV",
+       "game_item_id": "plate_ceramic_l4"
+      },
+      "side_plates": null,
+      "helmet": {"id": "6b47", "name": "6B47 Ratnik helmet", "tier": "medium", "game_rating": "IIIA", "game_item_id": "helmet"}
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [{"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"}, {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"}]
+     },
+     "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}],
+     "game_kit": [
+      ["plate_carrier", 1],
+      ["plate_ceramic_l4", 2],
+      ["helmet", 1],
+      ["m4a1", 1],
+      ["mag_556", 6],
+      ["frag_grenade", 1],
+      ["ifak", 1],
+      ["tourniquet", 1],
+      ["pressure_bandage", 2],
+      ["assault_pack", 1]
+     ]
+    },
+    "at": {
+     "primary": {
+      "id": "ak74m",
+      "name": "AK-74M",
+      "calibre": "5.45x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "collimator", "name": "Collimator (Kobra / 1P87 / EKP-8 class)"},
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N10 (enhanced penetration)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n10",
+       "rounds_per_mag": 30,
+       "count": 4,
+       "game_item_id": null
+      }
+     },
+     "secondary": null,
+     "launcher": {
+      "id": "rpg7v2",
+      "name": "RPG-7V2",
+      "kind": "rocket",
+      "in_game": true,
+      "game_launcher": "RPG-7",
+      "game_substitute": null,
+      "game_item_id": null,
+      "proposed_game_item_id": "rpg7",
+      "rounds": [
+       {"name": "PG-7V", "type": "HEAT", "count": 2, "proposed_game_item_id": "pg7v"},
+       {"name": "OG-7V", "type": "frag", "count": 1, "proposed_game_item_id": "og7v"}
+      ],
+      "alternates": ["rpg26", "rpo_a"]
+     },
+     "grenades": [{"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}],
+     "armor": {
+      "vest": {"id": "6b45", "name": "6B45 Ratnik body armour", "tier": "medium", "game_item_id": "plate_carrier"},
+      "plates": {
+       "id": "6b45_plates",
+       "name": "6B45 ceramic plates (GOST Br5)",
+       "material": "ceramic",
+       "real_rating": "GOST Br5 (7.62x54R B32 API)",
+       "front": true,
+       "back": true,
+       "game_rating": "IV",
+       "game_item_id": "plate_ceramic_l4"
+      },
+      "side_plates": null,
+      "helmet": {"id": "6b47", "name": "6B47 Ratnik helmet", "tier": "medium", "game_rating": "IIIA", "game_item_id": "helmet"}
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [{"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"}, {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"}]
+     },
+     "other": [{"id": "ruck_45", "count": 1, "game_item_id": "ruck_45"}],
+     "game_kit": [
+      ["plate_carrier", 1],
+      ["plate_ceramic_l4", 2],
+      ["helmet", 1],
+      ["m4a1", 1],
+      ["mag_556", 4],
+      ["frag_grenade", 1],
+      ["ifak", 1],
+      ["tourniquet", 1],
+      ["pressure_bandage", 2],
+      ["ruck_45", 1]
+     ]
+    },
+    "medic": {
+     "primary": {
+      "id": "ak74m",
+      "name": "AK-74M",
+      "calibre": "5.45x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "collimator", "name": "Collimator (Kobra / 1P87 / EKP-8 class)"},
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N10 (enhanced penetration)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n10",
+       "rounds_per_mag": 30,
+       "count": 4,
+       "game_item_id": null
+      }
+     },
+     "secondary": {
+      "id": "pm_makarov",
+      "name": "PM Makarov",
+      "calibre": "9x18mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {
+       "id": "mag_9x18_8",
+       "round": "9x18mm 57-N-181S",
+       "game_round_id": null,
+       "proposed_round_id": "9x18_57n181s",
+       "rounds_per_mag": 8,
+       "count": 2,
+       "game_item_id": null
+      }
+     },
+     "launcher": null,
+     "grenades": [{"id": "rdg2b", "name": "RDG-2B white smoke", "kind": "smoke_white", "count": 1, "game_item_id": "smoke_grenade"}],
+     "armor": {
+      "vest": {"id": "6b45", "name": "6B45 Ratnik body armour", "tier": "medium", "game_item_id": "plate_carrier"},
+      "plates": {
+       "id": "6b45_plates",
+       "name": "6B45 ceramic plates (GOST Br5)",
+       "material": "ceramic",
+       "real_rating": "GOST Br5 (7.62x54R B32 API)",
+       "front": true,
+       "back": true,
+       "game_rating": "IV",
+       "game_item_id": "plate_ceramic_l4"
+      },
+      "side_plates": null,
+      "helmet": {"id": "6b47", "name": "6B47 Ratnik helmet", "tier": "medium", "game_rating": "IIIA", "game_item_id": "helmet"}
+     },
+     "medical": {
+      "container": "trauma_kit",
+      "items": [
+       {"id": "tourniquet", "count": 2, "game_item_id": "tourniquet"},
+       {"id": "pressure_bandage", "count": 6, "game_item_id": "pressure_bandage"},
+       {"id": "hemostatic_gauze", "count": 1, "game_item_id": "hemostatic_gauze"},
+       {"id": "chest_seal", "count": 1, "game_item_id": "chest_seal"},
+       {"id": "splint", "count": 1, "game_item_id": "splint"},
+       {"id": "npa", "count": 1, "game_item_id": "npa"},
+       {"id": "iv_18g", "count": 1, "game_item_id": null},
+       {"id": "saline_500", "count": 1, "game_item_id": null},
+       {"id": "morphine", "count": 2, "game_item_id": "morphine"},
+       {"id": "epinephrine", "count": 1, "game_item_id": null}
+      ]
+     },
+     "other": [{"id": "ruck_45", "count": 1, "game_item_id": "ruck_45"}],
+     "game_kit": [
+      ["plate_carrier", 1],
+      ["plate_ceramic_l4", 2],
+      ["helmet", 1],
+      ["m4a1", 1],
+      ["mag_556", 4],
+      ["m17", 1],
+      ["mag_9mm", 2],
+      ["smoke_grenade", 1],
+      ["trauma_kit", 1],
+      ["tourniquet", 2],
+      ["pressure_bandage", 6],
+      ["hemostatic_gauze", 1],
+      ["chest_seal", 1],
+      ["splint", 1],
+      ["npa", 1],
+      ["morphine", 2],
+      ["ruck_45", 1]
+     ]
+    },
+    "squad_leader": {
+     "primary": {
+      "id": "ak12",
+      "name": "AK-12",
+      "calibre": "5.45x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "collimator", "name": "Collimator (Kobra / 1P87 / EKP-8 class)"},
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N10 (enhanced penetration)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n10",
+       "rounds_per_mag": 30,
+       "count": 6,
+       "game_item_id": null
+      }
+     },
+     "secondary": {
+      "id": "pm_makarov",
+      "name": "PM Makarov",
+      "calibre": "9x18mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {
+       "id": "mag_9x18_8",
+       "round": "9x18mm 57-N-181S",
+       "game_round_id": null,
+       "proposed_round_id": "9x18_57n181s",
+       "rounds_per_mag": 8,
+       "count": 2,
+       "game_item_id": null
+      }
+     },
+     "launcher": null,
+     "grenades": [
+      {"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"},
+      {"id": "f1", "name": "F-1 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"},
+      {"id": "rdg2b", "name": "RDG-2B white smoke", "kind": "smoke_white", "count": 1, "game_item_id": "smoke_grenade"}
+     ],
+     "armor": {
+      "vest": {"id": "6b45", "name": "6B45 Ratnik body armour", "tier": "medium", "game_item_id": "plate_carrier"},
+      "plates": {
+       "id": "6b45_plates",
+       "name": "6B45 ceramic plates (GOST Br5)",
+       "material": "ceramic",
+       "real_rating": "GOST Br5 (7.62x54R B32 API)",
+       "front": true,
+       "back": true,
+       "game_rating": "IV",
+       "game_item_id": "plate_ceramic_l4"
+      },
+      "side_plates": null,
+      "helmet": {"id": "6b47", "name": "6B47 Ratnik helmet", "tier": "medium", "game_rating": "IIIA", "game_item_id": "helmet"}
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [{"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"}, {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"}]
+     },
+     "other": [
+      {"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"},
+      {"id": "radio", "count": 1, "game_item_id": null},
+      {"id": "binoculars", "count": 1, "game_item_id": null},
+      {"id": "nvg_mono", "count": 1, "game_item_id": null}
+     ],
+     "game_kit": [
+      ["plate_carrier", 1],
+      ["plate_ceramic_l4", 2],
+      ["helmet", 1],
+      ["m4a1", 1],
+      ["mag_556", 6],
+      ["m17", 1],
+      ["mag_9mm", 2],
+      ["frag_grenade", 2],
+      ["smoke_grenade", 1],
+      ["ifak", 1],
+      ["tourniquet", 1],
+      ["pressure_bandage", 2],
+      ["assault_pack", 1]
+     ]
+    },
+    "sniper": {
+     "primary": {
+      "id": "sv98",
+      "name": "SV-98",
+      "calibre": "7.62x54R",
+      "game_item_id": null,
+      "game_substitute": "m110",
+      "optic": {"id": "sniper_scope", "name": "5-25x sniper scope"},
+      "ammo": {
+       "id": "mag_762x54r_10",
+       "round": "7.62x54R 7N13 (steel core), 7N1 for the SVD",
+       "game_round_id": "762x54r_lps",
+       "proposed_round_id": "762x54r_7n13",
+       "rounds_per_mag": 10,
+       "count": 5,
+       "game_item_id": null
+      },
+      "alternates": ["t5000", "asvk"]
+     },
+     "secondary": {
+      "id": "pm_makarov",
+      "name": "PM Makarov",
+      "calibre": "9x18mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {
+       "id": "mag_9x18_8",
+       "round": "9x18mm 57-N-181S",
+       "game_round_id": null,
+       "proposed_round_id": "9x18_57n181s",
+       "rounds_per_mag": 8,
+       "count": 2,
+       "game_item_id": null
+      }
+     },
+     "launcher": null,
+     "grenades": [{"id": "rgd5", "name": "RGD-5 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}],
+     "armor": {
+      "vest": {"id": "6b45", "name": "6B45 Ratnik body armour", "tier": "medium", "game_item_id": "plate_carrier"},
+      "plates": {
+       "id": "6b45_plates",
+       "name": "6B45 ceramic plates (GOST Br5)",
+       "material": "ceramic",
+       "real_rating": "GOST Br5 (7.62x54R B32 API)",
+       "front": true,
+       "back": true,
+       "game_rating": "IV",
+       "game_item_id": "plate_ceramic_l4"
+      },
+      "side_plates": null,
+      "helmet": {"id": "6b47", "name": "6B47 Ratnik helmet", "tier": "medium", "game_rating": "IIIA", "game_item_id": "helmet"}
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [{"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"}, {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"}]
+     },
+     "other": [
+      {"id": "ruck_45", "count": 1, "game_item_id": "ruck_45"},
+      {"id": "binoculars", "count": 1, "game_item_id": null},
+      {"id": "nvg_mono", "count": 1, "game_item_id": null}
+     ],
+     "game_kit": [
+      ["plate_carrier", 1],
+      ["plate_ceramic_l4", 2],
+      ["helmet", 1],
+      ["m110", 1],
+      ["mag_762", 3],
+      ["m17", 1],
+      ["mag_9mm", 2],
+      ["frag_grenade", 1],
+      ["ifak", 1],
+      ["tourniquet", 1],
+      ["pressure_bandage", 2],
+      ["ruck_45", 1]
+     ]
+    },
+    "crew": {
+     "primary": {
+      "id": "aks74u",
+      "name": "AKS-74U",
+      "calibre": "5.45x39mm",
+      "game_item_id": null,
+      "game_substitute": "mk18",
+      "optic": {"id": "collimator", "name": "Collimator (Kobra / 1P87 / EKP-8 class)"},
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N10 (enhanced penetration)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n10",
+       "rounds_per_mag": 30,
+       "count": 3,
+       "game_item_id": null
+      }
+     },
+     "secondary": {
+      "id": "pm_makarov",
+      "name": "PM Makarov",
+      "calibre": "9x18mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {
+       "id": "mag_9x18_8",
+       "round": "9x18mm 57-N-181S",
+       "game_round_id": null,
+       "proposed_round_id": "9x18_57n181s",
+       "rounds_per_mag": 8,
+       "count": 2,
+       "game_item_id": null
+      }
+     },
+     "launcher": null,
+     "grenades": [],
+     "armor": {
+      "vest": {"id": "6b45", "name": "6B45 Ratnik body armour", "tier": "medium", "game_item_id": "plate_carrier"},
+      "plates": {
+       "id": "6b45_plates",
+       "name": "6B45 ceramic plates (GOST Br5)",
+       "material": "ceramic",
+       "real_rating": "GOST Br5 (7.62x54R B32 API)",
+       "front": true,
+       "back": true,
+       "game_rating": "IV",
+       "game_item_id": "plate_ceramic_l4"
+      },
+      "side_plates": null,
+      "helmet": {
+       "id": "tsh_tanker",
+       "name": "TSh-series padded tanker helmet (non-ballistic)",
+       "tier": "none",
+       "game_rating": null,
+       "game_item_id": null,
+       "cosmetic": true,
+       "proposed_game_id": "helmet_tanker"
+      }
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [{"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"}, {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"}]
+     },
+     "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}],
+     "game_kit": [
+      ["plate_carrier", 1],
+      ["plate_ceramic_l4", 2],
+      ["mk18", 1],
+      ["mag_556", 3],
+      ["m17", 1],
+      ["mag_9mm", 2],
+      ["ifak", 1],
+      ["tourniquet", 1],
+      ["pressure_bandage", 2],
+      ["assault_pack", 1]
+     ]
+    },
+    "pilot": {
+     "primary": {
+      "id": "aks74u",
+      "name": "AKS-74U",
+      "calibre": "5.45x39mm",
+      "game_item_id": null,
+      "game_substitute": "mk18",
+      "optic": {"id": "collimator", "name": "Collimator (Kobra / 1P87 / EKP-8 class)"},
+      "ammo": {
+       "id": "mag_545x39_30",
+       "round": "5.45x39mm 7N10 (enhanced penetration)",
+       "game_round_id": null,
+       "proposed_round_id": "545x39_7n10",
+       "rounds_per_mag": 30,
+       "count": 3,
+       "game_item_id": null
+      }
+     },
+     "secondary": {
+      "id": "pm_makarov",
+      "name": "PM Makarov",
+      "calibre": "9x18mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {
+       "id": "mag_9x18_8",
+       "round": "9x18mm 57-N-181S",
+       "game_round_id": null,
+       "proposed_round_id": "9x18_57n181s",
+       "rounds_per_mag": 8,
+       "count": 2,
+       "game_item_id": null
+      }
+     },
+     "launcher": null,
+     "grenades": [],
+     "armor": {
+      "vest": null,
+      "plates": null,
+      "side_plates": null,
+      "helmet": {
+       "id": "flight_helmet",
+       "name": "Aircrew flight helmet (HGU-56/P / ZSh-7 class, non-ballistic)",
+       "tier": "none",
+       "game_rating": null,
+       "game_item_id": null,
+       "cosmetic": true,
+       "proposed_game_id": "helmet_flight"
+      }
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [{"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"}, {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"}]
+     },
+     "other": [],
+     "game_kit": [["mk18", 1], ["mag_556", 3], ["m17", 1], ["mag_9mm", 2], ["ifak", 1], ["tourniquet", 1], ["pressure_bandage", 2]]
+    }
+   },
+   "team_weapons": [
+    {
+     "id": "kornet",
+     "name": "9M133 Kornet ATGM",
+     "kind": "atgm",
+     "in_game": false,
+     "game_launcher": null,
+     "game_substitute": "Javelin",
+     "game_item_id": null,
+     "rounds": [{"name": "missile", "type": "tandem HEAT", "count": 1}]
+    },
+    {
+     "id": "metis",
+     "name": "9K115-2 Metis-M ATGM",
+     "kind": "atgm",
+     "in_game": false,
+     "game_launcher": null,
+     "game_substitute": "Javelin",
+     "game_item_id": null,
+     "rounds": [{"name": "missile", "type": "tandem HEAT", "count": 1}]
+    },
+    {
+     "id": "igla",
+     "name": "9K38 Igla MANPADS",
+     "kind": "manpads",
+     "in_game": false,
+     "game_launcher": null,
+     "game_substitute": null,
+     "game_item_id": null,
+     "rounds": [{"name": "missile", "type": "SAM", "count": 1}]
+    },
+    {
+     "id": "verba",
+     "name": "9K333 Verba MANPADS",
+     "kind": "manpads",
+     "in_game": false,
+     "game_launcher": null,
+     "game_substitute": null,
+     "game_item_id": null,
+     "rounds": [{"name": "missile", "type": "SAM", "count": 1}]
+    }
+   ],
+   "notes": [
+    "Real-world kit of the Russian mountain brigades (34th and 55th Mountain Motor Rifle Brigades): the Ratnik set (6B45 vest, 6B47 helmet) worn over Gorka-type mountain suits, AK-74M and AK-12 rifles, PKP machine guns, man-portable ATGMs and MANPADS; mountaineering kit and pack animals are not loadout items.",
+    "Added in Job 7 (Captain, 2026-10-10) for alpine_europe, where Russian mountain troops are a fictional what-if hostile force."
+   ]
   }
  ],
  "role_map": {"drone_operator": "rifleman", "tank_crew": "crew"},
  "notes": [
   "Storm and mobilised variants added by Captain's decision (2026-10-10).",
+  "Mountain variant added in Job 7 (Captain, 2026-10-10) for the alpine_europe what-if.",
   "Promedol syrettes in the Russian individual first-aid kit are mapped to the game morphine item.",
   "RPG-7V2 tandem (PG-7VR) and thermobaric (TBG-7V) rounds are not in the game; only PG-7V and OG-7V are loaded.",
   "PL-15 is entering service and is a sidearm alternate."

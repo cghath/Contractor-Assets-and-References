@@ -6,10 +6,11 @@ Snapshot as of 2026-10-10 (updated after Captain's answers). **Job 6 is complete
 
 - **Ownership:** this job was owned by the separate "Faction loadout questions" thread, which never pushed any `loadouts/` files. On 2026-10-10 the user asked for the job to be taken over and completed on the fork, after the alliances job (Job 4). Captain's 09:34 pause had been lifted for the queue by then (see [factions_handoff.md](factions_handoff.md)).
 - **Done (2026-10-10):**
-  - `loadouts/<faction id>.json` for all **76 non-player factions**: 112 variants in total. Every variant has the 8 core roles, plus `crew` where the faction fields armoured vehicles (MBT, IFV, APC, MRAP) and `pilot` where it fields helicopters.
+  - `loadouts/<faction id>.json` for all **79 non-player factions**: 120 variants in total (76 factions and 112 variants after Job 6; Job 7 added adf, m23 and cod and the rus `mountain` variant). Every variant has the 8 core roles, plus `crew` where the faction fields armoured vehicles (MBT, IFV, APC, MRAP) and `pilot` where it fields helicopters.
   - `loadouts/weapons_index.json`, `loadouts/armor_index.json` and `loadouts/rounds_index.json` with users and in-game flags.
   - `loadouts/README.md` with the roster and the "what has to be built" summary.
   - Loadouts checks in `tools/validate_pack.py`. The validator reports 0 errors and 0 warnings.
+  - **Update (2026-10-10, Job 7):** new loadouts for adf (`regular`, `elite`; s_me_terror.py), m23 (`regular`, `assault`) and cod (`regular`, `republican_guard`, `wazalendo`; both in s_others.py), and a rus `mountain` variant (34th Separate Guards Mountain Motor Rifle Brigade type: Ratnik 6B45/6B47 over Gorka-type mountain suits, AK-74M/AK-12, PKP, SVDM, SV-98, RPG-7V2 and RPG-26, all 8 core roles) for the alpine_europe what-if. The weapon, magazine, optic and launcher counts of the "what has to be built" summary are unchanged (no new catalogue items); `plate_steel_light` is now used by 22 factions (cod and m23 added). The generator reproduces the committed files exactly.
   - **Update (2026-10-10):** Captain answered all 10 open questions (see "Captain's decisions (2026-10-10)" below). The answers are applied, and the generator is committed at `tools/loadouts_gen/`.
 - The WIP Perl catalogue, [tools/loadouts_catalog_wip.pl](../tools/loadouts_catalog_wip.pl), is superseded by `tools/loadouts_gen/catalog.py` and the index files. Its ids were kept, except `m110_sniper`, which duplicated `m110`. One correction: the INSAS rifle now uses `mag_556_20`, because 20 rounds in `mag_556` broke the one-id-per-calibre-and-type rule. Its `%GAME_IDS` list is out of date; use the live `data/items.json`.
 - The files are made by the generator in [tools/loadouts_gen/](../tools/loadouts_gen/). Change the specs there and re-run it; don't hand-edit `loadouts/`.
@@ -28,7 +29,7 @@ Snapshot as of 2026-10-10 (updated after Captain's answers). **Job 6 is complete
 
 Captain's answers to the 10 questions raised by Job 6 are all applied.
 
-1. **Light steel plates: both.** `plate_steel_light` (steel, III, fits light) is a new item to build, and the loadouts and `armor_index.json` list it. Until it exists, each role's `game_kit` uses `plate_pe_l3` in its place. It is used by 20 factions.
+1. **Light steel plates: both.** `plate_steel_light` (steel, III, fits light) is a new item to build, and the loadouts and `armor_index.json` list it. Until it exists, each role's `game_kit` uses `plate_pe_l3` in its place. It is used by 22 factions (20 before Job 7 added cod and m23; the list is in loadouts/README.md).
 2. **Launcher items:** `at4`, `rpg7`, `javelin`, `maaws`, `nlaw` and `smaw`.
    - The reloadable launchers' rounds are `pg7v`, `og7v`, `ffv551`, `ffv441d`, `mk6_heaa` and `mk3_hedp`, plus `javelin_missile`. AT4 and NLAW are single-shot, so the launcher item is the round.
    - These ids appear as `proposed_game_item_id` on each launcher and round.
@@ -42,7 +43,7 @@ Captain's answers to the 10 questions raised by Job 6 are all applied.
 7. **Rounds** are specced in the pack only, in `loadouts/rounds_index.json`: 21 round specs covering the 13 calibres with no round and the 6 designations that used a generic round. Each spec has calibre, designation, projectile, approximate muzzle velocity and mass, level on the game's armor ladder (with what stops it and what it defeats), users, and `in_game: false`.
    - Each `ammo` entry keeps `game_round_id` (exact or generic) and adds `proposed_round_id`.
    - The game repo is not edited.
-8. **Variants:** the 16 extra variants stay. New: rus `storm` and `mobilised`, ukr `assault`, irn `basij` and sau `sang`, each with all 8 core roles and real-world kit. That makes 112 variants.
+8. **Variants:** the 16 extra variants stay. New: rus `storm` and `mobilised`, ukr `assault`, irn `basij` and sau `sang`, each with all 8 core roles and real-world kit. That made 112 variants (120 after Job 7).
 9. **pse_pa has a light grenadier:** an AKM with 4 hand grenades and no launcher. No PA combat 40 mm launcher is documented: the faction file lists only a 37/40 mm tear-gas launcher, and PA forces are limited to light weapons. The at and sniper roles stay `not_fielded`.
 10. **The generator is committed** at `tools/loadouts_gen/`. It runs from the repo root with `python3 -I tools/loadouts_gen/gen.py --game <game repo>` and reproduces the committed files exactly.
 
@@ -88,7 +89,7 @@ Only the "real-life names" answer came back. The other 8 defaults were applied a
 - **Medical** follows ACE3: the drugs are only epinephrine, morphine, adenosine and atropine. Surgery kits and defibrillators are for the player and medics only. The medical level of each variant comes from `doctrine.ai_tuning.medical_care` (0.8 and up `full`, 0.6 `standard`, 0.4 `basic`, below that `minimal`); elite variants get one level more.
 - **In-game launchers:** AT4, RPG-7 (PG-7V and OG-7V), Javelin, MAAWS, NLAW and SMAW.
 - **Game repo is read only.** The items are in the game repo's `data/items.json` (`B:\Contractor\data\items.json` on Captain's desktop), with rounds in `data/rounds.json` and squad kits in `data/roles.json`. As of 2026-10-10, items.json has 35 items. It has grown since the WIP `%GAME_IDS` list was written. The newer ids are `pressure_bandage`, `hemostatic_gauze`, `chest_seal`, `splint`, `morphine` and `npa`, plus three non-loadout items: `electronics_salvage`, `hvt_case` and `supply_crate`. Always check the live file.
-- **Faction count:** all 77 faction ids exist; 76 are non-player (everything except `player`). Each one has a loadout.
+- **Faction count:** all 80 faction ids exist (77 before Job 7); 79 are non-player (everything except `player`). Each one has a loadout.
 
 ## Captain's decisions reflected (2026-10-10)
 
@@ -228,7 +229,7 @@ All files are UTF-8 JSON. Ids are stable snake_case. Item references share these
 ## How the files were made
 
 - The generator is [tools/loadouts_gen/](../tools/loadouts_gen/) (its README explains the files and spec keys). It holds the catalogue (started as a port of the WIP Perl file), one spec per bloc and the rules above.
-- It reads `factions/<id>.json` (names, camo, tier, vehicles, unit_templates, `ai_tuning`), `reference/vehicles/` (vehicle types) and the game's `data/items.json`. It writes the 76 files, the three indexes and the README in one run.
+- It reads `factions/<id>.json` (names, camo, tier, vehicles, unit_templates, `ai_tuning`), `reference/vehicles/` (vehicle types) and the game's `data/items.json`. It writes the 79 faction files, the three indexes and the README in one run.
 - Run it from the repo root: `python3 -I tools/loadouts_gen/gen.py --game <path to the Contractor game repo>` (on Captain's desktop, `--game B:\Contractor`). Then run `python3 -I tools/validate_pack.py`. The output is deterministic, and an unchanged checkout regenerates byte for byte.
 
 ## Validator

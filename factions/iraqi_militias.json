@@ -60,7 +60,8 @@
   },
   "theatres": [
     "mesopotamia",
-    "levant_syria"
+    "levant_syria",
+    "iraq_iran_border"
   ],
   "languages": [
     "Arabic (Iraqi dialect)",
@@ -388,7 +389,7 @@
       "hvt_capture_or_kill"
     ]
   },
-  "notes": "Kata'ib Hezbollah and Harakat al-Nujaba are US-designated Foreign Terrorist Organizations; Kata'ib Sayyid al-Shuhada and others were designated in 2025. These groups led the 2023-2024 attack campaign on US bases (including the January 2024 Tower 22 drone strike in Jordan) and joined Iran's war from 28 February 2026; US strikes hit their bases and killed leaders (e.g. Jurf al-Nasr, February 2026; Baghdad, March 2026). Kata'ib Hezbollah announced a conditional pause on attacks on the US Embassy in March 2026. Status October 2026: US forces left federal Iraq by 30 September 2026; Prime Minister Ali al-Zaidi set and then moved a disarmament deadline (now June 2027 per reporting); some factions handed in weapons, but Kata'ib Hezbollah, al-Nujaba, Sayyid al-Shuhada and others refuse, and on 1 October 2026 Kata'ib Hezbollah denied any disarmament understanding. Consistency with irq.json: irq -> iraqi_militias is -20 (tense, not open war); here iraqi_militias -> irq is -15. Iraqi state contracts never target PMF units; contracts against this faction come from other clients (e.g. US-linked or Gulf clients) and its units appear without PMF markings. Gameplay inventions are listed in proposed. campaign_tier early (moved from mid) is Captain-confirmed (2026-10-10).",
+  "notes": "Kata'ib Hezbollah and Harakat al-Nujaba are US-designated Foreign Terrorist Organizations; Kata'ib Sayyid al-Shuhada and others were designated in 2025. These groups led the 2023-2024 attack campaign on US bases (including the January 2024 Tower 22 drone strike in Jordan) and joined Iran's war from 28 February 2026; US strikes hit their bases and killed leaders (e.g. Jurf al-Nasr, February 2026; Baghdad, March 2026). Kata'ib Hezbollah announced a conditional pause on attacks on the US Embassy in March 2026. Status October 2026: US forces left federal Iraq by 30 September 2026; Prime Minister Ali al-Zaidi set and then moved a disarmament deadline (now June 2027 per reporting); some factions handed in weapons, but Kata'ib Hezbollah, al-Nujaba, Sayyid al-Shuhada and others refuse, and on 1 October 2026 Kata'ib Hezbollah denied any disarmament understanding. Consistency with irq.json: irq -> iraqi_militias is -20 (tense, not open war); here iraqi_militias -> irq is -15. Iraqi state contracts never target PMF units; contracts against this faction come from other clients (e.g. US-linked or Gulf clients) and its units appear without PMF markings. Gameplay inventions are listed in proposed. campaign_tier early (moved from mid) is Captain-confirmed (2026-10-10). Job 7: iraq_iran_border (Diyala and Zagros-foothill borderlands) is added; there the factions hold border crossings and smuggling routes and launch drones and rockets, at game level.",
   "proposed": [
     "relations.player",
     "doctrine.ai_tuning (all values)",

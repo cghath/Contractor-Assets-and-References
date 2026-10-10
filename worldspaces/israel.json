@@ -198,12 +198,16 @@
   "early_game_suitable": false,
   "early_game_notes": "Not terrorist-heavy on the map itself: the non-state factions appear only at the edges at low strength. Mostly mid-campaign defensive and recovery contracts for a neutral client.",
   "ambient_audio": ["traffic and buses", "air-raid sirens (alert events)", "interceptor launches and distant booms (events)", "call to prayer and church bells in Galilee towns", "tractors and irrigation sprinklers", "sea and gulls", "desert wind and silence in the Negev"],
+  "captain_confirmed": [
+    "map_size_km 18 x 26 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
+    "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
+    "materials accepted as the next voxel_world.gd additions (Captain, 2026-10-10); not yet in the game: PLASTER #e3dccb, LIMESTONE #d6caa8, CINDER_BLOCK #9a978f, GLASS #9fbcc4, ROOF_TILE #a4553b, CORRUGATED_IRON #8b8e8c, TARP #3f6d8c, DIRT_BERM #8a6f4e, SANDBAG #b8a378"
+  ],
   "proposed": [
-    "map_size_km and the three-band compression (north, centre, south)",
+    "the three-band compression (north, centre, south)",
     "generator numbers",
     "zone_plan and the edge-only hot-zone design",
     "alert-siren civilian behaviour as a game mechanic",
-    "materials: PLASTER #e3dccb, LIMESTONE #d6caa8, CINDER_BLOCK #9a978f, GLASS #9fbcc4, ROOF_TILE #a4553b, CORRUGATED_IRON #8b8e8c, TARP #3f6d8c, DIRT_BERM #8a6f4e, SANDBAG #b8a378",
     "safe rooms as the thick-walled room in every residential unit (game cover rule)"
   ],
   "sources": [

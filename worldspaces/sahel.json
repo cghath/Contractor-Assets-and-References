@@ -204,13 +204,17 @@
   "early_game_suitable": true,
   "early_game_notes": "jnim and isis are early-tier and the core early-game enemies here; africa_corps and the rival PMCs (mid) add three-way fights.",
   "ambient_audio": ["call to prayer from a mud mosque", "motorbike engines (threat cue when many)", "cattle and goat bells", "pounding of millet in mortars", "harmattan wind", "frogs and insects in the rains", "pirogue paddles and outboards"],
+  "captain_confirmed": [
+    "map_size_km 24 x 24 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
+    "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
+    "materials accepted as the next voxel_world.gd additions (Captain, 2026-10-10); not yet in the game: MUD_BRICK #a47e57, THATCH #b49a5e, CINDER_BLOCK #9a978f, CORRUGATED_IRON #8b8e8c, TARP #3f6d8c, HESCO #a99a6c, SANDBAG #b8a378, DIRT_BERM #8a6f4e"
+  ],
   "proposed": [
-    "map_size_km and composite layout",
+    "composite layout",
     "seasonal flood mask tied to the campaign calendar",
     "blockade level as the frontline variable",
     "fra, esp and bel limited to the south edge from a partner state (plausibility: their forces left the AES states)",
-    "zone_plan and hot zone",
-    "materials: MUD_BRICK #a47e57, THATCH #b49a5e, CINDER_BLOCK #9a978f, CORRUGATED_IRON #8b8e8c, TARP #3f6d8c, HESCO #a99a6c, SANDBAG #b8a378, DIRT_BERM #8a6f4e"
+    "zone_plan and hot zone"
   ],
   "sources": [
     "https://en.wikipedia.org/wiki/Sahel",

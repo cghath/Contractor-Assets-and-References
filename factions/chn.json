@@ -13,7 +13,8 @@
     "brics",
     "chn_prk_treaty",
     "un_security_council_p5",
-    "unifil"
+    "unifil",
+    "monusco"
   ],
   "campaign_tier": "late",
   "alignment_to_player": "hostile",
@@ -70,7 +71,10 @@
     "est": -35,
     "lva": -35,
     "ukr": -35,
-    "ltu": -50
+    "ltu": -50,
+    "adf": -85,
+    "m23": -30,
+    "cod": 45
   },
   "theatres": [
     "taiwan_strait",
@@ -78,7 +82,9 @@
     "korean_dmz",
     "kashmir_loc",
     "afghan_highlands",
-    "horn_of_africa"
+    "horn_of_africa",
+    "eastern_congo",
+    "lebanon_south"
   ],
   "languages": [
     "Mandarin Chinese"
@@ -425,7 +431,7 @@
       "escort_convoy_through_contested_zone"
     ]
   },
-  "notes": "Hostile late-campaign state actor (proposal). Chinese gear is also the export kit of several enemy factions (Pakistan-linked groups, African and Middle East forces). Direct PLA combat should stay a late-game, high-stakes theatre (taiwan_strait, south_china_sea); earlier encounters are proxies and Chinese export equipment. PLA has fought no war since 1979; avoid portraying unverified atrocities or capabilities beyond public sources.",
+  "notes": "Hostile late-campaign state actor (proposal). Chinese gear is also the export kit of several enemy factions (Pakistan-linked groups, African and Middle East forces). Direct PLA combat should stay a late-game, high-stakes theatre (taiwan_strait, south_china_sea); earlier encounters are proxies and Chinese export equipment. PLA has fought no war since 1979; avoid portraying unverified atrocities or capabilities beyond public sources. Job 7 (Captain, 2026-10-10): chn appears as UN peacekeepers on eastern_congo (alliance monusco, member_status what_if: China's MONUSCO engineer and medical contingent actually left in April 2024, so a returning contingent is a game what-if) and on lebanon_south (UNIFIL, per alliances.json; now also listed in theatres so factions_present matches). Peacekeepers are neutral units on those maps.",
   "proposed": [
     "doctrine.ai_tuning",
     "relations.player",
@@ -436,7 +442,8 @@
     "contract_types",
     "unit_templates (game squads use 8 men in battle-buddy pairs)",
     "player_trade.sellable",
-    "theatres (korean_dmz, horn_of_africa as limited presence: Djibouti base)"
+    "theatres (korean_dmz, horn_of_africa as limited presence: Djibouti base)",
+    "theatres (eastern_congo peacekeepers are a game what-if: the Chinese MONUSCO contingent left in April 2024)"
   ],
   "sources": [
     "https://en.wikipedia.org/wiki/People%27s_Liberation_Army_Ground_Force",

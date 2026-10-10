@@ -105,19 +105,25 @@
       {"name": "Coastal town", "area_km2": 2.5, "anchor": "typhoon_damaged_town", "notes": "civilians, relief"}
     ],
     "hot_zones": [
-      {"name": "Reef group escalation (late game)", "area_km2": 16, "layout": "chn HQ on the artificial island; 3-4 occupied reefs as outposts; blocking lines as checkpoints; roaming cutters and militia vessels; QRF by boat and helicopter; friendly islet outposts as anchors"}
+      {"name": "Reef group escalation (late game, fictional what-if)", "area_km2": 16, "layout": "chn HQ on the artificial island; 3-4 occupied reefs as outposts; blocking lines as checkpoints; roaming cutters and militia vessels; QRF by boat and helicopter; friendly islet outposts as anchors"}
     ]
   },
   "insertion": {"lhd": true, "fob": "LHD east of the reef group; FOB at the coast guard station on the main island. Boats, helicopters and AAVs (lagoons and beaches)."},
   "early_game_suitable": false,
-  "early_game_notes": "The main confrontation is with chn (late tier). phl's early-game counter-terror hook (ISIS-affiliated cells on southern islands) needs isis to list this theatre (open question); until then only criminal kidnap gangs (generic NPCs) appear.",
+  "early_game_notes": "The main confrontation is with chn (late tier). phl's early-game counter-terror loop (isis East Asia cells) has its own theatre, mindanao_sulu, so isis is not added here (Captain-confirmed 2026-10-10); only criminal kidnap gangs (generic NPCs) appear.",
   "ambient_audio": ["surf on reefs", "banca engines", "rain on tin roofs", "jungle birds and geckos", "karaoke from a village", "coast guard loudhailer warnings (events)", "ship horns"],
+  "captain_confirmed": [
+    "map_size_km 24 x 22 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
+    "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
+    "materials accepted as the next voxel_world.gd additions (Captain, 2026-10-10); not yet in the game: THATCH #b49a5e, CORRUGATED_IRON #8b8e8c, CINDER_BLOCK #9a978f, SANDBAG #b8a378",
+    "isis is not added here; the phl counter-terror loop moved to the new mindanao_sulu theatre (Captain, 2026-10-10)",
+    "the late-game escalation hot zone stays as a what-if, clearly marked fictional; the default state is the real 2026 situation (Captain, 2026-10-10)"
+  ],
   "proposed": [
-    "map_size_km and composite (Palawan-type island plus a Spratly-type reef group)",
+    "composite (Palawan-type island plus a Spratly-type reef group)",
     "shoal control states and blocking-vessel behaviour",
     "generic kidnap-gang NPCs",
-    "zone_plan and hot zone",
-    "materials: THATCH #b49a5e, CORRUGATED_IRON #8b8e8c, CINDER_BLOCK #9a978f, SANDBAG #b8a378"
+    "zone_plan and hot zone"
   ],
   "sources": [
     "https://en.wikipedia.org/wiki/Palawan",

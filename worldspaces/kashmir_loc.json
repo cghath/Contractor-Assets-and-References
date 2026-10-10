@@ -103,15 +103,20 @@
   },
   "insertion": {"lhd": false, "fob": "FOB at a host-side brigade camp (Pakistani side for pak contracts; a neutral humanitarian base in the valley for neutral contracts). Roads and trails; helicopters weather and altitude limited; no AAVs."},
   "early_game_suitable": false,
-  "early_game_notes": "State-on-state line with no faction-listed militant groups; mid-campaign. Militant groups active in Kashmir are not in the canonical roster (open question).",
+  "early_game_notes": "State-on-state line with no faction-listed militant groups; mid-campaign. Militant attacks use generic hostile NPCs with no roster faction (Captain-confirmed 2026-10-10: no new faction).",
   "ambient_audio": ["river roar in the gorge", "wind in deodars", "call to prayer echoing", "sheep and herders' calls", "distant shelling (events)", "army helicopters", "apple-truck horns"],
+  "captain_confirmed": [
+    "map_size_km 20 x 20 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
+    "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
+    "materials accepted as the next voxel_world.gd additions (Captain, 2026-10-10); not yet in the game: BRICK #9c5a3c, CORRUGATED_IRON #8b8e8c, STONE #8f8676, SANDBAG #b8a378, DIRT_BERM #8a6f4e, TARP #3f6d8c, GLASS #9fbcc4",
+    "Kashmir keeps generic militant NPCs; no new faction (Captain, 2026-10-10)"
+  ],
   "proposed": [
-    "map_size_km and composite (gorge across the LoC, valley corner, north-east plateau)",
+    "composite (gorge across the LoC, valley corner, north-east plateau)",
     "generator numbers and LoC ridge-following spline",
     "alert-level frontline model",
     "chn presence as project engineers only",
-    "zone_plan and hot zone",
-    "materials: BRICK #9c5a3c, CORRUGATED_IRON #8b8e8c, STONE #8f8676, SANDBAG #b8a378, DIRT_BERM #8a6f4e, TARP #3f6d8c, GLASS #9fbcc4"
+    "zone_plan and hot zone"
   ],
   "sources": [
     "https://en.wikipedia.org/wiki/Line_of_Control",

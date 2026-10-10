@@ -45,7 +45,8 @@
     "nld": -90,
     "nor": -90,
     "pmc_kestrel": -90,
-    "swe": -90
+    "swe": -90,
+    "adf": -75
   },
   "theatres": [
     "sahel"

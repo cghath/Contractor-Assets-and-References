@@ -7,6 +7,8 @@ Checks the JSON in factions/, reference/vehicles/, worldspaces/ and loadouts/:
   * relation keys, theatre ids and vehicle_ids are known;
   * every referenced vehicle_id has a reference/vehicles/<id>.json file;
   * terrorist factions (bloc me_terror in ROSTER) have player_client false;
+  * every faction a worldspace lists in factions_present lists that theatre in its own `theatres`, and
+    every theatre a faction lists (except player, which lists all) has that faction in factions_present;
   * loadouts/<id>.json (the three index files are skipped): the id is a canonical non-player faction id
     matching the filename, a 'regular' variant exists, every variant has the core roles, in_game
     launchers are among the 6 in-game launchers (others name one of them or null as game_substitute),
@@ -289,6 +291,29 @@ def main():
                 error("%s: factions_present %r is not a canonical faction id" % (path, fid))
     for tid in sorted(theatre_ids - set(worlds)):
         warn("worldspaces/%s.json is missing (still generating?)" % tid)
+
+    # Theatre coverage: factions_present and each faction's theatres must agree.
+    present = {}
+    for stem, w in worlds.items():
+        fp = w.get("factions_present") if isinstance(w, dict) else None
+        for entry in fp if isinstance(fp, list) else []:
+            fid = entry.get("faction_id") or entry.get("id") if isinstance(entry, dict) else entry
+            if isinstance(fid, str):
+                present.setdefault(stem, set()).add(fid)
+    for stem in sorted(present):
+        for fid in sorted(present[stem]):
+            d = factions.get(fid)
+            ths = d.get("theatres") if isinstance(d, dict) else None
+            if isinstance(ths, list) and stem not in ths:
+                warn("worldspaces/%s.json: factions_present %r, but factions/%s.json does not list %r in theatres"
+                     % (stem, fid, fid, stem))
+    for fid, d in sorted(factions.items()):
+        if fid == "player" or not isinstance(d, dict) or not isinstance(d.get("theatres"), list):
+            continue
+        for t in d["theatres"]:
+            if t in worlds and fid not in present.get(t, set()):
+                warn("factions/%s.json lists theatre %r, but worldspaces/%s.json has no factions_present entry for it"
+                     % (fid, t, t))
 
     loadouts = load_json_dir("loadouts")
     if loadouts is None:

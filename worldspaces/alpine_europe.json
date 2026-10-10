@@ -1,7 +1,7 @@
 {
   "id": "alpine_europe",
   "name": "High Passes Cantons",
-  "inspired_by": "The Central Alps where Switzerland, Austria, Italy, Germany and France meet, as of 2026: a glacial lake with a conference town, steep valleys with timber chalet villages, alpine pastures and ski areas, high road passes and rail base tunnels, hydro dams and military caverns. A neutral staging region and arms market rather than a war zone; contracts are security, recovery and evacuation work. srb uses this map as a stand-in for a Balkan mountain transit route. All towns are fictional.",
+  "inspired_by": "The Central Alps where Switzerland, Austria, Italy, Germany and France meet, as of 2026: a glacial lake with a conference town, steep valleys with timber chalet villages, alpine pastures and ski areas, high road passes and rail base tunnels, hydro dams and military caverns. A neutral staging region and arms market rather than a war zone; contracts are security, recovery and evacuation work. In a late-game what-if (game fiction, not a real deployment), covert Russian mountain-troop teams use the high passes and old fortress caverns. srb uses this map as a stand-in for a Balkan mountain transit route. All towns are fictional.",
   "map_size_km": [18, 18],
   "climate": "Temperate oceanic in the valleys (Koppen Cfb), subarctic and alpine tundra above 1,800 m (Dfc/ET). Valley summers 20-27 C, winters -5 to 3 C; on the passes winter -10 to -20 C. 1,000-2,500 mm precipitation; snow from November to May above 1,500 m; foehn wind events.",
   "seasons": [
@@ -82,9 +82,10 @@
     {"faction_id": "ita", "role": "patrol", "strength": "low", "where": "Southern pass and border post (Alpini and border police)."},
     {"faction_id": "fra", "role": "patrol", "strength": "low", "where": "South-western pass border post (mountain troops and gendarmerie)."},
     {"faction_id": "deu", "role": "patrol", "strength": "low", "where": "Northern edge border police and mountain troops on exercise."},
-    {"faction_id": "srb", "role": "patrol", "strength": "low", "where": "Arms-shipment escort convoys transiting the motorway (Balkan transit stand-in); consular villa."}
+    {"faction_id": "srb", "role": "patrol", "strength": "low", "where": "Arms-shipment escort convoys transiting the motorway (Balkan transit stand-in); consular villa."},
+    {"faction_id": "rus", "role": "insurgent", "strength": "medium", "where": "Game what-if (proposed, late game): covert mountain-troop reconnaissance and sabotage teams (34th Mountain Brigade-type kit) hiding in high huts, glacier bivouacs and a disused fortress cavern, moving over the passes at night to cache weapons near the base tunnel, the dam and the conference town. Fictional scenario; Russian forces are not deployed in the Alps."}
   ],
-  "frontline": "No front. This is a neutral region: the war sim affects it only through events elsewhere (arms diversion, diplomatic conferences, evacuations of nationals, crises that close passes). Event intensity rises with the global war level and posts security, recovery and convoy contracts. Hostiles here are generic armed criminals (arms traffickers, hired teams) not tied to a faction (proposed), and rival PMC teams if Captain adds this theatre to their files.",
+  "frontline": "No front. This is a neutral region: the war sim affects it only through events elsewhere (arms diversion, diplomatic conferences, evacuations of nationals, crises that close passes). Event intensity rises with the global war level and posts security, recovery and convoy contracts. Hostiles here are generic armed criminals (arms traffickers, hired teams) not tied to a faction (proposed) and, as a late-game what-if, covert Russian mountain-troop teams (rus; game fiction). Each surviving rus team raises a valley alert level that posts counter-sabotage, pass-security and cache-recovery contracts; che and aut operations (and player contracts) remove teams, which return only with rising global war level. Avalanche and weather events close passes for both sides.",
   "contract_hooks": [
     "Protect a diplomatic conference at the lakefront centre (clients che, aut)",
     "Recover stolen or diverted arms from a fortress cavern (client che)",
@@ -93,7 +94,10 @@
     "Secure a mountain pass or tunnel during a crisis (client che)",
     "Arms-shipment escort along the motorway (client srb)",
     "Evacuate nationals from a consulate villa (clients aut, srb)",
-    "Intel grab at a mountain-hut arms meeting (client che)"
+    "Intel grab at a mountain-hut arms meeting (client che)",
+    "Hunt a covert mountain-troop team on a high pass or glacier bivouac (clients che, aut; rus what-if, late game)",
+    "Counter-sabotage at the base-tunnel portal or the dam against a covert team (client che; rus what-if)",
+    "Recover a weapons cache left by a covert team in a fortress cavern (client che)"
   ],
   "zone_plan": {
     "contract_zones": [
@@ -103,20 +107,26 @@
       {"name": "Motorway border plaza", "area_km2": 2.5, "anchor": "border_crossing_motorway", "notes": "vehicles, lanes"}
     ],
     "hot_zones": [
-      {"name": "Valley crisis (proposed)", "area_km2": 10, "layout": "Generic hostile network (arms traffickers or a rival PMC team): HQ in a fortress cavern; 3 outposts (hut, warehouse, villa); police checkpoints as friendly; roaming cars; 1 QRF team. Only if Captain wants hot zones in neutral theatres."}
+      {"name": "High-pass incursion (late game, fictional what-if)", "area_km2": 12, "layout": "Covert rus mountain-troop group: HQ in a disused fortress cavern; 3-4 outposts (high hut, glacier bivouac, pass gallery, cache in a barn); Swiss and Austrian checkpoints on the pass roads as friendly anchors; roaming ski and foot patrols; 1 QRF team by night. An arms-trafficker network (generic NPCs) can replace it in earlier phases."}
     ]
   },
   "insertion": {"lhd": false, "fob": "Staging at a hotel or the valley military airstrip (the player's FOB as a rented facility). Roads, rail and cable cars; helicopters in good weather; no AAVs except on the lake."},
   "early_game_suitable": false,
-  "early_game_notes": "No hostile faction is assigned to this theatre in the faction data; it is a staging region and neutral-contract source at any stage.",
+  "early_game_notes": "Not an early-game theatre. Generic arms-trafficker NPCs are the everyday threat; rus mountain troops (late tier) are the hostile faction as a fictional what-if added by Captain's decision (2026-10-10). Otherwise a staging region and neutral-contract source at any stage.",
   "ambient_audio": ["cowbells", "church bells", "rushing streams", "cable-car hum", "trains in tunnels", "wind on the passes", "avalanche blasting (events)"],
+  "captain_confirmed": [
+    "map_size_km 18 x 18 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
+    "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
+    "materials accepted as the next voxel_world.gd additions (Captain, 2026-10-10); not yet in the game: STONE #8f8676, PLASTER #e3dccb, ROOF_TILE #a4553b, GLASS #9fbcc4",
+    "generic arms-trafficker NPCs stay, and Russian mountain troops (rus) are added as the hostile force (Captain, 2026-10-10)"
+  ],
   "proposed": [
-    "map_size_km and composite tri-border layout",
+    "composite tri-border layout",
     "generator numbers",
     "generic hostile NPCs (arms traffickers) not tied to a faction",
-    "optional hot zone",
+    "rus covert mountain-troop presence: a fictional what-if, not a real deployment (role, strength, placement and the late-game timing)",
+    "zone_plan and the what-if hot zone",
     "srb presence as a Balkan transit stand-in (from srb.json)",
-    "materials: STONE #8f8676, PLASTER #e3dccb, ROOF_TILE #a4553b, GLASS #9fbcc4",
     "avalanche road-closure events"
   ],
   "sources": [
@@ -125,6 +135,7 @@
     "https://en.wikipedia.org/wiki/National_Redoubt_(Switzerland)",
     "https://en.wikipedia.org/wiki/Chalet",
     "https://en.wikipedia.org/wiki/Foehn_wind",
-    "factions/che.json, aut.json, srb.json notes"
+    "https://en.wikipedia.org/wiki/34th_Separate_Guards_Mountain_Motor_Rifle_Brigade",
+    "factions/che.json, aut.json, srb.json, rus.json notes"
   ]
 }

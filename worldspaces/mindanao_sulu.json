@@ -1,0 +1,214 @@
+{
+  "id": "mindanao_sulu",
+  "name": "Lake Plateau and Sulu Arc",
+  "inspired_by": "The southern Philippines as of 2026, compressed onto one map: a Lanao-type volcanic lake plateau with Maranao lakeside towns in the north-west, a Liguasan-type river marsh and jungle-covered cordillera in the centre, and a coconut coast facing a Sulu-type chain of volcanic islands with stilt villages over reef flats in the south. Small Islamic State-aligned cells (Dawlah Islamiyah factions and pro-IS Abu Sayyaf remnants, much reduced since the 2017 Marawi siege) still clash with the Armed Forces of the Philippines, which hold the towns and roads; the Bangsamoro autonomous region set up under the 2014 peace agreement governs the Muslim-majority areas. All towns are fictional.",
+  "map_size_km": [24, 22],
+  "climate": "Tropical rainforest and monsoon (Koppen Af/Am) on the coast and marsh, 25-33 C all year with 2,000-3,500 mm of rain; the lake plateau at 700 m is cooler (18-28 C) and misty. Mindanao lies mostly south of the typhoon belt, but monsoon rains bring floods and landslides.",
+  "seasons": [
+    "Amihan (Dec-Mar): north-east monsoon, drier, calmer seas in the island chain, clear mornings on the plateau",
+    "Hot dry spell (Apr-May): hottest, lowest marsh water, burning cogon grass",
+    "Habagat (Jun-Oct): south-west monsoon rains, flooded marsh and rice fields, rough seas, river crossings close",
+    "Transition (Nov): heavy showers, landslides on cordillera roads, harvest"
+  ],
+  "biomes": [
+    {"id": "lowland_rainforest_and_secondary_growth", "share": 0.24, "vegetation": ["dipterocarp rainforest remnants (lauan, yakal)", "secondary growth with bamboo and climbing rattan", "giant ferns and wild banana", "abaca and coffee patches in clearings"], "ground_palette": ["#4a3a26", "#5e4a30", "#3a2e1e", "#6e5a3c", "#2e2418"], "foliage_palette": ["#1f4a24", "#2f5e2a", "#3f7a34", "#16341a", "#5a8a3a"]},
+    {"id": "lake_plateau_farmland", "share": 0.16, "vegetation": ["rice paddies and corn on the lake shore", "cassava and vegetable gardens", "coffee and fruit trees (lanzones, durian) around houses", "reeds and water hyacinth at the lake edge"], "ground_palette": ["#5a4a32", "#6e5e40", "#7e6e4e", "#4a5a3a", "#8a7a5a"], "foliage_palette": ["#5f8a3a", "#7da048", "#a8c06a", "#3f6b2e", "#c8d07a"]},
+    {"id": "river_marsh", "share": 0.14, "vegetation": ["sedge and reed marsh", "water hyacinth mats", "nipa palm along channels", "rice paddies on the marsh rim", "seasonal flooded grassland"], "ground_palette": ["#4a4a32", "#5a5a3a", "#3a3a28", "#6a6a4a", "#2f3a30"], "foliage_palette": ["#6a8a3a", "#8aa04a", "#4a6a2e", "#a8b86a", "#3a5a2a"]},
+    {"id": "coconut_coast_and_mangrove", "share": 0.2, "vegetation": ["coconut plantations", "banana and rubber plantations inland", "mangrove (Rhizophora, Avicennia) on tidal flats", "beach morning glory and pandan on the strand"], "ground_palette": ["#cbb88a", "#a8946a", "#e2d4ae", "#6e5a3c", "#4a4030"], "foliage_palette": ["#4f7a2e", "#6e9a3c", "#2f5a26", "#8ab04a", "#3a6a3a"]},
+    {"id": "volcanic_island_uplands", "share": 0.14, "vegetation": ["cogon grass (Imperata) on cleared slopes", "cassava and upland rice", "coconut, durian and mangosteen groves", "secondary forest on the volcanic cones"], "ground_palette": ["#5a3e2a", "#3e2e22", "#7a5a3e", "#2a2420", "#8a6e4e"], "foliage_palette": ["#7a9a3e", "#9ab04e", "#c9c07a", "#4a7a30", "#2f5a26"]},
+    {"id": "reef_flats_and_shallows", "share": 0.12, "vegetation": ["seagrass beds", "coral reef flats exposed at low tide", "seaweed farms on stakes", "open water"], "ground_palette": ["#d8ccaa", "#7ab8b0", "#3f8a9a", "#2a5a7a", "#e8e0c8"], "foliage_palette": ["#5a8a5a", "#7aa070", "#3a6a4a", "#9ab88a"]}
+  ],
+  "terrain": {
+    "elevation_range_m": [-40, 1650],
+    "relief": "A lake plateau at 650-750 m in the north-west, rimmed by volcanic cones to 1,200 m; a jungle-covered cordillera of steep ridges (600-1,650 m) across the centre; a marsh basin near sea level (5-20 m) in the east-centre; a narrow coastal plain in the south; and a chain of small volcanic islands (cones of 200-600 m) across a reef-studded strait.",
+    "features": ["crater lake plateau with a lake outlet river and falls", "knife-edge jungle ridges and landslide scars", "a river marsh with channels and floating vegetation", "mangrove-lined estuaries", "volcanic island cones with coconut slopes", "reef flats with stilt villages and seaweed farms", "limestone caves on the cordillera flank"],
+    "water": "A large plateau lake, its outlet river cutting a gorge to the sea, a slow river feeding the marsh (floods in the habagat), many streams, a strait with reefs, channels and tidal flats between the islands.",
+    "generator": {
+      "approach": "Heightmap at 10 m with bathymetry as negative heights. Plateau as a raised flat block with a lake basin stamped in; volcanic cones as radial stamps; the cordillera as ridged noise along a NW-SE axis; the marsh as a flattened low basin with a channel network; the island chain as cone stamps rising from a shallow shelf with reef masks at -0.5 to -3 m.",
+      "noise_layers": [
+        {"type": "ridged multifractal (6 octaves)", "frequency": 0.35, "amplitude_m": 1100, "purpose": "central cordillera ridges"},
+        {"type": "plateau step with lake basin stamp", "frequency": 0, "amplitude_m": 700, "purpose": "north-west lake plateau and crater lake"},
+        {"type": "radial cone stamps (cellular placement)", "frequency": 0.4, "amplitude_m": 500, "purpose": "volcanic cones on the plateau rim and the islands"},
+        {"type": "simplex fbm", "frequency": 1.5, "amplitude_m": 40, "purpose": "slope breakup, spurs, landslide scars"},
+        {"type": "value noise (mask)", "frequency": 3.0, "amplitude_m": 0, "purpose": "reef and seagrass mask on the shelf; mangrove mask on tidal flats"}
+      ],
+      "erosion": "Strong hydraulic erosion on the cordillera for deep V-valleys and gullies; landslide scars as random slope stamps; deposition fans where streams leave the hills.",
+      "rivers": "Lake outlet river as a spline from the plateau through a gorge with falls to the sea; marsh river as a meandering spline with 8-15 side channels; streams by flow accumulation; the marsh water level and flooded area are a seasonal variable.",
+      "settlement_flattening": "Lakeside town flattened on the lake terraces; coastal towns on the plain behind the beach; hill barangays per plot on ridge shoulders; stilt villages need no flattening (posts into the reef flat).",
+      "notes": "One coastal highway and one plateau road are the only paved links; jungle trails, rivers and boats do the rest. The marsh and the island interiors are where cells hide; the habagat floods the marsh and grounds helicopters for days."
+    }
+  },
+  "settlements": [
+    {
+      "type": "town",
+      "share": 0.2,
+      "pop_range": [15000, 80000],
+      "architecture": "Maranao-type lakeside town: two- to four-storey concrete and cinder-block shophouses with steel shutters and tin or concrete roofs, painted signs, a large domed mosque with minarets, madrasas, a public market and a lake pier; a few carved okir-style wooden landmarks; one quarter left as a rebuilt zone with new concrete public buildings among cleared lots (inspired by post-2017 reconstruction).",
+      "footprint_m": "shophouse 6x15; mosque 30x30; block 60x80",
+      "storeys": [1, 4],
+      "wall_class": "Reinforced concrete frames medium-thick; cinder-block infill thin (breachable); tin roofs no cover.",
+      "materials": ["CONCRETE", "CINDER_BLOCK", "CORRUGATED_IRON", "PAINTED", "GLASS", "WOOD"],
+      "palette": ["#8a8577", "#9a978f", "#8b8e8c", "#2f8f6f", "#e3dccb", "#c9a03a"],
+      "layout_rules": ["grid of streets around the market and the main mosque", "lake promenade and pier with boats", "municipal hall and police station on the plaza", "army detachment at the town entrance"],
+      "example_names": ["Lumbac Salama", "Ragayan Sur", "Datu Kalimudan", "Pagaluyan Lake", "Sultan Bayabas"]
+    },
+    {
+      "type": "village",
+      "share": 0.3,
+      "pop_range": [300, 4000],
+      "architecture": "Barangay of wooden and bamboo houses on short stilts with tin or nipa roofs, a few concrete-block houses, a small mosque or chapel, a madrasa, a sari-sari store, a basketball court and a covered gym as the community hall.",
+      "footprint_m": "house 6x8; barangay hall 10x15",
+      "storeys": [1, 2],
+      "wall_class": "Wood, bamboo and nipa none; concrete-block houses thin.",
+      "materials": ["WOOD", "THATCH", "CORRUGATED_IRON", "CINDER_BLOCK", "CONCRETE"],
+      "palette": ["#8c6a46", "#b49a5e", "#8b8e8c", "#9a978f", "#2f6f8f"],
+      "layout_rules": ["strung along a road or river bank", "mosque or chapel, school and basketball court as the centre", "rice paddies or coconut groves around", "hill barangays on ridge shoulders with steep trails"],
+      "example_names": ["Sitio Bangas", "Bukit Sinandal", "Tubig Mayag", "Barangay Lanao Baybay", "Kalanggaman", "Sitio Dalam Kayu"]
+    },
+    {
+      "type": "village",
+      "share": 0.15,
+      "pop_range": [200, 3000],
+      "architecture": "Sama- and Tausug-type stilt-water village over the reef flat: plank houses on wooden posts with tin and nipa roofs, linked by narrow plank walkways to a jetty and a mosque on stilts; boats moored under the houses; seaweed drying racks.",
+      "footprint_m": "house 5x8; walkway 1-1.5 m wide",
+      "storeys": [1, 1],
+      "wall_class": "Planks and nipa none; walkways collapse under explosions (hazard).",
+      "materials": ["WOOD", "THATCH", "CORRUGATED_IRON"],
+      "palette": ["#8c6a46", "#6e5034", "#b49a5e", "#8b8e8c", "#3f8a9a"],
+      "layout_rules": ["over the reef flat 100-500 m from the shore", "walkway spine to the jetty and mosque", "boats as the only vehicles"],
+      "example_names": ["Kawit Laut", "Pulau Bunga Laya", "Kampung Tabun Dagat", "Lahat Pantai"]
+    },
+    {
+      "type": "town",
+      "share": 0.1,
+      "pop_range": [20000, 60000],
+      "architecture": "Coastal port town (poblacion): Spanish-era grid with a plaza, municipal hall and church or mosque, concrete commercial strip, ferry terminal and fish port, jeepney terminal, a hospital and a provincial capitol on a rise.",
+      "footprint_m": "block 50x60; ferry terminal 40x80",
+      "storeys": [1, 4],
+      "wall_class": "Concrete medium; block thin; port warehouses steel thin.",
+      "materials": ["CONCRETE", "CINDER_BLOCK", "CORRUGATED_IRON", "PAINTED", "GLASS", "STEEL"],
+      "palette": ["#8a8577", "#e3dccb", "#c75b4a", "#2f6f8f", "#8b8e8c", "#4a4d50"],
+      "layout_rules": ["plaza grid behind the pier", "ferry terminal and fish port on the waterfront", "highway bypass with fuel stations and a checkpoint"],
+      "example_names": ["Puerto Talisay Sur", "Bayang Dagat", "Port Kalimbo"]
+    },
+    {
+      "type": "compound",
+      "share": 0.15,
+      "pop_range": [0, 1500],
+      "architecture": "Army brigade camps and detachments (sandbag and concrete bunkers, barracks, helipad, motor pool), police stations with blast walls, a coconut processing plant, a banana plantation packing house, a diesel power barge.",
+      "footprint_m": "detachment 80x80; brigade camp 400x500",
+      "storeys": [1, 2],
+      "wall_class": "Sandbag and concrete bunkers thick; barracks and sheds thin.",
+      "materials": ["SANDBAG", "CONCRETE", "CINDER_BLOCK", "CORRUGATED_IRON", "STEEL", "HESCO"],
+      "palette": ["#b8a378", "#8a8577", "#9a978f", "#8b8e8c", "#4a4d50", "#a99a6c"],
+      "layout_rules": ["detachments on hilltops above villages and at bridges", "brigade camp near the coastal town with helipad and pier", "plantations along the highway"],
+      "example_names": ["Camp Datu Malang", "Detachment Hill 512", "Kabuntalan Packing Plant"]
+    },
+    {
+      "type": "farm",
+      "share": 0.1,
+      "pop_range": [5, 60],
+      "architecture": "Coconut and rice farm hamlets: a wooden house on stilts, a copra dryer, a carabao shed, a small boat on the river.",
+      "footprint_m": "hamlet 30x30",
+      "storeys": [1, 1],
+      "wall_class": "None.",
+      "materials": ["WOOD", "THATCH", "CORRUGATED_IRON"],
+      "palette": ["#8c6a46", "#b49a5e", "#8b8e8c"],
+      "layout_rules": ["on the marsh rim and coconut coast", "boat or footpath access"],
+      "example_names": ["Sitio Lubay", "Purok Niyog", "Copra Hamlet Masla"]
+    }
+  ],
+  "infrastructure": {
+    "roads": "A two-lane coastal highway and a winding plateau road (landslide-prone in the rains) are the only paved routes; barangay roads of gravel, jungle trails on the ridges, river and sea routes everywhere else.",
+    "rail": "None.",
+    "power": "Grid power on the coast and plateau from a lake-outlet hydro plant (falls), diesel barges and generators on the islands; frequent outages.",
+    "ports": "Ferry terminal and fish port at the coastal town; jetties and boat landings in every island village; a lake pier.",
+    "airfields": "A short regional airstrip near the coastal town; army helipads at the brigade camp and detachments.",
+    "checkpoints": "Army and police checkpoints on the highway, at bridges and at the plateau road entrance; Bangsamoro police posts in towns; coast guard and navy boardings in the strait."
+  },
+  "pois": [
+    {"type": "jungle_cell_camp", "description": "Hidden camp on a cordillera ridge: tarp shelters under the canopy, a cooking area, a lookout over the trail, a small explosives cache (map hazard) and a flag; reachable only on foot.", "contract_use": "raid a cell camp; HVT capture (client phl)", "loot_tier": "medium", "intel_chance": 0.6},
+    {"type": "marsh_hideout", "description": "Stilt hut and boat landing deep in the marsh, reached by channel; reeds limit sight; booby-trap hazards marked.", "contract_use": "boat-borne raid on a hideout (client phl)", "loot_tier": "medium", "intel_chance": 0.55},
+    {"type": "island_hostage_site", "description": "Hut cluster in an island's coconut uplands where kidnap victims are held; lookouts on the cone above the beach.", "contract_use": "hostage rescue from the island chain (client phl)", "loot_tier": "low", "intel_chance": 0.45},
+    {"type": "rebuilt_town_quarter", "description": "A lakeside quarter rebuilt after an earlier siege: new concrete public buildings, a rebuilt mosque, cleared lots and a few ruined shells; civilians returning.", "contract_use": "VIP protection during a visit; counter-surveillance (client phl)", "loot_tier": "low", "intel_chance": 0.2},
+    {"type": "army_hill_detachment", "description": "Hilltop detachment with sandbag bunkers, a radio mast and a helipad above a barangay; targeted by harassment fire.", "contract_use": "defend or relieve a detachment (client phl)", "loot_tier": "medium", "intel_chance": 0.25},
+    {"type": "highway_checkpoint_bridge", "description": "Concrete bridge over the lake-outlet river with a checkpoint, a fuel station and roadside stalls.", "contract_use": "route security; convoy escort chokepoint (client phl)", "loot_tier": "low", "intel_chance": 0.15},
+    {"type": "ferry_terminal", "description": "Coastal-town ferry terminal and fish port: crowds, cargo, speedboats and outrigger bancas.", "contract_use": "maritime interdiction of a cell's speedboat; VIP arrival (client phl)", "loot_tier": "low", "intel_chance": 0.25},
+    {"type": "stilt_village", "description": "Reef-flat stilt village with plank walkways, a mosque on stilts and seaweed racks.", "contract_use": "cordon and search with navy boats; evacuation in a storm (client phl)", "loot_tier": "low", "intel_chance": 0.2},
+    {"type": "polling_centre_school", "description": "Concrete school used as a polling centre: classrooms, a covered court, a perimeter wall and a crowd on election day.", "contract_use": "election-day security (client phl)", "loot_tier": "low", "intel_chance": 0.1},
+    {"type": "limestone_cave", "description": "Cave in the cordillera flank used as a weapons cache; narrow entrance, chambers, a stream.", "contract_use": "cache recovery (client phl)", "loot_tier": "medium", "intel_chance": 0.5},
+    {"type": "plantation_packing_house", "description": "Banana or coconut packing plant with sheds, lorries and a workers' compound; extortion target.", "contract_use": "protect workers from an extortion attack (client phl)", "loot_tier": "low", "intel_chance": 0.2},
+    {"type": "brigade_camp", "description": "Army brigade camp near the coast: barracks, motor pool, helipad, pier, adviser compound.", "contract_use": "staging; briefing; adviser liaison (clients phl, usa)", "loot_tier": "medium", "intel_chance": 0.2}
+  ],
+  "weather": {
+    "conditions": ["tropical downpours", "humid heat", "morning mist on the plateau", "monsoon floods", "rough seas in the habagat", "clear calm amihan mornings"],
+    "visibility_notes": "Jungle canopy limits sight to 20-50 m; downpours cut visibility and ground helicopters; mist on the plateau and ridges in the morning; reed beds hide boats in the marsh.",
+    "dust_or_snow": "Neither; mud and flooding instead."
+  },
+  "civilians": {
+    "density": "high",
+    "behaviour": "Busy markets and roads by day; fishermen out at dawn; Friday prayers fill mosques; jeepneys and motorbike taxis everywhere; families flee to the town or evacuation centres when fighting starts and return quickly. Clan feuds (rido) add armed civilians who are not a faction; carrying guns is common, so threat identification matters.",
+    "vehicles": ["jeepneys", "motorbike taxis (habal-habal)", "tricycles", "pickups and vans", "outrigger bancas and pump boats", "ferries", "carabao carts"],
+    "casualty_risk_notes": "High density in towns, stilt villages and markets; armed civilians from clan feuds are a readable cue, not targets. The casualty rule bites in stilt-village and market contracts."
+  },
+  "factions_present": [
+    {"faction_id": "phl", "role": "defender", "strength": "high", "where": "Towns, highway and plateau-road checkpoints, hill detachments, the brigade camp; navy and coast guard boats in the strait; Marines on the islands."},
+    {"faction_id": "isis", "role": "insurgent", "strength": "medium", "where": "East Asia cells (Dawlah Islamiyah-type and pro-IS Abu Sayyaf remnants): jungle camps on the cordillera, the marsh interior and the island uplands; speedboats between islands; extortion and kidnapping."},
+    {"faction_id": "usa", "role": "patrol", "strength": "low", "where": "A small non-combat adviser team at the brigade camp and ISR drones overhead; never in front-line combat."}
+  ],
+  "frontline": "No front line: a cell hunt. Each isis-held zone (camp, hideout, island upland) raises a local threat level that posts extortion, kidnapping and IED events in nearby barangays. phl clear-and-hold operations (and player contracts for phl) flip a zone to cleared; cells regenerate in the marsh or the islands within weeks unless detachments are built. Election and Ramadan periods raise event rates; the habagat floods the marsh and freezes movement there. Clan-feud flare-ups are neutral events that block roads.",
+  "contract_hooks": [
+    "Raid a cell camp on a jungle ridge and capture its leader (client phl)",
+    "Boat-borne raid on a marsh hideout (client phl)",
+    "Hostage rescue from an island upland (client phl)",
+    "Intercept a cell speedboat in the strait (client phl)",
+    "Election-day security at a polling centre (client phl)",
+    "Relieve a hill detachment under harassment fire (client phl)",
+    "Cache recovery from a limestone cave (client phl)",
+    "Escort an aid convoy on the plateau road after a landslide (client phl)",
+    "Adviser liaison and ISR-guided recon of a suspected camp (client usa)"
+  ],
+  "zone_plan": {
+    "contract_zones": [
+      {"name": "Lakeside town quarter", "area_km2": 2, "anchor": "rebuilt_town_quarter", "notes": "dense, civilians, VIP"},
+      {"name": "Cordillera ridge camp", "area_km2": 3.5, "anchor": "jungle_cell_camp", "notes": "jungle, foot only"},
+      {"name": "Marsh channels", "area_km2": 3, "anchor": "marsh_hideout", "notes": "boats, reeds, seasonal flood"},
+      {"name": "Island and stilt village", "area_km2": 3, "anchor": "island_hostage_site", "notes": "beach landing, stilt walkways"}
+    ],
+    "hot_zones": [
+      {"name": "Cordillera and marsh edge", "area_km2": 12, "layout": "isis HQ in a ridge camp; 3-4 outposts (marsh hideout, cave cache, hill barangay safe house, river landing); phl detachments and highway checkpoints as friendly anchors; roaming cell pairs on trails and pump boats on channels; 1 QRF of cell fighters by boat"}
+    ]
+  },
+  "insertion": {"lhd": true, "fob": "LHD offshore in the strait for island and coastal contracts (amphibious landings with AAVs on beaches; boats over the reef flats); FOB at the army brigade camp near the coastal town for plateau and cordillera work. Helicopters in dry weather; on foot on ridges."},
+  "early_game_suitable": true,
+  "early_game_notes": "isis (early tier) is the only hostile faction here and fights in small cells, which makes this a good early-game counter-terror map; phl (early, friendly client) and the US advisers give early clients. Captain-confirmed new theatre (2026-10-10).",
+  "ambient_audio": ["call to prayer across the lake", "jeepney horns and motorbike taxis", "rain on tin roofs", "jungle birds, cicadas and geckos", "banca engines", "waves under stilt walkways", "karaoke from a barangay"],
+  "captain_confirmed": [
+    "theatre added (Captain, 2026-10-10): early-game, coastal (LHD allowed); isis vs phl with usa advisers",
+    "map_size_km within the confirmed 16-24 km per side (Captain, 2026-10-10)",
+    "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
+    "materials accepted as the next voxel_world.gd additions (Captain, 2026-10-10; not yet in the game): CINDER_BLOCK #9a978f, CORRUGATED_IRON #8b8e8c, THATCH #b49a5e, GLASS #9fbcc4, SANDBAG #b8a378, HESCO #a99a6c"
+  ],
+  "proposed": [
+    "composite layout (lake plateau, cordillera, marsh, coast and island chain on one map)",
+    "generator numbers",
+    "cell-hunt frontline model and regeneration rule",
+    "seasonal marsh flood variable",
+    "zone_plan and hot zone",
+    "usa presence as advisers only (low, non-combat)",
+    "clan-feud armed civilians as neutral NPCs (no faction file); Bangsamoro police and ex-combatants as neutral NPCs",
+    "explosives caches and booby traps as marked map hazards only (game-level)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Lake_Lanao",
+    "https://en.wikipedia.org/wiki/Liguasan_Marsh",
+    "https://en.wikipedia.org/wiki/Sulu_Archipelago",
+    "https://en.wikipedia.org/wiki/Sama-Bajau",
+    "https://en.wikipedia.org/wiki/Bangsamoro",
+    "https://en.wikipedia.org/wiki/Maute_group",
+    "https://en.wikipedia.org/wiki/Siege_of_Marawi",
+    "https://www.philstar.com/entertainment/2026/06/06/2533267/4-dawlah-members-wounded-weapons-seized-maguindanao-encounters",
+    "https://www.rsis.edu.sg/ctta-newsarticle/philippines",
+    "factions/isis.json, phl.json, usa.json situation notes, October 2026"
+  ]
+}

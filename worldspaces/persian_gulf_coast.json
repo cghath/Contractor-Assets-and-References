@@ -209,13 +209,17 @@
   "early_game_suitable": false,
   "early_game_notes": "The main threat is a state navy and missile force (irn, mid) plus rival PMCs (mid); Gulf client port-security jobs can be offered early as low-intensity work.",
   "ambient_audio": ["ship horns and engine thrum", "dhow diesel engines", "call to prayer over the water", "gulls and terns", "flare-stack roar", "air conditioning units", "fast-boat outboards (threat cue)"],
+  "captain_confirmed": [
+    "map_size_km 24 x 22 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
+    "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
+    "materials accepted as the next voxel_world.gd additions (Captain, 2026-10-10); not yet in the game: CORAL_STONE #cbbf9f, PLASTER #e3dccb, BRICK #9c5a3c, CINDER_BLOCK #9a978f, GLASS #9fbcc4, CORRUGATED_IRON #8b8e8c, HESCO #a99a6c, DIRT_BERM #8a6f4e, STONE #8f8676"
+  ],
   "proposed": [
-    "map_size_km and the narrowed channel",
+    "the narrowed channel",
     "bathymetry-in-heightmap approach and generator numbers",
     "channel control state (open/contested/closed) as the frontline variable",
     "qat and sau presence as site concessions on a fictional composite coast",
     "zone_plan; sea hot zone",
-    "materials: CORAL_STONE #cbbf9f, PLASTER #e3dccb, BRICK #9c5a3c, CINDER_BLOCK #9a978f, GLASS #9fbcc4, CORRUGATED_IRON #8b8e8c, HESCO #a99a6c, DIRT_BERM #8a6f4e, STONE #8f8676",
     "heat-stress stamina modifier"
   ],
   "sources": [

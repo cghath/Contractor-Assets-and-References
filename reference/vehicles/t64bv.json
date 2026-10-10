@@ -10,7 +10,8 @@
   "type": "mbt",
   "operators": [
     "ukr",
-    "rus"
+    "rus",
+    "cod"
   ],
   "crew": 3,
   "passengers": 0,

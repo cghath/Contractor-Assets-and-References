@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate loadouts/ (76 faction files, weapons/armor/rounds indexes, README) from the specs in this folder.
+"""Generate loadouts/ (one file per non-player faction, weapons/armor/rounds indexes, README) from the specs in this folder.
 
 usage, from the repo root:
   python3 -I tools/loadouts_gen/gen.py --game <path to the Contractor game repo>

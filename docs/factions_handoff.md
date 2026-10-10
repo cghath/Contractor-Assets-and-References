@@ -6,9 +6,11 @@ The Contractor design doc (Claude Doc) is the source of truth for game design. W
 
 ## Handoffs (start here)
 
+**Status (2026-10-10, after Job 7):** Job 7 added three theatres (`mindanao_sulu`, `iraq_iran_border`, `eastern_congo`; 26 in total) and three factions (`adf`, `m23`, `cod`; the roster now has **80 ids**), applied Captain's worldspace decisions (listed below) and added Russian mountain troops to alpine_europe. `factions/alliances.json` has 48 alliances (new: `monusco`) and the full 80 x 80 matrix; the vehicle catalogue has 211 vehicles (new: `ch4`); there are 79 loadout files with 120 variants. The validator reports 0 errors and 0 warnings and now also checks `factions_present` against each faction's `theatres` both ways.
+
 **Status (2026-10-10, after Job 4):** Jobs 1-4 are complete. All 77 factions exist and are reconciled to `factions/alliances.json` (47 alliances and the full 77 x 77 relations matrix), with 210 vehicles in the catalogue. The validator reports 0 errors. Job 6 (loadouts) is also complete: all 76 non-player factions have loadouts. Job 5 (worldspaces) is also complete: all 23 theatres are written. The validator reports 0 errors and 0 warnings. Remaining: merge duplicate vehicles and write `reference/vehicles/README.md`.
 
-**Faction count:** the roster has 77 ids, not 76 as earlier versions of this file said (1 + 5 + 11 + 8 + 7 + 9 + 11 + 11 + 14).
+**Faction count:** the roster has 80 ids since Job 7 (1 + 5 + 11 + 8 + 7 + 9 + 11 + 12 + 16: adf joined the terror bloc, m23 and cod the others bloc). Before Job 7 it had 77, not 76 as earlier versions of this file said.
 
 Each job has a sheet in this repo and a matching Claude Doc:
 
@@ -28,6 +30,7 @@ Each job has a sheet in this repo and a matching Claude Doc:
 4. ~~alliances.~~ Done (2026-10-10).
 5. ~~worldspaces.~~ Done (2026-10-10).
 6. ~~loadouts.~~ Done on the fork (2026-10-10).
+7. ~~Job 7: three new theatres, the factions they need, and Captain's worldspace decisions.~~ Done on the fork (2026-10-10).
 
 The loadouts were owned by the "Faction loadout questions" thread, which never pushed any `loadouts/` files. On the fork, the job was taken over at the user's request and is now complete. The "don't touch `loadouts/`" rule is lifted; loadouts changes follow [loadouts_handoff.md](loadouts_handoff.md).
 
@@ -47,7 +50,7 @@ The loadouts were owned by the "Faction loadout questions" thread, which never p
 - Contracts come from a regional board and from faction fixers, negotiated MW5-style. Working for one side locks you out of its enemies' contracts for a while.
 - The world is persistent. Factions fight simulated operations between missions, and the war posts matching contracts.
 - Contract zone: about 2-4 km², 40-90 min.
-- Hot zone: about 8-16 km², 2-4 h; the players choose when to extract.
+- Hot zone: about 8-16 km², 2-4 h, twice the area of a contract zone (Captain-confirmed 2026-10-10); the players choose when to extract.
 - Supports deploy from an LHD (coastal) or a FOB (inland).
 - Civilians are present on maps. Casualties caused by players or their AI cost a fine and reputation; 8 casualties void the contract.
 - Vehicle armor ignores small-calibre fire; 7.62x54R and up can penetrate.
@@ -92,6 +95,20 @@ Answers to the open questions of Jobs 1-3, applied during Job 4. Each one was mo
   - Player relations with the rival PMCs (-20 to -45) and the cartels (-60 to -65) stay as written.
   - afg_taliban vs pak is -90 both ways (active border war since February 2026).
 
+- **Theatres and worldspaces (Job 7; Captain's answers of 2026-10-10, applied in Job 7):**
+  - Three new early-game theatres: `mindanao_sulu` (southern Philippines; isis East Asia cells vs phl, usa advisers; coastal, LHD allowed), `iraq_iran_border` (Diyala and Zagros-foothill borderlands; irq, krg_peshmerga, iraqi_militias, irn, isis remnants) and `eastern_congo` (North Kivu and Ituri; UN peacekeeping map with chn and ind as MONUSCO-type peacekeepers).
+  - New factions: `adf` (Allied Democratic Forces / ISCAP; hostile-only, linked to isis and islamic_state_network), `m23` (M23/AFC; hostile non-client, relation -50 with the player, mid tier; the alignment is proposed) and `cod` (FARDC, the state client on eastern_congo; the new state faction is noted in its file).
+  - alpine_europe keeps the generic arms-trafficker NPCs and adds Russian mountain troops (rus) as the hostile force, a what-if marked proposed; the rus loadouts gained a `mountain` variant.
+  - Kashmir keeps generic militant NPCs; no new faction.
+  - Hot zones are twice the AREA of a contract zone (8-16 km² vs 2-4 km²).
+  - Grey-zone maps keep the late-game escalation what-if hot zone, clearly marked fictional.
+  - The 18 proposed materials and hex colours are accepted as the next additions to `voxel_world.gd` (recorded only; the game repo is not edited).
+  - Qalat outer walls need breaching charges, grenade launchers or vehicles to breach; small arms cannot (afghan_highlands).
+  - The LHD restrictions on gaza_west_bank, taiwan_strait and mexico_cartel_belt stay.
+  - Map sizes of 16-24 km per side are confirmed.
+  - The theatre gaps are answered by the new maps: lebanon_south keeps chn and ind as UNIFIL contributors and chn.json and ind.json now list lebanon_south; iraqi_militias is not added to iran_zagros and isis is not added to south_china_sea.
+  - Each worldspace file records these in a new `captain_confirmed` list; they were moved out of `proposed`.
+
 ## Roster (canonical ids)
 
 | Bloc | Factions |
@@ -103,13 +120,15 @@ Answers to the open questions of Jobs 1-3, applied during Job 4. Each one was mo
 | Russia, CSTO, Caucasus | rus, blr, africa_corps (Russian state PMC, rival), kaz, srb, arm, aze |
 | Asia-Pacific | chn, prk, jpn, kor, twn, ind, pak, phl, vnm |
 | Middle East states | irn (Artesh and IRGC), isr, tur, sau, are, qat, egy, jor, syr, irq, pse_pa |
-| Middle East terrorist and armed non-state groups (early game) | hamas, pij, hezbollah, houthis, iraqi_militias, al_qaeda, aqap, isis, isis_k, al_shabaab, jnim |
-| Neutrals, Africa, Central Asia, cartels, rival PMCs | che, aut, irl, mex, cartel_pacifico, cartel_jalisco_nueva (fictional), afg_taliban, sdf, krg_peshmerga, sahel_aes, som, pmc_halcyon, pmc_kestrel, pmc_black_sable (fictional) |
+| Middle East terrorist and armed non-state groups (early game) | hamas, pij, hezbollah, houthis, iraqi_militias, al_qaeda, aqap, isis, isis_k, al_shabaab, jnim, adf (ISCAP, eastern DR Congo; Job 7) |
+| Neutrals, Africa, Central Asia, cartels, rival PMCs | che, aut, irl, mex, cartel_pacifico, cartel_jalisco_nueva (fictional), afg_taliban, sdf, krg_peshmerga, sahel_aes, som, pmc_halcyon, pmc_kestrel, pmc_black_sable (fictional), m23, cod (Job 7) |
 
 ## Theatres (worldspace ids)
 
-- Europe, Asia and Americas: baltic_coast, suwalki_gap, eastern_ukraine, black_sea_coast, arctic_north, caucasus, alpine_europe, taiwan_strait, korean_dmz, south_china_sea, kashmir_loc, mexico_cartel_belt.
-- Middle East and Africa: levant_syria, lebanon_south, israel, gaza_west_bank, iran_zagros, persian_gulf_coast, mesopotamia, yemen_red_sea, sahel, horn_of_africa, afghan_highlands.
+26 theatres since Job 7.
+
+- Europe, Asia and Americas: baltic_coast, suwalki_gap, eastern_ukraine, black_sea_coast, arctic_north, caucasus, alpine_europe, taiwan_strait, korean_dmz, south_china_sea, kashmir_loc, mexico_cartel_belt, mindanao_sulu (Job 7).
+- Middle East and Africa: levant_syria, lebanon_south, israel, gaza_west_bank, iran_zagros, persian_gulf_coast, mesopotamia, yemen_red_sea, sahel, horn_of_africa, afghan_highlands, iraq_iran_border (Job 7), eastern_congo (Job 7).
 
 ## Layout and schemas
 
@@ -133,6 +152,15 @@ Answers to the open questions of Jobs 1-3, applied during Job 4. Each one was mo
   - factions present, how the frontline moves, contract hooks, insertion (LHD/FOB), and whether it suits the early game
 
 ## Status at this snapshot
+
+**Update, 2026-10-10: Job 7 is complete on the fork.** New files: `factions/adf.json`, `factions/m23.json`, `factions/cod.json`, `worldspaces/mindanao_sulu.json`, `worldspaces/iraq_iran_border.json`, `worldspaces/eastern_congo.json`, `reference/vehicles/ch4.json` (FARDC CH-4 drones, low priority) and `loadouts/adf.json`, `m23.json`, `cod.json`.
+  - Roster 80 ids (adf in the terror bloc; m23 and cod in the others bloc); 26 theatres (11 early-game, 14 with `lhd: true`). ROSTER and THEATRES in `tools/factions_workflow.js` are updated; the validator reads both from there.
+  - Relations: rows and columns for the three new factions in the 80 x 80 matrix; reverse entries added to player, usa, gbr, fra, bel, chn, ind, qat, isis, isis_k, al_qaeda, al_shabaab, jnim, egy, som, tur, are and rus (details in [ALLIANCES.md](../factions/ALLIANCES.md)). Every pair agrees in sign and is within 30 points across files and matrix.
+  - Alliances: new `monusco` (ind; chn as a what-if, since China's MONUSCO contingent left in April 2024); adf joined islamic_state_network; cod joined african_union and global_coalition_against_isis.
+  - Theatres added to isis, phl, usa (mindanao_sulu); iraqi_militias, irn, irq, krg_peshmerga, isis (iraq_iran_border); chn, ind (eastern_congo, lebanon_south); rus (alpine_europe). isis gained `fast_boat` (East Asia cells).
+  - Vehicles: operators added to motorcycle, toyota_hilux, toyota_land_cruiser, technical_zu23, technical_dshk, t55, type59, t64bv, btr60, bmp1, mi24, mi8 and fast_boat.
+  - Loadouts: 79 files, 120 variants (adf, m23, cod and a rus `mountain` variant); the generator reproduces `loadouts/` exactly.
+  - Captain's worldspace decisions recorded in every worldspace file (`captain_confirmed`), in [worldspaces/README.md](../worldspaces/README.md) and in [worldspaces_handoff.md](worldspaces_handoff.md). The validator now also checks `factions_present` against `theatres` both ways: 0 errors, 0 warnings.
 
 **Update, 2026-10-10: Job 5 (worldspaces) is complete.** All 23 theatres are written in `worldspaces/<id>.json`, plus `worldspaces/README.md` (theatre table, zone fit, generator approach, proposed materials with hex colours). `early_game_suitable` is true on 8 theatres: levant_syria, gaza_west_bank, mesopotamia, yemen_red_sea, sahel, horn_of_africa, afghan_highlands and mexico_cartel_belt. `lhd` is true on the 13 coastal maps. Maps are 16-24 km per side; each has a `zone_plan` with 4 contract zones and 1-2 hot zones. All towns are fictional. afghan_highlands models the active Afghanistan-Pakistan border war. `factions_present` matches every faction file's `theatres`, except that lebanon_south adds chn and ind as UNIFIL contributors (per alliances.json). Validator: 0 errors, 0 warnings. Remaining validation work: merge duplicate vehicles and write `reference/vehicles/README.md`.
 
@@ -173,7 +201,7 @@ Each job has its own handoff sheet:
 
 Current state:
 
-- **Factions done (77 of 77):** every bloc is written, plus `player`.
+- **Factions done (80 of 80):** every bloc is written, plus `player`. Job 7 added adf (terror bloc), m23 and cod (others bloc).
 - **Neutrals/others bloc (14 of 14 written):** che, aut, irl, mex, cartel_pacifico, cartel_jalisco_nueva, afg_taliban, sdf, krg_peshmerga, sahel_aes, som, pmc_halcyon, pmc_kestrel and pmc_black_sable.
   - che, aut and irl are neutral states that can hire the player; che and aut sell to the player at rep 20/40/60 (Captain-confirmed 2026-10-10). irl lists only 3 vehicles because its armoured fleet is that small.
   - The cartels ("Liga del Pacifico", "Cartel Nueva Frontera") and the rival PMCs (Halcyon, Western; Kestrel, Russia-linked and separate from africa_corps; Black Sable, Gulf-funded) are fictional, each with `inspired_by`. The PMCs carry a proposed `rivalry` object; pmc_black_sable is the nemesis (Captain-confirmed 2026-10-10), pmc_halcyon an ordinary rival.
@@ -191,8 +219,8 @@ Current state:
   - `irq` is the Iraqi Security Forces (Army, Federal Police, CTS). Its notes define the game boundary: the PMF is part of the Iraqi state and is not a faction; `iraqi_militias` covers the Iran-aligned factions acting outside state command (irq -> iraqi_militias = -20).
   - `pse_pa` is the PA Security Forces. It lists only 3 vehicles (the spec asks for 4-12) because PA forces are limited to light weapons and light vehicles.
   - Cross-check of the 8 earlier files: relation signs agree across all 11, every vehicle id exists, and israel, gaza_west_bank, iran_zagros and persian_gulf_coast are all covered. One fix: `sau` added to the operators of `toyota_land_cruiser`.
-- **Vehicle catalogue:** 210 vehicles. Job 4 added `ford_ranger` (medium; Captain's decision) and moved the Ranger and Mexican patrol-pickup variants out of `toyota_hilux`. Before that: 209 vehicles (38 high, 62 medium, 109 low priority). Job 3 added `rg32m`, `narco_truck` and `armored_suv`, put DN-XI (sandcat), Pandur Evolution (pandur_ii), Ford Ranger and Mexican patrol pickups (toyota_hilux) and Super Puma (sa330) in as variants, and updated operators on 35 files. Job 2 added `technical_m40`, `technical_rockets` and `technical_zpu` (catalogue files for existing voxel models, all high), `motorcycle` (high, no model yet) and `fast_boat` (Houthi skiff, explosive variant as a game hazard only; medium). It also added the bloc's ids to the operators of `toyota_hilux`, `toyota_land_cruiser`, `technical_dshk`, `technical_zu23`, `technical_spg9`, `fpv_drone`, `shahed136`, `humvee`, `m1117`, `m113`, `t55`, `t72b3`, `bmp1` and `bmp2`. Job 1 added `al_jawad` (Jordanian-built PA armoured vehicle, with the Al-Maha as a variant). `ejder_yalcin` got `syr` and the Ejder 6x6 variant, `mi8` got `irq`, and `toyota_land_cruiser` got `sau`. Earlier: `aras` and `wolf_av` were added at 200, and `ah1z`, `dingo` and `t55` got operator updates.
-- **Worldspaces (23 of 23 written):** see `worldspaces/README.md`. 8 theatres are early-game (levant_syria, gaza_west_bank, mesopotamia, yemen_red_sea, sahel, horn_of_africa, afghan_highlands, mexico_cartel_belt); `lhd` is true on the 13 coastal maps. Faction-coverage gaps are listed in the README and in the worldspaces handoff's open questions.
+- **Vehicle catalogue:** 211 vehicles since Job 7, which added `ch4` (CASC CH-4 drone, FARDC; low priority). Before that, 210 vehicles. Job 4 added `ford_ranger` (medium; Captain's decision) and moved the Ranger and Mexican patrol-pickup variants out of `toyota_hilux`. Before that: 209 vehicles (38 high, 62 medium, 109 low priority). Job 3 added `rg32m`, `narco_truck` and `armored_suv`, put DN-XI (sandcat), Pandur Evolution (pandur_ii), Ford Ranger and Mexican patrol pickups (toyota_hilux) and Super Puma (sa330) in as variants, and updated operators on 35 files. Job 2 added `technical_m40`, `technical_rockets` and `technical_zpu` (catalogue files for existing voxel models, all high), `motorcycle` (high, no model yet) and `fast_boat` (Houthi skiff, explosive variant as a game hazard only; medium). It also added the bloc's ids to the operators of `toyota_hilux`, `toyota_land_cruiser`, `technical_dshk`, `technical_zu23`, `technical_spg9`, `fpv_drone`, `shahed136`, `humvee`, `m1117`, `m113`, `t55`, `t72b3`, `bmp1` and `bmp2`. Job 1 added `al_jawad` (Jordanian-built PA armoured vehicle, with the Al-Maha as a variant). `ejder_yalcin` got `syr` and the Ejder 6x6 variant, `mi8` got `irq`, and `toyota_land_cruiser` got `sau`. Earlier: `aras` and `wolf_av` were added at 200, and `ah1z`, `dingo` and `t55` got operator updates.
+- **Worldspaces (26 of 26 written; 3 added in Job 7: mindanao_sulu, iraq_iran_border, eastern_congo, all early-game, mindanao_sulu with LHD):** see `worldspaces/README.md`. The rest of this entry describes the Job 5 state. 8 theatres are early-game (levant_syria, gaza_west_bank, mesopotamia, yemen_red_sea, sahel, horn_of_africa, afghan_highlands, mexico_cartel_belt); `lhd` is true on the 13 coastal maps. Faction-coverage gaps are listed in the README and in the worldspaces handoff's open questions.
 - **Validation:** partly done in Job 4: relation ids and symmetry are fixed and `factions/README.md` (roster and alliance matrix) is written. Still to do: merge duplicate vehicles and write `reference/vehicles/README.md` and `worldspaces/README.md`.
 
 ## Next voxel models to build
@@ -208,8 +236,10 @@ Early-game (terrorist) theatres lean on the existing technicals, Hiluxes, BMP/BT
 ## Open questions for Captain
 
 - Who fields the AH-1Z, MRAPs, Bradley and Abrams in the game (real-world operators are recorded).
-- Whether hot zones are twice the area (current) or twice the width.
 - Reputation thresholds and prices for buying from the USA, GB and Canada; the values in the files are proposals.
+- Job 7: m23 is modelled as a hostile non-client (relation -50 with the player, mid tier, not attacked by default during ceasefire phases) rather than hostile-only; confirm or change.
+- Job 7: China's MONUSCO contingent left in April 2024, so chn on eastern_congo is a returning-contingent what-if (alliance `monusco`, member_status what_if); keep it, or show only ind (and non-roster contributors) as peacekeepers?
+- Job 7: adf sits in the `me_terror` bloc (like al_shabaab and jnim) so the validator's hostile-only check covers it; m23 and cod sit in `others`. A separate Central Africa bloc is possible if Captain prefers.
 
 ## How to resume (current plan, 2026-10-10 09:50 UTC)
 
@@ -222,7 +252,8 @@ Captain paused everything at 09:34 UTC. Resume only when Captain says so. Run **
 | 3 | others: neutrals, cartels, PMCs (14 factions) | [others_handoff.md](others_handoff.md) | **Done** (14 of 14, 11:05 UTC) |
 | 4 | alliances: `factions/alliances.json`, `ALLIANCES.md`, the relations matrix, and reconciling all 77 files | [alliances_handoff.md](alliances_handoff.md) | **Done** (2026-10-10) |
 | 5 | worldspaces: 23 theatres, Middle East and Africa first | [worldspaces_handoff.md](worldspaces_handoff.md) | **Done** (23 of 23, 2026-10-10) |
-| n/a | loadouts | [loadouts_handoff.md](loadouts_handoff.md) | **Done** (Job 6, on the fork; 76 of 76). |
+| n/a | loadouts | [loadouts_handoff.md](loadouts_handoff.md) | **Done** (Job 6, on the fork; 76 of 76; 79 after Job 7). |
+| 7 | three new theatres (mindanao_sulu, iraq_iran_border, eastern_congo), factions adf, m23, cod, Captain's worldspace decisions | This file and [worldspaces_handoff.md](worldspaces_handoff.md) | **Done** (on the fork, 2026-10-10) |
 
 ### Job 1 details: finishing the Middle East states
 

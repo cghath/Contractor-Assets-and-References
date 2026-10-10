@@ -46,7 +46,8 @@
   },
   "theatres": [
     "mesopotamia",
-    "iran_zagros"
+    "iran_zagros",
+    "iraq_iran_border"
   ],
   "languages": [
     "Kurdish (Sorani)",
@@ -311,7 +312,7 @@
     ],
     "as_target": []
   },
-  "notes": "Kind non_state chosen because the game models the KRG as a sub-state regional government inside Iraq (it is a constitutional regional force, so 'state' is also defensible). Situation as of October 2026: unification of the KDP and PUK forces under the Ministry of Peshmerga Affairs announced in September 2026; US forces left federal Iraq by 30 September 2026 and reports differ on a residual presence in the Kurdistan Region; Iran-aligned militias have attacked Kurdistan Region oil and gas fields and Erbil with drones and rockets (2025-2026); relations with Baghdad are cooperative but strained over Kirkuk, budgets and oil exports. Iran strikes Iranian Kurdish opposition groups based in the region, hence the iran_zagros border theatre. Player trade of basic kit at rep 30/50 is Captain-confirmed (2026-10-10).",
+  "notes": "Kind non_state chosen because the game models the KRG as a sub-state regional government inside Iraq (it is a constitutional regional force, so 'state' is also defensible). Situation as of October 2026: unification of the KDP and PUK forces under the Ministry of Peshmerga Affairs announced in September 2026; US forces left federal Iraq by 30 September 2026 and reports differ on a residual presence in the Kurdistan Region; Iran-aligned militias have attacked Kurdistan Region oil and gas fields and Erbil with drones and rockets (2025-2026); relations with Baghdad are cooperative but strained over Kirkuk, budgets and oil exports. Iran strikes Iranian Kurdish opposition groups based in the region, hence the iran_zagros border theatre. Player trade of basic kit at rep 30/50 is Captain-confirmed (2026-10-10). Job 7: iraq_iran_border is added; Peshmerga hold the Kurdish-majority north of the map and the disputed districts they share uneasily with the ISF, where IS cells exploit the gap.",
   "proposed": [
     "kind (non_state vs state)",
     "campaign_tier",

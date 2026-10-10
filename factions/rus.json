@@ -85,7 +85,8 @@
     "aus": -60,
     "bel": -80,
     "esp": -80,
-    "ita": -80
+    "ita": -80,
+    "cod": 15
   },
   "theatres": [
     "eastern_ukraine",
@@ -94,7 +95,8 @@
     "suwalki_gap",
     "arctic_north",
     "caucasus",
-    "levant_syria"
+    "levant_syria",
+    "alpine_europe"
   ],
   "languages": [
     "Russian"
@@ -484,7 +486,7 @@
       "evacuate_civilians_from_frontline"
     ]
   },
-  "notes": "Main late-game peer enemy; full-scale war against Ukraine continues in 2026 despite US-mediated truce attempts (May 2026). Field look in 2026: every vehicle wears welded anti-drone cages ('mangals'), mesh screens and sometimes full 'turtle' shed covers; fibre-optic and FPV drones are everywhere. Russia recognised the Taliban government in 2025 and in August 2026 agreed with Syria's new government to convert Hmeimim and Tartus into joint training centres (reduced presence in levant_syria). Africa Corps (separate faction) is its expeditionary arm in Africa. Russian kit (AK-74M, PKM, RPG-7, BTR/BMP, T-72) also equips many Middle East and Central Asian enemies in early game via other factions.",
+  "notes": "Main late-game peer enemy; full-scale war against Ukraine continues in 2026 despite US-mediated truce attempts (May 2026). Field look in 2026: every vehicle wears welded anti-drone cages ('mangals'), mesh screens and sometimes full 'turtle' shed covers; fibre-optic and FPV drones are everywhere. Russia recognised the Taliban government in 2025 and in August 2026 agreed with Syria's new government to convert Hmeimim and Tartus into joint training centres (reduced presence in levant_syria). Africa Corps (separate faction) is its expeditionary arm in Africa. Russian kit (AK-74M, PKM, RPG-7, BTR/BMP, T-72) also equips many Middle East and Central Asian enemies in early game via other factions. Job 7 (Captain, 2026-10-10): rus is added to alpine_europe as the hostile force: Russian mountain troops (34th Separate Guards Mountain Motor Rifle Brigade type) in a covert what-if presence. This is game fiction, not a real deployment, and is marked proposed.",
   "proposed": [
     "campaign_tier",
     "relations.player",
@@ -495,7 +497,8 @@
     "contract_types.as_target",
     "vehicles[].prevalence (game weighting)",
     "body_armor (game tier mapping)",
-    "theatres (baltic_coast/suwalki_gap/arctic_north are what-if escalation theatres)"
+    "theatres (baltic_coast/suwalki_gap/arctic_north are what-if escalation theatres)",
+    "theatres (alpine_europe: a covert mountain-troop presence is a game what-if; adding the theatre is Captain-confirmed 2026-10-10)"
   ],
   "sources": [
     "https://en.wikipedia.org/wiki/Russian_Ground_Forces",

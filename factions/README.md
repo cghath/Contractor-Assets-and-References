@@ -1,9 +1,9 @@
 # Factions
 
-Real-world-inspired factions for Contractor, as of October 2026: 77 ids (the player PMC plus 76 others). States and the real terrorist organisations use real names; cartels and rival PMCs are fictional. The Contractor design doc wins wherever it disagrees with this pack, and anything invented for gameplay is listed in each file's `proposed`.
+Real-world-inspired factions for Contractor, as of October 2026: 80 ids (the player PMC plus 79 others). States and the real terrorist organisations use real names; cartels and rival PMCs are fictional. The Contractor design doc wins wherever it disagrees with this pack, and anything invented for gameplay is listed in each file's `proposed`.
 
 - `factions/<id>.json`: one file per faction (schema below).
-- [alliances.json](alliances.json): 47 alliances, treaties and blocs, proposed game rules (side-lock, war joining, reputation spill-over, selling) and the full 77 x 77 relations matrix.
+- [alliances.json](alliances.json): 48 alliances, treaties and blocs, proposed game rules (side-lock, war joining, reputation spill-over, selling) and the full 80 x 80 relations matrix.
 - [ALLIANCES.md](ALLIANCES.md): the same in plain words, with the change log and open questions.
 - Vehicles live in `../reference/vehicles/` and theatres in `../worldspaces/`. Validate with `python3 tools/validate_pack.py`.
 
@@ -21,7 +21,7 @@ Real-world-inspired factions for Contractor, as of October 2026: 77 ids (the pla
 | id | Name | Bloc | Tier | Alignment to player | Client | Theatres |
 |---|---|---|---|---|---|---|
 | player | Contractor Company (player PMC) | Player | early | friendly | no | all |
-| usa | United States of America | US and Five Eyes | early | friendly | yes | levant_syria, mesopotamia, persian_gulf_coast, yemen_red_sea, horn_of_africa, baltic_coast, suwalki_gap, arctic_north, korean_dmz, taiwan_strait, south_china_sea, mexico_cartel_belt |
+| usa | United States of America | US and Five Eyes | early | friendly | yes | levant_syria, mesopotamia, persian_gulf_coast, yemen_red_sea, horn_of_africa, baltic_coast, suwalki_gap, arctic_north, korean_dmz, taiwan_strait, south_china_sea, mexico_cartel_belt, mindanao_sulu |
 | gbr | United Kingdom | US and Five Eyes | early | friendly | yes | levant_syria, mesopotamia, persian_gulf_coast, yemen_red_sea, baltic_coast, arctic_north |
 | can | Canada | US and Five Eyes | early | friendly | yes | baltic_coast, suwalki_gap, arctic_north, mesopotamia, levant_syria |
 | aus | Australia | US and Five Eyes | mid | friendly | yes | south_china_sea, korean_dmz, persian_gulf_coast, mesopotamia |
@@ -45,23 +45,23 @@ Real-world-inspired factions for Contractor, as of October 2026: 77 ids (the pla
 | rou | Romania | Ukraine and eastern flank | mid | friendly | yes | black_sea_coast |
 | mda | Moldova | Ukraine and eastern flank | mid | friendly | yes | black_sea_coast |
 | geo | Georgia | Ukraine and eastern flank | mid | neutral | yes | caucasus |
-| rus | Russian Federation | Russia, CSTO, Caucasus | late | hostile | no | eastern_ukraine, black_sea_coast, baltic_coast, suwalki_gap, arctic_north, caucasus, levant_syria |
+| rus | Russian Federation | Russia, CSTO, Caucasus | late | hostile | no | eastern_ukraine, black_sea_coast, baltic_coast, suwalki_gap, arctic_north, caucasus, levant_syria, alpine_europe |
 | blr | Republic of Belarus | Russia, CSTO, Caucasus | late | hostile | no | suwalki_gap, baltic_coast, eastern_ukraine |
 | africa_corps | Africa Corps (Afrikansky Korpus) | Russia, CSTO, Caucasus | mid | hostile | no | sahel |
 | kaz | Republic of Kazakhstan | Russia, CSTO, Caucasus | mid | neutral | yes | levant_syria, lebanon_south |
 | srb | Republic of Serbia | Russia, CSTO, Caucasus | mid | neutral | yes | lebanon_south, alpine_europe |
 | arm | Republic of Armenia | Russia, CSTO, Caucasus | mid | neutral | yes | caucasus |
 | aze | Republic of Azerbaijan | Russia, CSTO, Caucasus | mid | neutral | yes | caucasus |
-| chn | People's Republic of China | Asia-Pacific | late | hostile | no | taiwan_strait, south_china_sea, korean_dmz, kashmir_loc, afghan_highlands, horn_of_africa |
+| chn | People's Republic of China | Asia-Pacific | late | hostile | no | taiwan_strait, south_china_sea, korean_dmz, kashmir_loc, afghan_highlands, horn_of_africa, eastern_congo, lebanon_south |
 | prk | Democratic People's Republic of Korea | Asia-Pacific | late | hostile | no | korean_dmz, eastern_ukraine |
 | jpn | Japan | Asia-Pacific | mid | friendly | yes | korean_dmz, taiwan_strait, south_china_sea, horn_of_africa, arctic_north |
 | kor | Republic of Korea | Asia-Pacific | mid | friendly | yes | korean_dmz, persian_gulf_coast, horn_of_africa, lebanon_south |
 | twn | Republic of China (Taiwan) | Asia-Pacific | late | friendly | yes | taiwan_strait, south_china_sea |
-| ind | Republic of India | Asia-Pacific | mid | neutral | yes | kashmir_loc, afghan_highlands, persian_gulf_coast, yemen_red_sea |
+| ind | Republic of India | Asia-Pacific | mid | neutral | yes | kashmir_loc, afghan_highlands, persian_gulf_coast, yemen_red_sea, eastern_congo, lebanon_south |
 | pak | Islamic Republic of Pakistan | Asia-Pacific | early | varies | yes | kashmir_loc, afghan_highlands, persian_gulf_coast |
-| phl | Republic of the Philippines | Asia-Pacific | early | friendly | yes | south_china_sea |
+| phl | Republic of the Philippines | Asia-Pacific | early | friendly | yes | south_china_sea, mindanao_sulu |
 | vnm | Socialist Republic of Vietnam | Asia-Pacific | mid | neutral | yes | south_china_sea |
-| irn | Islamic Republic of Iran (Artesh and IRGC) | Middle East states | mid | hostile | no | iran_zagros, persian_gulf_coast, mesopotamia, lebanon_south, yemen_red_sea |
+| irn | Islamic Republic of Iran (Artesh and IRGC) | Middle East states | mid | hostile | no | iran_zagros, persian_gulf_coast, mesopotamia, lebanon_south, yemen_red_sea, iraq_iran_border |
 | isr | State of Israel (Israel Defense Forces) | Middle East states | mid | neutral | yes | israel, gaza_west_bank, lebanon_south, levant_syria, iran_zagros, yemen_red_sea |
 | tur | Republic of Türkiye (Turkish Armed Forces) | Middle East states | mid | neutral | yes | levant_syria, mesopotamia, black_sea_coast, caucasus, horn_of_africa |
 | sau | Kingdom of Saudi Arabia (Royal Saudi Land Forces and Saudi Arabian National Guard) | Middle East states | early | friendly | yes | yemen_red_sea, persian_gulf_coast |
@@ -70,19 +70,20 @@ Real-world-inspired factions for Contractor, as of October 2026: 77 ids (the pla
 | egy | Arab Republic of Egypt (Egyptian Armed Forces) | Middle East states | mid | neutral | yes | gaza_west_bank, yemen_red_sea, horn_of_africa |
 | jor | Hashemite Kingdom of Jordan (Jordanian Armed Forces - Arab Army) | Middle East states | early | friendly | yes | levant_syria, gaza_west_bank, mesopotamia |
 | syr | Syrian Arab Republic (Transitional Government, Syrian Army / Ministry of Defence) | Middle East states | early | neutral | yes | levant_syria, mesopotamia, lebanon_south |
-| irq | Republic of Iraq (Iraqi Security Forces) | Middle East states | early | neutral | yes | mesopotamia, levant_syria |
+| irq | Republic of Iraq (Iraqi Security Forces) | Middle East states | early | neutral | yes | mesopotamia, levant_syria, iraq_iran_border |
 | pse_pa | Palestinian Authority Security Forces (State of Palestine) | Middle East states | early | neutral | yes | gaza_west_bank |
 | hamas | Hamas (Izz ad-Din al-Qassam Brigades) | ME terrorist / armed groups | early | hostile | no | gaza_west_bank, israel |
 | pij | Palestinian Islamic Jihad (al-Quds Brigades) | ME terrorist / armed groups | early | hostile | no | gaza_west_bank, israel |
 | hezbollah | Hezbollah | ME terrorist / armed groups | mid | hostile | no | lebanon_south, israel, levant_syria |
 | houthis | Houthis (Ansar Allah) | ME terrorist / armed groups | mid | hostile | no | yemen_red_sea |
-| iraqi_militias | Iran-aligned Iraqi armed factions (Islamic Resistance in Iraq: Kata'ib Hezbollah, Harakat al-Nujaba and others) | ME terrorist / armed groups | early | hostile | no | mesopotamia, levant_syria |
+| iraqi_militias | Iran-aligned Iraqi armed factions (Islamic Resistance in Iraq: Kata'ib Hezbollah, Harakat al-Nujaba and others) | ME terrorist / armed groups | early | hostile | no | mesopotamia, levant_syria, iraq_iran_border |
 | al_qaeda | al-Qaeda (core network) | ME terrorist / armed groups | early | hostile | no | afghan_highlands, levant_syria |
 | aqap | al-Qaeda in the Arabian Peninsula | ME terrorist / armed groups | early | hostile | no | yemen_red_sea |
-| isis | Islamic State (Iraq and Syria core, with Sahel and Somalia provinces) | ME terrorist / armed groups | early | hostile | no | mesopotamia, levant_syria, sahel, horn_of_africa |
+| isis | Islamic State (Iraq and Syria core, with Sahel, Somalia and East Asia provinces) | ME terrorist / armed groups | early | hostile | no | mesopotamia, levant_syria, sahel, horn_of_africa, mindanao_sulu, iraq_iran_border |
 | isis_k | Islamic State Khorasan Province | ME terrorist / armed groups | early | hostile | no | afghan_highlands |
 | al_shabaab | al-Shabaab (Harakat al-Shabaab al-Mujahideen) | ME terrorist / armed groups | early | hostile | no | horn_of_africa |
 | jnim | JNIM (Jama'at Nusrat al-Islam wal-Muslimin) | ME terrorist / armed groups | early | hostile | no | sahel |
+| adf | Allied Democratic Forces (ADF) / Islamic State Central Africa Province (ISCAP) | ME terrorist / armed groups | early | hostile | no | eastern_congo |
 | che | Swiss Armed Forces (Schweizer Armee) | Neutrals, Africa, cartels, PMCs | mid | neutral | yes | alpine_europe |
 | aut | Austrian Armed Forces (Österreichisches Bundesheer) | Neutrals, Africa, cartels, PMCs | mid | neutral | yes | alpine_europe, lebanon_south |
 | irl | Irish Defence Forces (Óglaigh na hÉireann) | Neutrals, Africa, cartels, PMCs | early | neutral | yes | lebanon_south |
@@ -91,12 +92,14 @@ Real-world-inspired factions for Contractor, as of October 2026: 77 ids (the pla
 | cartel_jalisco_nueva | Cártel Nueva Frontera (fictional) | Neutrals, Africa, cartels, PMCs | early | hostile | no | mexico_cartel_belt |
 | afg_taliban | Islamic Emirate of Afghanistan armed forces (Taliban) | Neutrals, Africa, cartels, PMCs | early | neutral | yes | afghan_highlands |
 | sdf | Syrian Democratic Forces (SDF) | Neutrals, Africa, cartels, PMCs | early | neutral | yes | levant_syria, mesopotamia |
-| krg_peshmerga | Kurdistan Region Peshmerga (Ministry of Peshmerga Affairs) | Neutrals, Africa, cartels, PMCs | early | friendly | yes | mesopotamia, iran_zagros |
+| krg_peshmerga | Kurdistan Region Peshmerga (Ministry of Peshmerga Affairs) | Neutrals, Africa, cartels, PMCs | early | friendly | yes | mesopotamia, iran_zagros, iraq_iran_border |
 | sahel_aes | Alliance of Sahel States armed forces (Mali, Burkina Faso, Niger) | Neutrals, Africa, cartels, PMCs | early | neutral | yes | sahel |
 | som | Somali National Army (SNA) | Neutrals, Africa, cartels, PMCs | early | neutral | yes | horn_of_africa |
 | pmc_halcyon | Halcyon Global Risk (fictional) | Neutrals, Africa, cartels, PMCs | mid | hostile | no | mesopotamia, persian_gulf_coast, horn_of_africa, yemen_red_sea, levant_syria, mexico_cartel_belt |
 | pmc_kestrel | Kestrel Security Group (fictional; 'Pustelga') | Neutrals, Africa, cartels, PMCs | mid | hostile | no | eastern_ukraine, sahel, levant_syria, caucasus, black_sea_coast |
 | pmc_black_sable | Black Sable Services (fictional) | Neutrals, Africa, cartels, PMCs | mid | hostile | no | yemen_red_sea, horn_of_africa, persian_gulf_coast, sahel |
+| m23 | March 23 Movement (M23) / Alliance Fleuve Congo (AFC) | Neutrals, Africa, cartels, PMCs | mid | hostile | no | eastern_congo |
+| cod | Armed Forces of the Democratic Republic of the Congo (FARDC) | Neutrals, Africa, cartels, PMCs | early | neutral | yes | eastern_congo |
 
 ## Alliance matrix (major powers)
 
@@ -153,9 +156,9 @@ Symbols: `++` +50 or more, `+` +15 to +49, `0` -14 to +14, `-` -15 to -49, `--` 
 | arab_league | political_bloc | are, egy, irq, jor, pse_pa, qat, sau, som, syr |
 | abraham_accords | political_bloc | isr, are, kaz |
 | axis_of_resistance | axis | irn, hezbollah, houthis, iraqi_militias, hamas, pij |
-| global_coalition_against_isis | political_bloc | usa, gbr, can, aus, nzl, fra, deu, ita, esp, nld, bel, nor, dnk, swe, fin, grc, pol, est, lva, ltu, rou, tur, jpn, kor, twn, aut, irl, ukr, geo, mda, sau, are, qat, egy, jor, irq, som, syr, sdf (partner), krg_peshmerga (partner) |
+| global_coalition_against_isis | political_bloc | usa, gbr, can, aus, nzl, fra, deu, ita, esp, nld, bel, nor, dnk, swe, fin, grc, pol, est, lva, ltu, rou, tur, jpn, kor, twn, aut, irl, ukr, geo, mda, sau, are, qat, egy, jor, irq, som, syr, sdf (partner), krg_peshmerga (partner), cod |
 | islamic_military_counter_terrorism_coalition | political_bloc | sau, are, egy, jor, tur, pak, som, pse_pa |
-| african_union | political_bloc | egy, som, sahel_aes (suspended) |
+| african_union | political_bloc | egy, som, sahel_aes (suspended), cod |
 | aes | military_alliance | sahel_aes, africa_corps (partner) |
 | asean | political_bloc | phl, vnm |
 | jef | military_alliance | gbr, dnk, est, fin, lva, ltu, nld, nor, swe |
@@ -169,24 +172,25 @@ Symbols: `++` +50 or more, `+` +15 to +49, `0` -14 to +14, `-` -15 to -49, `--` 
 | g7 | political_bloc | usa, gbr, can, fra, deu, ita, jpn |
 | un_security_council_p5 | political_bloc | usa, gbr, fra, rus, chn |
 | unifil | peacekeeping | aut, chn, deu, esp, fin, fra, ind, irl, ita, kaz, kor, pol, srb |
+| monusco | peacekeeping | ind, chn (what_if) |
 | al_qaeda_network | terror_network | al_qaeda, aqap, al_shabaab, jnim |
-| islamic_state_network | terror_network | isis, isis_k |
+| islamic_state_network | terror_network | isis, isis_k, adf |
 
 ## Proposals to settle
 
 Each file's `proposed` list names its gameplay inventions. The most common, by number of files:
 
-- `doctrine.ai_tuning`: 77 files
-- `unit_templates`: 76 files
-- `relations.player`: 74 files
-- `campaign_tier`: 70 files
-- `body_armor`: 63 files
-- `vehicles[].prevalence`: 59 files
+- `doctrine.ai_tuning`: 80 files
+- `unit_templates`: 79 files
+- `relations.player`: 77 files
+- `campaign_tier`: 73 files
+- `body_armor`: 66 files
+- `vehicles[].prevalence`: 62 files
 - `contract_types`: 40 files
-- `alignment_to_player`: 32 files
+- `alignment_to_player`: 34 files
 - `player_trade.rep_tiers`: 30 files
-- `player_trade`: 29 files
-- `player_client`: 24 files
-- `contract_types.as_target`: 21 files
+- `player_trade`: 30 files
+- `player_client`: 26 files
+- `contract_types.as_target`: 23 files
 
 Open questions for Captain are collected in [ALLIANCES.md](ALLIANCES.md) and in [docs/factions_handoff.md](../docs/factions_handoff.md).

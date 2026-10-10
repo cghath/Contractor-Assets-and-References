@@ -110,14 +110,18 @@
   "early_game_suitable": false,
   "early_game_notes": "High-intensity state war (rus late tier); late-campaign theatre.",
   "ambient_audio": ["constant drone buzz", "distant artillery", "wind in tree lines", "crows", "generators in basements", "radio chatter", "dogs in abandoned villages"],
+  "captain_confirmed": [
+    "map_size_km 20 x 20 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
+    "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
+    "materials accepted as the next voxel_world.gd additions (Captain, 2026-10-10); not yet in the game: BRICK #9c5a3c, PLASTER #e3dccb, FIBRE_CEMENT #a5a49c, CORRUGATED_IRON #8b8e8c, GLASS #9fbcc4, SANDBAG #b8a378, DIRT_BERM #8a6f4e"
+  ],
   "proposed": [
-    "map_size_km and layout",
+    "layout",
     "war-damage pass scaled by front proximity",
     "front advance rules (tree line steps, block-by-block towns)",
     "prk and blr placements (see notes)",
     "no helicopters near the front",
     "zone_plan and hot zone",
-    "materials: BRICK #9c5a3c, PLASTER #e3dccb, FIBRE_CEMENT #a5a49c, CORRUGATED_IRON #8b8e8c, GLASS #9fbcc4, SANDBAG #b8a378, DIRT_BERM #8a6f4e",
     "minefields as marked hazard areas only"
   ],
   "sources": [

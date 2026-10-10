@@ -32,7 +32,9 @@
     "houthis": -30,
     "pmc_halcyon": 5,
     "pmc_kestrel": -20,
-    "pmc_black_sable": -30
+    "pmc_black_sable": -30,
+    "adf": -80,
+    "cod": 15
   },
   "theatres": [
     "horn_of_africa"

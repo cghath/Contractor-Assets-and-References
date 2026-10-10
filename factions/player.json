@@ -89,7 +89,10 @@
     "vnm": 0,
     "sahel_aes": -10,
     "blr": -50,
-    "prk": -80
+    "prk": -80,
+    "adf": -100,
+    "m23": -50,
+    "cod": 20
   },
   "theatres": [
     "levant_syria",

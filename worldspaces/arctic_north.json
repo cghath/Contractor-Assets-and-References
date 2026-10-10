@@ -107,20 +107,24 @@
       {"name": "Frozen lake", "area_km2": 3, "anchor": "lost_equipment_site", "notes": "ice, recovery"}
     ],
     "hot_zones": [
-      {"name": "Fell plateau escalation (late game)", "area_km2": 16, "layout": "rus HQ across the border; 4 outposts on summits and at lake narrows; checkpoints at the crossing and dam; roaming ski and snowmobile patrols; 1-2 QRF tracked-vehicle groups"}
+      {"name": "Fell plateau escalation (late game, fictional what-if)", "area_km2": 16, "layout": "rus HQ across the border; 4 outposts on summits and at lake narrows; checkpoints at the crossing and dam; roaming ski and snowmobile patrols; 1-2 QRF tracked-vehicle groups"}
     ]
   },
   "insertion": {"lhd": true, "fob": "LHD in a fjord for coastal contracts (ice-free); inland FOB at the allied winter-training camp. Mobility by tracked carriers, snowmobiles and skis; helicopters weather-limited; AAVs only in fjords."},
   "early_game_suitable": false,
   "early_game_notes": "Peer-state grey zone and extreme environment; late-campaign theatre.",
   "ambient_audio": ["wind over snow", "snowmobile engines", "creaking ice", "sea and gulls in fjords", "reindeer bells", "aurora-night silence", "distant jets on exercise"],
+  "captain_confirmed": [
+    "map_size_km 22 x 20 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
+    "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
+    "materials accepted as the next voxel_world.gd additions (Captain, 2026-10-10); not yet in the game: CORRUGATED_IRON #8b8e8c, GLASS #9fbcc4, TARP #3f6d8c, SANDBAG #b8a378",
+    "the late-game escalation hot zone stays as a what-if, clearly marked fictional; the default state is the real 2026 situation (Captain, 2026-10-10)"
+  ],
   "proposed": [
-    "map_size_km and composite (Norwegian coast, Finnish border valley)",
+    "composite (Norwegian coast, Finnish border valley)",
     "season-dependent snow layer and mobility rules; cold-exposure mechanic",
     "jpn presence as researchers and observers only",
-    "escalation scenario",
-    "zone_plan and hot zone",
-    "materials: CORRUGATED_IRON #8b8e8c, GLASS #9fbcc4, TARP #3f6d8c, SANDBAG #b8a378"
+    "zone_plan and hot zone"
   ],
   "sources": [
     "https://en.wikipedia.org/wiki/Finnmark",

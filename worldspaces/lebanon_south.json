@@ -170,8 +170,8 @@
     {"faction_id": "kor", "role": "patrol", "strength": "low", "where": "UNIFIL battalion posts on the coastal plain near the town."},
     {"faction_id": "srb", "role": "patrol", "strength": "low", "where": "UNIFIL infantry company with the Spanish-led sector."},
     {"faction_id": "kaz", "role": "patrol", "strength": "low", "where": "Small UNIFIL contingent with the Indian battalion posts in the east."},
-    {"faction_id": "ind", "role": "patrol", "strength": "low", "where": "UNIFIL battalion posts on the eastern hills (listed as a UNIFIL contributor in alliances.json; not yet in ind.json theatres)."},
-    {"faction_id": "chn", "role": "patrol", "strength": "low", "where": "UNIFIL engineer and medical units at a coastal base (listed as a UNIFIL contributor in alliances.json; not yet in chn.json theatres)."}
+    {"faction_id": "ind", "role": "patrol", "strength": "low", "where": "UNIFIL battalion posts on the eastern hills (UNIFIL contributor per alliances.json; ind.json lists lebanon_south since Job 7)."},
+    {"faction_id": "chn", "role": "patrol", "strength": "low", "where": "UNIFIL engineer and medical units at a coastal base (UNIFIL contributor per alliances.json; chn.json lists lebanon_south since Job 7)."}
   ],
   "frontline": "The south is held by the occupying force and contested by hezbollah teams; the Litani gorge is the de facto line. The war sim moves it in steps: hezbollah attacks on outposts or rocket fire flip ridge zones to contested and trigger occupying-force raids that push north of the Litani for a few days, after which they withdraw to the hilltop line. Ceasefire events freeze the line and post escort, return and UXO contracts instead of combat. UN positions never change hands but shrink over the drawdown: each campaign month removes UN posts, posting evacuation and equipment-escort contracts, until the mandate ends. The contract board here is mostly neutral humanitarian and peacekeeper protection, plus neutral-client isr jobs (drone recovery, infrastructure protection).",
   "contract_hooks": [
@@ -199,14 +199,18 @@
   "early_game_suitable": false,
   "early_game_notes": "hezbollah is mid-tier and Israeli forces are high strength; the escort and evacuation contracts can still be offered early as low-combat jobs.",
   "ambient_audio": ["call to prayer and church bells", "drone buzz overhead (constant)", "distant artillery and air strikes", "cicadas in summer", "generators", "sea and gulls at the coast", "UN radio chatter in English and Italian/French"],
+  "captain_confirmed": [
+    "map_size_km 16 x 14 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
+    "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
+    "materials accepted as the next voxel_world.gd additions (Captain, 2026-10-10); not yet in the game: LIMESTONE #d6caa8, CINDER_BLOCK #9a978f, PLASTER #e3dccb, GLASS #9fbcc4, HESCO #a99a6c, SANDBAG #b8a378, DIRT_BERM #8a6f4e, CORRUGATED_IRON #8b8e8c",
+    "chn and ind stay as UNIFIL contributors, and chn.json and ind.json now list lebanon_south so factions_present matches (Captain, 2026-10-10)"
+  ],
   "proposed": [
-    "map_size_km, composite layout and the Litani-as-frontline rule",
+    "composite layout and the Litani-as-frontline rule",
     "generator numbers and terracing post-pass",
     "UN drawdown mechanic (posts removed monthly)",
     "zone_plan and hot-zone layout",
-    "presence of ind and chn as UNIFIL contributors (from alliances.json; their faction files do not list lebanon_south)",
     "Lebanese Armed Forces as neutral NPCs (no faction file)",
-    "materials: LIMESTONE #d6caa8, CINDER_BLOCK #9a978f, PLASTER #e3dccb, GLASS #9fbcc4, HESCO #a99a6c, SANDBAG #b8a378, DIRT_BERM #8a6f4e, CORRUGATED_IRON #8b8e8c",
     "tunnel complexes as level geometry only (game-level)"
   ],
   "sources": [

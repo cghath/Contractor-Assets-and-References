@@ -36,7 +36,8 @@
     "nzl": 50
   },
   "theatres": [
-    "south_china_sea"
+    "south_china_sea",
+    "mindanao_sulu"
   ],
   "languages": [
     "Filipino (Tagalog)",
@@ -376,7 +377,7 @@
   },
   "contract_types": {
     "as_client": [
-      "counter_terror_raid (isis affiliates on southern islands)",
+      "counter_terror_raid (isis East Asia cells, mindanao_sulu)",
       "hostage_rescue (kidnap-for-ransom groups)",
       "resupply_outpost (south_china_sea)",
       "maritime_security_boarding",
@@ -385,7 +386,7 @@
     ],
     "as_target": []
   },
-  "notes": "Friendly early-tier client (proposal) supporting the Captain's early-game counter-terror loop: the southern islands of the south_china_sea theatre can host fictional Mindanao-inspired jungle towns with ISIS-affiliated cells (real-world: Dawlah Islamiyah and Abu Sayyaf remnants, mapped to faction 'isis'). Later the same theatre escalates to grey-zone confrontation with Chinese maritime forces (water cannon, ramming; real 2023-25 incidents at Second Thomas Shoal and Scarborough Shoal).",
+  "notes": "Friendly early-tier client (proposal) supporting the Captain's early-game counter-terror loop: the mindanao_sulu theatre (fictional Mindanao/Sulu-inspired jungle islands and towns) hosts ISIS-affiliated cells (real-world: Dawlah Islamiyah and Abu Sayyaf remnants, mapped to faction 'isis'). The separate south_china_sea theatre covers the grey-zone confrontation with Chinese maritime forces (water cannon, ramming; real 2023-25 incidents at Second Thomas Shoal and Scarborough Shoal). Job 7 (Captain, 2026-10-10): the Mindanao counter-terror loop now has its own early-game theatre, mindanao_sulu (Mindanao/Sulu-inspired jungle islands and coast; isis East Asia cells, usa advisers), so south_china_sea stays a grey-zone maritime map.",
   "proposed": [
     "doctrine.ai_tuning",
     "relations.player",
@@ -396,8 +397,7 @@
     "contract_types",
     "unit_templates (game squads use 8 men in battle-buddy pairs)",
     "player_trade.sellable",
-    "player_trade.rep_tiers",
-    "theatres (Mindanao-inspired islands inside south_china_sea)"
+    "player_trade.rep_tiers"
   ],
   "sources": [
     "https://en.wikipedia.org/wiki/Philippine_Army",

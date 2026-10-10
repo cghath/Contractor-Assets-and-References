@@ -32,7 +32,10 @@
     "sahel_aes",
     "som",
     "pmc_halcyon",
-    "pmc_black_sable"
+    "pmc_black_sable",
+    "adf",
+    "m23",
+    "cod"
   ],
   "crew": 2,
   "passengers": 5,

@@ -102,19 +102,24 @@
       {"name": "Tripoint hill", "area_km2": 3, "anchor": "tripoint_area", "notes": "two hostile borders in view"}
     ],
     "hot_zones": [
-      {"name": "Corridor escalation (late game)", "area_km2": 16, "layout": "Two enemy HQs off the edges; 4-6 bridgehead outposts at lake gaps; checkpoints on regional roads; roaming recon and drone teams; 2 QRF armour groups; allied brigade base as the friendly anchor"}
+      {"name": "Corridor escalation (late game, fictional what-if)", "area_km2": 16, "layout": "Two enemy HQs off the edges; 4-6 bridgehead outposts at lake gaps; checkpoints on regional roads; roaming recon and drone teams; 2 QRF armour groups; allied brigade base as the friendly anchor"}
     ]
   },
   "insertion": {"lhd": false, "fob": "FOB at the allied brigade forest base. Good road network; helicopters affected by fog and EW threat; AAVs can cross lakes (proposed) but not frozen-and-cracking ice."},
   "early_game_suitable": false,
   "early_game_notes": "Peer-state flanks (rus late, blr late); late-campaign theatre.",
   "ambient_audio": ["wind over fields", "cranes and geese", "church bells", "highway lorries", "fence-camera motors", "distant artillery training", "ice cracking on lakes in winter"],
+  "captain_confirmed": [
+    "map_size_km 16 x 20 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
+    "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
+    "materials accepted as the next voxel_world.gd additions (Captain, 2026-10-10); not yet in the game: BRICK #9c5a3c, PLASTER #e3dccb, ROOF_TILE #a4553b, STONE #8f8676, FIBRE_CEMENT #a5a49c, CORRUGATED_IRON #8b8e8c, GLASS #9fbcc4, SANDBAG #b8a378, DIRT_BERM #8a6f4e",
+    "the late-game escalation hot zone stays as a what-if, clearly marked fictional; the default state is the real 2026 situation (Captain, 2026-10-10)"
+  ],
   "proposed": [
-    "map_size_km and compression of the corridor with both flank borders on the map edges",
+    "compression of the corridor with both flank borders on the map edges",
     "generator numbers",
-    "corridor-control frontline variable and escalation scenario",
+    "corridor-control frontline variable",
     "zone_plan and hot zone",
-    "materials: BRICK #9c5a3c, PLASTER #e3dccb, ROOF_TILE #a4553b, STONE #8f8676, FIBRE_CEMENT #a5a49c, CORRUGATED_IRON #8b8e8c, GLASS #9fbcc4, SANDBAG #b8a378, DIRT_BERM #8a6f4e",
     "can presence as liaison only (Canada leads the brigade in Latvia, not in the corridor)"
   ],
   "sources": [

@@ -103,7 +103,10 @@
     "pse_pa": 15,
     "srb": 15,
     "pmc_black_sable": 10,
-    "pmc_kestrel": -60
+    "pmc_kestrel": -60,
+    "adf": -100,
+    "m23": -35,
+    "cod": 50
   },
   "theatres": [
     "levant_syria",
@@ -117,7 +120,8 @@
     "korean_dmz",
     "taiwan_strait",
     "south_china_sea",
-    "mexico_cartel_belt"
+    "mexico_cartel_belt",
+    "mindanao_sulu"
   ],
   "languages": [
     "English"
@@ -619,7 +623,7 @@
       "intel_theft (rival-state fixers)"
     ]
   },
-  "notes": "One faction for the US Army and US Marine Corps. Branch-specific kit: USMC = AH-1Z, ACV (AAV-7 retired Sep 2025), JLTV, M27 IAR, SMAW, MARPAT, HIMARS, no tanks; Army = Abrams, Bradley, Stryker, AH-64E, UH-60, JLTV/M-ATV/MaxxPro, OCP, NGSW (M7/M250) entering service. 2025 Army Transformation Initiative stopped Humvee/JLTV procurement, M10 Booker, Gray Eagle and AH-64D. Early-game patron for counter-terror work in the Middle East and Horn of Africa. Game assignment of which vehicles the US faction fields in each theatre (and whether the player can buy MRAPs/Bradley/Abrams) remains an open design question; the vehicles list records real-world use.",
+  "notes": "One faction for the US Army and US Marine Corps. Branch-specific kit: USMC = AH-1Z, ACV (AAV-7 retired Sep 2025), JLTV, M27 IAR, SMAW, MARPAT, HIMARS, no tanks; Army = Abrams, Bradley, Stryker, AH-64E, UH-60, JLTV/M-ATV/MaxxPro, OCP, NGSW (M7/M250) entering service. 2025 Army Transformation Initiative stopped Humvee/JLTV procurement, M10 Booker, Gray Eagle and AH-64D. Early-game patron for counter-terror work in the Middle East and Horn of Africa. Game assignment of which vehicles the US faction fields in each theatre (and whether the player can buy MRAPs/Bradley/Abrams) remains an open design question; the vehicles list records real-world use. Job 7: usa appears in mindanao_sulu at low strength only, as a small non-combat advise-and-assist presence (the counter-terror support mission in the southern Philippines that began as Operation Pacific Eagle-Philippines in 2017), never as a combat force.",
   "proposed": [
     "doctrine.ai_tuning",
     "relations.player",

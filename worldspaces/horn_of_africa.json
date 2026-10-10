@@ -210,13 +210,17 @@
   "early_game_suitable": true,
   "early_game_notes": "al_shabaab and isis are early-tier; som is an early-game client. Rival PMCs (mid) appear in the north-east and city.",
   "ambient_audio": ["call to prayer", "surf on the reef", "minibus horns and bajaj engines", "goat and camel sounds", "generators", "weaver birds and hornbills in the bush", "distant drone hum"],
+  "captain_confirmed": [
+    "map_size_km 24 x 24 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
+    "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
+    "materials accepted as the next voxel_world.gd additions (Captain, 2026-10-10); not yet in the game: CORAL_STONE #cbbf9f, CINDER_BLOCK #9a978f, STONE #8f8676, CORRUGATED_IRON #8b8e8c, MUD_BRICK #a47e57, THATCH #b49a5e, TARP #3f6d8c, HESCO #a99a6c, SANDBAG #b8a378, DIRT_BERM #8a6f4e, GLASS #9fbcc4"
+  ],
   "proposed": [
-    "map_size_km and composite coast (Indian Ocean plus a gulf corner, with a Djibouti-type port enclave)",
+    "composite coast (Indian Ocean plus a gulf corner, with a Djibouti-type port enclave)",
     "generator numbers",
     "liberated-town hold mechanic",
     "zone_plan and hot zone",
-    "AUSSOM partners other than Egypt (Uganda, Ethiopia, Kenya) as neutral NPCs (no faction files)",
-    "materials: CORAL_STONE #cbbf9f, CINDER_BLOCK #9a978f, STONE #8f8676, CORRUGATED_IRON #8b8e8c, MUD_BRICK #a47e57, THATCH #b49a5e, TARP #3f6d8c, HESCO #a99a6c, SANDBAG #b8a378, DIRT_BERM #8a6f4e, GLASS #9fbcc4"
+    "AUSSOM partners other than Egypt (Uganda, Ethiopia, Kenya) as neutral NPCs (no faction files)"
   ],
   "sources": [
     "https://en.wikipedia.org/wiki/Geography_of_Somalia",

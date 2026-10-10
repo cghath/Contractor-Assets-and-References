@@ -4,6 +4,7 @@ Snapshot as of 2026-10-10 09:25 UTC. Branch `factions-worldspaces` (draft PR #2)
 
 ## Status
 
+- **Job 7 (2026-10-10): 3 new theatres and Captain's decisions.** `mindanao_sulu` (southern Philippines: isis East Asia cells vs phl, usa advisers; coastal, LHD), `iraq_iran_border` (Diyala and Zagros-foothill borderlands: irq, krg_peshmerga, iraqi_militias, irn, isis remnants) and `eastern_congo` (North Kivu and Ituri: cod, m23, adf, with ind and chn as UN peacekeepers) are written; all three are early-game and 22-24 km per side. There are now 26 theatres; 11 are early-game and 14 have `lhd: true`. alpine_europe gained rus (Russian mountain troops) as a fictional what-if hostile force, alongside the generic arms-trafficker NPCs. Every worldspace file now has a `captain_confirmed` list holding the decisions moved out of `proposed` (map size, hot-zone area, the accepted materials, and per-file decisions: grey-zone escalation, LHD restrictions, qalat walls, Kashmir militants, UNIFIL chn/ind, the iran_zagros and south_china_sea gaps). `tools/validate_pack.py` now checks `factions_present` against each faction's `theatres` both ways; it reports 0 errors and 0 warnings.
 - **Done (Job 5, 2026-10-10).** All 23 theatres are written in `worldspaces/<id>.json`, together with [worldspaces/README.md](../worldspaces/README.md), which has the theatre table, the zone fit, the generator approach and the material registry. The validator reports 0 errors and 0 warnings; the missing-worldspace warnings are gone.
   - Pass 1 covers Middle East and Africa (11). Pass 2 covers Europe, Asia and the Americas (12); it was built in the same job, which answers the pass-2 question below for now.
   - `early_game_suitable: true` is set on 8 theatres: levant_syria, gaza_west_bank, mesopotamia, yemen_red_sea, sahel, horn_of_africa, afghan_highlands and mexico_cartel_belt.
@@ -11,7 +12,7 @@ Snapshot as of 2026-10-10 09:25 UTC. Branch `factions-worldspaces` (draft PR #2)
   - The maps are 16-24 km per side. Each file has a `zone_plan` with 4 contract zones and 1-2 hot zones.
   - Town names are fictional. Names derived from real places were replaced in a cleanup pass.
   - afghan_highlands reflects the active Afghanistan-Pakistan border war (afg_taliban <-> pak at -90; the two clients lock each other out).
-- **Faction coverage.** Every faction file's `theatres` entry is reflected in `factions_present`. One worldspace adds factions its files don't list: lebanon_south adds chn and ind, the UNIFIL contributors per `alliances.json`. Open questions:
+- **Faction coverage.** Every faction file's `theatres` entry is reflected in `factions_present`, and since Job 7 every faction present lists the theatre in its own file (chn.json and ind.json now list lebanon_south). The Job 5 questions below were answered by Captain on 2026-10-10 (see the end of this sheet):
   - Should iraqi_militias list iran_zagros?
   - Should isis list south_china_sea, for phl's counter-terror hook?
   - alpine_europe has no hostile faction.
@@ -140,6 +141,16 @@ The **Faction files listing it** column is generated from each faction file's `t
 | kashmir_loc | chn ind pak |
 | mexico_cartel_belt | usa (plus mex, cartel_pacifico, cartel_jalisco_nueva once the others bloc lands) |
 
+### Job 7 additions (2026-10-10)
+
+| Theatre | Inspired by | Faction files listing it |
+|---|---|---|
+| mindanao_sulu | Southern Philippines (Mindanao and Sulu) | isis phl usa |
+| iraq_iran_border | Iraq-Iran borderlands (Diyala, Zagros foothills) | iraqi_militias irn irq isis krg_peshmerga |
+| eastern_congo | Eastern DR Congo (North Kivu, Ituri) | adf chn cod ind m23 |
+
+alpine_europe also gained rus (Job 7), and lebanon_south is now listed by chn and ind.
+
 `player` lists every theatre. The rival PMCs (pmc_halcyon, pmc_kestrel and pmc_black_sable) and africa_corps can appear as `rival_pmc` wherever their files place them.
 
 ## Checks before handing back
@@ -151,6 +162,20 @@ The **Faction files listing it** column is generated from each faction file's `t
 
 ## Open questions for Captain
 
-- Hot zones: twice the area (current assumption) or twice the width?
-- Should pass 2 (Europe, Asia and Americas) be built now, or deferred until the early-game maps are playable?
-- Are the proposed map sizes acceptable? (Default: 12-24 km per side, so contract zones and one or two hot zones fit with buffer.)
+Answered by Captain (2026-10-10), applied in Job 7:
+
+- Hot zones are twice the AREA of a contract zone (8-16 km² vs 2-4 km²), not twice the width.
+- Pass 2 (Europe, Asia and Americas) was built in Job 5 and stays.
+- Map sizes of 16-24 km per side are confirmed.
+- The 18 proposed materials and hex colours are accepted as the next additions to `voxel_world.gd` (recorded only; the game repo is not edited).
+- Grey-zone maps keep the late-game escalation what-if hot zone, clearly marked fictional.
+- Qalat outer walls need breaching charges, grenade launchers or vehicles to breach; small arms cannot.
+- The LHD restrictions on gaza_west_bank, taiwan_strait and mexico_cartel_belt stay.
+- Kashmir keeps generic militant NPCs; no new faction.
+- alpine_europe keeps the generic arms-trafficker NPCs and gains Russian mountain troops (rus) as the hostile force, as a fictional what-if.
+- The theatre gaps are answered by the new maps: iraqi_militias is not added to iran_zagros (iraq_iran_border covers it), isis is not added to south_china_sea (mindanao_sulu covers it), and chn and ind keep their UNIFIL entry on lebanon_south and now list lebanon_south in their files.
+
+Still open:
+
+- The low-plausibility listings flagged in the README (blr in eastern_ukraine and baltic_coast; fra, bel and esp in sahel; jpn in arctic_north; chn in korean_dmz) and the new what-if listings (chn as returning MONUSCO peacekeepers on eastern_congo; rus mountain troops on alpine_europe) are kept at low strength or marked as what-ifs; Captain may want to drop any of them.
+- m23's alignment (hostile non-client, relation -50 with the player, not attacked by default in ceasefire phases) is a proposal.

@@ -1,6 +1,6 @@
 {
   "as_of": "2026-10",
-  "description": "Alliances, treaties and blocs for the Contractor faction pack, plus the full relations matrix (77 x 77, row = the faction's view of the column). Faction files keep their notable relations; this matrix is the single source of truth.",
+  "description": "Alliances, treaties and blocs for the Contractor faction pack, plus the full relations matrix (80 x 80, row = the faction's view of the column). Faction files keep their notable relations; this matrix is the single source of truth.",
   "alliances": [
     {
       "id": "nato",
@@ -926,7 +926,8 @@
         "som",
         "syr",
         "sdf",
-        "krg_peshmerga"
+        "krg_peshmerga",
+        "cod"
       ],
       "member_status": {
         "usa": "full",
@@ -968,7 +969,8 @@
         "som": "full",
         "syr": "full",
         "sdf": "partner",
-        "krg_peshmerga": "partner"
+        "krg_peshmerga": "partner",
+        "cod": "full"
       },
       "obligations": "Political coalition of 90 members (Syria became the 90th in November 2025); military operations are run by members, not the coalition.",
       "game_effect": {
@@ -976,10 +978,11 @@
         "side_lock": false,
         "rep_spill": 0.15
       },
-      "notes": "Roster members listed as far as verified; the full partner list was not re-checked line by line (phl and srb membership not verified, left out). sdf and krg_peshmerga are not members: they are partner forces on the ground (member_status partner). Syria's accession is a political declaration without military provisions.",
+      "notes": "Roster members listed as far as verified; the full partner list was not re-checked line by line (phl and srb membership not verified, left out). sdf and krg_peshmerga are not members: they are partner forces on the ground (member_status partner). Syria's accession is a political declaration without military provisions. cod (DR Congo) joined in 2019 (US State Department Country Reports on Terrorism; welcomed again at the June 2021 Rome ministerial); added in Job 7.",
       "sources": [
         "https://www.state.gov/the-global-coalition-to-defeat-isis-partners/",
-        "https://www.atlanticcouncil.org/blogs/menasource/syria-joining-the-anti-isis-coalition-is-a-westward-pivot-with-opportunities-and-risks/"
+        "https://www.atlanticcouncil.org/blogs/menasource/syria-joining-the-anti-isis-coalition-is-a-westward-pivot-with-opportunities-and-risks/",
+        "https://www.ecoi.net/en/document/2032479.html"
       ]
     },
     {
@@ -1024,12 +1027,14 @@
       "members": [
         "egy",
         "som",
-        "sahel_aes"
+        "sahel_aes",
+        "cod"
       ],
       "member_status": {
         "egy": "full",
         "som": "full",
-        "sahel_aes": "suspended"
+        "sahel_aes": "suspended",
+        "cod": "full"
       },
       "obligations": "Political union; the Peace and Security Council mandates missions such as AUSSOM in Somalia.",
       "game_effect": {
@@ -1037,7 +1042,7 @@
         "side_lock": false,
         "rep_spill": 0.15
       },
-      "notes": "Mali, Burkina Faso and Niger (sahel_aes) are suspended after their coups (member_status suspended).",
+      "notes": "Mali, Burkina Faso and Niger (sahel_aes) are suspended after their coups (member_status suspended). cod (DR Congo, added in Job 7) is a full member.",
       "sources": [
         "https://en.wikipedia.org/wiki/African_Union"
       ]
@@ -1420,6 +1425,32 @@
       ]
     },
     {
+      "id": "monusco",
+      "name": "UN Organization Stabilization Mission in the DR Congo (MONUSCO-type peacekeepers)",
+      "kind": "peacekeeping",
+      "members": [
+        "ind",
+        "chn"
+      ],
+      "member_status": {
+        "ind": "full",
+        "chn": "what_if"
+      },
+      "obligations": "UN peacekeeping mandate in eastern DR Congo; since May 2024 (Resolution 2717) the mission operates only in North Kivu and Ituri, after withdrawing from South Kivu, and it supports the ceasefire-verification mechanism (EJVM+) of the 2025-2026 peace process.",
+      "game_effect": {
+        "war_join": "none",
+        "side_lock": false,
+        "rep_spill": 0.0
+      },
+      "notes": "Added in Job 7 for the eastern_congo theatre (Captain, 2026-10-10: chn and ind as UN peacekeepers). ind is a long-standing troop contributor (about 1,100-1,200 troops around Goma and Sake in January 2025). chn's formed units (an engineer and medical contingent near Bukavu) left in April 2024 with the South Kivu drawdown, so its presence on the map is a game what-if (member_status what_if): a returning engineer and medical contingent. Non-roster contributors include Pakistan, Bangladesh, Nepal, Uruguay and others; South Africa is withdrawing its contingent by the end of 2026. Like unifil: neutral, never side-locks and never joins wars; peacekeepers appear on eastern_congo maps as neutral units.",
+      "sources": [
+        "https://monusco.unmissions.org/sites/default/files/pr_monuscos_chinese_peacekeepers_to_leave_the_dr_congo_9_april_2024.pdf",
+        "https://www.newsonair.gov.in/un-peacekeeping-head-thanks-india-other-troop-contributing-nations-for-congo-operation",
+        "https://www.voaafrica.com/a/un-forces-withdraw-from-drc-s-south-kivu-province/7593240.html",
+        "https://www.ecofinagency.com/news/0902-52720-south-africa-to-withdraw-monusco-troops-by-end-2026"
+      ]
+    },
+    {
       "id": "al_qaeda_network",
       "name": "al-Qaeda and affiliates",
       "kind": "terror_network",
@@ -1452,11 +1483,13 @@
       "kind": "terror_network",
       "members": [
         "isis",
-        "isis_k"
+        "isis_k",
+        "adf"
       ],
       "member_status": {
         "isis": "full",
-        "isis_k": "full"
+        "isis_k": "full",
+        "adf": "full"
       },
       "obligations": "Provinces (wilayat) under the Islamic State's central leadership.",
       "game_effect": {
@@ -1464,9 +1497,10 @@
         "side_lock": true,
         "rep_spill": 0.3
       },
-      "notes": "The handoff sheet called this isis_network; the id already used in the faction files (islamic_state_network) is kept. isis covers the Iraq/Syria core plus the Sahel and Somalia provinces. Fights al_qaeda_network and afg_taliban.",
+      "notes": "The handoff sheet called this isis_network; the id already used in the faction files (islamic_state_network) is kept. isis covers the Iraq/Syria core plus the Sahel and Somalia provinces. Fights al_qaeda_network and afg_taliban. adf (Islamic State Central Africa Province, eastern DR Congo; added in Job 7) is a full member: IS has claimed ADF attacks as ISCAP since 2019.",
       "sources": [
-        "https://en.wikipedia.org/wiki/Islamic_State"
+        "https://en.wikipedia.org/wiki/Islamic_State",
+        "https://en.wikipedia.org/wiki/Islamic_State_%E2%80%93_Central_Africa_Province"
       ]
     }
   ],
@@ -1479,7 +1513,7 @@
         28
       ],
       "duration_scaling": "Scaled by contract severity (escort 14 days ... HVT kill or capture 28 days). The 2-4 week range is Captain-confirmed 2026-10-10.",
-      "exempt": "Peacekeeping (unifil) clients and neutral humanitarian clients (che, aut, irl) never lock, and never cause a lock.",
+      "exempt": "Peacekeeping (unifil, monusco) clients and neutral humanitarian clients (che, aut, irl) never lock, and never cause a lock.",
       "terror_groups": "Terror groups are never clients, so they never lock; working against them never locks anyone out except their own network."
     },
     "war_join": {
@@ -1508,7 +1542,89 @@
     }
   },
   "relations_matrix": {
+    "adf": {
+      "afg_taliban": -90,
+      "africa_corps": -100,
+      "al_qaeda": -80,
+      "al_shabaab": -75,
+      "aqap": -85,
+      "are": -95,
+      "arm": -90,
+      "aus": -100,
+      "aut": -90,
+      "aze": -90,
+      "bel": -85,
+      "blr": -90,
+      "can": -100,
+      "cartel_jalisco_nueva": -20,
+      "cartel_pacifico": -20,
+      "che": -90,
+      "chn": -85,
+      "cod": -100,
+      "deu": -100,
+      "dnk": -100,
+      "egy": -75,
+      "esp": -100,
+      "est": -95,
+      "fin": -100,
+      "fra": -85,
+      "gbr": -85,
+      "geo": -90,
+      "grc": -100,
+      "hamas": -80,
+      "hezbollah": -100,
+      "houthis": -90,
+      "ind": -90,
+      "iraqi_militias": -100,
+      "irl": -90,
+      "irn": -95,
+      "irq": -100,
+      "isis": 85,
+      "isis_k": 60,
+      "isr": -90,
+      "ita": -100,
+      "jnim": -75,
+      "jor": -95,
+      "jpn": -90,
+      "kaz": -90,
+      "kor": -85,
+      "krg_peshmerga": -95,
+      "ltu": -95,
+      "lva": -95,
+      "m23": -40,
+      "mda": -80,
+      "mex": -40,
+      "nld": -100,
+      "nor": -100,
+      "nzl": -100,
+      "pak": -95,
+      "phl": -95,
+      "pij": -80,
+      "player": -100,
+      "pmc_black_sable": -95,
+      "pmc_halcyon": -100,
+      "pmc_kestrel": -90,
+      "pol": -95,
+      "prk": -40,
+      "pse_pa": -90,
+      "qat": -60,
+      "rou": -95,
+      "rus": -100,
+      "sahel_aes": -95,
+      "sau": -95,
+      "sdf": -95,
+      "som": -80,
+      "srb": -90,
+      "swe": -100,
+      "syr": -95,
+      "tur": -90,
+      "twn": -70,
+      "ukr": -90,
+      "usa": -100,
+      "vnm": -60
+    },
     "afg_taliban": {
+      "adf": -90,
       "africa_corps": 10,
       "al_qaeda": 30,
       "al_shabaab": 10,
@@ -1525,6 +1641,7 @@
       "cartel_pacifico": 0,
       "che": -30,
       "chn": 30,
+      "cod": 0,
       "deu": -50,
       "dnk": -60,
       "egy": 0,
@@ -1555,6 +1672,7 @@
       "krg_peshmerga": -10,
       "ltu": -50,
       "lva": -50,
+      "m23": -10,
       "mda": -30,
       "mex": 0,
       "nld": -60,
@@ -1587,6 +1705,7 @@
       "vnm": 0
     },
     "africa_corps": {
+      "adf": -100,
       "afg_taliban": 10,
       "al_qaeda": -95,
       "al_shabaab": -80,
@@ -1603,6 +1722,7 @@
       "cartel_pacifico": 0,
       "che": -30,
       "chn": 20,
+      "cod": 0,
       "deu": -60,
       "dnk": -60,
       "egy": 0,
@@ -1633,6 +1753,7 @@
       "krg_peshmerga": 0,
       "ltu": -60,
       "lva": -60,
+      "m23": -10,
       "mda": -50,
       "mex": -10,
       "nld": -60,
@@ -1665,6 +1786,7 @@
       "vnm": 0
     },
     "al_qaeda": {
+      "adf": -80,
       "afg_taliban": 40,
       "africa_corps": -90,
       "al_shabaab": 85,
@@ -1681,6 +1803,7 @@
       "cartel_pacifico": -20,
       "che": -85,
       "chn": -75,
+      "cod": -70,
       "deu": -100,
       "dnk": -100,
       "egy": -85,
@@ -1711,6 +1834,7 @@
       "krg_peshmerga": -85,
       "ltu": -95,
       "lva": -95,
+      "m23": -60,
       "mda": -80,
       "mex": -40,
       "nld": -100,
@@ -1743,6 +1867,7 @@
       "vnm": -60
     },
     "al_shabaab": {
+      "adf": -75,
       "afg_taliban": 10,
       "africa_corps": -80,
       "al_qaeda": 85,
@@ -1759,6 +1884,7 @@
       "cartel_pacifico": -20,
       "che": -60,
       "chn": -60,
+      "cod": -60,
       "deu": -90,
       "dnk": -90,
       "egy": -55,
@@ -1789,6 +1915,7 @@
       "krg_peshmerga": -60,
       "ltu": -85,
       "lva": -85,
+      "m23": -60,
       "mda": -70,
       "mex": -40,
       "nld": -90,
@@ -1821,6 +1948,7 @@
       "vnm": -60
     },
     "aqap": {
+      "adf": -85,
       "afg_taliban": 10,
       "africa_corps": -80,
       "al_qaeda": 90,
@@ -1837,6 +1965,7 @@
       "cartel_pacifico": -20,
       "che": -60,
       "chn": -60,
+      "cod": -50,
       "deu": -85,
       "dnk": -90,
       "egy": -65,
@@ -1867,6 +1996,7 @@
       "krg_peshmerga": -60,
       "ltu": -90,
       "lva": -90,
+      "m23": -60,
       "mda": -70,
       "mex": -40,
       "nld": -90,
@@ -1899,6 +2029,7 @@
       "vnm": -60
     },
     "are": {
+      "adf": -95,
       "afg_taliban": 30,
       "africa_corps": 0,
       "al_qaeda": -90,
@@ -1915,6 +2046,7 @@
       "cartel_pacifico": -15,
       "che": 20,
       "chn": 40,
+      "cod": 25,
       "deu": 45,
       "dnk": 45,
       "egy": 65,
@@ -1945,6 +2077,7 @@
       "krg_peshmerga": 30,
       "ltu": 25,
       "lva": 25,
+      "m23": -15,
       "mda": 20,
       "mex": 15,
       "nld": 45,
@@ -1977,6 +2110,7 @@
       "vnm": 10
     },
     "arm": {
+      "adf": -90,
       "afg_taliban": 0,
       "africa_corps": -10,
       "al_qaeda": -60,
@@ -1993,6 +2127,7 @@
       "cartel_pacifico": -15,
       "che": 25,
       "chn": 20,
+      "cod": 0,
       "deu": 35,
       "dnk": 25,
       "egy": 20,
@@ -2023,6 +2158,7 @@
       "krg_peshmerga": 10,
       "ltu": 25,
       "lva": 25,
+      "m23": -15,
       "mda": 15,
       "mex": 15,
       "nld": 25,
@@ -2055,6 +2191,7 @@
       "vnm": 10
     },
     "aus": {
+      "adf": -100,
       "afg_taliban": -55,
       "africa_corps": -40,
       "al_qaeda": -100,
@@ -2071,6 +2208,7 @@
       "cartel_pacifico": -35,
       "che": 30,
       "chn": -25,
+      "cod": 15,
       "deu": 70,
       "dnk": 70,
       "egy": 25,
@@ -2101,6 +2239,7 @@
       "krg_peshmerga": 30,
       "ltu": 45,
       "lva": 45,
+      "m23": -15,
       "mda": 25,
       "mex": 20,
       "nld": 70,
@@ -2133,6 +2272,7 @@
       "vnm": 35
     },
     "aut": {
+      "adf": -90,
       "afg_taliban": -40,
       "africa_corps": -30,
       "al_qaeda": -85,
@@ -2149,6 +2289,7 @@
       "cartel_pacifico": -40,
       "che": 60,
       "chn": 10,
+      "cod": 15,
       "deu": 70,
       "dnk": 45,
       "egy": 20,
@@ -2179,6 +2320,7 @@
       "krg_peshmerga": 15,
       "ltu": 45,
       "lva": 45,
+      "m23": -15,
       "mda": 40,
       "mex": 15,
       "nld": 45,
@@ -2211,6 +2353,7 @@
       "vnm": 10
     },
     "aze": {
+      "adf": -90,
       "afg_taliban": 10,
       "africa_corps": 0,
       "al_qaeda": -60,
@@ -2227,6 +2370,7 @@
       "cartel_pacifico": -15,
       "che": 15,
       "chn": 35,
+      "cod": 15,
       "deu": 25,
       "dnk": 15,
       "egy": 15,
@@ -2257,6 +2401,7 @@
       "krg_peshmerga": 10,
       "ltu": 15,
       "lva": 15,
+      "m23": -15,
       "mda": 30,
       "mex": 5,
       "nld": 15,
@@ -2289,6 +2434,7 @@
       "vnm": 15
     },
     "bel": {
+      "adf": -85,
       "afg_taliban": -60,
       "africa_corps": -60,
       "al_qaeda": -100,
@@ -2305,6 +2451,7 @@
       "cartel_pacifico": -50,
       "che": 40,
       "chn": -20,
+      "cod": 30,
       "deu": 85,
       "dnk": 85,
       "egy": 35,
@@ -2335,6 +2482,7 @@
       "krg_peshmerga": 55,
       "ltu": 80,
       "lva": 80,
+      "m23": -45,
       "mda": 55,
       "mex": 20,
       "nld": 95,
@@ -2367,6 +2515,7 @@
       "vnm": 15
     },
     "blr": {
+      "adf": -90,
       "afg_taliban": 20,
       "africa_corps": 50,
       "al_qaeda": -60,
@@ -2383,6 +2532,7 @@
       "cartel_pacifico": -15,
       "che": -25,
       "chn": 60,
+      "cod": 0,
       "deu": -55,
       "dnk": -65,
       "egy": 20,
@@ -2413,6 +2563,7 @@
       "krg_peshmerga": 0,
       "ltu": -80,
       "lva": -75,
+      "m23": -15,
       "mda": -40,
       "mex": 0,
       "nld": -65,
@@ -2445,6 +2596,7 @@
       "vnm": 20
     },
     "can": {
+      "adf": -100,
       "afg_taliban": -60,
       "africa_corps": -55,
       "al_qaeda": -100,
@@ -2461,6 +2613,7 @@
       "cartel_pacifico": -80,
       "che": 40,
       "chn": -40,
+      "cod": 25,
       "deu": 75,
       "dnk": 75,
       "egy": 25,
@@ -2491,6 +2644,7 @@
       "krg_peshmerga": 50,
       "ltu": 70,
       "lva": 85,
+      "m23": -15,
       "mda": 45,
       "mex": 50,
       "nld": 80,
@@ -2523,6 +2677,7 @@
       "vnm": 20
     },
     "cartel_jalisco_nueva": {
+      "adf": -20,
       "afg_taliban": 0,
       "africa_corps": 0,
       "al_qaeda": -20,
@@ -2539,6 +2694,7 @@
       "cartel_pacifico": -85,
       "che": -40,
       "chn": -10,
+      "cod": -15,
       "deu": -35,
       "dnk": -35,
       "egy": -15,
@@ -2569,6 +2725,7 @@
       "krg_peshmerga": 0,
       "ltu": -35,
       "lva": -35,
+      "m23": 0,
       "mda": -15,
       "mex": -95,
       "nld": -50,
@@ -2601,6 +2758,7 @@
       "vnm": -15
     },
     "cartel_pacifico": {
+      "adf": -20,
       "afg_taliban": 0,
       "africa_corps": 0,
       "al_qaeda": -20,
@@ -2617,6 +2775,7 @@
       "cartel_jalisco_nueva": -85,
       "che": -40,
       "chn": -10,
+      "cod": -15,
       "deu": -35,
       "dnk": -35,
       "egy": -15,
@@ -2647,6 +2806,7 @@
       "krg_peshmerga": 0,
       "ltu": -35,
       "lva": -35,
+      "m23": 0,
       "mda": -15,
       "mex": -90,
       "nld": -50,
@@ -2679,6 +2839,7 @@
       "vnm": -15
     },
     "che": {
+      "adf": -90,
       "afg_taliban": -30,
       "africa_corps": -30,
       "al_qaeda": -85,
@@ -2695,6 +2856,7 @@
       "cartel_jalisco_nueva": -40,
       "cartel_pacifico": -40,
       "chn": 10,
+      "cod": 15,
       "deu": 55,
       "dnk": 40,
       "egy": 20,
@@ -2725,6 +2887,7 @@
       "krg_peshmerga": 15,
       "ltu": 40,
       "lva": 40,
+      "m23": -15,
       "mda": 30,
       "mex": 15,
       "nld": 40,
@@ -2757,6 +2920,7 @@
       "vnm": 10
     },
     "chn": {
+      "adf": -85,
       "afg_taliban": 20,
       "africa_corps": 20,
       "al_qaeda": -80,
@@ -2773,6 +2937,7 @@
       "cartel_jalisco_nueva": -10,
       "cartel_pacifico": -10,
       "che": 10,
+      "cod": 45,
       "deu": -15,
       "dnk": -20,
       "egy": 35,
@@ -2803,6 +2968,7 @@
       "krg_peshmerga": 10,
       "ltu": -50,
       "lva": -35,
+      "m23": -30,
       "mda": 0,
       "mex": 10,
       "nld": -20,
@@ -2834,7 +3000,89 @@
       "usa": -65,
       "vnm": -5
     },
+    "cod": {
+      "adf": -100,
+      "afg_taliban": 0,
+      "africa_corps": 0,
+      "al_qaeda": -70,
+      "al_shabaab": -60,
+      "aqap": -50,
+      "are": 25,
+      "arm": 0,
+      "aus": 15,
+      "aut": 15,
+      "aze": 15,
+      "bel": 30,
+      "blr": 0,
+      "can": 25,
+      "cartel_jalisco_nueva": -15,
+      "cartel_pacifico": -15,
+      "che": 15,
+      "chn": 45,
+      "deu": 25,
+      "dnk": 25,
+      "egy": 30,
+      "esp": 25,
+      "est": 25,
+      "fin": 25,
+      "fra": 30,
+      "gbr": 25,
+      "geo": 0,
+      "grc": 25,
+      "hamas": 0,
+      "hezbollah": 0,
+      "houthis": -10,
+      "ind": 35,
+      "iraqi_militias": 0,
+      "irl": 15,
+      "irn": -10,
+      "irq": 10,
+      "isis": -95,
+      "isis_k": -80,
+      "isr": 10,
+      "ita": 40,
+      "jnim": -60,
+      "jor": 10,
+      "jpn": 25,
+      "kaz": 0,
+      "kor": 15,
+      "krg_peshmerga": 0,
+      "ltu": 25,
+      "lva": 25,
+      "m23": -90,
+      "mda": 0,
+      "mex": 0,
+      "nld": 25,
+      "nor": 25,
+      "nzl": 10,
+      "pak": 15,
+      "phl": 0,
+      "pij": 0,
+      "player": 20,
+      "pmc_black_sable": -10,
+      "pmc_halcyon": 0,
+      "pmc_kestrel": -15,
+      "pol": 25,
+      "prk": 0,
+      "pse_pa": 10,
+      "qat": 40,
+      "rou": 25,
+      "rus": 15,
+      "sahel_aes": 10,
+      "sau": 35,
+      "sdf": 0,
+      "som": 15,
+      "srb": 0,
+      "swe": 25,
+      "syr": 10,
+      "tur": 25,
+      "twn": -10,
+      "ukr": 10,
+      "usa": 50,
+      "vnm": 0
+    },
     "deu": {
+      "adf": -100,
       "afg_taliban": -60,
       "africa_corps": -60,
       "al_qaeda": -100,
@@ -2852,6 +3100,7 @@
       "cartel_pacifico": -35,
       "che": 55,
       "chn": -15,
+      "cod": 25,
       "dnk": 85,
       "egy": 35,
       "esp": 85,
@@ -2881,6 +3130,7 @@
       "krg_peshmerga": 55,
       "ltu": 85,
       "lva": 80,
+      "m23": -15,
       "mda": 70,
       "mex": 20,
       "nld": 95,
@@ -2913,6 +3163,7 @@
       "vnm": 25
     },
     "dnk": {
+      "adf": -100,
       "afg_taliban": -60,
       "africa_corps": -60,
       "al_qaeda": -100,
@@ -2930,6 +3181,7 @@
       "cartel_pacifico": -35,
       "che": 40,
       "chn": -20,
+      "cod": 25,
       "deu": 85,
       "egy": 35,
       "esp": 85,
@@ -2959,6 +3211,7 @@
       "krg_peshmerga": 55,
       "ltu": 80,
       "lva": 80,
+      "m23": -15,
       "mda": 55,
       "mex": 20,
       "nld": 85,
@@ -2991,6 +3244,7 @@
       "vnm": 15
     },
     "egy": {
+      "adf": -75,
       "afg_taliban": 0,
       "africa_corps": 0,
       "al_qaeda": -85,
@@ -3008,6 +3262,7 @@
       "cartel_pacifico": -15,
       "che": 20,
       "chn": 35,
+      "cod": 30,
       "deu": 30,
       "dnk": 35,
       "esp": 35,
@@ -3037,6 +3292,7 @@
       "krg_peshmerga": 10,
       "ltu": 25,
       "lva": 25,
+      "m23": -15,
       "mda": 20,
       "mex": 15,
       "nld": 35,
@@ -3069,6 +3325,7 @@
       "vnm": 10
     },
     "esp": {
+      "adf": -100,
       "afg_taliban": -60,
       "africa_corps": -60,
       "al_qaeda": -100,
@@ -3086,6 +3343,7 @@
       "cartel_pacifico": -50,
       "che": 40,
       "chn": -20,
+      "cod": 25,
       "deu": 80,
       "dnk": 80,
       "egy": 35,
@@ -3115,6 +3373,7 @@
       "krg_peshmerga": 55,
       "ltu": 80,
       "lva": 80,
+      "m23": -15,
       "mda": 55,
       "mex": 50,
       "nld": 80,
@@ -3147,6 +3406,7 @@
       "vnm": 20
     },
     "est": {
+      "adf": -95,
       "afg_taliban": -50,
       "africa_corps": -60,
       "al_qaeda": -95,
@@ -3164,6 +3424,7 @@
       "cartel_pacifico": -35,
       "che": 40,
       "chn": -35,
+      "cod": 25,
       "deu": 80,
       "dnk": 90,
       "egy": 25,
@@ -3193,6 +3454,7 @@
       "krg_peshmerga": 30,
       "ltu": 90,
       "lva": 95,
+      "m23": -15,
       "mda": 70,
       "mex": 20,
       "nld": 80,
@@ -3225,6 +3487,7 @@
       "vnm": 15
     },
     "fin": {
+      "adf": -100,
       "afg_taliban": -60,
       "africa_corps": -60,
       "al_qaeda": -100,
@@ -3242,6 +3505,7 @@
       "cartel_pacifico": -35,
       "che": 40,
       "chn": -20,
+      "cod": 25,
       "deu": 85,
       "dnk": 85,
       "egy": 35,
@@ -3271,6 +3535,7 @@
       "krg_peshmerga": 55,
       "ltu": 80,
       "lva": 80,
+      "m23": -15,
       "mda": 55,
       "mex": 20,
       "nld": 85,
@@ -3303,6 +3568,7 @@
       "vnm": 15
     },
     "fra": {
+      "adf": -85,
       "afg_taliban": -60,
       "africa_corps": -75,
       "al_qaeda": -100,
@@ -3320,6 +3586,7 @@
       "cartel_pacifico": -35,
       "che": 50,
       "chn": -20,
+      "cod": 30,
       "deu": 85,
       "dnk": 80,
       "egy": 50,
@@ -3349,6 +3616,7 @@
       "krg_peshmerga": 55,
       "ltu": 80,
       "lva": 80,
+      "m23": -25,
       "mda": 75,
       "mex": 20,
       "nld": 80,
@@ -3381,6 +3649,7 @@
       "vnm": 35
     },
     "gbr": {
+      "adf": -85,
       "afg_taliban": -60,
       "africa_corps": -55,
       "al_qaeda": -100,
@@ -3398,6 +3667,7 @@
       "cartel_pacifico": -35,
       "che": 40,
       "chn": -40,
+      "cod": 25,
       "deu": 75,
       "dnk": 85,
       "egy": 40,
@@ -3427,6 +3697,7 @@
       "krg_peshmerga": 55,
       "ltu": 80,
       "lva": 85,
+      "m23": -25,
       "mda": 60,
       "mex": 30,
       "nld": 85,
@@ -3459,6 +3730,7 @@
       "vnm": 30
     },
     "geo": {
+      "adf": -90,
       "afg_taliban": -30,
       "africa_corps": -40,
       "al_qaeda": -85,
@@ -3476,6 +3748,7 @@
       "cartel_pacifico": -15,
       "che": 20,
       "chn": 25,
+      "cod": 0,
       "deu": 40,
       "dnk": 25,
       "egy": 15,
@@ -3505,6 +3778,7 @@
       "krg_peshmerga": 0,
       "ltu": 45,
       "lva": 50,
+      "m23": -15,
       "mda": 40,
       "mex": 15,
       "nld": 25,
@@ -3537,6 +3811,7 @@
       "vnm": 10
     },
     "grc": {
+      "adf": -100,
       "afg_taliban": -60,
       "africa_corps": -60,
       "al_qaeda": -100,
@@ -3554,6 +3829,7 @@
       "cartel_pacifico": -35,
       "che": 40,
       "chn": 5,
+      "cod": 25,
       "deu": 75,
       "dnk": 75,
       "egy": 70,
@@ -3583,6 +3859,7 @@
       "krg_peshmerga": 55,
       "ltu": 80,
       "lva": 80,
+      "m23": -15,
       "mda": 55,
       "mex": 20,
       "nld": 75,
@@ -3615,6 +3892,7 @@
       "vnm": 15
     },
     "hamas": {
+      "adf": -80,
       "afg_taliban": 10,
       "africa_corps": 0,
       "al_qaeda": -40,
@@ -3632,6 +3910,7 @@
       "cartel_pacifico": 0,
       "che": -40,
       "chn": 10,
+      "cod": 0,
       "deu": -80,
       "dnk": -85,
       "egy": -15,
@@ -3661,6 +3940,7 @@
       "krg_peshmerga": 0,
       "ltu": -75,
       "lva": -75,
+      "m23": -60,
       "mda": -30,
       "mex": -10,
       "nld": -85,
@@ -3693,6 +3973,7 @@
       "vnm": 0
     },
     "hezbollah": {
+      "adf": -100,
       "afg_taliban": 0,
       "africa_corps": 0,
       "al_qaeda": -90,
@@ -3710,6 +3991,7 @@
       "cartel_pacifico": 0,
       "che": -40,
       "chn": 0,
+      "cod": 0,
       "deu": -65,
       "dnk": -65,
       "egy": -35,
@@ -3739,6 +4021,7 @@
       "krg_peshmerga": -30,
       "ltu": -65,
       "lva": -65,
+      "m23": -60,
       "mda": -30,
       "mex": -10,
       "nld": -65,
@@ -3771,6 +4054,7 @@
       "vnm": 0
     },
     "houthis": {
+      "adf": -90,
       "afg_taliban": 0,
       "africa_corps": 0,
       "al_qaeda": -60,
@@ -3788,6 +4072,7 @@
       "cartel_pacifico": 0,
       "che": -40,
       "chn": 0,
+      "cod": -10,
       "deu": -70,
       "dnk": -70,
       "egy": -45,
@@ -3817,6 +4102,7 @@
       "krg_peshmerga": -20,
       "ltu": -65,
       "lva": -65,
+      "m23": -60,
       "mda": -30,
       "mex": -10,
       "nld": -70,
@@ -3849,6 +4135,7 @@
       "vnm": 0
     },
     "ind": {
+      "adf": -90,
       "afg_taliban": 10,
       "africa_corps": 0,
       "al_qaeda": -100,
@@ -3866,6 +4153,7 @@
       "cartel_pacifico": -15,
       "che": 25,
       "chn": -40,
+      "cod": 35,
       "deu": 45,
       "dnk": 25,
       "egy": 35,
@@ -3895,6 +4183,7 @@
       "krg_peshmerga": 10,
       "ltu": 25,
       "lva": 25,
+      "m23": -45,
       "mda": 15,
       "mex": 20,
       "nld": 35,
@@ -3927,6 +4216,7 @@
       "vnm": 50
     },
     "iraqi_militias": {
+      "adf": -100,
       "afg_taliban": 0,
       "africa_corps": 0,
       "al_qaeda": -95,
@@ -3944,6 +4234,7 @@
       "cartel_pacifico": 0,
       "che": -40,
       "chn": 0,
+      "cod": 0,
       "deu": -55,
       "dnk": -55,
       "egy": -25,
@@ -3973,6 +4264,7 @@
       "krg_peshmerga": -40,
       "ltu": -55,
       "lva": -55,
+      "m23": -60,
       "mda": -30,
       "mex": -10,
       "nld": -55,
@@ -4005,6 +4297,7 @@
       "vnm": 0
     },
     "irl": {
+      "adf": -90,
       "afg_taliban": -40,
       "africa_corps": -30,
       "al_qaeda": -85,
@@ -4022,6 +4315,7 @@
       "cartel_pacifico": -35,
       "che": 40,
       "chn": 10,
+      "cod": 15,
       "deu": 40,
       "dnk": 45,
       "egy": 20,
@@ -4051,6 +4345,7 @@
       "krg_peshmerga": 10,
       "ltu": 45,
       "lva": 45,
+      "m23": -15,
       "mda": 35,
       "mex": 15,
       "nld": 45,
@@ -4083,6 +4378,7 @@
       "vnm": 10
     },
     "irn": {
+      "adf": -95,
       "afg_taliban": 5,
       "africa_corps": 20,
       "al_qaeda": -60,
@@ -4100,6 +4396,7 @@
       "cartel_pacifico": -15,
       "che": 0,
       "chn": 55,
+      "cod": -10,
       "deu": -60,
       "dnk": -55,
       "egy": -25,
@@ -4129,6 +4426,7 @@
       "krg_peshmerga": -35,
       "ltu": -55,
       "lva": -55,
+      "m23": -15,
       "mda": -20,
       "mex": 0,
       "nld": -55,
@@ -4161,6 +4459,7 @@
       "vnm": 15
     },
     "irq": {
+      "adf": -100,
       "afg_taliban": 0,
       "africa_corps": 0,
       "al_qaeda": -90,
@@ -4178,6 +4477,7 @@
       "cartel_pacifico": -15,
       "che": 10,
       "chn": 30,
+      "cod": 10,
       "deu": 30,
       "dnk": 35,
       "egy": 35,
@@ -4207,6 +4507,7 @@
       "krg_peshmerga": 40,
       "ltu": 15,
       "lva": 15,
+      "m23": -15,
       "mda": 15,
       "mex": 10,
       "nld": 35,
@@ -4239,6 +4540,7 @@
       "vnm": 10
     },
     "isis": {
+      "adf": 85,
       "afg_taliban": -90,
       "africa_corps": -100,
       "al_qaeda": -95,
@@ -4256,6 +4558,7 @@
       "cartel_pacifico": -20,
       "che": -90,
       "chn": -80,
+      "cod": -95,
       "deu": -100,
       "dnk": -100,
       "egy": -95,
@@ -4285,6 +4588,7 @@
       "krg_peshmerga": -95,
       "ltu": -95,
       "lva": -95,
+      "m23": -60,
       "mda": -80,
       "mex": -40,
       "nld": -100,
@@ -4317,6 +4621,7 @@
       "vnm": -60
     },
     "isis_k": {
+      "adf": 60,
       "afg_taliban": -100,
       "africa_corps": -80,
       "al_qaeda": -90,
@@ -4334,6 +4639,7 @@
       "cartel_pacifico": -20,
       "che": -60,
       "chn": -85,
+      "cod": -80,
       "deu": -95,
       "dnk": -95,
       "egy": -60,
@@ -4363,6 +4669,7 @@
       "krg_peshmerga": -60,
       "ltu": -90,
       "lva": -90,
+      "m23": -60,
       "mda": -70,
       "mex": -40,
       "nld": -95,
@@ -4395,6 +4702,7 @@
       "vnm": -60
     },
     "isr": {
+      "adf": -90,
       "afg_taliban": -40,
       "africa_corps": -10,
       "al_qaeda": -85,
@@ -4412,6 +4720,7 @@
       "cartel_pacifico": -15,
       "che": 10,
       "chn": -15,
+      "cod": 10,
       "deu": 50,
       "dnk": 20,
       "egy": 30,
@@ -4441,6 +4750,7 @@
       "krg_peshmerga": 20,
       "ltu": 40,
       "lva": 40,
+      "m23": -15,
       "mda": 25,
       "mex": 10,
       "nld": 15,
@@ -4473,6 +4783,7 @@
       "vnm": 30
     },
     "ita": {
+      "adf": -100,
       "afg_taliban": -60,
       "africa_corps": -60,
       "al_qaeda": -100,
@@ -4490,6 +4801,7 @@
       "cartel_pacifico": -35,
       "che": 50,
       "chn": -20,
+      "cod": 40,
       "deu": 80,
       "dnk": 80,
       "egy": 45,
@@ -4519,6 +4831,7 @@
       "krg_peshmerga": 55,
       "ltu": 80,
       "lva": 80,
+      "m23": -15,
       "mda": 60,
       "mex": 20,
       "nld": 80,
@@ -4551,6 +4864,7 @@
       "vnm": 25
     },
     "jnim": {
+      "adf": -75,
       "afg_taliban": 10,
       "africa_corps": -100,
       "al_qaeda": 85,
@@ -4568,6 +4882,7 @@
       "cartel_pacifico": -20,
       "che": -60,
       "chn": -60,
+      "cod": -60,
       "deu": -90,
       "dnk": -90,
       "egy": -50,
@@ -4597,6 +4912,7 @@
       "krg_peshmerga": -60,
       "ltu": -85,
       "lva": -85,
+      "m23": -60,
       "mda": -70,
       "mex": -40,
       "nld": -90,
@@ -4629,6 +4945,7 @@
       "vnm": -60
     },
     "jor": {
+      "adf": -95,
       "afg_taliban": -10,
       "africa_corps": 0,
       "al_qaeda": -90,
@@ -4646,6 +4963,7 @@
       "cartel_pacifico": -15,
       "che": 25,
       "chn": 25,
+      "cod": 10,
       "deu": 40,
       "dnk": 55,
       "egy": 70,
@@ -4675,6 +4993,7 @@
       "krg_peshmerga": 20,
       "ltu": 35,
       "lva": 35,
+      "m23": -15,
       "mda": 30,
       "mex": 15,
       "nld": 30,
@@ -4707,6 +5026,7 @@
       "vnm": 10
     },
     "jpn": {
+      "adf": -90,
       "afg_taliban": -10,
       "africa_corps": -40,
       "al_qaeda": -90,
@@ -4724,6 +5044,7 @@
       "cartel_pacifico": -15,
       "che": 30,
       "chn": -55,
+      "cod": 25,
       "deu": 60,
       "dnk": 60,
       "egy": 30,
@@ -4753,6 +5074,7 @@
       "krg_peshmerga": 20,
       "ltu": 45,
       "lva": 45,
+      "m23": -15,
       "mda": 30,
       "mex": 30,
       "nld": 60,
@@ -4785,6 +5107,7 @@
       "vnm": 40
     },
     "kaz": {
+      "adf": -90,
       "afg_taliban": 10,
       "africa_corps": 10,
       "al_qaeda": -90,
@@ -4802,6 +5125,7 @@
       "cartel_pacifico": -15,
       "che": 10,
       "chn": 55,
+      "cod": 0,
       "deu": 30,
       "dnk": 15,
       "egy": 15,
@@ -4831,6 +5155,7 @@
       "krg_peshmerga": 0,
       "ltu": 15,
       "lva": 15,
+      "m23": -15,
       "mda": 5,
       "mex": 5,
       "nld": 15,
@@ -4863,6 +5188,7 @@
       "vnm": 15
     },
     "kor": {
+      "adf": -85,
       "afg_taliban": -30,
       "africa_corps": -30,
       "al_qaeda": -85,
@@ -4880,6 +5206,7 @@
       "cartel_pacifico": -15,
       "che": 30,
       "chn": -20,
+      "cod": 15,
       "deu": 55,
       "dnk": 55,
       "egy": 30,
@@ -4909,6 +5236,7 @@
       "krg_peshmerga": 30,
       "ltu": 40,
       "lva": 40,
+      "m23": -15,
       "mda": 20,
       "mex": 25,
       "nld": 55,
@@ -4941,6 +5269,7 @@
       "vnm": 45
     },
     "krg_peshmerga": {
+      "adf": -95,
       "afg_taliban": -10,
       "africa_corps": 0,
       "al_qaeda": -85,
@@ -4958,6 +5287,7 @@
       "cartel_pacifico": 0,
       "che": 15,
       "chn": 10,
+      "cod": 0,
       "deu": 60,
       "dnk": 55,
       "egy": 10,
@@ -4987,6 +5317,7 @@
       "kor": 30,
       "ltu": 30,
       "lva": 30,
+      "m23": -10,
       "mda": 0,
       "mex": 0,
       "nld": 50,
@@ -5019,6 +5350,7 @@
       "vnm": 0
     },
     "ltu": {
+      "adf": -95,
       "afg_taliban": -50,
       "africa_corps": -60,
       "al_qaeda": -95,
@@ -5036,6 +5368,7 @@
       "cartel_pacifico": -35,
       "che": 40,
       "chn": -50,
+      "cod": 25,
       "deu": 95,
       "dnk": 85,
       "egy": 25,
@@ -5065,6 +5398,7 @@
       "kor": 40,
       "krg_peshmerga": 30,
       "lva": 90,
+      "m23": -15,
       "mda": 75,
       "mex": 20,
       "nld": 85,
@@ -5097,6 +5431,7 @@
       "vnm": 15
     },
     "lva": {
+      "adf": -95,
       "afg_taliban": -50,
       "africa_corps": -60,
       "al_qaeda": -95,
@@ -5114,6 +5449,7 @@
       "cartel_pacifico": -35,
       "che": 40,
       "chn": -35,
+      "cod": 25,
       "deu": 80,
       "dnk": 85,
       "egy": 25,
@@ -5143,6 +5479,7 @@
       "kor": 40,
       "krg_peshmerga": 30,
       "ltu": 90,
+      "m23": -15,
       "mda": 70,
       "mex": 20,
       "nld": 80,
@@ -5174,7 +5511,89 @@
       "usa": 85,
       "vnm": 15
     },
+    "m23": {
+      "adf": -40,
+      "afg_taliban": -10,
+      "africa_corps": -10,
+      "al_qaeda": -60,
+      "al_shabaab": -60,
+      "aqap": -60,
+      "are": -15,
+      "arm": -15,
+      "aus": -15,
+      "aut": -15,
+      "aze": -15,
+      "bel": -45,
+      "blr": -15,
+      "can": -15,
+      "cartel_jalisco_nueva": 0,
+      "cartel_pacifico": 0,
+      "che": -15,
+      "chn": -30,
+      "cod": -90,
+      "deu": -15,
+      "dnk": -15,
+      "egy": -15,
+      "esp": -15,
+      "est": -15,
+      "fin": -15,
+      "fra": -25,
+      "gbr": -25,
+      "geo": -15,
+      "grc": -15,
+      "hamas": -60,
+      "hezbollah": -60,
+      "houthis": -60,
+      "ind": -45,
+      "iraqi_militias": -60,
+      "irl": -15,
+      "irn": -15,
+      "irq": -15,
+      "isis": -60,
+      "isis_k": -60,
+      "isr": -15,
+      "ita": -15,
+      "jnim": -60,
+      "jor": -15,
+      "jpn": -15,
+      "kaz": -15,
+      "kor": -15,
+      "krg_peshmerga": -10,
+      "ltu": -15,
+      "lva": -15,
+      "mda": -15,
+      "mex": -15,
+      "nld": -15,
+      "nor": -15,
+      "nzl": -15,
+      "pak": -15,
+      "phl": -15,
+      "pij": -60,
+      "player": -50,
+      "pmc_black_sable": -20,
+      "pmc_halcyon": -20,
+      "pmc_kestrel": -20,
+      "pol": -15,
+      "prk": -15,
+      "pse_pa": -15,
+      "qat": 10,
+      "rou": -15,
+      "rus": -15,
+      "sahel_aes": -10,
+      "sau": -15,
+      "sdf": -10,
+      "som": -15,
+      "srb": -15,
+      "swe": -15,
+      "syr": -15,
+      "tur": -15,
+      "twn": -15,
+      "ukr": -15,
+      "usa": -35,
+      "vnm": -15
+    },
     "mda": {
+      "adf": -80,
       "afg_taliban": -30,
       "africa_corps": -50,
       "al_qaeda": -80,
@@ -5192,6 +5611,7 @@
       "cartel_pacifico": -15,
       "che": 30,
       "chn": 0,
+      "cod": 0,
       "deu": 70,
       "dnk": 55,
       "egy": 20,
@@ -5222,6 +5642,7 @@
       "krg_peshmerga": 0,
       "ltu": 65,
       "lva": 60,
+      "m23": -15,
       "mex": 20,
       "nld": 55,
       "nor": 45,
@@ -5253,6 +5674,7 @@
       "vnm": 10
     },
     "mex": {
+      "adf": -40,
       "afg_taliban": 0,
       "africa_corps": -10,
       "al_qaeda": -40,
@@ -5270,6 +5692,7 @@
       "cartel_pacifico": -90,
       "che": 15,
       "chn": 10,
+      "cod": 0,
       "deu": 20,
       "dnk": 20,
       "egy": 15,
@@ -5300,6 +5723,7 @@
       "krg_peshmerga": 0,
       "ltu": 20,
       "lva": 20,
+      "m23": -15,
       "mda": 20,
       "nld": 20,
       "nor": 20,
@@ -5331,6 +5755,7 @@
       "vnm": 15
     },
     "nld": {
+      "adf": -100,
       "afg_taliban": -60,
       "africa_corps": -60,
       "al_qaeda": -100,
@@ -5348,6 +5773,7 @@
       "cartel_pacifico": -50,
       "che": 40,
       "chn": -20,
+      "cod": 25,
       "deu": 95,
       "dnk": 85,
       "egy": 35,
@@ -5378,6 +5804,7 @@
       "krg_peshmerga": 55,
       "ltu": 80,
       "lva": 80,
+      "m23": -15,
       "mda": 55,
       "mex": 20,
       "nor": 85,
@@ -5409,6 +5836,7 @@
       "vnm": 20
     },
     "nor": {
+      "adf": -100,
       "afg_taliban": -60,
       "africa_corps": -60,
       "al_qaeda": -100,
@@ -5426,6 +5854,7 @@
       "cartel_pacifico": -35,
       "che": 30,
       "chn": -20,
+      "cod": 25,
       "deu": 85,
       "dnk": 90,
       "egy": 35,
@@ -5456,6 +5885,7 @@
       "krg_peshmerga": 55,
       "ltu": 80,
       "lva": 80,
+      "m23": -15,
       "mda": 45,
       "mex": 20,
       "nld": 85,
@@ -5487,6 +5917,7 @@
       "vnm": 15
     },
     "nzl": {
+      "adf": -100,
       "afg_taliban": -40,
       "africa_corps": -30,
       "al_qaeda": -100,
@@ -5504,6 +5935,7 @@
       "cartel_pacifico": -35,
       "che": 30,
       "chn": -10,
+      "cod": 10,
       "deu": 45,
       "dnk": 40,
       "egy": 20,
@@ -5534,6 +5966,7 @@
       "krg_peshmerga": 20,
       "ltu": 40,
       "lva": 40,
+      "m23": -15,
       "mda": 25,
       "mex": 20,
       "nld": 40,
@@ -5565,6 +5998,7 @@
       "vnm": 25
     },
     "pak": {
+      "adf": -95,
       "afg_taliban": -90,
       "africa_corps": 0,
       "al_qaeda": -90,
@@ -5582,6 +6016,7 @@
       "cartel_pacifico": -15,
       "che": 10,
       "chn": 85,
+      "cod": 15,
       "deu": 20,
       "dnk": 15,
       "egy": 25,
@@ -5612,6 +6047,7 @@
       "krg_peshmerga": 0,
       "ltu": 15,
       "lva": 15,
+      "m23": -15,
       "mda": 15,
       "mex": 5,
       "nld": 15,
@@ -5643,6 +6079,7 @@
       "vnm": 10
     },
     "phl": {
+      "adf": -95,
       "afg_taliban": -20,
       "africa_corps": -20,
       "al_qaeda": -90,
@@ -5660,6 +6097,7 @@
       "cartel_pacifico": -15,
       "che": 25,
       "chn": -65,
+      "cod": 0,
       "deu": 35,
       "dnk": 40,
       "egy": 15,
@@ -5690,6 +6128,7 @@
       "krg_peshmerga": 0,
       "ltu": 40,
       "lva": 40,
+      "m23": -15,
       "mda": 30,
       "mex": 20,
       "nld": 25,
@@ -5721,6 +6160,7 @@
       "vnm": 30
     },
     "pij": {
+      "adf": -80,
       "afg_taliban": 10,
       "africa_corps": 0,
       "al_qaeda": -40,
@@ -5738,6 +6178,7 @@
       "cartel_pacifico": 0,
       "che": -40,
       "chn": 5,
+      "cod": 0,
       "deu": -80,
       "dnk": -85,
       "egy": -30,
@@ -5768,6 +6209,7 @@
       "krg_peshmerga": 0,
       "ltu": -75,
       "lva": -75,
+      "m23": -60,
       "mda": -30,
       "mex": -10,
       "nld": -85,
@@ -5799,6 +6241,7 @@
       "vnm": 0
     },
     "player": {
+      "adf": -100,
       "afg_taliban": -10,
       "africa_corps": -60,
       "al_qaeda": -100,
@@ -5816,6 +6259,7 @@
       "cartel_pacifico": -60,
       "che": 15,
       "chn": -30,
+      "cod": 20,
       "deu": 25,
       "dnk": 25,
       "egy": 10,
@@ -5846,6 +6290,7 @@
       "krg_peshmerga": 25,
       "ltu": 30,
       "lva": 30,
+      "m23": -50,
       "mda": 20,
       "mex": 20,
       "nld": 25,
@@ -5877,6 +6322,7 @@
       "vnm": 0
     },
     "pmc_black_sable": {
+      "adf": -95,
       "afg_taliban": -40,
       "africa_corps": -20,
       "al_qaeda": -90,
@@ -5894,6 +6340,7 @@
       "cartel_pacifico": -20,
       "che": -20,
       "chn": 0,
+      "cod": -10,
       "deu": 0,
       "dnk": 0,
       "egy": 20,
@@ -5924,6 +6371,7 @@
       "krg_peshmerga": -10,
       "ltu": 0,
       "lva": 0,
+      "m23": -20,
       "mda": 0,
       "mex": -20,
       "nld": 0,
@@ -5955,6 +6403,7 @@
       "vnm": 0
     },
     "pmc_halcyon": {
+      "adf": -100,
       "afg_taliban": -60,
       "africa_corps": -60,
       "al_qaeda": -100,
@@ -5972,6 +6421,7 @@
       "cartel_pacifico": -50,
       "che": 0,
       "chn": -30,
+      "cod": 0,
       "deu": 20,
       "dnk": 20,
       "egy": 10,
@@ -6002,6 +6452,7 @@
       "krg_peshmerga": 25,
       "ltu": 20,
       "lva": 20,
+      "m23": -20,
       "mda": 10,
       "mex": -10,
       "nld": 20,
@@ -6033,6 +6484,7 @@
       "vnm": 0
     },
     "pmc_kestrel": {
+      "adf": -90,
       "afg_taliban": -20,
       "africa_corps": 20,
       "al_qaeda": -85,
@@ -6050,6 +6502,7 @@
       "cartel_pacifico": -10,
       "che": -35,
       "chn": 10,
+      "cod": -15,
       "deu": -50,
       "dnk": -50,
       "egy": 0,
@@ -6080,6 +6533,7 @@
       "krg_peshmerga": -30,
       "ltu": -70,
       "lva": -70,
+      "m23": -20,
       "mda": -50,
       "mex": -30,
       "nld": -50,
@@ -6111,6 +6565,7 @@
       "vnm": 0
     },
     "pol": {
+      "adf": -95,
       "afg_taliban": -50,
       "africa_corps": -60,
       "al_qaeda": -95,
@@ -6128,6 +6583,7 @@
       "cartel_pacifico": -35,
       "che": 40,
       "chn": -25,
+      "cod": 25,
       "deu": 70,
       "dnk": 85,
       "egy": 25,
@@ -6158,6 +6614,7 @@
       "krg_peshmerga": 30,
       "ltu": 90,
       "lva": 90,
+      "m23": -15,
       "mda": 70,
       "mex": 20,
       "nld": 80,
@@ -6189,6 +6646,7 @@
       "vnm": 15
     },
     "prk": {
+      "adf": -40,
       "afg_taliban": 0,
       "africa_corps": 30,
       "al_qaeda": -40,
@@ -6206,6 +6664,7 @@
       "cartel_pacifico": -15,
       "che": -15,
       "chn": 55,
+      "cod": 0,
       "deu": -60,
       "dnk": -60,
       "egy": 5,
@@ -6236,6 +6695,7 @@
       "krg_peshmerga": 0,
       "ltu": -70,
       "lva": -70,
+      "m23": -15,
       "mda": -30,
       "mex": -10,
       "nld": -60,
@@ -6267,6 +6727,7 @@
       "vnm": 15
     },
     "pse_pa": {
+      "adf": -90,
       "afg_taliban": 0,
       "africa_corps": 0,
       "al_qaeda": -80,
@@ -6284,6 +6745,7 @@
       "cartel_pacifico": -15,
       "che": 20,
       "chn": 40,
+      "cod": 10,
       "deu": 35,
       "dnk": 35,
       "egy": 60,
@@ -6314,6 +6776,7 @@
       "krg_peshmerga": 0,
       "ltu": 15,
       "lva": 15,
+      "m23": -15,
       "mda": 15,
       "mex": 30,
       "nld": 35,
@@ -6345,6 +6808,7 @@
       "vnm": 30
     },
     "qat": {
+      "adf": -60,
       "afg_taliban": 30,
       "africa_corps": 0,
       "al_qaeda": -80,
@@ -6362,6 +6826,7 @@
       "cartel_pacifico": -15,
       "che": 20,
       "chn": 25,
+      "cod": 40,
       "deu": 35,
       "dnk": 35,
       "egy": 40,
@@ -6392,6 +6857,7 @@
       "krg_peshmerga": 15,
       "ltu": 25,
       "lva": 25,
+      "m23": 10,
       "mda": 20,
       "mex": 15,
       "nld": 35,
@@ -6423,6 +6889,7 @@
       "vnm": 10
     },
     "rou": {
+      "adf": -95,
       "afg_taliban": -50,
       "africa_corps": -50,
       "al_qaeda": -95,
@@ -6440,6 +6907,7 @@
       "cartel_pacifico": -35,
       "che": 40,
       "chn": -25,
+      "cod": 25,
       "deu": 75,
       "dnk": 70,
       "egy": 30,
@@ -6470,6 +6938,7 @@
       "krg_peshmerga": 30,
       "ltu": 70,
       "lva": 70,
+      "m23": -15,
       "mda": 95,
       "mex": 20,
       "nld": 75,
@@ -6501,6 +6970,7 @@
       "vnm": 15
     },
     "rus": {
+      "adf": -100,
       "afg_taliban": 30,
       "africa_corps": 95,
       "al_qaeda": -90,
@@ -6518,6 +6988,7 @@
       "cartel_pacifico": -10,
       "che": -40,
       "chn": 70,
+      "cod": 15,
       "deu": -75,
       "dnk": -75,
       "egy": 30,
@@ -6548,6 +7019,7 @@
       "krg_peshmerga": 15,
       "ltu": -90,
       "lva": -90,
+      "m23": -15,
       "mda": -45,
       "mex": 0,
       "nld": -75,
@@ -6579,6 +7051,7 @@
       "vnm": 50
     },
     "sahel_aes": {
+      "adf": -95,
       "afg_taliban": 0,
       "africa_corps": 80,
       "al_qaeda": -95,
@@ -6596,6 +7069,7 @@
       "cartel_pacifico": 0,
       "che": 0,
       "chn": 30,
+      "cod": 10,
       "deu": -25,
       "dnk": -30,
       "egy": 0,
@@ -6626,6 +7100,7 @@
       "krg_peshmerga": 0,
       "ltu": -20,
       "lva": -20,
+      "m23": -10,
       "mda": -10,
       "mex": 0,
       "nld": -30,
@@ -6657,6 +7132,7 @@
       "vnm": 0
     },
     "sau": {
+      "adf": -95,
       "afg_taliban": 10,
       "africa_corps": 0,
       "al_qaeda": -90,
@@ -6674,6 +7150,7 @@
       "cartel_pacifico": -15,
       "che": 20,
       "chn": 30,
+      "cod": 35,
       "deu": 30,
       "dnk": 30,
       "egy": 60,
@@ -6704,6 +7181,7 @@
       "krg_peshmerga": 15,
       "ltu": 25,
       "lva": 25,
+      "m23": -15,
       "mda": 20,
       "mex": 15,
       "nld": 30,
@@ -6735,6 +7213,7 @@
       "vnm": 10
     },
     "sdf": {
+      "adf": -95,
       "afg_taliban": -10,
       "africa_corps": -10,
       "al_qaeda": -70,
@@ -6752,6 +7231,7 @@
       "cartel_pacifico": 0,
       "che": 10,
       "chn": -10,
+      "cod": 0,
       "deu": 30,
       "dnk": 30,
       "egy": 10,
@@ -6782,6 +7262,7 @@
       "krg_peshmerga": 25,
       "ltu": 20,
       "lva": 20,
+      "m23": -10,
       "mda": 0,
       "mex": 0,
       "nld": 30,
@@ -6813,6 +7294,7 @@
       "vnm": 0
     },
     "som": {
+      "adf": -80,
       "afg_taliban": 0,
       "africa_corps": 0,
       "al_qaeda": -95,
@@ -6830,6 +7312,7 @@
       "cartel_pacifico": -15,
       "che": 15,
       "chn": 30,
+      "cod": 15,
       "deu": 25,
       "dnk": 25,
       "egy": 50,
@@ -6860,6 +7343,7 @@
       "krg_peshmerga": 0,
       "ltu": 25,
       "lva": 25,
+      "m23": -15,
       "mda": 0,
       "mex": 0,
       "nld": 25,
@@ -6891,6 +7375,7 @@
       "vnm": 0
     },
     "srb": {
+      "adf": -90,
       "afg_taliban": 0,
       "africa_corps": 10,
       "al_qaeda": -60,
@@ -6908,6 +7393,7 @@
       "cartel_pacifico": -15,
       "che": 15,
       "chn": 60,
+      "cod": 0,
       "deu": 20,
       "dnk": 10,
       "egy": 25,
@@ -6938,6 +7424,7 @@
       "krg_peshmerga": 0,
       "ltu": 0,
       "lva": 0,
+      "m23": -15,
       "mda": 10,
       "mex": 10,
       "nld": 5,
@@ -6969,6 +7456,7 @@
       "vnm": 15
     },
     "swe": {
+      "adf": -100,
       "afg_taliban": -60,
       "africa_corps": -60,
       "al_qaeda": -100,
@@ -6986,6 +7474,7 @@
       "cartel_pacifico": -35,
       "che": 40,
       "chn": -20,
+      "cod": 25,
       "deu": 85,
       "dnk": 90,
       "egy": 35,
@@ -7016,6 +7505,7 @@
       "krg_peshmerga": 55,
       "ltu": 80,
       "lva": 85,
+      "m23": -15,
       "mda": 55,
       "mex": 20,
       "nld": 85,
@@ -7047,6 +7537,7 @@
       "vnm": 15
     },
     "syr": {
+      "adf": -95,
       "afg_taliban": 0,
       "africa_corps": -10,
       "al_qaeda": -50,
@@ -7064,6 +7555,7 @@
       "cartel_pacifico": -15,
       "che": 15,
       "chn": 0,
+      "cod": 10,
       "deu": 10,
       "dnk": 5,
       "egy": 15,
@@ -7094,6 +7586,7 @@
       "krg_peshmerga": 10,
       "ltu": 20,
       "lva": 20,
+      "m23": -15,
       "mda": 20,
       "mex": 15,
       "nld": 5,
@@ -7125,6 +7618,7 @@
       "vnm": 10
     },
     "tur": {
+      "adf": -90,
       "afg_taliban": 15,
       "africa_corps": 0,
       "al_qaeda": -60,
@@ -7142,6 +7636,7 @@
       "cartel_pacifico": -15,
       "che": 20,
       "chn": 10,
+      "cod": 25,
       "deu": 30,
       "dnk": 40,
       "egy": 20,
@@ -7172,6 +7667,7 @@
       "krg_peshmerga": 45,
       "ltu": 50,
       "lva": 55,
+      "m23": -15,
       "mda": 50,
       "mex": 20,
       "nld": 40,
@@ -7203,6 +7699,7 @@
       "vnm": 15
     },
     "twn": {
+      "adf": -70,
       "afg_taliban": -20,
       "africa_corps": -30,
       "al_qaeda": -70,
@@ -7220,6 +7717,7 @@
       "cartel_pacifico": -15,
       "che": 20,
       "chn": -95,
+      "cod": -10,
       "deu": 30,
       "dnk": 30,
       "egy": 0,
@@ -7250,6 +7748,7 @@
       "krg_peshmerga": 10,
       "ltu": 40,
       "lva": 30,
+      "m23": -15,
       "mda": 10,
       "mex": 0,
       "nld": 30,
@@ -7281,6 +7780,7 @@
       "vnm": 0
     },
     "ukr": {
+      "adf": -90,
       "afg_taliban": -30,
       "africa_corps": -80,
       "al_qaeda": -90,
@@ -7298,6 +7798,7 @@
       "cartel_pacifico": -15,
       "che": 40,
       "chn": -35,
+      "cod": 10,
       "deu": 85,
       "dnk": 95,
       "egy": 15,
@@ -7328,6 +7829,7 @@
       "krg_peshmerga": 10,
       "ltu": 95,
       "lva": 95,
+      "m23": -15,
       "mda": 80,
       "mex": 20,
       "nld": 90,
@@ -7359,6 +7861,7 @@
       "vnm": 10
     },
     "usa": {
+      "adf": -100,
       "afg_taliban": -60,
       "africa_corps": -60,
       "al_qaeda": -100,
@@ -7376,6 +7879,7 @@
       "cartel_pacifico": -90,
       "che": 30,
       "chn": -60,
+      "cod": 50,
       "deu": 70,
       "dnk": 55,
       "egy": 45,
@@ -7406,6 +7910,7 @@
       "krg_peshmerga": 65,
       "ltu": 75,
       "lva": 75,
+      "m23": -35,
       "mda": 65,
       "mex": 45,
       "nld": 75,
@@ -7437,6 +7942,7 @@
       "vnm": 35
     },
     "vnm": {
+      "adf": -60,
       "afg_taliban": 0,
       "africa_corps": 0,
       "al_qaeda": -60,
@@ -7454,6 +7960,7 @@
       "cartel_pacifico": -15,
       "che": 10,
       "chn": -10,
+      "cod": 0,
       "deu": 25,
       "dnk": 15,
       "egy": 10,
@@ -7484,6 +7991,7 @@
       "krg_peshmerga": 0,
       "ltu": 15,
       "lva": 15,
+      "m23": -15,
       "mda": 10,
       "mex": 15,
       "nld": 20,
@@ -7520,7 +8028,8 @@
     "mirror": "Only the other faction listed the pair; the same value is used both ways and written back to the faction file.",
     "override_or_rule": "Neither file listed the pair: judged from real 2026 ties (explicit pair list), from group rules (terror groups, cartels, PMCs, non-state forces) or from shared alliances.",
     "formula": "Remaining state pairs with no strong ties: 10 + 35 * west(a) * west(b), rounded to 5, with floors of +60 for a shared defence treaty or military alliance, +50 for eu/gcc/five_eyes and +15 for sco/brics/arab_league/turkic/abraham_accords.",
-    "symmetry": "Every pair agrees in sign and is within 30 points (most are equal)."
+    "symmetry": "Every pair agrees in sign and is within 30 points (most are equal).",
+    "job7": "Job 7 (2026-10-10) added rows and columns for adf, m23 and cod. File values first and mirrored both ways; other pairs: adf copies the isis row (same network and group rules); cod follows the som row (an African state client with similar ties) with judged overrides (tur, egy, are, isr, terror groups, PMCs); m23 uses a rule (terror groups -60, rival PMCs -20, africa_corps -10, states -15, other non-state forces -10, cartels 0). All three new rows are symmetric."
   },
   "proposed": [
     "game_rules, except side-lock length, reputation spill-over scope and the seller list (Captain-confirmed 2026-10-10)",

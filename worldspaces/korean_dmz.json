@@ -103,20 +103,24 @@
       {"name": "Tunnel intercept", "area_km2": 2, "anchor": "infiltration_tunnel", "notes": "underground set piece"}
     ],
     "hot_zones": [
-      {"name": "DMZ escalation (late game)", "area_km2": 14, "layout": "prk HQ in a hillside bunker complex north of the line; 5 GPs and artillery sites as outposts; checkpoints at valley mouths; infiltration and drone teams; 2 QRF groups; the river bridge as the friendly anchor"}
+      {"name": "DMZ escalation (late game, fictional what-if)", "area_km2": 14, "layout": "prk HQ in a hillside bunker complex north of the line; 5 GPs and artillery sites as outposts; checkpoints at valley mouths; infiltration and drone teams; 2 QRF groups; the river bridge as the friendly anchor"}
     ]
   },
   "insertion": {"lhd": true, "fob": "LHD offshore of the estuary mouth (outside the neutral zone, proposed); inland FOB at the combined base. Roads through checkpoints; helicopters in good weather; AAVs on the estuary and river."},
   "early_game_suitable": false,
   "early_game_notes": "Peer-state theatre (prk late tier); late campaign.",
   "ambient_audio": ["DPRK and ROK loudspeaker broadcasts (events)", "cranes and geese in the DMZ", "cicadas", "military trucks", "helicopters", "river sounds", "town neon hum"],
+  "captain_confirmed": [
+    "map_size_km 20 x 18 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
+    "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
+    "materials accepted as the next voxel_world.gd additions (Captain, 2026-10-10); not yet in the game: BRICK #9c5a3c, CINDER_BLOCK #9a978f, ROOF_TILE #a4553b, CORRUGATED_IRON #8b8e8c, GLASS #9fbcc4, SANDBAG #b8a378",
+    "the late-game escalation hot zone stays as a what-if, clearly marked fictional; the default state is the real 2026 situation (Captain, 2026-10-10)"
+  ],
   "proposed": [
-    "map_size_km and layout",
+    "layout",
     "DMZ mask with minefield hazard rule",
-    "escalation scenario",
     "jpn and chn presence as liaison/off-map only",
     "zone_plan and hot zone",
-    "materials: BRICK #9c5a3c, CINDER_BLOCK #9a978f, ROOF_TILE #a4553b, CORRUGATED_IRON #8b8e8c, GLASS #9fbcc4, SANDBAG #b8a378",
     "tunnels as level geometry only"
   ],
   "sources": [

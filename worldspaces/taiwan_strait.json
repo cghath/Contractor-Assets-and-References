@@ -100,20 +100,26 @@
       {"name": "Science park", "area_km2": 2, "anchor": "science_park", "notes": "industrial, dense"}
     ],
     "hot_zones": [
-      {"name": "Outer islands landing (late game)", "area_km2": 12, "layout": "Attacker HQ afloat off the west edge; 3-5 beachheads and captured positions as outposts; checkpoints at island road junctions; roaming landing teams and drones; QRF by sea; Taiwanese garrison as the friendly anchor"}
+      {"name": "Outer islands landing (late game, fictional what-if)", "area_km2": 12, "layout": "Attacker HQ afloat off the west edge; 3-5 beachheads and captured positions as outposts; checkpoints at island road junctions; roaming landing teams and drones; QRF by sea; Taiwanese garrison as the friendly anchor"}
     ]
   },
-  "insertion": {"lhd": true, "fob": "LHD offshore east of the outer islands in peacetime phases (proposed: withdrawn in escalation); inland FOB at a host-nation base in the foothills. Ferries, helicopters and AAVs to the islands."},
+  "insertion": {"lhd": true, "fob": "LHD offshore east of the outer islands in peacetime phases (Captain-confirmed: withdrawn in escalation); inland FOB at a host-nation base in the foothills. Ferries, helicopters and AAVs to the islands."},
   "early_game_suitable": false,
   "early_game_notes": "Peer-state grey zone (chn late tier); late-campaign theatre.",
   "ambient_audio": ["scooter traffic", "temple bells and firecrackers", "cicadas", "surf and gulls", "garbage-truck music", "air-raid drill sirens (events)", "patrol boat engines"],
+  "captain_confirmed": [
+    "map_size_km 22 x 22 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
+    "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
+    "materials accepted as the next voxel_world.gd additions (Captain, 2026-10-10); not yet in the game: STONE #8f8676, BRICK #9c5a3c, ROOF_TILE #a4553b, PLASTER #e3dccb, CORRUGATED_IRON #8b8e8c, GLASS #9fbcc4, SANDBAG #b8a378",
+    "LHD restricted: offshore in peacetime phases, withdrawn in escalation; the restriction stays (Captain, 2026-10-10)",
+    "the late-game escalation hot zone stays as a what-if, clearly marked fictional; the default state is the real 2026 situation (Captain, 2026-10-10)"
+  ],
   "proposed": [
-    "map_size_km and composite (main coast plus an outer island group near the mainland)",
+    "composite (main coast plus an outer island group near the mainland)",
     "tide variable on tidal flats",
-    "grey-zone event model and the late-game escalation scenario",
+    "grey-zone event model",
     "chn role as 'patrol' (grey zone) rather than occupier",
-    "zone_plan and hot zone",
-    "materials: STONE #8f8676, BRICK #9c5a3c, ROOF_TILE #a4553b, PLASTER #e3dccb, CORRUGATED_IRON #8b8e8c, GLASS #9fbcc4, SANDBAG #b8a378"
+    "zone_plan and hot zone"
   ],
   "sources": [
     "https://en.wikipedia.org/wiki/Geography_of_Taiwan",

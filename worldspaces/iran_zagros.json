@@ -197,13 +197,17 @@
   "early_game_suitable": false,
   "early_game_notes": "The hostile force is a state military (irn, mid tier) and the map is a high-escalation border; mid-to-late campaign.",
   "ambient_audio": ["wind on ridges", "stream and waterfall noise", "goat and sheep bells", "call to prayer echoing in valleys", "distant jets and air-defence fire (events)", "mule bells on trails", "Kurdish music from a car radio"],
+  "captain_confirmed": [
+    "map_size_km 20 x 20 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
+    "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
+    "materials accepted as the next voxel_world.gd additions (Captain, 2026-10-10); not yet in the game: STONE #8f8676, BRICK #9c5a3c, CINDER_BLOCK #9a978f, DIRT_BERM #8a6f4e, SANDBAG #b8a378, CORRUGATED_IRON #8b8e8c, GLASS #9fbcc4",
+    "iraqi_militias is not added here: the Iraq-Iran border gap is answered by the new iraq_iran_border theatre (Captain, 2026-10-10)"
+  ],
   "proposed": [
-    "map_size_km and border-straddling layout",
+    "border-straddling layout",
     "generator numbers",
     "zone_plan; Iranian-side zones as recon/recovery/LRRP only",
     "exiled opposition camp as neutral NPCs (no faction in the roster)",
-    "iraqi_militias absent here because iraqi_militias.json does not list iran_zagros (open question)",
-    "materials: STONE #8f8676, BRICK #9c5a3c, CINDER_BLOCK #9a978f, DIRT_BERM #8a6f4e, SANDBAG #b8a378, CORRUGATED_IRON #8b8e8c, GLASS #9fbcc4",
     "landmine belts as marked hazard areas only (game-level)"
   ],
   "sources": [

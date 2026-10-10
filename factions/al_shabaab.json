@@ -50,7 +50,8 @@
     "nld": -90,
     "nor": -90,
     "swe": -90,
-    "pmc_halcyon": -95
+    "pmc_halcyon": -95,
+    "adf": -75
   },
   "theatres": [
     "horn_of_africa"

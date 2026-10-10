@@ -217,12 +217,16 @@
   "early_game_suitable": true,
   "early_game_notes": "isis, al_qaeda and iraqi_militias are early-tier; hezbollah (mid) appears only as low-strength smuggling teams at the west edge, so early contracts should avoid the west hills.",
   "ambient_audio": ["call to prayer from several mosques", "diesel irrigation pumps", "sheep bells and dogs", "wind over steppe", "distant generator hum in towns", "motorbikes", "frogs and reed warblers by the river at night", "occasional distant drone buzz"],
+  "captain_confirmed": [
+    "map_size_km 24 x 20 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
+    "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
+    "materials accepted as the next voxel_world.gd additions (Captain, 2026-10-10); not yet in the game: MUD_BRICK #a47e57, CINDER_BLOCK #9a978f, PLASTER #e3dccb, GLASS #9fbcc4, CORRUGATED_IRON #8b8e8c, TARP #3f6d8c, HESCO #a99a6c, DIRT_BERM #8a6f4e, SANDBAG #b8a378, LIMESTONE #d6caa8, BASALT #4b4845"
+  ],
   "proposed": [
-    "map_size_km and the composite layout (river, Badia, Jazira and basalt plateau on one map)",
+    "the composite layout (river, Badia, Jazira and basalt plateau on one map)",
     "all generator numbers (noise layers, erosion, settlement flattening)",
     "zone_plan and hot-zone layout",
     "faction roles and strengths per zone",
-    "materials: MUD_BRICK #a47e57, CINDER_BLOCK #9a978f, PLASTER #e3dccb, GLASS #9fbcc4, CORRUGATED_IRON #8b8e8c, TARP #3f6d8c, HESCO #a99a6c, DIRT_BERM #8a6f4e, SANDBAG #b8a378, LIMESTONE #d6caa8, BASALT #4b4845",
     "POI loot tiers and intel_chance values",
     "UXO field as a movement-slowing map hazard (game-level only)"
   ],

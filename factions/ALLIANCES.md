@@ -1,6 +1,6 @@
 # Alliances and relations
 
-As of October 2026. Machine-readable source: [alliances.json](alliances.json) (alliances, proposed game rules and the full 77 x 77 relations matrix). Faction files keep their notable `relations`; the matrix is the single source of truth. Each faction's `blocs` lists exactly the alliances it belongs to (any member status); descriptive tags moved to a `traits` list.
+As of October 2026. Machine-readable source: [alliances.json](alliances.json) (alliances, proposed game rules and the full 80 x 80 relations matrix). Faction files keep their notable `relations`; the matrix is the single source of truth. Each faction's `blocs` lists exactly the alliances it belongs to (any member status); descriptive tags moved to a `traits` list.
 
 ## Alliances
 
@@ -89,18 +89,18 @@ Member status is full unless marked. Game effect: war_join / side_lock / rep_spi
   - Obligation: Normalisation of relations with Israel; no defence commitment.
   - Game: war_join none, side_lock no, rep_spill 0.15.
   - Notes: Non-roster members: Bahrain, Morocco (Sudan signed the declaration). Kazakhstan joined in November 2025, a largely symbolic step since it already had full relations with Israel. Egypt (1979) and Jordan (1994) have separate peace treaties with Israel, modelled as relations only.
-- **Global Coalition to Defeat ISIS** (`global_coalition_against_isis`): usa, gbr, can, aus, nzl, fra, deu, ita, esp, nld, bel, nor, dnk, swe, fin, grc, pol, est, lva, ltu, rou, tur, jpn, kor, twn, aut, irl, ukr, geo, mda, sau, are, qat, egy, jor, irq, som, syr, sdf (partner), krg_peshmerga (partner).
+- **Global Coalition to Defeat ISIS** (`global_coalition_against_isis`): usa, gbr, can, aus, nzl, fra, deu, ita, esp, nld, bel, nor, dnk, swe, fin, grc, pol, est, lva, ltu, rou, tur, jpn, kor, twn, aut, irl, ukr, geo, mda, sau, are, qat, egy, jor, irq, som, syr, sdf (partner), krg_peshmerga (partner), cod.
   - Obligation: Political coalition of 90 members (Syria became the 90th in November 2025); military operations are run by members, not the coalition.
   - Game: war_join none, side_lock no, rep_spill 0.15.
-  - Notes: Roster members listed as far as verified; the full partner list was not re-checked line by line (phl and srb membership not verified, left out). sdf and krg_peshmerga are not members: they are partner forces on the ground (member_status partner). Syria's accession is a political declaration without military provisions.
+  - Notes: Roster members listed as far as verified; the full partner list was not re-checked line by line (phl and srb membership not verified, left out). sdf and krg_peshmerga are not members: they are partner forces on the ground (member_status partner). Syria's accession is a political declaration without military provisions. cod (DR Congo) joined in 2019 (added in Job 7).
 - **Islamic Military Counter Terrorism Coalition** (`islamic_military_counter_terrorism_coalition`): sau, are, egy, jor, tur, pak, som, pse_pa.
   - Obligation: Saudi-led counter-terrorism coordination centre in Riyadh; no defence commitment.
   - Game: war_join none, side_lock no, rep_spill 0.15.
   - Notes: Roster members from the original 2015 founding list. Qatar's status since the 2017 Gulf crisis is unclear and it is left out; Mali, Burkina Faso and Niger are members as states, but the sahel_aes faction is not listed.
-- **African Union** (`african_union`): egy, som, sahel_aes (suspended).
+- **African Union** (`african_union`): egy, som, sahel_aes (suspended), cod.
   - Obligation: Political union; the Peace and Security Council mandates missions such as AUSSOM in Somalia.
   - Game: war_join none, side_lock no, rep_spill 0.15.
-  - Notes: Mali, Burkina Faso and Niger (sahel_aes) are suspended after their coups (member_status suspended).
+  - Notes: Mali, Burkina Faso and Niger (sahel_aes) are suspended after their coups (member_status suspended). cod (DR Congo) is a full member (added in Job 7).
 - **Association of Southeast Asian Nations** (`asean`): phl, vnm.
   - Obligation: Political and economic association; no defence commitment.
   - Game: war_join none, side_lock no, rep_spill 0.15.
@@ -207,6 +207,10 @@ Member status is full unless marked. Game effect: war_join / side_lock / rep_spi
   - Obligation: UN peacekeeping mandate in south Lebanon; the Security Council (August 2025) set the mandate to end on 31 December 2026, with withdrawal during 2027.
   - Game: war_join none, side_lock no, rep_spill 0.0.
   - Notes: Roster troop contributors in lebanon_south (kaz serves with the Indian battalion; deu leads the Maritime Task Force). Neutral: never side-locks and never joins wars. Peacekeepers appear on lebanon_south maps as neutral units.
+- **UN Organization Stabilization Mission in the DR Congo (MONUSCO-type peacekeepers)** (`monusco`): ind, chn (what_if).
+  - Obligation: UN peacekeeping mandate in eastern DR Congo; since May 2024 (Resolution 2717) the mission operates only in North Kivu and Ituri, and it supports the ceasefire-verification mechanism (EJVM+) of the 2025-2026 peace process.
+  - Game: war_join none, side_lock no, rep_spill 0.0.
+  - Notes: Added in Job 7 for eastern_congo (Captain, 2026-10-10: chn and ind as UN peacekeepers). ind is a long-standing troop contributor (about 1,100-1,200 troops around Goma and Sake in January 2025). China's engineer and medical contingent left in April 2024, so chn's presence is a game what-if (member_status what_if). Like unifil: neutral, never side-locks and never joins wars.
 
 ### Terror network
 
@@ -214,16 +218,16 @@ Member status is full unless marked. Game effect: war_join / side_lock / rep_spi
   - Obligation: Pledges of allegiance (bay'ah) to the al-Qaeda leadership.
   - Game: war_join none, side_lock yes, rep_spill 0.3.
   - Notes: Hostile-only to the player. Fights islamic_state_network wherever they overlap (Sahel, Somalia, Yemen). Terror networks never join wars; they surge activity (game_rules.war_join).
-- **Islamic State and provinces** (`islamic_state_network`): isis, isis_k.
+- **Islamic State and provinces** (`islamic_state_network`): isis, isis_k, adf.
   - Obligation: Provinces (wilayat) under the Islamic State's central leadership.
   - Game: war_join none, side_lock yes, rep_spill 0.3.
-  - Notes: The handoff sheet called this isis_network; the id already used in the faction files (islamic_state_network) is kept. isis covers the Iraq/Syria core plus the Sahel and Somalia provinces. Fights al_qaeda_network and afg_taliban.
+  - Notes: The handoff sheet called this isis_network; the id already used in the faction files (islamic_state_network) is kept. isis covers the Iraq/Syria core plus the Sahel, Somalia and East Asia (southern Philippines) cells. adf (Islamic State Central Africa Province, eastern DR Congo; added in Job 7) is a full member. Fights al_qaeda_network and afg_taliban.
 
 ## Proposed game rules
 
 All of these are proposals for the design doc (`game_rules` in alliances.json).
 
-- **Side-lock.** Taking a contract against faction X locks the player out of X's contracts, and out of the contracts of every faction whose relation toward the client is -50 or worse. The lock lasts 2 to 4 in-game weeks (14 to 28 days), scaled by how severe the contract is (Captain-confirmed 2026-10-10). Peacekeeping (UNIFIL) and neutral humanitarian clients (che, aut, irl) never lock.
+- **Side-lock.** Taking a contract against faction X locks the player out of X's contracts, and out of the contracts of every faction whose relation toward the client is -50 or worse. The lock lasts 2 to 4 in-game weeks (14 to 28 days), scaled by how severe the contract is (Captain-confirmed 2026-10-10). Peacekeeping (UNIFIL, MONUSCO) and neutral humanitarian clients (che, aut, irl) never lock.
 - **War joining.** When a full member of an alliance is attacked, partners with `war_join: auto` join the simulated war (NATO Article 5, the Union State, the Russia-DPRK treaty, the US treaties with Japan and Korea, the AES). `likely` partners join with probability 0.6 (0.9 at relation +70 or more); `possible` partners join only at relation +70 or more. Suspended, partner, candidate and observer members never trigger or answer it. Terror networks never join wars; they surge activity instead.
 - **Reputation spill-over.** Reputation gained or lost with X spreads to each other faction Y as `rep_delta * clamp(relation(Y, X) / 100, -1, 1) * alliance_factor`, with alliance_factor 0.5 for a shared defence treaty or military alliance and 0.3 for another shared alliance. It applies only between factions that share an alliance; factions with no shared alliance are not affected (Captain-confirmed 2026-10-10). Negative relations invert it: helping X angers X's enemies.
 - **Selling to the player.** Only factions with `player_trade.sellable` true sell: usa, gbr and can (decided); the NATO members outside the Five Eyes at higher thresholds than usa/gbr/can (rep 20/40/60/80); sau, are and qat at high reputation (rep 40/60/80); che and aut as arms markets at rep 20/40/60; and krg_peshmerga basic kit at rep 30/50 (all Captain-confirmed 2026-10-10). Israel hires the player but never sells. tur does not sell (Captain-confirmed 2026-10-10); aus and nzl sell as proposals. usa, gbr and can need relation +40 or more plus the rep tier; the other sellers sell on rep tier alone while their relation toward the player is not negative. Terror groups, cartels, rival PMCs and africa_corps never sell.
@@ -257,6 +261,7 @@ Symbols: `++` +50 or more, `+` +15 to +49, `0` -14 to +14, `-` -15 to -49, `--` 
 3. **Mirrors.** Where only one file listed a pair (694 entries), the same value was used both ways and written into the other file. This filled the known gaps: the European, Baltic and Asian states' entries for the terror groups, the Nordic/Benelux/Southern European entries for afg_taliban, sdf, krg_peshmerga and sahel_aes, usa's entries for the three PMCs, the terror files' entries for the PMCs and neutral states, and player's entries for che, aut, irl, mex and prk.
 4. **Gaps.** The 1,450 pairs no file listed were filled from an explicit list of judged pairs (341), group rules for terror groups, cartels, PMCs and non-state forces (857), and a formula for the remaining state pairs with no strong ties (252): `10 + 35 * west(a) * west(b)`, rounded to 5, with floors for shared alliances. These values are proposals and live only in alliances.json.
 5. **Checks.** Every pair agrees in sign and is within 30 points; terror groups are -80 or worse toward the player, never clients and never sellers.
+6. **Job 7 (2026-10-10).** Rows and columns for adf, m23 and cod were added (80 x 80). File values first, mirrored both ways and written into the other faction's file; other pairs: adf copies the isis row (same network and group rules), cod follows the som row with judged overrides (tur, egy, are, isr, the terror groups, the PMCs), and m23 uses a rule (terror groups -60, rival PMCs -20, africa_corps -10, states -15, other non-state forces -10, cartels 0). The three new rows are symmetric.
 
 ## Changes made to faction files
 
@@ -352,6 +357,33 @@ Captain's decisions applied in the same pass (2026-10-10; details in [factions_h
 - pmc_black_sable is the nemesis; pmc_halcyon is an ordinary rival.
 - che, aut and krg_peshmerga trade, sahel_aes client terms, syr/irq/pse_pa client roles, the isis provinces and captured-vehicle set pieces, and the single-source al_qaeda/houthis/aqap/al_shabaab values were moved out of `proposed` and noted as Captain-confirmed.
 - mex patrol pickups now point at `ford_ranger` (Ford/Ram patrol pickups as its variant).
+
+## Job 7 changes (2026-10-10)
+
+New factions adf, m23 and cod; new alliance `monusco` (ind, chn what_if); adf joined islamic_state_network, cod joined african_union and global_coalition_against_isis; chn and ind gained `monusco` in `blocs`. Reverse relation entries were added programmatically (load, add, write back with 2-space indent); no existing value changed.
+
+| File | Relations added |
+|---|---|
+| player | adf -100, m23 -50, cod 20 |
+| usa | adf -100, m23 -35, cod 50 |
+| gbr | adf -85, m23 -25, cod 25 |
+| fra | adf -85, m23 -25, cod 30 |
+| bel | adf -85, m23 -45, cod 30 |
+| chn | adf -85, m23 -30, cod 45 |
+| ind | adf -90, m23 -45, cod 35 |
+| qat | adf -60, m23 10, cod 40 |
+| isis | adf 85, m23 -60, cod -95 |
+| isis_k | adf 60 |
+| al_qaeda | adf -80 |
+| al_shabaab | adf -75 |
+| jnim | adf -75 |
+| egy | adf -75, cod 30 |
+| som | adf -80, cod 15 |
+| tur | cod 25 |
+| are | cod 25 |
+| rus | cod 15 |
+
+Among the new three: adf <-> cod -100, adf <-> m23 -40, m23 <-> cod -90.
 
 ## Open questions for Captain
 

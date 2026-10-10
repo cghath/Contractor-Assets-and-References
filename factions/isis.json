@@ -1,6 +1,6 @@
 {
   "id": "isis",
-  "name": "Islamic State (Iraq and Syria core, with Sahel and Somalia provinces)",
+  "name": "Islamic State (Iraq and Syria core, with Sahel, Somalia and East Asia provinces)",
   "short": "IS",
   "kind": "non_state",
   "inspired_by": null,
@@ -85,13 +85,18 @@
     "nor": -100,
     "nzl": -100,
     "pmc_halcyon": -100,
-    "swe": -100
+    "swe": -100,
+    "adf": 85,
+    "m23": -60,
+    "cod": -95
   },
   "theatres": [
     "mesopotamia",
     "levant_syria",
     "sahel",
-    "horn_of_africa"
+    "horn_of_africa",
+    "mindanao_sulu",
+    "iraq_iran_border"
   ],
   "languages": [
     "Arabic",
@@ -270,6 +275,12 @@
       "role": "uav",
       "prevalence": "rare",
       "notes": "Quadcopter munition drops were used widely in Mosul 2016-2017; rare in 2026. AI hazard ability."
+    },
+    {
+      "vehicle_id": "fast_boat",
+      "role": "boat",
+      "prevalence": "uncommon",
+      "notes": "Pump boats and speedboats of the East Asia cells in the Sulu-type island chain (mindanao_sulu)."
     }
   ],
   "unit_templates": [
@@ -489,7 +500,7 @@
       "village_defence_vs_raid"
     ]
   },
-  "notes": "The Islamic State is UN-listed and designated a terrorist organisation by nearly every state; the Global Coalition to Defeat ISIS (which Syria joined in November 2025) opposes it. Its current caliph, announced in August 2023 as Abu Hafs al-Hashimi al-Qurashi, has not been publicly identified. Status 2026: rising attacks in Syria after the January 2026 north-east fighting, escapes from detention sites and the US withdrawal from Syria; a June 2026 attack on Raqqa police headquarters; persistent low-level cells in Iraq where the ISF lead clearance operations. Sahel Province attacked Niamey airport (January 2026) and claimed attacks that killed more than 50 Nigerien troops (September 2026); it fights JNIM as well as the AES juntas and Africa Corps. Somalia Province, based in Puntland's Cal Miskaad mountains, was the target of a major Puntland offensive in 2025. Captured 2014-2017 Humvees, M1117s and T-55s appear only as rare set pieces (Captain-confirmed (2026-10-10)). Affiliate link: isis_k (+90). Rival: the al-Qaeda network (al_qaeda, aqap, al_shabaab, jnim), all strongly negative. Covering the Sahel and Somalia provinces in this faction (theatres sahel and horn_of_africa) is Captain-confirmed (2026-10-10).",
+  "notes": "The Islamic State is UN-listed and designated a terrorist organisation by nearly every state; the Global Coalition to Defeat ISIS (which Syria joined in November 2025) opposes it. Its current caliph, announced in August 2023 as Abu Hafs al-Hashimi al-Qurashi, has not been publicly identified. Status 2026: rising attacks in Syria after the January 2026 north-east fighting, escapes from detention sites and the US withdrawal from Syria; a June 2026 attack on Raqqa police headquarters; persistent low-level cells in Iraq where the ISF lead clearance operations. Sahel Province attacked Niamey airport (January 2026) and claimed attacks that killed more than 50 Nigerien troops (September 2026); it fights JNIM as well as the AES juntas and Africa Corps. Somalia Province, based in Puntland's Cal Miskaad mountains, was the target of a major Puntland offensive in 2025. Captured 2014-2017 Humvees, M1117s and T-55s appear only as rare set pieces (Captain-confirmed (2026-10-10)). Affiliate link: isis_k (+90). Rival: the al-Qaeda network (al_qaeda, aqap, al_shabaab, jnim), all strongly negative. Covering the Sahel and Somalia provinces in this faction (theatres sahel and horn_of_africa) is Captain-confirmed (2026-10-10). Job 7 (Captain, 2026-10-10): isis also covers the Islamic State's East Asia cells in the southern Philippines (theatre mindanao_sulu): Dawlah Islamiyah factions in Lanao del Sur and Maguindanao and the pro-IS remnants of the Abu Sayyaf, much reduced since the 2017 Marawi siege (Sulu was declared Abu Sayyaf-free in 2023) but still clashing with the army in 2026 (e.g. Lanao del Sur, April 2026; Maguindanao del Sur, June 2026), and IS remnant cells in the Hamrin hills and Diyala borderlands of Iraq (theatre iraq_iran_border). Its East Asia cells use pump boats and speedboats (fast_boat).",
   "proposed": [
     "campaign_tier",
     "relations.player",

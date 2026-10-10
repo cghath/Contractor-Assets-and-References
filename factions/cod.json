@@ -1,0 +1,362 @@
+{
+  "id": "cod",
+  "name": "Armed Forces of the Democratic Republic of the Congo (FARDC)",
+  "short": "DR Congo",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#007FFF",
+    "#CE1021",
+    "#F7D618"
+  ],
+  "blocs": [
+    "african_union",
+    "global_coalition_against_isis"
+  ],
+  "traits": [
+    "un_peacekeeping_host"
+  ],
+  "campaign_tier": "early",
+  "alignment_to_player": "neutral",
+  "player_client": true,
+  "relations": {
+    "player": 20,
+    "adf": -100,
+    "m23": -90,
+    "isis": -95,
+    "usa": 50,
+    "chn": 45,
+    "ind": 35,
+    "qat": 40,
+    "fra": 30,
+    "bel": 30,
+    "gbr": 25,
+    "egy": 30,
+    "tur": 25,
+    "are": 25,
+    "rus": 15,
+    "som": 15
+  },
+  "theatres": [
+    "eastern_congo"
+  ],
+  "languages": [
+    "French",
+    "Lingala",
+    "Swahili"
+  ],
+  "callout_language": "Lingala and French (Swahili in the east)",
+  "doctrine": {
+    "summary": "The FARDC was formed in 2003 by merging the former government army with several rebel and militia forces, and it still suffers from uneven pay, logistics and command cohesion. In the east it fights the M23/AFC (since late 2021) and the ADF (with the Ugandan army in Operation Shujaa since November 2021), and relies heavily on pro-government armed groups grouped as 'Wazalendo' (patriots); UN experts have also reported cooperation with the FDLR. Burundian troops fight alongside it in South Kivu, while the SADC mission (SAMIDRC) withdrew in 2025 after the fall of Goma. Its signature assets in 2025-2026 are air power and drones: Su-25 jets, Mi-24 gunships and Chinese CH-4 armed drones, several of which M23 claims to have shot down; its armour is old (T-55, Type 59 and Type 62, T-64BV, BTR-60, BMP-1) and many units move in pickups. Foreign contractors hired to support it before 2025 surrendered when Goma fell. Since the Washington Accords (December 2025) and the Doha track with AFC/M23, front lines in North Kivu are largely frozen under a fragile ceasefire with continuing clashes, while the ADF remains the main threat in Beni, Lubero and Ituri.",
+    "squad_size": 8,
+    "fireteam": "Sections of 8-12; elite Republican Guard and rapid-reaction units in battle-buddy pairs with better discipline.",
+    "tactics": [
+      "Clear-and-hold sweeps along forest roads with Ugandan partner units against the ADF (UPDF as neutral-allied NPCs)",
+      "Static defence of towns and hill positions with Wazalendo militia auxiliaries",
+      "Air and drone strikes ahead of counter-attacks (game: off-map support events)",
+      "Convoy escort on the main supply road and to mining sites",
+      "Night patrols around displacement camps (limited night capability)"
+    ],
+    "ai_tuning": {
+      "aggression": 0.45,
+      "discipline": 0.35,
+      "suppression_resistance": 0.4,
+      "flanking": 0.4,
+      "grenade_use": 0.35,
+      "medical_care": 0.35,
+      "night_capability": 0.3,
+      "marksmanship": 0.4,
+      "morale": 0.4
+    }
+  },
+  "camo": [
+    {
+      "name": "Woodland / green FARDC field uniform",
+      "palette": [
+        "#5C6038",
+        "#3B3F26",
+        "#7A5E3A",
+        "#1E1E18"
+      ],
+      "use": "Regular FARDC"
+    },
+    {
+      "name": "Wazalendo mixed civilian clothes and surplus fatigues",
+      "palette": [
+        "#4E5A3A",
+        "#8C7A5A",
+        "#2F3324",
+        "#C2A878"
+      ],
+      "use": "Pro-government militia auxiliaries"
+    },
+    {
+      "name": "Republican Guard green with red berets",
+      "palette": [
+        "#4B5A36",
+        "#3A4529",
+        "#A32020",
+        "#1F241A"
+      ],
+      "use": "Republican Guard and rapid-reaction units"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "AKM / AK-47 / Type 56 (7.62x39mm)"
+    ],
+    "autorifleman": [
+      "PKM (7.62x54R)",
+      "RPK (7.62x39mm)"
+    ],
+    "marksman": [
+      "SVD Dragunov (7.62x54R)"
+    ],
+    "grenadier": [
+      "AKM with GP-25 (7.62x39mm, 40 mm)"
+    ],
+    "at": [
+      "RPG-7 with PG-7V / OG-7V [in_game]"
+    ],
+    "medic": [
+      "AK-47 (7.62x39mm)"
+    ],
+    "squad_leader": [
+      "AKM (7.62x39mm)"
+    ],
+    "sniper": [
+      "SVD Dragunov (7.62x54R)"
+    ],
+    "sidearm": [
+      "Makarov PM / Browning-pattern pistols"
+    ]
+  },
+  "launchers": [
+    "RPG-7 with PG-7V / OG-7V [in_game]",
+    "Type 69 / RPG-7 copies [in_game as RPG-7]"
+  ],
+  "body_armor": {
+    "helmet": "light",
+    "vest": "light",
+    "plates": "steel",
+    "notes": "Regular units: steel or Chinese-type helmets on some soldiers, few vests. Republican Guard and rapid-reaction units: helmets and light plate carriers. Wazalendo militias: none. Game mapping proposed."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "toyota_land_cruiser",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": "Land Cruiser pickups carrying troops, the standard FARDC mover in the east."
+    },
+    {
+      "vehicle_id": "technical_dshk",
+      "role": "technical",
+      "prevalence": "common",
+      "notes": "Pickups with mounted heavy machine guns."
+    },
+    {
+      "vehicle_id": "t55",
+      "role": "mbt",
+      "prevalence": "uncommon",
+      "notes": "Old T-55s in support of town defence."
+    },
+    {
+      "vehicle_id": "type59",
+      "role": "mbt",
+      "prevalence": "rare",
+      "notes": "Chinese Type 59 tanks (and Type 62 light tanks, not catalogued)."
+    },
+    {
+      "vehicle_id": "t64bv",
+      "role": "mbt",
+      "prevalence": "rare",
+      "notes": "Ex-Ukrainian T-64BV1s delivered in the 2010s."
+    },
+    {
+      "vehicle_id": "btr60",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "BTR-60PB wheeled APCs."
+    },
+    {
+      "vehicle_id": "bmp1",
+      "role": "ifv",
+      "prevalence": "uncommon",
+      "notes": "BMP-1s with mechanised units."
+    },
+    {
+      "vehicle_id": "mi24",
+      "role": "attack_heli",
+      "prevalence": "uncommon",
+      "notes": "Mi-24/35 gunships (several unserviceable); AI-flown support."
+    },
+    {
+      "vehicle_id": "mi8",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": "Mi-8/17 transports for resupply and casualty evacuation."
+    },
+    {
+      "vehicle_id": "ch4",
+      "role": "uav",
+      "prevalence": "uncommon",
+      "notes": "Chinese CH-4 armed drones (nine reported delivered 2023-2024, some lost); off-map strike and spotting."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "cod_section",
+      "name": "FARDC section (pickup)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "toyota_land_cruiser"
+    },
+    {
+      "id": "cod_gr_section",
+      "name": "Republican Guard / rapid-reaction section",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "btr60"
+    },
+    {
+      "id": "cod_wazalendo_group",
+      "name": "Wazalendo militia group (auxiliaries)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 6
+        },
+        {
+          "role": "at",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "cod_technical_crew",
+      "name": "Technical crew",
+      "composition": [
+        {
+          "role": "driver",
+          "count": 1
+        },
+        {
+          "role": "gunner",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        }
+      ],
+      "vehicle_id": "technical_dshk"
+    },
+    {
+      "id": "cod_tank_platoon_element",
+      "name": "Tank in town defence",
+      "composition": [
+        {
+          "role": "tank_crew",
+          "count": 4
+        }
+      ],
+      "vehicle_id": "t55"
+    }
+  ],
+  "support_assets": [
+    "Su-25 and Mi-24 strikes as off-map events (game: on some contracts)",
+    "CH-4 armed drones (spotting and strikes)",
+    "Ugandan partner units (UPDF) against the ADF as neutral-allied NPCs",
+    "Wazalendo militia auxiliaries"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [
+      "Raid an ADF forest camp with army and partner units",
+      "Defend a village or mining site against an ADF raid",
+      "Rescue hostages held by the ADF",
+      "Escort a supply or aid convoy on the main road",
+      "Retake a ridge outpost from M23 during a fighting phase",
+      "Recover a downed drone or helicopter crew",
+      "Protect a displacement camp or a hospital"
+    ],
+    "as_target": []
+  },
+  "notes": "New state faction added in Job 7 (Captain, 2026-10-10) so that eastern_congo has a state client, like som on horn_of_africa. Id cod follows the ISO 3166-1 alpha-3 code of the Democratic Republic of the Congo (COD), like the other state ids; it must not be confused with the Republic of the Congo (COG), which is not in the roster. Situation as of October 2026: the government holds Kinshasa, the north of North Kivu (Beni, Butembo areas), Ituri and parts of South Kivu, while AFC/M23 holds the lake cities and much of the Kivu highlands; front lines are largely frozen under the Washington Accords (December 2025) and the Doha-track ceasefire with continuing clashes, and the ADF remains active in Beni, Lubero and Mambasa. MONUSCO's mandate is limited to North Kivu and Ituri since May 2024 (ind and chn as peacekeepers on the map). Game: early-game client for counter-ADF and convoy contracts; contracts against M23 lock the player out of nothing in the roster except m23 itself (Rwanda is not a faction). Its pre-2025 use of foreign contractors makes a PMC client plausible.",
+  "proposed": [
+    "id cod and adding the faction (needed for a client on eastern_congo)",
+    "campaign_tier",
+    "alignment_to_player",
+    "player_client",
+    "relations.player",
+    "relations values (factual direction, game magnitudes)",
+    "doctrine.ai_tuning",
+    "contract_types.as_client",
+    "unit_templates",
+    "vehicles[].prevalence (game weighting)",
+    "body_armor (game tier mapping)",
+    "camo (approximate palettes)",
+    "player_trade.sellable (false)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Armed_Forces_of_the_Democratic_Republic_of_the_Congo",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Land_Forces_of_the_Democratic_Republic_of_the_Congo",
+    "https://en.wikipedia.org/wiki/Air_Force_of_the_Democratic_Republic_of_the_Congo",
+    "https://military.africa/2024/01/m23-rebels-downs-dr-congo-ch-34-drone/",
+    "https://www.criticalthreats.org/briefs/congo-war-security-review/april-3-2026",
+    "https://www.ecoi.net/en/document/2032479.html",
+    "https://monusco.unmissions.org/sites/default/files/pr_monuscos_chinese_peacekeepers_to_leave_the_dr_congo_9_april_2024.pdf"
+  ]
+}

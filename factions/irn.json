@@ -82,7 +82,8 @@
     "persian_gulf_coast",
     "mesopotamia",
     "lebanon_south",
-    "yemen_red_sea"
+    "yemen_red_sea",
+    "iraq_iran_border"
   ],
   "languages": [
     "Persian (Farsi)",
@@ -534,7 +535,7 @@
       "recover_seized_ship_crew"
     ]
   },
-  "notes": "One faction covers both armed forces; the split matters for spawns: Artesh = conscript regular army with tanks (Karrar, T-72S, M60 Samsam, Chieftain), Boragh/BMP APCs, Aras jeeps, AH-1J Cobras, plain digital camo; IRGC = Safir jeeps and Land Cruiser technicals, ATGM ambush teams, drones, missiles, fast boats and the Basij militia; Quds Force = small advisory cells abroad (Lebanon, Iraq, Yemen). Situation 2026: after the June 2025 12-day war with Israel, the US and Israel launched a major air campaign on 28 February 2026 that killed Ali Khamenei; Mojtaba Khamenei was elected Supreme Leader in March 2026. Iran struck Israel, US bases and Gulf states (UAE, Kuwait, Bahrain, Qatar, Saudi Arabia, Jordan intercepting) and closed or contested the Strait of Hormuz. A ceasefire on 8 April, the Islamabad Memorandum (17 June) and a June-July halt broke down; hostilities resumed in September 2026. In Syria Iran lost its position with the fall of Assad (December 2024) and is hostile to the new Damascus government. Iran is a key supplier of the axis_of_resistance (Hezbollah, Houthis, Iraqi militias, Hamas, PIJ). Iranian kit (Safir jeeps, Toophan ATGMs, Shahed drones) shows up with those groups in the early game.",
+  "notes": "One faction covers both armed forces; the split matters for spawns: Artesh = conscript regular army with tanks (Karrar, T-72S, M60 Samsam, Chieftain), Boragh/BMP APCs, Aras jeeps, AH-1J Cobras, plain digital camo; IRGC = Safir jeeps and Land Cruiser technicals, ATGM ambush teams, drones, missiles, fast boats and the Basij militia; Quds Force = small advisory cells abroad (Lebanon, Iraq, Yemen). Situation 2026: after the June 2025 12-day war with Israel, the US and Israel launched a major air campaign on 28 February 2026 that killed Ali Khamenei; Mojtaba Khamenei was elected Supreme Leader in March 2026. Iran struck Israel, US bases and Gulf states (UAE, Kuwait, Bahrain, Qatar, Saudi Arabia, Jordan intercepting) and closed or contested the Strait of Hormuz. A ceasefire on 8 April, the Islamabad Memorandum (17 June) and a June-July halt broke down; hostilities resumed in September 2026. In Syria Iran lost its position with the fall of Assad (December 2024) and is hostile to the new Damascus government. Iran is a key supplier of the axis_of_resistance (Hezbollah, Houthis, Iraqi militias, Hamas, PIJ). Iranian kit (Safir jeeps, Toophan ATGMs, Shahed drones) shows up with those groups in the early game. Job 7: iraq_iran_border is added; the IRGC holds the Iranian side of the crossings and foothills and strikes Iranian Kurdish opposition camps across the border (2026). As on iran_zagros, Iranian-side zones are recon and recovery only.",
   "proposed": [
     "campaign_tier",
     "alignment_to_player",

@@ -57,7 +57,10 @@
     "nor": 35,
     "swe": 35,
     "pmc_halcyon": 20,
-    "pmc_black_sable": -10
+    "pmc_black_sable": -10,
+    "adf": -60,
+    "m23": 10,
+    "cod": 40
   },
   "theatres": [
     "persian_gulf_coast"

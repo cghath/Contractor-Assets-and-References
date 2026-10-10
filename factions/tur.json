@@ -77,7 +77,8 @@
     "afg_taliban": 15,
     "aut": 10,
     "pmc_black_sable": -20,
-    "ind": -30
+    "ind": -30,
+    "cod": 25
   },
   "theatres": [
     "levant_syria",

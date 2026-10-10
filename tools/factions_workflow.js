@@ -17,14 +17,14 @@ const ROSTER = {
   russia_csto: ['rus', 'blr', 'africa_corps', 'kaz', 'srb', 'arm', 'aze'],
   asia_pacific: ['chn', 'prk', 'jpn', 'kor', 'twn', 'ind', 'pak', 'phl', 'vnm'],
   middle_east_states: ['irn', 'isr', 'tur', 'sau', 'are', 'qat', 'egy', 'jor', 'syr', 'irq', 'pse_pa'],
-  me_terror: ['hamas', 'pij', 'hezbollah', 'houthis', 'iraqi_militias', 'al_qaeda', 'aqap', 'isis', 'isis_k', 'al_shabaab', 'jnim'],
-  others: ['che', 'aut', 'irl', 'mex', 'cartel_pacifico', 'cartel_jalisco_nueva', 'afg_taliban', 'sdf', 'krg_peshmerga', 'sahel_aes', 'som', 'pmc_halcyon', 'pmc_kestrel', 'pmc_black_sable'],
+  me_terror: ['hamas', 'pij', 'hezbollah', 'houthis', 'iraqi_militias', 'al_qaeda', 'aqap', 'isis', 'isis_k', 'al_shabaab', 'jnim', 'adf'],
+  others: ['che', 'aut', 'irl', 'mex', 'cartel_pacifico', 'cartel_jalisco_nueva', 'afg_taliban', 'sdf', 'krg_peshmerga', 'sahel_aes', 'som', 'pmc_halcyon', 'pmc_kestrel', 'pmc_black_sable', 'm23', 'cod'],
 }
 const ALL_IDS = ['player'].concat(Object.values(ROSTER).flat())
 
 const THEATRES = {
-  europe_asia_americas: ['baltic_coast', 'suwalki_gap', 'eastern_ukraine', 'black_sea_coast', 'arctic_north', 'caucasus', 'alpine_europe', 'taiwan_strait', 'korean_dmz', 'south_china_sea', 'kashmir_loc', 'mexico_cartel_belt'],
-  middle_east_africa: ['levant_syria', 'lebanon_south', 'israel', 'gaza_west_bank', 'iran_zagros', 'persian_gulf_coast', 'mesopotamia', 'yemen_red_sea', 'sahel', 'horn_of_africa', 'afghan_highlands'],
+  europe_asia_americas: ['baltic_coast', 'suwalki_gap', 'eastern_ukraine', 'black_sea_coast', 'arctic_north', 'caucasus', 'alpine_europe', 'taiwan_strait', 'korean_dmz', 'south_china_sea', 'kashmir_loc', 'mexico_cartel_belt', 'mindanao_sulu'],
+  middle_east_africa: ['levant_syria', 'lebanon_south', 'israel', 'gaza_west_bank', 'iran_zagros', 'persian_gulf_coast', 'mesopotamia', 'yemen_red_sea', 'sahel', 'horn_of_africa', 'afghan_highlands', 'iraq_iran_border', 'eastern_congo'],
 }
 const ALL_THEATRES = Object.values(THEATRES).flat()
 
@@ -105,8 +105,8 @@ const BLOCS = [
   { key: 'russia_csto', title: 'Russia, CSTO and the Caucasus', extra: 'africa_corps is the Russian state-controlled successor to Wagner operating in Africa (real organisation; kind pmc; hostile rival contractor). Note Armenia\'s cooled CSTO ties and the Armenia-Azerbaijan situation as of 2026. Russian vehicles in 2026 commonly carry cope cages and anti-drone screens: capture that in visual_notes.' },
   { key: 'asia_pacific', title: 'Asia-Pacific', extra: 'China, DPRK, Japan, ROK, Taiwan, India, Pakistan, Philippines, Vietnam.' },
   { key: 'middle_east_states', title: 'Middle East states', extra: 'irn covers both the Artesh and the IRGC (note the split). Check the current (2026) Syrian government after the fall of Assad and describe it accurately. pse_pa is the Palestinian Authority Security Forces. Israel and Iran are central theatres (regions israel, gaza_west_bank, iran_zagros, persian_gulf_coast).' },
-  { key: 'me_terror', title: 'Middle East terrorist and armed non-state groups', extra: 'Captain asked specifically for groups like Hamas and al-Qaeda, and EARLY GAME sees a lot of fighting against terrorists: set campaign_tier early for most, give rich unit_templates (cells, ambush teams, technical crews, suicide-drone teams as game hazards), heavy use of the existing technical_* models, captured/looted army vehicles, Toyota pickups, motorbikes. Gear is "terrorist-style": AK-pattern rifles, PKM, RPG-7, DShK, improvised armor or none. hostile to player, player_client false, sellable false. aqap, isis_k, al_shabaab and jnim are affiliates: link them in relations. Be strictly factual and non-glorifying.' },
-  { key: 'others', title: 'Neutrals, Africa, Central Asia, cartels and rival PMCs', extra: 'che, aut, irl are neutral states (mostly appear as staging/arms markets/neutral contract sources). afg_taliban is the de facto Afghan government. sahel_aes is the Alliance of Sahel States juntas (Mali, Burkina Faso, Niger) working with africa_corps. cartel_* are FICTIONAL cartels inspired by real Mexican cartel types (no real names). pmc_* are FICTIONAL rival contractor companies (recurring enemy rivals of the player; one Western, one Eastern-European/Russian-linked, one Gulf-funded is a good spread).' },
+  { key: 'me_terror', title: 'Middle East terrorist and armed non-state groups', extra: 'Captain asked specifically for groups like Hamas and al-Qaeda, and EARLY GAME sees a lot of fighting against terrorists: set campaign_tier early for most, give rich unit_templates (cells, ambush teams, technical crews, suicide-drone teams as game hazards), heavy use of the existing technical_* models, captured/looted army vehicles, Toyota pickups, motorbikes. Gear is "terrorist-style": AK-pattern rifles, PKM, RPG-7, DShK, improvised armor or none. hostile to player, player_client false, sellable false. aqap, isis_k, al_shabaab and jnim are affiliates: link them in relations. adf (Allied Democratic Forces, Islamic State Central Africa Province, added in Job 7) is an islamic_state_network affiliate in eastern DR Congo. Be strictly factual and non-glorifying.' },
+  { key: 'others', title: 'Neutrals, Africa, Central Asia, cartels and rival PMCs', extra: 'che, aut, irl are neutral states (mostly appear as staging/arms markets/neutral contract sources). afg_taliban is the de facto Afghan government. sahel_aes is the Alliance of Sahel States juntas (Mali, Burkina Faso, Niger) working with africa_corps. cartel_* are FICTIONAL cartels inspired by real Mexican cartel types (no real names). pmc_* are FICTIONAL rival contractor companies (recurring enemy rivals of the player; one Western, one Eastern-European/Russian-linked, one Gulf-funded is a good spread). Added in Job 7 for eastern_congo: m23 (M23/AFC rebel movement, real name, armed non-state group, not a client) and cod (FARDC, the DR Congo armed forces, the state client on that map).' },
 ]
 
 phase('Factions')

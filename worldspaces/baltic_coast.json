@@ -116,20 +116,24 @@
       {"name": "Bog crash site", "area_km2": 2.5, "anchor": "drone_debris_site", "notes": "open bog, slow movement"}
     ],
     "hot_zones": [
-      {"name": "Defence line escalation (late game)", "area_km2": 14, "layout": "rus HQ across the river in the fortress town; 4-5 bridgeheads and forest outposts; checkpoints at road junctions; roaming recon and drone teams; 2 QRF bases with armour; allied brigade base as the friendly anchor"}
+      {"name": "Defence line escalation (late game, fictional what-if)", "area_km2": 14, "layout": "rus HQ across the river in the fortress town; 4-5 bridgeheads and forest outposts; checkpoints at road junctions; roaming recon and drone teams; 2 QRF bases with armour; allied brigade base as the friendly anchor"}
     ]
   },
   "insertion": {"lhd": true, "fob": "LHD in the bay for coastal contracts; inland FOB at the allied forward-presence base. Roads are good; helicopters limited by fog; AAVs useful on the coast and through bogs only when frozen (proposed)."},
   "early_game_suitable": false,
   "early_game_notes": "Peer-state threat (rus, late tier) in grey-zone form; mid-to-late campaign.",
   "ambient_audio": ["surf and gulls", "wind in pines", "church bells", "ferry horns", "cranes and woodpeckers", "distant air-raid alert tests", "snow crunch in winter"],
+  "captain_confirmed": [
+    "map_size_km 20 x 20 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
+    "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
+    "materials accepted as the next voxel_world.gd additions (Captain, 2026-10-10); not yet in the game: BRICK #9c5a3c, ROOF_TILE #a4553b, FIBRE_CEMENT #a5a49c, STONE #8f8676, CORRUGATED_IRON #8b8e8c, GLASS #9fbcc4, SANDBAG #b8a378, DIRT_BERM #8a6f4e",
+    "the late-game escalation hot zone stays as a what-if, clearly marked fictional; the default state is the real 2026 situation (Captain, 2026-10-10)"
+  ],
   "proposed": [
-    "map_size_km and composite layout",
+    "composite layout",
     "generator numbers",
-    "escalation scenario (rus crossing the river) as late-game only",
     "blr presence as covert teams only (plausibility: Belarus does not border this coast)",
     "zone_plan and hot zone",
-    "materials: BRICK #9c5a3c, ROOF_TILE #a4553b, FIBRE_CEMENT #a5a49c, STONE #8f8676, CORRUGATED_IRON #8b8e8c, GLASS #9fbcc4, SANDBAG #b8a378, DIRT_BERM #8a6f4e",
     "frozen-bog mobility rule"
   ],
   "sources": [

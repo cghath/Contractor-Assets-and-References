@@ -1,6 +1,6 @@
 # Loadouts generator
 
-Writes everything in `loadouts/`: the 76 `loadouts/<faction id>.json` files, `weapons_index.json`, `armor_index.json`, `rounds_index.json` and `README.md`. The schema and rules are in [docs/loadouts_handoff.md](../../docs/loadouts_handoff.md).
+Writes everything in `loadouts/`: the 79 `loadouts/<faction id>.json` files (one per non-player faction), `weapons_index.json`, `armor_index.json`, `rounds_index.json` and `README.md`. The schema and rules are in [docs/loadouts_handoff.md](../../docs/loadouts_handoff.md).
 
 ## Run
 

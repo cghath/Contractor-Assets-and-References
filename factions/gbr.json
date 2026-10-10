@@ -89,7 +89,10 @@
     "pak": 30,
     "twn": 30,
     "sdf": 25,
-    "pmc_kestrel": -70
+    "pmc_kestrel": -70,
+    "adf": -85,
+    "m23": -25,
+    "cod": 25
   },
   "theatres": [
     "levant_syria",

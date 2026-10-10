@@ -75,7 +75,7 @@
       "architecture": "Qalat family compound: high mud and rammed-earth walls 4-6 m tall and 0.6-1 m thick, sometimes with corner towers, enclosing one-storey mud-brick rooms with flat timber-and-earth roofs around a courtyard with a well and a garden; a single heavy wooden or steel gate.",
       "footprint_m": "compound 30x30 to 60x60",
       "storeys": [1, 2],
-      "wall_class": "Outer walls very thick (cover; breach only with charges, proposed); inner room walls 40 cm medium; roofs medium.",
+      "wall_class": "Outer walls very thick: cover against small arms, which cannot breach them; only breaching charges, grenade launchers or vehicles breach them (Captain-confirmed 2026-10-10). Inner room walls 40 cm medium; roofs medium.",
       "materials": ["MUD_BRICK", "DIRT_BERM", "WOOD", "STEEL"],
       "palette": ["#a8875f", "#9a7a52", "#c4a57e", "#8c6a46", "#4a4d50"],
       "layout_rules": ["scattered 50-300 m apart among fields and orchards", "irrigation ditch and a poplar row along one wall", "one gate facing a track", "towers on wealthier compounds"],
@@ -202,14 +202,18 @@
   "early_game_suitable": true,
   "early_game_notes": "isis_k and al_qaeda are early-tier enemies and afg_taliban and pak are both early-game clients (mutually exclusive). The border war adds artillery and strike hazards; early contracts should stay in side valleys away from the ridge during border-war phases.",
   "ambient_audio": ["call to prayer from loudspeakers", "river rush", "jingle-lorry bells and horns", "goats and donkeys", "wind on the passes", "distant artillery and jets during border-war phases", "motorbike engines"],
+  "captain_confirmed": [
+    "map_size_km 20 x 20 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
+    "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
+    "materials accepted as the next voxel_world.gd additions (Captain, 2026-10-10); not yet in the game: MUD_BRICK #a47e57, DIRT_BERM #8a6f4e, STONE #8f8676, BRICK #9c5a3c, HESCO #a99a6c, SANDBAG #b8a378, CORRUGATED_IRON #8b8e8c, TARP #3f6d8c",
+    "Qalat outer walls cannot be breached by small arms; only breaching charges, grenade launchers or vehicles breach them (Captain, 2026-10-10)"
+  ],
   "proposed": [
-    "map_size_km and layout",
+    "layout",
     "generator numbers",
     "border-war phases, crossing state and the ISIS-K growth rule",
     "two client-dependent FOBs",
     "zone_plan and hot zone",
-    "breaching qalat outer walls only with charges",
-    "materials: MUD_BRICK #a47e57, DIRT_BERM #8a6f4e, STONE #8f8676, BRICK #9c5a3c, HESCO #a99a6c, SANDBAG #b8a378, CORRUGATED_IRON #8b8e8c, TARP #3f6d8c",
     "karez and caves as level geometry only"
   ],
   "sources": [

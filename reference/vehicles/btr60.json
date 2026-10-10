@@ -10,7 +10,8 @@
   "operators": [
     "vnm",
     "prk",
-    "sahel_aes"
+    "sahel_aes",
+    "cod"
   ],
   "crew": 2,
   "passengers": 14,

@@ -105,17 +105,21 @@
       {"name": "Highland plaza war", "area_km2": 14, "layout": "cartel_jalisco_nueva HQ in a walled ranch; 4-5 outposts (packing plant, town safe houses, drone hill, workshop); roadblocks on all town entrances; roaming armoured trucks and lookouts; 2 QRF columns of armoured trucks; cartel_pacifico teams as a third party in the north"}
     ]
   },
-  "insertion": {"lhd": true, "fob": "LHD offshore with Mexican approval (proposed) for coastal contracts; inland FOB inside a Mexican army base. Sovereignty rule: contracts come only from the Mexican government (no unilateral foreign raids). Roads and helicopters; AAVs on the coast and estuaries."},
+  "insertion": {"lhd": true, "fob": "LHD offshore with Mexican approval (Captain-confirmed 2026-10-10) for coastal contracts; inland FOB inside a Mexican army base. Sovereignty rule: contracts come only from the Mexican government (no unilateral foreign raids). Roads and helicopters; AAVs on the coast and estuaries."},
   "early_game_suitable": true,
   "early_game_notes": "Not a terrorist theatre, but both cartels are early-tier enemies and mex is an early-game client, so it suits early contracts.",
   "ambient_audio": ["banda and norteño music from cars", "roosters and dogs", "church bells", "trucks on the highway", "cicadas", "drone buzz (threat cue)", "radio chatter of lookouts (when intercepted)"],
+  "captain_confirmed": [
+    "map_size_km 24 x 22 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
+    "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
+    "materials accepted as the next voxel_world.gd additions (Captain, 2026-10-10); not yet in the game: CINDER_BLOCK #9a978f, MUD_BRICK #a47e57, ROOF_TILE #a4553b, STONE #8f8676, CORRUGATED_IRON #8b8e8c, TARP #3f6d8c, SANDBAG #b8a378, GLASS #9fbcc4",
+    "LHD only with Mexican approval; the restriction stays (Captain, 2026-10-10)"
+  ],
   "proposed": [
-    "map_size_km and composite layout",
+    "composite layout",
     "generator numbers",
     "plaza-control frontline model",
-    "LHD use with Mexican approval",
     "zone_plan and hot zone",
-    "materials: CINDER_BLOCK #9a978f, MUD_BRICK #a47e57, ROOF_TILE #a4553b, STONE #8f8676, CORRUGATED_IRON #8b8e8c, TARP #3f6d8c, SANDBAG #b8a378, GLASS #9fbcc4",
     "drug labs as chemical hazard areas (game-level, no process detail)"
   ],
   "sources": [

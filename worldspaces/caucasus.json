@@ -111,12 +111,16 @@
   "early_game_suitable": false,
   "early_game_notes": "State actors only, mid tier; mid-campaign theatre.",
   "ambient_audio": ["church bells and call to prayer (east)", "wind on the plateau", "river in the gorge", "sheep and dogs", "trains in the valley", "construction machinery", "distant drones"],
+  "captain_confirmed": [
+    "map_size_km 20 x 20 km, within the confirmed 16-24 km per side (Captain, 2026-10-10)",
+    "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
+    "materials accepted as the next voxel_world.gd additions (Captain, 2026-10-10); not yet in the game: BASALT #4b4845, TUFF #c48a6a, STONE #8f8676, BRICK #9c5a3c, CORRUGATED_IRON #8b8e8c, GLASS #9fbcc4, SANDBAG #b8a378, DIRT_BERM #8a6f4e"
+  ],
   "proposed": [
-    "map_size_km and composite tri-border layout with the transit corridor and the occupied line",
+    "composite tri-border layout with the transit corridor and the occupied line",
     "generator numbers",
     "borderization events and treaty-progress events",
     "zone_plan and hot zone",
-    "materials: BASALT #4b4845, TUFF #c48a6a (new), STONE #8f8676, BRICK #9c5a3c, CORRUGATED_IRON #8b8e8c, GLASS #9fbcc4, SANDBAG #b8a378, DIRT_BERM #8a6f4e",
     "mined hills as marked hazards only"
   ],
   "sources": [
