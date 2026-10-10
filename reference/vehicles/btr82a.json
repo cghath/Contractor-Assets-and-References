@@ -1,0 +1,96 @@
+{
+  "id": "btr82a",
+  "name": "BTR-82A / BTR-80 family",
+  "aliases": [
+    "BTR-82A",
+    "BTR-82AM",
+    "BTR-80",
+    "BTR-80A"
+  ],
+  "origin": "Russia",
+  "type": "apc",
+  "operators": [
+    "rus",
+    "blr",
+    "africa_corps",
+    "kaz",
+    "srb",
+    "arm",
+    "aze"
+  ],
+  "crew": 3,
+  "passengers": 7,
+  "dimensions_m": {
+    "length": 7.65,
+    "width": 2.9,
+    "height": 2.8
+  },
+  "weight_t": 15.4,
+  "armament": [
+    "30 mm 2A72 autocannon (BTR-82A/80A)",
+    "7.62 mm PKTM coaxial",
+    "14.5 mm KPVT + 7.62 mm PKT in the older BTR-80 turret"
+  ],
+  "protection": "Light steel armour with spall liner. Game: immune to small-calibre (5.56/5.45/7.62x39/7.62x51); 7.62x54R AP and larger can penetrate side/rear and disable tyres/engine; every launcher in the game list penetrates.",
+  "visual_notes": [
+    "Boat-shaped 8x8 hull, 4 evenly spaced axles; amphibious water-jet at the rear",
+    "Small conical one-man turret centred over the second axle (BTR-80: short KPVT; BTR-82A: long thin 30 mm barrel with smoke dischargers)",
+    "Side doors split horizontally between 2nd and 3rd axles; angular vision blocks",
+    "2026 Russian: anti-drone cage over the roof, slat/mesh panels on the flanks, logs and tyres piled on the deck"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Russian protective green with white Z/V/triangle ID marks",
+      "palette": [
+        "#4A5530",
+        "#3B4428",
+        "#2A2E22",
+        "#F0F0F0"
+      ]
+    },
+    {
+      "name": "Expeditionary sand/khaki (Africa Corps, Syria)",
+      "palette": [
+        "#B9A27A",
+        "#8F7A55",
+        "#5A4E38"
+      ]
+    },
+    {
+      "name": "Azerbaijani desert-green disruptive",
+      "palette": [
+        "#C8B48A",
+        "#8E7B55",
+        "#5C5A3A",
+        "#3A3A2C"
+      ]
+    },
+    {
+      "name": "Serbian three-tone woodland",
+      "palette": [
+        "#4E5B34",
+        "#6D5A3E",
+        "#2A2A24"
+      ]
+    }
+  ],
+  "variants": [
+    "BTR-80 (KPVT)",
+    "BTR-80A (30 mm, SRB/ARM/KAZ)",
+    "BTR-82",
+    "BTR-82A (RUS, BLR, KAZ, AZE, Africa Corps)",
+    "BTR-82AM"
+  ],
+  "existing_model": null,
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/BTR-80",
+    "https://commons.wikimedia.org/wiki/Category:BTR-82A"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/BTR-80",
+    "https://www.janes.com/osint-insights/defence-news/belarus-receives-first-btr-82a-apcs",
+    "https://en.wikipedia.org/wiki/Serbian_Army",
+    "https://en.wikipedia.org/wiki/Kazakh_Ground_Forces"
+  ]
+}

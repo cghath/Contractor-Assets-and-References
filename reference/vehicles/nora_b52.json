@@ -1,0 +1,68 @@
+{
+  "id": "nora_b52",
+  "name": "Nora B-52",
+  "aliases": [
+    "Nora B-52 K-I (M15)",
+    "Nora B-52 NG"
+  ],
+  "origin": "Serbia",
+  "type": "artillery",
+  "operators": [
+    "srb",
+    "aze"
+  ],
+  "crew": 4,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 11.0,
+    "width": 2.95,
+    "height": 3.45
+  },
+  "weight_t": 34.0,
+  "armament": [
+    "155 mm/52 gun",
+    "12.7 mm RWS or 7.62 mm MG"
+  ],
+  "protection": "Armoured cab and turret on K-I. Game: light armour; small-calibre immune, 7.62x54R+ damages, launchers kill.",
+  "visual_notes": [
+    "Long 8x8 Kamaz truck chassis with an armoured cab",
+    "Boxy enclosed gun turret (K-I) at the rear with a long 155 mm barrel over the cab",
+    "Stabiliser spades at the rear"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Serbian three-tone woodland",
+      "palette": [
+        "#4E5B34",
+        "#6D5A3E",
+        "#2A2A24"
+      ]
+    },
+    {
+      "name": "Azerbaijani desert-green disruptive",
+      "palette": [
+        "#C8B48A",
+        "#8E7B55",
+        "#5C5A3A",
+        "#3A3A2C"
+      ]
+    }
+  ],
+  "variants": [
+    "K0",
+    "K1",
+    "M03",
+    "K-I (M15)",
+    "M21",
+    "NG (AZE)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Nora_B-52",
+    "https://commons.wikimedia.org/wiki/Category:Nora_B-52"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Nora_B-52"
+  ]
+}

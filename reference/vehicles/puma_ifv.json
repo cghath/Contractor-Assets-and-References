@@ -1,0 +1,63 @@
+{
+  "id": "puma_ifv",
+  "name": "Puma (IFV)",
+  "aliases": [
+    "Schutzenpanzer Puma"
+  ],
+  "origin": "Germany",
+  "type": "ifv",
+  "operators": [
+    "deu"
+  ],
+  "crew": 3,
+  "passengers": 6,
+  "dimensions_m": {
+    "length": 7.6,
+    "width": 3.9,
+    "height": 3.6
+  },
+  "weight_t": 43.0,
+  "armament": [
+    "30 mm MK30-2/ABM in unmanned turret",
+    "5.56 mm MG4 coaxial (MG5 on S1)",
+    "MELLS (Spike LR) launcher on turret",
+    "76 mm grenade launcher, close-in defence"
+  ],
+  "protection": "Modular armour: level A (air-transportable) to level C (heavy side modules). Game: immune to 5.56/5.45/7.62x39/7.62x51; 7.62x54R can damage optics and exposed systems; 12.7/14.5 mm can penetrate sides on the lighter variants; any launcher in the game list penetrates.",
+  "visual_notes": [
+    "Very wide, flat, low-profile tracked hull with an unmanned compact turret",
+    "6 road wheels per side, rubber band tracks, thick side armour modules",
+    "Sloped front, rear ramp, no crew hatches on turret",
+    "Spike launcher box on the turret's left side (S1)"
+  ],
+  "colour_schemes": [
+    {
+      "name": "NATO three-tone",
+      "palette": [
+        "#3E4A2E",
+        "#4B3A28",
+        "#1E1E1C"
+      ]
+    },
+    {
+      "name": "Bronze green RAL 6031",
+      "palette": [
+        "#3D4532"
+      ]
+    }
+  ],
+  "variants": [
+    "Puma (base)",
+    "Puma S1",
+    "Puma S2 (on order)"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Puma_(IFV)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Puma_(IFV)",
+    "https://en.wikipedia.org/wiki/Future_equipment_of_the_German_Army"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "mli84",
+  "name": "MLI-84M Jderul",
+  "aliases": [
+    "MLI-84",
+    "MLI-84M"
+  ],
+  "origin": "Romania (BMP-1 derivative)",
+  "type": "ifv",
+  "operators": [
+    "rou"
+  ],
+  "crew": 3,
+  "passengers": 8,
+  "dimensions_m": {
+    "length": 7.34,
+    "width": 3.3,
+    "height": 2.94
+  },
+  "weight_t": 17.6,
+  "armament": [
+    "25 mm Oerlikon KBA in OWS-25R overhead turret",
+    "2x Spike / Malyutka-2T ATGM",
+    "12.7 mm DShK",
+    "8x 81 mm smoke"
+  ],
+  "protection": "Light armour. Game: immune to 5.56/5.45/7.62x39/7.62x51; 7.62x54R and larger can penetrate side/rear and disable wheels, engine and optics; every launcher in the game list penetrates.",
+  "visual_notes": [
+    "BMP-1 style sharp ribbed nose but hull about 0.6 m longer, wider and taller than a BMP-1 (check road-wheel count against photos)",
+    "Small low-profile overhead 25 mm turret with ATGM launchers on its sides",
+    "DShK on a rotating hatch mount at the rear left of the troop compartment",
+    "Rear twin doors like the BMP-1"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Romanian olive / M2017-style vehicle green",
+      "palette": [
+        "#4F5A3A",
+        "#3B4430",
+        "#6E6A4C"
+      ]
+    }
+  ],
+  "variants": [
+    "MLI-84",
+    "MLI-84M Jderul"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/MLI-84"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/MLI-84"
+  ]
+}

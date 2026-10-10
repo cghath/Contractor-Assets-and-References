@@ -1,0 +1,63 @@
+{
+  "id": "eagle",
+  "name": "Mowag Eagle",
+  "aliases": [
+    "Eagle IV",
+    "Eagle V"
+  ],
+  "origin": "Switzerland",
+  "type": "light",
+  "operators": [
+    "dnk",
+    "deu"
+  ],
+  "crew": 1,
+  "passengers": 4,
+  "dimensions_m": {
+    "length": 5.9,
+    "width": 2.16,
+    "height": 2.3
+  },
+  "weight_t": 9.0,
+  "armament": [
+    "RWS with 7.62 / 12.7 mm"
+  ],
+  "protection": "Light armour vs small arms and mines. Game: immune to small-calibre rounds; 7.62x54R and larger penetrate the light armour; launchers destroy it outright.",
+  "visual_notes": [
+    "Compact 4x4 with a large armoured crew cell, short bonnet and short rear load bay (Eagle V has longer body)",
+    "Thick armoured glass, roof RWS",
+    "Independent suspension, high ground clearance",
+    "Compact 4x4 with a large armoured cab and short rear cargo area",
+    "Thick armoured windows"
+  ],
+  "colour_schemes": [
+    {
+      "name": "NATO three-tone",
+      "palette": [
+        "#3E4A2E",
+        "#4B3A28",
+        "#1E1E1C"
+      ]
+    },
+    {
+      "name": "Desert sand",
+      "palette": [
+        "#C8B48A",
+        "#A8956C"
+      ]
+    }
+  ],
+  "variants": [
+    "Eagle IV",
+    "Eagle V"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Mowag_Eagle"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Mowag_Eagle",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Royal_Danish_Army"
+  ]
+}

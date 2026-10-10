@@ -1,0 +1,58 @@
+{
+  "id": "kltv",
+  "name": "Kia Light Tactical Vehicle",
+  "aliases": [
+    "KLTV",
+    "K151",
+    "Kia KLTV"
+  ],
+  "origin": "South Korea (Kia)",
+  "type": "light",
+  "operators": [
+    "kor"
+  ],
+  "crew": 1,
+  "passengers": 4,
+  "dimensions_m": {
+    "length": 4.8,
+    "width": 2.2,
+    "height": 1.95
+  },
+  "weight_t": 5.0,
+  "armament": [
+    "12.7 mm K6 or 7.62 mm MG on roof ring",
+    "Raybolt ATGM carrier"
+  ],
+  "protection": "Armoured and soft-skinned versions. Game: immune to small-calibre rounds (5.45/5.56/5.8/7.62x39/7.62x51 ball); 7.62x54R and larger penetrate side/rear and disable tyres and engine; any launcher destroys it.",
+  "visual_notes": [
+    "Humvee-sized 4x4 with a squarer cab and modern headlight clusters",
+    "Armoured version with heavy doors and roof ring mount",
+    "Replacing K131 jeeps across the ROK Army"
+  ],
+  "colour_schemes": [
+    {
+      "name": "ROK Army four-colour",
+      "palette": [
+        "#4C5A36",
+        "#6E5B3E",
+        "#22231D",
+        "#8A8466"
+      ]
+    }
+  ],
+  "variants": [
+    "Utility",
+    "Armoured",
+    "ATGM carrier",
+    "Ambulance"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Kia_KLTV",
+    "https://commons.wikimedia.org/wiki/Category:Kia_KLTV"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Kia_KLTV"
+  ]
+}

@@ -1,0 +1,393 @@
+{
+  "id": "fin",
+  "name": "Finland",
+  "short": "FIN",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#FFFFFF",
+    "#002F6C"
+  ],
+  "blocs": [
+    "nato",
+    "eu",
+    "jef",
+    "nordefco"
+  ],
+  "campaign_tier": "late",
+  "alignment_to_player": "friendly",
+  "player_client": true,
+  "relations": {
+    "player": 25,
+    "usa": 75,
+    "gbr": 85,
+    "can": 80,
+    "aus": 70,
+    "ukr": 85,
+    "pol": 75,
+    "est": 90,
+    "lva": 80,
+    "ltu": 80,
+    "rou": 70,
+    "jpn": 60,
+    "kor": 55,
+    "isr": 20,
+    "tur": 40,
+    "sau": 30,
+    "are": 45,
+    "qat": 35,
+    "egy": 35,
+    "jor": 55,
+    "irq": 35,
+    "krg_peshmerga": 55,
+    "sdf": 30,
+    "syr": 5,
+    "pse_pa": 35,
+    "rus": -85,
+    "blr": -65,
+    "irn": -55,
+    "prk": -60,
+    "chn": -20,
+    "africa_corps": -60,
+    "sahel_aes": -30,
+    "afg_taliban": -60,
+    "isis": -100,
+    "isis_k": -95,
+    "al_qaeda": -100,
+    "aqap": -90,
+    "al_shabaab": -90,
+    "jnim": -90,
+    "hamas": -85,
+    "pij": -85,
+    "hezbollah": -65,
+    "houthis": -70,
+    "iraqi_militias": -55,
+    "fra": 85,
+    "deu": 85,
+    "ita": 85,
+    "esp": 85,
+    "nld": 85,
+    "bel": 85,
+    "nor": 90,
+    "dnk": 85,
+    "swe": 95,
+    "grc": 85
+  },
+  "theatres": [
+    "arctic_north",
+    "baltic_coast",
+    "lebanon_south"
+  ],
+  "languages": [
+    "Finnish",
+    "Swedish"
+  ],
+  "callout_language": "Finnish",
+  "doctrine": {
+    "summary": "Large conscript reserve army; NATO member since 2023; border with Russia closed since 2023.",
+    "squad_size": 8,
+    "fireteam": "Ryhma of two teams.",
+    "tactics": [
+      "forest and winter defence",
+      "motti encirclement",
+      "artillery-heavy fires"
+    ],
+    "ai_tuning": {
+      "aggression": 0.55,
+      "discipline": 0.85,
+      "suppression_resistance": 0.85,
+      "flanking": 0.75,
+      "grenade_use": 0.6,
+      "medical_care": 0.8,
+      "night_capability": 0.85,
+      "marksmanship": 0.75,
+      "morale": 0.85
+    }
+  },
+  "camo": [
+    {
+      "name": "M05 woodland",
+      "palette": [
+        "#5D6046",
+        "#3E4130",
+        "#7F7A5C",
+        "#292A22",
+        "#8B6E4C"
+      ],
+      "use": "standard"
+    },
+    {
+      "name": "M05 snow",
+      "palette": [
+        "#E8E8E4",
+        "#A3A39D",
+        "#5B5E55"
+      ],
+      "use": "winter"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "RK 62 (7.62x39mm)",
+      "RK 95 TP (7.62x39mm)"
+    ],
+    "autorifleman": [
+      "KVKK 62 (7.62x39mm)",
+      "PKM (7.62x54R)"
+    ],
+    "marksman": [
+      "TKIV Dragunov (7.62x54R)"
+    ],
+    "grenadier": [
+      "RK 62 with 40mm launcher"
+    ],
+    "at": [
+      "66 KES 12 (M72)",
+      "NLAW",
+      "APILAS"
+    ],
+    "medic": [
+      "RK 62"
+    ],
+    "squad_leader": [
+      "RK 62"
+    ],
+    "sniper": [
+      "TKIV 2000 (.338 Lapua Magnum)"
+    ],
+    "sidearm": [
+      "Glock 17 (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "NLAW [in game: NLAW]",
+    "AT4 [in game: AT4]",
+    "M72 (not in game list)"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "ceramic",
+    "notes": "Game mapping."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "leopard2a6",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "2A6 and 2A4."
+    },
+    {
+      "vehicle_id": "cv90",
+      "role": "ifv",
+      "prevalence": "signature",
+      "notes": "CV9030FIN."
+    },
+    {
+      "vehicle_id": "bmp2",
+      "role": "ifv",
+      "prevalence": "common",
+      "notes": "BMP-2MD."
+    },
+    {
+      "vehicle_id": "mtlb",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": ""
+    },
+    {
+      "vehicle_id": "sisu_pasi",
+      "role": "apc",
+      "prevalence": "signature",
+      "notes": ""
+    },
+    {
+      "vehicle_id": "patria_amv",
+      "role": "apc",
+      "prevalence": "uncommon",
+      "notes": ""
+    },
+    {
+      "vehicle_id": "patria_6x6",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": ""
+    },
+    {
+      "vehicle_id": "k9",
+      "role": "artillery",
+      "prevalence": "signature",
+      "notes": "K9 Moukari."
+    },
+    {
+      "vehicle_id": "m270",
+      "role": "mlrs",
+      "prevalence": "uncommon",
+      "notes": ""
+    },
+    {
+      "vehicle_id": "nh90",
+      "role": "transport_heli",
+      "prevalence": "uncommon",
+      "notes": ""
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "fin_rifle_squad",
+      "name": "Finnish rifle squad (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "fin_mech_squad",
+      "name": "Finnish mechanised squad",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 2
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "cv90"
+    },
+    {
+      "id": "fin_recon_team",
+      "name": "Finnish recon / sniper pair team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "sniper",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "sisu_pasi"
+    }
+  ],
+  "support_assets": [
+    "K9 artillery",
+    "M270 rockets",
+    "drones"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 20,
+        "unlocks": [
+          "service rifle and ammunition",
+          "uniforms in national camo",
+          "light helmet and vest"
+        ]
+      },
+      {
+        "rep": 40,
+        "unlocks": [
+          "optics and NVGs",
+          "medium armour",
+          "NLAW"
+        ]
+      },
+      {
+        "rep": 60,
+        "unlocks": [
+          "marksman and sniper rifles",
+          "heavy armour",
+          "Sisu Pasi (light vehicle)"
+        ]
+      },
+      {
+        "rep": 80,
+        "unlocks": [
+          "CV90 (armoured transport)",
+          "fire-support call-ins on contracts"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "counter-terrorist raid",
+      "hostage / personnel recovery",
+      "convoy escort",
+      "HVT capture",
+      "recover lost equipment or sensitive kit",
+      "train and accompany partner forces",
+      "security of embassy or base",
+      "counter-drone site defence"
+    ],
+    "as_target": [
+      "only if the player works for this nation's enemies: sabotage a logistics depot",
+      "only if the player works for this nation's enemies: ambush a supply convoy"
+    ]
+  },
+  "notes": "PKM and Dragunov use 7.62x54R, which in game can disable vehicles.",
+  "proposed": [
+    "campaign_tier",
+    "relations.player",
+    "doctrine.ai_tuning",
+    "unit_templates",
+    "player_trade.rep_tiers",
+    "contract_types",
+    "body_armor (game tier mapping)",
+    "vehicles[].prevalence (game weighting)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Finnish_Army"
+  ]
+}

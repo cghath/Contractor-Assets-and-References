@@ -1,0 +1,76 @@
+{
+  "id": "m270",
+  "name": "M270 MLRS",
+  "aliases": [
+    "MARS II",
+    "RSRAKH 06",
+    "M270A2"
+  ],
+  "origin": "United States",
+  "type": "mlrs",
+  "operators": [
+    "deu",
+    "ita",
+    "fin",
+    "grc"
+  ],
+  "crew": 3,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 6.97,
+    "width": 2.97,
+    "height": 2.62
+  },
+  "weight_t": 25.0,
+  "armament": [
+    "12 x 227 mm GMLRS rockets in two pods or 2 ATACMS"
+  ],
+  "protection": "Lightly armoured cab on a Bradley-derived tracked chassis. Game: light armour on cab/turret only; immune to small-calibre rounds, 7.62x54R and larger disable it; launchers destroy it.",
+  "visual_notes": [
+    "Tracked carrier with armoured cab at the front and a large traversing launcher box at the rear",
+    "6 road wheels per side",
+    "Launcher box raised and turned when firing"
+  ],
+  "colour_schemes": [
+    {
+      "name": "NATO three-tone",
+      "palette": [
+        "#3E4A2E",
+        "#4B3A28",
+        "#1E1E1C"
+      ]
+    },
+    {
+      "name": "Finnish three-tone",
+      "palette": [
+        "#4F5A3A",
+        "#2F3526",
+        "#7A7457"
+      ]
+    },
+    {
+      "name": "Greek three-tone",
+      "palette": [
+        "#5A5C3A",
+        "#7A6A48",
+        "#2A2A20"
+      ]
+    }
+  ],
+  "variants": [
+    "M270A1",
+    "M270A2",
+    "MARS II (DEU)",
+    "MLRS-I (ITA)",
+    "298 RSRAKH 06 (FIN)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/M270_Multiple_Launch_Rocket_System"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/M270_Multiple_Launch_Rocket_System",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Finnish_Army"
+  ]
+}

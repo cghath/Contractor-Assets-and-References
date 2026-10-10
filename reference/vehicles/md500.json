@@ -1,0 +1,68 @@
+{
+  "id": "md500",
+  "name": "MD 500 / Hughes 500 Defender",
+  "aliases": [
+    "MD 500 Defender",
+    "Hughes 500",
+    "MD 500 TOW"
+  ],
+  "origin": "United States",
+  "type": "attack_heli",
+  "operators": [
+    "prk",
+    "kor"
+  ],
+  "crew": 2,
+  "passengers": 2,
+  "dimensions_m": {
+    "length": 9.3,
+    "width": 8.1,
+    "height": 2.6
+  },
+  "weight_t": 1.4,
+  "armament": [
+    "7.62 mm minigun / 12.7 mm pod",
+    "TOW ATGM (500MD/TOW)",
+    "rocket pods"
+  ],
+  "protection": "Unarmoured light helicopter. Game: airframe immune to small-calibre rounds; 7.62x54R and 12.7/14.5 mm damage rotor, engines and cockpit glass (forced landing on accumulated hits); launchers and MANPADS (off-list) destroy it.",
+  "visual_notes": [
+    "Small egg-shaped cabin, five-blade (500MD) main rotor, T-tail",
+    "Skid landing gear, weapons on side pylons",
+    "DPRK acquired ~87 civilian Hughes 500s by evading export controls in 1985; ROK Army flies 500MD Defender/TOW"
+  ],
+  "colour_schemes": [
+    {
+      "name": "KPA dark olive",
+      "palette": [
+        "#4A5233",
+        "#353B25",
+        "#1F2217"
+      ]
+    },
+    {
+      "name": "ROK Army four-colour",
+      "palette": [
+        "#4C5A36",
+        "#6E5B3E",
+        "#22231D",
+        "#8A8466"
+      ]
+    }
+  ],
+  "variants": [
+    "500MD Defender",
+    "500MD/TOW",
+    "DPRK armed civilian Hughes 500"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/MD_Helicopters_MD_500",
+    "https://commons.wikimedia.org/wiki/Category:MD_500"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/MD_Helicopters_MD_500",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Republic_of_Korea_Army"
+  ]
+}

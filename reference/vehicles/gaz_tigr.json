@@ -1,0 +1,79 @@
+{
+  "id": "gaz_tigr",
+  "name": "GAZ Tigr",
+  "aliases": [
+    "GAZ-2330",
+    "Tigr-M",
+    "GAZ-233014"
+  ],
+  "origin": "Russia",
+  "type": "light",
+  "operators": [
+    "rus",
+    "blr",
+    "africa_corps",
+    "kaz"
+  ],
+  "crew": 2,
+  "passengers": 7,
+  "dimensions_m": {
+    "length": 5.7,
+    "width": 2.4,
+    "height": 2.4
+  },
+  "weight_t": 7.6,
+  "armament": [
+    "7.62 mm PKP or 12.7 mm Kord on roof ring",
+    "AGS-17/30 grenade launcher or Kornet-D on variants"
+  ],
+  "protection": "Armoured steel body (protection roughly STANAG Level 2-3). Game: immune to small-calibre (5.56/5.45/7.62x39/7.62x51); 7.62x54R AP and larger can penetrate side/rear and disable tyres/engine; every launcher in the game list penetrates.",
+  "visual_notes": [
+    "Boxy 4x4 with a tall flat-sided cab, vertical slab sides and small square windows",
+    "Hummer-like stance, large single wheels, bull bar, roof hatch with gun ring",
+    "Rear swing door with spare wheel; Africa Corps vehicles in sand paint with white or no markings"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Russian protective green with white Z/V/triangle ID marks",
+      "palette": [
+        "#4A5530",
+        "#3B4428",
+        "#2A2E22",
+        "#F0F0F0"
+      ]
+    },
+    {
+      "name": "Expeditionary sand/khaki (Africa Corps, Syria)",
+      "palette": [
+        "#B9A27A",
+        "#8F7A55",
+        "#5A4E38"
+      ]
+    },
+    {
+      "name": "Belarusian green / digital",
+      "palette": [
+        "#4C5A34",
+        "#2D3324",
+        "#7A7452"
+      ]
+    }
+  ],
+  "variants": [
+    "Tigr",
+    "Tigr-M",
+    "Tigr-M SpN (special forces)",
+    "Kornet-D carrier"
+  ],
+  "existing_model": null,
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/GAZ_Tigr",
+    "https://commons.wikimedia.org/wiki/Category:GAZ_Tigr"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/GAZ_Tigr",
+    "https://defence-blog.com/russian-tanks-and-armored-vehicles-spotted-in-mali/",
+    "https://en.wikipedia.org/wiki/Kazakh_Ground_Forces"
+  ]
+}

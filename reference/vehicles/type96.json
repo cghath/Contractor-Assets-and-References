@@ -1,0 +1,68 @@
+{
+  "id": "type96",
+  "name": "ZTZ-96 (Type 96)",
+  "aliases": [
+    "Type 96A",
+    "Type 96B",
+    "ZTZ-96A"
+  ],
+  "origin": "China (Norinco)",
+  "type": "mbt",
+  "operators": [
+    "chn"
+  ],
+  "crew": 3,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 10.3,
+    "width": 3.4,
+    "height": 2.3
+  },
+  "weight_t": 42.8,
+  "armament": [
+    "125 mm smoothbore with carousel autoloader",
+    "12.7 mm HMG",
+    "7.62 mm coaxial MG"
+  ],
+  "protection": "Welded turret with add-on composite and ERA on Type 96A. Game: immune to all small-calibre rounds; 7.62x54R and 12.7/14.5 mm only damage optics, external stowage, fuel drums and tracks (mobility kill on repeated hits); PG-7V/AT4/MAAWS/SMAW/NLAW penetrate side, rear and turret roof; Javelin top-attack penetrates; frontal arc resists unguided launchers.",
+  "visual_notes": [
+    "Low T-72-inspired hull with six road wheels per side",
+    "Type 96A: boxy add-on armour wedges on the turret front, ERA blocks on side skirts",
+    "Flat turret with storage baskets and smoke grenade banks",
+    "Most numerous PLA tank; older line units and reserve brigades"
+  ],
+  "colour_schemes": [
+    {
+      "name": "PLA digital woodland (vehicle)",
+      "palette": [
+        "#4E5B3A",
+        "#6E7552",
+        "#2F3626",
+        "#8A8762"
+      ]
+    },
+    {
+      "name": "PLA plain olive",
+      "palette": [
+        "#4F5638",
+        "#3A402A",
+        "#23261A"
+      ]
+    }
+  ],
+  "variants": [
+    "Type 96",
+    "Type 96A",
+    "Type 96B (tank biathlon)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Type_96_tank",
+    "https://commons.wikimedia.org/wiki/Category:Type_96_tank"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Type_96_tank",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_People%27s_Liberation_Army_Ground_Force"
+  ]
+}

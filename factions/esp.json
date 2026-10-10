@@ -1,0 +1,408 @@
+{
+  "id": "esp",
+  "name": "Spain",
+  "short": "ESP",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#AA151B",
+    "#F1BF00"
+  ],
+  "blocs": [
+    "nato",
+    "eu"
+  ],
+  "campaign_tier": "early",
+  "alignment_to_player": "friendly",
+  "player_client": true,
+  "relations": {
+    "player": 25,
+    "usa": 75,
+    "gbr": 85,
+    "can": 80,
+    "aus": 70,
+    "ukr": 75,
+    "pol": 75,
+    "est": 80,
+    "lva": 80,
+    "ltu": 80,
+    "rou": 70,
+    "jpn": 60,
+    "kor": 55,
+    "isr": -10,
+    "tur": 55,
+    "sau": 30,
+    "are": 45,
+    "qat": 35,
+    "egy": 35,
+    "jor": 55,
+    "irq": 35,
+    "krg_peshmerga": 55,
+    "sdf": 30,
+    "syr": 5,
+    "pse_pa": 55,
+    "rus": -80,
+    "blr": -65,
+    "irn": -55,
+    "prk": -60,
+    "chn": -20,
+    "africa_corps": -60,
+    "sahel_aes": -30,
+    "afg_taliban": -60,
+    "isis": -100,
+    "isis_k": -95,
+    "al_qaeda": -100,
+    "aqap": -90,
+    "al_shabaab": -90,
+    "jnim": -85,
+    "hamas": -85,
+    "pij": -85,
+    "hezbollah": -55,
+    "houthis": -70,
+    "iraqi_militias": -55,
+    "fra": 80,
+    "deu": 80,
+    "ita": 80,
+    "nld": 80,
+    "bel": 80,
+    "nor": 80,
+    "dnk": 80,
+    "swe": 80,
+    "fin": 80,
+    "grc": 80,
+    "mex": 50
+  },
+  "theatres": [
+    "lebanon_south",
+    "mesopotamia",
+    "horn_of_africa",
+    "baltic_coast",
+    "sahel"
+  ],
+  "languages": [
+    "Spanish"
+  ],
+  "callout_language": "Spanish",
+  "doctrine": {
+    "summary": "Professional army modernising under Fuerza 35; Legion and Brigade units with long experience in UNIFIL, Iraq and Afghanistan.",
+    "squad_size": 8,
+    "fireteam": "Peloton: two four-man escuadras.",
+    "tactics": [
+      "mechanised infantry with Pizarro and Dragon",
+      "Legion light infantry",
+      "Marine amphibious ops"
+    ],
+    "ai_tuning": {
+      "aggression": 0.55,
+      "discipline": 0.8,
+      "suppression_resistance": 0.7,
+      "flanking": 0.65,
+      "grenade_use": 0.55,
+      "medical_care": 0.85,
+      "night_capability": 0.8,
+      "marksmanship": 0.75,
+      "morale": 0.75
+    }
+  },
+  "camo": [
+    {
+      "name": "Pixelado boscoso",
+      "palette": [
+        "#4E5637",
+        "#6E6A48",
+        "#8D7E5A",
+        "#2E2B23"
+      ],
+      "use": "temperate"
+    },
+    {
+      "name": "Pixelado arido",
+      "palette": [
+        "#C9B48C",
+        "#A68E66",
+        "#7D6B4D"
+      ],
+      "use": "desert"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "HK G36E (5.56x45mm)"
+    ],
+    "autorifleman": [
+      "HK MG4 (5.56x45mm)",
+      "MG3 (7.62x51mm)"
+    ],
+    "marksman": [
+      "HK G28 (7.62x51mm)"
+    ],
+    "grenadier": [
+      "G36E with AG36 (40mm)"
+    ],
+    "at": [
+      "Instalaza C90 (90mm)",
+      "Instalaza C100 Alcotan",
+      "Spike LR (ATGM)"
+    ],
+    "medic": [
+      "G36E"
+    ],
+    "squad_leader": [
+      "G36E"
+    ],
+    "sniper": [
+      "Accuracy International AW (7.62x51mm)",
+      "Barrett M95 (12.7x99mm)"
+    ],
+    "sidearm": [
+      "HK USP (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "C90 (not in game list)",
+    "C100 Alcotan (not in game list)",
+    "Spike LR (not in game list)"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "ceramic",
+    "notes": "Game mapping."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "leopard2a6",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "Leopard 2E and 2A4."
+    },
+    {
+      "vehicle_id": "pizarro",
+      "role": "ifv",
+      "prevalence": "signature",
+      "notes": ""
+    },
+    {
+      "vehicle_id": "bmr",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "Being replaced by Dragon."
+    },
+    {
+      "vehicle_id": "piranha",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "VCR 8x8 Dragon, 100 delivered by October 2026."
+    },
+    {
+      "vehicle_id": "centauro",
+      "role": "light",
+      "prevalence": "common",
+      "notes": ""
+    },
+    {
+      "vehicle_id": "vamtac",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": ""
+    },
+    {
+      "vehicle_id": "m113",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": ""
+    },
+    {
+      "vehicle_id": "aav7",
+      "role": "apc",
+      "prevalence": "uncommon",
+      "notes": "Spanish Marines."
+    },
+    {
+      "vehicle_id": "m109",
+      "role": "artillery",
+      "prevalence": "common",
+      "notes": ""
+    },
+    {
+      "vehicle_id": "tiger",
+      "role": "attack_heli",
+      "prevalence": "uncommon",
+      "notes": "Tigre HAD-E."
+    },
+    {
+      "vehicle_id": "ch47",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": ""
+    },
+    {
+      "vehicle_id": "nh90",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": ""
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "esp_rifle_squad",
+      "name": "Spanish rifle squad (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "esp_mech_squad",
+      "name": "Spanish mechanised squad",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 2
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "pizarro"
+    },
+    {
+      "id": "esp_recon_team",
+      "name": "Spanish recon / sniper pair team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "sniper",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "vamtac"
+    }
+  ],
+  "support_assets": [
+    "Tigre CAS",
+    "M109 artillery",
+    "drones",
+    "Marines LHD (Juan Carlos I)"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 20,
+        "unlocks": [
+          "service rifle and ammunition",
+          "uniforms in national camo",
+          "light helmet and vest"
+        ]
+      },
+      {
+        "rep": 40,
+        "unlocks": [
+          "optics and NVGs",
+          "medium armour",
+          "C90 launcher"
+        ]
+      },
+      {
+        "rep": 60,
+        "unlocks": [
+          "marksman and sniper rifles",
+          "heavy armour",
+          "VAMTAC (light vehicle)"
+        ]
+      },
+      {
+        "rep": 80,
+        "unlocks": [
+          "Dragon (armoured transport)",
+          "fire-support call-ins on contracts"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "counter-terrorist raid",
+      "hostage / personnel recovery",
+      "convoy escort",
+      "HVT capture",
+      "recover lost equipment or sensitive kit",
+      "train and accompany partner forces",
+      "security of embassy or base",
+      "counter-drone site defence",
+      "UNIFIL support",
+      "Sahel border monitoring"
+    ],
+    "as_target": [
+      "only if the player works for this nation's enemies: sabotage a logistics depot",
+      "only if the player works for this nation's enemies: ambush a supply convoy"
+    ]
+  },
+  "notes": "Spain recognised Palestine in 2024 and has tense relations with Israel.",
+  "proposed": [
+    "campaign_tier",
+    "relations.player",
+    "doctrine.ai_tuning",
+    "unit_templates",
+    "player_trade.rep_tiers",
+    "contract_types",
+    "body_armor (game tier mapping)",
+    "vehicles[].prevalence (game weighting)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Spanish_Army",
+    "https://thedefensepost.com/2026/10/05/spain-dragon-combat-vehicle/"
+  ]
+}

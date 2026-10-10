@@ -1,0 +1,61 @@
+{
+  "id": "t55",
+  "name": "T-54 / T-55 family",
+  "aliases": [
+    "T-54",
+    "T-55",
+    "T-54B",
+    "T-54M3",
+    "T-55M3"
+  ],
+  "origin": "Soviet Union",
+  "type": "mbt",
+  "operators": [
+    "vnm"
+  ],
+  "crew": 4,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 9.0,
+    "width": 3.3,
+    "height": 2.4
+  },
+  "weight_t": 36.0,
+  "armament": [
+    "100 mm D-10T rifled gun",
+    "12.7 mm DShK",
+    "7.62 mm coaxial MG"
+  ],
+  "protection": "Cast dome turret; Vietnamese upgrades add ERA, laser rangefinder and thermal sight. Game: immune to all small-calibre rounds; 7.62x54R and 12.7/14.5 mm damage optics, stowage and tracks; every launcher in the game (PG-7V, AT4, MAAWS, SMAW, NLAW, Javelin) penetrates from any arc, frontal hull included at close range.",
+  "visual_notes": [
+    "Rounded dome turret, five road wheels with a gap between first and second",
+    "Vietnamese modernised T-54B: ERA bricks on turret front, laser rangefinder box over the gun",
+    "External fuel tanks on right fender, rear drums; used by many Middle East/African forces too"
+  ],
+  "colour_schemes": [
+    {
+      "name": "VPA green",
+      "palette": [
+        "#4E5B39",
+        "#3A4429",
+        "#262B1D"
+      ]
+    }
+  ],
+  "variants": [
+    "T-54",
+    "T-54B",
+    "T-55",
+    "T-54M3 (VNM upgrade)"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/T-54/T-55",
+    "https://commons.wikimedia.org/wiki/Category:T-55"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/T-54/T-55",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Vietnam_People%27s_Ground_Forces"
+  ]
+}

@@ -1,0 +1,618 @@
+{
+  "id": "usa",
+  "name": "United States of America",
+  "short": "USA",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#B22234",
+    "#FFFFFF",
+    "#3C3B6E"
+  ],
+  "blocs": [
+    "nato",
+    "five_eyes",
+    "aukus",
+    "quad",
+    "anzus"
+  ],
+  "campaign_tier": "early",
+  "alignment_to_player": "friendly",
+  "player_client": true,
+  "relations": {
+    "player": 50,
+    "gbr": 90,
+    "can": 70,
+    "aus": 90,
+    "nzl": 70,
+    "fra": 70,
+    "deu": 70,
+    "pol": 80,
+    "est": 75,
+    "lva": 75,
+    "ltu": 75,
+    "ukr": 45,
+    "jpn": 85,
+    "kor": 85,
+    "twn": 65,
+    "phl": 75,
+    "ind": 45,
+    "isr": 85,
+    "sau": 55,
+    "are": 60,
+    "qat": 50,
+    "jor": 65,
+    "egy": 45,
+    "irq": 30,
+    "syr": 15,
+    "krg_peshmerga": 65,
+    "sdf": 40,
+    "tur": 40,
+    "pak": 10,
+    "som": 45,
+    "mex": 45,
+    "rus": -65,
+    "blr": -50,
+    "chn": -60,
+    "prk": -90,
+    "irn": -90,
+    "afg_taliban": -60,
+    "africa_corps": -60,
+    "sahel_aes": -30,
+    "cartel_pacifico": -90,
+    "cartel_jalisco_nueva": -90,
+    "al_qaeda": -100,
+    "aqap": -100,
+    "isis": -100,
+    "isis_k": -100,
+    "al_shabaab": -100,
+    "jnim": -95,
+    "hamas": -95,
+    "pij": -95,
+    "hezbollah": -95,
+    "houthis": -90,
+    "iraqi_militias": -85
+  },
+  "theatres": [
+    "levant_syria",
+    "mesopotamia",
+    "persian_gulf_coast",
+    "yemen_red_sea",
+    "horn_of_africa",
+    "baltic_coast",
+    "suwalki_gap",
+    "arctic_north",
+    "korean_dmz",
+    "taiwan_strait",
+    "south_china_sea",
+    "mexico_cartel_belt"
+  ],
+  "languages": [
+    "English"
+  ],
+  "callout_language": "English (US Army / USMC brevity and procedure words)",
+  "doctrine": {
+    "summary": "Combined-arms manoeuvre built on air superiority, precision fires, ISR drones and night-vision overmatch. Army brigades are armored (Abrams/Bradley), Stryker or infantry (light/airborne/air assault); the Marine Corps is reorganising under Force Design into lighter, ship-based littoral units (tanks divested 2021, AAV retired 2025, ACV and JLTV in their place). In counter-terror work: small raid forces, helicopter assault, overwhelming fire support and casualty evacuation inside the 'golden hour'.",
+    "squad_size": 9,
+    "fireteam": "US Army rifle squad: squad leader + two 4-man fireteams (team leader, automatic rifleman, grenadier, rifleman). USMC squad under Force Design: squad leader, assistant squad leader, squad systems operator (drones/EW) + three 3-man fireteams (team leader, automatic rifleman with M27, rifleman). In game: 8-man squads in 4 battle-buddy pairs.",
+    "tactics": [
+      "Bounding overwatch by pairs and fireteams; base-of-fire plus manoeuvre element",
+      "Night raids with full NVG and IR laser/illuminator use; prefer to fight at night",
+      "Calls for fire early: mortars, artillery, attack helicopters, armed drones",
+      "Room clearing with flashbangs and frags, stacking in pairs",
+      "Smoke to screen casualty extraction; aggressive CASEVAC by UH-60 MEDEVAC",
+      "Mounted patrols in MRAPs/JLTVs with route clearance; dismount on contact",
+      "Drone ISR overwatch of the objective before and during the assault"
+    ],
+    "ai_tuning": {
+      "aggression": 0.6,
+      "discipline": 0.85,
+      "suppression_resistance": 0.75,
+      "flanking": 0.75,
+      "grenade_use": 0.7,
+      "medical_care": 0.9,
+      "night_capability": 0.95,
+      "marksmanship": 0.75,
+      "morale": 0.8
+    }
+  },
+  "camo": [
+    {
+      "name": "OCP (Operational Camouflage Pattern, 'Scorpion W2')",
+      "palette": [
+        "#C8B997",
+        "#9D8F6C",
+        "#6F6B4E",
+        "#4B4431",
+        "#A39466"
+      ],
+      "use": "US Army and Air Force uniform and kit, all theatres"
+    },
+    {
+      "name": "MARPAT Desert",
+      "palette": [
+        "#C6B28C",
+        "#A08560",
+        "#6F5A3D",
+        "#D8CCB0"
+      ],
+      "use": "USMC arid theatres (Middle East, Horn of Africa)"
+    },
+    {
+      "name": "MARPAT Woodland",
+      "palette": [
+        "#7B7A56",
+        "#4F5135",
+        "#2F2B20",
+        "#9B9474"
+      ],
+      "use": "USMC temperate/jungle theatres (Pacific, Baltic, Arctic summer)"
+    },
+    {
+      "name": "Coyote/Ranger Green solids",
+      "palette": [
+        "#81613C",
+        "#4A5130"
+      ],
+      "use": "Plate carriers, pouches, helmet covers"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "M4A1 carbine (5.56x45mm)",
+      "M7 rifle (6.8x51mm) - Next Generation Squad Weapon, close-combat units, fielding since 2024",
+      "M27 IAR (5.56x45mm) - USMC infantry rifle"
+    ],
+    "autorifleman": [
+      "M249 SAW (5.56x45mm)",
+      "M250 automatic rifle (6.8x51mm) - fielding with M7 units",
+      "M27 IAR (5.56x45mm) - USMC fireteam automatic rifle",
+      "M240B/L GPMG (7.62x51mm) - weapons squads"
+    ],
+    "marksman": [
+      "M110A1 CSASS (7.62x51mm)",
+      "M38 SDMR (5.56x45mm) - USMC"
+    ],
+    "grenadier": [
+      "M4A1 with M320A1 grenade launcher (40x46mm)"
+    ],
+    "at": [
+      "FGM-148 Javelin",
+      "M136 AT4 (84mm)",
+      "M3E1 MAAWS (84mm)",
+      "Mk 153 SMAW (83mm) - USMC"
+    ],
+    "medic": [
+      "M4A1 carbine (5.56x45mm)"
+    ],
+    "squad_leader": [
+      "M4A1 carbine (5.56x45mm)",
+      "M7 rifle (6.8x51mm)"
+    ],
+    "sniper": [
+      "Mk 22 MRAD Advanced Sniper Rifle (.300 Norma Mag / 7.62x51mm / .338 Norma Mag)",
+      "M107A1 (.50 BMG)"
+    ],
+    "sidearm": [
+      "M17 / M18 Modular Handgun System (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "FGM-148 Javelin [in_game]",
+    "AT4 / M136 (84mm) [in_game]",
+    "M3E1 MAAWS / Carl Gustaf (84mm) [in_game]",
+    "Mk 153 SMAW (83mm, USMC) [in_game]",
+    "M72 LAW (66mm) [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "heavy",
+    "plates": "ceramic",
+    "notes": "Army IHPS/NG-IHPS or USMC Enhanced Combat Helmet = medium tier (fragment/pistol plus limited rifle protection, not NIJ III++). Modular Scalable Vest / Plate Carrier Gen III with front/back ESAPI-class ceramic plates and side plates = heavy tier; patrols often drop side plates for mobility (medium)."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "abrams",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "US Army only (USMC divested tanks 2021). M1A2 SEP v3 in armored brigades; M1E3 in development."
+    },
+    {
+      "vehicle_id": "bradley",
+      "role": "ifv",
+      "prevalence": "signature",
+      "notes": "US Army armored brigades: M2A3/A4 IFV and M3 cavalry fighting vehicle. Not USMC."
+    },
+    {
+      "vehicle_id": "stryker",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "US Army Stryker brigades: M1126 ICV, M1296 Dragoon (30 mm), ATGM and M-SHORAD variants. Not USMC."
+    },
+    {
+      "vehicle_id": "jltv",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": "Army and USMC; replacing the Humvee. Army stopped new JLTV procurement in 2025 but the fleet is large; USMC buys continue."
+    },
+    {
+      "vehicle_id": "acv",
+      "role": "apc",
+      "prevalence": "signature",
+      "notes": "USMC only. 8x8 Amphibious Combat Vehicle, replaced the AAV in 2025; ACV-30 cannon variant coming."
+    },
+    {
+      "vehicle_id": "ah1z",
+      "role": "attack_heli",
+      "prevalence": "signature",
+      "notes": "USMC only (Marine light attack squadrons), flies from LHDs. Army does not use it."
+    },
+    {
+      "vehicle_id": "ah64",
+      "role": "attack_heli",
+      "prevalence": "common",
+      "notes": "US Army only. AH-64E Guardian; D models being retired under the 2025 Army Transformation Initiative."
+    },
+    {
+      "vehicle_id": "uh60",
+      "role": "transport_heli",
+      "prevalence": "signature",
+      "notes": "Army UH-60L/M and HH-60M MEDEVAC; USMC uses UH-1Y/MV-22 instead for most lift."
+    },
+    {
+      "vehicle_id": "matv",
+      "role": "mrap",
+      "prevalence": "common",
+      "notes": "Army and USMC MRAP All-Terrain Vehicle; legacy of Afghanistan, still in route-clearance, SOF and support units."
+    },
+    {
+      "vehicle_id": "maxxpro",
+      "role": "mrap",
+      "prevalence": "uncommon",
+      "notes": "Army MRAP, mostly in route-clearance/EOD and support units and prepositioned stocks."
+    },
+    {
+      "vehicle_id": "himars",
+      "role": "mlrs",
+      "prevalence": "common",
+      "notes": "Army and USMC M142 HIMARS (USMC central to littoral anti-ship concept)."
+    },
+    {
+      "vehicle_id": "aav7",
+      "role": "apc",
+      "prevalence": "rare",
+      "notes": "USMC AAV-7A1 retired 26 Sep 2025 (replaced by ACV). In game only in flashback/legacy stocks or sold to allies."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "usa_game_patrol",
+      "name": "US Army patrol squad (game standard)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "usa_army_rifle_squad",
+      "name": "US Army rifle squad (real 9-man)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "team_leader",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "grenadier",
+          "count": 2
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "usa_usmc_squad",
+      "name": "USMC rifle squad (Force Design)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "assistant_squad_leader",
+          "count": 1
+        },
+        {
+          "role": "systems_operator",
+          "count": 1
+        },
+        {
+          "role": "team_leader",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 3
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        }
+      ],
+      "vehicle_id": "acv"
+    },
+    {
+      "id": "usa_stryker_squad",
+      "name": "Stryker infantry squad",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "stryker"
+    },
+    {
+      "id": "usa_bradley_dismounts",
+      "name": "Bradley dismount team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "bradley"
+    },
+    {
+      "id": "usa_mrap_patrol",
+      "name": "Mounted patrol section (2 vehicles)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "driver",
+          "count": 2
+        },
+        {
+          "role": "gunner",
+          "count": 2
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "jltv"
+    },
+    {
+      "id": "usa_tank_section",
+      "name": "Abrams section (2 tanks)",
+      "composition": [
+        {
+          "role": "tank_crew",
+          "count": 8
+        }
+      ],
+      "vehicle_id": "abrams"
+    },
+    {
+      "id": "usa_air_assault_qrf",
+      "name": "Air-assault quick reaction force",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "uh60"
+    }
+  ],
+  "support_assets": [
+    "Attack helicopter on-call CAS (AH-64E Army / AH-1Z USMC)",
+    "Fixed-wing CAS and precision strikes (game: off-map gun runs / guided bomb)",
+    "MQ-1C/MQ-9-class armed ISR drones and small quadcopter ISR at squad level",
+    "155 mm artillery and 120/81/60 mm mortars; HIMARS precision rockets",
+    "UH-60 air assault insertion and HH-60M MEDEVAC",
+    "Electronic warfare: drone jamming and counter-UAS (M-SHORAD, MADIS, handheld jammers)",
+    "Route clearance packages (IED detection) for convoys"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 10,
+        "unlocks": [
+          "5.56x45mm and 7.62x51mm ammunition",
+          "M67 frags, M18 smoke, M84 flashbangs",
+          "IFAK medical kits"
+        ]
+      },
+      {
+        "rep": 25,
+        "unlocks": [
+          "M4A1 accessories, optics, PEQ lasers",
+          "M249 SAW",
+          "medium helmets",
+          "NVG (PVS-14 class)"
+        ]
+      },
+      {
+        "rep": 40,
+        "unlocks": [
+          "AT4",
+          "M110A1 marksman rifle",
+          "plate carriers with ceramic front/back plates",
+          "unarmed JLTV / M-ATV purchase"
+        ]
+      },
+      {
+        "rep": 55,
+        "unlocks": [
+          "M3E1 MAAWS",
+          "side plates (heavy vest)",
+          "armed M-ATV / MaxxPro with turret",
+          "small ISR quadcopter"
+        ]
+      },
+      {
+        "rep": 70,
+        "unlocks": [
+          "Javelin",
+          "Mk22 sniper rifle",
+          "UH-60 lift support hire",
+          "mortar fire support calls"
+        ]
+      },
+      {
+        "rep": 85,
+        "unlocks": [
+          "AH-1Z / AH-64 CAS calls",
+          "fixed-wing strike call",
+          "M7 / M250 (NGSW) rifles"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "counter_terror_raid",
+      "hvt_capture_or_kill",
+      "hostage_rescue",
+      "convoy_escort",
+      "fob_defense",
+      "downed_aircrew_recovery",
+      "route_clearance_escort",
+      "weapons_cache_destruction",
+      "intel_recovery",
+      "reconnaissance",
+      "partner_force_support"
+    ],
+    "as_target": [
+      "sabotage_logistics (posted by rival-state fixers; locks player out of US work)",
+      "intel_theft (rival-state fixers)"
+    ]
+  },
+  "notes": "One faction for the US Army and US Marine Corps. Branch-specific kit: USMC = AH-1Z, ACV (AAV-7 retired Sep 2025), JLTV, M27 IAR, SMAW, MARPAT, HIMARS, no tanks; Army = Abrams, Bradley, Stryker, AH-64E, UH-60, JLTV/M-ATV/MaxxPro, OCP, NGSW (M7/M250) entering service. 2025 Army Transformation Initiative stopped Humvee/JLTV procurement, M10 Booker, Gray Eagle and AH-64D. Early-game patron for counter-terror work in the Middle East and Horn of Africa. Game assignment of which vehicles the US faction fields in each theatre (and whether the player can buy MRAPs/Bradley/Abrams) remains an open design question; the vehicles list records real-world use.",
+  "proposed": [
+    "doctrine.ai_tuning",
+    "relations.player",
+    "player_trade",
+    "contract_types",
+    "campaign_tier",
+    "unit_templates (game squads use 8 men in battle-buddy pairs)",
+    "player_trade.rep_tiers",
+    "relations.player",
+    "unit_templates.usa_game_patrol",
+    "theatres (mexico_cartel_belt is a game what-if; US forces are not deployed in Mexico)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/United_States_Army",
+    "https://en.wikipedia.org/wiki/United_States_Marine_Corps",
+    "https://en.wikipedia.org/wiki/Force_Design_2030",
+    "https://www.stripes.com/branches/army/2025-05-05/army-tank-booker-canceled-17690379.html",
+    "https://www.twz.com/sea/usmcs-amphibious-assault-vehicle-retired-after-over-50-years-of-service",
+    "https://www.defensenews.com/newsletters/daily-news-roundup/2025/10/14/next-generation-squad-weapon-continues-fielding-seeing-upgrades/",
+    "https://en.wikipedia.org/wiki/Joint_Light_Tactical_Vehicle",
+    "https://en.wikipedia.org/wiki/Stryker",
+    "https://en.wikipedia.org/wiki/Amphibious_Combat_Vehicle",
+    "https://en.wikipedia.org/wiki/M142_HIMARS",
+    "https://en.wikipedia.org/wiki/Boeing_AH-64_Apache",
+    "https://en.wikipedia.org/wiki/Operational_Camouflage_Pattern",
+    "https://en.wikipedia.org/wiki/MARPAT"
+  ]
+}

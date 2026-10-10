@@ -1,0 +1,58 @@
+{
+  "id": "koksan",
+  "name": "M1978 / M1989 Koksan 170 mm SPG",
+  "aliases": [
+    "Koksan",
+    "M-1978",
+    "M-1989",
+    "Juche-po"
+  ],
+  "origin": "North Korea",
+  "type": "artillery",
+  "operators": [
+    "prk",
+    "rus"
+  ],
+  "crew": 8,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 14.9,
+    "width": 3.3,
+    "height": 3.0
+  },
+  "weight_t": 40.0,
+  "armament": [
+    "170 mm long-range gun on an open mount"
+  ],
+  "protection": "Open mount, unprotected crew. Game: light armour on cab/turret only; immune to small-calibre rounds; 7.62x54R and larger disable it; launchers destroy it.",
+  "visual_notes": [
+    "Very long 170 mm barrel on an open mount atop a modified tracked chassis (Type 59/Chonma-derived)",
+    "M1989 version has a lower superstructure with ammunition stored on board",
+    "Rear recoil spade; crew works in the open",
+    "Batteries shipped to Russia and used against Ukraine from 2024"
+  ],
+  "colour_schemes": [
+    {
+      "name": "KPA dark olive",
+      "palette": [
+        "#4A5233",
+        "#353B25",
+        "#1F2217"
+      ]
+    }
+  ],
+  "variants": [
+    "M1978",
+    "M1989"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Koksan_(artillery)",
+    "https://commons.wikimedia.org/wiki/Category:Koksan"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Koksan_(artillery)",
+    "https://en.wikipedia.org/wiki/Korean_People%27s_Army_Ground_Force"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "vtt323",
+  "name": "VTT-323 (M1973)",
+  "aliases": [
+    "M1973",
+    "Sinhung",
+    "Type 323"
+  ],
+  "origin": "North Korea (based on Chinese Type 63)",
+  "type": "apc",
+  "operators": [
+    "prk"
+  ],
+  "crew": 3,
+  "passengers": 10,
+  "dimensions_m": {
+    "length": 6.1,
+    "width": 3.1,
+    "height": 2.5
+  },
+  "weight_t": 13.5,
+  "armament": [
+    "Twin 14.5 mm KPV turret",
+    "Igla/Strela MANPADS or AT-3 ATGM rails on some"
+  ],
+  "protection": "Thin welded steel. Game: immune to small-calibre rounds (5.45/5.56/5.8/7.62x39/7.62x51 ball); 7.62x54R and larger penetrate side/rear and disable tyres and engine; any launcher destroys it.",
+  "visual_notes": [
+    "Chinese Type 63-derived tracked box hull, five road wheels per side",
+    "Small cone turret with twin 14.5 mm KPV",
+    "Roof hatches for troop egress, no rear ramp"
+  ],
+  "colour_schemes": [
+    {
+      "name": "KPA dark olive",
+      "palette": [
+        "#4A5233",
+        "#353B25",
+        "#1F2217"
+      ]
+    }
+  ],
+  "variants": [
+    "VTT-323 APC",
+    "Mortar carrier",
+    "MANPADS carrier"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/VTT-323",
+    "https://commons.wikimedia.org/wiki/Category:VTT-323"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/VTT-323",
+    "https://en.wikipedia.org/wiki/Korean_People%27s_Army_Ground_Force"
+  ]
+}

@@ -1,0 +1,312 @@
+{
+  "id": "player",
+  "name": "Contractor Company (player PMC)",
+  "short": "PMC",
+  "kind": "pmc",
+  "inspired_by": "A small Western private military company working security and combat contracts for allied governments",
+  "flag_colors": [
+    "#2B2F33",
+    "#C9A227",
+    "#E6E6E6"
+  ],
+  "blocs": [],
+  "campaign_tier": "early",
+  "alignment_to_player": "friendly",
+  "player_client": false,
+  "relations": {
+    "usa": 50,
+    "gbr": 50,
+    "can": 50,
+    "aus": 30,
+    "nzl": 25,
+    "isr": 10,
+    "sau": 10,
+    "are": 15,
+    "qat": 10,
+    "jor": 20,
+    "irq": 15,
+    "krg_peshmerga": 25,
+    "sdf": 15,
+    "som": 15,
+    "irn": -50,
+    "rus": -40,
+    "chn": -30,
+    "africa_corps": -60,
+    "afg_taliban": -70,
+    "hezbollah": -100,
+    "houthis": -100,
+    "hamas": -100,
+    "pij": -100,
+    "iraqi_militias": -80,
+    "al_qaeda": -100,
+    "aqap": -100,
+    "isis": -100,
+    "isis_k": -100,
+    "al_shabaab": -100,
+    "jnim": -100,
+    "cartel_pacifico": -60,
+    "cartel_jalisco_nueva": -60,
+    "pmc_halcyon": -20,
+    "pmc_kestrel": -20,
+    "pmc_black_sable": -40
+  },
+  "theatres": [
+    "levant_syria",
+    "mesopotamia",
+    "yemen_red_sea",
+    "horn_of_africa",
+    "sahel",
+    "afghan_highlands",
+    "persian_gulf_coast",
+    "lebanon_south",
+    "baltic_coast",
+    "suwalki_gap",
+    "eastern_ukraine",
+    "black_sea_coast",
+    "arctic_north",
+    "caucasus",
+    "alpine_europe",
+    "taiwan_strait",
+    "korean_dmz",
+    "south_china_sea",
+    "kashmir_loc",
+    "mexico_cartel_belt",
+    "iran_zagros",
+    "israel",
+    "gaza_west_bank"
+  ],
+  "languages": [
+    "English"
+  ],
+  "callout_language": "English (player-configurable)",
+  "doctrine": {
+    "summary": "The player's company: 8-strong squads (player + 7 AI) in four battle-buddy pairs, deploying from a leased LHD on coastal maps or a FOB inland. Starts as a lightly equipped counter-terror contractor and grows through contract pay, salvage and allied reputation purchases.",
+    "squad_size": 8,
+    "fireteam": "Two 4-man fireteams, each two battle-buddy pairs; player leads Alpha, AI team leader runs Bravo.",
+    "tactics": [
+      "Battle-buddy pairs: one moves, one covers; never leave a buddy",
+      "Frags and flashbangs for room clearing; smoke to cover movement and casualty extraction",
+      "Player chooses extraction timing in hot zones",
+      "Strict civilian discipline: casualties cost money and reputation; 8 voids the contract"
+    ],
+    "ai_tuning": {
+      "aggression": 0.55,
+      "discipline": 0.8,
+      "suppression_resistance": 0.65,
+      "flanking": 0.7,
+      "grenade_use": 0.65,
+      "medical_care": 0.8,
+      "night_capability": 0.5,
+      "marksmanship": 0.65,
+      "morale": 0.75
+    }
+  },
+  "camo": [
+    {
+      "name": "Commercial multi-terrain (MultiCam-like)",
+      "palette": [
+        "#C2B48D",
+        "#8E8A62",
+        "#5E5B40",
+        "#3F3A2C"
+      ],
+      "use": "Default issue"
+    },
+    {
+      "name": "Ranger green / coyote solids",
+      "palette": [
+        "#4A5130",
+        "#81613C",
+        "#2B2F33"
+      ],
+      "use": "Plate carriers and low-profile kit"
+    },
+    {
+      "name": "Low-profile civilian",
+      "palette": [
+        "#3A3F45",
+        "#6B5E4F",
+        "#B5AFA4"
+      ],
+      "use": "Urban / covert contracts"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "M4 carbine (5.56x45mm) - starting weapon with 2 spare magazines"
+    ],
+    "autorifleman": [
+      "M249 / FN Minimi (5.56x45mm) - unlocked by purchase or salvage"
+    ],
+    "marksman": [
+      "M110-class DMR (7.62x51mm) - unlocked"
+    ],
+    "grenadier": [
+      "M4 with M203/M320 (40x46mm) - unlocked"
+    ],
+    "at": [
+      "AT4 (84mm) - first purchasable launcher",
+      "RPG-7 (PG-7V / OG-7V) - salvaged from enemies"
+    ],
+    "medic": [
+      "M4 carbine (5.56x45mm)"
+    ],
+    "squad_leader": [
+      "M4 carbine (5.56x45mm)"
+    ],
+    "sniper": [
+      "bolt-action precision rifle (7.62x51mm / .338) - late unlock"
+    ],
+    "sidearm": [
+      "Glock 17-type pistol (9x19mm) - optional purchase"
+    ]
+  },
+  "launchers": [
+    "AT4 [in_game]",
+    "RPG-7 (PG-7V, OG-7V) [in_game, salvage]",
+    "NLAW [in_game, GBR rep]",
+    "MAAWS [in_game, USA/CAN rep]",
+    "SMAW [in_game, USA rep]",
+    "Javelin [in_game, high USA/GBR rep]"
+  ],
+  "body_armor": {
+    "helmet": "light",
+    "vest": "light",
+    "plates": "none",
+    "notes": "Starting kit: light helmet and light aramid vest (frontal fragment + some ballistic). Upgrades by purchase: light plate (stops .223 at most), medium (front/back ceramic or steel), heavy (front/back/sides), helmets up to heavy (NIJ III++)."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "matv",
+      "role": "mrap",
+      "prevalence": "signature",
+      "notes": "PROPOSAL: first purchasable armoured vehicle (US rep), turret with M2/M240."
+    },
+    {
+      "vehicle_id": "maxxpro",
+      "role": "mrap",
+      "prevalence": "common",
+      "notes": "PROPOSAL: squad carrier for convoy escort contracts (US rep)."
+    },
+    {
+      "vehicle_id": "technical_dshk",
+      "role": "technical",
+      "prevalence": "common",
+      "notes": "PROPOSAL: captured or locally bought Hilux technical; cheap, unarmoured against 7.62x54R+."
+    },
+    {
+      "vehicle_id": "uh60",
+      "role": "transport_heli",
+      "prevalence": "uncommon",
+      "notes": "PROPOSAL: hired/leased lift from the LHD or FOB for insertion and extraction."
+    },
+    {
+      "vehicle_id": "aav7",
+      "role": "apc",
+      "prevalence": "rare",
+      "notes": "PROPOSAL: ex-USMC surplus amphibious carrier for LHD shore landings (USMC retired the AAV in 2025, surplus sold to allies)."
+    },
+    {
+      "vehicle_id": "ah1z",
+      "role": "attack_heli",
+      "prevalence": "rare",
+      "notes": "PROPOSAL: CAS called from an allied USMC LHD at high US rep, not owned by the player."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "player_squad",
+      "name": "Player squad (8, four battle-buddy pairs)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "player_mounted_squad",
+      "name": "Player squad in two M-ATVs",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "driver",
+          "count": 2
+        },
+        {
+          "role": "gunner",
+          "count": 2
+        },
+        {
+          "role": "rifleman",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "matv"
+    }
+  ],
+  "support_assets": [
+    "LHD deployment hub for coastal maps (helicopter insertion, AAV landing, resupply)",
+    "FOB deployment hub for inland maps (vehicle staging, mortar pit, medical station)",
+    "Hired lift (UH-60) and allied CAS / fire missions bought through faction reputation",
+    "Small commercial ISR quadcopter (purchase)"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [],
+    "as_target": [
+      "rival_pmc_interdiction (pmc_* rivals)",
+      "terrorist_ambush_on_convoy (dynamic events)"
+    ]
+  },
+  "notes": "Starting kit per design: M4, 2 spare magazines, 1 smoke grenade, 1 frag grenade. Contracts come from the regional contract board and faction fixers; taking work from one side locks the player out of that side's enemies' contracts for a while. Civilian casualties caused by the player or AI cost money and reputation; 8 void a contract. Early game is dominated by counter-terror work in the Middle East and affiliate theatres. Which vehicles the player can own (vs hire) is an open design question; all vehicles here are proposals using existing voxel models.",
+  "proposed": [
+    "relations",
+    "vehicles",
+    "doctrine.ai_tuning",
+    "camo",
+    "body_armor (starting tiers)",
+    "launchers (unlock routes)",
+    "small_arms (non-starting entries)",
+    "flag_colors",
+    "name",
+    "support_assets",
+    "unit_templates.player_mounted_squad"
+  ],
+  "sources": []
+}

@@ -1,0 +1,58 @@
+{
+  "id": "orlan10",
+  "name": "Orlan-10",
+  "aliases": [
+    "Orlan-10E",
+    "Orlan-30 (successor)"
+  ],
+  "origin": "Russia",
+  "type": "uav",
+  "operators": [
+    "rus",
+    "blr",
+    "kaz"
+  ],
+  "crew": 0,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 1.8,
+    "width": 3.1,
+    "height": 0.5
+  },
+  "weight_t": 0.018,
+  "armament": [
+    "None - ISR and artillery spotting; EW payloads on Leer-3 variant"
+  ],
+  "protection": "Unarmoured. Game: any hit from any calibre can down it; jamming (EW) can force it to land or drift.",
+  "visual_notes": [
+    "Small high-wing propeller drone with a pusher prop at the tail end of a slim pod fuselage",
+    "Twin-boom-less single tail with V-ish stabilisers; launched from a ground catapult rail",
+    "In game: buzzes overhead before artillery arrives (a cue for the player to move)"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Grey-white",
+      "palette": [
+        "#C9CCC8",
+        "#7D8285",
+        "#2F3336"
+      ]
+    }
+  ],
+  "variants": [
+    "Orlan-10",
+    "Orlan-10E (export)",
+    "Leer-3 EW package"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Orlan-10",
+    "https://commons.wikimedia.org/wiki/Category:Orlan-10"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Orlan-10",
+    "https://en.wikipedia.org/wiki/Kazakh_Ground_Forces",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Armed_Forces_of_Belarus"
+  ]
+}

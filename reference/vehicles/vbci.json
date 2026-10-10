@@ -1,0 +1,64 @@
+{
+  "id": "vbci",
+  "name": "VBCI",
+  "aliases": [
+    "Vehicule Blinde de Combat d'Infanterie"
+  ],
+  "origin": "France",
+  "type": "ifv",
+  "operators": [
+    "fra",
+    "qat"
+  ],
+  "crew": 2,
+  "passengers": 9,
+  "dimensions_m": {
+    "length": 7.6,
+    "width": 2.98,
+    "height": 3.0
+  },
+  "weight_t": 29.0,
+  "armament": [
+    "25 mm M811 autocannon (Dragar turret)",
+    "7.62 mm coaxial MG"
+  ],
+  "protection": "Aluminium hull with titanium/steel add-on armour panels, protected to roughly 14.5 mm frontally. Game: immune to 5.56/5.45/7.62x39/7.62x51; 7.62x54R can damage optics and exposed systems; 12.7/14.5 mm can penetrate sides on the lighter variants; any launcher in the game list penetrates.",
+  "visual_notes": [
+    "Tall boxy 8x8 with evenly spaced axles (2 front, 2 rear groups)",
+    "Small one-man turret offset to the left behind the driver",
+    "Rear ramp door, bolted add-on armour tiles on sides",
+    "Large external stowage bins and smoke dischargers on turret"
+  ],
+  "colour_schemes": [
+    {
+      "name": "French Centre-Europe three-tone",
+      "palette": [
+        "#555A3E",
+        "#5C4A34",
+        "#1F1F1A"
+      ]
+    },
+    {
+      "name": "Desert sand",
+      "palette": [
+        "#C8B48A",
+        "#A8956C"
+      ]
+    }
+  ],
+  "variants": [
+    "VCI (infantry)",
+    "VPC (command)",
+    "VBCI 2 (Qatar, 30 mm)"
+  ],
+  "existing_model": null,
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/VBCI",
+    "https://commons.wikimedia.org/wiki/Category:VBCI"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/VBCI",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_French_Army"
+  ]
+}

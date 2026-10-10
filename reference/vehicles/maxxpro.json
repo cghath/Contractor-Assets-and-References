@@ -1,0 +1,71 @@
+{
+  "id": "maxxpro",
+  "name": "International MaxxPro",
+  "aliases": [
+    "MaxxPro MRAP",
+    "MaxxPro Dash",
+    "MaxxPro Plus"
+  ],
+  "origin": "United States",
+  "type": "mrap",
+  "operators": [
+    "usa",
+    "ukr",
+    "irq",
+    "pak",
+    "are",
+    "afg_taliban",
+    "krg_peshmerga"
+  ],
+  "crew": 2,
+  "passengers": 4,
+  "dimensions_m": {
+    "length": 6.5,
+    "width": 2.6,
+    "height": 3.05
+  },
+  "weight_t": 14.0,
+  "armament": [
+    "12.7 mm M2 / 7.62 mm M240 / 40 mm Mk 19 in roof turret or CROWS"
+  ],
+  "protection": "V-hull MRAP, optional slat armour. Game rule: immune to small-calibre; 7.62x54R AP and 12.7/14.5 mm can disable tyres, optics and gunner; launchers penetrate.",
+  "visual_notes": [
+    "Very tall boxy 4x4 with long body",
+    "Flat windscreen and small side windows",
+    "Rear door with steps",
+    "Roof turret with gun shield"
+  ],
+  "colour_schemes": [
+    {
+      "name": "US desert tan (CARC 686A)",
+      "palette": [
+        "#C2B28A",
+        "#A89670",
+        "#4A4436"
+      ]
+    },
+    {
+      "name": "US forest green (CARC 383)",
+      "palette": [
+        "#4B5320",
+        "#3A4119",
+        "#26281A"
+      ]
+    }
+  ],
+  "variants": [
+    "MaxxPro Base",
+    "MaxxPro Plus",
+    "MaxxPro Dash",
+    "MaxxPro LWB ambulance",
+    "MaxxPro MRV recovery"
+  ],
+  "existing_model": "maxxpro",
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/International_MaxxPro"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/International_MaxxPro"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": "m2010",
+  "name": "M-2010 wheeled APC",
+  "aliases": [
+    "M2010",
+    "Type 2010"
+  ],
+  "origin": "North Korea",
+  "type": "apc",
+  "operators": [
+    "prk"
+  ],
+  "crew": 3,
+  "passengers": 8,
+  "dimensions_m": {
+    "length": 7.5,
+    "width": 2.9,
+    "height": 2.4
+  },
+  "weight_t": 15.0,
+  "armament": [
+    "14.5 mm KPV turret",
+    "Bulsae ATGM launcher on some"
+  ],
+  "protection": "Game: immune to small-calibre rounds (5.45/5.56/5.8/7.62x39/7.62x51 ball); 7.62x54R and larger penetrate side/rear and disable tyres and engine; any launcher destroys it.",
+  "visual_notes": [
+    "Angular boat-shaped hull, BTR-80/Chinese WZ-551-inspired",
+    "Shown in 6x6 and 8x8 forms at parades",
+    "Small turret with KPV; some carry Bulsae ATGM launchers"
+  ],
+  "colour_schemes": [
+    {
+      "name": "KPA dark olive",
+      "palette": [
+        "#4A5233",
+        "#353B25",
+        "#1F2217"
+      ]
+    },
+    {
+      "name": "KPA parade three-tone",
+      "palette": [
+        "#56603C",
+        "#7A6B47",
+        "#2B2E22"
+      ]
+    }
+  ],
+  "variants": [
+    "6x6",
+    "8x8",
+    "ATGM carrier"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/M-2010_APC"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Korean_People%27s_Army_Ground_Force",
+    "https://en.wikipedia.org/wiki/M-2010_APC"
+  ]
+}

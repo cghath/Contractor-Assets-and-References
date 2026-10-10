@@ -1,0 +1,53 @@
+{
+  "id": "tapv",
+  "name": "Textron TAPV",
+  "aliases": [
+    "Tactical Armoured Patrol Vehicle",
+    "Commando Elite"
+  ],
+  "origin": "United States (for Canada)",
+  "type": "mrap",
+  "operators": [
+    "can"
+  ],
+  "crew": 2,
+  "passengers": 3,
+  "dimensions_m": {
+    "length": 6.9,
+    "width": 2.6,
+    "height": 2.7
+  },
+  "weight_t": 16.4,
+  "armament": [
+    "Kongsberg Protector dual RWS: 7.62 mm C6 + 40 mm AGL",
+    "smoke dischargers"
+  ],
+  "protection": "V-hull composite armour. Dimensions approximate. Game rule: immune to small-calibre; 7.62x54R AP and 12.7/14.5 mm can disable tyres, optics and gunner; launchers penetrate.",
+  "visual_notes": [
+    "Large 4x4 with tall angular hull (M1117 ASV lineage)",
+    "Steep faceted sides, high ground clearance",
+    "Dual RWS on roof",
+    "Side door, vented wheel wells"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Canadian Forces green",
+      "palette": [
+        "#475236",
+        "#2E3524"
+      ]
+    }
+  ],
+  "variants": [
+    "Reconnaissance",
+    "General utility"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Textron_Tactical_Armoured_Patrol_Vehicle"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Textron_Tactical_Armoured_Patrol_Vehicle"
+  ]
+}

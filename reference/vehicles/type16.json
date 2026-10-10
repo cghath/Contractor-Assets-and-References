@@ -1,0 +1,59 @@
+{
+  "id": "type16",
+  "name": "Type 16 Maneuver Combat Vehicle",
+  "aliases": [
+    "Type 16 MCV",
+    "Type 24 ICV (family)"
+  ],
+  "origin": "Japan (Mitsubishi Heavy Industries)",
+  "type": "ifv",
+  "operators": [
+    "jpn"
+  ],
+  "crew": 4,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 8.45,
+    "width": 2.98,
+    "height": 2.87
+  },
+  "weight_t": 26.0,
+  "armament": [
+    "105 mm L/52 rifled gun",
+    "12.7 mm M2",
+    "7.62 mm coaxial MG"
+  ],
+  "protection": "Steel hull with bolt-on armour, wheeled tank destroyer. Game: immune to all small-calibre rounds; frontal arc resists 12.7/14.5 mm; 7.62x54R damages optics, tyres/tracks and exposed gear, 12.7/14.5 mm penetrates side and rear; all launchers penetrate.",
+  "visual_notes": [
+    "8x8 wheeled tank destroyer with low hull, four evenly spaced axles",
+    "Angular turret with long 105 mm gun and muzzle brake, similar in shape to a scaled-down Type 10 turret",
+    "Smoke grenade banks on turret sides; C-130/air-transportable",
+    "Chassis reused for the Type 24 common tactical wheeled vehicle (30 mm IFV, 120 mm mortar, recce)"
+  ],
+  "colour_schemes": [
+    {
+      "name": "JGSDF two-tone (green/brown)",
+      "palette": [
+        "#4A5236",
+        "#5C4B33",
+        "#2A2C22"
+      ]
+    }
+  ],
+  "variants": [
+    "Type 16 MCV (105 mm)",
+    "Type 24 ICV (30 mm Mk44, on order)",
+    "Type 24 120 mm mortar",
+    "Type 24 recce"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Type_16_maneuver_combat_vehicle",
+    "https://commons.wikimedia.org/wiki/Category:Type_16_maneuver_combat_vehicle"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Type_16_maneuver_combat_vehicle",
+    "https://www.asianmilitaryreview.com/2025/05/wheeled-armoured-combat-vehicles-for-japanese-gsdf-foc/"
+  ]
+}

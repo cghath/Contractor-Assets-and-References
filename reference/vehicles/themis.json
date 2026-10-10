@@ -1,0 +1,55 @@
+{
+  "id": "themis",
+  "name": "Milrem THeMIS",
+  "aliases": [
+    "THeMIS UGV"
+  ],
+  "origin": "Estonia (Milrem Robotics)",
+  "type": "other",
+  "operators": [
+    "est",
+    "ukr",
+    "nld"
+  ],
+  "crew": 0,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 2.4,
+    "width": 2.0,
+    "height": 1.15
+  },
+  "weight_t": 1.63,
+  "armament": [
+    "Unarmed cargo/casevac, or RWS with MG, 40 mm AGL, 30 mm cannon, ATGM or loitering-munition launchers"
+  ],
+  "protection": "Unarmoured. Game: small arms can disable sensors; 7.62x54R and larger destroy it.",
+  "visual_notes": [
+    "Small tracked robot: two track pods with a flat cargo deck or weapon station mounted between them",
+    "Sensor mast at the front; low profile (about 1.15 m)",
+    "Used for casualty evacuation and resupply in Ukraine"
+  ],
+  "colour_schemes": [
+    {
+      "name": "NATO three-tone",
+      "palette": [
+        "#4A5130",
+        "#55473A",
+        "#232323"
+      ]
+    }
+  ],
+  "variants": [
+    "Cargo",
+    "Combat (RWS)",
+    "Casevac",
+    "Loitering munition carrier"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/THeMIS"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/THeMIS"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "id": "jackal",
+  "name": "Jackal (MWMIK)",
+  "aliases": [
+    "Supacat HMT 400",
+    "Coyote",
+    "Jackal 2",
+    "Jackal 3"
+  ],
+  "origin": "United Kingdom",
+  "type": "light",
+  "operators": [
+    "gbr",
+    "est"
+  ],
+  "crew": 4,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 5.39,
+    "width": 2.0,
+    "height": 1.97
+  },
+  "weight_t": 6.65,
+  "armament": [
+    "12.7 mm HMG or 40 mm GMG on ring",
+    "7.62 mm GPMG front"
+  ],
+  "protection": "Open-top with armoured floor and some panels. Game rule: armoured cab immune to small-calibre; 7.62x54R and larger can penetrate or disable; open gun ring leaves gunner exposed.",
+  "visual_notes": [
+    "Open-top 4x4 with roll cage",
+    "Rear raised gun ring with HMG/GMG",
+    "Front-passenger GPMG mount",
+    "Jerrycans, stowage boxes and baskets all round",
+    "Adjustable air suspension (sits low when firing)"
+  ],
+  "colour_schemes": [
+    {
+      "name": "British desert sand",
+      "palette": [
+        "#C8B48A",
+        "#9C8560"
+      ]
+    },
+    {
+      "name": "British green/black",
+      "palette": [
+        "#3E4A32",
+        "#1E2118"
+      ]
+    }
+  ],
+  "variants": [
+    "Jackal 1",
+    "Jackal 2",
+    "Jackal 3",
+    "Coyote 6x6 support"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Jackal_(vehicle)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Jackal_(vehicle)"
+  ]
+}

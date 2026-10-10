@@ -1,0 +1,85 @@
+{
+  "id": "mi8",
+  "name": "Mil Mi-8 / Mi-17 family",
+  "aliases": [
+    "Mi-8MTV-5",
+    "Mi-8AMTSh Terminator",
+    "Mi-17V-5",
+    "Mi-171Sh"
+  ],
+  "origin": "Soviet Union / Russia",
+  "type": "transport_heli",
+  "operators": [
+    "rus",
+    "blr",
+    "africa_corps",
+    "kaz",
+    "srb",
+    "arm",
+    "aze",
+    "chn",
+    "ind",
+    "pak",
+    "vnm",
+    "prk"
+  ],
+  "crew": 3,
+  "passengers": 24,
+  "dimensions_m": {
+    "length": 18.17,
+    "width": 21.29,
+    "height": 5.65
+  },
+  "weight_t": 13.0,
+  "armament": [
+    "Door/nose 7.62 mm PKT or 12.7 mm",
+    "S-8 / B8V20 rocket pods on outriggers (armed variants)",
+    "Ataka ATGM (Mi-8AMTSh)"
+  ],
+  "protection": "Partial cockpit armour. Game: cockpit/engine armour stops small-calibre; 7.62x54R and 12.7/14.5 mm can damage rotors, engines and tail boom; MANPADS/launchers kill.",
+  "visual_notes": [
+    "Large tubby fuselage with rounded glazed nose and twin engine intakes on top",
+    "5-blade main rotor, tail rotor on the left (Mi-17: port side)",
+    "Rear clamshell doors, sliding port-side passenger door, round windows",
+    "Weapon outriggers each side carrying rocket pods; IR exhaust shrouds on armed versions",
+    "Fixed tricycle landing gear"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Russian Aerospace Forces green/grey",
+      "palette": [
+        "#5D6650",
+        "#3E4436",
+        "#8B8F7A"
+      ]
+    },
+    {
+      "name": "Expeditionary sand/khaki (Africa Corps, Syria)",
+      "palette": [
+        "#B9A27A",
+        "#8F7A55",
+        "#5A4E38"
+      ]
+    }
+  ],
+  "variants": [
+    "Mi-8MTV / MTV-5",
+    "Mi-8AMTSh Terminator",
+    "Mi-17V-5",
+    "Mi-171Sh",
+    "Mi-171E (CHN)",
+    "Mi-17V-5 (IND, PAK)"
+  ],
+  "existing_model": null,
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Mil_Mi-8",
+    "https://en.wikipedia.org/wiki/Mil_Mi-17",
+    "https://commons.wikimedia.org/wiki/Category:Mil_Mi-8"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Mil_Mi-8",
+    "https://en.wikipedia.org/wiki/Mil_Mi-17",
+    "https://en.wikipedia.org/wiki/Africa_Corps_(Russia)"
+  ]
+}

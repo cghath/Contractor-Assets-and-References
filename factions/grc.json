@@ -1,0 +1,399 @@
+{
+  "id": "grc",
+  "name": "Greece",
+  "short": "GRC",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#0D5EAF",
+    "#FFFFFF"
+  ],
+  "blocs": [
+    "nato",
+    "eu"
+  ],
+  "campaign_tier": "early",
+  "alignment_to_player": "friendly",
+  "player_client": true,
+  "relations": {
+    "player": 25,
+    "usa": 80,
+    "gbr": 85,
+    "can": 80,
+    "aus": 70,
+    "ukr": 60,
+    "pol": 75,
+    "est": 80,
+    "lva": 80,
+    "ltu": 80,
+    "rou": 70,
+    "jpn": 60,
+    "kor": 55,
+    "isr": 65,
+    "tur": -35,
+    "sau": 30,
+    "are": 65,
+    "qat": 35,
+    "egy": 70,
+    "jor": 55,
+    "irq": 35,
+    "krg_peshmerga": 55,
+    "sdf": 30,
+    "syr": 5,
+    "pse_pa": 35,
+    "rus": -45,
+    "blr": -65,
+    "irn": -55,
+    "prk": -60,
+    "chn": 5,
+    "africa_corps": -60,
+    "sahel_aes": -30,
+    "afg_taliban": -60,
+    "isis": -100,
+    "isis_k": -95,
+    "al_qaeda": -100,
+    "aqap": -90,
+    "al_shabaab": -90,
+    "jnim": -90,
+    "hamas": -85,
+    "pij": -85,
+    "hezbollah": -65,
+    "houthis": -75,
+    "iraqi_militias": -55,
+    "fra": 85,
+    "deu": 75,
+    "ita": 75,
+    "esp": 75,
+    "nld": 75,
+    "bel": 75,
+    "nor": 75,
+    "dnk": 75,
+    "swe": 75,
+    "fin": 75,
+    "srb": 50,
+    "arm": 40,
+    "aze": -10
+  },
+  "theatres": [
+    "yemen_red_sea",
+    "persian_gulf_coast",
+    "black_sea_coast"
+  ],
+  "languages": [
+    "Greek"
+  ],
+  "callout_language": "Greek",
+  "doctrine": {
+    "summary": "Large conscript army with heavy armour focused on Turkey; hosts the EU Aspides HQ.",
+    "squad_size": 9,
+    "fireteam": "Omada of two teams.",
+    "tactics": [
+      "armoured defence",
+      "island garrison"
+    ],
+    "ai_tuning": {
+      "aggression": 0.5,
+      "discipline": 0.7,
+      "suppression_resistance": 0.65,
+      "flanking": 0.6,
+      "grenade_use": 0.5,
+      "medical_care": 0.75,
+      "night_capability": 0.7,
+      "marksmanship": 0.65,
+      "morale": 0.7
+    }
+  },
+  "camo": [
+    {
+      "name": "Greek Lizard",
+      "palette": [
+        "#6C6A44",
+        "#4A4630",
+        "#9A8B5E",
+        "#2F2C22"
+      ],
+      "use": "standard"
+    },
+    {
+      "name": "Greek Arid Lizard",
+      "palette": [
+        "#C2AE85",
+        "#9C8763",
+        "#6F6248"
+      ],
+      "use": "replacement"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "HK G3A3 (7.62x51mm)",
+      "M4 (5.56x45mm)"
+    ],
+    "autorifleman": [
+      "FN Minimi (5.56x45mm)",
+      "MG3 (7.62x51mm)"
+    ],
+    "marksman": [
+      "M14 EBR (7.62x51mm)"
+    ],
+    "grenadier": [
+      "M4 with M203 (40mm)"
+    ],
+    "at": [
+      "M72 (66mm)",
+      "RPG-18 (64mm)",
+      "Carl Gustaf M2 (84mm)"
+    ],
+    "medic": [
+      "M4"
+    ],
+    "squad_leader": [
+      "M4"
+    ],
+    "sniper": [
+      "Sako TRG M10",
+      "Barrett M82A1 (12.7x99mm)"
+    ],
+    "sidearm": [
+      "M1911 (.45 ACP)"
+    ]
+  },
+  "launchers": [
+    "Carl Gustaf [in game: MAAWS]",
+    "M72 (not in game list)",
+    "RPG-18 (not in game list)"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "light",
+    "plates": "steel",
+    "notes": "Game mapping."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "leopard2a6",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "2A6HEL and 2A4."
+    },
+    {
+      "vehicle_id": "leopard1",
+      "role": "mbt",
+      "prevalence": "common",
+      "notes": ""
+    },
+    {
+      "vehicle_id": "bmp1",
+      "role": "ifv",
+      "prevalence": "common",
+      "notes": "BMP-1A1 Ost."
+    },
+    {
+      "vehicle_id": "marder",
+      "role": "ifv",
+      "prevalence": "uncommon",
+      "notes": "40 from Germany."
+    },
+    {
+      "vehicle_id": "m113",
+      "role": "apc",
+      "prevalence": "signature",
+      "notes": ""
+    },
+    {
+      "vehicle_id": "m1117",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": ""
+    },
+    {
+      "vehicle_id": "pzh2000",
+      "role": "artillery",
+      "prevalence": "uncommon",
+      "notes": ""
+    },
+    {
+      "vehicle_id": "m270",
+      "role": "mlrs",
+      "prevalence": "uncommon",
+      "notes": ""
+    },
+    {
+      "vehicle_id": "ah64",
+      "role": "attack_heli",
+      "prevalence": "common",
+      "notes": ""
+    },
+    {
+      "vehicle_id": "ch47",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": ""
+    },
+    {
+      "vehicle_id": "uh60",
+      "role": "transport_heli",
+      "prevalence": "rare",
+      "notes": "UH-60M on order."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "grc_rifle_squad",
+      "name": "Greek rifle squad (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "grc_mech_squad",
+      "name": "Greek mechanised squad",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 2
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "bmp1"
+    },
+    {
+      "id": "grc_recon_team",
+      "name": "Greek recon / sniper pair team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "sniper",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "m1117"
+    }
+  ],
+  "support_assets": [
+    "AH-64 CAS",
+    "artillery",
+    "drones"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 20,
+        "unlocks": [
+          "service rifle and ammunition",
+          "uniforms in national camo",
+          "light helmet and vest"
+        ]
+      },
+      {
+        "rep": 40,
+        "unlocks": [
+          "optics and NVGs",
+          "medium armour",
+          "Carl Gustaf [MAAWS]"
+        ]
+      },
+      {
+        "rep": 60,
+        "unlocks": [
+          "marksman and sniper rifles",
+          "heavy armour",
+          "M1117 (light vehicle)"
+        ]
+      },
+      {
+        "rep": 80,
+        "unlocks": [
+          "M113 (armoured transport)",
+          "fire-support call-ins on contracts"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "counter-terrorist raid",
+      "hostage / personnel recovery",
+      "convoy escort",
+      "HVT capture",
+      "recover lost equipment or sensitive kit",
+      "train and accompany partner forces",
+      "security of embassy or base",
+      "counter-drone site defence",
+      "Red Sea shipping protection"
+    ],
+    "as_target": [
+      "only if the player works for this nation's enemies: sabotage a logistics depot",
+      "only if the player works for this nation's enemies: ambush a supply convoy"
+    ]
+  },
+  "notes": "Bradley M2A2 transfer was approved but the first batch was rejected.",
+  "proposed": [
+    "campaign_tier",
+    "relations.player",
+    "doctrine.ai_tuning",
+    "unit_templates",
+    "player_trade.rep_tiers",
+    "contract_types",
+    "body_armor (game tier mapping)",
+    "vehicles[].prevalence (game weighting)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Hellenic_Army"
+  ]
+}

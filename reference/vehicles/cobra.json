@@ -1,0 +1,71 @@
+{
+  "id": "cobra",
+  "name": "Otokar Cobra / Cobra II",
+  "aliases": [
+    "Cobra II",
+    "Kobra-2"
+  ],
+  "origin": "Turkey",
+  "type": "light",
+  "operators": [
+    "kaz",
+    "aze",
+    "rou",
+    "ukr",
+    "geo"
+  ],
+  "crew": 1,
+  "passengers": 8,
+  "dimensions_m": {
+    "length": 5.23,
+    "width": 2.22,
+    "height": 2.1
+  },
+  "weight_t": 6.2,
+  "armament": [
+    "12.7 mm MG turret or RWS",
+    "20 mm cannon, TOW/Spike/Skif ATGM options"
+  ],
+  "protection": "Monocoque steel V-hull against small arms, fragments and mines. Game: immune to small-calibre (5.56/5.45/7.62x39/7.62x51); 7.62x54R AP and larger can penetrate side/rear and disable tyres/engine; every launcher in the game list penetrates.",
+  "visual_notes": [
+    "Low wedge-nosed 4x4 with Humvee-derived running gear; Cobra II is larger and more upright with bigger windows",
+    "Small roof turret with gun shield; rear door",
+    "Azerbaijani Kobra-2 also used as ATGM carrier (Skif) and ambulance"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Azerbaijani desert-green disruptive",
+      "palette": [
+        "#C8B48A",
+        "#8E7B55",
+        "#5C5A3A",
+        "#3A3A2C"
+      ]
+    },
+    {
+      "name": "Kazakh green / desert",
+      "palette": [
+        "#56603C",
+        "#B7A47A",
+        "#2E3326"
+      ]
+    }
+  ],
+  "variants": [
+    "Cobra",
+    "Cobra II",
+    "Cobra II ATGM (AZE, Skif)",
+    "Cobra II ambulance",
+    "Cobra II pickup / Spike ATGM / mortar (ROU, licence-built at Medias)"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Otokar_Cobra",
+    "https://commons.wikimedia.org/wiki/Category:Otokar_Cobra"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Otokar_Cobra",
+    "https://caliber.az/en/post/military-parade-in-baku-structure-of-armaments-and-their-practical-significance"
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "id": "aav7",
+  "name": "AAV-7A1",
+  "aliases": [
+    "AAVP-7A1",
+    "LVTP-7"
+  ],
+  "origin": "United States",
+  "type": "apc",
+  "operators": [
+    "ita",
+    "esp",
+    "usa",
+    "jpn",
+    "kor",
+    "phl"
+  ],
+  "crew": 3,
+  "passengers": 21,
+  "dimensions_m": {
+    "length": 7.94,
+    "width": 3.27,
+    "height": 3.26
+  },
+  "weight_t": 29.1,
+  "armament": [
+    "Mk19 40 mm grenade launcher and M2HB 12.7 mm in UGWS turret"
+  ],
+  "protection": "Aluminium hull, add-on armour kit on some. Game: immune to small-calibre rounds; 7.62x54R AP and larger can penetrate side/rear and disable wheels/engine; every launcher in the game list penetrates.",
+  "visual_notes": [
+    "Huge boat-shaped amphibious tracked hull",
+    "Small weapon turret offset to the right",
+    "Large rear ramp, 6 road wheels per side"
+  ],
+  "colour_schemes": [
+    {
+      "name": "NATO three-tone",
+      "palette": [
+        "#3E4A2E",
+        "#4B3A28",
+        "#1E1E1C"
+      ]
+    },
+    {
+      "name": "Desert sand",
+      "palette": [
+        "#C8B48A",
+        "#A8956C"
+      ]
+    }
+  ],
+  "variants": [
+    "AAVP-7A1",
+    "AAVC-7A1 (command)",
+    "AAVR-7A1 (recovery)",
+    "KAAV7A1 (KOR, Hanwha licence)",
+    "AAV7A1 (JPN ARDB)",
+    "AAV7A1 (PHL Marines, ex-ROK)"
+  ],
+  "existing_model": "aav7",
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Assault_amphibious_vehicle",
+    "https://commons.wikimedia.org/wiki/Category:AAV-7A1"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Assault_amphibious_vehicle",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Italian_Army"
+  ]
+}

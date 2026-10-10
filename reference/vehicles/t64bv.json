@@ -1,0 +1,72 @@
+{
+  "id": "t64bv",
+  "name": "T-64BV",
+  "aliases": [
+    "T-64BV obr. 2017",
+    "T-64BM Bulat",
+    "T-64BM2"
+  ],
+  "origin": "Soviet Union (modernised in Ukraine by the Kharkiv Armoured Plant)",
+  "type": "mbt",
+  "operators": [
+    "ukr",
+    "rus"
+  ],
+  "crew": 3,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 9.23,
+    "width": 3.42,
+    "height": 2.17
+  },
+  "weight_t": 42.4,
+  "armament": [
+    "125 mm 2A46M-1 smoothbore with carousel autoloader (can fire 9M112 Kobra / Kombat gun-launched ATGM)",
+    "7.62 mm PKT coaxial",
+    "12.7 mm NSVT on commander's cupola"
+  ],
+  "protection": "Composite glacis and turret front, Kontakt-1 ERA on turret front/roof, glacis and skirts (Bulat: Nizh ERA). Game: immune to all small-calibre rounds; 7.62x54R and 12.7/14.5 mm can only damage optics, external stowage, fuel drums and tracks (mobility kill on repeated hits); PG-7V/AT4/MAAWS/SMAW penetrate side, rear and turret roof; Javelin top-attack penetrates; frontal arc resists unguided launchers.",
+  "visual_notes": [
+    "Length 9.2 m is gun forward; hull about 6.5 m",
+    "Six small steel-rimmed road wheels per side with four small return rollers (very different from the T-72's large wheels)",
+    "Low cast turret covered in rows of flat Kontakt-1 ERA bricks across the front arc and roof; bricks also along the side skirts",
+    "Rubber side skirts with hanging flaps; 81 mm Tucha smoke launchers on the turret left side",
+    "Two droppable 200 L fuel drums on the rear plate, external tanks on the mudguards, snorkel tube stowed on turret rear",
+    "In Ukrainian service in 2026: welded anti-drone cope cage or mesh roof over the turret, camouflage netting, logs or track links on the glacis, white cross / chevron ID marks"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Ukrainian army green with field netting",
+      "palette": [
+        "#4F5534",
+        "#3A4027",
+        "#6B6A45",
+        "#2A2B20"
+      ]
+    },
+    {
+      "name": "Ukrainian ID markings (white cross / chevrons, yellow-blue tape)",
+      "palette": [
+        "#F2F2EE",
+        "#0057B7",
+        "#FFD700"
+      ]
+    }
+  ],
+  "variants": [
+    "T-64BV",
+    "T-64BV obr. 2017 (thermal sight, new radios)",
+    "T-64BM Bulat (Nizh ERA, 850 hp)",
+    "T-64BM2"
+  ],
+  "existing_model": null,
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/T-64",
+    "https://commons.wikimedia.org/wiki/Category:T-64BV"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/T-64",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Armed_Forces_of_Ukraine"
+  ]
+}

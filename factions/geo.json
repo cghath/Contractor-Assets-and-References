@@ -1,0 +1,371 @@
+{
+  "id": "geo",
+  "name": "Georgia",
+  "short": "GEO",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#FFFFFF",
+    "#FF0000"
+  ],
+  "blocs": [
+    "eu_candidate",
+    "nato_partner",
+    "guam"
+  ],
+  "campaign_tier": "mid",
+  "alignment_to_player": "neutral",
+  "player_client": true,
+  "relations": {
+    "player": 15,
+    "usa": 40,
+    "gbr": 45,
+    "fra": 40,
+    "deu": 40,
+    "pol": 45,
+    "est": 50,
+    "lva": 50,
+    "ltu": 45,
+    "ukr": 30,
+    "mda": 40,
+    "rou": 45,
+    "tur": 70,
+    "aze": 75,
+    "arm": 50,
+    "kaz": 30,
+    "chn": 25,
+    "irn": 0,
+    "blr": -10,
+    "rus": -55,
+    "isis": -90,
+    "al_qaeda": -85,
+    "isis_k": -80
+  },
+  "theatres": [
+    "caucasus"
+  ],
+  "languages": [
+    "Georgian",
+    "Russian",
+    "English"
+  ],
+  "callout_language": "Georgian",
+  "doctrine": {
+    "summary": "Compact defence force shaped by the 2008 war with Russia, which still occupies Abkhazia and South Ossetia. Long NATO-partner experience (Iraq, Afghanistan) left US-style small-unit training and M4-pattern kit alongside Soviet-legacy armour and artillery. Since 2024 the Georgian Dream government has frozen the EU accession process and cooled relations with Western partners while keeping no diplomatic relations with Moscow, so alignment is in flux.",
+    "squad_size": 9,
+    "fireteam": "US-style 9-man squad: leader plus two 4-man fireteams.",
+    "tactics": [
+      "mountain and valley defence",
+      "light infantry raids in rough terrain",
+      "Javelin anti-armour ambushes",
+      "artillery and MLRS (DANA, RM-70) fire support",
+      "battle-drilled fireteam bounding (US training legacy)"
+    ],
+    "ai_tuning": {
+      "aggression": 0.6,
+      "discipline": 0.7,
+      "suppression_resistance": 0.7,
+      "flanking": 0.65,
+      "grenade_use": 0.6,
+      "medical_care": 0.7,
+      "night_capability": 0.65,
+      "marksmanship": 0.7,
+      "morale": 0.75
+    }
+  },
+  "camo": [
+    {
+      "name": "MultiCam",
+      "palette": [
+        "#A08C6A",
+        "#6B6B47",
+        "#4E4433",
+        "#C9B998",
+        "#33302A"
+      ],
+      "use": "standard issue"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "M4A1 (5.56x45mm)",
+      "AR-M1 (5.56x45mm)"
+    ],
+    "autorifleman": [
+      "M249 (5.56x45mm)",
+      "PKM (7.62x54R)",
+      "M240 (7.62x51mm)"
+    ],
+    "marksman": [
+      "IMI Galatz (7.62x51mm)"
+    ],
+    "grenadier": [
+      "M4A1 with M203 (40x46mm)"
+    ],
+    "at": [
+      "RPG-7 (PG-7V, OG-7V)",
+      "FGM-148 Javelin (team)"
+    ],
+    "medic": [
+      "M4A1 (5.56x45mm)"
+    ],
+    "squad_leader": [
+      "M4A1 with optic (5.56x45mm)"
+    ],
+    "sniper": [
+      "M24 (7.62x51mm)"
+    ],
+    "sidearm": [
+      "Glock (9x19mm)",
+      "CZ 75 (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "RPG-7 (PG-7V, OG-7V) [in_game]",
+    "FGM-148 Javelin [in_game]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "mixed",
+    "notes": "Domestic Delta DH MK-I/II helmets (medium; MK-III for special operations), MK-I modular vests and MK-VII plate carriers with front/back plates (medium)."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "t72b3",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "T-72SIM-1 (Georgian-Israeli upgrade) and T-72B, about 140+ active."
+    },
+    {
+      "vehicle_id": "didgori",
+      "role": "mrap",
+      "prevalence": "signature",
+      "notes": "Domestic Didgori armoured 4x4 family."
+    },
+    {
+      "vehicle_id": "vuran",
+      "role": "mrap",
+      "prevalence": "signature",
+      "notes": "46 BMC Vuran delivered 2024."
+    },
+    {
+      "vehicle_id": "bmp2",
+      "role": "ifv",
+      "prevalence": "common",
+      "notes": "BMP-2 (46+) plus BMP-1/1U."
+    },
+    {
+      "vehicle_id": "bmp1",
+      "role": "ifv",
+      "prevalence": "common",
+      "notes": "BMP-1 / BMP-1U Shkval."
+    },
+    {
+      "vehicle_id": "mtlb",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "66+."
+    },
+    {
+      "vehicle_id": "humvee",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "About 40."
+    },
+    {
+      "vehicle_id": "dana",
+      "role": "artillery",
+      "prevalence": "common",
+      "notes": "DANA 152 mm SPG (32)."
+    },
+    {
+      "vehicle_id": "rm70",
+      "role": "mlrs",
+      "prevalence": "uncommon",
+      "notes": "RM-70 (18) plus LAR-160 and BM-21."
+    },
+    {
+      "vehicle_id": "mi24",
+      "role": "attack_heli",
+      "prevalence": "uncommon",
+      "notes": "Mi-24/Mi-35 gunships, small fleet."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "geo_game_squad",
+      "name": "Georgian infantry squad (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "geo_vuran_squad",
+      "name": "Vuran-mounted squad",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "vuran"
+    },
+    {
+      "id": "geo_mountain_team",
+      "name": "Mountain light team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    }
+  ],
+  "support_assets": [
+    "DANA 152 mm and RM-70 fires",
+    "Warmate loitering munitions",
+    "Mi-24 CAS (rare)",
+    "Javelin teams"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 20,
+        "unlocks": [
+          "5.56x45mm ammunition",
+          "MultiCam uniforms",
+          "Delta helmets (medium)"
+        ]
+      },
+      {
+        "rep": 40,
+        "unlocks": [
+          "M4-pattern rifles",
+          "MK-VII plate carrier",
+          "RPG-7"
+        ]
+      },
+      {
+        "rep": 60,
+        "unlocks": [
+          "Didgori armoured 4x4 purchase",
+          "PKM",
+          "Galatz marksman rifle"
+        ]
+      },
+      {
+        "rep": 80,
+        "unlocks": [
+          "Javelin (limited)",
+          "artillery call-in on contracts"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "border_security_patrol",
+      "counter_terror_raid",
+      "hostage_rescue",
+      "pipeline_and_infrastructure_guard",
+      "recover_lost_equipment_or_sensitive_kit",
+      "convoy_escort"
+    ],
+    "as_target": [
+      "only if the player works for this nation's enemies: sabotage_logistics_depot"
+    ]
+  },
+  "notes": "Neutral-to-friendly to the player: still a NATO partner with Western training and US kit, but political ties with the West cooled sharply in 2024-2026, so contract volume and trade could be lower than other partners (proposal). Abkhazia and South Ossetia are Russian-occupied; Russian forces there use the rus faction. Georgian volunteers fight for Ukraine independently of the government. Real-world: Georgia uses HMMWV and some US-supplied MRAPs, not Abrams, Bradley or AH-1Z. PKM fires 7.62x54R and can disable vehicles in game.",
+  "proposed": [
+    "campaign_tier",
+    "alignment_to_player",
+    "relations.player",
+    "doctrine.ai_tuning",
+    "unit_templates",
+    "player_trade.rep_tiers",
+    "contract_types",
+    "body_armor (game tier mapping)",
+    "vehicles[].prevalence (game weighting)",
+    "camo[].palette (approximate hex values)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Defense_Forces_of_Georgia",
+    "https://en.wikipedia.org/wiki/Georgian_Defense_Forces",
+    "https://en.wikipedia.org/wiki/Didgori-1",
+    "https://en.wikipedia.org/wiki/BMC_Vuran",
+    "https://en.wikipedia.org/wiki/152_mm_SpGH_DANA",
+    "https://en.wikipedia.org/wiki/RM-70",
+    "https://overtdefense.com/2024/06/13/georgia-receives-46-bmc-produced-vuran-4x4-armored-personnel-carriers-from-turkey"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "lazar3",
+  "name": "Lazar 3",
+  "aliases": [
+    "Lazar 3M"
+  ],
+  "origin": "Serbia",
+  "type": "apc",
+  "operators": [
+    "srb"
+  ],
+  "crew": 3,
+  "passengers": 9,
+  "dimensions_m": {
+    "length": 7.92,
+    "width": 2.95,
+    "height": 2.32
+  },
+  "weight_t": 28.0,
+  "armament": [
+    "12.7 mm RWS (Lazar 3)",
+    "30 mm autocannon + 7.62 mm + ATGM (Lazar 3M)"
+  ],
+  "protection": "STANAG Level III base, up to Level V front / IV sides with add-on, mine 3a/3b. Game: immune to small-calibre (5.56/5.45/7.62x39/7.62x51); 7.62x54R AP and larger can penetrate side/rear and disable tyres/engine; every launcher in the game list penetrates.",
+  "visual_notes": [
+    "8x8 with a high angular hull, side windows with wipers for the crew",
+    "Rear ramp with two doors in it, large roof hatches",
+    "Roof smoke dischargers; Lazar 3M with a 30 mm RCWS turret"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Serbian three-tone woodland",
+      "palette": [
+        "#4E5B34",
+        "#6D5A3E",
+        "#2A2A24"
+      ]
+    }
+  ],
+  "variants": [
+    "Lazar 3 APC",
+    "Lazar 3M IFV"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Lazar_3",
+    "https://commons.wikimedia.org/wiki/Category:Lazar_3"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Lazar_3",
+    "https://en.wikipedia.org/wiki/Serbian_Army"
+  ]
+}

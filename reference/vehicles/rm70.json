@@ -1,0 +1,75 @@
+{
+  "id": "rm70",
+  "name": "RM-70",
+  "aliases": [
+    "RM-70/85",
+    "RM-70 Vampire"
+  ],
+  "origin": "Czechoslovakia",
+  "type": "mlrs",
+  "operators": [
+    "geo",
+    "pol",
+    "ukr"
+  ],
+  "crew": 4,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 8.75,
+    "width": 2.55,
+    "height": 2.96
+  },
+  "weight_t": 26.0,
+  "armament": [
+    "40-tube 122 mm rocket launcher (Grad-compatible) with a 40-round automatic reload pack"
+  ],
+  "protection": "Armoured cab on the RM-70 (unarmoured on RM-70/85). Dimensions approximate. Game: armoured cab/hull immune to small-calibre rounds; 7.62x54R and larger penetrate and can disable it; any launcher destroys it.",
+  "visual_notes": [
+    "Tatra 813/815 8x8 truck: forward armoured cab, reload pack of 40 rockets directly behind the cab",
+    "40-tube launcher at the rear on a traverse mount",
+    "Searchlight on the cab roof; optional dozer blade on the front"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Georgian four-colour woodland",
+      "palette": [
+        "#59613F",
+        "#3C4430",
+        "#6E5A3E",
+        "#1F1F1A"
+      ]
+    },
+    {
+      "name": "Polish three-tone (green/brown/black)",
+      "palette": [
+        "#4D5B37",
+        "#5E4B33",
+        "#1E1E1A"
+      ]
+    },
+    {
+      "name": "Ukrainian army green with field netting",
+      "palette": [
+        "#4F5534",
+        "#3A4027",
+        "#6B6A45",
+        "#2A2B20"
+      ]
+    }
+  ],
+  "variants": [
+    "RM-70",
+    "RM-70/85",
+    "RM-70/85M",
+    "RM-70 Modular",
+    "RM-70 Vampire (Tatra 817, UKR)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/RM-70"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/RM-70"
+  ]
+}

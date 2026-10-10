@@ -1,0 +1,61 @@
+{
+  "id": "ariete",
+  "name": "C1 Ariete",
+  "aliases": [
+    "Ariete",
+    "Ariete C2"
+  ],
+  "origin": "Italy",
+  "type": "mbt",
+  "operators": [
+    "ita"
+  ],
+  "crew": 4,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 9.52,
+    "width": 3.61,
+    "height": 2.5
+  },
+  "weight_t": 54.0,
+  "armament": [
+    "120 mm 44-calibre smoothbore",
+    "7.62 mm coaxial and roof MG42/59"
+  ],
+  "protection": "Steel/composite armour of 1990s standard; C2 upgrade underway. Game: immune to all small arms incl. 7.62x54R and 12.7/14.5 mm on frontal arc; only launchers (Javelin, top-attack) or tank guns kill it; tandem-HEAT launchers (AT4 HEDP no, RPG-7 PG-7V only to sides/rear) can disable tracks, optics and side hull.",
+  "visual_notes": [
+    "Boxy angular turret with flat vertical faces and large rear bustle",
+    "7 road wheels per side, full-length side skirts",
+    "Commander's sight on the turret roof"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Italian Army green/brown/black",
+      "palette": [
+        "#4D5534",
+        "#5E4A33",
+        "#1E1E1A"
+      ]
+    },
+    {
+      "name": "Desert sand",
+      "palette": [
+        "#C8B48A",
+        "#A8956C"
+      ]
+    }
+  ],
+  "variants": [
+    "C1",
+    "C2 (upgrade)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/C1_Ariete"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/C1_Ariete",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Italian_Army"
+  ]
+}

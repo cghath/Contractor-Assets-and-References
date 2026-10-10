@@ -1,0 +1,60 @@
+{
+  "id": "m84",
+  "name": "M-84",
+  "aliases": [
+    "M-84AS",
+    "M-84AS1",
+    "M-84AS2"
+  ],
+  "origin": "Yugoslavia / Serbia",
+  "type": "mbt",
+  "operators": [
+    "srb"
+  ],
+  "crew": 3,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 9.53,
+    "width": 3.57,
+    "height": 2.19
+  },
+  "weight_t": 41.5,
+  "armament": [
+    "125 mm smoothbore with autoloader",
+    "7.62 mm coaxial",
+    "12.7 mm on commander's mount / RWS (AS1/AS2)"
+  ],
+  "protection": "T-72-derived composite; M-84AS2 adds domestic M19 ERA, slat armour and soft-kill APS. Game: hull and turret immune to all small-calibre and to 7.62x54R/12.7/14.5 mm (those only break optics, searchlights, external MGs and track pins). Kills need launchers: Javelin/NLAW top-attack, AT4/MAAWS/SMAW or RPG-7 PG-7V to side, rear or roof; frontal ERA defeats single-charge PG-7V.",
+  "visual_notes": [
+    "T-72M silhouette (6 road wheels, low cast turret) - reuse T-72 proportions",
+    "Smoke grenade banks in front of the turret; gunner's sight on the turret top-right",
+    "M-84AS2: blocky M19 ERA on turret and glacis, slat cages on the rear, laser-warning sensors, RWS on the roof"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Serbian three-tone woodland",
+      "palette": [
+        "#4E5B34",
+        "#6D5A3E",
+        "#2A2A24"
+      ]
+    }
+  ],
+  "variants": [
+    "M-84",
+    "M-84A",
+    "M-84AS",
+    "M-84AS1 (prototype)",
+    "M-84AS2 (serial since 2024)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/M-84",
+    "https://commons.wikimedia.org/wiki/Category:M-84"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/M-84",
+    "https://en.wikipedia.org/wiki/Serbian_Army"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "bvp_m80",
+  "name": "BVP M-80",
+  "aliases": [
+    "M-80A",
+    "M-80AB1"
+  ],
+  "origin": "Yugoslavia / Serbia",
+  "type": "ifv",
+  "operators": [
+    "srb"
+  ],
+  "crew": 3,
+  "passengers": 7,
+  "dimensions_m": {
+    "length": 6.42,
+    "width": 2.9,
+    "height": 2.2
+  },
+  "weight_t": 13.85,
+  "armament": [
+    "20 mm M-55 autocannon",
+    "7.62 mm coaxial MG",
+    "Twin Malyutka ATGM launcher"
+  ],
+  "protection": "Light aluminium/steel armour. Game: immune to small-calibre (5.56/5.45/7.62x39/7.62x51); 7.62x54R AP and larger can penetrate side/rear and disable tyres/engine; every launcher in the game list penetrates.",
+  "visual_notes": [
+    "Low tracked IFV resembling a BMP-1 but with 5 road wheels per side",
+    "Small turret with 20 mm cannon and twin ATGM rails on the roof",
+    "Firing ports along the sides, two rear doors; M-80AB1 adds smoke dischargers and new optics"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Serbian three-tone woodland",
+      "palette": [
+        "#4E5B34",
+        "#6D5A3E",
+        "#2A2A24"
+      ]
+    }
+  ],
+  "variants": [
+    "M-80",
+    "M-80A",
+    "M-80AB1 (2024)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/BVP_M-80",
+    "https://commons.wikimedia.org/wiki/Category:BVP_M-80"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/BVP_M-80",
+    "https://en.wikipedia.org/wiki/Serbian_Army"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "bushmaster",
+  "name": "Bushmaster PMV",
+  "aliases": [
+    "Thales Bushmaster"
+  ],
+  "origin": "Australia",
+  "type": "mrap",
+  "operators": [
+    "nld",
+    "aus",
+    "ukr",
+    "nzl",
+    "gbr"
+  ],
+  "crew": 1,
+  "passengers": 9,
+  "dimensions_m": {
+    "length": 7.18,
+    "width": 2.48,
+    "height": 2.65
+  },
+  "weight_t": 15.4,
+  "armament": [
+    "MG ring or RWS with 7.62 / 12.7 mm"
+  ],
+  "protection": "V-hull mine protection. Game: immune to small-calibre rounds; 7.62x54R AP and larger can penetrate side/rear and disable wheels/engine; every launcher in the game list penetrates.",
+  "visual_notes": [
+    "Bonneted 4x4 with long box-shaped armoured troop cell",
+    "Large two-piece windshield, gunner hatch or RWS on roof",
+    "Rear door with fold-down steps",
+    "4x4 bonneted MRAP with long box body and bonnet",
+    "Two-piece windshield, rear door"
+  ],
+  "colour_schemes": [
+    {
+      "name": "NATO three-tone",
+      "palette": [
+        "#3E4A2E",
+        "#4B3A28",
+        "#1E1E1C"
+      ]
+    },
+    {
+      "name": "Desert sand",
+      "palette": [
+        "#C8B48A",
+        "#A8956C"
+      ]
+    }
+  ],
+  "variants": [],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Bushmaster_Protected_Mobility_Vehicle"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Bushmaster_Protected_Mobility_Vehicle",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Royal_Netherlands_Army"
+  ]
+}

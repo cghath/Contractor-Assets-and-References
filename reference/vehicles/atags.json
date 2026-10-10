@@ -1,0 +1,53 @@
+{
+  "id": "atags",
+  "name": "ATAGS 155 mm towed gun",
+  "aliases": [
+    "Advanced Towed Artillery Gun System",
+    "Amogh"
+  ],
+  "origin": "India",
+  "type": "artillery",
+  "operators": [
+    "arm",
+    "ind"
+  ],
+  "crew": 6,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 12.0,
+    "width": 2.8,
+    "height": 2.3
+  },
+  "weight_t": 16.0,
+  "armament": [
+    "155 mm/52 howitzer, ~48 km with base-bleed"
+  ],
+  "protection": "Unarmoured towed gun. Game: crew exposed; gun disabled by 7.62x54R+ hits to mechanism or any launcher/HE.",
+  "visual_notes": [
+    "Large split-trail towed howitzer with a long 52-calibre barrel and muzzle brake",
+    "Auxiliary power unit and electric drives; towed by a 6x6 Ashok Leyland FAT truck"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Armenian olive green",
+      "palette": [
+        "#4D5A36",
+        "#3A4329",
+        "#6E6A4A"
+      ]
+    }
+  ],
+  "variants": [
+    "ATAGS towed",
+    "MGS truck-mounted"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Advanced_Towed_Artillery_Gun_System"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Advanced_Towed_Artillery_Gun_System",
+    "https://www.eurasiantimes.com/french-caesar-indian-atags-to-bolster-armenian"
+  ]
+}

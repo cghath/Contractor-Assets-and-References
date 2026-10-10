@@ -1,0 +1,73 @@
+{
+  "id": "ah64",
+  "name": "AH-64 Apache",
+  "aliases": [
+    "AH-64E Guardian",
+    "AH-64D Longbow"
+  ],
+  "origin": "United States",
+  "type": "attack_heli",
+  "operators": [
+    "nld",
+    "grc",
+    "usa",
+    "gbr",
+    "isr",
+    "aus",
+    "jpn",
+    "kor",
+    "twn",
+    "ind"
+  ],
+  "crew": 2,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 17.73,
+    "width": 5.23,
+    "height": 3.87
+  },
+  "weight_t": 10.4,
+  "armament": [
+    "30 mm M230 chain gun",
+    "Hellfire / JAGM",
+    "Hydra 70 mm rockets"
+  ],
+  "protection": "Armoured cockpit vs 23 mm. Game: airframe is not armoured against heavy MGs; 7.62x54R and larger damage it, 12.7/14.5 mm and MANPADS bring it down; small-calibre rounds only to cockpit glass if the game enables that.",
+  "visual_notes": [
+    "Tandem attack helicopter, gunner front and pilot rear",
+    "Chin 30 mm gun, nose TADS turret",
+    "Stub wings, 4-blade rotor; Longbow radar dome on top on some"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Olive drab",
+      "palette": [
+        "#4B5320",
+        "#3B4219"
+      ]
+    },
+    {
+      "name": "Helicopter grey",
+      "palette": [
+        "#5F6468",
+        "#4A4E52"
+      ]
+    }
+  ],
+  "variants": [
+    "AH-64A",
+    "AH-64D",
+    "AH-64E",
+    "AH-64DJP (JPN, Fuji licence)"
+  ],
+  "existing_model": null,
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Boeing_AH-64_Apache",
+    "https://commons.wikimedia.org/wiki/Category:Boeing AH-64 Apache"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Boeing_AH-64_Apache",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Hellenic_Army"
+  ]
+}

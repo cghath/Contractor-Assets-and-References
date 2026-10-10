@@ -1,0 +1,81 @@
+{
+  "id": "abrams",
+  "name": "M1 Abrams",
+  "aliases": [
+    "M1A2 SEP v3",
+    "M1A1",
+    "M1E3"
+  ],
+  "origin": "United States",
+  "type": "mbt",
+  "operators": [
+    "usa",
+    "aus",
+    "pol",
+    "ukr",
+    "egy",
+    "sau",
+    "irq",
+    "twn",
+    "rou"
+  ],
+  "crew": 4,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 9.77,
+    "width": 3.66,
+    "height": 2.44
+  },
+  "weight_t": 66.8,
+  "armament": [
+    "120 mm M256 smoothbore gun",
+    "7.62 mm M240 coaxial MG",
+    "12.7 mm M2 on CROWS RWS",
+    "7.62 mm M240 loader's MG"
+  ],
+  "protection": "Composite (Chobham-derived, depleted-uranium inserts on US tanks) turret front; TUSK kit adds reactive tiles and rear slat; some SEP v2/v3 carry Trophy APS. Game rule: immune to small-calibre; 7.62x54R and 12.7/14.5 mm only damage optics, tracks and exposed crew; penetrating the hull needs launchers (RPG-7 PG-7V, AT4, MAAWS, SMAW, NLAW, Javelin) or cannon. Side/rear and engine deck are the launcher weak points.",
+  "visual_notes": [
+    "Flat, wide, sharply angled turret with large rear bustle rack",
+    "7 road wheels per side, rear drive sprocket, full-length side skirts",
+    "Long 120 mm gun with thermal sleeve and muzzle reference sensor",
+    "CROWS remote weapon station on commander's position; CITV sight box on turret roof (SEP)",
+    "Gas-turbine exhaust grille on hull rear",
+    "TUSK: reactive armour tiles on skirts, slat on rear"
+  ],
+  "colour_schemes": [
+    {
+      "name": "US desert tan (CARC 686A)",
+      "palette": [
+        "#C2B28A",
+        "#A89670",
+        "#4A4436"
+      ]
+    },
+    {
+      "name": "US forest green (CARC 383)",
+      "palette": [
+        "#4B5320",
+        "#3A4119",
+        "#26281A"
+      ]
+    }
+  ],
+  "variants": [
+    "M1A1 SA / AIM",
+    "M1A1 FEP (USMC, divested)",
+    "M1A2 SEP v2",
+    "M1A2 SEP v3",
+    "M1A2T (Taiwan)",
+    "M1E3 (development)"
+  ],
+  "existing_model": "abrams",
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/M1_Abrams",
+    "https://commons.wikimedia.org/wiki/Category:M1 Abrams"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/M1_Abrams",
+    "https://www.asianmilitaryreview.com/2024/11/australia-receives-latest-m1a2-sepv3-tanks/"
+  ]
+}

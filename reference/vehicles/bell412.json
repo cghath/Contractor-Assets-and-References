@@ -1,0 +1,59 @@
+{
+  "id": "bell412",
+  "name": "Bell 412 / CH-146 Griffon",
+  "aliases": [
+    "CH-146 Griffon",
+    "AB 412",
+    "Bell 412EPI"
+  ],
+  "origin": "United States / Canada",
+  "type": "transport_heli",
+  "operators": [
+    "can",
+    "ita",
+    "phl",
+    "pak",
+    "swe"
+  ],
+  "crew": 3,
+  "passengers": 10,
+  "dimensions_m": {
+    "length": 17.1,
+    "width": 14.02,
+    "height": 4.6
+  },
+  "weight_t": 5.4,
+  "armament": [
+    "Door guns: C6 GPMG or M134D minigun"
+  ],
+  "protection": "Aircraft: game rule small-calibre can't down it; 7.62x54R/12.7/14.5 mm, ZU-23 and MANPADS can damage or down it; critical systems (rotor, engines) are the weak points.",
+  "visual_notes": [
+    "Huey-family profile with 4-blade main rotor",
+    "Large sliding cabin doors",
+    "Skid landing gear",
+    "Twin-engine cowling on roof"
+  ],
+  "colour_schemes": [
+    {
+      "name": "RCAF dark green/grey",
+      "palette": [
+        "#3E4436",
+        "#5C6157"
+      ]
+    }
+  ],
+  "variants": [
+    "CH-146 Griffon (Canada)",
+    "AB 412",
+    "412EPI"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Bell_CH-146_Griffon",
+    "https://en.wikipedia.org/wiki/Bell_412"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Bell_CH-146_Griffon"
+  ]
+}

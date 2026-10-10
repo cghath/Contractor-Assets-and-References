@@ -1,0 +1,65 @@
+{
+  "id": "phl16",
+  "name": "PHL-16 (PCH-191) modular MLRS",
+  "aliases": [
+    "PCH-191",
+    "PHL-16",
+    "AR3 (export)"
+  ],
+  "origin": "China (Norinco)",
+  "type": "mlrs",
+  "operators": [
+    "chn"
+  ],
+  "crew": 3,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 12.0,
+    "width": 3.0,
+    "height": 3.2
+  },
+  "weight_t": 40.0,
+  "armament": [
+    "Two modular pods: 370 mm (2x5) or 300 mm (2x4) guided rockets, or 750 mm Fire Dragon tactical missiles"
+  ],
+  "protection": "Armoured cab only. Game: light armour on cab/turret only; immune to small-calibre rounds; 7.62x54R and larger disable it; launchers destroy it.",
+  "visual_notes": [
+    "Heavy 8x8 Wanshan truck with forward crew cab",
+    "Two rectangular box pods on a rotating rear launcher; pods swap by crane",
+    "Associated with the Eastern Theatre Command's long-range fires facing Taiwan"
+  ],
+  "colour_schemes": [
+    {
+      "name": "PLA digital woodland (vehicle)",
+      "palette": [
+        "#4E5B3A",
+        "#6E7552",
+        "#2F3626",
+        "#8A8762"
+      ]
+    },
+    {
+      "name": "PLA digital desert (Xinjiang/Tibet)",
+      "palette": [
+        "#B49E73",
+        "#8C7752",
+        "#5E5038",
+        "#D2C29A"
+      ]
+    }
+  ],
+  "variants": [
+    "PHL-16 (army)",
+    "PCH-191 (reported designation)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/PHL-16",
+    "https://commons.wikimedia.org/wiki/Category:PHL-16"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/PHL-16",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_People%27s_Liberation_Army_Ground_Force"
+  ]
+}

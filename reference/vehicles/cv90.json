@@ -1,0 +1,100 @@
+{
+  "id": "cv90",
+  "name": "CV90",
+  "aliases": [
+    "Stridsfordon 90",
+    "Strf 9040",
+    "CV9035NL",
+    "CV9030FIN"
+  ],
+  "origin": "Sweden",
+  "type": "ifv",
+  "operators": [
+    "swe",
+    "nor",
+    "fin",
+    "dnk",
+    "nld",
+    "est",
+    "ltu",
+    "ukr"
+  ],
+  "crew": 3,
+  "passengers": 7,
+  "dimensions_m": {
+    "length": 6.55,
+    "width": 3.1,
+    "height": 2.7
+  },
+  "weight_t": 28.0,
+  "armament": [
+    "40 mm Bofors L/70 (SWE), 30 mm (NOR, FIN), or 35 mm (NLD, DNK) autocannon",
+    "7.62 mm coaxial MG",
+    "Spike launchers on some (NOR MkIIIb, NLD MLU)"
+  ],
+  "protection": "Modular armour with Barracuda mats on some. Game: immune to 5.56/5.45/7.62x39/7.62x51; 7.62x54R can damage optics and exposed systems; 12.7/14.5 mm can penetrate sides on the lighter variants; any launcher in the game list penetrates.",
+  "visual_notes": [
+    "Tracked IFV with a long sloping front and large turret",
+    "7 road wheels per side",
+    "Rear door (not ramp)",
+    "Swedish 40 mm has a much thicker barrel",
+    "Norwegian: RWS on turret, rubber tracks on some"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Swedish splinter",
+      "palette": [
+        "#4A5838",
+        "#7D8C5E",
+        "#1F2419",
+        "#8C7A57"
+      ]
+    },
+    {
+      "name": "Finnish three-tone",
+      "palette": [
+        "#4F5A3A",
+        "#2F3526",
+        "#7A7457"
+      ]
+    },
+    {
+      "name": "Winter whitewash",
+      "palette": [
+        "#E6E6E0",
+        "#4A5838",
+        "#2A2A22"
+      ]
+    },
+    {
+      "name": "Saab Barracuda",
+      "palette": [
+        "#4E5A3C",
+        "#2E3527",
+        "#6D6A4E"
+      ]
+    }
+  ],
+  "variants": [
+    "Strf 9040 (SWE)",
+    "CV9030N/MkIIIb (NOR)",
+    "CV9030FIN (FIN)",
+    "CV9035NL (NLD)",
+    "CV9035DK (DNK)",
+    "Mjolner mortar",
+    "STING sapper",
+    "CV9035EE (EST)",
+    "CV90 MkIV (LTU, on order)"
+  ],
+  "existing_model": null,
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/CV90",
+    "https://commons.wikimedia.org/wiki/Category:CV90"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/CV90",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Norwegian_Army",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Royal_Danish_Army"
+  ]
+}

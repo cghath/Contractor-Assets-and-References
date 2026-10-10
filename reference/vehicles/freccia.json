@@ -1,0 +1,63 @@
+{
+  "id": "freccia",
+  "name": "VBM Freccia",
+  "aliases": [
+    "Freccia"
+  ],
+  "origin": "Italy",
+  "type": "ifv",
+  "operators": [
+    "ita"
+  ],
+  "crew": 3,
+  "passengers": 8,
+  "dimensions_m": {
+    "length": 8.6,
+    "width": 3.0,
+    "height": 3.0
+  },
+  "weight_t": 26.0,
+  "armament": [
+    "25 mm KBA in Hitfist Plus turret",
+    "Spike LR launchers on turret",
+    "7.62 mm coaxial"
+  ],
+  "protection": "Centauro-derived 8x8 with add-on armour. Game: immune to 5.56/5.45/7.62x39/7.62x51; 7.62x54R can damage optics and exposed systems; 12.7/14.5 mm can penetrate sides on the lighter variants; any launcher in the game list penetrates.",
+  "visual_notes": [
+    "8x8 sharing Centauro running gear with a raised troop compartment",
+    "Small 25 mm turret with box launchers on the side",
+    "Rear ramp"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Italian Army green/brown/black",
+      "palette": [
+        "#4D5534",
+        "#5E4A33",
+        "#1E1E1A"
+      ]
+    },
+    {
+      "name": "Desert sand",
+      "palette": [
+        "#C8B48A",
+        "#A8956C"
+      ]
+    }
+  ],
+  "variants": [
+    "IFV",
+    "Mortar carrier",
+    "Anti-tank (Spike)",
+    "Command post"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/VBM_Freccia"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/VBM_Freccia",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Italian_Army"
+  ]
+}

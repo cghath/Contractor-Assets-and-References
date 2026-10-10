@@ -1,0 +1,395 @@
+{
+  "id": "aus",
+  "name": "Australia",
+  "short": "AUS",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#012169",
+    "#E4002B",
+    "#FFFFFF"
+  ],
+  "blocs": [
+    "five_eyes",
+    "aukus",
+    "quad",
+    "anzus",
+    "fpda"
+  ],
+  "campaign_tier": "mid",
+  "alignment_to_player": "friendly",
+  "player_client": true,
+  "relations": {
+    "player": 30,
+    "usa": 85,
+    "gbr": 85,
+    "nzl": 95,
+    "can": 75,
+    "jpn": 75,
+    "kor": 60,
+    "ind": 60,
+    "phl": 65,
+    "vnm": 35,
+    "twn": 30,
+    "fra": 60,
+    "ukr": 60,
+    "isr": 25,
+    "pse_pa": 25,
+    "chn": -25,
+    "prk": -70,
+    "rus": -60,
+    "irn": -75,
+    "al_qaeda": -100,
+    "aqap": -100,
+    "isis": -100,
+    "isis_k": -100,
+    "al_shabaab": -100,
+    "jnim": -95,
+    "hamas": -95,
+    "pij": -95,
+    "hezbollah": -80,
+    "houthis": -75,
+    "iraqi_militias": -70
+  },
+  "theatres": [
+    "south_china_sea",
+    "korean_dmz",
+    "persian_gulf_coast",
+    "mesopotamia"
+  ],
+  "languages": [
+    "English"
+  ],
+  "callout_language": "English (Australian Army voice procedure)",
+  "doctrine": {
+    "summary": "Compact, high-readiness army re-orienting to littoral manoeuvre in the Indo-Pacific under the 2023 Defence Strategic Review: long-range fires (HIMARS), amphibious operations from Canberra-class LHDs, armoured cavalry on Boxer CRV, and Abrams tanks. Strong special-forces and counter-terror heritage from Afghanistan and Iraq.",
+    "squad_size": 8,
+    "fireteam": "Infantry section of 8: section commander, 2IC, scout group and gun group(s) with Minimi/Maximi; pairs within each group.",
+    "tactics": [
+      "Section fire and movement with gun group suppression",
+      "Jungle patrolling, ambush and counter-ambush drills",
+      "Amphibious insertion from LHD by landing craft and helicopter",
+      "Mounted patrols in Bushmaster; Hawkei for liaison and recce",
+      "Combined-arms teams pairing Abrams with infantry in close country"
+    ],
+    "ai_tuning": {
+      "aggression": 0.6,
+      "discipline": 0.85,
+      "suppression_resistance": 0.75,
+      "flanking": 0.75,
+      "grenade_use": 0.65,
+      "medical_care": 0.85,
+      "night_capability": 0.85,
+      "marksmanship": 0.8,
+      "morale": 0.85
+    }
+  },
+  "camo": [
+    {
+      "name": "AMCU (Australian Multicam Camouflage Uniform)",
+      "palette": [
+        "#B5A77D",
+        "#8C8A5C",
+        "#5F5E3E",
+        "#9B7D55",
+        "#3D3A2C"
+      ],
+      "use": "Standard uniform and kit since 2014"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "EF88 Austeyr (5.56x45mm)"
+    ],
+    "autorifleman": [
+      "F89 Minimi (5.56x45mm)",
+      "Maximi (Minimi 7.62 Mk3, 7.62x51mm)",
+      "MAG 58 (7.62x51mm)"
+    ],
+    "marksman": [
+      "SR-25 / Knight's Armament designated marksman rifle (7.62x51mm)"
+    ],
+    "grenadier": [
+      "EF88 with SL40 grenade launcher (40x46mm)"
+    ],
+    "at": [
+      "Carl Gustaf M3 (84mm)",
+      "FGM-148 Javelin",
+      "M72 (66mm)"
+    ],
+    "medic": [
+      "EF88 Austeyr (5.56x45mm)"
+    ],
+    "squad_leader": [
+      "EF88 Austeyr (5.56x45mm)"
+    ],
+    "sniper": [
+      "Blaser Tactical 2 / SR-98 class (.338 Lapua Magnum / 7.62x51mm)",
+      "Barrett M82A1 (.50 BMG)"
+    ],
+    "sidearm": [
+      "Glock 17 (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "Carl Gustaf M3 (84mm) [in_game as MAAWS]",
+    "FGM-148 Javelin [in_game]",
+    "M72 (66mm) [not_in_game]",
+    "Spike LR2 (vehicle-mounted on Boxer CRV/Redback) [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "ceramic",
+    "notes": "Enhanced combat helmet = medium; Tiered Body Armour System with front/back ceramic plates (side plates available) = medium tier."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "bushmaster",
+      "role": "mrap",
+      "prevalence": "signature",
+      "notes": "Thales Bushmaster protected mobility vehicle (~1,000 delivered); iconic from Afghanistan."
+    },
+    {
+      "vehicle_id": "boxer",
+      "role": "ifv",
+      "prevalence": "signature",
+      "notes": "Boxer Combat Reconnaissance Vehicle with Lance 30 mm turret, Australian-built (Rheinmetall Redbank)."
+    },
+    {
+      "vehicle_id": "abrams",
+      "role": "mbt",
+      "prevalence": "common",
+      "notes": "M1A2 SEP v3 replacing M1A1 AIM SA from 2024."
+    },
+    {
+      "vehicle_id": "hawkei",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Thales Hawkei light protected vehicle (~1,100)."
+    },
+    {
+      "vehicle_id": "m113",
+      "role": "apc",
+      "prevalence": "uncommon",
+      "notes": "M113AS4 stretched variant, being replaced by Redback IFV from 2027."
+    },
+    {
+      "vehicle_id": "redback",
+      "role": "ifv",
+      "prevalence": "rare",
+      "notes": "Hanwha AS21 Redback IFV, 129 ordered; first deliveries 2027 (late-campaign)."
+    },
+    {
+      "vehicle_id": "himars",
+      "role": "mlrs",
+      "prevalence": "uncommon",
+      "notes": "M142 HIMARS in service since 2024, more on order; PrSM missile partner."
+    },
+    {
+      "vehicle_id": "ah64",
+      "role": "attack_heli",
+      "prevalence": "uncommon",
+      "notes": "AH-64E arriving from late 2025 to replace the Tiger ARH (29 total by 2029)."
+    },
+    {
+      "vehicle_id": "uh60",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": "UH-60M Black Hawk replaced the MRH-90 Taipan (withdrawn 2023)."
+    },
+    {
+      "vehicle_id": "ch47",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": "CH-47F Chinook heavy lift."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "aus_rifle_section",
+      "name": "Australian rifle section",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "team_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "aus_bushmaster_section",
+      "name": "Bushmaster mounted section",
+      "composition": [
+        {
+          "role": "driver",
+          "count": 1
+        },
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "bushmaster"
+    },
+    {
+      "id": "aus_crv_patrol",
+      "name": "Boxer CRV cavalry patrol",
+      "composition": [
+        {
+          "role": "vehicle_crew",
+          "count": 4
+        }
+      ],
+      "vehicle_id": "boxer"
+    },
+    {
+      "id": "aus_hawkei_recce",
+      "name": "Hawkei recce pair",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "driver",
+          "count": 2
+        },
+        {
+          "role": "gunner",
+          "count": 2
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "hawkei"
+    }
+  ],
+  "support_assets": [
+    "HIMARS precision rocket strikes",
+    "AH-64E CAS (from late 2025)",
+    "UH-60M / CH-47F lift from LHD",
+    "M777 155 mm and 81 mm mortar fire missions",
+    "Small ISR and loitering-munition drones",
+    "Naval gunfire from RAN ships (coastal, off-map)"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 20,
+        "unlocks": [
+          "5.56/7.62 ammunition",
+          "grenades, smoke",
+          "medical kits"
+        ]
+      },
+      {
+        "rep": 40,
+        "unlocks": [
+          "EF88 Austeyr",
+          "F89 Minimi",
+          "AMCU uniforms",
+          "medium helmet"
+        ]
+      },
+      {
+        "rep": 60,
+        "unlocks": [
+          "Carl Gustaf M3 (MAAWS)",
+          "plate carriers",
+          "Hawkei purchase"
+        ]
+      },
+      {
+        "rep": 80,
+        "unlocks": [
+          "Bushmaster purchase",
+          "Javelin",
+          "UH-60M lift hire"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "counter_terror_raid",
+      "maritime_security_boarding",
+      "partner_force_support",
+      "reconnaissance",
+      "hostage_rescue",
+      "noncombatant_evacuation",
+      "disaster_relief_security"
+    ],
+    "as_target": [
+      "intel_theft (rival-state fixers)"
+    ]
+  },
+  "notes": "Australian Army plus Army Aviation. Player relations are a proposal (friendly, purchases at higher rep than USA/GBR/CAN). Large transition 2024-2029: Abrams SEP v3, Boxer CRV, AH-64E, UH-60M, HIMARS in; Tiger, Taipan, M113AS4 out. Expelled Iran's ambassador in August 2025; recognised the State of Palestine in September 2025.",
+  "proposed": [
+    "doctrine.ai_tuning",
+    "relations.player",
+    "player_trade",
+    "contract_types",
+    "campaign_tier",
+    "unit_templates (game squads use 8 men in battle-buddy pairs)",
+    "alignment_to_player",
+    "player_client",
+    "player_trade.sellable",
+    "player_trade.rep_tiers",
+    "relations.player"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Australian_Army",
+    "https://www.army-technology.com/news/australian-government-signs-deal-for-redback-vehicles/",
+    "https://www.overtdefense.com/2025/08/04/australian-army-ah-64e-apache-helicopters-on-the-way",
+    "https://www.asianmilitaryreview.com/2024/11/australia-receives-latest-m1a2-sepv3-tanks/",
+    "https://en.wikipedia.org/wiki/Bushmaster_Protected_Mobility_Vehicle",
+    "https://en.wikipedia.org/wiki/Hawkei",
+    "https://en.wikipedia.org/wiki/M142_HIMARS",
+    "https://www.defence.gov.au/news-events/news/2023-09-29/taipans-withdrawn-service",
+    "https://www.thalesgroup.com/en/news-centre/press-releases/new-era-f90-assault-rifle-enters-australian-defence-force-service-0"
+  ]
+}

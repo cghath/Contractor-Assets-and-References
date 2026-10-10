@@ -1,0 +1,66 @@
+{
+  "id": "tr85",
+  "name": "TR-85M1 Bizonul",
+  "aliases": [
+    "TR-85",
+    "TR-85M1",
+    "TR-85M1R"
+  ],
+  "origin": "Romania",
+  "type": "mbt",
+  "operators": [
+    "rou"
+  ],
+  "crew": 4,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 9.92,
+    "width": 3.43,
+    "height": 2.38
+  },
+  "weight_t": 50.0,
+  "armament": [
+    "100 mm A-308 rifled gun (manual loading)",
+    "7.62 mm coaxial",
+    "12.7 mm DShK on roof"
+  ],
+  "protection": "Composite turret and hull add-on armour, steel side skirts, mine plate. Game: immune to all small-calibre rounds; 7.62x54R and 12.7/14.5 mm can only damage optics, external stowage, fuel drums and tracks (mobility kill on repeated hits); PG-7V/AT4/MAAWS/SMAW penetrate side, rear and turret roof; Javelin top-attack penetrates; frontal arc resists unguided launchers.",
+  "visual_notes": [
+    "Length 9.92 m is gun forward",
+    "T-55-like rounded turret enlarged with angular, triangular-profile add-on armour panels and a box bustle",
+    "Six road wheels per side with a noticeably larger gap behind the first two",
+    "Steel side skirts with three cut-out holes used as steps",
+    "DShK ammunition boxes on the turret sides; flare launchers"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Romanian olive / M2017-style vehicle green",
+      "palette": [
+        "#4F5A3A",
+        "#3B4430",
+        "#6E6A4C"
+      ]
+    },
+    {
+      "name": "NATO three-tone",
+      "palette": [
+        "#4A5130",
+        "#55473A",
+        "#232323"
+      ]
+    }
+  ],
+  "variants": [
+    "TR-85",
+    "TR-85M1 Bizonul",
+    "TR-85M1R (upgrade, 2024)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/TR-85"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/TR-85"
+  ]
+}

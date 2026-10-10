@@ -1,0 +1,60 @@
+{
+  "id": "cm32",
+  "name": "CM-32 Clouded Leopard (Yunpao)",
+  "aliases": [
+    "Yunpao",
+    "Clouded Leopard",
+    "CM-33",
+    "CM-34"
+  ],
+  "origin": "Taiwan (Ordnance Readiness Development Center)",
+  "type": "ifv",
+  "operators": [
+    "twn"
+  ],
+  "crew": 3,
+  "passengers": 7,
+  "dimensions_m": {
+    "length": 7.0,
+    "width": 2.7,
+    "height": 2.2
+  },
+  "weight_t": 22.0,
+  "armament": [
+    "CM-34: 30 mm Mk44 Bushmaster II turret",
+    "CM-32: 40 mm AGL / 12.7 mm RWS"
+  ],
+  "protection": "Steel hull with add-on armour. Game: immune to all small-calibre rounds; frontal arc resists 12.7/14.5 mm; 7.62x54R damages optics, tyres/tracks and exposed gear, 12.7/14.5 mm penetrates side and rear; all launchers penetrate.",
+  "visual_notes": [
+    "8x8 with a sloped glacis and flat-sided hull, axle spacing 2+2",
+    "CM-34: two-man turret with long 30 mm cannon",
+    "Rear ramp; 105 mm (and planned 120 mm) fire-support variant not yet accepted"
+  ],
+  "colour_schemes": [
+    {
+      "name": "ROC Army digital/three-tone",
+      "palette": [
+        "#4F5A3B",
+        "#6B5C3F",
+        "#2A2C22",
+        "#868063"
+      ]
+    }
+  ],
+  "variants": [
+    "CM-32 APC",
+    "CM-33 (40 mm RWS)",
+    "CM-34 IFV (30 mm)",
+    "105 mm fire support (prototype)"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/CM-32_Armoured_Vehicle",
+    "https://commons.wikimedia.org/wiki/Category:CM-32_Yunpao"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/CM-32_Armoured_Vehicle",
+    "https://www.asianmilitaryreview.com/2025/09/taiwan-displays-new-land-combat-equipment-at-tadte-2025-foc/"
+  ]
+}

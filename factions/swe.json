@@ -1,0 +1,375 @@
+{
+  "id": "swe",
+  "name": "Sweden",
+  "short": "SWE",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#006AA7",
+    "#FECC02"
+  ],
+  "blocs": [
+    "nato",
+    "eu",
+    "jef",
+    "nordefco"
+  ],
+  "campaign_tier": "late",
+  "alignment_to_player": "friendly",
+  "player_client": true,
+  "relations": {
+    "player": 25,
+    "usa": 75,
+    "gbr": 85,
+    "can": 80,
+    "aus": 70,
+    "ukr": 75,
+    "pol": 75,
+    "est": 85,
+    "lva": 85,
+    "ltu": 80,
+    "rou": 70,
+    "jpn": 60,
+    "kor": 55,
+    "isr": 15,
+    "tur": 35,
+    "sau": 30,
+    "are": 45,
+    "qat": 35,
+    "egy": 35,
+    "jor": 55,
+    "irq": 35,
+    "krg_peshmerga": 55,
+    "sdf": 30,
+    "syr": 5,
+    "pse_pa": 35,
+    "rus": -85,
+    "blr": -65,
+    "irn": -55,
+    "prk": -60,
+    "chn": -20,
+    "africa_corps": -60,
+    "sahel_aes": -30,
+    "afg_taliban": -60,
+    "isis": -100,
+    "isis_k": -95,
+    "al_qaeda": -100,
+    "aqap": -90,
+    "al_shabaab": -90,
+    "jnim": -90,
+    "hamas": -85,
+    "pij": -85,
+    "hezbollah": -65,
+    "houthis": -70,
+    "iraqi_militias": -55,
+    "fra": 85,
+    "deu": 85,
+    "ita": 85,
+    "esp": 85,
+    "nld": 85,
+    "bel": 85,
+    "nor": 95,
+    "dnk": 90,
+    "fin": 95,
+    "grc": 85
+  },
+  "theatres": [
+    "arctic_north",
+    "baltic_coast"
+  ],
+  "languages": [
+    "Swedish"
+  ],
+  "callout_language": "Swedish",
+  "doctrine": {
+    "summary": "Total-defence army, NATO member since 2024, contributes to forward land forces in Finland and Latvia.",
+    "squad_size": 8,
+    "fireteam": "Grupp of two teams.",
+    "tactics": [
+      "mechanised defence with CV90",
+      "Arctic manoeuvre"
+    ],
+    "ai_tuning": {
+      "aggression": 0.5,
+      "discipline": 0.85,
+      "suppression_resistance": 0.75,
+      "flanking": 0.7,
+      "grenade_use": 0.55,
+      "medical_care": 0.85,
+      "night_capability": 0.85,
+      "marksmanship": 0.8,
+      "morale": 0.75
+    }
+  },
+  "camo": [
+    {
+      "name": "m/90",
+      "palette": [
+        "#5B6B48",
+        "#2E3826",
+        "#8F9A6D",
+        "#1D211A"
+      ],
+      "use": "standard splinter"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "Ak 5C (5.56x45mm)",
+      "Ak 24 (Sako ARG, 5.56x45mm)"
+    ],
+    "autorifleman": [
+      "Ksp 90 (Minimi, 5.56x45mm)",
+      "Ksp 58 (FN MAG, 7.62x51mm)"
+    ],
+    "marksman": [
+      "Ak 5C optic"
+    ],
+    "grenadier": [
+      "Ak 5C with Gg 18 (40mm)"
+    ],
+    "at": [
+      "Pskott 86 (AT4, 84mm)",
+      "Grg m/86 (Carl Gustaf, 84mm)",
+      "Rb 57 (NLAW)"
+    ],
+    "medic": [
+      "Ak 5C"
+    ],
+    "squad_leader": [
+      "Ak 5C"
+    ],
+    "sniper": [
+      "Psg 90 (7.62x51mm)"
+    ],
+    "sidearm": [
+      "Pistol 88 (Glock 17, 9x19mm)"
+    ]
+  },
+  "launchers": [
+    "AT4 [in game: AT4]",
+    "Carl Gustaf [in game: MAAWS]",
+    "NLAW [in game: NLAW]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "ceramic",
+    "notes": "Game mapping."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "leopard2a6",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "Strv 122, Strv 123."
+    },
+    {
+      "vehicle_id": "cv90",
+      "role": "ifv",
+      "prevalence": "signature",
+      "notes": "Strf 9040."
+    },
+    {
+      "vehicle_id": "patria_amv",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": ""
+    },
+    {
+      "vehicle_id": "patria_6x6",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": ""
+    },
+    {
+      "vehicle_id": "bv206",
+      "role": "other",
+      "prevalence": "signature",
+      "notes": ""
+    },
+    {
+      "vehicle_id": "bvs10",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "Bv 410."
+    },
+    {
+      "vehicle_id": "archer",
+      "role": "artillery",
+      "prevalence": "signature",
+      "notes": ""
+    },
+    {
+      "vehicle_id": "uh60",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": "Hkp 16."
+    },
+    {
+      "vehicle_id": "nh90",
+      "role": "transport_heli",
+      "prevalence": "rare",
+      "notes": "Retiring by 2027."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "swe_rifle_squad",
+      "name": "Swedish rifle squad (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "swe_mech_squad",
+      "name": "Swedish mechanised squad",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 2
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "cv90"
+    },
+    {
+      "id": "swe_recon_team",
+      "name": "Swedish recon / sniper pair team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "sniper",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "bv206"
+    }
+  ],
+  "support_assets": [
+    "Archer artillery",
+    "Gripen CAS (off-map)",
+    "drones"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 20,
+        "unlocks": [
+          "service rifle and ammunition",
+          "uniforms in national camo",
+          "light helmet and vest"
+        ]
+      },
+      {
+        "rep": 40,
+        "unlocks": [
+          "optics and NVGs",
+          "medium armour",
+          "AT4 launcher"
+        ]
+      },
+      {
+        "rep": 60,
+        "unlocks": [
+          "marksman and sniper rifles",
+          "heavy armour",
+          "Bv206 (light vehicle)"
+        ]
+      },
+      {
+        "rep": 80,
+        "unlocks": [
+          "Patria AMV (armoured transport)",
+          "fire-support call-ins on contracts"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "counter-terrorist raid",
+      "hostage / personnel recovery",
+      "convoy escort",
+      "HVT capture",
+      "recover lost equipment or sensitive kit",
+      "train and accompany partner forces",
+      "security of embassy or base",
+      "counter-drone site defence"
+    ],
+    "as_target": [
+      "only if the player works for this nation's enemies: sabotage a logistics depot",
+      "only if the player works for this nation's enemies: ambush a supply convoy"
+    ]
+  },
+  "notes": "Sweden joined NATO in March 2024; Strv 123 (Leopard 2A8) entering service.",
+  "proposed": [
+    "campaign_tier",
+    "relations.player",
+    "doctrine.ai_tuning",
+    "unit_templates",
+    "player_trade.rep_tiers",
+    "contract_types",
+    "body_armor (game tier mapping)",
+    "vehicles[].prevalence (game weighting)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Swedish_Army",
+    "https://theaviationist.com/2026/08/27/sweden-phasing-out-nh90-tth-by-2027/"
+  ]
+}

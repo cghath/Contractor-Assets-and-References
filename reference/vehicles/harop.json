@@ -1,0 +1,51 @@
+{
+  "id": "harop",
+  "name": "IAI Harop",
+  "aliases": [
+    "Harop loitering munition"
+  ],
+  "origin": "Israel",
+  "type": "uav",
+  "operators": [
+    "aze"
+  ],
+  "crew": 0,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 2.5,
+    "width": 3.0,
+    "height": 0.6
+  },
+  "weight_t": 0.135,
+  "armament": [
+    "16 kg warhead (loitering munition, single use)"
+  ],
+  "protection": "Unarmoured. Game: any hit from any calibre can down it; jamming (EW) can force it to land or drift.",
+  "visual_notes": [
+    "Delta-ish swept wing with canards at the nose and wingtip fins",
+    "Rear pusher propeller, EO seeker under the nose",
+    "Fired from box canisters on a truck"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Grey",
+      "palette": [
+        "#B9BEC0",
+        "#7B8285"
+      ]
+    }
+  ],
+  "variants": [
+    "Harop",
+    "Mini Harop"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/IAI_Harop",
+    "https://commons.wikimedia.org/wiki/Category:IAI_Harop"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/IAI_Harop"
+  ]
+}

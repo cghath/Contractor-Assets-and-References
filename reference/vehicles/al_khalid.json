@@ -1,0 +1,67 @@
+{
+  "id": "al_khalid",
+  "name": "Al-Khalid (MBT-2000)",
+  "aliases": [
+    "MBT-2000",
+    "Al-Khalid I",
+    "VT1A"
+  ],
+  "origin": "Pakistan / China (HIT, Norinco)",
+  "type": "mbt",
+  "operators": [
+    "pak"
+  ],
+  "crew": 3,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 10.1,
+    "width": 3.5,
+    "height": 2.3
+  },
+  "weight_t": 46.0,
+  "armament": [
+    "125 mm smoothbore with autoloader",
+    "12.7 mm HMG",
+    "7.62 mm coaxial MG"
+  ],
+  "protection": "Composite armour with ERA on Al-Khalid I. Game: immune to all small-calibre rounds; 7.62x54R and 12.7/14.5 mm only damage optics, external stowage, fuel drums and tracks (mobility kill on repeated hits); PG-7V/AT4/MAAWS/SMAW/NLAW penetrate side, rear and turret roof; Javelin top-attack penetrates; frontal arc resists unguided launchers.",
+  "visual_notes": [
+    "Chinese Type 90-II derived: wedge turret with flat add-on armour front",
+    "Six road wheels per side, side skirts",
+    "Ukrainian 6TD-2 engine (rear deck grilles) on early batches"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Pakistan Army disruptive",
+      "palette": [
+        "#B8A57A",
+        "#7B6A47",
+        "#4F5235",
+        "#2E2C22"
+      ]
+    },
+    {
+      "name": "Pakistan desert",
+      "palette": [
+        "#C2AE80",
+        "#93805A",
+        "#5E523C"
+      ]
+    }
+  ],
+  "variants": [
+    "Al-Khalid",
+    "Al-Khalid I",
+    "Al-Khalid II (development)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Al-Khalid_tank",
+    "https://commons.wikimedia.org/wiki/Category:Al-Khalid_tank"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Al-Khalid_tank",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Pakistan_Army"
+  ]
+}

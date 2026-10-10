@@ -1,0 +1,74 @@
+{
+  "id": "jltv",
+  "name": "Joint Light Tactical Vehicle",
+  "aliases": [
+    "Oshkosh L-ATV",
+    "M1278",
+    "M1280"
+  ],
+  "origin": "United States",
+  "type": "light",
+  "operators": [
+    "usa",
+    "can",
+    "bel",
+    "isr",
+    "ltu",
+    "nld",
+    "pol",
+    "rou"
+  ],
+  "crew": 2,
+  "passengers": 2,
+  "dimensions_m": {
+    "length": 6.2,
+    "width": 2.5,
+    "height": 2.6
+  },
+  "weight_t": 6.4,
+  "armament": [
+    "M2, M240 or Mk 19 on ring mount or CROWS-J RWS",
+    "TOW (M1281 CCWC)"
+  ],
+  "protection": "Modular A-kit/B-kit armour, V-shaped underbody, TAK-4i independent suspension. Game rule: armoured cab immune to small-calibre; 7.62x54R and larger can penetrate or disable; open gun ring leaves gunner exposed.",
+  "visual_notes": [
+    "Tall, wedge-nosed 4x4 with steeply raked windscreen",
+    "Large tyres with central inflation, high ground clearance",
+    "Two-door (utility) or four-door body; heavy guns carrier with roof turret/RWS",
+    "Small armoured windows, bulky door hinges"
+  ],
+  "colour_schemes": [
+    {
+      "name": "US desert tan (CARC 686A)",
+      "palette": [
+        "#C2B28A",
+        "#A89670",
+        "#4A4436"
+      ]
+    },
+    {
+      "name": "US forest green (CARC 383)",
+      "palette": [
+        "#4B5320",
+        "#3A4119",
+        "#26281A"
+      ]
+    }
+  ],
+  "variants": [
+    "M1278 Heavy Guns Carrier",
+    "M1279 Utility",
+    "M1280 General Purpose",
+    "M1281 Close Combat Weapons Carrier",
+    "MADIS counter-UAS"
+  ],
+  "existing_model": null,
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Joint_Light_Tactical_Vehicle",
+    "https://commons.wikimedia.org/wiki/Category:Joint Light Tactical Vehicle"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Joint_Light_Tactical_Vehicle"
+  ]
+}

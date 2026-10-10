@@ -1,0 +1,335 @@
+{
+  "id": "blr",
+  "name": "Republic of Belarus",
+  "short": "Belarus",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#C8313E",
+    "#4AA657",
+    "#FFFFFF"
+  ],
+  "blocs": [
+    "csto",
+    "cis",
+    "union_state",
+    "eaeu",
+    "sco"
+  ],
+  "campaign_tier": "late",
+  "alignment_to_player": "hostile",
+  "player_client": false,
+  "relations": {
+    "player": -50,
+    "rus": 95,
+    "africa_corps": 50,
+    "kaz": 45,
+    "chn": 60,
+    "aze": 50,
+    "srb": 35,
+    "irn": 40,
+    "prk": 40,
+    "arm": -35,
+    "ukr": -70,
+    "pol": -80,
+    "ltu": -80,
+    "lva": -75,
+    "est": -70,
+    "usa": -40,
+    "gbr": -55,
+    "deu": -55,
+    "isis": -90
+  },
+  "theatres": [
+    "suwalki_gap",
+    "baltic_coast",
+    "eastern_ukraine"
+  ],
+  "languages": [
+    "Belarusian",
+    "Russian"
+  ],
+  "callout_language": "Russian (Belarusian army procedure is Russian-language)",
+  "doctrine": {
+    "summary": "Soviet-pattern territorial and mechanised defence tightly integrated with Russia's Union State forces (joint Zapad exercises, Russian Iskander and Oreshnik systems hosted). Large BMP-2/T-72 holdings, new Russian BTR-82A and domestic Volat/Cayman light vehicles, Polonez guided rockets. Has learned drone lessons: quadcopters in almost every company and a domestic counter-UAS system (2026). No combat experience; in game an escalation enemy on the Suwalki Gap and Polish/Lithuanian border.",
+    "squad_size": 8,
+    "fireteam": "Soviet-pattern 8-9 man motor-rifle squad mounted in BMP-2/BTR. Game: 8 men in 4 pairs.",
+    "tactics": [
+      "Defend from prepared positions with mines and anti-tank teams",
+      "Mounted counter-attacks with BMP-2 and T-72 supported by artillery",
+      "Border provocation and reconnaissance-in-force",
+      "Company quadcopters spot for mortars",
+      "Smoke and frag use per drill; less initiative than Russian assault troops"
+    ],
+    "ai_tuning": {
+      "aggression": 0.45,
+      "discipline": 0.65,
+      "suppression_resistance": 0.5,
+      "flanking": 0.45,
+      "grenade_use": 0.55,
+      "medical_care": 0.45,
+      "night_capability": 0.45,
+      "marksmanship": 0.5,
+      "morale": 0.45
+    }
+  },
+  "camo": [
+    {
+      "name": "Belarusian pixel woodland (digital)",
+      "palette": [
+        "#5D6A43",
+        "#3A4430",
+        "#8C8A62",
+        "#2A2B23"
+      ],
+      "use": "Standard field uniform"
+    },
+    {
+      "name": "Russian EMR-pattern kit",
+      "palette": [
+        "#6B7148",
+        "#3E4330",
+        "#A39B72",
+        "#2A2A22"
+      ],
+      "use": "Units re-equipped with Russian Ratnik-type kit and special forces"
+    },
+    {
+      "name": "White over-suit (winter)",
+      "palette": [
+        "#ECEDEA",
+        "#C9CCC8",
+        "#6B6F66"
+      ],
+      "use": "Arctic North and winter Baltic/Ukraine maps"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "AK-74 / AKS-74 (5.45x39mm)",
+      "AK-12 (5.45x39mm, limited)"
+    ],
+    "autorifleman": [
+      "PKM (7.62x54R)",
+      "RPK-74 (5.45x39mm)"
+    ],
+    "marksman": [
+      "SVD Dragunov (7.62x54R)"
+    ],
+    "grenadier": [
+      "AK-74 with GP-25 / GP-30 (VOG-25)"
+    ],
+    "at": [
+      "RPG-7",
+      "RPG-26",
+      "9K111 Fagot / 9M113 Konkurs / Shershen ATGM"
+    ],
+    "medic": [
+      "AKS-74 (5.45x39mm)"
+    ],
+    "squad_leader": [
+      "AK-74 (5.45x39mm)"
+    ],
+    "sniper": [
+      "Orsis T-5000 (.338 Lapua)",
+      "SV-1000 Stiletto / MTs-116M (7.62x51mm / 7.62x54R)",
+      "OSV-96 (12.7x108mm)"
+    ],
+    "sidearm": [
+      "PM Makarov (9x18mm)",
+      "Glock 17 (9x19mm, special forces)"
+    ]
+  },
+  "launchers": [
+    "RPG-7 (PG-7V [in_game], OG-7V [in_game])",
+    "RPG-26 [not_in_game]",
+    "RPO-A Shmel [not_in_game]",
+    "Shershen / Fagot / Konkurs / Metis ATGM [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "light",
+    "vest": "medium",
+    "plates": "steel",
+    "notes": "Most line troops: older steel or aramid helmets (light) and 6B-series vests with steel front/back plates (medium). Special operations forces use Ratnik-class kit (medium helmet, ceramic plates)."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "t72b3",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "T-72B (largest share) plus modernised T-72B3 mod / T-72BM2."
+    },
+    {
+      "vehicle_id": "bmp2",
+      "role": "ifv",
+      "prevalence": "signature",
+      "notes": "Main IFV (~900)."
+    },
+    {
+      "vehicle_id": "btr82a",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "Delivered from Russia since 2017; BTR-80 and BTR-70MB1 also in service."
+    },
+    {
+      "vehicle_id": "volat_v1",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Domestic MZKT V1 armoured 4x4, often with Shershen ATGM; Cayman light APC also fielded."
+    },
+    {
+      "vehicle_id": "gaz_tigr",
+      "role": "light",
+      "prevalence": "uncommon",
+      "notes": "Tigr-M for special forces."
+    },
+    {
+      "vehicle_id": "mtlb",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "Gun tractor and carrier."
+    },
+    {
+      "vehicle_id": "polonez",
+      "role": "mlrs",
+      "prevalence": "uncommon",
+      "notes": "300 mm guided MLRS, domestic (with Chinese help)."
+    },
+    {
+      "vehicle_id": "mi24",
+      "role": "attack_heli",
+      "prevalence": "uncommon",
+      "notes": "Mi-24 and Mi-35M."
+    },
+    {
+      "vehicle_id": "mi8",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": "Mi-8 / Mi-8MTV-5."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "blr_motor_rifle_squad",
+      "name": "Motor-rifle squad (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "bmp2"
+    },
+    {
+      "id": "blr_border_patrol",
+      "name": "Border patrol (State Border Committee)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        }
+      ],
+      "vehicle_id": "gaz_tigr"
+    },
+    {
+      "id": "blr_sof_team",
+      "name": "Special operations forces team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "volat_v1"
+    }
+  ],
+  "support_assets": [
+    "Tube artillery and Grad/Uragan/Smerch rockets; Polonez guided rockets",
+    "Company quadcopters and domestic loitering munitions",
+    "Counter-UAS EW (Stena, 2026)",
+    "Russian-hosted Iskander/Oreshnik (off-map deterrent, not used in missions)",
+    "Tor-M2K and S-400 air defence (limits player air support)"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [],
+    "as_target": [
+      "border_incident_response",
+      "recon_border_area",
+      "destroy_air_defence_radar",
+      "sabotage_logistics",
+      "recover_defector"
+    ]
+  },
+  "notes": "Closest Russian ally; Union State with Russia, hosts Russian forces and nuclear-capable systems. Did not send its own army into Ukraine but served as a staging area in 2022. In game: escalation enemy on the Suwalki Gap / Baltic theatres alongside Russia; uses Russian-pattern kit with less experience.",
+  "proposed": [
+    "campaign_tier",
+    "relations.player",
+    "player_client",
+    "doctrine.ai_tuning",
+    "unit_templates",
+    "contract_types.as_target",
+    "theatres (suwalki_gap/baltic_coast are what-if escalation theatres)",
+    "vehicles[].prevalence (game weighting)",
+    "body_armor (game tier mapping)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Armed_Forces_of_Belarus",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Armed_Forces_of_Belarus",
+    "https://www.janes.com/osint-insights/defence-news/belarus-receives-first-btr-82a-apcs",
+    "https://www.army-technology.com/projects/volat-mzkt-490100-light-armoured-vehicle/",
+    "https://en.wikipedia.org/wiki/Polonez_(multiple_rocket_launcher)",
+    "https://meduza.io/en/news/2026/06/05/we-ll-decide-and-we-ll-leave-armenian-leader-says-of-russian-led-defense-bloc"
+  ]
+}

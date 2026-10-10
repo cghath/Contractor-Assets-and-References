@@ -1,0 +1,59 @@
+{
+  "id": "bmd1",
+  "name": "BMD-1 / BMD-2",
+  "aliases": [
+    "BMD-1P",
+    "BMD-2"
+  ],
+  "origin": "Soviet Union",
+  "type": "ifv",
+  "operators": [
+    "mda",
+    "ukr",
+    "rus"
+  ],
+  "crew": 3,
+  "passengers": 4,
+  "dimensions_m": {
+    "length": 5.4,
+    "width": 2.63,
+    "height": 1.97
+  },
+  "weight_t": 7.5,
+  "armament": [
+    "BMD-1: 73 mm 2A28 Grom + 9M14 Malyutka, PKT",
+    "BMD-2: 30 mm 2A42 + Konkurs",
+    "Bow 7.62 mm PKT"
+  ],
+  "protection": "Very thin aluminium armour (airborne vehicle). Game: immune to 5.56/5.45/7.62x39/7.62x51; 7.62x54R and larger can penetrate side/rear and disable wheels, engine and optics; every launcher in the game list penetrates. 12.7 mm penetrates from most angles.",
+  "visual_notes": [
+    "Tiny low tracked hull with a sharp ribbed nose, five road wheels per side",
+    "BMP-1-style small cone turret (BMD-1) or 30 mm turret (BMD-2) sitting forward on the roof",
+    "Crew hatches clustered at the front, troop hatch at the rear top (no rear doors)"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Moldovan army green",
+      "palette": [
+        "#525C3C",
+        "#3A4230",
+        "#2A2A22"
+      ]
+    }
+  ],
+  "variants": [
+    "BMD-1",
+    "BMD-1P",
+    "BMD-2"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/BMD-1",
+    "https://commons.wikimedia.org/wiki/Category:BMD-1"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/BMD-1",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Moldovan_Armed_Forces"
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "id": "nh90",
+  "name": "NHIndustries NH90",
+  "aliases": [
+    "NH90 TTH",
+    "NH90 Caiman",
+    "Hkp 14"
+  ],
+  "origin": "France/Germany/Italy/Netherlands",
+  "type": "transport_heli",
+  "operators": [
+    "fra",
+    "deu",
+    "ita",
+    "esp",
+    "bel",
+    "fin",
+    "grc",
+    "swe",
+    "nzl"
+  ],
+  "crew": 2,
+  "passengers": 20,
+  "dimensions_m": {
+    "length": 16.13,
+    "width": 3.6,
+    "height": 5.23
+  },
+  "weight_t": 10.6,
+  "armament": [
+    "Door-mounted 7.62 mm MGs or 12.7 mm (optional)"
+  ],
+  "protection": "Composite fuselage, crashworthy seats. Sweden is retiring its fleet by 2027 and Norway returned theirs. Game: airframe is not armoured against heavy MGs; 7.62x54R and larger damage it, 12.7/14.5 mm and MANPADS bring it down; small-calibre rounds only to cockpit glass if the game enables that.",
+  "visual_notes": [
+    "Smooth composite fuselage with rear loading ramp",
+    "4-blade main rotor, sponsons holding main gear",
+    "Large sliding cabin doors",
+    "Twin engines on top behind the rotor head"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Helicopter grey",
+      "palette": [
+        "#5F6468",
+        "#4A4E52"
+      ]
+    },
+    {
+      "name": "Army green",
+      "palette": [
+        "#4E553C",
+        "#3A3F2D"
+      ]
+    }
+  ],
+  "variants": [
+    "TTH (tactical transport)",
+    "NFH (naval)",
+    "Caiman (France)"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/NHIndustries_NH90",
+    "https://commons.wikimedia.org/wiki/Category:NHIndustries NH90"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/NHIndustries_NH90",
+    "https://theaviationist.com/2026/08/27/sweden-phasing-out-nh90-tth-by-2027/"
+  ]
+}

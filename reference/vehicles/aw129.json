@@ -1,0 +1,64 @@
+{
+  "id": "aw129",
+  "name": "Agusta A129 Mangusta",
+  "aliases": [
+    "AH-129D",
+    "Mangusta"
+  ],
+  "origin": "Italy",
+  "type": "attack_heli",
+  "operators": [
+    "ita"
+  ],
+  "crew": 2,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 12.28,
+    "width": 3.2,
+    "height": 3.35
+  },
+  "weight_t": 5.1,
+  "armament": [
+    "20 mm M197 chin turret (C/D)",
+    "Spike ER or TOW missiles",
+    "70/81 mm rocket pods"
+  ],
+  "protection": "Light armour on cockpit; being replaced by AW249 Fenice. Game: airframe is not armoured against heavy MGs; 7.62x54R and larger damage it, 12.7/14.5 mm and MANPADS bring it down; small-calibre rounds only to cockpit glass if the game enables that.",
+  "visual_notes": [
+    "Slim tandem attack helicopter with stub wings",
+    "Chin 20 mm turret, 5-blade main rotor (C/D)",
+    "Turkish T129 ATAK is a licensed derivative"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Italian Army green/brown/black",
+      "palette": [
+        "#4D5534",
+        "#5E4A33",
+        "#1E1E1A"
+      ]
+    },
+    {
+      "name": "Helicopter grey",
+      "palette": [
+        "#5F6468",
+        "#4A4E52"
+      ]
+    }
+  ],
+  "variants": [
+    "A129C",
+    "AH-129D",
+    "T129 ATAK (Turkey, separate entry advisable)",
+    "AW249 Fenice (successor)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Agusta_A129_Mangusta"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Agusta_A129_Mangusta",
+    "https://theaviationist.com/2025/10/29/italy-29-more-aw249-attack-helicopters/"
+  ]
+}

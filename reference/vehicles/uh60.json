@@ -1,0 +1,76 @@
+{
+  "id": "uh60",
+  "name": "Sikorsky UH-60 Black Hawk",
+  "aliases": [
+    "UH-60M",
+    "Hkp 16"
+  ],
+  "origin": "United States",
+  "type": "transport_heli",
+  "operators": [
+    "swe",
+    "grc",
+    "nor",
+    "usa",
+    "aus",
+    "lva",
+    "ltu",
+    "jpn",
+    "kor",
+    "twn",
+    "phl"
+  ],
+  "crew": 4,
+  "passengers": 11,
+  "dimensions_m": {
+    "length": 19.76,
+    "width": 2.36,
+    "height": 5.13
+  },
+  "weight_t": 10.0,
+  "armament": [
+    "7.62 mm M240 or M134 door guns"
+  ],
+  "protection": "Armoured crew seats. Game: airframe is not armoured against heavy MGs; 7.62x54R and larger damage it, 12.7/14.5 mm and MANPADS bring it down; small-calibre rounds only to cockpit glass if the game enables that.",
+  "visual_notes": [
+    "Medium helicopter with tapered fuselage and canted tail rotor",
+    "Door guns on both sides",
+    "Medium-lift helicopter with tapered fuselage and wide cabin doors",
+    "Canted tail rotor on the right, horizontal stabiliser at the tail base",
+    "4-blade main rotor; door guns on window mounts"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Olive drab",
+      "palette": [
+        "#4B5320",
+        "#3B4219"
+      ]
+    },
+    {
+      "name": "Helicopter grey",
+      "palette": [
+        "#5F6468",
+        "#4A4E52"
+      ]
+    }
+  ],
+  "variants": [
+    "UH-60M",
+    "Hkp 16 (SWE)",
+    "UH-60JA (JPN)",
+    "UH-60P (KOR, licence-built)",
+    "UH-60M (TWN)",
+    "S-70i (PHL Air Force)"
+  ],
+  "existing_model": "uh60",
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Sikorsky_UH-60_Black_Hawk",
+    "https://commons.wikimedia.org/wiki/Category:Sikorsky UH-60 Black Hawk"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Sikorsky_UH-60_Black_Hawk",
+    "https://theaviationist.com/2026/08/23/norway-uh60m-blackhawk-fms/"
+  ]
+}

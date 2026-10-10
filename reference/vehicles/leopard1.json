@@ -1,0 +1,66 @@
+{
+  "id": "leopard1",
+  "name": "Leopard 1",
+  "aliases": [
+    "Leopard 1A5"
+  ],
+  "origin": "West Germany",
+  "type": "mbt",
+  "operators": [
+    "grc",
+    "tur",
+    "ukr"
+  ],
+  "crew": 4,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 9.54,
+    "width": 3.37,
+    "height": 2.39
+  },
+  "weight_t": 42.2,
+  "armament": [
+    "105 mm L7",
+    "7.62 mm MG3"
+  ],
+  "protection": "Light steel armour for an MBT. Game: immune to all small arms incl. 7.62x54R and 12.7/14.5 mm on frontal arc; only launchers (Javelin, top-attack) or tank guns kill it; tandem-HEAT launchers (AT4 HEDP no, RPG-7 PG-7V only to sides/rear) can disable tracks, optics and side hull.",
+  "visual_notes": [
+    "Cast turret with rounded sloped sides (1A5: bolted spaced armour blocks on turret front and sides, giving a wedge-like box look)",
+    "7 road wheels per side with rubber skirts",
+    "105 mm L7 gun with thermal sleeve and fume extractor",
+    "Low engine deck, stowage baskets at turret rear",
+    "Cast/welded turret with sloped sides",
+    "7 road wheels per side"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Greek three-tone",
+      "palette": [
+        "#5A5C3A",
+        "#7A6A48",
+        "#2A2A20"
+      ]
+    },
+    {
+      "name": "NATO three-tone",
+      "palette": [
+        "#3E4A2E",
+        "#4B3A28",
+        "#1E1E1C"
+      ]
+    }
+  ],
+  "variants": [
+    "Leopard 1A5GR"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Leopard_1",
+    "https://commons.wikimedia.org/wiki/Category:Leopard 1"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Leopard_1",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Hellenic_Army"
+  ]
+}

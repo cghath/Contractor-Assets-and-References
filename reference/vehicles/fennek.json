@@ -1,0 +1,62 @@
+{
+  "id": "fennek",
+  "name": "Fennek",
+  "aliases": [
+    "LGS Fennek"
+  ],
+  "origin": "Germany/Netherlands",
+  "type": "light",
+  "operators": [
+    "deu",
+    "nld"
+  ],
+  "crew": 3,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 5.71,
+    "width": 2.49,
+    "height": 1.79
+  },
+  "weight_t": 10.4,
+  "armament": [
+    "7.62 mm MG, 12.7 mm M2 or 40 mm GMG on RWS",
+    "Dutch variants with Spike MR or Stinger"
+  ],
+  "protection": "Light armour vs small arms and mines. Germany is replacing it with Luchs 2. Game: immune to small-calibre rounds; 7.62x54R and larger penetrate the light armour; launchers destroy it outright.",
+  "visual_notes": [
+    "Very low and flat 4x4 scout car with sloped faceted body",
+    "Telescopic sensor mast that rises from the hull roof",
+    "Recessed wheels, compact RWS"
+  ],
+  "colour_schemes": [
+    {
+      "name": "NATO three-tone",
+      "palette": [
+        "#3E4A2E",
+        "#4B3A28",
+        "#1E1E1C"
+      ]
+    },
+    {
+      "name": "Desert sand",
+      "palette": [
+        "#C8B48A",
+        "#A8956C"
+      ]
+    }
+  ],
+  "variants": [
+    "Fennek recon",
+    "Fennek MRAT (Spike)",
+    "Fennek Stinger"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Fennek"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Fennek",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Royal_Netherlands_Army"
+  ]
+}

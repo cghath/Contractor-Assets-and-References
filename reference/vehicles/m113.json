@@ -1,0 +1,81 @@
+{
+  "id": "m113",
+  "name": "M113",
+  "aliases": [
+    "M113A2",
+    "M113G4DK"
+  ],
+  "origin": "United States",
+  "type": "apc",
+  "operators": [
+    "esp",
+    "nor",
+    "dnk",
+    "grc",
+    "usa",
+    "aus",
+    "ltu",
+    "ukr",
+    "pak",
+    "phl"
+  ],
+  "crew": 2,
+  "passengers": 11,
+  "dimensions_m": {
+    "length": 4.86,
+    "width": 2.69,
+    "height": 2.5
+  },
+  "weight_t": 12.3,
+  "armament": [
+    "12.7 mm M2HB on commander's cupola"
+  ],
+  "protection": "Aluminium armour. Game: immune to small-calibre rounds; 7.62x54R AP and larger can penetrate side/rear and disable wheels/engine; every launcher in the game list penetrates.",
+  "visual_notes": [
+    "Simple aluminium box on tracks with sloped front",
+    "5 road wheels per side",
+    "Large rear ramp, M2 on cupola often with gun shield"
+  ],
+  "colour_schemes": [
+    {
+      "name": "NATO three-tone",
+      "palette": [
+        "#3E4A2E",
+        "#4B3A28",
+        "#1E1E1C"
+      ]
+    },
+    {
+      "name": "Olive drab",
+      "palette": [
+        "#4B5320",
+        "#3B4219"
+      ]
+    },
+    {
+      "name": "Desert sand",
+      "palette": [
+        "#C8B48A",
+        "#A8956C"
+      ]
+    }
+  ],
+  "variants": [
+    "M113A1/A2",
+    "M113G3/G4 (DNK)",
+    "M577 (command)",
+    "M113 FSV (PHL, 76 mm Scorpion turret)",
+    "M113A2+ with Elbit ORCWS (PHL)",
+    "Talha / Saad (PAK, HIT)"
+  ],
+  "existing_model": null,
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/M113_armored_personnel_carrier",
+    "https://commons.wikimedia.org/wiki/Category:M113"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/M113_armored_personnel_carrier",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Hellenic_Army"
+  ]
+}

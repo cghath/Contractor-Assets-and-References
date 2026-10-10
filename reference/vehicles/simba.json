@@ -1,0 +1,54 @@
+{
+  "id": "simba",
+  "name": "GKN Simba",
+  "aliases": [
+    "Simba",
+    "FS100 Simba"
+  ],
+  "origin": "United Kingdom (GKN), assembled in the Philippines",
+  "type": "apc",
+  "operators": [
+    "phl"
+  ],
+  "crew": 2,
+  "passengers": 10,
+  "dimensions_m": {
+    "length": 5.4,
+    "width": 2.5,
+    "height": 2.2
+  },
+  "weight_t": 10.0,
+  "armament": [
+    "12.7 mm or 7.62 mm in a one-man turret (Simba IFV: 25 mm)"
+  ],
+  "protection": "Game: immune to small-calibre rounds (5.45/5.56/5.8/7.62x39/7.62x51 ball); 7.62x54R and larger penetrate side/rear and disable tyres and engine; any launcher destroys it.",
+  "visual_notes": [
+    "Boxy 4x4 with flat sloped front and large wheels",
+    "Small turret on the roof, side and rear doors",
+    "Workhorse of Philippine counter-insurgency in Mindanao"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Philippine Army green",
+      "palette": [
+        "#4C5536",
+        "#36402A",
+        "#6E6A4A"
+      ]
+    }
+  ],
+  "variants": [
+    "Simba APC",
+    "Simba IFV (25 mm)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/GKN_Simba",
+    "https://commons.wikimedia.org/wiki/Category:GKN_Simba"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/GKN_Simba",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Philippine_Army"
+  ]
+}

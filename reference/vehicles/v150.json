@@ -1,0 +1,67 @@
+{
+  "id": "v150",
+  "name": "Cadillac Gage V-150 Commando",
+  "aliases": [
+    "V-150",
+    "Commando",
+    "LAV-150"
+  ],
+  "origin": "United States",
+  "type": "apc",
+  "operators": [
+    "phl",
+    "vnm",
+    "twn"
+  ],
+  "crew": 3,
+  "passengers": 9,
+  "dimensions_m": {
+    "length": 5.7,
+    "width": 2.3,
+    "height": 2.5
+  },
+  "weight_t": 10.0,
+  "armament": [
+    "Twin 7.62 mm or 12.7 mm turret; 20/90 mm turret versions"
+  ],
+  "protection": "Cadloy steel, amphibious. Game: immune to small-calibre rounds (5.45/5.56/5.8/7.62x39/7.62x51 ball); 7.62x54R and larger penetrate side/rear and disable tyres and engine; any launcher destroys it.",
+  "visual_notes": [
+    "Boat-shaped 4x4 with a sharp V nose and sloped sides",
+    "Large wheels at the extreme ends of the hull, side doors",
+    "Small turret or open MG ring; Philippine and Taiwanese MP use, Vietnamese captured stock"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Philippine Army green",
+      "palette": [
+        "#4C5536",
+        "#36402A",
+        "#6E6A4A"
+      ]
+    },
+    {
+      "name": "ROC Army digital/three-tone",
+      "palette": [
+        "#4F5A3B",
+        "#6B5C3F",
+        "#2A2C22",
+        "#868063"
+      ]
+    }
+  ],
+  "variants": [
+    "V-150",
+    "V-150S",
+    "LAV-150"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Cadillac_Gage_Commando",
+    "https://commons.wikimedia.org/wiki/Category:Cadillac_Gage_Commando"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Cadillac_Gage_Commando",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Philippine_Army"
+  ]
+}

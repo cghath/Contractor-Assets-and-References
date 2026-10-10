@@ -1,0 +1,56 @@
+{
+  "id": "ka52",
+  "name": "Kamov Ka-52 Alligator",
+  "aliases": [
+    "Ka-52M"
+  ],
+  "origin": "Russia",
+  "type": "attack_heli",
+  "operators": [
+    "rus"
+  ],
+  "crew": 2,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 13.53,
+    "width": 14.5,
+    "height": 4.93
+  },
+  "weight_t": 10.4,
+  "armament": [
+    "30 mm 2A42 cannon on starboard side",
+    "Vikhr / 9M120 Ataka ATGM",
+    "S-8 80 mm rocket pods",
+    "LMUR long-range missile (Ka-52M)"
+  ],
+  "protection": "Armoured side-by-side cockpit, ejection seats. Game: cockpit/engine armour stops small-calibre; 7.62x54R and 12.7/14.5 mm can damage rotors, engines and tail boom; MANPADS/launchers kill.",
+  "visual_notes": [
+    "Coaxial contra-rotating rotors (two stacked 3-blade rotors), no tail rotor - instantly recognisable",
+    "Side-by-side two-seat cockpit, wide bulbous nose with ball-turret optics (GOES-451) under the chin",
+    "Twin vertical tail fins on a short tail boom; stub wings with 4 pylons and wingtip countermeasure pods",
+    "Cannon mounted on the right fuselage side"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Russian Aerospace Forces grey-green",
+      "palette": [
+        "#5D6650",
+        "#3E4436",
+        "#9AA08C"
+      ]
+    }
+  ],
+  "variants": [
+    "Ka-52",
+    "Ka-52M"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Kamov_Ka-50",
+    "https://commons.wikimedia.org/wiki/Category:Kamov_Ka-52"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Kamov_Ka-50"
+  ]
+}

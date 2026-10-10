@@ -1,0 +1,81 @@
+{
+  "id": "ch47",
+  "name": "Boeing CH-47 Chinook",
+  "aliases": [
+    "CH-47F",
+    "Chinook"
+  ],
+  "origin": "United States",
+  "type": "transport_heli",
+  "operators": [
+    "ita",
+    "esp",
+    "nld",
+    "grc",
+    "usa",
+    "gbr",
+    "can",
+    "aus",
+    "jpn",
+    "kor"
+  ],
+  "crew": 3,
+  "passengers": 33,
+  "dimensions_m": {
+    "length": 15.87,
+    "width": 3.78,
+    "height": 5.7
+  },
+  "weight_t": 22.7,
+  "armament": [
+    "Door-gun 7.62 mm M240 / M134 and ramp gun"
+  ],
+  "protection": "Crashworthy seats, some armour on cockpit. Game: airframe is not armoured against heavy MGs; 7.62x54R and larger damage it, 12.7/14.5 mm and MANPADS bring it down; small-calibre rounds only to cockpit glass if the game enables that.",
+  "visual_notes": [
+    "Tandem twin-rotor heavy lift helicopter (two 3-blade rotors)",
+    "Long rectangular fuselage with rear ramp",
+    "Fuel sponsons along lower sides; 4 wheels",
+    "CH-47F has squarer cockpit avionics fairings"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Olive drab",
+      "palette": [
+        "#4B5320",
+        "#3B4219"
+      ]
+    },
+    {
+      "name": "Helicopter grey",
+      "palette": [
+        "#5F6468",
+        "#4A4E52"
+      ]
+    },
+    {
+      "name": "Desert sand",
+      "palette": [
+        "#C8B48A",
+        "#A8956C"
+      ]
+    }
+  ],
+  "variants": [
+    "CH-47C",
+    "CH-47D/SD",
+    "CH-47F",
+    "ICH-47F (Italy)",
+    "Chinook HC6 (UK)",
+    "CH-47J/JA (JPN, Kawasaki licence)"
+  ],
+  "existing_model": null,
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Boeing_CH-47_Chinook",
+    "https://commons.wikimedia.org/wiki/Category:Boeing CH-47 Chinook"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Boeing_CH-47_Chinook",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Spanish_Army"
+  ]
+}

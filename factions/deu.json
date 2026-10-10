@@ -1,0 +1,424 @@
+{
+  "id": "deu",
+  "name": "Germany",
+  "short": "DEU",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#000000",
+    "#DD0000",
+    "#FFCE00"
+  ],
+  "blocs": [
+    "nato",
+    "eu",
+    "e3",
+    "weimar_triangle"
+  ],
+  "campaign_tier": "mid",
+  "alignment_to_player": "friendly",
+  "player_client": true,
+  "relations": {
+    "player": 25,
+    "usa": 75,
+    "gbr": 85,
+    "can": 80,
+    "aus": 70,
+    "ukr": 85,
+    "pol": 70,
+    "est": 80,
+    "lva": 80,
+    "ltu": 85,
+    "rou": 70,
+    "jpn": 60,
+    "kor": 55,
+    "isr": 55,
+    "tur": 40,
+    "sau": 30,
+    "are": 45,
+    "qat": 35,
+    "egy": 35,
+    "jor": 55,
+    "irq": 35,
+    "krg_peshmerga": 55,
+    "sdf": 30,
+    "syr": 5,
+    "pse_pa": 35,
+    "rus": -85,
+    "blr": -65,
+    "irn": -55,
+    "prk": -60,
+    "chn": -15,
+    "africa_corps": -60,
+    "sahel_aes": -30,
+    "afg_taliban": -60,
+    "isis": -100,
+    "isis_k": -95,
+    "al_qaeda": -100,
+    "aqap": -90,
+    "al_shabaab": -90,
+    "jnim": -90,
+    "hamas": -85,
+    "pij": -85,
+    "hezbollah": -65,
+    "houthis": -70,
+    "iraqi_militias": -55,
+    "fra": 85,
+    "ita": 85,
+    "esp": 85,
+    "nld": 95,
+    "bel": 85,
+    "nor": 85,
+    "dnk": 85,
+    "swe": 85,
+    "fin": 85,
+    "grc": 85
+  },
+  "theatres": [
+    "baltic_coast",
+    "suwalki_gap",
+    "mesopotamia",
+    "lebanon_south",
+    "yemen_red_sea",
+    "alpine_europe"
+  ],
+  "languages": [
+    "German"
+  ],
+  "callout_language": "German",
+  "doctrine": {
+    "summary": "Heavy armoured and mechanised army rebuilding after 2022; Panzer Brigade 45 permanently stationed in Lithuania. Strong in armour, artillery and engineering.",
+    "squad_size": 10,
+    "fireteam": "Gruppe: leader and two Trupps; Panzergrenadier squads fight with their Puma or Marder crew.",
+    "tactics": [
+      "combined arms with tanks and IFVs",
+      "deliberate attack with artillery preparation",
+      "mission command (Auftragstaktik)",
+      "engineer obstacles and breaching"
+    ],
+    "ai_tuning": {
+      "aggression": 0.55,
+      "discipline": 0.9,
+      "suppression_resistance": 0.75,
+      "flanking": 0.7,
+      "grenade_use": 0.6,
+      "medical_care": 0.9,
+      "night_capability": 0.85,
+      "marksmanship": 0.8,
+      "morale": 0.75
+    }
+  },
+  "camo": [
+    {
+      "name": "Flecktarn",
+      "palette": [
+        "#2E3B24",
+        "#4C5A2E",
+        "#7A7F4E",
+        "#4B3A26",
+        "#141410"
+      ],
+      "use": "standard temperate"
+    },
+    {
+      "name": "Tropentarn",
+      "palette": [
+        "#C5B48A",
+        "#8E7A50",
+        "#5F6A3B"
+      ],
+      "use": "desert"
+    },
+    {
+      "name": "Multitarn",
+      "palette": [
+        "#76735A",
+        "#4D4E3A",
+        "#A69C7D",
+        "#3B3329",
+        "#8F8565",
+        "#C9BE9C"
+      ],
+      "use": "to replace Flecktarn 2028-29; SOF already"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "G36 (5.56x45mm)",
+      "G95A1 / HK416 A8 (5.56x45mm), being introduced"
+    ],
+    "autorifleman": [
+      "MG4 (5.56x45mm)",
+      "MG5 (7.62x51mm)"
+    ],
+    "marksman": [
+      "G28 (7.62x51mm)"
+    ],
+    "grenadier": [
+      "G36 with AG36/AG40 (40mm)"
+    ],
+    "at": [
+      "Panzerfaust 3 (110mm)",
+      "RGW 90 (90mm)",
+      "MELLS / Spike LR (ATGM)"
+    ],
+    "medic": [
+      "G36K (5.56x45mm)"
+    ],
+    "squad_leader": [
+      "G36 (5.56x45mm)"
+    ],
+    "sniper": [
+      "G22 (.300 Win Mag)",
+      "G29 (.338 Lapua Magnum)"
+    ],
+    "sidearm": [
+      "P8 (9x19mm)",
+      "P13 (9x19mm), being introduced"
+    ]
+  },
+  "launchers": [
+    "Panzerfaust 3 (not in game list)",
+    "RGW 90 (not in game list)",
+    "MELLS / Spike LR (ATGM, not in game list)"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "ceramic",
+    "notes": "Game mapping: front/back ceramic plates with aramid vest."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "leopard2a6",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "Leopard 2A6/2A7V in service; 2A8 deliveries under way."
+    },
+    {
+      "vehicle_id": "puma_ifv",
+      "role": "ifv",
+      "prevalence": "signature",
+      "notes": "Puma S1, with more on order."
+    },
+    {
+      "vehicle_id": "boxer",
+      "role": "apc",
+      "prevalence": "signature",
+      "notes": "Boxer 8x8; Schakal (RCT30) on order."
+    },
+    {
+      "vehicle_id": "marder",
+      "role": "ifv",
+      "prevalence": "common",
+      "notes": "Still in service while Puma deliveries continue."
+    },
+    {
+      "vehicle_id": "fuchs",
+      "role": "apc",
+      "prevalence": "uncommon",
+      "notes": "Older 6x6 APC."
+    },
+    {
+      "vehicle_id": "dingo",
+      "role": "mrap",
+      "prevalence": "common",
+      "notes": "Protected patrol vehicle."
+    },
+    {
+      "vehicle_id": "fennek",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Scout car, being replaced by Luchs 2."
+    },
+    {
+      "vehicle_id": "pzh2000",
+      "role": "artillery",
+      "prevalence": "common",
+      "notes": "155 mm self-propelled howitzer."
+    },
+    {
+      "vehicle_id": "m270",
+      "role": "mlrs",
+      "prevalence": "uncommon",
+      "notes": "MARS II, part of fleet donated to Ukraine."
+    },
+    {
+      "vehicle_id": "tiger",
+      "role": "attack_heli",
+      "prevalence": "uncommon",
+      "notes": "Tiger UHT; to retire around 2030s."
+    },
+    {
+      "vehicle_id": "nh90",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": "NH90 TTH."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "deu_rifle_squad",
+      "name": "German rifle squad (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "deu_mech_squad",
+      "name": "German mechanised squad",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 2
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "puma_ifv"
+    },
+    {
+      "id": "deu_recon_team",
+      "name": "German recon / sniper pair team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "sniper",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "fennek"
+    }
+  ],
+  "support_assets": [
+    "PzH 2000 artillery",
+    "Tiger CAS",
+    "Heron TP drones",
+    "Skyranger 30 counter-drone",
+    "engineer bridging"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 20,
+        "unlocks": [
+          "service rifle and ammunition",
+          "uniforms in national camo",
+          "light helmet and vest"
+        ]
+      },
+      {
+        "rep": 40,
+        "unlocks": [
+          "optics and NVGs",
+          "medium armour",
+          "RGW 90 launcher"
+        ]
+      },
+      {
+        "rep": 60,
+        "unlocks": [
+          "marksman and sniper rifles",
+          "heavy armour",
+          "Fennek (light vehicle)"
+        ]
+      },
+      {
+        "rep": 80,
+        "unlocks": [
+          "Boxer (armoured transport)",
+          "fire-support call-ins on contracts"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "counter-terrorist raid",
+      "hostage / personnel recovery",
+      "convoy escort",
+      "HVT capture",
+      "recover lost equipment or sensitive kit",
+      "train and accompany partner forces",
+      "security of embassy or base",
+      "counter-drone site defence",
+      "Baltic deterrence support",
+      "recovery of NATO equipment"
+    ],
+    "as_target": [
+      "only if the player works for this nation's enemies: sabotage a logistics depot",
+      "only if the player works for this nation's enemies: ambush a supply convoy"
+    ]
+  },
+  "notes": "Germany is replacing its camouflage pattern and rifle. Brigade 45 in Lithuania makes the Baltic/Suwalki theatres its main area. Contributes to Iraq training missions and UNIFIL maritime.",
+  "proposed": [
+    "campaign_tier",
+    "relations.player",
+    "doctrine.ai_tuning",
+    "unit_templates",
+    "player_trade.rep_tiers",
+    "contract_types",
+    "body_armor (game tier mapping)",
+    "vehicles[].prevalence (game weighting)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Future_equipment_of_the_German_Army",
+    "https://en.wikipedia.org/wiki/German_Army",
+    "https://en.wikipedia.org/wiki/Leopard_2",
+    "https://en.wikipedia.org/wiki/Puma_(IFV)"
+  ]
+}

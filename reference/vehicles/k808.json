@@ -1,0 +1,59 @@
+{
+  "id": "k808",
+  "name": "K806 / K808 White Tiger",
+  "aliases": [
+    "Baekho",
+    "White Tiger",
+    "K806",
+    "K808"
+  ],
+  "origin": "South Korea (Hyundai Rotem)",
+  "type": "apc",
+  "operators": [
+    "kor"
+  ],
+  "crew": 2,
+  "passengers": 9,
+  "dimensions_m": {
+    "length": 7.4,
+    "width": 2.7,
+    "height": 2.4
+  },
+  "weight_t": 20.0,
+  "armament": [
+    "12.7 mm K6 RWS (K806)",
+    "40 mm AGL / 12.7 mm turret (K808)"
+  ],
+  "protection": "Steel armour, V-hull optional, amphibious (K808). Game: immune to small-calibre rounds (5.45/5.56/5.8/7.62x39/7.62x51 ball); 7.62x54R and larger penetrate side/rear and disable tyres and engine; any launcher destroys it.",
+  "visual_notes": [
+    "Angular 6x6 (K806) or 8x8 (K808) hull with a sharply sloped nose",
+    "Small one-man turret/RWS mid-roof, rear ramp",
+    "Equips the ROK Army's 'Army TIGER' mechanised infantry brigades"
+  ],
+  "colour_schemes": [
+    {
+      "name": "ROK Army four-colour",
+      "palette": [
+        "#4C5A36",
+        "#6E5B3E",
+        "#22231D",
+        "#8A8466"
+      ]
+    }
+  ],
+  "variants": [
+    "K806 (6x6)",
+    "K808 (8x8)",
+    "K808 command/ambulance"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Hyundai_Rotem_KW1",
+    "https://commons.wikimedia.org/wiki/Category:Hyundai_Rotem_KW2"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Hyundai_Rotem_KW1",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Republic_of_Korea_Army"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "id": "sisu_pasi",
+  "name": "Sisu Pasi",
+  "aliases": [
+    "XA-180",
+    "XA-185",
+    "XA-186",
+    "XA-203"
+  ],
+  "origin": "Finland",
+  "type": "apc",
+  "operators": [
+    "fin",
+    "nor",
+    "swe",
+    "est"
+  ],
+  "crew": 2,
+  "passengers": 10,
+  "dimensions_m": {
+    "length": 7.35,
+    "width": 2.9,
+    "height": 2.3
+  },
+  "weight_t": 15.0,
+  "armament": [
+    "12.7 mm ITKK 96 (NSV-based) or 7.62 mm"
+  ],
+  "protection": "Light steel armour. Game: immune to small-calibre rounds; 7.62x54R AP and larger can penetrate side/rear and disable wheels/engine; every launcher in the game list penetrates.",
+  "visual_notes": [
+    "6x6 with steep sloped nose and flat-topped boxy hull",
+    "One front axle and two closely spaced rear axles",
+    "Twin rear doors, roof hatches, ring-mounted 12.7 mm",
+    "Commonly in Finnish three-tone or white winter wash",
+    "6x6 with sloped front, flat roof and big wheels",
+    "Twin rear doors"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Finnish three-tone",
+      "palette": [
+        "#4F5A3A",
+        "#2F3526",
+        "#7A7457"
+      ]
+    },
+    {
+      "name": "Winter whitewash",
+      "palette": [
+        "#E6E6E0",
+        "#4A5838",
+        "#2A2A22"
+      ]
+    }
+  ],
+  "variants": [
+    "XA-180",
+    "XA-185",
+    "XA-186 (NOR)",
+    "XA-203",
+    "XA-188 (EST, ex-NLD)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Sisu_Pasi"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Sisu_Pasi",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Finnish_Army"
+  ]
+}

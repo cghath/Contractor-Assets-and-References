@@ -1,0 +1,424 @@
+{
+  "id": "ltu",
+  "name": "Lithuania",
+  "short": "LTU",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#FDB913",
+    "#006A44",
+    "#C1272D"
+  ],
+  "blocs": [
+    "nato",
+    "eu",
+    "jef",
+    "bucharest_nine",
+    "nb8"
+  ],
+  "campaign_tier": "late",
+  "alignment_to_player": "friendly",
+  "player_client": true,
+  "relations": {
+    "player": 30,
+    "usa": 90,
+    "deu": 95,
+    "gbr": 80,
+    "can": 75,
+    "fra": 75,
+    "nld": 85,
+    "nor": 85,
+    "swe": 85,
+    "fin": 85,
+    "dnk": 85,
+    "pol": 95,
+    "est": 90,
+    "lva": 90,
+    "ukr": 95,
+    "rou": 70,
+    "mda": 75,
+    "geo": 55,
+    "twn": 40,
+    "tur": 50,
+    "rus": -95,
+    "blr": -90,
+    "chn": -50,
+    "irn": -55,
+    "prk": -70,
+    "africa_corps": -60,
+    "isis": -95,
+    "isis_k": -90,
+    "al_qaeda": -95,
+    "aqap": -90,
+    "al_shabaab": -85,
+    "jnim": -85,
+    "hamas": -75,
+    "pij": -75,
+    "hezbollah": -65,
+    "houthis": -65,
+    "iraqi_militias": -55
+  },
+  "theatres": [
+    "suwalki_gap",
+    "baltic_coast",
+    "mesopotamia"
+  ],
+  "languages": [
+    "Lithuanian",
+    "Polish (minority)",
+    "Russian (minority)",
+    "English"
+  ],
+  "callout_language": "Lithuanian",
+  "doctrine": {
+    "summary": "Conscript-and-professional army with the volunteer Riflemen's Union, guarding the Suwalki Gap between Belarus and Kaliningrad. Hosts Germany's permanently based 45th Panzer Brigade. Buying Leopard 2A8, CV90 and CAESAR; already fields Boxer 'Vilkas' and a large JLTV fleet.",
+    "squad_size": 8,
+    "fireteam": "8-man squad in two teams.",
+    "tactics": [
+      "total defence: reservists and volunteer defence league ambush along forest roads",
+      "anti-armour teams with Javelin and Carl Gustaf in depth",
+      "dispersal and camouflage against drones",
+      "NATO forward-presence battlegroup integration",
+      "obstacle belts and pre-planned demolitions as map features"
+    ],
+    "ai_tuning": {
+      "aggression": 0.5,
+      "discipline": 0.8,
+      "suppression_resistance": 0.75,
+      "flanking": 0.7,
+      "grenade_use": 0.55,
+      "medical_care": 0.75,
+      "night_capability": 0.75,
+      "marksmanship": 0.7,
+      "morale": 0.8
+    }
+  },
+  "camo": [
+    {
+      "name": "M05 Misko (Lithuanian woodland, Finnish M05 derived)",
+      "palette": [
+        "#5D6046",
+        "#3E4130",
+        "#7F7A5C",
+        "#292A22"
+      ],
+      "use": "standard"
+    },
+    {
+      "name": "MultiCam",
+      "palette": [
+        "#A08C6A",
+        "#6B6B47",
+        "#4E4433",
+        "#C9B998"
+      ],
+      "use": "special operations"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "HK G36 (5.56x45mm)"
+    ],
+    "autorifleman": [
+      "FN Minimi (5.56x45mm / 7.62x51mm Mk3)",
+      "FN MAG (7.62x51mm)",
+      "MG3 (7.62x51mm)"
+    ],
+    "marksman": [
+      "FN SCAR-H PR (7.62x51mm)"
+    ],
+    "grenadier": [
+      "G36 with AG36 (40x46mm)"
+    ],
+    "at": [
+      "Carl Gustaf M4 (84mm)",
+      "AT4 (84mm)",
+      "M72 LAW (66mm)",
+      "FGM-148 Javelin (team)"
+    ],
+    "medic": [
+      "HK G36K (5.56x45mm)"
+    ],
+    "squad_leader": [
+      "HK G36 with optic (5.56x45mm)"
+    ],
+    "sniper": [
+      "Sako TRG-22 (7.62x51mm)",
+      "Accuracy International AXMC (.338 Lapua Magnum)"
+    ],
+    "sidearm": [
+      "Glock 17 (9x19mm)",
+      "HK SFP9 (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "Carl Gustaf / MAAWS (84mm) [in_game]",
+    "AT4 [in_game]",
+    "FGM-148 Javelin [in_game]",
+    "M72 LAW [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "ceramic",
+    "notes": "Medium tier for regulars; Riflemen's Union often light."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "boxer",
+      "role": "ifv",
+      "prevalence": "signature",
+      "notes": "IFV Vilkas (89 in service, more on order)."
+    },
+    {
+      "vehicle_id": "jltv",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": "About 500 JLTV."
+    },
+    {
+      "vehicle_id": "m113",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "M113A2 and M577 command variants."
+    },
+    {
+      "vehicle_id": "humvee",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "195+."
+    },
+    {
+      "vehicle_id": "pzh2000",
+      "role": "artillery",
+      "prevalence": "common",
+      "notes": "16 active."
+    },
+    {
+      "vehicle_id": "uh60",
+      "role": "transport_heli",
+      "prevalence": "uncommon",
+      "notes": "UH-60M, first delivered October 2025; existing voxel model."
+    },
+    {
+      "vehicle_id": "caesar",
+      "role": "artillery",
+      "prevalence": "rare",
+      "notes": "CAESAR Mk2, 48 on order."
+    },
+    {
+      "vehicle_id": "himars",
+      "role": "mlrs",
+      "prevalence": "rare",
+      "notes": "16 on order."
+    },
+    {
+      "vehicle_id": "leopard2a6",
+      "role": "mbt",
+      "prevalence": "rare",
+      "notes": "Leopard 2A8 (44 on order)."
+    },
+    {
+      "vehicle_id": "cv90",
+      "role": "ifv",
+      "prevalence": "rare",
+      "notes": "CV90 MkIV (100 on order, from 2028)."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "ltu_game_squad",
+      "name": "Lithuanian infantry squad (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "ltu_vilkas_squad",
+      "name": "Vilkas mechanised squad",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "boxer"
+    },
+    {
+      "id": "ltu_jltv_patrol",
+      "name": "JLTV motorised patrol",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 1
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "jltv"
+    },
+    {
+      "id": "ltu_riflemen_team",
+      "name": "Riflemen's Union team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    }
+  ],
+  "support_assets": [
+    "PzH 2000 artillery",
+    "Javelin teams",
+    "German 45th Panzer Brigade (late campaign)",
+    "UH-60M lift",
+    "NASAMS air defence"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 20,
+        "unlocks": [
+          "5.56x45mm ammunition",
+          "M05 Misko uniforms",
+          "light helmet and vest"
+        ]
+      },
+      {
+        "rep": 40,
+        "unlocks": [
+          "HK G36",
+          "optics",
+          "medium armour",
+          "AT4"
+        ]
+      },
+      {
+        "rep": 60,
+        "unlocks": [
+          "FN SCAR-H PR",
+          "Carl Gustaf",
+          "JLTV purchase"
+        ]
+      },
+      {
+        "rep": 80,
+        "unlocks": [
+          "Javelin",
+          "Vilkas hire for one contract",
+          "artillery call-in on contracts"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "border_security_patrol",
+      "counter_sabotage_infrastructure_guard",
+      "convoy_escort",
+      "recover_lost_equipment_or_sensitive_kit",
+      "counter_terror_raid",
+      "train_and_accompany_partner_forces"
+    ],
+    "as_target": [
+      "only if the player works for this nation's enemies: sabotage_logistics_depot",
+      "only if the player works for this nation's enemies: intel_theft"
+    ]
+  },
+  "notes": "Real-world: Lithuania operates JLTV, HMMWV and UH-60M; no Abrams, Bradley, AH-1Z or MaxxPro. Suwalki Gap is its signature theatre. Early hook: NATO Mission Iraq contingent.",
+  "proposed": [
+    "campaign_tier",
+    "alignment_to_player",
+    "relations.player",
+    "doctrine.ai_tuning",
+    "unit_templates",
+    "player_trade.rep_tiers",
+    "contract_types",
+    "body_armor (game tier mapping)",
+    "vehicles[].prevalence (game weighting)",
+    "camo[].palette (approximate hex values)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Lithuanian_Armed_Forces",
+    "https://en.wikipedia.org/wiki/Lithuanian_Land_Forces",
+    "https://theaviationist.com/2025/10/21/first-black-hawks-for-lithuania/",
+    "https://www.joint-forces.com/features/kit-camo/30754-lithuanian-m05-misko-pattern-part-3-opfor"
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "type59",
+  "name": "Type 59 / Al-Zarrar",
+  "aliases": [
+    "Type 59",
+    "Al-Zarrar",
+    "Type 59-II",
+    "WZ-120"
+  ],
+  "origin": "China (Norinco), Al-Zarrar upgrade by HIT Pakistan",
+  "type": "mbt",
+  "operators": [
+    "pak",
+    "vnm",
+    "prk"
+  ],
+  "crew": 4,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 9.0,
+    "width": 3.3,
+    "height": 2.6
+  },
+  "weight_t": 36.0,
+  "armament": [
+    "100 mm rifled gun (Type 59) or 125 mm smoothbore (Al-Zarrar)",
+    "12.7 mm HMG",
+    "7.62 mm coaxial MG"
+  ],
+  "protection": "Cast steel dome turret; Al-Zarrar adds ERA. Game: immune to all small-calibre rounds; 7.62x54R and 12.7/14.5 mm damage optics, stowage and tracks; every launcher in the game (PG-7V, AT4, MAAWS, SMAW, NLAW, Javelin) penetrates from any arc, frontal hull included at close range.",
+  "visual_notes": [
+    "Chinese T-54A copy: rounded dome cast turret, five large road wheels with a gap between the first and second",
+    "Al-Zarrar: ERA blocks on the turret front, new fire control, 125 mm gun with thermal sleeve",
+    "Rear external fuel drums, unditching log"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Pakistan Army disruptive",
+      "palette": [
+        "#B8A57A",
+        "#7B6A47",
+        "#4F5235",
+        "#2E2C22"
+      ]
+    },
+    {
+      "name": "VPA green",
+      "palette": [
+        "#4E5B39",
+        "#3A4429",
+        "#262B1D"
+      ]
+    },
+    {
+      "name": "KPA dark olive",
+      "palette": [
+        "#4A5233",
+        "#353B25",
+        "#1F2217"
+      ]
+    }
+  ],
+  "variants": [
+    "Type 59",
+    "Type 59-II",
+    "Al-Zarrar (PAK)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Type_59_tank",
+    "https://en.wikipedia.org/wiki/Al-Zarrar",
+    "https://commons.wikimedia.org/wiki/Category:Type_59_tank"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Type_59_tank",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Pakistan_Army",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Vietnam_People%27s_Ground_Forces"
+  ]
+}

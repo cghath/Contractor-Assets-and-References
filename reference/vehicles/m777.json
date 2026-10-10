@@ -1,0 +1,64 @@
+{
+  "id": "m777",
+  "name": "M777 howitzer",
+  "aliases": [
+    "M777A2"
+  ],
+  "origin": "United Kingdom / United States",
+  "type": "artillery",
+  "operators": [
+    "usa",
+    "can",
+    "aus",
+    "ind",
+    "ukr",
+    "sau"
+  ],
+  "crew": 8,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 9.5,
+    "width": 2.77,
+    "height": 2.26
+  },
+  "weight_t": 4.2,
+  "armament": [
+    "155 mm L39 howitzer"
+  ],
+  "protection": "Unarmoured towed gun. Unarmoured or lightly armoured; game rule still treats the vehicle body as immune to small-calibre, but 7.62x54R and up penetrate; occupants and tyres exposed.",
+  "visual_notes": [
+    "Very low titanium carriage with four splayed trail legs",
+    "Long barrel with muzzle brake",
+    "Two wheels raised off the ground when firing"
+  ],
+  "colour_schemes": [
+    {
+      "name": "US desert tan (CARC 686A)",
+      "palette": [
+        "#C2B28A",
+        "#A89670",
+        "#4A4436"
+      ]
+    },
+    {
+      "name": "US forest green (CARC 383)",
+      "palette": [
+        "#4B5320",
+        "#3A4119",
+        "#26281A"
+      ]
+    }
+  ],
+  "variants": [
+    "M777A1",
+    "M777A2"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/M777_howitzer"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/M777_howitzer"
+  ]
+}

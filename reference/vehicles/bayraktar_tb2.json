@@ -1,0 +1,53 @@
+{
+  "id": "bayraktar_tb2",
+  "name": "Bayraktar TB2",
+  "aliases": [
+    "TB2"
+  ],
+  "origin": "Turkey",
+  "type": "uav",
+  "operators": [
+    "aze"
+  ],
+  "crew": 0,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 6.5,
+    "width": 12.0,
+    "height": 2.2
+  },
+  "weight_t": 0.7,
+  "armament": [
+    "MAM-L / MAM-C smart micro-munitions (4 hardpoints)"
+  ],
+  "protection": "Unarmoured. Game: any hit from any calibre can down it; jamming (EW) can force it to land or drift.",
+  "visual_notes": [
+    "Slender white fuselage with a long straight high-aspect wing",
+    "Inverted-V tail booms, rear pusher propeller",
+    "Ball EO/IR turret under the nose"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Light grey",
+      "palette": [
+        "#D9DCDD",
+        "#9DA3A6",
+        "#3A3F42"
+      ]
+    }
+  ],
+  "variants": [
+    "TB2",
+    "TB2S"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Baykar_Bayraktar_TB2",
+    "https://commons.wikimedia.org/wiki/Category:Bayraktar_TB2"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Baykar_Bayraktar_TB2",
+    "https://caliber.az/en/post/military-parade-in-baku-structure-of-armaments-and-their-practical-significance"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "dingo",
+  "name": "ATF Dingo",
+  "aliases": [
+    "Dingo 2"
+  ],
+  "origin": "Germany",
+  "type": "mrap",
+  "operators": [
+    "deu",
+    "bel"
+  ],
+  "crew": 2,
+  "passengers": 6,
+  "dimensions_m": {
+    "length": 6.08,
+    "width": 2.39,
+    "height": 2.5
+  },
+  "weight_t": 12.5,
+  "armament": [
+    "FLW 200 RWS with 7.62 mm, 12.7 mm or 40 mm GMG"
+  ],
+  "protection": "Mine and IED protected monocoque on Unimog chassis. Belgium is replacing it with Griffon. Game: immune to small-calibre rounds; 7.62x54R AP and larger can penetrate side/rear and disable wheels/engine; every launcher in the game list penetrates.",
+  "visual_notes": [
+    "4x4 Unimog-based MRAP with a long armoured cab-and-cabin box",
+    "Thick armoured side windows, rear door",
+    "RWS on roof"
+  ],
+  "colour_schemes": [
+    {
+      "name": "NATO three-tone",
+      "palette": [
+        "#3E4A2E",
+        "#4B3A28",
+        "#1E1E1C"
+      ]
+    },
+    {
+      "name": "Desert sand",
+      "palette": [
+        "#C8B48A",
+        "#A8956C"
+      ]
+    }
+  ],
+  "variants": [
+    "Dingo 1",
+    "Dingo 2 A3/A4"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/ATF_Dingo"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/ATF_Dingo",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Belgian_Army",
+    "https://en.wikipedia.org/wiki/Future_equipment_of_the_German_Army"
+  ]
+}

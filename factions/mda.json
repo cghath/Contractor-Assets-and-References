@@ -1,0 +1,333 @@
+{
+  "id": "mda",
+  "name": "Moldova",
+  "short": "MDA",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#003DA5",
+    "#FFD200",
+    "#CC092F"
+  ],
+  "blocs": [
+    "eu_candidate",
+    "nato_partner",
+    "guam",
+    "constitutionally_neutral"
+  ],
+  "campaign_tier": "mid",
+  "alignment_to_player": "friendly",
+  "player_client": true,
+  "relations": {
+    "player": 20,
+    "rou": 95,
+    "ukr": 80,
+    "usa": 65,
+    "fra": 75,
+    "deu": 70,
+    "pol": 65,
+    "gbr": 60,
+    "ltu": 65,
+    "est": 60,
+    "lva": 60,
+    "ita": 60,
+    "tur": 50,
+    "aze": 30,
+    "geo": 40,
+    "rus": -70,
+    "blr": -40,
+    "chn": 0,
+    "isis": -80,
+    "al_qaeda": -80
+  },
+  "theatres": [
+    "black_sea_coast"
+  ],
+  "languages": [
+    "Romanian",
+    "Russian",
+    "Gagauz"
+  ],
+  "callout_language": "Romanian",
+  "doctrine": {
+    "summary": "Small, constitutionally neutral National Army (non-NATO, NATO Partnership for Peace, EU candidate with accession talks opened 2024). Mostly Soviet-era kit being slowly modernised with EU and partner aid (Piranha IIIH from Germany, Humvees, Piorun MANPADS). A Russian troop contingent remains in the breakaway Transnistria region; hybrid pressure (energy, disinformation, airspace violations by drones) is the main threat.",
+    "squad_size": 9,
+    "fireteam": "Soviet-pattern 9-man squad around a vehicle.",
+    "tactics": [
+      "static checkpoint and border security",
+      "infrastructure protection",
+      "peacekeeping-style patrols",
+      "limited counter-drone"
+    ],
+    "ai_tuning": {
+      "aggression": 0.35,
+      "discipline": 0.6,
+      "suppression_resistance": 0.5,
+      "flanking": 0.45,
+      "grenade_use": 0.45,
+      "medical_care": 0.5,
+      "night_capability": 0.4,
+      "marksmanship": 0.5,
+      "morale": 0.55
+    }
+  },
+  "camo": [
+    {
+      "name": "US Woodland (M81)",
+      "palette": [
+        "#7B6E4D",
+        "#4F5A33",
+        "#3E2F22",
+        "#1A1A16"
+      ],
+      "use": "standard issue"
+    },
+    {
+      "name": "Romanian M2017 (donated kit)",
+      "palette": [
+        "#6E6E4C",
+        "#4A5236",
+        "#5A4532",
+        "#26251E"
+      ],
+      "use": "body armour and some units"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "AKM (7.62x39mm)",
+      "AK-74 (5.45x39mm)",
+      "PM md. 63/65 (7.62x39mm)"
+    ],
+    "autorifleman": [
+      "RPK (7.62x39mm)",
+      "PKM (7.62x54R)",
+      "M240 (7.62x51mm, donated)"
+    ],
+    "marksman": [
+      "SVD (7.62x54R)",
+      "PSL (7.62x54R)"
+    ],
+    "grenadier": [
+      "AKM with GP-25 (40mm)"
+    ],
+    "at": [
+      "RPG-7 (PG-7V, OG-7V)",
+      "RPG-22",
+      "SPG-9 crew"
+    ],
+    "medic": [
+      "AKS-74U (5.45x39mm)"
+    ],
+    "squad_leader": [
+      "AK-74 (5.45x39mm)"
+    ],
+    "sniper": [
+      "M110 (7.62x51mm)",
+      "M107A1 (12.7x99mm)"
+    ],
+    "sidearm": [
+      "PM Makarov (9x18mm)",
+      "Glock 17 (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "RPG-7 (PG-7V, OG-7V) [in_game]",
+    "RPG-22 [not_in_game]",
+    "SPG-9 recoilless [not_in_game]",
+    "9K111 Fagot / 9M113 Konkurs ATGM [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "light",
+    "vest": "light",
+    "plates": "steel",
+    "notes": "Older helmets and soft vests (light) for most troops; donated plate carriers with front/back plates (medium) for special forces and peacekeepers."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "piranha",
+      "role": "apc",
+      "prevalence": "signature",
+      "notes": "Piranha IIIH donated by Germany (19, more planned) plus 5 Piranha V."
+    },
+    {
+      "vehicle_id": "humvee",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": "129 HMMWV with MAK armour."
+    },
+    {
+      "vehicle_id": "tab71",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "TAB-71M (Romanian BTR-60 licence)."
+    },
+    {
+      "vehicle_id": "bmd1",
+      "role": "ifv",
+      "prevalence": "common",
+      "notes": "BMD-1/1P (~50), airborne legacy."
+    },
+    {
+      "vehicle_id": "mtlb",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "MT-LB/MT-LBu, some with ZU-23-2."
+    },
+    {
+      "vehicle_id": "atmos",
+      "role": "artillery",
+      "prevalence": "uncommon",
+      "notes": "ATMOS 2000 155 mm (4)."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "mda_game_squad",
+      "name": "Moldovan infantry squad (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "mda_checkpoint",
+      "name": "Checkpoint section",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "humvee"
+    },
+    {
+      "id": "mda_piranha_squad",
+      "name": "Piranha IIIH squad",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "piranha"
+    }
+  ],
+  "support_assets": [
+    "120 mm mortars",
+    "ATMOS 155 mm (rare)",
+    "DJI-class recon quadcopters",
+    "Piorun MANPADS"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 20,
+        "unlocks": [
+          "7.62x39mm and 7.62x54R ammunition",
+          "AKM",
+          "light helmet and vest"
+        ]
+      },
+      {
+        "rep": 40,
+        "unlocks": [
+          "PKM",
+          "SVD",
+          "RPG-7 (PG-7V, OG-7V)"
+        ]
+      },
+      {
+        "rep": 60,
+        "unlocks": [
+          "Humvee purchase (MAK armour)",
+          "recon quadcopter"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "border_security_patrol",
+      "counter_smuggling_raid",
+      "counter_sabotage_infrastructure_guard",
+      "drone_debris_recovery_and_site_security",
+      "train_and_accompany_partner_forces",
+      "election_security_support"
+    ],
+    "as_target": [
+      "only if the player works for this nation's enemies: sabotage_logistics_depot"
+    ]
+  },
+  "notes": "Non-NATO and constitutionally neutral; closest partner is Romania. Transnistria (with a Russian Operational Group) is not a canonical faction; Russian-aligned units there should use the rus faction. PKM and SVD fire 7.62x54R, which in game can disable vehicles. Terrorist relations limited to the global groups.",
+  "proposed": [
+    "campaign_tier",
+    "alignment_to_player",
+    "relations.player",
+    "doctrine.ai_tuning",
+    "unit_templates",
+    "player_trade.rep_tiers",
+    "contract_types",
+    "body_armor (game tier mapping)",
+    "vehicles[].prevalence (game weighting)",
+    "camo[].palette (approximate hex values)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Moldovan_Armed_Forces",
+    "https://en.wikipedia.org/wiki/Armed_Forces_of_Moldova",
+    "https://en.wikipedia.org/wiki/Moldovan_Ground_Forces",
+    "https://www.janes.com/osint-insights/defence-news/land/moldova-receives-piranha-apcs"
+  ]
+}

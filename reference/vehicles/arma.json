@@ -1,0 +1,66 @@
+{
+  "id": "arma",
+  "name": "Otokar Arma",
+  "aliases": [
+    "Arma 6x6",
+    "Arma 8x8",
+    "Rabdan"
+  ],
+  "origin": "Turkey (Otokar)",
+  "type": "apc",
+  "operators": [
+    "tur",
+    "est",
+    "are"
+  ],
+  "crew": 2,
+  "passengers": 8,
+  "dimensions_m": {
+    "length": 6.4,
+    "width": 2.7,
+    "height": 2.2
+  },
+  "weight_t": 18.5,
+  "armament": [
+    "Remote or manned turret options: 7.62/12.7/14.5 mm MG, 40 mm AGL or 30 mm cannon"
+  ],
+  "protection": "Monocoque steel hull, amphibious. Game: immune to 5.56/5.45/7.62x39/7.62x51; 7.62x54R and larger can penetrate side/rear and disable wheels, engine and optics; every launcher in the game list penetrates.",
+  "visual_notes": [
+    "Tall slab-sided 6x6 box hull with three evenly spaced axles and large single tyres",
+    "Sloped nose with small driver windows; two propellers under the rear for swimming",
+    "Remote weapon station on the roof; large rear ramp/door",
+    "Estonian vehicles in NATO three-tone"
+  ],
+  "colour_schemes": [
+    {
+      "name": "NATO three-tone",
+      "palette": [
+        "#4A5130",
+        "#55473A",
+        "#232323"
+      ]
+    },
+    {
+      "name": "Desert tan",
+      "palette": [
+        "#B59E74",
+        "#8C7A55",
+        "#5E5440"
+      ]
+    }
+  ],
+  "variants": [
+    "Arma 6x6 (EST)",
+    "Arma 8x8",
+    "Rabdan (UAE 8x8)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Otokar_Arma"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Otokar_Arma",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Estonian_Defence_Forces"
+  ]
+}

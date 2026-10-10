@@ -1,0 +1,60 @@
+{
+  "id": "foxhound",
+  "name": "Foxhound (Ocelot)",
+  "aliases": [
+    "Ocelot",
+    "LPPV"
+  ],
+  "origin": "United Kingdom",
+  "type": "mrap",
+  "operators": [
+    "gbr"
+  ],
+  "crew": 2,
+  "passengers": 4,
+  "dimensions_m": {
+    "length": 5.32,
+    "width": 2.1,
+    "height": 2.35
+  },
+  "weight_t": 7.5,
+  "armament": [
+    "7.62 mm GPMG or 12.7 mm HMG on roof mount"
+  ],
+  "protection": "V-shaped underbody 'skateboard' chassis with swappable crew pod. Game rule: immune to small-calibre; 7.62x54R AP and 12.7/14.5 mm can disable tyres, optics and gunner; launchers penetrate.",
+  "visual_notes": [
+    "Compact 4x4, wheels pushed to the corners",
+    "Wedge-shaped crew pod with steep windscreen",
+    "Short bonnet, angular sides",
+    "Roof hatch weapon mount"
+  ],
+  "colour_schemes": [
+    {
+      "name": "British green/black",
+      "palette": [
+        "#3E4A32",
+        "#1E2118"
+      ]
+    },
+    {
+      "name": "British desert sand",
+      "palette": [
+        "#C8B48A",
+        "#9C8560"
+      ]
+    }
+  ],
+  "variants": [
+    "Foxhound patrol",
+    "Foxhound command"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/General_Dynamics_Ocelot"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/General_Dynamics_Ocelot",
+    "https://ukdefencejournal.org.uk/the-direction-of-the-british-armys-combat-vehicle-fleet/"
+  ]
+}

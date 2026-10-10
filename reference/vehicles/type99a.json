@@ -1,0 +1,71 @@
+{
+  "id": "type99a",
+  "name": "ZTZ-99A (Type 99A)",
+  "aliases": [
+    "Type 99A",
+    "ZTZ-99A",
+    "Type 99",
+    "ZTZ-99"
+  ],
+  "origin": "China (Norinco)",
+  "type": "mbt",
+  "operators": [
+    "chn"
+  ],
+  "crew": 3,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 11.0,
+    "width": 3.5,
+    "height": 2.4
+  },
+  "weight_t": 55.0,
+  "armament": [
+    "125 mm ZPT-98 smoothbore with carousel autoloader (gun-launched ATGM capable)",
+    "12.7 mm QJC-88 HMG (remote/commander)",
+    "7.62 mm coaxial MG"
+  ],
+  "protection": "Composite armour with wedge-shaped FY-5 ERA on turret front and side skirts, laser warning and soft-kill dazzler. Game: immune to all small-calibre rounds; 7.62x54R and 12.7/14.5 mm only damage optics, external stowage, fuel drums and tracks (mobility kill on repeated hits); PG-7V/AT4/MAAWS/SMAW/NLAW penetrate side, rear and turret roof; Javelin top-attack penetrates; frontal arc resists unguided launchers.",
+  "visual_notes": [
+    "Low wide hull, length 11 m gun forward (hull ~7.6 m)",
+    "Arrow-head wedge turret front covered by flat ERA blocks; tall rectangular turret bustle box",
+    "Six road wheels per side, ERA-covered side skirts on the front half",
+    "Laser countermeasure/dazzler box on turret roof behind the commander; independent commander sight",
+    "Long 125 mm gun with thermal sleeve and fume extractor; QJC-88 HMG on a cupola mount"
+  ],
+  "colour_schemes": [
+    {
+      "name": "PLA digital woodland (vehicle)",
+      "palette": [
+        "#4E5B3A",
+        "#6E7552",
+        "#2F3626",
+        "#8A8762"
+      ]
+    },
+    {
+      "name": "PLA digital desert (Xinjiang/Tibet)",
+      "palette": [
+        "#B49E73",
+        "#8C7752",
+        "#5E5038",
+        "#D2C29A"
+      ]
+    }
+  ],
+  "variants": [
+    "Type 99",
+    "Type 99A",
+    "Type 99B (reported)"
+  ],
+  "existing_model": null,
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Type_99_tank",
+    "https://commons.wikimedia.org/wiki/Category:Type_99_tank"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Type_99_tank",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_People%27s_Liberation_Army_Ground_Force"
+  ]
+}

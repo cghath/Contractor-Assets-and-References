@@ -1,0 +1,66 @@
+{
+  "id": "bv206",
+  "name": "Bandvagn 206",
+  "aliases": [
+    "Bv206",
+    "Bv206S"
+  ],
+  "origin": "Sweden",
+  "type": "other",
+  "operators": [
+    "swe",
+    "nor",
+    "fin",
+    "ita",
+    "esp",
+    "deu",
+    "lva"
+  ],
+  "crew": 1,
+  "passengers": 11,
+  "dimensions_m": {
+    "length": 6.9,
+    "width": 1.87,
+    "height": 2.4
+  },
+  "weight_t": 4.5,
+  "armament": [
+    "Usually unarmed; MG ring on some"
+  ],
+  "protection": "Unarmoured fibreglass bodies (Bv206S armoured). Game: thin-skinned; the vehicle-armour immunity applies only to the cab glass/plates if fitted. Treat as soft-skin except for armoured variants.",
+  "visual_notes": [
+    "Two articulated tracked cars joined by a steering unit",
+    "Boxy cabins with many windows, rubber tracks",
+    "Very common in snow and Alpine units"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Olive drab",
+      "palette": [
+        "#4B5320",
+        "#3B4219"
+      ]
+    },
+    {
+      "name": "Winter whitewash",
+      "palette": [
+        "#E6E6E0",
+        "#4A5838",
+        "#2A2A22"
+      ]
+    }
+  ],
+  "variants": [
+    "Bv206",
+    "Bv206S (armoured)"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Bandvagn_206"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Bandvagn_206",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Norwegian_Army"
+  ]
+}

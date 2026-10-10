@@ -1,0 +1,65 @@
+{
+  "id": "matv",
+  "name": "Oshkosh M-ATV",
+  "aliases": [
+    "MRAP All-Terrain Vehicle",
+    "M1240"
+  ],
+  "origin": "United States",
+  "type": "mrap",
+  "operators": [
+    "usa",
+    "are",
+    "ukr",
+    "afg_taliban"
+  ],
+  "crew": 4,
+  "passengers": 1,
+  "dimensions_m": {
+    "length": 6.27,
+    "width": 2.49,
+    "height": 2.7
+  },
+  "weight_t": 12.5,
+  "armament": [
+    "12.7 mm M2, 7.62 mm M240 or 40 mm Mk 19 in O-GPK turret or CROWS"
+  ],
+  "protection": "MRAP V-hull capsule, TAK-4 independent suspension. Game rule: immune to small-calibre; 7.62x54R AP and 12.7/14.5 mm can disable tyres, optics and gunner; launchers penetrate.",
+  "visual_notes": [
+    "Tall 4x4 with short hood and boxy armoured crew capsule",
+    "Large single tyres, spare on rear",
+    "Small thick windows",
+    "Roof turret with gun shield"
+  ],
+  "colour_schemes": [
+    {
+      "name": "US desert tan (CARC 686A)",
+      "palette": [
+        "#C2B28A",
+        "#A89670",
+        "#4A4436"
+      ]
+    },
+    {
+      "name": "US forest green (CARC 383)",
+      "palette": [
+        "#4B5320",
+        "#3A4119",
+        "#26281A"
+      ]
+    }
+  ],
+  "variants": [
+    "M1240 base",
+    "M1245 SOCOM",
+    "M1240A1 with underbody improvement kit"
+  ],
+  "existing_model": "matv",
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Oshkosh_M-ATV"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Oshkosh_M-ATV"
+  ]
+}

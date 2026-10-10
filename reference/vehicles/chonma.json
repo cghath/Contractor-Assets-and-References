@@ -1,0 +1,74 @@
+{
+  "id": "chonma",
+  "name": "Chonma series (Chonma-ho / Pokpung-ho / Chonma-20)",
+  "aliases": [
+    "Ch'ŏnma-ho",
+    "Chonma-216",
+    "Pokpung-ho",
+    "M-2002",
+    "Chonma-20",
+    "M2020"
+  ],
+  "origin": "North Korea",
+  "type": "mbt",
+  "operators": [
+    "prk"
+  ],
+  "crew": 4,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 9.3,
+    "width": 3.5,
+    "height": 2.4
+  },
+  "weight_t": 40.0,
+  "armament": [
+    "115 mm U-5TS-family smoothbore (Chonma-ho); 125 mm smoothbore (Pokpung-ho / Chonma-20)",
+    "14.5 mm KPV HMG",
+    "7.62 mm coaxial MG",
+    "Igla-type MANPADS launcher on some turrets"
+  ],
+  "protection": "T-62-derived hull; later models add composite turret, ERA and (Chonma-20) a claimed hard-kill active protection system. Game: immune to all small-calibre rounds; 7.62x54R and 12.7/14.5 mm only damage optics, external stowage, fuel drums and tracks (mobility kill on repeated hits); PG-7V/AT4/MAAWS/SMAW/NLAW penetrate side, rear and turret roof; Javelin top-attack penetrates; frontal arc resists unguided launchers. Older Chonma-ho variants use the OLD_MBT rule: every launcher penetrates frontally.",
+  "visual_notes": [
+    "Chonma-ho: T-62 copy with round cast turret, five large road wheels and wide spacing, 115 mm gun with fume extractor",
+    "Pokpung-ho: longer hull with six road wheels, welded angular turret, ERA, KPV on the roof",
+    "Chonma-20 (2025 parade): new boxy welded turret resembling modern Western/Russian designs, APS sensor panels, side skirts with ERA",
+    "KPA tanks often carry Igla launcher tubes and large rear fuel drums"
+  ],
+  "colour_schemes": [
+    {
+      "name": "KPA dark olive",
+      "palette": [
+        "#4A5233",
+        "#353B25",
+        "#1F2217"
+      ]
+    },
+    {
+      "name": "KPA parade three-tone",
+      "palette": [
+        "#56603C",
+        "#7A6B47",
+        "#2B2E22"
+      ]
+    }
+  ],
+  "variants": [
+    "Chonma-ho I-V (T-62 based)",
+    "Chonma-92",
+    "Chonma-214",
+    "Pokpung-ho / Chonma-216",
+    "Chonma-20 (M2020)"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Chonma-ho",
+    "https://en.wikipedia.org/wiki/Pokpung-ho",
+    "https://commons.wikimedia.org/wiki/Category:Chonma-ho"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Chonma-ho",
+    "https://view.asiae.co.kr/en/article/2026032007275998613"
+  ]
+}

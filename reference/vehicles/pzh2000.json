@@ -1,0 +1,67 @@
+{
+  "id": "pzh2000",
+  "name": "Panzerhaubitze 2000",
+  "aliases": [
+    "PzH 2000"
+  ],
+  "origin": "Germany",
+  "type": "artillery",
+  "operators": [
+    "deu",
+    "ita",
+    "nld",
+    "grc",
+    "ltu",
+    "ukr"
+  ],
+  "crew": 5,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 11.67,
+    "width": 3.58,
+    "height": 3.06
+  },
+  "weight_t": 55.8,
+  "armament": [
+    "155 mm L/52 howitzer with automatic loader",
+    "7.62 mm MG3"
+  ],
+  "protection": "Protected against small arms and splinters, add-on roof armour vs bomblets. Game: light armour on cab/turret only; immune to small-calibre rounds, 7.62x54R and larger disable it; launchers destroy it.",
+  "visual_notes": [
+    "Leopard-1-derived tracked chassis with a huge box turret set well back",
+    "Very long 155 mm barrel with large muzzle brake and travel lock",
+    "7 road wheels per side"
+  ],
+  "colour_schemes": [
+    {
+      "name": "NATO three-tone",
+      "palette": [
+        "#3E4A2E",
+        "#4B3A28",
+        "#1E1E1C"
+      ]
+    },
+    {
+      "name": "Greek three-tone",
+      "palette": [
+        "#5A5C3A",
+        "#7A6A48",
+        "#2A2A20"
+      ]
+    }
+  ],
+  "variants": [
+    "PzH 2000NL",
+    "PzH 2000 HEL"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Panzerhaubitze_2000",
+    "https://commons.wikimedia.org/wiki/Category:Panzerhaubitze 2000"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Panzerhaubitze_2000",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Italian_Army"
+  ]
+}

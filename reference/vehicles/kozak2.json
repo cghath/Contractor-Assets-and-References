@@ -1,0 +1,68 @@
+{
+  "id": "kozak2",
+  "name": "Kozak-2",
+  "aliases": [
+    "Kozak-2M",
+    "Kozak-2M1",
+    "Kozak-2M2"
+  ],
+  "origin": "Ukraine (Praktika)",
+  "type": "mrap",
+  "operators": [
+    "ukr"
+  ],
+  "crew": 2,
+  "passengers": 6,
+  "dimensions_m": {
+    "length": 5.48,
+    "width": 1.95,
+    "height": 2.3
+  },
+  "weight_t": 5.5,
+  "armament": [
+    "Usually a roof ring or hatch mount for a 7.62 mm PKM/PKT or 12.7 mm NSV; ATGM variant exists"
+  ],
+  "protection": "Steel monocoque V-hull, mine-resistant cab on an Iveco Eurocargo 4x4 chassis. Seating varies by variant (about 5-10). Game: armoured cab/hull immune to small-calibre rounds; 7.62x54R and larger penetrate and can disable it; any launcher destroys it.",
+  "visual_notes": [
+    "Compact 4x4 armoured box on a truck chassis: short sloped bonnet, flat armoured windscreen panels, tall square passenger body",
+    "Two axles with large single off-road tyres, high ground clearance, V-shaped belly visible from the side",
+    "Rear door with small armoured window, roof hatch with weapon mount",
+    "Dimensions are for the early Kozak-2; the -2M1 is larger and heavier (check photos)",
+    "Often with anti-drone mesh and netting in 2024-2026"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Ukrainian army green with field netting",
+      "palette": [
+        "#4F5534",
+        "#3A4027",
+        "#6B6A45",
+        "#2A2B20"
+      ]
+    },
+    {
+      "name": "National Guard / Border Guard green",
+      "palette": [
+        "#5A6440",
+        "#3E4630",
+        "#2A2B22"
+      ]
+    }
+  ],
+  "variants": [
+    "Kozak-2",
+    "Kozak-2M",
+    "Kozak-2M1",
+    "Kozak-2M2",
+    "ATGM carrier"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Kozak_(armored_personnel_carrier)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Kozak_(armored_personnel_carrier)",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Armed_Forces_of_Ukraine"
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "id": "technical_dshk",
+  "name": "Toyota Hilux technical with DShK",
+  "aliases": [
+    "Hilux technical",
+    "gun truck"
+  ],
+  "origin": "Japan (vehicle) / USSR (gun)",
+  "type": "technical",
+  "operators": [
+    "isis",
+    "al_shabaab",
+    "houthis",
+    "afg_taliban",
+    "jnim",
+    "aqap",
+    "al_qaeda",
+    "iraqi_militias",
+    "sdf",
+    "krg_peshmerga",
+    "som",
+    "syr",
+    "africa_corps"
+  ],
+  "crew": 3,
+  "passengers": 2,
+  "dimensions_m": {
+    "length": 5.3,
+    "width": 1.85,
+    "height": 2.4
+  },
+  "weight_t": 2.5,
+  "armament": [
+    "12.7 mm DShK / DShKM heavy machine gun on pedestal in the bed"
+  ],
+  "protection": "Unarmoured civilian pickup, sometimes with welded plates. Unarmoured or lightly armoured; game rule still treats the vehicle body as immune to small-calibre, but 7.62x54R and up penetrate; occupants and tyres exposed.",
+  "visual_notes": [
+    "Toyota Hilux double or single cab pickup",
+    "Pedestal-mounted DShK with tall tripod/post in the bed, sometimes a gun shield",
+    "Mismatched paint, mud camouflage, flags, spare tyres and jerrycans"
+  ],
+  "colour_schemes": [
+    {
+      "name": "White civilian",
+      "palette": [
+        "#E8E6E0",
+        "#2A2A2A"
+      ]
+    },
+    {
+      "name": "Tan / mud",
+      "palette": [
+        "#B59E78",
+        "#7A6448"
+      ]
+    },
+    {
+      "name": "Red civilian",
+      "palette": [
+        "#9E2A22",
+        "#2A2A2A"
+      ]
+    }
+  ],
+  "variants": [
+    "single cab",
+    "double cab",
+    "Land Cruiser 79 version"
+  ],
+  "existing_model": "technical_dshk",
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Technical_(vehicle)",
+    "https://en.wikipedia.org/wiki/DShK"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Technical_(vehicle)"
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "id": "polaris_mrzr",
+  "name": "Polaris MRZR",
+  "aliases": [
+    "MRZR-D",
+    "MRZR Alpha"
+  ],
+  "origin": "United States",
+  "type": "light",
+  "operators": [
+    "usa",
+    "nzl",
+    "isr",
+    "nor",
+    "est"
+  ],
+  "crew": 2,
+  "passengers": 2,
+  "dimensions_m": {
+    "length": 3.6,
+    "width": 1.5,
+    "height": 1.9
+  },
+  "weight_t": 0.9,
+  "armament": [
+    "Optional pintle 7.62 mm MG"
+  ],
+  "protection": "None. Unarmoured or lightly armoured; game rule still treats the vehicle body as immune to small-calibre, but 7.62x54R and up penetrate; occupants and tyres exposed.",
+  "visual_notes": [
+    "Small open side-by-side ATV with roll cage",
+    "Flat rear cargo bed",
+    "Knobby tyres"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Matte tan",
+      "palette": [
+        "#B29E78",
+        "#2B2B28"
+      ]
+    },
+    {
+      "name": "Matte green",
+      "palette": [
+        "#4E5338",
+        "#2B2B28"
+      ]
+    }
+  ],
+  "variants": [
+    "MRZR-D2",
+    "MRZR-D4",
+    "MRZR Alpha"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Polaris_MRZR"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Polaris_MRZR",
+    "https://defence.govt.nz/news/new-bushmaster-armoured-vehicles-hit-the-production-line"
+  ]
+}

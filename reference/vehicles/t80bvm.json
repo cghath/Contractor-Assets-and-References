@@ -1,0 +1,71 @@
+{
+  "id": "t80bvm",
+  "name": "T-80BVM",
+  "aliases": [
+    "T-80BV",
+    "T-80U",
+    "T-80BVM obr. 2022"
+  ],
+  "origin": "Russia",
+  "type": "mbt",
+  "operators": [
+    "rus",
+    "pak"
+  ],
+  "crew": 3,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 9.65,
+    "width": 3.6,
+    "height": 2.2
+  },
+  "weight_t": 46.0,
+  "armament": [
+    "125 mm 2A46M-1 smoothbore with autoloader",
+    "7.62 mm PKT coaxial",
+    "12.7 mm NSVT/Kord"
+  ],
+  "protection": "Composite + Relikt ERA, rear slat armour. Game: hull and turret immune to all small-calibre and to 7.62x54R/12.7/14.5 mm (those only break optics, searchlights, external MGs and track pins). Kills need launchers: Javelin/NLAW top-attack, AT4/MAAWS/SMAW or RPG-7 PG-7V to side, rear or roof; frontal ERA defeats single-charge PG-7V.",
+  "visual_notes": [
+    "Gas-turbine tank: flat rear deck with large exhaust grille, distinctive high-pitched whine (audio)",
+    "6 road wheels per side (smaller, rubber-tyred) with 5 return rollers - tell-tale versus T-72's 3",
+    "Turret similar to T-72B with Relikt ERA, Sosna-U sight on the roof",
+    "2026: welded anti-drone roof cage, netting, sometimes covered superstructure; Arctic/Northern units in winter wash"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Russian protective green with white Z/V/triangle ID marks",
+      "palette": [
+        "#4A5530",
+        "#3B4428",
+        "#2A2E22",
+        "#F0F0F0"
+      ]
+    },
+    {
+      "name": "Winter whitewash over green",
+      "palette": [
+        "#E4E4DE",
+        "#4A5530",
+        "#2A2E22"
+      ]
+    }
+  ],
+  "variants": [
+    "T-80BV",
+    "T-80U",
+    "T-80BVM (2017)",
+    "T-80BVM obr. 2022 (Relikt)",
+    "T-80UD (PAK, Ukrainian-built)"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/T-80",
+    "https://commons.wikimedia.org/wiki/Category:T-80BVM"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/T-80",
+    "https://www.thedefensenews.com/news-details/Russia-Receives-New-Batch-of-T-90M-T-80BVM-and-T-72B3M-Tanks-With-Anti-Drone-Upgrades/"
+  ]
+}

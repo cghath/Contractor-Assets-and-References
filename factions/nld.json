@@ -1,0 +1,403 @@
+{
+  "id": "nld",
+  "name": "Netherlands",
+  "short": "NLD",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#AE1C28",
+    "#FFFFFF",
+    "#21468B"
+  ],
+  "blocs": [
+    "nato",
+    "eu",
+    "jef",
+    "benelux"
+  ],
+  "campaign_tier": "mid",
+  "alignment_to_player": "friendly",
+  "player_client": true,
+  "relations": {
+    "player": 25,
+    "usa": 75,
+    "gbr": 85,
+    "can": 80,
+    "aus": 70,
+    "ukr": 75,
+    "pol": 75,
+    "est": 80,
+    "lva": 80,
+    "ltu": 80,
+    "rou": 70,
+    "jpn": 60,
+    "kor": 55,
+    "isr": 15,
+    "tur": 40,
+    "sau": 30,
+    "are": 45,
+    "qat": 35,
+    "egy": 35,
+    "jor": 55,
+    "irq": 35,
+    "krg_peshmerga": 55,
+    "sdf": 30,
+    "syr": 5,
+    "pse_pa": 35,
+    "rus": -80,
+    "blr": -65,
+    "irn": -55,
+    "prk": -60,
+    "chn": -20,
+    "africa_corps": -60,
+    "sahel_aes": -30,
+    "afg_taliban": -60,
+    "isis": -100,
+    "isis_k": -95,
+    "al_qaeda": -100,
+    "aqap": -90,
+    "al_shabaab": -90,
+    "jnim": -90,
+    "hamas": -85,
+    "pij": -85,
+    "hezbollah": -65,
+    "houthis": -70,
+    "iraqi_militias": -55,
+    "fra": 85,
+    "deu": 95,
+    "ita": 85,
+    "esp": 85,
+    "bel": 95,
+    "nor": 85,
+    "dnk": 85,
+    "swe": 85,
+    "fin": 85,
+    "grc": 85
+  },
+  "theatres": [
+    "baltic_coast",
+    "suwalki_gap",
+    "mesopotamia"
+  ],
+  "languages": [
+    "Dutch"
+  ],
+  "callout_language": "Dutch",
+  "doctrine": {
+    "summary": "Army integrated with German divisions; strong in air assault, marines and special forces.",
+    "squad_size": 8,
+    "fireteam": "Groep of two teams.",
+    "tactics": [
+      "air assault with CH-47 and AH-64",
+      "mechanised infantry with CV90",
+      "marine cold-weather ops"
+    ],
+    "ai_tuning": {
+      "aggression": 0.55,
+      "discipline": 0.85,
+      "suppression_resistance": 0.75,
+      "flanking": 0.7,
+      "grenade_use": 0.6,
+      "medical_care": 0.85,
+      "night_capability": 0.85,
+      "marksmanship": 0.8,
+      "morale": 0.75
+    }
+  },
+  "camo": [
+    {
+      "name": "M19 NFP Green",
+      "palette": [
+        "#4C5536",
+        "#6B6E4A",
+        "#9A916C",
+        "#2D2D24"
+      ],
+      "use": "temperate"
+    },
+    {
+      "name": "M19 NFP Tan",
+      "palette": [
+        "#C2AE85",
+        "#9A8664",
+        "#6E6449"
+      ],
+      "use": "arid"
+    },
+    {
+      "name": "M19 NFP Multitone",
+      "palette": [
+        "#7B7458",
+        "#5A5A43",
+        "#A99C7B",
+        "#3E3A2E"
+      ],
+      "use": "universal"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "C7NLD (5.56x45mm)",
+      "C8NLD (5.56x45mm)"
+    ],
+    "autorifleman": [
+      "FN Minimi (5.56x45mm)",
+      "FN MAG (7.62x51mm)"
+    ],
+    "marksman": [
+      "HK417 (7.62x51mm)"
+    ],
+    "grenadier": [
+      "C8NLD with 40mm underbarrel launcher"
+    ],
+    "at": [
+      "Panzerfaust 3 (110mm)",
+      "Spike MR/LR (ATGM)"
+    ],
+    "medic": [
+      "C8NLD"
+    ],
+    "squad_leader": [
+      "C8NLD"
+    ],
+    "sniper": [
+      "Accuracy International AWM (.338 Lapua Magnum)",
+      "Barrett M107A1 (12.7x99mm)"
+    ],
+    "sidearm": [
+      "Glock 17 Gen4 (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "Panzerfaust 3 (not in game list)",
+    "Carl Gustaf M4 [in game: MAAWS; ordered 2025]",
+    "M72 LAW (KCT)"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "ceramic",
+    "notes": "Game mapping."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "cv90",
+      "role": "ifv",
+      "prevalence": "signature",
+      "notes": "CV9035NL."
+    },
+    {
+      "vehicle_id": "boxer",
+      "role": "apc",
+      "prevalence": "signature",
+      "notes": ""
+    },
+    {
+      "vehicle_id": "bushmaster",
+      "role": "mrap",
+      "prevalence": "common",
+      "notes": ""
+    },
+    {
+      "vehicle_id": "fennek",
+      "role": "light",
+      "prevalence": "common",
+      "notes": ""
+    },
+    {
+      "vehicle_id": "leopard2a6",
+      "role": "mbt",
+      "prevalence": "uncommon",
+      "notes": "18 2A6MA2 leased from Germany, 46 2A8 on order."
+    },
+    {
+      "vehicle_id": "bvs10",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "Marines."
+    },
+    {
+      "vehicle_id": "pzh2000",
+      "role": "artillery",
+      "prevalence": "common",
+      "notes": ""
+    },
+    {
+      "vehicle_id": "puls",
+      "role": "mlrs",
+      "prevalence": "uncommon",
+      "notes": ""
+    },
+    {
+      "vehicle_id": "ah64",
+      "role": "attack_heli",
+      "prevalence": "signature",
+      "notes": "AH-64E."
+    },
+    {
+      "vehicle_id": "ch47",
+      "role": "transport_heli",
+      "prevalence": "common",
+      "notes": "CH-47F."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "nld_rifle_squad",
+      "name": "Dutch rifle squad (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 2
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "nld_mech_squad",
+      "name": "Dutch mechanised squad",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 2
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "cv90"
+    },
+    {
+      "id": "nld_recon_team",
+      "name": "Dutch recon / sniper pair team",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        },
+        {
+          "role": "sniper",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "fennek"
+    }
+  ],
+  "support_assets": [
+    "AH-64E CAS",
+    "PzH 2000 artillery",
+    "CH-47F air assault",
+    "drones"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 20,
+        "unlocks": [
+          "service rifle and ammunition",
+          "uniforms in national camo",
+          "light helmet and vest"
+        ]
+      },
+      {
+        "rep": 40,
+        "unlocks": [
+          "optics and NVGs",
+          "medium armour",
+          "Carl Gustaf M4 [MAAWS]"
+        ]
+      },
+      {
+        "rep": 60,
+        "unlocks": [
+          "marksman and sniper rifles",
+          "heavy armour",
+          "Fennek (light vehicle)"
+        ]
+      },
+      {
+        "rep": 80,
+        "unlocks": [
+          "Boxer (armoured transport)",
+          "fire-support call-ins on contracts"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "counter-terrorist raid",
+      "hostage / personnel recovery",
+      "convoy escort",
+      "HVT capture",
+      "recover lost equipment or sensitive kit",
+      "train and accompany partner forces",
+      "security of embassy or base",
+      "counter-drone site defence"
+    ],
+    "as_target": [
+      "only if the player works for this nation's enemies: sabotage a logistics depot",
+      "only if the player works for this nation's enemies: ambush a supply convoy"
+    ]
+  },
+  "notes": "Contributes to the NATO battlegroup in Lithuania and to Iraq training missions; Leopard 2A8 deliveries 2028-2031.",
+  "proposed": [
+    "campaign_tier",
+    "relations.player",
+    "doctrine.ai_tuning",
+    "unit_templates",
+    "player_trade.rep_tiers",
+    "contract_types",
+    "body_armor (game tier mapping)",
+    "vehicles[].prevalence (game weighting)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Royal_Netherlands_Army"
+  ]
+}

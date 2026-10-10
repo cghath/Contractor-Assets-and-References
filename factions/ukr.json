@@ -1,0 +1,488 @@
+{
+  "id": "ukr",
+  "name": "Ukraine",
+  "short": "UKR",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#0057B7",
+    "#FFD700"
+  ],
+  "blocs": [
+    "eu_candidate",
+    "nato_partner",
+    "guam"
+  ],
+  "campaign_tier": "mid",
+  "alignment_to_player": "friendly",
+  "player_client": true,
+  "relations": {
+    "player": 30,
+    "usa": 65,
+    "gbr": 90,
+    "can": 85,
+    "aus": 70,
+    "nzl": 60,
+    "fra": 85,
+    "deu": 85,
+    "ita": 70,
+    "esp": 70,
+    "nld": 90,
+    "bel": 80,
+    "nor": 85,
+    "dnk": 95,
+    "swe": 90,
+    "fin": 90,
+    "grc": 55,
+    "pol": 75,
+    "est": 95,
+    "lva": 95,
+    "ltu": 95,
+    "rou": 75,
+    "mda": 80,
+    "geo": 30,
+    "jpn": 70,
+    "kor": 50,
+    "tur": 45,
+    "isr": 15,
+    "aze": 40,
+    "arm": 15,
+    "kaz": 10,
+    "srb": -15,
+    "chn": -35,
+    "irn": -80,
+    "prk": -90,
+    "blr": -85,
+    "rus": -100,
+    "africa_corps": -80,
+    "sahel_aes": -50,
+    "isis": -90,
+    "isis_k": -90,
+    "al_qaeda": -90,
+    "hamas": -55,
+    "houthis": -50,
+    "hezbollah": -50
+  },
+  "theatres": [
+    "eastern_ukraine",
+    "black_sea_coast"
+  ],
+  "languages": [
+    "Ukrainian",
+    "Russian",
+    "English (liaison)"
+  ],
+  "callout_language": "Ukrainian",
+  "doctrine": {
+    "summary": "Large mobilised force fighting a full-scale defensive war against Russia since 2022. Mixes Soviet-legacy armour and artillery with Western-donated vehicles and the world's most developed drone force (Unmanned Systems Forces branch). The front is a deep 'kill zone' saturated by FPV and bomber drones, so infantry moves in small dispersed groups, vehicles rarely approach the line in daylight, and logistics run at night or by ground robots.",
+    "squad_size": 9,
+    "fireteam": "Nominal 9-man squad (BMP-style); in practice assault groups of 4-6 and two-man trench positions, paired with a drone team overhead.",
+    "tactics": [
+      "dispersed small-group infiltration under drone overwatch",
+      "FPV and bomber-drone strikes on vehicles, trenches and supply routes",
+      "fortified trench lines, dugouts and minefields as map hazards",
+      "night movement with thermal concealment (ponchos, netting)",
+      "anti-drone shotguns and EW jammers carried at squad level",
+      "counter-battery and HIMARS/155 mm strikes cued by drones",
+      "UGV resupply and casualty evacuation",
+      "aggressive trench clearing with grenades"
+    ],
+    "ai_tuning": {
+      "aggression": 0.6,
+      "discipline": 0.7,
+      "suppression_resistance": 0.85,
+      "flanking": 0.65,
+      "grenade_use": 0.8,
+      "medical_care": 0.7,
+      "night_capability": 0.75,
+      "marksmanship": 0.65,
+      "morale": 0.75
+    }
+  },
+  "camo": [
+    {
+      "name": "MM-14 (Ukrainian pixel)",
+      "palette": [
+        "#8A8B6A",
+        "#5C6447",
+        "#3F4A31",
+        "#2B2A22"
+      ],
+      "use": "standard issue since 2016"
+    },
+    {
+      "name": "MultiCam",
+      "palette": [
+        "#A08C6A",
+        "#6B6B47",
+        "#4E4433",
+        "#C9B998",
+        "#33302A"
+      ],
+      "use": "special forces, volunteers, many line units"
+    },
+    {
+      "name": "Varan",
+      "palette": [
+        "#7C7C5A",
+        "#545A3E",
+        "#3A3A2C",
+        "#9A9070"
+      ],
+      "use": "Ukrainian alternative pattern (National Guard and others)"
+    },
+    {
+      "name": "ID tape (yellow/blue/green armbands and helmet bands)",
+      "palette": [
+        "#FFD700",
+        "#0057B7",
+        "#3A7D2C"
+      ],
+      "use": "friend/foe marks, change by sector"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "AK-74 / AKS-74 (5.45x39mm)",
+      "AKM (7.62x39mm)",
+      "donated M4 / HK416 / FN SCAR-L / Haenel MK 556 (5.56x45mm)"
+    ],
+    "autorifleman": [
+      "RPK-74 (5.45x39mm)",
+      "PKM (7.62x54R)",
+      "M240 / MG3 / MG5 (7.62x51mm)",
+      "FN Minimi / MG4 (5.56x45mm)"
+    ],
+    "marksman": [
+      "SVD Dragunov (7.62x54R)",
+      "UAR-10 (7.62x51mm)"
+    ],
+    "grenadier": [
+      "AK-74 with GP-25 (40mm VOG-25)",
+      "M4 with M203 (40x46mm)"
+    ],
+    "at": [
+      "RPG-7 (PG-7V, OG-7V)",
+      "NLAW",
+      "AT4",
+      "Carl Gustaf M2/M4",
+      "FGM-148 Javelin (team)"
+    ],
+    "medic": [
+      "AKS-74U (5.45x39mm)"
+    ],
+    "squad_leader": [
+      "AK-74 with optic (5.45x39mm)",
+      "HK416 / M4 (5.56x45mm)"
+    ],
+    "sniper": [
+      "Fort-301 / Accuracy International AX308 (7.62x51mm)",
+      "Barrett M82 (12.7x99mm)",
+      "Snipex Alligator (14.5x114mm)"
+    ],
+    "sidearm": [
+      "PM Makarov (9x18mm)",
+      "Fort-14 / Fort-17 (9x18mm)",
+      "Glock 17 (9x19mm)"
+    ]
+  },
+  "launchers": [
+    "RPG-7 (PG-7V, OG-7V) [in_game]",
+    "NLAW [in_game]",
+    "AT4 [in_game]",
+    "Carl Gustaf / MAAWS (84mm) [in_game]",
+    "FGM-148 Javelin [in_game]",
+    "Mk 153 SMAW (anti-fortification) [in_game]",
+    "RPG-18 / RPG-22 / RPG-26 [not_in_game]",
+    "M72 LAW [not_in_game]",
+    "Stugna-P ATGM [not_in_game]"
+  ],
+  "body_armor": {
+    "helmet": "medium",
+    "vest": "medium",
+    "plates": "mixed",
+    "notes": "Very mixed: Western and Ukrainian-made aramid helmets (medium) alongside older steel; plate carriers with front/back plates of Ukrainian steel or ceramic (game: medium, mixed plates). Assault units add side plates and groin/neck protection (heavy) at the cost of mobility. Thermal-masking ponchos are common."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "t64bv",
+      "role": "mbt",
+      "prevalence": "signature",
+      "notes": "T-64BV obr. 2017 and BM Bulat; the most common Ukrainian tank type, almost always with anti-drone screens."
+    },
+    {
+      "vehicle_id": "bradley",
+      "role": "ifv",
+      "prevalence": "signature",
+      "notes": "M2A2 ODS-SA from the US (300+), prized for survivability; existing voxel model."
+    },
+    {
+      "vehicle_id": "t72b3",
+      "role": "mbt",
+      "prevalence": "common",
+      "notes": "T-72AMT/T-72EA plus captured Russian T-72B/B3 (largest tank count overall, 500+)."
+    },
+    {
+      "vehicle_id": "leopard2a6",
+      "role": "mbt",
+      "prevalence": "uncommon",
+      "notes": "Leopard 2A4 and 2A6 (about 60); Leopard 1A5 also in service."
+    },
+    {
+      "vehicle_id": "bmp2",
+      "role": "ifv",
+      "prevalence": "common",
+      "notes": "BMP-1 and BMP-2 remain the mass IFVs."
+    },
+    {
+      "vehicle_id": "m113",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "About 500 donated M113 variants; also YPR-765."
+    },
+    {
+      "vehicle_id": "mtlb",
+      "role": "apc",
+      "prevalence": "common",
+      "notes": "Tractor, gun tug and improvised weapons carrier."
+    },
+    {
+      "vehicle_id": "kozak2",
+      "role": "mrap",
+      "prevalence": "common",
+      "notes": "Domestic Kozak-2M1 MRAP used by Army, National Guard and Border Guard."
+    },
+    {
+      "vehicle_id": "maxxpro",
+      "role": "mrap",
+      "prevalence": "common",
+      "notes": "About 440 donated; existing voxel model."
+    },
+    {
+      "vehicle_id": "bohdana",
+      "role": "artillery",
+      "prevalence": "signature",
+      "notes": "Domestic 2S22 Bohdana 155 mm wheeled SPG, ~350 active by 2026."
+    },
+    {
+      "vehicle_id": "himars",
+      "role": "mlrs",
+      "prevalence": "uncommon",
+      "notes": "M142 HIMARS (about 38); BM-21 Grad for volume fire."
+    },
+    {
+      "vehicle_id": "fpv_drone",
+      "role": "uav",
+      "prevalence": "signature",
+      "notes": "Millions per year procured; FPV, fibre-optic FPV, interceptors and heavy bomber multicopters."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "ukr_assault_group",
+      "name": "Ukrainian assault group (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 3
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "ukr_drone_team",
+      "name": "FPV / bomber drone team with security pair",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "drone_operator",
+          "count": 2
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "ukr_mech_squad",
+      "name": "Mechanised squad (Bradley)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "bradley"
+    },
+    {
+      "id": "ukr_trench_pair_post",
+      "name": "Trench position (two battle-buddy pairs)",
+      "composition": [
+        {
+          "role": "rifleman",
+          "count": 2
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "at",
+          "count": 1
+        }
+      ],
+      "vehicle_id": null
+    },
+    {
+      "id": "ukr_sniper_team",
+      "name": "Sniper pair",
+      "composition": [
+        {
+          "role": "sniper",
+          "count": 1
+        },
+        {
+          "role": "marksman",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "kozak2"
+    }
+  ],
+  "support_assets": [
+    "FPV and fibre-optic FPV drone strikes (very high availability)",
+    "night bomber multicopters",
+    "recon quadcopters spotting for 155 mm and 122 mm artillery (Bohdana, M777, Krab, Grad)",
+    "HIMARS precision strikes (rare, high-value targets only)",
+    "squad and vehicle EW jammers against enemy drones",
+    "UGV resupply / casevac",
+    "Mi-24 / Mi-8 rocket lofting (rare)"
+  ],
+  "player_trade": {
+    "sellable": true,
+    "rep_tiers": [
+      {
+        "rep": 20,
+        "unlocks": [
+          "5.45x39mm and 7.62x54R ammunition",
+          "MM-14 uniforms, ID tape",
+          "AK-74 and PKM",
+          "thermal-masking poncho"
+        ]
+      },
+      {
+        "rep": 40,
+        "unlocks": [
+          "recon quadcopter",
+          "anti-drone shotgun and portable jammer",
+          "medium plate carrier (steel)",
+          "RPG-7, NLAW"
+        ]
+      },
+      {
+        "rep": 60,
+        "unlocks": [
+          "FPV strike drones (consumable)",
+          "Kozak-2 MRAP purchase",
+          "SVD and Snipex anti-materiel rifle"
+        ]
+      },
+      {
+        "rep": 80,
+        "unlocks": [
+          "fibre-optic FPV",
+          "drone-spotted artillery call-in on contracts",
+          "Bradley hire for one contract"
+        ]
+      }
+    ]
+  },
+  "contract_types": {
+    "as_client": [
+      "counter_drone_site_defense",
+      "recover_downed_drone_or_sensitive_kit",
+      "evacuate_civilians_from_front_village",
+      "convoy_escort_night",
+      "trench_raid",
+      "sabotage_logistics",
+      "reconnaissance",
+      "hvt_capture",
+      "partner_force_support",
+      "demining_route_escort"
+    ],
+    "as_target": [
+      "destroy_drone_workshop (posted by Russian fixers; locks player out of Ukrainian and allied work)",
+      "ambush_supply_convoy (Russian fixers)",
+      "destroy_air_defense_site (Russian fixers)"
+    ]
+  },
+  "notes": "Ukraine is a mid-campaign client and battlefield for the eastern_ukraine and black_sea_coast theatres; it does not appear in the early counter-terror game. Real-world operators of the open-question vehicles: Ukraine received 31 M1A1 Abrams from the US (22+ remaining, 49 M1A1 AIM pledged by Australia), 300+ M2A2 ODS-SA Bradleys and 440 MaxxPro; it fields no AH-1Z. Other notable donated kit not listed above: Challenger 2, CV90, Marder, Stryker, Leopard 1A5, PzH 2000, CAESAR, Krab, M777, Patriot. The PKM, SVD and NSV use 7.62x54R/12.7 mm, which in game can disable vehicles. Drones are the defining feature: the game should model the FPV threat as an audio-cued hazard countered by jammers, shotguns and cover, not as a scripted kill.",
+  "proposed": [
+    "campaign_tier",
+    "alignment_to_player",
+    "relations.player",
+    "doctrine.ai_tuning",
+    "unit_templates",
+    "player_trade.rep_tiers",
+    "contract_types",
+    "body_armor (game tier mapping)",
+    "vehicles[].prevalence (game weighting)",
+    "camo[].palette (approximate hex values)",
+    "unit_templates[].composition role 'drone_operator' (new role)",
+    "support_assets (game availability)",
+    "vehicles[].notes game uses"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Armed_Forces_of_Ukraine",
+    "https://en.wikipedia.org/wiki/T-64",
+    "https://en.wikipedia.org/wiki/2S22_Bohdana",
+    "https://en.wikipedia.org/wiki/Kozak_(armored_personnel_carrier)",
+    "https://en.wikipedia.org/wiki/First-person_view_(radio_control)",
+    "https://euromaidanpress.com/2025/03/10/ukraine-plans-to-buy-4-5-million-fpv-drones-in-2025-in-massive-2-8-billion-procurement-surge/"
+  ]
+}

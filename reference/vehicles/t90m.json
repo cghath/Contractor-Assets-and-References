@@ -1,0 +1,87 @@
+{
+  "id": "t90m",
+  "name": "T-90M Proryv",
+  "aliases": [
+    "T-90M",
+    "T-90A",
+    "T-90S",
+    "T-90MS"
+  ],
+  "origin": "Russia",
+  "type": "mbt",
+  "operators": [
+    "rus",
+    "aze",
+    "ind",
+    "vnm"
+  ],
+  "crew": 3,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 9.63,
+    "width": 3.78,
+    "height": 2.22
+  },
+  "weight_t": 48.0,
+  "armament": [
+    "125 mm 2A46M-4 smoothbore with autoloader (9M119M Refleks-M)",
+    "7.62 mm PKTM coaxial",
+    "12.7 mm Kord on remote commander's mount"
+  ],
+  "protection": "Welded turret with Relikt ERA, slat cage on the turret bustle, Shtora (A) or none (M). Game: hull and turret immune to all small-calibre and to 7.62x54R/12.7/14.5 mm (those only break optics, searchlights, external MGs and track pins). Kills need launchers: Javelin/NLAW top-attack, AT4/MAAWS/SMAW or RPG-7 PG-7V to side, rear or roof; frontal ERA defeats single-charge PG-7V.",
+  "visual_notes": [
+    "Angular welded turret (T-90A/M) with wedge-shaped Relikt ERA panels on the front and side 'wings'; T-90S (AZE) has the older cast turret with Shtora IR dazzler 'eyes' either side of the gun",
+    "Large bustle stowage box with slat armour around the turret rear (T-90M)",
+    "6 road wheels per side, side skirts with ERA blocks on the front third",
+    "Kalina FCS: commander's panoramic sight on the roof, gunner's sight box",
+    "2026 Russian vehicles: welded roof anti-drone cage or tall mesh shelter, anti-drone netting, EW jammer antennas, mine-roller (KMT) on some"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Russian protective green with white Z/V/triangle ID marks",
+      "palette": [
+        "#4A5530",
+        "#3B4428",
+        "#2A2E22",
+        "#F0F0F0"
+      ]
+    },
+    {
+      "name": "Russian three-tone summer",
+      "palette": [
+        "#4B5A2F",
+        "#9C8E5C",
+        "#2B2A22"
+      ]
+    },
+    {
+      "name": "Azerbaijani desert-green disruptive",
+      "palette": [
+        "#C8B48A",
+        "#8E7B55",
+        "#5C5A3A",
+        "#3A3A2C"
+      ]
+    }
+  ],
+  "variants": [
+    "T-90 (1992)",
+    "T-90A",
+    "T-90S export (AZE, IND, ALG)",
+    "T-90M Proryv-3 (RUS signature)",
+    "T-90S/SK Bhishma (IND)",
+    "T-90S/SK (VNM)"
+  ],
+  "existing_model": null,
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/T-90",
+    "https://commons.wikimedia.org/wiki/Category:T-90M",
+    "https://commons.wikimedia.org/wiki/Category:T-90"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/T-90",
+    "https://www.thedefensenews.com/news-details/Russia-Receives-New-Batch-of-T-90M-T-80BVM-and-T-72B3M-Tanks-With-Anti-Drone-Upgrades/",
+    "https://caliber.az/en/post/military-parade-in-baku-structure-of-armaments-and-their-practical-significance"
+  ]
+}

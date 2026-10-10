@@ -1,0 +1,55 @@
+{
+  "id": "zorawar",
+  "name": "Zorawar light tank",
+  "aliases": [
+    "Zorawar",
+    "Indian Light Tank"
+  ],
+  "origin": "India (DRDO / Larsen & Toubro)",
+  "type": "mbt",
+  "operators": [
+    "ind"
+  ],
+  "crew": 3,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 8.5,
+    "width": 3.3,
+    "height": 2.6
+  },
+  "weight_t": 25.0,
+  "armament": [
+    "105 mm gun (Cockerill 3105 turret)",
+    "12.7 mm RWS",
+    "loitering-munition launcher integration"
+  ],
+  "protection": "Light armour with modular add-on and APS provision. Game: IFV-class hull: immune to small-calibre rounds, 12.7/14.5 mm penetrates side and rear, every launcher penetrates.",
+  "visual_notes": [
+    "K9-derived tracked hull with Cockerill 3105 turret: angular, flat-sided with bustle",
+    "Six road wheels per side, high-altitude engine",
+    "Built for Ladakh after the 2020 Galwan crisis; 59 ordered, trials 2024-26"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Indian Army three-tone",
+      "palette": [
+        "#5C6440",
+        "#7C6845",
+        "#2E2F24",
+        "#A28F64"
+      ]
+    }
+  ],
+  "variants": [
+    "Zorawar"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Zorawar_light_tank"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Zorawar_light_tank",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Indian_Army"
+  ]
+}

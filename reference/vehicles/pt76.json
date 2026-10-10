@@ -1,0 +1,56 @@
+{
+  "id": "pt76",
+  "name": "PT-76",
+  "aliases": [
+    "PT-76B",
+    "Type 63 amphibious tank (related)"
+  ],
+  "origin": "Soviet Union",
+  "type": "light",
+  "operators": [
+    "vnm",
+    "prk"
+  ],
+  "crew": 3,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 7.6,
+    "width": 3.1,
+    "height": 2.3
+  },
+  "weight_t": 14.6,
+  "armament": [
+    "76.2 mm D-56T rifled gun",
+    "7.62 mm coaxial MG"
+  ],
+  "protection": "Very thin steel (amphibious). Game: immune to small-calibre rounds (5.45/5.56/5.8/7.62x39/7.62x51 ball); 7.62x54R and larger penetrate side/rear and disable tyres and engine; any launcher destroys it.",
+  "visual_notes": [
+    "Long flat boat-like hull with six road wheels per side and no return rollers",
+    "Small conical turret with 76 mm gun",
+    "Water jets at the rear for swimming; trim vane folded on the glacis"
+  ],
+  "colour_schemes": [
+    {
+      "name": "VPA green",
+      "palette": [
+        "#4E5B39",
+        "#3A4429",
+        "#262B1D"
+      ]
+    }
+  ],
+  "variants": [
+    "PT-76",
+    "PT-76B"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/PT-76",
+    "https://commons.wikimedia.org/wiki/Category:PT-76"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/PT-76",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Vietnam_People%27s_Ground_Forces"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "id": "bvs10",
+  "name": "BvS10 Viking",
+  "aliases": [
+    "Bandvagn 410",
+    "VHM"
+  ],
+  "origin": "Sweden",
+  "type": "apc",
+  "operators": [
+    "nld",
+    "swe",
+    "fra",
+    "gbr"
+  ],
+  "crew": 2,
+  "passengers": 8,
+  "dimensions_m": {
+    "length": 7.6,
+    "width": 2.34,
+    "height": 2.2
+  },
+  "weight_t": 12.0,
+  "armament": [
+    "RWS with 7.62 / 12.7 mm"
+  ],
+  "protection": "Armoured cabins, amphibious. Game: immune to small-calibre rounds; 7.62x54R AP and larger can penetrate side/rear and disable wheels/engine; every launcher in the game list penetrates.",
+  "visual_notes": [
+    "Two armoured articulated tracked cars (front cab with engine, rear troop cabin)",
+    "Rubber band tracks, flat-sided armoured bodies",
+    "RWS on the front car roof",
+    "Larger and more angular than Bv206",
+    "Two articulated armoured tracked cars, larger than Bv206",
+    "Front car engine and cab; rear car troop cabin",
+    "Rubber tracks"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Olive drab",
+      "palette": [
+        "#4B5320",
+        "#3B4219"
+      ]
+    },
+    {
+      "name": "Winter whitewash",
+      "palette": [
+        "#E6E6E0",
+        "#4A5838",
+        "#2A2A22"
+      ]
+    }
+  ],
+  "variants": [
+    "Bandvagn 410 (SWE)",
+    "VHM (FRA)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/BvS_10"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/BvS_10",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Swedish_Army"
+  ]
+}

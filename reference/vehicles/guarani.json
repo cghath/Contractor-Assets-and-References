@@ -1,0 +1,53 @@
+{
+  "id": "guarani",
+  "name": "VBTP-MR Guarani",
+  "aliases": [
+    "Guarani",
+    "IVECO Guarani"
+  ],
+  "origin": "Brazil (IVECO)",
+  "type": "apc",
+  "operators": [
+    "phl"
+  ],
+  "crew": 3,
+  "passengers": 8,
+  "dimensions_m": {
+    "length": 6.9,
+    "width": 2.7,
+    "height": 2.3
+  },
+  "weight_t": 18.0,
+  "armament": [
+    "12.7 mm RCWS (Elbit ORCWS on Philippine vehicles)"
+  ],
+  "protection": "Game: immune to small-calibre rounds (5.45/5.56/5.8/7.62x39/7.62x51 ball); 7.62x54R and larger penetrate side/rear and disable tyres and engine; any launcher destroys it.",
+  "visual_notes": [
+    "Tall 6x6 with a sharply sloped glacis and three evenly spaced axles",
+    "RCWS on the roof, rear ramp",
+    "Philippine Army received 28 from 2024"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Philippine Army green",
+      "palette": [
+        "#4C5536",
+        "#36402A",
+        "#6E6A4A"
+      ]
+    }
+  ],
+  "variants": [
+    "Guarani 6x6 APC"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/VBTP-MR_Guarani",
+    "https://commons.wikimedia.org/wiki/Category:VBTP-MR_Guarani"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/VBTP-MR_Guarani",
+    "https://gbp.com.sg/stories/philippine-army-modernisation-on-display/"
+  ]
+}

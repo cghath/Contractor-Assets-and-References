@@ -1,0 +1,65 @@
+{
+  "id": "acv",
+  "name": "Amphibious Combat Vehicle",
+  "aliases": [
+    "ACV-P",
+    "ACV-30",
+    "Iveco SuperAV"
+  ],
+  "origin": "United States / Italy",
+  "type": "apc",
+  "operators": [
+    "usa"
+  ],
+  "crew": 3,
+  "passengers": 13,
+  "dimensions_m": {
+    "length": 9.2,
+    "width": 3.1,
+    "height": 2.9
+  },
+  "weight_t": 32.0,
+  "armament": [
+    "12.7 mm M2 or 40 mm Mk 19 on M153 Protector RWS (ACV-P)",
+    "30 mm Mk 44 Bushmaster II + 7.62 mm M240 (ACV-30)"
+  ],
+  "protection": "V-shaped hull, high ground clearance, swims ship-to-shore. Game rule: immune to small-calibre; 7.62x54R AP and 12.7/14.5 mm can disable tyres, optics and gunner; launchers penetrate.",
+  "visual_notes": [
+    "Big boat-shaped 8x8, four axles",
+    "Raised bow with trim vane, two water-jet propulsors at rear",
+    "Tall flat-sided hull, rear ramp",
+    "RWS on roof (or 30 mm turret on ACV-30)"
+  ],
+  "colour_schemes": [
+    {
+      "name": "USMC woodland green",
+      "palette": [
+        "#4E5536",
+        "#383D27"
+      ]
+    },
+    {
+      "name": "US desert tan (CARC 686A)",
+      "palette": [
+        "#C2B28A",
+        "#A89670",
+        "#4A4436"
+      ]
+    }
+  ],
+  "variants": [
+    "ACV-P",
+    "ACV-C",
+    "ACV-R",
+    "ACV-30"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Amphibious_Combat_Vehicle"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Amphibious_Combat_Vehicle",
+    "https://www.twz.com/sea/usmcs-amphibious-assault-vehicle-retired-after-over-50-years-of-service"
+  ]
+}

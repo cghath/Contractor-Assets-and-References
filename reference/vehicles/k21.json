@@ -1,0 +1,57 @@
+{
+  "id": "k21",
+  "name": "K21 IFV",
+  "aliases": [
+    "K21 KNIFV",
+    "K21-105 (light tank variant)"
+  ],
+  "origin": "South Korea (Hanwha Aerospace)",
+  "type": "ifv",
+  "operators": [
+    "kor"
+  ],
+  "crew": 3,
+  "passengers": 9,
+  "dimensions_m": {
+    "length": 6.9,
+    "width": 3.4,
+    "height": 2.6
+  },
+  "weight_t": 25.6,
+  "armament": [
+    "40 mm K40 cannon",
+    "Hyungung (Raybolt) ATGM on some",
+    "7.62 mm coaxial MG"
+  ],
+  "protection": "Fibreglass-composite/ceramic hull, amphibious with flotation bags. Game: immune to all small-calibre rounds; frontal arc resists 12.7/14.5 mm; 7.62x54R damages optics, tyres/tracks and exposed gear, 12.7/14.5 mm penetrates side and rear; all launchers penetrate.",
+  "visual_notes": [
+    "Low two-man turret with 40 mm gun and smoke banks",
+    "Six road wheels per side; inflatable flotation sacks along the hull sides for swimming",
+    "Rear ramp door, large stowage bins on the turret rear"
+  ],
+  "colour_schemes": [
+    {
+      "name": "ROK Army four-colour",
+      "palette": [
+        "#4C5A36",
+        "#6E5B3E",
+        "#22231D",
+        "#8A8466"
+      ]
+    }
+  ],
+  "variants": [
+    "K21",
+    "K21-105 light tank (prototype)"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/K21",
+    "https://commons.wikimedia.org/wiki/Category:K21_(IFV)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/K21",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Republic_of_Korea_Army"
+  ]
+}

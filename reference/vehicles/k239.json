@@ -1,0 +1,64 @@
+{
+  "id": "k239",
+  "name": "K239 Chunmoo",
+  "aliases": [
+    "Chunmoo",
+    "Homar-K"
+  ],
+  "origin": "South Korea (Hanwha Aerospace)",
+  "type": "mlrs",
+  "operators": [
+    "kor",
+    "pol",
+    "est",
+    "nor"
+  ],
+  "crew": 3,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 9.0,
+    "width": 2.9,
+    "height": 3.3
+  },
+  "weight_t": 31.0,
+  "armament": [
+    "Two interchangeable pods: 2x20 131 mm, 2x6 239 mm guided (80 km), 2x4 CTM-MR or 2x1 CTM-290 tactical missile"
+  ],
+  "protection": "Armoured cab against small arms and splinters. Game: armoured cab/hull immune to small-calibre rounds; 7.62x54R and larger penetrate and can disable it; any launcher destroys it.",
+  "visual_notes": [
+    "Four-axle 8x8 truck with a flat-fronted armoured cab; Polish Homar-K on a Jelcz 8x8 chassis",
+    "Two large rectangular rocket pods side by side on a rotating rear launcher",
+    "Reload crane on the launcher; paired with a K239T reload truck carrying four pods"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Polish three-tone (green/brown/black)",
+      "palette": [
+        "#4D5B37",
+        "#5E4B33",
+        "#1E1E1A"
+      ]
+    },
+    {
+      "name": "NATO three-tone",
+      "palette": [
+        "#4A5130",
+        "#55473A",
+        "#232323"
+      ]
+    }
+  ],
+  "variants": [
+    "K239 (Doosan 8x8)",
+    "Homar-K (POL, Jelcz 8x8)",
+    "K239T reload vehicle"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/K239_Chunmoo"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/K239_Chunmoo"
+  ]
+}

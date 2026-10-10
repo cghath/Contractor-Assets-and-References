@@ -1,0 +1,58 @@
+{
+  "id": "cm11",
+  "name": "CM-11 Brave Tiger",
+  "aliases": [
+    "M48H",
+    "Brave Tiger",
+    "CM-12"
+  ],
+  "origin": "Taiwan / United States",
+  "type": "mbt",
+  "operators": [
+    "twn"
+  ],
+  "crew": 4,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 9.3,
+    "width": 3.6,
+    "height": 3.1
+  },
+  "weight_t": 50.0,
+  "armament": [
+    "105 mm M68A1 rifled gun",
+    "12.7 mm M2 HMG",
+    "7.62 mm coaxial MG"
+  ],
+  "protection": "M48 turret on M60 hull with M1-derived fire control. Game: immune to all small-calibre rounds; 7.62x54R and 12.7/14.5 mm damage optics, stowage and tracks; every launcher in the game (PG-7V, AT4, MAAWS, SMAW, NLAW, Javelin) penetrates from any arc, frontal hull included at close range.",
+  "visual_notes": [
+    "M48-style rounded cast turret on a longer M60A3 hull",
+    "Six road wheels per side with return rollers",
+    "Fire control and laser rangefinder housing in front of commander; about 450 in service with no upgrade planned"
+  ],
+  "colour_schemes": [
+    {
+      "name": "ROC Army digital/three-tone",
+      "palette": [
+        "#4F5A3B",
+        "#6B5C3F",
+        "#2A2C22",
+        "#868063"
+      ]
+    }
+  ],
+  "variants": [
+    "CM-11",
+    "CM-12 (retired)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/CM-11_Brave_Tiger",
+    "https://commons.wikimedia.org/wiki/Category:CM-11_Brave_Tiger"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/CM-11_Brave_Tiger",
+    "https://www.asianmilitaryreview.com/2025/09/taiwan-displays-new-land-combat-equipment-at-tadte-2025-foc/"
+  ]
+}

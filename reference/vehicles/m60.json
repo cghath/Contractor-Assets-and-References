@@ -1,0 +1,56 @@
+{
+  "id": "m60",
+  "name": "M60 Patton",
+  "aliases": [
+    "M60A3 TTS",
+    "M60A1"
+  ],
+  "origin": "United States",
+  "type": "mbt",
+  "operators": [
+    "twn"
+  ],
+  "crew": 4,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 9.4,
+    "width": 3.6,
+    "height": 3.2
+  },
+  "weight_t": 52.0,
+  "armament": [
+    "105 mm M68 rifled gun",
+    "12.7 mm M85/M2",
+    "7.62 mm coaxial MG"
+  ],
+  "protection": "Cast/rolled steel. Game: immune to all small-calibre rounds; 7.62x54R and 12.7/14.5 mm damage optics, stowage and tracks; every launcher in the game (PG-7V, AT4, MAAWS, SMAW, NLAW, Javelin) penetrates from any arc, frontal hull included at close range.",
+  "visual_notes": [
+    "Tall tank with a long-nosed (needle) cast turret and commander's cupola",
+    "Six road wheels per side, three return rollers",
+    "M60A3 TTS: thermal sight box on the turret; ROC upgrading ~460"
+  ],
+  "colour_schemes": [
+    {
+      "name": "ROC Army digital/three-tone",
+      "palette": [
+        "#4F5A3B",
+        "#6B5C3F",
+        "#2A2C22",
+        "#868063"
+      ]
+    }
+  ],
+  "variants": [
+    "M60A3 TTS (ROC)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/M60_tank",
+    "https://commons.wikimedia.org/wiki/Category:M60_Patton"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/M60_tank",
+    "https://www.asianmilitaryreview.com/2025/09/taiwan-displays-new-land-combat-equipment-at-tadte-2025-foc/"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "pinzgauer",
+  "name": "Pinzgauer",
+  "aliases": [
+    "Pinzgauer 716/718",
+    "Vector"
+  ],
+  "origin": "Austria",
+  "type": "light",
+  "operators": [
+    "nzl",
+    "gbr",
+    "che",
+    "aut"
+  ],
+  "crew": 1,
+  "passengers": 9,
+  "dimensions_m": {
+    "length": 5.3,
+    "width": 1.8,
+    "height": 2.0
+  },
+  "weight_t": 3.4,
+  "armament": [
+    "Optional MG mount"
+  ],
+  "protection": "Unarmoured or lightly armoured; game rule still treats the vehicle body as immune to small-calibre, but 7.62x54R and up penetrate; occupants and tyres exposed.",
+  "visual_notes": [
+    "Narrow tall 4x4 or 6x6 with flat-front cab",
+    "Portal axles, high ground clearance",
+    "Canvas or hard rear body"
+  ],
+  "colour_schemes": [
+    {
+      "name": "NZ Army green",
+      "palette": [
+        "#4A5137",
+        "#2D3122"
+      ]
+    }
+  ],
+  "variants": [
+    "716 (4x4)",
+    "718 (6x6)",
+    "NZ LOV variants"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Pinzgauer_High-Mobility_All-Terrain_Vehicle"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Pinzgauer_High-Mobility_All-Terrain_Vehicle",
+    "https://defence.govt.nz/news/new-bushmaster-armoured-vehicles-hit-the-production-line"
+  ]
+}

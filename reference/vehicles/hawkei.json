@@ -1,0 +1,55 @@
+{
+  "id": "hawkei",
+  "name": "Thales Hawkei",
+  "aliases": [
+    "PMV-L",
+    "Hawkei PMV-L"
+  ],
+  "origin": "Australia",
+  "type": "light",
+  "operators": [
+    "aus"
+  ],
+  "crew": 2,
+  "passengers": 4,
+  "dimensions_m": {
+    "length": 5.78,
+    "width": 2.4,
+    "height": 2.3
+  },
+  "weight_t": 7.0,
+  "armament": [
+    "12.7 mm HMG or 40 mm AGL on manned mount or EOS R400 RWS",
+    "Javelin on RWS"
+  ],
+  "protection": "Monocoque V-hull, mine and blast protected. Game rule: armoured cab immune to small-calibre; 7.62x54R and larger can penetrate or disable; open gun ring leaves gunner exposed.",
+  "visual_notes": [
+    "Compact, very angular 4x4 with faceted cab",
+    "Two-door or four-door body",
+    "Short rear tray or enclosed rear",
+    "RWS on roof"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Australian disruptive (green/brown/black)",
+      "palette": [
+        "#4F5338",
+        "#6B5A3E",
+        "#262622"
+      ]
+    }
+  ],
+  "variants": [
+    "4-door command",
+    "2-door utility",
+    "trailer"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Hawkei"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Hawkei"
+  ]
+}

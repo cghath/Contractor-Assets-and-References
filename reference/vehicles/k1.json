@@ -1,0 +1,64 @@
+{
+  "id": "k1",
+  "name": "K1 / K1A2",
+  "aliases": [
+    "K1A1",
+    "K1A2",
+    "K1E1",
+    "K1E2",
+    "Type 88"
+  ],
+  "origin": "South Korea (Hyundai Rotem)",
+  "type": "mbt",
+  "operators": [
+    "kor"
+  ],
+  "crew": 4,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 9.7,
+    "width": 3.6,
+    "height": 2.25
+  },
+  "weight_t": 54.5,
+  "armament": [
+    "120 mm KM256 smoothbore (K1A1/A2) or 105 mm (K1/K1E1)",
+    "12.7 mm K6 HMG",
+    "7.62 mm M60D on loader hatch",
+    "7.62 mm coaxial MG"
+  ],
+  "protection": "Composite (Chobham-type) armour. Game: immune to all small-calibre rounds; 7.62x54R and 12.7/14.5 mm only damage optics, external stowage, fuel drums and tracks (mobility kill on repeated hits); PG-7V/AT4/MAAWS/SMAW/NLAW penetrate side, rear and turret roof; Javelin top-attack penetrates; frontal arc resists unguided launchers.",
+  "visual_notes": [
+    "Low flat wedge-shaped welded turret reminiscent of the M1 Abrams, smaller",
+    "Six road wheels per side, hybrid hydropneumatic/torsion bar suspension, side skirts",
+    "K1A2: new commander sight, IFF panel, combat ID",
+    "Most numerous ROK tank"
+  ],
+  "colour_schemes": [
+    {
+      "name": "ROK Army four-colour",
+      "palette": [
+        "#4C5A36",
+        "#6E5B3E",
+        "#22231D",
+        "#8A8466"
+      ]
+    }
+  ],
+  "variants": [
+    "K1 / K1E1 (105 mm)",
+    "K1A1 / K1A2 (120 mm)",
+    "K1 ARV",
+    "K1 AVLB"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/K1_88-Tank",
+    "https://commons.wikimedia.org/wiki/Category:K1_88-Tank"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/K1_88-Tank",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Republic_of_Korea_Army"
+  ]
+}

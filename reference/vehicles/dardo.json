@@ -1,0 +1,58 @@
+{
+  "id": "dardo",
+  "name": "VCC-80 Dardo",
+  "aliases": [
+    "Dardo"
+  ],
+  "origin": "Italy",
+  "type": "ifv",
+  "operators": [
+    "ita"
+  ],
+  "crew": 3,
+  "passengers": 6,
+  "dimensions_m": {
+    "length": 6.7,
+    "width": 3.0,
+    "height": 2.64
+  },
+  "weight_t": 23.4,
+  "armament": [
+    "25 mm Oerlikon KBA",
+    "Two TOW launchers on turret sides",
+    "7.62 mm coaxial"
+  ],
+  "protection": "Aluminium/steel armour. Being replaced by Lynx KF41. Game: immune to 5.56/5.45/7.62x39/7.62x51; 7.62x54R can damage optics and exposed systems; 12.7/14.5 mm can penetrate sides on the lighter variants; any launcher in the game list penetrates.",
+  "visual_notes": [
+    "Tracked IFV with flat low hull and small turret with two TOW boxes",
+    "6 road wheels per side",
+    "Rear ramp"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Italian Army green/brown/black",
+      "palette": [
+        "#4D5534",
+        "#5E4A33",
+        "#1E1E1A"
+      ]
+    },
+    {
+      "name": "Desert sand",
+      "palette": [
+        "#C8B48A",
+        "#A8956C"
+      ]
+    }
+  ],
+  "variants": [],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Dardo_IFV"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Dardo_IFV",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Italian_Army"
+  ]
+}

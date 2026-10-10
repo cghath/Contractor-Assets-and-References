@@ -1,0 +1,58 @@
+{
+  "id": "sandcat",
+  "name": "Plasan SandCat",
+  "aliases": [
+    "Sand Cat",
+    "Stormer"
+  ],
+  "origin": "Israel",
+  "type": "light",
+  "operators": [
+    "aze",
+    "kaz"
+  ],
+  "crew": 2,
+  "passengers": 6,
+  "dimensions_m": {
+    "length": 5.5,
+    "width": 2.3,
+    "height": 2.4
+  },
+  "weight_t": 8.8,
+  "armament": [
+    "12.7 mm or 7.62 mm RWS",
+    "Spike ATGM / mortar variants"
+  ],
+  "protection": "Bolted composite/steel armour kit on a Ford Super Duty chassis. Game: immune to small-calibre (5.56/5.45/7.62x39/7.62x51); 7.62x54R AP and larger can penetrate side/rear and disable tyres/engine; every launcher in the game list penetrates.",
+  "visual_notes": [
+    "Pickup-sized armoured 4x4 with trapezoidal side windows and a cat-face grille",
+    "Bolt-on armour panels, roof RWS",
+    "Azerbaijani vehicles in desert-green camouflage"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Azerbaijani desert-green disruptive",
+      "palette": [
+        "#C8B48A",
+        "#8E7B55",
+        "#5C5A3A",
+        "#3A3A2C"
+      ]
+    }
+  ],
+  "variants": [
+    "SandCat Gen 2/3",
+    "ATGM carrier",
+    "Recon"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Plasan_Sand_Cat",
+    "https://commons.wikimedia.org/wiki/Category:Plasan_Sand_Cat"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Plasan_Sand_Cat",
+    "https://caliber.az/en/post/military-parade-in-baku-structure-of-armaments-and-their-practical-significance"
+  ]
+}
