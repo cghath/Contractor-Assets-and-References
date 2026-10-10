@@ -1,3 +1,5 @@
+# SUPERSEDED (2026-10-10): the finished catalogue is loadouts/weapons_index.json and loadouts/armor_index.json.
+# Ids below were kept (m110_sniper dropped as a duplicate of m110). %GAME_IDS is out of date: use the game repo data/items.json.
 # Catalogue for the loadout generator. Ids are stable snake_case ids for the game.
 our (%W, %GL, %O, %L, %GAME_IDS);
 

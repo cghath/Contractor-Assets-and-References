@@ -1,0 +1,835 @@
+{
+ "id": "cartel_pacifico",
+ "faction": "Liga del Pacífico (fictional)",
+ "schema_version": 1,
+ "kind": "criminal",
+ "campaign_tier": "early",
+ "default_variant": "regular",
+ "variants": [
+  {
+   "id": "regular",
+   "name": "Uniformed armed cell (sicarios)",
+   "camo": "MultiCam-style knock-off tactical kit",
+   "armor_tier": "medium",
+   "medical_level": "minimal",
+   "roles": {
+    "rifleman": {
+     "primary": {
+      "id": "ak47",
+      "name": "AK-47 / Type 56 pattern",
+      "calibre": "7.62x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "iron", "name": "Iron sights"},
+      "ammo": {
+       "id": "mag_762x39_30",
+       "round": "7.62x39mm 57-N-231 PS (mild steel core)",
+       "game_round_id": "762x39_msc",
+       "rounds_per_mag": 30,
+       "count": 6,
+       "game_item_id": null
+      },
+      "alternates": ["ar15_pattern"]
+     },
+     "secondary": {
+      "id": "five_seven",
+      "name": "FN Five-seveN Mk2",
+      "calibre": "5.7x28mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {"id": "mag_57x28_20", "round": "5.7x28mm SS190", "game_round_id": null, "rounds_per_mag": 20, "count": 2, "game_item_id": null}
+     },
+     "launcher": null,
+     "grenades": [{"id": "m67", "name": "M67 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}],
+     "armor": {
+      "vest": {"id": "commercial_pc", "name": "Commercial plate carrier (Condor / Crye-pattern copy)", "tier": "medium", "game_item_id": "plate_carrier"},
+      "plates": {
+       "id": "steel_commercial",
+       "name": "Commercial steel plates (AR500-class, level III)",
+       "material": "steel",
+       "real_rating": "NIJ III (spall risk without coating)",
+       "front": true,
+       "back": true,
+       "game_rating": "III++",
+       "game_item_id": "plate_steel_l3"
+      },
+      "side_plates": null,
+      "helmet": {
+       "id": "cheap_helmet",
+       "name": "Low-cost commercial ballistic helmet (PASGT copy)",
+       "tier": "light",
+       "game_rating": "IIA",
+       "game_item_id": "helmet_bump"
+      }
+     },
+     "medical": {"container": null, "items": [{"id": "pressure_bandage", "count": 1, "game_item_id": "pressure_bandage"}]},
+     "other": [],
+     "game_kit": [
+      ["plate_carrier", 1],
+      ["plate_steel_l3", 2],
+      ["helmet_bump", 1],
+      ["m4a1", 1],
+      ["mag_556", 6],
+      ["m17", 1],
+      ["mag_9mm", 3],
+      ["frag_grenade", 1],
+      ["pressure_bandage", 1]
+     ]
+    },
+    "autorifleman": {
+     "primary": {
+      "id": "m249",
+      "name": "M249 SAW",
+      "calibre": "5.56x45mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "iron", "name": "Iron sights"},
+      "ammo": {
+       "id": "belt_556_200",
+       "round": "5.56x45mm SS109 / M855 (NATO ball)",
+       "game_round_id": "556_m855",
+       "rounds_per_mag": 200,
+       "count": 2,
+       "game_item_id": null
+      },
+      "alternates": ["pkm", "m60"]
+     },
+     "secondary": {
+      "id": "five_seven",
+      "name": "FN Five-seveN Mk2",
+      "calibre": "5.7x28mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {"id": "mag_57x28_20", "round": "5.7x28mm SS190", "game_round_id": null, "rounds_per_mag": 20, "count": 2, "game_item_id": null}
+     },
+     "launcher": null,
+     "grenades": [],
+     "armor": {
+      "vest": {"id": "commercial_pc", "name": "Commercial plate carrier (Condor / Crye-pattern copy)", "tier": "medium", "game_item_id": "plate_carrier"},
+      "plates": {
+       "id": "steel_commercial",
+       "name": "Commercial steel plates (AR500-class, level III)",
+       "material": "steel",
+       "real_rating": "NIJ III (spall risk without coating)",
+       "front": true,
+       "back": true,
+       "game_rating": "III++",
+       "game_item_id": "plate_steel_l3"
+      },
+      "side_plates": null,
+      "helmet": {
+       "id": "cheap_helmet",
+       "name": "Low-cost commercial ballistic helmet (PASGT copy)",
+       "tier": "light",
+       "game_rating": "IIA",
+       "game_item_id": "helmet_bump"
+      }
+     },
+     "medical": {"container": null, "items": [{"id": "pressure_bandage", "count": 1, "game_item_id": "pressure_bandage"}]},
+     "other": [],
+     "game_kit": [
+      ["plate_carrier", 1],
+      ["plate_steel_l3", 2],
+      ["helmet_bump", 1],
+      ["m4a1", 1],
+      ["mag_556", 12],
+      ["m17", 1],
+      ["mag_9mm", 3],
+      ["pressure_bandage", 1]
+     ]
+    },
+    "marksman": {
+     "primary": {
+      "id": "ar10_pattern",
+      "name": "AR-10-pattern DMR (commercial)",
+      "calibre": "7.62x51mm",
+      "game_item_id": null,
+      "game_substitute": "m110",
+      "optic": {"id": "dmr_scope", "name": "3-18x DMR scope"},
+      "ammo": {
+       "id": "mag_762",
+       "round": "7.62x51mm M80 / NATO ball",
+       "game_round_id": "762x51_m80",
+       "rounds_per_mag": 20,
+       "count": 5,
+       "game_item_id": "mag_762"
+      }
+     },
+     "secondary": {
+      "id": "five_seven",
+      "name": "FN Five-seveN Mk2",
+      "calibre": "5.7x28mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {"id": "mag_57x28_20", "round": "5.7x28mm SS190", "game_round_id": null, "rounds_per_mag": 20, "count": 2, "game_item_id": null}
+     },
+     "launcher": null,
+     "grenades": [],
+     "armor": {
+      "vest": {"id": "commercial_pc", "name": "Commercial plate carrier (Condor / Crye-pattern copy)", "tier": "medium", "game_item_id": "plate_carrier"},
+      "plates": {
+       "id": "steel_commercial",
+       "name": "Commercial steel plates (AR500-class, level III)",
+       "material": "steel",
+       "real_rating": "NIJ III (spall risk without coating)",
+       "front": true,
+       "back": true,
+       "game_rating": "III++",
+       "game_item_id": "plate_steel_l3"
+      },
+      "side_plates": null,
+      "helmet": {
+       "id": "cheap_helmet",
+       "name": "Low-cost commercial ballistic helmet (PASGT copy)",
+       "tier": "light",
+       "game_rating": "IIA",
+       "game_item_id": "helmet_bump"
+      }
+     },
+     "medical": {"container": null, "items": [{"id": "pressure_bandage", "count": 1, "game_item_id": "pressure_bandage"}]},
+     "other": [],
+     "game_kit": [
+      ["plate_carrier", 1],
+      ["plate_steel_l3", 2],
+      ["helmet_bump", 1],
+      ["m110", 1],
+      ["mag_762", 5],
+      ["m17", 1],
+      ["mag_9mm", 3],
+      ["pressure_bandage", 1]
+     ]
+    },
+    "grenadier": {
+     "primary": {
+      "id": "ar15_pattern",
+      "name": "AR-15 / M4-pattern rifle (commercial or captured)",
+      "calibre": "5.56x45mm",
+      "game_item_id": null,
+      "game_substitute": "mk18",
+      "optic": {"id": "red_dot", "name": "Red dot (Aimpoint CompM4/CompM5 class)"},
+      "ammo": {
+       "id": "mag_556",
+       "round": "5.56x45mm SS109 / M855 (NATO ball)",
+       "game_round_id": "556_m855",
+       "rounds_per_mag": 30,
+       "count": 6,
+       "game_item_id": "mag_556"
+      },
+      "underbarrel": {
+       "id": "m203",
+       "name": "M203",
+       "calibre": "40x46mm",
+       "game_item_id": null,
+       "ammo": [{"id": "gl_40x46_he", "name": "40x46mm HEDP grenade (M433 class)", "count": 10, "game_item_id": null}]
+      }
+     },
+     "secondary": {
+      "id": "five_seven",
+      "name": "FN Five-seveN Mk2",
+      "calibre": "5.7x28mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {"id": "mag_57x28_20", "round": "5.7x28mm SS190", "game_round_id": null, "rounds_per_mag": 20, "count": 2, "game_item_id": null}
+     },
+     "launcher": null,
+     "grenades": [{"id": "m67", "name": "M67 fragmentation grenade", "kind": "frag", "count": 2, "game_item_id": "frag_grenade"}],
+     "armor": {
+      "vest": {"id": "commercial_pc", "name": "Commercial plate carrier (Condor / Crye-pattern copy)", "tier": "medium", "game_item_id": "plate_carrier"},
+      "plates": {
+       "id": "steel_commercial",
+       "name": "Commercial steel plates (AR500-class, level III)",
+       "material": "steel",
+       "real_rating": "NIJ III (spall risk without coating)",
+       "front": true,
+       "back": true,
+       "game_rating": "III++",
+       "game_item_id": "plate_steel_l3"
+      },
+      "side_plates": null,
+      "helmet": {
+       "id": "cheap_helmet",
+       "name": "Low-cost commercial ballistic helmet (PASGT copy)",
+       "tier": "light",
+       "game_rating": "IIA",
+       "game_item_id": "helmet_bump"
+      }
+     },
+     "medical": {"container": null, "items": [{"id": "pressure_bandage", "count": 1, "game_item_id": "pressure_bandage"}]},
+     "other": [],
+     "game_kit": [
+      ["plate_carrier", 1],
+      ["plate_steel_l3", 2],
+      ["helmet_bump", 1],
+      ["mk18", 1],
+      ["mag_556", 6],
+      ["m17", 1],
+      ["mag_9mm", 3],
+      ["frag_grenade", 2],
+      ["pressure_bandage", 1]
+     ]
+    },
+    "at": {
+     "primary": {
+      "id": "ak47",
+      "name": "AK-47 / Type 56 pattern",
+      "calibre": "7.62x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "iron", "name": "Iron sights"},
+      "ammo": {
+       "id": "mag_762x39_30",
+       "round": "7.62x39mm 57-N-231 PS (mild steel core)",
+       "game_round_id": "762x39_msc",
+       "rounds_per_mag": 30,
+       "count": 5,
+       "game_item_id": null
+      }
+     },
+     "secondary": {
+      "id": "five_seven",
+      "name": "FN Five-seveN Mk2",
+      "calibre": "5.7x28mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {"id": "mag_57x28_20", "round": "5.7x28mm SS190", "game_round_id": null, "rounds_per_mag": 20, "count": 2, "game_item_id": null}
+     },
+     "launcher": {
+      "id": "rpg7",
+      "name": "RPG-7",
+      "kind": "rocket",
+      "in_game": true,
+      "game_launcher": "RPG-7",
+      "game_substitute": null,
+      "game_item_id": null,
+      "rounds": [{"name": "PG-7V", "type": "HEAT", "count": 2}, {"name": "OG-7V", "type": "frag", "count": 1}]
+     },
+     "grenades": [],
+     "armor": {
+      "vest": {"id": "commercial_pc", "name": "Commercial plate carrier (Condor / Crye-pattern copy)", "tier": "medium", "game_item_id": "plate_carrier"},
+      "plates": {
+       "id": "steel_commercial",
+       "name": "Commercial steel plates (AR500-class, level III)",
+       "material": "steel",
+       "real_rating": "NIJ III (spall risk without coating)",
+       "front": true,
+       "back": true,
+       "game_rating": "III++",
+       "game_item_id": "plate_steel_l3"
+      },
+      "side_plates": null,
+      "helmet": {
+       "id": "cheap_helmet",
+       "name": "Low-cost commercial ballistic helmet (PASGT copy)",
+       "tier": "light",
+       "game_rating": "IIA",
+       "game_item_id": "helmet_bump"
+      }
+     },
+     "medical": {"container": null, "items": [{"id": "pressure_bandage", "count": 1, "game_item_id": "pressure_bandage"}]},
+     "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}],
+     "game_kit": [
+      ["plate_carrier", 1],
+      ["plate_steel_l3", 2],
+      ["helmet_bump", 1],
+      ["m4a1", 1],
+      ["mag_556", 5],
+      ["m17", 1],
+      ["mag_9mm", 3],
+      ["pressure_bandage", 1],
+      ["assault_pack", 1]
+     ]
+    },
+    "medic": {
+     "primary": {
+      "id": "ar15_pattern",
+      "name": "AR-15 / M4-pattern rifle (commercial or captured)",
+      "calibre": "5.56x45mm",
+      "game_item_id": null,
+      "game_substitute": "mk18",
+      "optic": {"id": "red_dot", "name": "Red dot (Aimpoint CompM4/CompM5 class)"},
+      "ammo": {
+       "id": "mag_556",
+       "round": "5.56x45mm SS109 / M855 (NATO ball)",
+       "game_round_id": "556_m855",
+       "rounds_per_mag": 30,
+       "count": 5,
+       "game_item_id": "mag_556"
+      }
+     },
+     "secondary": {
+      "id": "five_seven",
+      "name": "FN Five-seveN Mk2",
+      "calibre": "5.7x28mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {"id": "mag_57x28_20", "round": "5.7x28mm SS190", "game_round_id": null, "rounds_per_mag": 20, "count": 2, "game_item_id": null}
+     },
+     "launcher": null,
+     "grenades": [],
+     "armor": {
+      "vest": {"id": "commercial_pc", "name": "Commercial plate carrier (Condor / Crye-pattern copy)", "tier": "medium", "game_item_id": "plate_carrier"},
+      "plates": {
+       "id": "steel_commercial",
+       "name": "Commercial steel plates (AR500-class, level III)",
+       "material": "steel",
+       "real_rating": "NIJ III (spall risk without coating)",
+       "front": true,
+       "back": true,
+       "game_rating": "III++",
+       "game_item_id": "plate_steel_l3"
+      },
+      "side_plates": null,
+      "helmet": {
+       "id": "cheap_helmet",
+       "name": "Low-cost commercial ballistic helmet (PASGT copy)",
+       "tier": "light",
+       "game_rating": "IIA",
+       "game_item_id": "helmet_bump"
+      }
+     },
+     "medical": {
+      "container": null,
+      "items": [
+       {"id": "tourniquet", "count": 2, "game_item_id": "tourniquet"},
+       {"id": "pressure_bandage", "count": 4, "game_item_id": "pressure_bandage"},
+       {"id": "hemostatic_gauze", "count": 1, "game_item_id": "hemostatic_gauze"},
+       {"id": "morphine", "count": 1, "game_item_id": "morphine"}
+      ]
+     },
+     "other": [],
+     "game_kit": [
+      ["plate_carrier", 1],
+      ["plate_steel_l3", 2],
+      ["helmet_bump", 1],
+      ["mk18", 1],
+      ["mag_556", 5],
+      ["m17", 1],
+      ["mag_9mm", 3],
+      ["tourniquet", 2],
+      ["pressure_bandage", 4],
+      ["hemostatic_gauze", 1],
+      ["morphine", 1]
+     ]
+    },
+    "squad_leader": {
+     "primary": {
+      "id": "ar15_pattern",
+      "name": "AR-15 / M4-pattern rifle (commercial or captured)",
+      "calibre": "5.56x45mm",
+      "game_item_id": null,
+      "game_substitute": "mk18",
+      "optic": {"id": "red_dot", "name": "Red dot (Aimpoint CompM4/CompM5 class)"},
+      "ammo": {
+       "id": "mag_556",
+       "round": "5.56x45mm SS109 / M855 (NATO ball)",
+       "game_round_id": "556_m855",
+       "rounds_per_mag": 30,
+       "count": 6,
+       "game_item_id": "mag_556"
+      }
+     },
+     "secondary": {
+      "id": "five_seven",
+      "name": "FN Five-seveN Mk2",
+      "calibre": "5.7x28mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {"id": "mag_57x28_20", "round": "5.7x28mm SS190", "game_round_id": null, "rounds_per_mag": 20, "count": 2, "game_item_id": null}
+     },
+     "launcher": null,
+     "grenades": [{"id": "m67", "name": "M67 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}],
+     "armor": {
+      "vest": {"id": "commercial_pc", "name": "Commercial plate carrier (Condor / Crye-pattern copy)", "tier": "medium", "game_item_id": "plate_carrier"},
+      "plates": {
+       "id": "steel_commercial",
+       "name": "Commercial steel plates (AR500-class, level III)",
+       "material": "steel",
+       "real_rating": "NIJ III (spall risk without coating)",
+       "front": true,
+       "back": true,
+       "game_rating": "III++",
+       "game_item_id": "plate_steel_l3"
+      },
+      "side_plates": null,
+      "helmet": {
+       "id": "cheap_helmet",
+       "name": "Low-cost commercial ballistic helmet (PASGT copy)",
+       "tier": "light",
+       "game_rating": "IIA",
+       "game_item_id": "helmet_bump"
+      }
+     },
+     "medical": {"container": null, "items": [{"id": "pressure_bandage", "count": 1, "game_item_id": "pressure_bandage"}]},
+     "other": [{"id": "radio", "count": 1, "game_item_id": null}],
+     "game_kit": [
+      ["plate_carrier", 1],
+      ["plate_steel_l3", 2],
+      ["helmet_bump", 1],
+      ["mk18", 1],
+      ["mag_556", 6],
+      ["m17", 1],
+      ["mag_9mm", 3],
+      ["frag_grenade", 1],
+      ["pressure_bandage", 1]
+     ]
+    },
+    "sniper": {
+     "primary": {
+      "id": "m82a1",
+      "name": "Barrett M82A1",
+      "calibre": "12.7x99mm (.50 BMG)",
+      "game_item_id": null,
+      "game_substitute": "m110",
+      "optic": {"id": "sniper_scope", "name": "5-25x sniper scope"},
+      "ammo": {"id": "mag_50bmg_10", "round": "12.7x99mm M33 ball", "game_round_id": "50bmg_m33", "rounds_per_mag": 10, "count": 3, "game_item_id": null}
+     },
+     "secondary": {
+      "id": "five_seven",
+      "name": "FN Five-seveN Mk2",
+      "calibre": "5.7x28mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {"id": "mag_57x28_20", "round": "5.7x28mm SS190", "game_round_id": null, "rounds_per_mag": 20, "count": 2, "game_item_id": null}
+     },
+     "launcher": null,
+     "grenades": [],
+     "armor": {
+      "vest": {"id": "commercial_pc", "name": "Commercial plate carrier (Condor / Crye-pattern copy)", "tier": "medium", "game_item_id": "plate_carrier"},
+      "plates": {
+       "id": "steel_commercial",
+       "name": "Commercial steel plates (AR500-class, level III)",
+       "material": "steel",
+       "real_rating": "NIJ III (spall risk without coating)",
+       "front": true,
+       "back": true,
+       "game_rating": "III++",
+       "game_item_id": "plate_steel_l3"
+      },
+      "side_plates": null,
+      "helmet": {
+       "id": "cheap_helmet",
+       "name": "Low-cost commercial ballistic helmet (PASGT copy)",
+       "tier": "light",
+       "game_rating": "IIA",
+       "game_item_id": "helmet_bump"
+      }
+     },
+     "medical": {"container": null, "items": [{"id": "pressure_bandage", "count": 1, "game_item_id": "pressure_bandage"}]},
+     "other": [],
+     "game_kit": [
+      ["plate_carrier", 1],
+      ["plate_steel_l3", 2],
+      ["helmet_bump", 1],
+      ["m110", 1],
+      ["mag_762", 2],
+      ["m17", 1],
+      ["mag_9mm", 3],
+      ["pressure_bandage", 1]
+     ]
+    }
+   },
+   "team_weapons": []
+  },
+  {
+   "id": "street",
+   "name": "Street gunmen and lookouts (halcones)",
+   "camo": "Black tactical / civilian clothes",
+   "armor_tier": "none",
+   "medical_level": "minimal",
+   "roles": {
+    "rifleman": {
+     "primary": {
+      "id": "ak47",
+      "name": "AK-47 / Type 56 pattern",
+      "calibre": "7.62x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "iron", "name": "Iron sights"},
+      "ammo": {
+       "id": "mag_762x39_30",
+       "round": "7.62x39mm 57-N-231 PS (mild steel core)",
+       "game_round_id": "762x39_msc",
+       "rounds_per_mag": 30,
+       "count": 6,
+       "game_item_id": null
+      },
+      "alternates": ["ar15_pattern"]
+     },
+     "secondary": {
+      "id": "five_seven",
+      "name": "FN Five-seveN Mk2",
+      "calibre": "5.7x28mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {"id": "mag_57x28_20", "round": "5.7x28mm SS190", "game_round_id": null, "rounds_per_mag": 20, "count": 2, "game_item_id": null}
+     },
+     "launcher": null,
+     "grenades": [{"id": "m67", "name": "M67 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}],
+     "armor": {"vest": null, "plates": null, "side_plates": null, "helmet": null},
+     "medical": {"container": null, "items": [{"id": "pressure_bandage", "count": 1, "game_item_id": "pressure_bandage"}]},
+     "other": [],
+     "game_kit": [["m4a1", 1], ["mag_556", 6], ["m17", 1], ["mag_9mm", 3], ["frag_grenade", 1], ["pressure_bandage", 1]]
+    },
+    "autorifleman": {
+     "primary": {
+      "id": "m249",
+      "name": "M249 SAW",
+      "calibre": "5.56x45mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "iron", "name": "Iron sights"},
+      "ammo": {
+       "id": "belt_556_200",
+       "round": "5.56x45mm SS109 / M855 (NATO ball)",
+       "game_round_id": "556_m855",
+       "rounds_per_mag": 200,
+       "count": 2,
+       "game_item_id": null
+      },
+      "alternates": ["pkm", "m60"]
+     },
+     "secondary": {
+      "id": "five_seven",
+      "name": "FN Five-seveN Mk2",
+      "calibre": "5.7x28mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {"id": "mag_57x28_20", "round": "5.7x28mm SS190", "game_round_id": null, "rounds_per_mag": 20, "count": 2, "game_item_id": null}
+     },
+     "launcher": null,
+     "grenades": [],
+     "armor": {"vest": null, "plates": null, "side_plates": null, "helmet": null},
+     "medical": {"container": null, "items": [{"id": "pressure_bandage", "count": 1, "game_item_id": "pressure_bandage"}]},
+     "other": [],
+     "game_kit": [["m4a1", 1], ["mag_556", 12], ["m17", 1], ["mag_9mm", 3], ["pressure_bandage", 1]]
+    },
+    "marksman": {
+     "primary": {
+      "id": "ar10_pattern",
+      "name": "AR-10-pattern DMR (commercial)",
+      "calibre": "7.62x51mm",
+      "game_item_id": null,
+      "game_substitute": "m110",
+      "optic": {"id": "dmr_scope", "name": "3-18x DMR scope"},
+      "ammo": {
+       "id": "mag_762",
+       "round": "7.62x51mm M80 / NATO ball",
+       "game_round_id": "762x51_m80",
+       "rounds_per_mag": 20,
+       "count": 5,
+       "game_item_id": "mag_762"
+      }
+     },
+     "secondary": {
+      "id": "five_seven",
+      "name": "FN Five-seveN Mk2",
+      "calibre": "5.7x28mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {"id": "mag_57x28_20", "round": "5.7x28mm SS190", "game_round_id": null, "rounds_per_mag": 20, "count": 2, "game_item_id": null}
+     },
+     "launcher": null,
+     "grenades": [],
+     "armor": {"vest": null, "plates": null, "side_plates": null, "helmet": null},
+     "medical": {"container": null, "items": [{"id": "pressure_bandage", "count": 1, "game_item_id": "pressure_bandage"}]},
+     "other": [],
+     "game_kit": [["m110", 1], ["mag_762", 5], ["m17", 1], ["mag_9mm", 3], ["pressure_bandage", 1]]
+    },
+    "grenadier": {
+     "primary": {
+      "id": "ar15_pattern",
+      "name": "AR-15 / M4-pattern rifle (commercial or captured)",
+      "calibre": "5.56x45mm",
+      "game_item_id": null,
+      "game_substitute": "mk18",
+      "optic": {"id": "red_dot", "name": "Red dot (Aimpoint CompM4/CompM5 class)"},
+      "ammo": {
+       "id": "mag_556",
+       "round": "5.56x45mm SS109 / M855 (NATO ball)",
+       "game_round_id": "556_m855",
+       "rounds_per_mag": 30,
+       "count": 6,
+       "game_item_id": "mag_556"
+      },
+      "underbarrel": {
+       "id": "m203",
+       "name": "M203",
+       "calibre": "40x46mm",
+       "game_item_id": null,
+       "ammo": [{"id": "gl_40x46_he", "name": "40x46mm HEDP grenade (M433 class)", "count": 10, "game_item_id": null}]
+      }
+     },
+     "secondary": {
+      "id": "five_seven",
+      "name": "FN Five-seveN Mk2",
+      "calibre": "5.7x28mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {"id": "mag_57x28_20", "round": "5.7x28mm SS190", "game_round_id": null, "rounds_per_mag": 20, "count": 2, "game_item_id": null}
+     },
+     "launcher": null,
+     "grenades": [{"id": "m67", "name": "M67 fragmentation grenade", "kind": "frag", "count": 2, "game_item_id": "frag_grenade"}],
+     "armor": {"vest": null, "plates": null, "side_plates": null, "helmet": null},
+     "medical": {"container": null, "items": [{"id": "pressure_bandage", "count": 1, "game_item_id": "pressure_bandage"}]},
+     "other": [],
+     "game_kit": [["mk18", 1], ["mag_556", 6], ["m17", 1], ["mag_9mm", 3], ["frag_grenade", 2], ["pressure_bandage", 1]]
+    },
+    "at": {
+     "primary": {
+      "id": "ak47",
+      "name": "AK-47 / Type 56 pattern",
+      "calibre": "7.62x39mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "iron", "name": "Iron sights"},
+      "ammo": {
+       "id": "mag_762x39_30",
+       "round": "7.62x39mm 57-N-231 PS (mild steel core)",
+       "game_round_id": "762x39_msc",
+       "rounds_per_mag": 30,
+       "count": 5,
+       "game_item_id": null
+      }
+     },
+     "secondary": {
+      "id": "five_seven",
+      "name": "FN Five-seveN Mk2",
+      "calibre": "5.7x28mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {"id": "mag_57x28_20", "round": "5.7x28mm SS190", "game_round_id": null, "rounds_per_mag": 20, "count": 2, "game_item_id": null}
+     },
+     "launcher": {
+      "id": "rpg7",
+      "name": "RPG-7",
+      "kind": "rocket",
+      "in_game": true,
+      "game_launcher": "RPG-7",
+      "game_substitute": null,
+      "game_item_id": null,
+      "rounds": [{"name": "PG-7V", "type": "HEAT", "count": 2}, {"name": "OG-7V", "type": "frag", "count": 1}]
+     },
+     "grenades": [],
+     "armor": {"vest": null, "plates": null, "side_plates": null, "helmet": null},
+     "medical": {"container": null, "items": [{"id": "pressure_bandage", "count": 1, "game_item_id": "pressure_bandage"}]},
+     "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}],
+     "game_kit": [["m4a1", 1], ["mag_556", 5], ["m17", 1], ["mag_9mm", 3], ["pressure_bandage", 1], ["assault_pack", 1]]
+    },
+    "medic": {
+     "primary": {
+      "id": "ar15_pattern",
+      "name": "AR-15 / M4-pattern rifle (commercial or captured)",
+      "calibre": "5.56x45mm",
+      "game_item_id": null,
+      "game_substitute": "mk18",
+      "optic": {"id": "red_dot", "name": "Red dot (Aimpoint CompM4/CompM5 class)"},
+      "ammo": {
+       "id": "mag_556",
+       "round": "5.56x45mm SS109 / M855 (NATO ball)",
+       "game_round_id": "556_m855",
+       "rounds_per_mag": 30,
+       "count": 5,
+       "game_item_id": "mag_556"
+      }
+     },
+     "secondary": {
+      "id": "five_seven",
+      "name": "FN Five-seveN Mk2",
+      "calibre": "5.7x28mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {"id": "mag_57x28_20", "round": "5.7x28mm SS190", "game_round_id": null, "rounds_per_mag": 20, "count": 2, "game_item_id": null}
+     },
+     "launcher": null,
+     "grenades": [],
+     "armor": {"vest": null, "plates": null, "side_plates": null, "helmet": null},
+     "medical": {
+      "container": null,
+      "items": [
+       {"id": "tourniquet", "count": 2, "game_item_id": "tourniquet"},
+       {"id": "pressure_bandage", "count": 4, "game_item_id": "pressure_bandage"},
+       {"id": "hemostatic_gauze", "count": 1, "game_item_id": "hemostatic_gauze"},
+       {"id": "morphine", "count": 1, "game_item_id": "morphine"}
+      ]
+     },
+     "other": [],
+     "game_kit": [["mk18", 1], ["mag_556", 5], ["m17", 1], ["mag_9mm", 3], ["tourniquet", 2], ["pressure_bandage", 4], ["hemostatic_gauze", 1], ["morphine", 1]]
+    },
+    "squad_leader": {
+     "primary": {
+      "id": "ar15_pattern",
+      "name": "AR-15 / M4-pattern rifle (commercial or captured)",
+      "calibre": "5.56x45mm",
+      "game_item_id": null,
+      "game_substitute": "mk18",
+      "optic": {"id": "red_dot", "name": "Red dot (Aimpoint CompM4/CompM5 class)"},
+      "ammo": {
+       "id": "mag_556",
+       "round": "5.56x45mm SS109 / M855 (NATO ball)",
+       "game_round_id": "556_m855",
+       "rounds_per_mag": 30,
+       "count": 6,
+       "game_item_id": "mag_556"
+      }
+     },
+     "secondary": {
+      "id": "five_seven",
+      "name": "FN Five-seveN Mk2",
+      "calibre": "5.7x28mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {"id": "mag_57x28_20", "round": "5.7x28mm SS190", "game_round_id": null, "rounds_per_mag": 20, "count": 2, "game_item_id": null}
+     },
+     "launcher": null,
+     "grenades": [{"id": "m67", "name": "M67 fragmentation grenade", "kind": "frag", "count": 1, "game_item_id": "frag_grenade"}],
+     "armor": {"vest": null, "plates": null, "side_plates": null, "helmet": null},
+     "medical": {"container": null, "items": [{"id": "pressure_bandage", "count": 1, "game_item_id": "pressure_bandage"}]},
+     "other": [{"id": "radio", "count": 1, "game_item_id": null}],
+     "game_kit": [["mk18", 1], ["mag_556", 6], ["m17", 1], ["mag_9mm", 3], ["frag_grenade", 1], ["pressure_bandage", 1]]
+    },
+    "sniper": {
+     "primary": {
+      "id": "m82a1",
+      "name": "Barrett M82A1",
+      "calibre": "12.7x99mm (.50 BMG)",
+      "game_item_id": null,
+      "game_substitute": "m110",
+      "optic": {"id": "sniper_scope", "name": "5-25x sniper scope"},
+      "ammo": {"id": "mag_50bmg_10", "round": "12.7x99mm M33 ball", "game_round_id": "50bmg_m33", "rounds_per_mag": 10, "count": 3, "game_item_id": null}
+     },
+     "secondary": {
+      "id": "five_seven",
+      "name": "FN Five-seveN Mk2",
+      "calibre": "5.7x28mm",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {"id": "mag_57x28_20", "round": "5.7x28mm SS190", "game_round_id": null, "rounds_per_mag": 20, "count": 2, "game_item_id": null}
+     },
+     "launcher": null,
+     "grenades": [],
+     "armor": {"vest": null, "plates": null, "side_plates": null, "helmet": null},
+     "medical": {"container": null, "items": [{"id": "pressure_bandage", "count": 1, "game_item_id": "pressure_bandage"}]},
+     "other": [],
+     "game_kit": [["m110", 1], ["mag_762", 2], ["m17", 1], ["mag_9mm", 3], ["pressure_bandage", 1]]
+    }
+   },
+   "team_weapons": [],
+   "notes": ["Faction file: many low-level gunmen have no armour."]
+  }
+ ],
+ "role_map": {"driver": "rifleman", "drone_operator": "rifleman", "lookout": "rifleman"},
+ "notes": [
+  "Fictional cartel; real-world weapons and kit.",
+  "RPG-7 is rare (faction file); the .50 BMG rifle is the usual anti-vehicle weapon (sniper role).",
+  ".38 Super pistols are not catalogued; Glock-pattern 9 mm is an alternate to the 5.7x28 mm pistol.",
+  "Steel plates carry spall risk (faction file)."
+ ],
+ "proposed": [
+  "mag and medical counts (Q3 default)",
+  "variants and their armor mapping (Q1, Q9 defaults)",
+  "optics as class ids (Q7 default)",
+  "medical levels from doctrine.ai_tuning.medical_care (Q6 default)",
+  "game_kit (stand-in kit from items that exist today)"
+ ],
+ "sources": ["factions/cartel_pacifico.json"]
+}

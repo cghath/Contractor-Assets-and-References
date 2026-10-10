@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
 """Validate the Contractor faction pack (stdlib only).
 
-Checks the JSON in factions/, reference/vehicles/ and worldspaces/:
+Checks the JSON in factions/, reference/vehicles/, worldspaces/ and loadouts/:
   * every file parses;
   * faction files have the required top-level keys and their id matches the filename;
   * relation keys, theatre ids and vehicle_ids are known;
   * every referenced vehicle_id has a reference/vehicles/<id>.json file;
-  * terrorist factions (bloc me_terror in ROSTER) have player_client false.
+  * terrorist factions (bloc me_terror in ROSTER) have player_client false;
+  * loadouts/<id>.json (the two index files are skipped): the id is a canonical non-player faction id
+    matching the filename, a 'regular' variant exists, every variant has the core roles, in_game
+    launchers are among the 6 in-game launchers (others name one of them or null as game_substitute),
+    and vest and helmet tiers are valid.
 
 The canonical faction and theatre ids are read from tools/factions_workflow.js (ROSTER, THEATRES).
 
@@ -25,6 +29,12 @@ WORKFLOW = os.path.join(ROOT, "tools", "factions_workflow.js")
 FACTION_KEYS = ["id", "name", "kind", "relations", "theatres", "vehicles"]
 # Files in factions/ that are not faction records.
 NON_FACTION_FILES = {"alliances"}
+# Files in loadouts/ that are not per-faction loadouts.
+LOADOUT_INDEX_FILES = {"weapons_index", "armor_index"}
+CORE_ROLES = ["rifleman", "autorifleman", "marksman", "grenadier", "at", "medic", "squad_leader", "sniper"]
+GAME_LAUNCHERS = {"AT4", "RPG-7", "Javelin", "MAAWS", "NLAW", "SMAW"}
+VEST_TIERS = {"light", "medium", "heavy"}
+HELMET_TIERS = {"none", "light", "medium", "heavy"}
 
 errors = []
 warnings = []
@@ -71,6 +81,84 @@ def load_json_dir(sub):
         except (ValueError, UnicodeDecodeError) as e:
             error("%s: invalid JSON: %s" % (rel(path), e))
     return found
+
+
+def check_launcher(path, where, ln):
+    if not isinstance(ln, dict):
+        error("%s: %s is not an object" % (path, where))
+        return
+    in_game = ln.get("in_game")
+    if not isinstance(in_game, bool):
+        error("%s: %s in_game must be true or false" % (path, where))
+    elif in_game and ln.get("game_launcher") not in GAME_LAUNCHERS:
+        error("%s: %s is in_game but game_launcher %r is not one of the 6 in-game launchers"
+              % (path, where, ln.get("game_launcher")))
+    elif not in_game and ln.get("game_substitute") not in GAME_LAUNCHERS | {None}:
+        error("%s: %s game_substitute %r is not one of the 6 in-game launchers"
+              % (path, where, ln.get("game_substitute")))
+
+
+def check_loadout(stem, lo, faction_ids):
+    path = "loadouts/%s.json" % stem
+    if not isinstance(lo, dict):
+        error("%s: top level is not an object" % path)
+        return
+    if lo.get("id") != stem:
+        error("%s: id %r does not match the filename" % (path, lo.get("id")))
+    if stem not in faction_ids or stem == "player":
+        error("%s: %r is not a canonical non-player faction id" % (path, stem))
+    variants = lo.get("variants")
+    if not isinstance(variants, list) or not variants:
+        error("%s: variants must be a non-empty list" % path)
+        return
+    ids = [v.get("id") for v in variants if isinstance(v, dict)]
+    if "regular" not in ids:
+        error("%s: no 'regular' variant" % path)
+    if len(set(ids)) != len(ids):
+        error("%s: duplicate variant ids" % path)
+    for v in variants:
+        if not isinstance(v, dict):
+            error("%s: a variant is not an object" % path)
+            continue
+        vid = v.get("id")
+        roles = v.get("roles")
+        if not isinstance(roles, dict):
+            error("%s: variant %r has no roles object" % (path, vid))
+            continue
+        for r in CORE_ROLES:
+            if r not in roles:
+                error("%s: variant %r is missing core role %r" % (path, vid, r))
+        if v.get("armor_tier") not in VEST_TIERS | {"none"}:
+            error("%s: variant %r armor_tier %r is not none/light/medium/heavy" % (path, vid, v.get("armor_tier")))
+        for i, ln in enumerate(v.get("team_weapons") or []):
+            check_launcher(path, "variant %r team_weapons[%d]" % (vid, i), ln)
+        for rname, role in roles.items():
+            where = "variant %r role %r" % (vid, rname)
+            if not isinstance(role, dict):
+                error("%s: %s is not an object" % (path, where))
+                continue
+            if role.get("not_fielded"):
+                if role.get("stand_in_role") not in roles:
+                    warn("%s: %s is not_fielded without a valid stand_in_role" % (path, where))
+                continue
+            if not isinstance(role.get("primary"), dict):
+                error("%s: %s has no primary weapon" % (path, where))
+            if role.get("launcher") is not None:
+                check_launcher(path, where + " launcher", role["launcher"])
+            armor = role.get("armor") or {}
+            vest = armor.get("vest")
+            if vest is not None and (not isinstance(vest, dict) or vest.get("tier") not in VEST_TIERS):
+                error("%s: %s vest tier %r is not light/medium/heavy"
+                      % (path, where, vest.get("tier") if isinstance(vest, dict) else vest))
+            helmet = armor.get("helmet")
+            if helmet is not None and (not isinstance(helmet, dict) or helmet.get("tier") not in HELMET_TIERS):
+                error("%s: %s helmet tier %r is not none/light/medium/heavy"
+                      % (path, where, helmet.get("tier") if isinstance(helmet, dict) else helmet))
+            if armor.get("side_plates") and (not isinstance(vest, dict) or vest.get("tier") != "heavy"):
+                error("%s: %s has side plates on a vest that is not heavy" % (path, where))
+        for tr, target in (lo.get("role_map") or {}).items():
+            if target not in roles:
+                warn("%s: role_map %r -> %r is not a role of variant %r" % (path, tr, target, vid))
 
 
 def main():
@@ -202,12 +290,23 @@ def main():
     for tid in sorted(theatre_ids - set(worlds)):
         warn("worldspaces/%s.json is missing (still generating?)" % tid)
 
+    loadouts = load_json_dir("loadouts")
+    if loadouts is None:
+        warn("loadouts/ does not exist yet")
+        loadouts = {}
+    for k in LOADOUT_INDEX_FILES:
+        loadouts.pop(k, None)
+    for stem, lo in loadouts.items():
+        check_loadout(stem, lo, faction_ids)
+    for fid in sorted(faction_ids - {"player"} - set(loadouts)):
+        warn("loadouts/%s.json is missing" % fid)
+
     for w in warnings:
         print("WARN  " + w)
     for e in errors:
         print("ERROR " + e)
-    print("\n%d factions, %d vehicles, %d worldspaces checked: %d error(s), %d warning(s)"
-          % (len(factions), len(vehicles), len(worlds), len(errors), len(warnings)))
+    print("\n%d factions, %d vehicles, %d worldspaces, %d loadouts checked: %d error(s), %d warning(s)"
+          % (len(factions), len(vehicles), len(worlds), len(loadouts), len(errors), len(warnings)))
     return 1 if errors or (strict and warnings) else 0
 
 

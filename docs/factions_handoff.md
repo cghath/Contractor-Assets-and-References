@@ -6,7 +6,7 @@ The Contractor design doc (Claude Doc) is the source of truth for game design. W
 
 ## Handoffs (start here)
 
-**Status (2026-10-10, after Job 4):** Jobs 1-4 are complete. All 77 factions exist and are reconciled to `factions/alliances.json` (47 alliances and the full 77 x 77 relations matrix), with 210 vehicles in the catalogue. The validator reports 0 errors. Next job: worldspaces; loadouts follow as job 6.
+**Status (2026-10-10, after Job 4):** Jobs 1-4 are complete. All 77 factions exist and are reconciled to `factions/alliances.json` (47 alliances and the full 77 x 77 relations matrix), with 210 vehicles in the catalogue. The validator reports 0 errors. Job 6 (loadouts) is also complete: all 76 non-player factions have loadouts. Job 5 (worldspaces) is running.
 
 **Faction count:** the roster has 77 ids, not 76 as earlier versions of this file said (1 + 5 + 11 + 8 + 7 + 9 + 11 + 11 + 14).
 
@@ -18,7 +18,7 @@ Each job has a sheet in this repo and a matching Claude Doc:
 | Neutrals bloc (others) | [others_handoff.md](others_handoff.md) | https://claude.ai/code/artifact/37654e72-a033-4f2f-9417-008a5e36fed7 |
 | Alliances | [alliances_handoff.md](alliances_handoff.md) | https://claude.ai/code/artifact/45389ec6-ee49-40e9-b15a-df9704aadb94 |
 | Worldspaces | [worldspaces_handoff.md](worldspaces_handoff.md) | https://claude.ai/code/artifact/721887fe-5ac7-4eac-b048-0195fd684304 |
-| Loadouts (owned by the "Faction loadout questions" thread) | [loadouts_handoff.md](loadouts_handoff.md) | n/a |
+| Loadouts (Job 6, done on the fork) | [loadouts_handoff.md](loadouts_handoff.md) | n/a |
 
 **Resume here.** Run one job at a time, in this order. Details are under "How to resume" at the end of this file.
 
@@ -27,9 +27,9 @@ Each job has a sheet in this repo and a matching Claude Doc:
 3. ~~others.~~ Done (11:05 UTC).
 4. ~~alliances.~~ Done (2026-10-10).
 5. worldspaces. **Next.**
-6. loadouts (on the fork, after alliances; can run alongside worldspaces).
+6. ~~loadouts.~~ Done on the fork (2026-10-10).
 
-The loadouts were owned by the "Faction loadout questions" thread, which never pushed any `loadouts/` files. On the fork, Captain's operator has asked for the loadouts job to be taken over and completed after alliances. Until then, don't touch `loadouts/`.
+The loadouts were owned by the "Faction loadout questions" thread, which never pushed any `loadouts/` files. On the fork, the job was taken over at the user's request and is now complete. The "don't touch `loadouts/`" rule is lifted; loadouts changes follow [loadouts_handoff.md](loadouts_handoff.md).
 
 ## What Captain asked for (2026-10-10)
 
@@ -134,6 +134,8 @@ Answers to the open questions of Jobs 1-3, applied during Job 4. Each one was mo
 
 ## Status at this snapshot
 
+**Update, 2026-10-10 (after Job 6): loadouts are complete on the fork.** The "Faction loadout questions" thread never pushed any files, so Job 6 was taken over on the fork at the user's request. New: `loadouts/<id>.json` for all 76 non-player factions (107 variants; 8 core roles each, plus crew/pilot where the faction fields the vehicles), `loadouts/weapons_index.json`, `loadouts/armor_index.json` and `loadouts/README.md` (roster and "what has to be built": 238 weapons, 33 magazines, 13 calibres, the 6 launcher items, 22 underbarrel launchers, 13 optics, 9 medical items, 1 new plate `plate_steel_light`). Real-world designations throughout; the 8 unanswered loadout defaults are applied and marked proposed. Every `game_kit` id exists in the game repo's `data/items.json`. `tools/validate_pack.py` now checks loadouts: 0 errors. [loadouts_handoff.md](loadouts_handoff.md) has the schema and 10 new open questions for Captain.
+
 **Update, 2026-10-10: Job 4 (alliances) is complete.** New files: `factions/alliances.json` (47 alliances with member status, obligations and proposed game effects; proposed `game_rules` for side-lock, war joining, reputation spill-over and selling; the full 77 x 77 `relations_matrix`), `factions/ALLIANCES.md` (plain-words version, major-power matrix, change log, open questions), `factions/README.md` (schema, roster table, alliance matrix) and `reference/vehicles/ford_ranger.json`. All 77 faction files were reconciled:
   - `relations`: 694 missing reverse entries added, so every pair a file lists is now listed by both sides (same sign, within 30 points). This closed the known gaps (European, Baltic and Asian states vs the terror groups; Nordic, Benelux and Southern European states vs afg_taliban, sdf, krg_peshmerga and sahel_aes; usa vs the PMCs; the terror files vs the PMCs and neutral states; player vs che, aut, irl, mex and prk). One mismatch fixed: aze <-> geo (40 vs 75) set to 58 both ways. The 1,450 pairs that no file lists are filled only in the matrix (judged pairs, group rules and a formula, all proposed).
   - `blocs`: each file now lists exactly the alliances it belongs to (any member status). csto_suspended, eu_candidate, eu_partnership and nato_partner became alliance ids with a member_status; descriptive tags (neutral, schengen, g20, rival_pmc, cartel and others) moved to a new `traits` list.
@@ -155,7 +157,7 @@ The queue, run one job at a time on Captain's desktop, is:
 3. others (**done**, 11:05 UTC)
 4. alliances (**done**, 2026-10-10)
 5. worldspaces (**next**)
-6. loadouts (after alliances; can run alongside worldspaces)
+6. loadouts (**done** on the fork)
 
 **Loadouts moved (Captain, 09:38 UTC):** the faction loadouts are now built by the separate "Faction loadout questions" project thread, which writes only into `loadouts/`. The bloc and worldspace jobs must never edit `loadouts/`, `tools/loadouts_catalog_wip.pl` or `docs/loadouts_handoff.md`. Because another session pushes to this branch too, always pull (rebase) before pushing.
 
@@ -218,7 +220,7 @@ Captain paused everything at 09:34 UTC. Resume only when Captain says so. Run **
 | 3 | others: neutrals, cartels, PMCs (14 factions) | [others_handoff.md](others_handoff.md) | **Done** (14 of 14, 11:05 UTC) |
 | 4 | alliances: `factions/alliances.json`, `ALLIANCES.md`, the relations matrix, and reconciling all 77 files | [alliances_handoff.md](alliances_handoff.md) | **Done** (2026-10-10) |
 | 5 | worldspaces: 23 theatres, Middle East and Africa first | [worldspaces_handoff.md](worldspaces_handoff.md) | Next |
-| n/a | loadouts | [loadouts_handoff.md](loadouts_handoff.md) | Job 6 on the fork, after alliances (can run alongside worldspaces). The handoff sheet needs a file schema and an updated faction count first. |
+| n/a | loadouts | [loadouts_handoff.md](loadouts_handoff.md) | **Done** (Job 6, on the fork; 76 of 76). |
 
 ### Job 1 details: finishing the Middle East states
 

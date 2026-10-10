@@ -1,0 +1,962 @@
+{
+ "id": "grc",
+ "faction": "Greece",
+ "schema_version": 1,
+ "kind": "state",
+ "campaign_tier": "early",
+ "default_variant": "regular",
+ "variants": [
+  {
+   "id": "regular",
+   "name": "Hellenic Army infantry",
+   "camo": "Greek Lizard",
+   "armor_tier": "light",
+   "medical_level": "standard",
+   "roles": {
+    "rifleman": {
+     "primary": {
+      "id": "g3a3",
+      "name": "HK G3A3",
+      "calibre": "7.62x51mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "iron", "name": "Iron sights"},
+      "ammo": {
+       "id": "mag_762",
+       "round": "7.62x51mm M80 / NATO ball",
+       "game_round_id": "762x51_m80",
+       "rounds_per_mag": 20,
+       "count": 7,
+       "game_item_id": "mag_762"
+      },
+      "alternates": ["m4"]
+     },
+     "secondary": null,
+     "launcher": null,
+     "grenades": [
+      {
+       "id": "frag_nato",
+       "name": "Fragmentation grenade, national issue (M67 / DM51 / HG 85 class)",
+       "kind": "frag",
+       "count": 2,
+       "game_item_id": "frag_grenade"
+      },
+      {
+       "id": "smoke_white_nato",
+       "name": "White screening smoke, national issue (L83 / DM25 class)",
+       "kind": "smoke_white",
+       "count": 1,
+       "game_item_id": "smoke_grenade"
+      }
+     ],
+     "armor": {
+      "vest": {"id": "old_vest", "name": "Older fragmentation / soft vest (national issue)", "tier": "light", "game_item_id": "plate_carrier_light"},
+      "plates": {
+       "id": "steel_light",
+       "name": "Light steel plate, front only (improvised, captured or commercial)",
+       "material": "steel",
+       "real_rating": "NIJ III or below",
+       "front": true,
+       "back": false,
+       "game_rating": "III",
+       "game_item_id": null,
+       "game_substitute": "plate_pe_l3",
+       "proposed_game_id": "plate_steel_light"
+      },
+      "side_plates": null,
+      "helmet": {
+       "id": "aramid_helmet",
+       "name": "Aramid combat helmet, national issue (PASGT / MICH class)",
+       "tier": "medium",
+       "game_rating": "IIIA",
+       "game_item_id": "helmet"
+      }
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [
+       {"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"},
+       {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"},
+       {"id": "hemostatic_gauze", "count": 1, "game_item_id": "hemostatic_gauze"},
+       {"id": "chest_seal", "count": 1, "game_item_id": "chest_seal"}
+      ]
+     },
+     "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}],
+     "game_kit": [
+      ["plate_carrier_light", 1],
+      ["plate_pe_l3", 1],
+      ["helmet", 1],
+      ["m4a1", 1],
+      ["mag_556", 5],
+      ["frag_grenade", 2],
+      ["smoke_grenade", 1],
+      ["ifak", 1],
+      ["tourniquet", 1],
+      ["pressure_bandage", 2],
+      ["hemostatic_gauze", 1],
+      ["chest_seal", 1],
+      ["assault_pack", 1]
+     ]
+    },
+    "autorifleman": {
+     "primary": {
+      "id": "minimi",
+      "name": "FN Minimi",
+      "calibre": "5.56x45mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "iron", "name": "Iron sights"},
+      "ammo": {
+       "id": "belt_556_200",
+       "round": "5.56x45mm SS109 / M855 (NATO ball)",
+       "game_round_id": "556_m855",
+       "rounds_per_mag": 200,
+       "count": 3,
+       "game_item_id": null
+      },
+      "alternates": ["mg3"]
+     },
+     "secondary": {
+      "id": "m1911",
+      "name": "M1911",
+      "calibre": ".45 ACP",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {"id": "mag_45acp_7", "round": ".45 ACP M1911 ball", "game_round_id": "45acp_fmj", "rounds_per_mag": 7, "count": 3, "game_item_id": null}
+     },
+     "launcher": null,
+     "grenades": [
+      {
+       "id": "frag_nato",
+       "name": "Fragmentation grenade, national issue (M67 / DM51 / HG 85 class)",
+       "kind": "frag",
+       "count": 1,
+       "game_item_id": "frag_grenade"
+      },
+      {
+       "id": "smoke_white_nato",
+       "name": "White screening smoke, national issue (L83 / DM25 class)",
+       "kind": "smoke_white",
+       "count": 1,
+       "game_item_id": "smoke_grenade"
+      }
+     ],
+     "armor": {
+      "vest": {"id": "old_vest", "name": "Older fragmentation / soft vest (national issue)", "tier": "light", "game_item_id": "plate_carrier_light"},
+      "plates": {
+       "id": "steel_light",
+       "name": "Light steel plate, front only (improvised, captured or commercial)",
+       "material": "steel",
+       "real_rating": "NIJ III or below",
+       "front": true,
+       "back": false,
+       "game_rating": "III",
+       "game_item_id": null,
+       "game_substitute": "plate_pe_l3",
+       "proposed_game_id": "plate_steel_light"
+      },
+      "side_plates": null,
+      "helmet": {
+       "id": "aramid_helmet",
+       "name": "Aramid combat helmet, national issue (PASGT / MICH class)",
+       "tier": "medium",
+       "game_rating": "IIIA",
+       "game_item_id": "helmet"
+      }
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [
+       {"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"},
+       {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"},
+       {"id": "hemostatic_gauze", "count": 1, "game_item_id": "hemostatic_gauze"},
+       {"id": "chest_seal", "count": 1, "game_item_id": "chest_seal"}
+      ]
+     },
+     "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}],
+     "game_kit": [
+      ["plate_carrier_light", 1],
+      ["plate_pe_l3", 1],
+      ["helmet", 1],
+      ["m4a1", 1],
+      ["mag_556", 12],
+      ["m17", 1],
+      ["mag_9mm", 2],
+      ["frag_grenade", 1],
+      ["smoke_grenade", 1],
+      ["ifak", 1],
+      ["tourniquet", 1],
+      ["pressure_bandage", 2],
+      ["hemostatic_gauze", 1],
+      ["chest_seal", 1],
+      ["assault_pack", 1]
+     ]
+    },
+    "marksman": {
+     "primary": {
+      "id": "m14_ebr",
+      "name": "M14 EBR",
+      "calibre": "7.62x51mm",
+      "game_item_id": null,
+      "game_substitute": "m110",
+      "optic": {"id": "dmr_scope", "name": "3-18x DMR scope"},
+      "ammo": {
+       "id": "mag_762",
+       "round": "7.62x51mm M80 / NATO ball",
+       "game_round_id": "762x51_m80",
+       "rounds_per_mag": 20,
+       "count": 8,
+       "game_item_id": "mag_762"
+      }
+     },
+     "secondary": {
+      "id": "m1911",
+      "name": "M1911",
+      "calibre": ".45 ACP",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {"id": "mag_45acp_7", "round": ".45 ACP M1911 ball", "game_round_id": "45acp_fmj", "rounds_per_mag": 7, "count": 3, "game_item_id": null}
+     },
+     "launcher": null,
+     "grenades": [
+      {
+       "id": "frag_nato",
+       "name": "Fragmentation grenade, national issue (M67 / DM51 / HG 85 class)",
+       "kind": "frag",
+       "count": 1,
+       "game_item_id": "frag_grenade"
+      },
+      {
+       "id": "smoke_white_nato",
+       "name": "White screening smoke, national issue (L83 / DM25 class)",
+       "kind": "smoke_white",
+       "count": 1,
+       "game_item_id": "smoke_grenade"
+      }
+     ],
+     "armor": {
+      "vest": {"id": "old_vest", "name": "Older fragmentation / soft vest (national issue)", "tier": "light", "game_item_id": "plate_carrier_light"},
+      "plates": {
+       "id": "steel_light",
+       "name": "Light steel plate, front only (improvised, captured or commercial)",
+       "material": "steel",
+       "real_rating": "NIJ III or below",
+       "front": true,
+       "back": false,
+       "game_rating": "III",
+       "game_item_id": null,
+       "game_substitute": "plate_pe_l3",
+       "proposed_game_id": "plate_steel_light"
+      },
+      "side_plates": null,
+      "helmet": {
+       "id": "aramid_helmet",
+       "name": "Aramid combat helmet, national issue (PASGT / MICH class)",
+       "tier": "medium",
+       "game_rating": "IIIA",
+       "game_item_id": "helmet"
+      }
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [
+       {"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"},
+       {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"},
+       {"id": "hemostatic_gauze", "count": 1, "game_item_id": "hemostatic_gauze"},
+       {"id": "chest_seal", "count": 1, "game_item_id": "chest_seal"}
+      ]
+     },
+     "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}, {"id": "nvg_mono", "count": 1, "game_item_id": null}],
+     "game_kit": [
+      ["plate_carrier_light", 1],
+      ["plate_pe_l3", 1],
+      ["helmet", 1],
+      ["m110", 1],
+      ["mag_762", 8],
+      ["m17", 1],
+      ["mag_9mm", 2],
+      ["frag_grenade", 1],
+      ["smoke_grenade", 1],
+      ["ifak", 1],
+      ["tourniquet", 1],
+      ["pressure_bandage", 2],
+      ["hemostatic_gauze", 1],
+      ["chest_seal", 1],
+      ["assault_pack", 1]
+     ]
+    },
+    "grenadier": {
+     "primary": {
+      "id": "m4",
+      "name": "M4 carbine",
+      "calibre": "5.56x45mm",
+      "game_item_id": null,
+      "game_substitute": "mk18",
+      "optic": {"id": "red_dot", "name": "Red dot (Aimpoint CompM4/CompM5 class)"},
+      "ammo": {
+       "id": "mag_556",
+       "round": "5.56x45mm SS109 / M855 (NATO ball)",
+       "game_round_id": "556_m855",
+       "rounds_per_mag": 30,
+       "count": 7,
+       "game_item_id": "mag_556"
+      },
+      "underbarrel": {
+       "id": "m203",
+       "name": "M203",
+       "calibre": "40x46mm",
+       "game_item_id": null,
+       "ammo": [
+        {"id": "gl_40x46_he", "name": "40x46mm HEDP grenade (M433 class)", "count": 10, "game_item_id": null},
+        {"id": "gl_40x46_smoke", "name": "40x46mm white smoke grenade (M714 class)", "count": 2, "game_item_id": null}
+       ]
+      }
+     },
+     "secondary": null,
+     "launcher": null,
+     "grenades": [
+      {
+       "id": "frag_nato",
+       "name": "Fragmentation grenade, national issue (M67 / DM51 / HG 85 class)",
+       "kind": "frag",
+       "count": 1,
+       "game_item_id": "frag_grenade"
+      },
+      {
+       "id": "smoke_white_nato",
+       "name": "White screening smoke, national issue (L83 / DM25 class)",
+       "kind": "smoke_white",
+       "count": 1,
+       "game_item_id": "smoke_grenade"
+      }
+     ],
+     "armor": {
+      "vest": {"id": "old_vest", "name": "Older fragmentation / soft vest (national issue)", "tier": "light", "game_item_id": "plate_carrier_light"},
+      "plates": {
+       "id": "steel_light",
+       "name": "Light steel plate, front only (improvised, captured or commercial)",
+       "material": "steel",
+       "real_rating": "NIJ III or below",
+       "front": true,
+       "back": false,
+       "game_rating": "III",
+       "game_item_id": null,
+       "game_substitute": "plate_pe_l3",
+       "proposed_game_id": "plate_steel_light"
+      },
+      "side_plates": null,
+      "helmet": {
+       "id": "aramid_helmet",
+       "name": "Aramid combat helmet, national issue (PASGT / MICH class)",
+       "tier": "medium",
+       "game_rating": "IIIA",
+       "game_item_id": "helmet"
+      }
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [
+       {"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"},
+       {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"},
+       {"id": "hemostatic_gauze", "count": 1, "game_item_id": "hemostatic_gauze"},
+       {"id": "chest_seal", "count": 1, "game_item_id": "chest_seal"}
+      ]
+     },
+     "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}],
+     "game_kit": [
+      ["plate_carrier_light", 1],
+      ["plate_pe_l3", 1],
+      ["helmet", 1],
+      ["mk18", 1],
+      ["mag_556", 7],
+      ["frag_grenade", 1],
+      ["smoke_grenade", 1],
+      ["ifak", 1],
+      ["tourniquet", 1],
+      ["pressure_bandage", 2],
+      ["hemostatic_gauze", 1],
+      ["chest_seal", 1],
+      ["assault_pack", 1]
+     ]
+    },
+    "at": {
+     "primary": {
+      "id": "g3a3",
+      "name": "HK G3A3",
+      "calibre": "7.62x51mm",
+      "game_item_id": null,
+      "game_substitute": "m4a1",
+      "optic": {"id": "iron", "name": "Iron sights"},
+      "ammo": {
+       "id": "mag_762",
+       "round": "7.62x51mm M80 / NATO ball",
+       "game_round_id": "762x51_m80",
+       "rounds_per_mag": 20,
+       "count": 5,
+       "game_item_id": "mag_762"
+      }
+     },
+     "secondary": null,
+     "launcher": {
+      "id": "cg_m2",
+      "name": "Carl Gustaf M2 (84mm)",
+      "kind": "recoilless",
+      "in_game": true,
+      "game_launcher": "MAAWS",
+      "game_substitute": null,
+      "game_item_id": null,
+      "rounds": [{"name": "FFV551 HEAT", "type": "HEAT", "count": 1}, {"name": "FFV441D HE", "type": "HE", "count": 1}],
+      "alternates": ["m72", "rpg18"]
+     },
+     "grenades": [
+      {
+       "id": "frag_nato",
+       "name": "Fragmentation grenade, national issue (M67 / DM51 / HG 85 class)",
+       "kind": "frag",
+       "count": 1,
+       "game_item_id": "frag_grenade"
+      },
+      {
+       "id": "smoke_white_nato",
+       "name": "White screening smoke, national issue (L83 / DM25 class)",
+       "kind": "smoke_white",
+       "count": 1,
+       "game_item_id": "smoke_grenade"
+      }
+     ],
+     "armor": {
+      "vest": {"id": "old_vest", "name": "Older fragmentation / soft vest (national issue)", "tier": "light", "game_item_id": "plate_carrier_light"},
+      "plates": {
+       "id": "steel_light",
+       "name": "Light steel plate, front only (improvised, captured or commercial)",
+       "material": "steel",
+       "real_rating": "NIJ III or below",
+       "front": true,
+       "back": false,
+       "game_rating": "III",
+       "game_item_id": null,
+       "game_substitute": "plate_pe_l3",
+       "proposed_game_id": "plate_steel_light"
+      },
+      "side_plates": null,
+      "helmet": {
+       "id": "aramid_helmet",
+       "name": "Aramid combat helmet, national issue (PASGT / MICH class)",
+       "tier": "medium",
+       "game_rating": "IIIA",
+       "game_item_id": "helmet"
+      }
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [
+       {"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"},
+       {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"},
+       {"id": "hemostatic_gauze", "count": 1, "game_item_id": "hemostatic_gauze"},
+       {"id": "chest_seal", "count": 1, "game_item_id": "chest_seal"}
+      ]
+     },
+     "other": [{"id": "ruck_45", "count": 1, "game_item_id": "ruck_45"}],
+     "game_kit": [
+      ["plate_carrier_light", 1],
+      ["plate_pe_l3", 1],
+      ["helmet", 1],
+      ["m4a1", 1],
+      ["mag_556", 4],
+      ["frag_grenade", 1],
+      ["smoke_grenade", 1],
+      ["ifak", 1],
+      ["tourniquet", 1],
+      ["pressure_bandage", 2],
+      ["hemostatic_gauze", 1],
+      ["chest_seal", 1],
+      ["ruck_45", 1]
+     ]
+    },
+    "medic": {
+     "primary": {
+      "id": "m4",
+      "name": "M4 carbine",
+      "calibre": "5.56x45mm",
+      "game_item_id": null,
+      "game_substitute": "mk18",
+      "optic": {"id": "red_dot", "name": "Red dot (Aimpoint CompM4/CompM5 class)"},
+      "ammo": {
+       "id": "mag_556",
+       "round": "5.56x45mm SS109 / M855 (NATO ball)",
+       "game_round_id": "556_m855",
+       "rounds_per_mag": 30,
+       "count": 6,
+       "game_item_id": "mag_556"
+      }
+     },
+     "secondary": {
+      "id": "m1911",
+      "name": "M1911",
+      "calibre": ".45 ACP",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {"id": "mag_45acp_7", "round": ".45 ACP M1911 ball", "game_round_id": "45acp_fmj", "rounds_per_mag": 7, "count": 3, "game_item_id": null}
+     },
+     "launcher": null,
+     "grenades": [
+      {
+       "id": "smoke_white_nato",
+       "name": "White screening smoke, national issue (L83 / DM25 class)",
+       "kind": "smoke_white",
+       "count": 2,
+       "game_item_id": "smoke_grenade"
+      }
+     ],
+     "armor": {
+      "vest": {"id": "old_vest", "name": "Older fragmentation / soft vest (national issue)", "tier": "light", "game_item_id": "plate_carrier_light"},
+      "plates": {
+       "id": "steel_light",
+       "name": "Light steel plate, front only (improvised, captured or commercial)",
+       "material": "steel",
+       "real_rating": "NIJ III or below",
+       "front": true,
+       "back": false,
+       "game_rating": "III",
+       "game_item_id": null,
+       "game_substitute": "plate_pe_l3",
+       "proposed_game_id": "plate_steel_light"
+      },
+      "side_plates": null,
+      "helmet": {
+       "id": "aramid_helmet",
+       "name": "Aramid combat helmet, national issue (PASGT / MICH class)",
+       "tier": "medium",
+       "game_rating": "IIIA",
+       "game_item_id": "helmet"
+      }
+     },
+     "medical": {
+      "container": "trauma_kit",
+      "items": [
+       {"id": "tourniquet", "count": 3, "game_item_id": "tourniquet"},
+       {"id": "pressure_bandage", "count": 6, "game_item_id": "pressure_bandage"},
+       {"id": "hemostatic_gauze", "count": 2, "game_item_id": "hemostatic_gauze"},
+       {"id": "chest_seal", "count": 2, "game_item_id": "chest_seal"},
+       {"id": "splint", "count": 1, "game_item_id": "splint"},
+       {"id": "npa", "count": 2, "game_item_id": "npa"},
+       {"id": "decompression_needle", "count": 1, "game_item_id": null},
+       {"id": "iv_18g", "count": 2, "game_item_id": null},
+       {"id": "saline_500", "count": 2, "game_item_id": null},
+       {"id": "morphine", "count": 3, "game_item_id": "morphine"},
+       {"id": "epinephrine", "count": 2, "game_item_id": null},
+       {"id": "adenosine", "count": 1, "game_item_id": null},
+       {"id": "atropine", "count": 1, "game_item_id": null},
+       {"id": "surgical_kit", "count": 1, "game_item_id": null}
+      ]
+     },
+     "other": [{"id": "ruck_45", "count": 1, "game_item_id": "ruck_45"}],
+     "game_kit": [
+      ["plate_carrier_light", 1],
+      ["plate_pe_l3", 1],
+      ["helmet", 1],
+      ["mk18", 1],
+      ["mag_556", 6],
+      ["m17", 1],
+      ["mag_9mm", 2],
+      ["smoke_grenade", 2],
+      ["trauma_kit", 1],
+      ["tourniquet", 3],
+      ["pressure_bandage", 6],
+      ["hemostatic_gauze", 2],
+      ["chest_seal", 2],
+      ["splint", 1],
+      ["npa", 2],
+      ["morphine", 3],
+      ["ruck_45", 1]
+     ]
+    },
+    "squad_leader": {
+     "primary": {
+      "id": "m4",
+      "name": "M4 carbine",
+      "calibre": "5.56x45mm",
+      "game_item_id": null,
+      "game_substitute": "mk18",
+      "optic": {"id": "red_dot", "name": "Red dot (Aimpoint CompM4/CompM5 class)"},
+      "ammo": {
+       "id": "mag_556",
+       "round": "5.56x45mm SS109 / M855 (NATO ball)",
+       "game_round_id": "556_m855",
+       "rounds_per_mag": 30,
+       "count": 7,
+       "game_item_id": "mag_556"
+      }
+     },
+     "secondary": {
+      "id": "m1911",
+      "name": "M1911",
+      "calibre": ".45 ACP",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {"id": "mag_45acp_7", "round": ".45 ACP M1911 ball", "game_round_id": "45acp_fmj", "rounds_per_mag": 7, "count": 3, "game_item_id": null}
+     },
+     "launcher": null,
+     "grenades": [
+      {
+       "id": "frag_nato",
+       "name": "Fragmentation grenade, national issue (M67 / DM51 / HG 85 class)",
+       "kind": "frag",
+       "count": 1,
+       "game_item_id": "frag_grenade"
+      },
+      {
+       "id": "smoke_white_nato",
+       "name": "White screening smoke, national issue (L83 / DM25 class)",
+       "kind": "smoke_white",
+       "count": 2,
+       "game_item_id": "smoke_grenade"
+      },
+      {
+       "id": "signal_green",
+       "name": "Green signal smoke, national issue",
+       "kind": "smoke_green",
+       "count": 1,
+       "game_item_id": null,
+       "game_substitute": "smoke_grenade"
+      },
+      {
+       "id": "signal_red",
+       "name": "Red signal smoke, national issue",
+       "kind": "smoke_red",
+       "count": 1,
+       "game_item_id": null,
+       "game_substitute": "smoke_grenade"
+      }
+     ],
+     "armor": {
+      "vest": {"id": "old_vest", "name": "Older fragmentation / soft vest (national issue)", "tier": "light", "game_item_id": "plate_carrier_light"},
+      "plates": {
+       "id": "steel_light",
+       "name": "Light steel plate, front only (improvised, captured or commercial)",
+       "material": "steel",
+       "real_rating": "NIJ III or below",
+       "front": true,
+       "back": false,
+       "game_rating": "III",
+       "game_item_id": null,
+       "game_substitute": "plate_pe_l3",
+       "proposed_game_id": "plate_steel_light"
+      },
+      "side_plates": null,
+      "helmet": {
+       "id": "aramid_helmet",
+       "name": "Aramid combat helmet, national issue (PASGT / MICH class)",
+       "tier": "medium",
+       "game_rating": "IIIA",
+       "game_item_id": "helmet"
+      }
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [
+       {"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"},
+       {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"},
+       {"id": "hemostatic_gauze", "count": 1, "game_item_id": "hemostatic_gauze"},
+       {"id": "chest_seal", "count": 1, "game_item_id": "chest_seal"}
+      ]
+     },
+     "other": [
+      {"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"},
+      {"id": "radio", "count": 1, "game_item_id": null},
+      {"id": "binoculars", "count": 1, "game_item_id": null},
+      {"id": "nvg_mono", "count": 1, "game_item_id": null}
+     ],
+     "game_kit": [
+      ["plate_carrier_light", 1],
+      ["plate_pe_l3", 1],
+      ["helmet", 1],
+      ["mk18", 1],
+      ["mag_556", 7],
+      ["m17", 1],
+      ["mag_9mm", 2],
+      ["frag_grenade", 1],
+      ["smoke_grenade", 4],
+      ["ifak", 1],
+      ["tourniquet", 1],
+      ["pressure_bandage", 2],
+      ["hemostatic_gauze", 1],
+      ["chest_seal", 1],
+      ["assault_pack", 1]
+     ]
+    },
+    "sniper": {
+     "primary": {
+      "id": "trg_m10",
+      "name": "Sako TRG M10",
+      "calibre": ".338 Lapua Magnum",
+      "game_item_id": null,
+      "game_substitute": "m110",
+      "optic": {"id": "sniper_scope", "name": "5-25x sniper scope"},
+      "ammo": {"id": "mag_338lm_5", "round": ".338 Lapua Magnum ball / match", "game_round_id": null, "rounds_per_mag": 5, "count": 6, "game_item_id": null},
+      "alternates": ["m82a1"]
+     },
+     "secondary": {
+      "id": "m1911",
+      "name": "M1911",
+      "calibre": ".45 ACP",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {"id": "mag_45acp_7", "round": ".45 ACP M1911 ball", "game_round_id": "45acp_fmj", "rounds_per_mag": 7, "count": 3, "game_item_id": null}
+     },
+     "launcher": null,
+     "grenades": [
+      {
+       "id": "frag_nato",
+       "name": "Fragmentation grenade, national issue (M67 / DM51 / HG 85 class)",
+       "kind": "frag",
+       "count": 1,
+       "game_item_id": "frag_grenade"
+      },
+      {
+       "id": "smoke_white_nato",
+       "name": "White screening smoke, national issue (L83 / DM25 class)",
+       "kind": "smoke_white",
+       "count": 1,
+       "game_item_id": "smoke_grenade"
+      }
+     ],
+     "armor": {
+      "vest": {"id": "old_vest", "name": "Older fragmentation / soft vest (national issue)", "tier": "light", "game_item_id": "plate_carrier_light"},
+      "plates": {
+       "id": "steel_light",
+       "name": "Light steel plate, front only (improvised, captured or commercial)",
+       "material": "steel",
+       "real_rating": "NIJ III or below",
+       "front": true,
+       "back": false,
+       "game_rating": "III",
+       "game_item_id": null,
+       "game_substitute": "plate_pe_l3",
+       "proposed_game_id": "plate_steel_light"
+      },
+      "side_plates": null,
+      "helmet": {
+       "id": "aramid_helmet",
+       "name": "Aramid combat helmet, national issue (PASGT / MICH class)",
+       "tier": "medium",
+       "game_rating": "IIIA",
+       "game_item_id": "helmet"
+      }
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [
+       {"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"},
+       {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"},
+       {"id": "hemostatic_gauze", "count": 1, "game_item_id": "hemostatic_gauze"},
+       {"id": "chest_seal", "count": 1, "game_item_id": "chest_seal"}
+      ]
+     },
+     "other": [
+      {"id": "ruck_45", "count": 1, "game_item_id": "ruck_45"},
+      {"id": "binoculars", "count": 1, "game_item_id": null},
+      {"id": "nvg_mono", "count": 1, "game_item_id": null}
+     ],
+     "game_kit": [
+      ["plate_carrier_light", 1],
+      ["plate_pe_l3", 1],
+      ["helmet", 1],
+      ["m110", 1],
+      ["mag_762", 2],
+      ["m17", 1],
+      ["mag_9mm", 2],
+      ["frag_grenade", 1],
+      ["smoke_grenade", 1],
+      ["ifak", 1],
+      ["tourniquet", 1],
+      ["pressure_bandage", 2],
+      ["hemostatic_gauze", 1],
+      ["chest_seal", 1],
+      ["ruck_45", 1]
+     ]
+    },
+    "crew": {
+     "primary": {
+      "id": "m4",
+      "name": "M4 carbine",
+      "calibre": "5.56x45mm",
+      "game_item_id": null,
+      "game_substitute": "mk18",
+      "optic": {"id": "red_dot", "name": "Red dot (Aimpoint CompM4/CompM5 class)"},
+      "ammo": {
+       "id": "mag_556",
+       "round": "5.56x45mm SS109 / M855 (NATO ball)",
+       "game_round_id": "556_m855",
+       "rounds_per_mag": 30,
+       "count": 4,
+       "game_item_id": "mag_556"
+      }
+     },
+     "secondary": {
+      "id": "m1911",
+      "name": "M1911",
+      "calibre": ".45 ACP",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {"id": "mag_45acp_7", "round": ".45 ACP M1911 ball", "game_round_id": "45acp_fmj", "rounds_per_mag": 7, "count": 3, "game_item_id": null}
+     },
+     "launcher": null,
+     "grenades": [
+      {
+       "id": "smoke_white_nato",
+       "name": "White screening smoke, national issue (L83 / DM25 class)",
+       "kind": "smoke_white",
+       "count": 1,
+       "game_item_id": "smoke_grenade"
+      }
+     ],
+     "armor": {
+      "vest": {"id": "old_vest", "name": "Older fragmentation / soft vest (national issue)", "tier": "light", "game_item_id": "plate_carrier_light"},
+      "plates": {
+       "id": "steel_light",
+       "name": "Light steel plate, front only (improvised, captured or commercial)",
+       "material": "steel",
+       "real_rating": "NIJ III or below",
+       "front": true,
+       "back": false,
+       "game_rating": "III",
+       "game_item_id": null,
+       "game_substitute": "plate_pe_l3",
+       "proposed_game_id": "plate_steel_light"
+      },
+      "side_plates": null,
+      "helmet": {
+       "id": "cvc_helmet",
+       "name": "Armoured vehicle crew helmet (DH-132 CVC class)",
+       "tier": "light",
+       "game_rating": "IIA",
+       "game_item_id": "helmet_bump"
+      }
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [
+       {"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"},
+       {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"},
+       {"id": "hemostatic_gauze", "count": 1, "game_item_id": "hemostatic_gauze"},
+       {"id": "chest_seal", "count": 1, "game_item_id": "chest_seal"}
+      ]
+     },
+     "other": [{"id": "assault_pack", "count": 1, "game_item_id": "assault_pack"}],
+     "game_kit": [
+      ["plate_carrier_light", 1],
+      ["plate_pe_l3", 1],
+      ["helmet_bump", 1],
+      ["mk18", 1],
+      ["mag_556", 4],
+      ["m17", 1],
+      ["mag_9mm", 2],
+      ["smoke_grenade", 1],
+      ["ifak", 1],
+      ["tourniquet", 1],
+      ["pressure_bandage", 2],
+      ["hemostatic_gauze", 1],
+      ["chest_seal", 1],
+      ["assault_pack", 1]
+     ]
+    },
+    "pilot": {
+     "primary": {
+      "id": "m4",
+      "name": "M4 carbine",
+      "calibre": "5.56x45mm",
+      "game_item_id": null,
+      "game_substitute": "mk18",
+      "optic": {"id": "red_dot", "name": "Red dot (Aimpoint CompM4/CompM5 class)"},
+      "ammo": {
+       "id": "mag_556",
+       "round": "5.56x45mm SS109 / M855 (NATO ball)",
+       "game_round_id": "556_m855",
+       "rounds_per_mag": 30,
+       "count": 4,
+       "game_item_id": "mag_556"
+      }
+     },
+     "secondary": {
+      "id": "m1911",
+      "name": "M1911",
+      "calibre": ".45 ACP",
+      "game_item_id": null,
+      "game_substitute": "m17",
+      "ammo": {"id": "mag_45acp_7", "round": ".45 ACP M1911 ball", "game_round_id": "45acp_fmj", "rounds_per_mag": 7, "count": 3, "game_item_id": null}
+     },
+     "launcher": null,
+     "grenades": [
+      {
+       "id": "signal_red",
+       "name": "Red signal smoke, national issue",
+       "kind": "smoke_red",
+       "count": 1,
+       "game_item_id": null,
+       "game_substitute": "smoke_grenade"
+      }
+     ],
+     "armor": {
+      "vest": {"id": "aircrew_vest", "name": "Aircrew survival armour vest (AIRSAVE class)", "tier": "light", "game_item_id": "plate_carrier_light"},
+      "plates": {
+       "id": "pe_light",
+       "name": "UHMWPE plate, level III (front only)",
+       "material": "polyethylene",
+       "real_rating": "NIJ III",
+       "front": true,
+       "back": false,
+       "game_rating": "III",
+       "game_item_id": "plate_pe_l3"
+      },
+      "side_plates": null,
+      "helmet": {
+       "id": "flight_helmet",
+       "name": "Aircrew flight helmet (HGU-56/P / ZSh-7 class, non-ballistic)",
+       "tier": "none",
+       "game_rating": null,
+       "game_item_id": null
+      }
+     },
+     "medical": {
+      "container": "ifak",
+      "items": [
+       {"id": "tourniquet", "count": 1, "game_item_id": "tourniquet"},
+       {"id": "pressure_bandage", "count": 2, "game_item_id": "pressure_bandage"},
+       {"id": "hemostatic_gauze", "count": 1, "game_item_id": "hemostatic_gauze"},
+       {"id": "chest_seal", "count": 1, "game_item_id": "chest_seal"}
+      ]
+     },
+     "other": [],
+     "game_kit": [
+      ["plate_carrier_light", 1],
+      ["plate_pe_l3", 1],
+      ["mk18", 1],
+      ["mag_556", 4],
+      ["m17", 1],
+      ["mag_9mm", 2],
+      ["smoke_grenade", 1],
+      ["ifak", 1],
+      ["tourniquet", 1],
+      ["pressure_bandage", 2],
+      ["hemostatic_gauze", 1],
+      ["chest_seal", 1]
+     ]
+    }
+   },
+   "team_weapons": []
+  }
+ ],
+ "role_map": {},
+ "notes": [
+  "Faction file body_armor is helmet medium, vest light, plates steel. A light vest only takes light plates, so the steel plate needs a new light-tier steel plate item (plate_steel_light); plate_pe_l3 stands in."
+ ],
+ "proposed": [
+  "mag and medical counts (Q3 default)",
+  "variants and their armor mapping (Q1, Q9 defaults)",
+  "optics as class ids (Q7 default)",
+  "medical levels from doctrine.ai_tuning.medical_care (Q6 default)",
+  "game_kit (stand-in kit from items that exist today)"
+ ],
+ "sources": ["factions/grc.json"]
+}
