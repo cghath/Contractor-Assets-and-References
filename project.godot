@@ -1,0 +1,16 @@
+; Open with the Voxel Tools build of Godot 4.7 (the same editor as Contractor).
+
+config_version=5
+
+[application]
+
+config/name="Contractor Vehicle Models"
+config/description="Voxel vehicle models for Contractor, built in code."
+run/main_scene="res://showcase/vehicle_showcase.tscn"
+config/features=PackedStringArray("4.7", "Forward Plus")
+config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1600
+window/size/viewport_height=900
