@@ -393,7 +393,7 @@
       "aid_convoy_ambush_defence"
     ]
   },
-  "notes": "Hamas is a Palestinian Islamist movement founded in 1987 and in control of Gaza since 2007; its 7 October 2023 attack on Israel killed about 1,200 people and took about 250 hostages, starting the Gaza war. It is designated a terrorist organisation by the US, EU, UK, Canada and others (Qatar, Turkey and Russia keep political contacts). Status as of October 2026: a ceasefire has held in broad terms since October 2025 under the US 20-point plan; the IDF holds roughly half the Strip behind the 'yellow line'; a US-led Board of Peace and the National Committee for the Administration of Gaza exist but the technocratic committee had not entered Gaza by mid-2026 and the International Stabilization Force has not fully deployed. In late July 2026 Hamas accepted a roadmap for phased disarmament tied to Israeli withdrawal, but said it would not act first, and implementation was stalled. Game framing: an early-game, mid-strength urban enemy in gaza_west_bank (Captain's default), with tunnels as level geometry. Contracts against Hamas come from other clients; hostage rescue and aid-convoy protection are the most factual hooks. Content rule: no slogans, flags or imagery beyond neutral colour hexes; tactics are game abstractions only.",
+  "notes": "Hamas is a Palestinian Islamist movement founded in 1987 and in control of Gaza since 2007; its 7 October 2023 attack on Israel killed about 1,200 people and took about 250 hostages, starting the Gaza war. It is designated a terrorist organisation by the US, EU, UK, Canada and others (Qatar, Turkey and Russia keep political contacts). Status as of October 2026: a ceasefire has held in broad terms since October 2025 under the US 20-point plan; the IDF holds roughly half the Strip behind the 'yellow line'; a US-led Board of Peace and the National Committee for the Administration of Gaza exist but the technocratic committee had not entered Gaza by mid-2026 and the International Stabilization Force has not fully deployed. In late July 2026 Hamas accepted a roadmap for phased disarmament tied to Israeli withdrawal, but said it would not act first, and implementation was stalled. Game framing: an early-game, mid-strength urban enemy in gaza_west_bank (Captain's default), with tunnels as level geometry. Contracts against Hamas come from other clients; hostage rescue and aid-convoy protection are the most factual hooks. Content rule: no slogans, flags or imagery beyond neutral colour hexes; tactics are game abstractions only. Captain confirmed (2026-10-10) mid-strength tuning among the early-game enemies in gaza_west_bank, with tunnels as level geometry.",
   "proposed": [
     "campaign_tier",
     "relations.player",
@@ -406,7 +406,6 @@
     "body_armor (game tier mapping)",
     "camo (approximate palettes)",
     "player_trade (hostile-only: not sellable)",
-    "Mid-strength early-game tuning in gaza_west_bank (Captain's open question; default yes)",
     "Tunnel network as level geometry with spawn shafts",
     "fpv_drone as an AI hazard ability",
     "relations values (factual direction, game magnitudes)"

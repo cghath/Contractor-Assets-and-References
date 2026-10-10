@@ -98,7 +98,7 @@ The game's `voxel_world.gd` started with four voxel materials: `CONCRETE` #8a857
 - **kashmir_loc:** chn appears only as engineers on a road project. Militants stay generic NPCs with no roster faction (Captain-confirmed 2026-10-10).
 - **mexico_cartel_belt:** usa appears only offshore and as liaison (a game what-if, per usa.json).
 - **yemen_red_sea:** are appears only offshore and in contracts (UAE forces withdrew from Yemen in December 2025).
-- **alpine_europe:** srb is the Balkan stand-in transit. rus (Russian mountain troops) is the hostile force as a fictional what-if (added by Captain's decision, 2026-10-10; the presence itself is proposed); generic arms-trafficker NPCs stay.
+- **alpine_europe:** srb is the Balkan stand-in transit. rus (Russian mountain troops) is the hostile force at medium strength as a fictional what-if (added and kept at medium strength by Captain's decisions, 2026-10-10; the presence itself is proposed); generic arms-trafficker NPCs stay.
 - **mindanao_sulu:** usa appears only as a small non-combat adviser team.
 - **eastern_congo:** chn appears as a UN engineer and medical company, a fictional game what-if: China's MONUSCO contingent left in April 2024 (alliance `monusco`, member_status what_if). Captain confirmed on 2026-10-10 that it stays, clearly marked fictional. m23 is a hostile non-client whose units are not attacked by default in ceasefire phases (Captain-confirmed 2026-10-10).
 - **iran_zagros and south_china_sea:** iraqi_militias is not added to iran_zagros and isis is not added to south_china_sea; those gaps are answered by iraq_iran_border and mindanao_sulu (Captain-confirmed 2026-10-10).

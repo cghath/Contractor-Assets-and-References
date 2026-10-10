@@ -119,13 +119,14 @@
     "hot zones are twice the area of a contract zone: 8-16 km2 vs 2-4 km2 (Captain, 2026-10-10)",
     "materials accepted (Captain, 2026-10-10) and added to voxel_world.gd (Contractor dev, commit 1ec1417): STONE #8f8676, PLASTER #e3dccb, ROOF_TILE #a4553b, GLASS #9fbcc4",
     "generic arms-trafficker NPCs stay, and Russian mountain troops (rus) are added as the hostile force (Captain, 2026-10-10)",
-    "the rus mountain-troop listing stays as a fictional what-if, not a real deployment, kept with the other low-plausibility listings (Captain, 2026-10-10)"
+    "the rus mountain-troop listing stays as a fictional what-if, not a real deployment, kept with the other low-plausibility listings (Captain, 2026-10-10)",
+    "rus mountain troops stay at medium strength as the map's only hostile force, a fictional what-if (Captain, 2026-10-10)"
   ],
   "proposed": [
     "composite tri-border layout",
     "generator numbers",
     "generic hostile NPCs (arms traffickers) not tied to a faction",
-    "rus covert mountain-troop details: role, strength, placement and the late-game timing",
+    "rus covert mountain-troop details: role, placement and the late-game timing",
     "zone_plan and the what-if hot zone",
     "srb presence as a Balkan transit stand-in (from srb.json)",
     "avalanche road-closure events"
