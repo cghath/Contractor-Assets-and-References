@@ -88,7 +88,7 @@ The queue, run one job at a time on Captain's desktop, is:
 4. alliances
 5. worldspaces
 
-The loadouts job runs alongside the queue and is also paused; see [loadouts_handoff.md](loadouts_handoff.md).
+**Loadouts moved (Captain, 09:38 UTC):** the faction loadouts are now built by the separate "Faction loadout questions" project thread, which writes only into `loadouts/`. The bloc and worldspace jobs must never edit `loadouts/`, `tools/loadouts_catalog_wip.pl` or `docs/loadouts_handoff.md`. Because another session pushes to this branch too, always pull (rebase) before pushing.
 
 Each job has its own handoff sheet:
 
