@@ -1,0 +1,300 @@
+{
+  "id": "pse_pa",
+  "name": "Palestinian Authority Security Forces (State of Palestine)",
+  "short": "PA Security Forces",
+  "kind": "state",
+  "inspired_by": null,
+  "flag_colors": [
+    "#000000",
+    "#FFFFFF",
+    "#007A3D",
+    "#CE1126"
+  ],
+  "blocs": [
+    "arab_league",
+    "plo"
+  ],
+  "campaign_tier": "early",
+  "alignment_to_player": "neutral",
+  "player_client": true,
+  "relations": {
+    "player": 10,
+    "jor": 70,
+    "egy": 60,
+    "sau": 50,
+    "qat": 35,
+    "are": 30,
+    "tur": 40,
+    "syr": 30,
+    "irq": 40,
+    "usa": 15,
+    "gbr": 30,
+    "fra": 45,
+    "deu": 35,
+    "esp": 55,
+    "nor": 45,
+    "can": 30,
+    "aus": 30,
+    "isr": -20,
+    "irn": -30,
+    "hamas": -50,
+    "pij": -55,
+    "hezbollah": -20,
+    "isis": -90,
+    "al_qaeda": -80
+  },
+  "theatres": [
+    "gaza_west_bank"
+  ],
+  "languages": [
+    "Arabic (Levantine / Palestinian dialect)",
+    "English (officers, liaison with international trainers)"
+  ],
+  "callout_language": "Palestinian Arabic police and gendarmerie radio procedure; Jordanian- and US-trained terminology.",
+  "doctrine": {
+    "summary": "The security services of the Palestinian Authority are a police and gendarmerie force, not an army: the National Security Forces (the largest branch, a gendarmerie used for riot control, checkpoints and arrest operations), the Presidential Guard (VIP protection and the best-equipped unit), Preventive Security, General Intelligence, Military Intelligence, the Civil Police and Civil Defence, roughly 30,000 personnel in the West Bank. Under the Oslo-era agreements they operate mainly in Area A (the main Palestinian towns), carry only light weapons and need Israeli approval for weapons, ammunition and armoured vehicles; they have historically coordinated security with Israel (suspended at times). They are trained by the US Security Coordinator, the EU police mission (EUPOL COPPS), Jordan and Egypt. Since late 2024 they have run arrest and siege operations against armed groups in the northern West Bank (Tubas, November 2024; Jenin camp, December 2024 - January 2025) and clash periodically with Hamas- and PIJ-linked fighters, while Israeli raids continue in the same areas. The PA has had no forces in Gaza since 2007; Egypt and Jordan have trained thousands of Palestinian police for a future Gaza role.",
+    "squad_size": 8,
+    "fireteam": "Police-style teams of 4-10 mounted in pickups or SUVs, with riot-control equipment; Presidential Guard and special police in small tactical teams. In game: 8 men in battle-buddy pairs.",
+    "tactics": [
+      "Arrest raids and cordons in towns and refugee camps (game: civilian-dense contract zones)",
+      "Checkpoints and vehicle patrols in Area A",
+      "Riot and crowd control with shields, batons and tear gas",
+      "VIP protection and motorcades (Presidential Guard)",
+      "Avoid contact with Israeli forces during IDF raids (game: withdraw to stations)"
+    ],
+    "ai_tuning": {
+      "aggression": 0.35,
+      "discipline": 0.5,
+      "suppression_resistance": 0.4,
+      "flanking": 0.35,
+      "grenade_use": 0.25,
+      "medical_care": 0.45,
+      "night_capability": 0.3,
+      "marksmanship": 0.45,
+      "morale": 0.45
+    }
+  },
+  "camo": [
+    {
+      "name": "National Security Forces woodland-type",
+      "palette": [
+        "#4E5A3B",
+        "#6B6A45",
+        "#3A3326",
+        "#24251F"
+      ],
+      "use": "NSF field uniform (approximate; patterns vary by delivery)"
+    },
+    {
+      "name": "Desert digital / khaki",
+      "palette": [
+        "#C2AE87",
+        "#9A855E",
+        "#6E5F44",
+        "#DCCEAE"
+      ],
+      "use": "Some NSF and Presidential Guard units"
+    },
+    {
+      "name": "Civil Police dark blue",
+      "palette": [
+        "#1F2C46",
+        "#2E3F61",
+        "#0F1626"
+      ],
+      "use": "Civil Police"
+    }
+  ],
+  "small_arms": {
+    "rifleman": [
+      "AKM / AK-47 (7.62x39mm)",
+      "M16A1 / M16A2 (5.56x45mm)"
+    ],
+    "autorifleman": [
+      "PKM (7.62x54R, few)"
+    ],
+    "marksman": [
+      "AKM or M16 with optic (designated police marksmen)"
+    ],
+    "grenadier": [
+      "37/40 mm tear-gas launcher (riot control)"
+    ],
+    "at": [],
+    "medic": [
+      "AKM (7.62x39mm)"
+    ],
+    "squad_leader": [
+      "AKM / AKMS (7.62x39mm)",
+      "M16A2 (5.56x45mm)"
+    ],
+    "sniper": [],
+    "sidearm": [
+      "9x19mm pistols (Glock-pattern and others)"
+    ]
+  },
+  "launchers": [
+    "None issued: PA forces are limited to light weapons under the Oslo-era agreements [n/a]"
+  ],
+  "body_armor": {
+    "helmet": "light",
+    "vest": "light",
+    "plates": "mixed",
+    "notes": "Ballistic helmets and soft or light-plate vests for NSF arrest teams, riot helmets and shields for crowd control; many police wear no armour. Game: light tier (proposed)."
+  },
+  "vehicles": [
+    {
+      "vehicle_id": "toyota_land_cruiser",
+      "role": "light",
+      "prevalence": "signature",
+      "notes": "Land Cruiser pickups and SUVs in NSF and Presidential Guard markings; armoured SUVs for VIPs. Al-Maha armoured Land Cruisers are recorded under al_jawad."
+    },
+    {
+      "vehicle_id": "al_jawad",
+      "role": "apc",
+      "prevalence": "uncommon",
+      "notes": "Jordanian-built Al-Jawad armoured vehicles, funded by the US (2016, 2022 order) and the EU (2019) with Israeli approval; small numbers."
+    },
+    {
+      "vehicle_id": "toyota_hilux",
+      "role": "light",
+      "prevalence": "common",
+      "notes": "Unarmed police and NSF pickups; no mounted weapons."
+    }
+  ],
+  "unit_templates": [
+    {
+      "id": "pse_pa_nsf_arrest_team",
+      "name": "NSF arrest team (game 8)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 5
+        },
+        {
+          "role": "autorifleman",
+          "count": 1
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "al_jawad"
+    },
+    {
+      "id": "pse_pa_checkpoint",
+      "name": "Police / NSF checkpoint (game 6)",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 5
+        }
+      ],
+      "vehicle_id": "toyota_hilux"
+    },
+    {
+      "id": "pse_pa_riot_squad",
+      "name": "Riot-control squad",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "riot_shield",
+          "count": 4
+        },
+        {
+          "role": "grenadier",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 2
+        }
+      ],
+      "vehicle_id": "toyota_land_cruiser"
+    },
+    {
+      "id": "pse_pa_presidential_guard_detail",
+      "name": "Presidential Guard protection detail",
+      "composition": [
+        {
+          "role": "squad_leader",
+          "count": 1
+        },
+        {
+          "role": "rifleman",
+          "count": 4
+        },
+        {
+          "role": "driver",
+          "count": 2
+        },
+        {
+          "role": "medic",
+          "count": 1
+        }
+      ],
+      "vehicle_id": "toyota_land_cruiser"
+    }
+  ],
+  "support_assets": [
+    "None heavy: no artillery, aircraft or drones",
+    "Civil Defence ambulances and fire crews",
+    "Arab and international trainers (Jordan, Egypt, US Security Coordinator, EU) as an off-map reputation lever (proposed)"
+  ],
+  "player_trade": {
+    "sellable": false,
+    "rep_tiers": []
+  },
+  "contract_types": {
+    "as_client": [
+      "escort_aid_convoy",
+      "vip_protection",
+      "secure_polling_stations",
+      "train_police_unit",
+      "clear_uxo_hazard"
+    ],
+    "as_target": []
+  },
+  "notes": "Situation as of October 2026: President Mahmoud Abbas, with Hussein al-Sheikh as vice-president and a leading succession candidate. A decree of 9 July 2026 set Palestinian legislative elections for 28 November 2026, with a presidential vote targeted for early 2027. Many states recognised the State of Palestine in September 2025, including France, the UK, Canada and Australia. Gaza: since the October 2025 ceasefire a National Committee for the Administration of Gaza (technocrats under the US-led Board of Peace, chaired by Ali Shaath) has worked from Egypt since January 2026 but had not entered Gaza by mid-2026; Hamas has not disarmed, the International Stabilization Force has not fully deployed, and Egyptian- and Jordanian-trained Palestinian police are a candidate future Gaza force (US officials reported training quality problems in early 2026). West Bank: Israeli military operations in the northern camps since January 2025, settler violence and the PA's fiscal crisis (withheld clearance revenues, partial salaries) weaken PA control in Jenin, Tulkarm and Nablus. The PA is a rival of Hamas and PIJ but not their battlefield enemy in the game sense; it never fights the IDF. Only three vehicle types are listed (spec asks 4-12) because PA forces are restricted to light weapons and unarmoured or lightly armoured vehicles; this is factual. Game framing: a low-power neutral client in gaza_west_bank (aid escort, election security, VIP protection, training) with very high civilian density; the player's civilian-casualty penalties apply fully.",
+  "proposed": [
+    "campaign_tier",
+    "alignment_to_player",
+    "player_client (real PA forces do not hire foreign PMCs for combat; contracts are limited to escort, protection and training)",
+    "relations.player",
+    "contract_types.as_client",
+    "doctrine.ai_tuning",
+    "camo (approximate palettes)",
+    "body_armor (game tier mapping)",
+    "unit_templates (riot_shield role is new)",
+    "vehicles[].prevalence (game weighting)",
+    "support_assets (trainers as reputation lever)",
+    "player_trade.sellable (false)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Palestinian_Security_Services",
+    "https://en.wikipedia.org/wiki/Palestinian_National_Security_Forces",
+    "https://en.wikipedia.org/wiki/2024%E2%80%932025_Palestinian_Authority_operation_in_Jenin",
+    "https://en.wikipedia.org/wiki/2024_Palestinian_Authority_operation_in_Tubas",
+    "https://en.wikipedia.org/wiki/Palestinian_Authority%E2%80%93West_Bank_militias_conflict",
+    "https://en.wikipedia.org/wiki/National_Committee_for_the_Administration_of_Gaza",
+    "https://en.wikipedia.org/wiki/2026_in_Palestine",
+    "https://time.com/article/2026/07/10/palestinian-authority-elections-gaza-west-bank-east-jerusalem-israel-explainer/",
+    "https://www.aljazeera.com/news/2026/5/14/palestinian-president-abbas-pledges-elections-reform-at-fatah-conference",
+    "https://commonslibrary.parliament.uk/research-briefings/cbp-10492/",
+    "https://www.npr.org/2026/02/13/g-s1-109343/gaza-israel-police",
+    "https://www.thenationalnews.com/news/mena/2025/04/11/jordan-and-egypt-training-police-and-security-forces-for-future-gaza-deployment/",
+    "https://www.janes.com/defence-news/land-forces/latest/us-funding-jordanian-armoured-vehicles-for-palestinian-forces",
+    "https://armyrecognition.com/archives/archives-land-defense/land-defense-2019/jordan-has-delivered-al-jawad-4x4-armored-vehicles-to-palestinian-security-forces"
+  ]
+}

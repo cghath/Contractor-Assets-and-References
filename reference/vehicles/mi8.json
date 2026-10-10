@@ -21,7 +21,8 @@
     "ind",
     "pak",
     "vnm",
-    "prk"
+    "prk",
+    "irq"
   ],
   "crew": 3,
   "passengers": 24,
@@ -68,7 +69,8 @@
     "Mi-17V-5",
     "Mi-171Sh",
     "Mi-171E (CHN)",
-    "Mi-17V-5 (IND, PAK)"
+    "Mi-17V-5 (IND, PAK)",
+    "Mi-17V-5 / Mi-171 (IRQ, Army Aviation)"
   ],
   "existing_model": null,
   "model_priority": "high",
@@ -80,6 +82,7 @@
   "sources": [
     "https://en.wikipedia.org/wiki/Mil_Mi-8",
     "https://en.wikipedia.org/wiki/Mil_Mi-17",
-    "https://en.wikipedia.org/wiki/Africa_Corps_(Russia)"
+    "https://en.wikipedia.org/wiki/Africa_Corps_(Russia)",
+    "https://en.wikipedia.org/wiki/List_of_current_equipment_of_the_Iraqi_Ground_Forces"
   ]
 }
