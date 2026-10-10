@@ -128,6 +128,8 @@ Answers to the open questions of Jobs 1-3, applied during Job 4. Each one was mo
   - The player faction keeps the M-ATV, MaxxPro and AH-1Z in its vehicle list, but every player vehicle and support asset must be bought before it can be used.
   - Hamas is tuned mid-strength among the early-game enemies (tougher than the al-Qaeda/IS cells, weaker than Hezbollah and the Houthis), with tunnels as level geometry.
   - The Russian mountain troops on alpine_europe stay at medium strength as a fictional what-if, since they are the map's only hostile force.
+  - `type59` stays its own vehicle (not a `t55` variant), and `armored_suv` and `toyota_land_cruiser` both stay: they are different base vehicles.
+  - Prices for buying from the USA, GB and Canada are deferred to the game's economy design.
 
 ## Roster (canonical ids)
 
@@ -258,8 +260,7 @@ Early-game (terrorist) theatres lean on the existing technicals, Hiluxes, BMP/BT
 
 ## Open questions for Captain
 
-- Prices for buying from the USA, GB and Canada (economy design); the thresholds are Captain-confirmed (5/15/30/45/60/75), and the unlock lists stay proposals.
-- Possible duplicate vehicles (not merged): `type59` into `t55` as a variant, and `armored_suv` vs the armoured Land Cruiser in `toyota_land_cruiser`. See [reference/vehicles/README.md](../reference/vehicles/README.md).
+None. Prices for buying from the USA, GB and Canada are deferred to the game's economy design (Captain, 2026-10-10); the thresholds are Captain-confirmed (5/15/30/45/60/75), and the unlock lists stay proposals.
 
 ## How to resume (plan of 2026-10-10 09:50 UTC; every job in it is now done)
 

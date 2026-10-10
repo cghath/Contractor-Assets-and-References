@@ -109,7 +109,7 @@ High priority and no model yet (26), early game first: sorted by how many early-
 
 All 211 files were compared by id, name, aliases and variants for the same vehicle or family filed under two ids. No true duplicate was found, so no file was merged and no reference changed: the catalogue already keeps each family in one file, and earlier jobs put later finds in as variants (Ulan into `pizarro`, DN-XI into `sandcat`, Pandur Evolution into `pandur_ii`, Super Puma into `sa330`, the older Cobras into `ah1z`, BMD-2 into `bmd1`, BTR-80 into `btr82a`, Mi-17 into `mi8`), and `ford_ranger` is separate from `toyota_hilux` by Captain's decision. Separate models in service that share a chassis or family stay separate (for example `bmp1`/`bmp2`/`bmp3`, `t72b3`/`t90m`/`pt91`/`m84`, `lav6`/`stryker`/`piranha`, `aw129`/`t129`, `sisu_pasi`/`patria_6x6`, `btr60`/`tab71`, `pizarro`/`ajax`).
 
-Possible duplicates, left as they are for a decision:
+Possible duplicates, kept separate by Captain's decision (2026-10-10):
 
 - `type59` and `t55`: the Type 59 is the Chinese licence-built T-54A, so an unmodified Type 59 looks like a T-54; but it is a separate production model in service (pak, vnm, prk, cod), and the Al-Zarrar rebuild looks different. Merging would make `type59` a variant of `t55`.
 - `armored_suv` and `toyota_land_cruiser`: both cover commercially armoured SUVs (the Land Cruiser file has the alias "armoured SUV"); `armored_suv` is the full-size Suburban-type cartel SUV, so they are different base vehicles.
