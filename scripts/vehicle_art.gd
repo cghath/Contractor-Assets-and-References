@@ -683,20 +683,43 @@ static func _ah1z() -> Canvas:
 
 # --- Ground vehicles --------------------------------------------------------------------
 
-## Tracks in metres: road wheels, drive sprocket and idler on each side.
-static func _mtracks(c: Canvas, inner: float, outer: float, z0: float, z1: float, wheels: int, r: float, sprocket_front: bool) -> void:
+## Tracks in metres: road wheels, drive sprocket and idler on each side, return rollers under
+## the top run, and track shoes picked out across both runs.
+static func _mtracks(c: Canvas, inner: float, outer: float, z0: float, z1: float, wheels: int, r: float, sprocket_front: bool, rollers := 3) -> void:
 	for side: float in [-1.0, 1.0]:
 		var x0 := minf(side * inner, side * outer)
 		var x1 := maxf(side * inner, side * outer)
-		c.mbox(x0, 0.0, z0 + r, x1, 0.08, z1 - r, P.TRACK)
-		c.mbox(x0, 2.0 * r + 0.18, z0 + r * 0.8, x1, 2.0 * r + 0.26, z1 - r * 0.8, P.TRACK)
+		var top_y := 2.0 * r + 0.18
+		c.mbox(x0, 0.0, z0 + r, x1, 0.09, z1 - r, P.TRACK)
+		c.mbox(x0, top_y, z0 + r * 0.8, x1, top_y + 0.08, z1 - r * 0.8, P.TRACK)
 		var step := (z1 - z0 - 3.2 * r) / maxf(wheels - 1, 1)
 		for i in wheels:
-			c.mwheel(x0, x1, r + 0.04, z0 + 1.6 * r + i * step, r, P.TRACK, P.METAL)
+			var wz := z0 + 1.6 * r + i * step
+			c.mwheel(x0 + 0.04, x1 - 0.04, r + 0.05, wz, r, P.BLACK, P.METAL)
+			c.mwheel(x0 + 0.06, x1 - 0.06, r + 0.05, wz, r * 0.82, P.METAL, P.PAINT_DARK)
 		var front_r := r * (0.85 if sprocket_front else 0.75)
 		var back_r := r * (0.75 if sprocket_front else 0.85)
-		c.mwheel(x0, x1, r + 0.22, z0 + front_r, front_r, P.TRACK, P.METAL)
-		c.mwheel(x0, x1, r + 0.18, z1 - back_r, back_r, P.TRACK, P.METAL)
+		var front_y := r + 0.22
+		var back_y := r + 0.18
+		c.mwheel(x0, x1, front_y, z0 + front_r, front_r, P.TRACK, P.METAL)
+		c.mwheel(x0, x1, back_y, z1 - back_r, back_r, P.TRACK, P.METAL)
+		# Sprocket teeth showing through the track at the drive end.
+		var sz := z0 + front_r if sprocket_front else z1 - back_r
+		var sy := front_y if sprocket_front else back_y
+		var sr := front_r if sprocket_front else back_r
+		for t in 10:
+			var a := TAU * t / 10.0
+			var p := Vector3(0, sy + sin(a) * sr * 0.78, sz + cos(a) * sr * 0.78)
+			c.mbox(x0 + 0.05, p.y - 0.04, p.z - 0.04, x1 - 0.05, p.y + 0.04, p.z + 0.04, P.METAL)
+		for i in rollers:
+			var rz := lerpf(z0 + 1.2 * r, z1 - 1.2 * r, (i + 0.5) / rollers)
+			c.mwheel(x0 + 0.08, x1 - 0.08, top_y - 0.08, rz, 0.09, P.BLACK, P.METAL)
+		# Track shoes: a dark groove every 16 cm across both runs.
+		var gz := z0 + r
+		while gz < z1 - r:
+			c.mskin(x0, -0.05, gz, x1, 0.12, gz + c.vs, P.BLACK, P.TRACK)
+			c.mskin(x0, top_y - 0.02, gz, x1, top_y + 0.1, gz + c.vs, P.BLACK, P.TRACK)
+			gz += 0.16
 
 
 ## Hull cross-section of a tracked vehicle: slab sides, flat roof, sloped bow.
@@ -790,59 +813,140 @@ static func _bradley() -> Canvas:
 	return c
 
 
-## M1A2 SEP Abrams: 7.9 m hull with a long shallow glacis, seven road wheels under side
-## skirts, the wide angular turret with bustle rack, the 120 mm gun with bore evacuator,
-## gunner's sight, commander's viewer and CROWS, and the engine deck grilles.
+## M1A2 SEP v2 Abrams: 7.93 m hull with a steep lower glacis and long shallow upper glacis,
+## sponsons over the tracks, thick side skirts (heavier over the front three wheels), seven
+## road wheels and a rear sprocket; the wide flat turret with wedge cheeks, recessed mantlet,
+## long bustle and bustle rack, the 120 mm gun with thermal shroud and bore evacuator, the
+## gunner's sight, commander's thermal viewer, CROWS on the commander's hatch, the loader's
+## M240 behind its shield, smoke launchers, stowage boxes, engine deck grilles and the rear
+## exhaust grille.
 static func _abrams() -> Canvas:
-	var c := Canvas.new(Vector3i(76, 60, 198), 0.05)
-	var hz := 1.9  # the hull starts here; the gun reaches the front of the canvas
-	_mtracks(c, 1.2, 1.7, hz + 0.3, hz + 7.9, 7, 0.32, false)
-	_hull(c, hz, hz + 7.93, 1.7, 0.5, 1.5, 1.5, 0.95, 0.65)
-	for side: float in [-1.0, 1.0]:
-		var x0 := minf(side * 1.7, side * 1.83)
-		var x1 := maxf(side * 1.7, side * 1.83)
-		c.mbox(x0, 0.55, hz + 0.2, x1, 1.2, hz + 7.4, P.PAINT)
-		var z := hz + 0.2
-		while z < hz + 7.4:
-			c.mbox(x0, 0.55, z, x1, 1.2, z + 0.04, P.PAINT_DARK)
-			z += 1.0
-	c.mbox(-1.4, 1.3, hz + 6.4, 1.4, 1.52, hz + 7.9, P.PAINT_DARK)  # engine deck
-	var gz := hz + 6.5
-	while gz < hz + 7.85:
-		c.mbox(-1.3, 1.5, gz, 1.3, 1.53, gz + 0.05, P.BLACK)
-		gz += 0.15
-	c.mbox(-1.5, 0.6, hz + 7.9, 1.5, 1.45, hz + 7.95, P.METAL)  # exhaust grille
-	# Turret: wedge-shaped front, slab sides, bustle and its rack.
-	var z := hz + 1.3
-	while z < hz + 6.0:
-		var half := lerpf(0.7, 1.85, clampf((z - hz - 1.3) / 1.5, 0.0, 1.0))
-		var top := lerpf(2.15, 2.35, clampf((z - hz - 1.3) / 1.0, 0.0, 1.0))
-		c.mbox(-half, 1.5, z, half, top, z + c.vs, P.PAINT)
+	var c := Canvas.new(Vector3i(80, 60, 198), 0.05)
+	var hz := 1.85  # the hull starts here; the gun reaches the front of the canvas
+	_mtracks(c, 1.15, 1.78, hz + 0.3, hz + 7.85, 7, 0.32, false, 4)
+	# Hull: lower body between the tracks, upper hull and sponsons out over them.
+	var z := 0.0
+	while z < 7.93:
+		var top := 1.42 if z > 1.7 else lerpf(0.98, 1.42, z / 1.7)
+		var bottom := 0.47 if z > 0.5 else lerpf(0.95, 0.47, z / 0.5)
+		if z > 7.55:
+			bottom = lerpf(0.47, 0.75, (z - 7.55) / 0.38)
+		c.mbox(-1.1, bottom, hz + z, 1.1, minf(top, 1.0), hz + z + c.vs, P.PAINT)
+		c.mbox(-1.74, maxf(bottom, 0.95), hz + z, 1.74, top, hz + z + c.vs, P.PAINT)
 		z += c.vs
-	c.mbox(-1.7, 1.6, hz + 6.0, 1.7, 2.25, hz + 6.9, P.PAINT_DARK)  # bustle rack
-	c.mbox(-1.6, 1.65, hz + 6.05, 1.6, 2.2, hz + 6.85, P.PAINT)
-	# 120 mm gun, mantlet, bore evacuator.
-	c.mbox(-0.48, 1.65, hz + 1.1, 0.48, 2.15, hz + 1.4, P.PAINT_DARK)
-	var tube := func(zz: float) -> Vector4:
-		var r := lerpf(0.11, 0.085, zz / (hz + 1.2))
-		if zz > 1.1 and zz < 1.55:
-			r = 0.14
-		return Vector4(0.0, 1.92, r, r)
-	c.mloft(0.0, hz + 1.2, tube, P.PAINT, 2.0)
-	c.mbox(-0.06, 2.0, 0.0, 0.06, 2.06, 0.12, P.METAL)  # muzzle reference sensor
-	# Sights and weapons on the roof.
-	c.mbox(0.85, 2.35, hz + 2.1, 1.3, 2.62, hz + 2.6, P.PAINT)  # gunner's primary sight
-	c.mskin(0.85, 2.4, hz + 2.05, 1.3, 2.58, hz + 2.15, P.GLASS)
-	c.mbox(-0.5, 2.35, hz + 2.7, -0.05, 2.85, hz + 3.15, P.PAINT)  # commander's viewer
-	c.mskin(-0.5, 2.5, hz + 2.65, -0.05, 2.75, hz + 2.75, P.GLASS)
-	c.mbox(0.3, 2.35, hz + 3.4, 1.0, 2.85, hz + 4.1, P.PAINT_DARK)  # CROWS
-	c.mbox(0.6, 2.6, hz + 2.3, 0.66, 2.66, hz + 3.4, P.GUN)
-	c.mbox(-1.35, 2.35, hz + 3.6, -0.7, 2.75, hz + 3.66, P.PAINT)  # loader's shield
-	c.mbox(-1.05, 2.5, hz + 2.9, -0.99, 2.56, hz + 3.6, P.GUN)
+	c.mskin(-1.74, 0.94, hz, 1.74, 1.0, hz + 1.0, P.PAINT_DARK, P.PAINT)  # glacis joint
+	# Skirts: thick armoured panels over the front three wheels, thinner ones behind.
 	for side: float in [-1.0, 1.0]:
-		c.mbox(side * 1.45 - 0.15, 1.95, hz + 2.4, side * 1.45 + 0.15, 2.2, hz + 2.75, P.PAINT_DARK)  # smoke
-	c.mbar(Vector3(-1.2, 2.3, hz + 5.8), Vector3(-1.2, 3.0, hz + 5.85), 0.03, P.METAL)
-	c.mbar(Vector3(1.2, 2.3, hz + 5.8), Vector3(1.2, 3.0, hz + 5.85), 0.03, P.METAL)
+		z = 0.2
+		while z < 7.5:
+			var front := z < 2.9
+			var bottom := lerpf(1.0, 0.5 if front else 0.58, clampf((z - 0.2) / 0.7, 0.0, 1.0))
+			var out := 1.9 if front else 1.84
+			c.mbox(minf(side * 1.74, side * out), bottom, hz + z, maxf(side * 1.74, side * out), 1.4, hz + z + c.vs, P.PAINT)
+			z += c.vs
+		for pz: float in [0.95, 1.9, 2.9, 3.95, 4.95, 5.95, 6.95]:
+			c.mskin(minf(side * 1.7, side * 1.95), 0.5, hz + pz, maxf(side * 1.7, side * 1.95), 1.38, hz + pz + 0.05, P.PAINT_DARK, P.PAINT)
+		c.mskin(minf(side * 1.7, side * 1.95), 1.26, hz + 0.3, maxf(side * 1.7, side * 1.95), 1.3, hz + 7.4, P.PAINT_DARK, P.PAINT)
+		for bz in range(9):  # bolt heads along the heavy panels
+			c.mskin(minf(side * 1.85, side * 1.95), 0.62, hz + 0.45 + bz * 0.28, maxf(side * 1.85, side * 1.95), 0.67, hz + 0.5 + bz * 0.28, P.PAINT_DARK, P.PAINT)
+		# Headlight clusters with guards on the front corners, tow eyes, tail lights.
+		var hx := side * 1.42
+		c.mbox(hx - 0.14, 1.0, hz + 0.18, hx + 0.14, 1.16, hz + 0.34, P.PAINT_DARK)
+		c.mskin(hx - 0.1, 1.03, hz + 0.16, hx + 0.1, 1.13, hz + 0.2, P.PAINT_LIGHT)
+		c.mbar(Vector3(hx - 0.16, 1.0, hz + 0.12), Vector3(hx - 0.16, 1.2, hz + 0.3), 0.03, P.METAL)
+		c.mbar(Vector3(hx + 0.16, 1.0, hz + 0.12), Vector3(hx + 0.16, 1.2, hz + 0.3), 0.03, P.METAL)
+		c.mbox(side * 0.75 - 0.08, 0.6, hz + 0.25, side * 0.75 + 0.08, 0.75, hz + 0.4, P.METAL)
+		c.mbox(side * 1.5 - 0.1, 1.2, hz + 7.9, side * 1.5 + 0.1, 1.35, hz + 7.95, P.LIGHT_RED)
+	# Driver's hatch and periscopes, engine deck with its grilles and access doors, rear grille.
+	c.mbox(-0.38, 1.38, hz + 1.05, 0.38, 1.5, hz + 1.6, P.PAINT)
+	c.mskin(-0.32, 1.42, hz + 1.0, 0.32, 1.48, hz + 1.1, P.GLASS)
+	c.mbox(-1.45, 1.42, hz + 6.0, 1.45, 1.47, hz + 7.85, P.PAINT_DARK)
+	var gz := hz + 6.1
+	while gz < hz + 7.8:
+		c.mbox(-1.35, 1.46, gz, 1.35, 1.48, gz + 0.06, P.BLACK)
+		gz += 0.14
+	c.mskin(-1.74, 1.38, hz + 5.9, 1.74, 1.48, hz + 5.95, P.PAINT_DARK, P.PAINT)
+	c.mbox(-1.35, 0.72, hz + 7.92, 1.35, 1.36, hz + 7.97, P.METAL)
+	var ex := -1.3
+	while ex < 1.3:
+		c.mbox(ex, 0.75, hz + 7.95, ex + 0.04, 1.33, hz + 7.98, P.BLACK)
+		ex += 0.1
+	# Turret: wedge cheeks either side of the recessed mantlet, slab sides leaning in, the
+	# bustle overhanging the engine deck.
+	var turret := func(tz: float) -> Section:
+		var t := tz - hz
+		var hw := 1.82
+		var bottom := 1.42
+		if t < 3.15:
+			hw = lerpf(0.62, 1.82, clampf((t - 1.5) / 1.65, 0.0, 1.0))
+		elif t > 5.35:
+			hw = 1.62
+			bottom = 1.55
+		var lean := 0.0 if t < 3.15 else 0.1  # leaning cheeks would turn into a sawtooth
+		return Section.new(bottom, 2.37, hw, hw - lean, 0.0, 0.04)
+	c.mhull(hz + 1.5, hz + 6.7, turret, P.PAINT)
+	c.mbox(-0.48, 1.55, hz + 1.42, 0.48, 2.25, hz + 1.85, P.PAINT_DARK)  # mantlet
+	c.mbox(0.28, 1.85, hz + 1.38, 0.38, 1.95, hz + 1.45, P.BLACK)  # coax port
+	# 120 mm gun: muzzle, thermal shroud with its bands, bore evacuator, muzzle reference sensor.
+	var tube := func(gz2: float) -> Vector4:
+		var r := 0.12
+		if gz2 < 0.35:
+			r = 0.1
+		elif gz2 > 1.3 and gz2 < 2.0:
+			r = 0.165
+		return Vector4(0.0, 1.95, r, r)
+	c.mloft(0.0, hz + 1.5, tube, P.PAINT, 2.0)
+	for band: float in [0.5, 2.3, 2.9, 3.5]:
+		var ring := func(_z: float) -> Vector4: return Vector4(0.0, 1.95, 0.125, 0.125)
+		c.mloft(band, band + 0.05, ring, P.PAINT_DARK, 2.0)
+	c.mbox(-0.06, 2.04, 0.05, 0.06, 2.12, 0.3, P.METAL)
+	# Roof: gunner's primary sight, commander's thermal viewer, hatches, CROWS, loader's M240.
+	c.mbox(0.55, 2.37, hz + 2.05, 1.15, 2.72, hz + 2.8, P.PAINT)
+	c.mskin(0.62, 2.42, hz + 2.0, 1.08, 2.66, hz + 2.1, P.GLASS)
+	c.mdisc(-0.85, hz + 3.1, 0.17, 2.37, 2.62, P.PAINT_DARK)
+	c.mbox(-1.1, 2.62, hz + 2.85, -0.6, 2.95, hz + 3.35, P.PAINT)
+	c.mskin(-1.05, 2.67, hz + 2.8, -0.65, 2.9, hz + 2.9, P.GLASS)
+	c.mdisc(0.7, hz + 3.95, 0.42, 2.37, 2.46, P.PAINT)
+	c.mdisc(0.7, hz + 3.95, 0.3, 2.46, 2.5, P.PAINT_DARK)
+	c.mbox(0.35, 2.46, hz + 3.0, 1.05, 2.62, hz + 3.6, P.PAINT_DARK)  # CROWS base
+	c.mbox(0.5, 2.62, hz + 3.05, 0.9, 2.95, hz + 3.5, P.PAINT)
+	c.mbox(0.92, 2.65, hz + 3.05, 1.08, 2.88, hz + 3.3, P.PAINT_DARK)  # CROWS sight
+	c.mskin(0.94, 2.7, hz + 3.0, 1.06, 2.84, hz + 3.08, P.GLASS)
+	c.mbox(0.64, 2.75, hz + 2.85, 0.76, 2.87, hz + 3.1, P.GUN)  # M2
+	c.mbox(0.68, 2.78, hz + 1.75, 0.72, 2.83, hz + 2.85, P.GUN)
+	c.mbox(0.66, 2.76, hz + 1.7, 0.74, 2.85, hz + 1.78, P.GUN)
+	c.mbox(0.4, 2.62, hz + 3.2, 0.5, 2.8, hz + 3.42, P.SEAT)  # ammo can
+	c.mdisc(-0.72, hz + 4.15, 0.4, 2.37, 2.45, P.PAINT)
+	c.mbox(-1.25, 2.45, hz + 3.5, -0.25, 2.92, hz + 3.56, P.PAINT)  # loader's shield
+	c.mskin(-0.85, 2.68, hz + 3.48, -0.6, 2.82, hz + 3.58, P.GLASS)
+	c.mbox(-0.78, 2.6, hz + 2.9, -0.72, 2.66, hz + 3.7, P.GUN)
+	c.mbox(-0.8, 2.55, hz + 3.55, -0.7, 2.68, hz + 3.95, P.GUN)
+	# Blow-out panels on the bustle roof, wind sensor, antennas.
+	c.mskin(-1.4, 2.35, hz + 5.25, 1.4, 2.4, hz + 5.3, P.PAINT_DARK, P.PAINT)
+	c.mskin(-1.4, 2.35, hz + 6.45, 1.4, 2.4, hz + 6.5, P.PAINT_DARK, P.PAINT)
+	c.mskin(-0.03, 2.35, hz + 5.25, 0.03, 2.4, hz + 6.5, P.PAINT_DARK, P.PAINT)
+	c.mbar(Vector3(0.0, 2.37, hz + 5.9), Vector3(0.0, 2.95, hz + 5.9), 0.04, P.METAL)
+	c.mbox(-0.12, 2.93, hz + 5.87, 0.12, 2.97, hz + 5.93, P.METAL)
+	for side: float in [-1.0, 1.0]:
+		c.mbar(Vector3(side * 1.25, 2.37, hz + 5.8), Vector3(side * 1.25, 3.1, hz + 5.85), 0.03, P.METAL)
+		# Smoke grenade launchers on the cheeks, stowage boxes on the turret sides.
+		var sx := side * 1.62
+		c.mbox(sx - 0.18, 2.0, hz + 2.95, sx + 0.18, 2.32, hz + 3.35, P.PAINT_DARK)
+		for ty: float in [2.05, 2.17]:
+			for tx: float in [-0.12, 0.0, 0.12]:
+				c.mbox(sx + tx - 0.04, ty, hz + 2.92, sx + tx + 0.04, ty + 0.08, hz + 2.96, P.BLACK)
+		c.mbox(minf(side * 1.7, side * 1.95), 1.7, hz + 3.9, maxf(side * 1.7, side * 1.95), 2.25, hz + 5.2, P.PAINT)
+		c.mskin(minf(side * 1.7, side * 1.96), 2.15, hz + 3.9, maxf(side * 1.7, side * 1.96), 2.2, hz + 5.2, P.PAINT_DARK, P.PAINT)
+		# Bustle rack: rails and posts around the bustle.
+		var rx := side * 1.78
+		for ry: float in [1.75, 2.25]:
+			c.mbar(Vector3(rx, ry, hz + 5.35), Vector3(rx, ry, hz + 7.1), 0.05, P.PAINT_DARK)
+		for pz in range(5):
+			c.mbar(Vector3(rx, 1.7, hz + 5.45 + pz * 0.4), Vector3(rx, 2.27, hz + 5.45 + pz * 0.4), 0.04, P.PAINT_DARK)
+	for ry: float in [1.75, 2.25]:
+		c.mbar(Vector3(-1.78, ry, hz + 7.1), Vector3(1.78, ry, hz + 7.1), 0.05, P.PAINT_DARK)
+	c.mbox(-1.6, 1.7, hz + 6.7, -0.5, 2.1, hz + 7.05, P.SEAT)  # kit in the rack
+	c.mbox(0.3, 1.7, hz + 6.7, 1.2, 2.0, hz + 7.05, P.PAINT_DARK)
 	return c
 
 
