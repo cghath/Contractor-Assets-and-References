@@ -797,38 +797,92 @@ static func _hull(c: Canvas, z0: float, z1: float, half_w: float, bottom: float,
 		z += c.vs
 
 
-## AAV-7A1: 7.9 m slab-sided amphibious hull over wide tracks, steep bow with the bow plane,
-## upgunned weapon station (Mk19 and M2) front right, driver and commander cupolas front left,
-## and the big rear ramp.
+## AAV-7A1: a 7.94 m slab-sided amphibious hull riding low over its tracks, the steep bow
+## with the folded bow plane, bolted applique armour panels along the sides, the Up-Gunned
+## Weapon Station (Mk19 and M2) on the front right beside the engine grilles, the driver's and
+## commander's cupolas on the front left, two long cargo hatches on the roof, water-jet ducts
+## either side at the back and the big rear ramp with its personnel door.
 static func _aav7() -> Canvas:
-	var c := Canvas.new(Vector3i(68, 68, 160), 0.05)
-	_mtracks(c, 1.12, 1.62, 0.6, 7.6, 6, 0.3, true)
-	_hull(c, 0.0, 7.95, 1.12, 0.45, 2.6, 1.8, 1.45, 1.05)
-	_hull(c, 0.4, 7.9, 1.63, 1.12, 2.6, 1.4, 1.8, 1.25)  # sponsons over the tracks
-	c.mbox(-1.63, 0.95, 0.9, 1.63, 1.12, 7.7, P.PAINT_DARK)  # track skirt line
-	c.mskin(-1.4, 1.35, 0.0, 1.4, 2.4, 1.7, P.PAINT_DARK, P.PAINT)  # bow plane
-	c.mbox(-1.1, 0.55, 7.9, 1.1, 2.45, 7.98, P.PAINT_DARK)  # ramp
-	c.mbox(-0.08, 2.05, 7.95, 0.08, 2.35, 8.0, P.METAL)
-	# Roof cargo hatches.
-	c.mskin(-1.0, 2.55, 3.6, 1.0, 2.62, 7.0, P.PAINT_DARK, P.PAINT)
-	c.mbox(-0.95, 2.6, 3.65, -0.05, 2.62, 6.95, P.PAINT)
-	c.mbox(0.05, 2.6, 3.65, 0.95, 2.62, 6.95, P.PAINT)
-	# Weapon station front right with the Mk19 (thick) and M2 (long) guns.
-	c.mbox(0.25, 2.6, 1.6, 1.42, 3.22, 3.0, P.PAINT)
-	c.mbox(0.3, 3.22, 1.75, 1.35, 3.28, 2.85, P.PAINT_DARK)
-	c.mskin(0.3, 2.95, 1.55, 1.35, 3.15, 1.65, P.GLASS)
-	c.mbox(0.48, 2.78, 0.75, 0.62, 2.92, 1.6, P.GUN)
-	c.mbox(0.92, 2.8, 0.2, 0.98, 2.86, 1.6, P.GUN)
-	c.mbox(0.88, 2.76, 0.2, 1.02, 2.9, 0.3, P.GUN)
-	# Driver's and commander's cupolas with vision blocks.
-	c.mbox(-1.3, 2.6, 1.8, -0.55, 2.8, 2.5, P.PAINT)
-	c.mskin(-1.3, 2.62, 1.75, -0.55, 2.78, 1.85, P.GLASS)
-	c.mbox(-1.25, 2.6, 2.75, -0.6, 2.95, 3.35, P.PAINT)
-	c.mskin(-1.25, 2.75, 2.7, -0.6, 2.9, 3.4, P.GLASS)
-	# Headlights, tow hooks, exhaust grille on the right side.
-	c.mbox(-1.2, 1.55, 0.95, -0.95, 1.7, 1.05, P.PAINT_LIGHT)
-	c.mbox(0.95, 1.55, 0.95, 1.2, 1.7, 1.05, P.PAINT_LIGHT)
-	c.mskin(1.55, 1.7, 2.0, 1.7, 2.3, 3.0, P.BLACK)
+	var c := Canvas.new(Vector3i(70, 70, 162), 0.05)
+	_mtracks(c, 1.1, 1.6, 0.75, 7.55, 6, 0.3, true, 2)
+	# Hull: the bow rises from the keel to the roof; the sides hang down over the tracks.
+	var z := 0.0
+	while z < 7.95:
+		var top := 2.62 if z > 1.75 else lerpf(1.5, 2.62, z / 1.75)
+		var bottom := 0.45 if z > 1.0 else lerpf(1.1, 0.45, z / 1.0)
+		var side_bottom := 0.95 if z > 1.1 else lerpf(1.25, 0.95, z / 1.1)
+		c.mbox(-1.1, bottom, z, 1.1, top, z + c.vs, P.PAINT)
+		c.mbox(-1.63, maxf(side_bottom, bottom), z, 1.63, top, z + c.vs, P.PAINT)
+		z += c.vs
+	# Bow plane folded against the bow, headlights, tow eyes.
+	c.mskin(-1.35, 1.6, 0.2, 1.35, 2.4, 1.6, P.PAINT_DARK, P.PAINT)
+	c.mskin(-1.25, 1.65, 0.25, 1.25, 2.35, 1.55, P.PAINT, P.PAINT_DARK)
+	for side: float in [-1.0, 1.0]:
+		c.mbox(side * 1.3 - 0.13, 1.45, 0.62, side * 1.3 + 0.13, 1.62, 0.78, P.PAINT_DARK)
+		c.mskin(side * 1.3 - 0.09, 1.48, 0.58, side * 1.3 + 0.09, 1.58, 0.66, P.PAINT_LIGHT)
+		c.mbox(side * 0.7 - 0.08, 1.05, 0.15, side * 0.7 + 0.08, 1.2, 0.3, P.METAL)
+		# Applique armour panels with bolt heads, and the skirt edge along the bottom.
+		var x0 := minf(side * 1.63, side * 1.72)
+		var x1 := maxf(side * 1.63, side * 1.72)
+		var pz := 1.8
+		while pz < 7.4:
+			c.mbox(x0, 1.15, pz, x1, 2.45, pz + 1.07, P.PAINT)
+			for by: float in [1.25, 2.3]:
+				for bz: float in [0.1, 0.5, 0.9]:
+					c.mskin(minf(side * 1.7, side * 1.73), by, pz + bz, maxf(side * 1.7, side * 1.73), by + 0.05, pz + bz + 0.05, P.PAINT_DARK, P.PAINT)
+			pz += 1.12
+		c.mbox(minf(side * 1.6, side * 1.66), 0.92, 0.9, maxf(side * 1.6, side * 1.66), 1.0, 7.8, P.PAINT_DARK)
+		# Water-jet ducts at the back, low on each side.
+		c.mbox(minf(side * 1.15, side * 1.6), 0.95, 7.0, maxf(side * 1.15, side * 1.6), 1.45, 7.98, P.PAINT_DARK)
+		c.mbox(minf(side * 1.22, side * 1.53), 1.02, 7.97, maxf(side * 1.22, side * 1.53), 1.38, 8.0, P.BLACK)
+		c.mbox(side * 1.45 - 0.08, 2.2, 7.95, side * 1.45 + 0.08, 2.32, 8.0, P.LIGHT_RED)
+		# Vision blocks along the roof edge over the troop compartment.
+		for vz: float in [4.0, 5.2, 6.4]:
+			c.mbox(minf(side * 1.3, side * 1.55), 2.62, vz, maxf(side * 1.3, side * 1.55), 2.7, vz + 0.3, P.PAINT_DARK)
+	# Roof: engine grilles beside the weapon station, the two long cargo hatches.
+	var gz := 1.95
+	while gz < 2.95:
+		c.mskin(-0.3, 2.58, gz, 0.3, 2.66, gz + 0.05, P.BLACK, P.PAINT)
+		gz += 0.12
+	c.mskin(-1.05, 2.58, 3.7, 1.05, 2.66, 6.95, P.PAINT_DARK, P.PAINT)
+	c.mbox(-1.0, 2.62, 3.75, -0.06, 2.65, 6.9, P.PAINT)
+	c.mbox(0.06, 2.62, 3.75, 1.0, 2.65, 6.9, P.PAINT)
+	for hz: float in [4.2, 6.4]:
+		c.mbox(-0.9, 2.65, hz, 0.9, 2.69, hz + 0.08, P.PAINT_DARK)  # hinges
+	# Rear ramp and personnel door.
+	c.mbox(-1.15, 0.5, 7.93, 1.15, 2.5, 8.0, P.PAINT)
+	c.mskin(-1.15, 0.5, 7.92, 1.15, 0.56, 8.02, P.PAINT_DARK)
+	c.mskin(-1.15, 2.45, 7.92, 1.15, 2.5, 8.02, P.PAINT_DARK)
+	c.mskin(-0.45, 0.65, 7.97, 0.45, 2.2, 8.02, P.PAINT_DARK, P.PAINT)
+	c.mbox(-0.4, 0.7, 7.98, 0.4, 2.15, 8.0, P.PAINT)
+	c.mskin(-0.2, 1.65, 7.97, 0.2, 1.95, 8.03, P.GLASS)
+	c.mbox(0.25, 1.3, 7.99, 0.35, 1.38, 8.06, P.METAL)
+	# Up-Gunned Weapon Station: a squat turret with vision blocks, Mk19 (thick) and M2 (long).
+	var ux := 0.82
+	var uz := 2.15
+	c.mdisc(ux, uz, 0.68, 2.62, 2.7, P.PAINT_DARK)
+	var station := func(tz: float) -> Section:
+		var k := clampf((tz - (uz - 0.62)) / 1.24, 0.0, 1.0)
+		var hw := 0.62 * sqrt(maxf(1.0 - pow(2.0 * k - 1.0, 2.0) * 0.75, 0.0))
+		return Section.new(2.7, 3.2, hw, hw - 0.08, 0.0, 0.08, ux)
+	c.mhull(uz - 0.62, uz + 0.62, station, P.PAINT)
+	for vx: float in [-0.35, 0.0, 0.35]:
+		c.mskin(ux + vx - 0.1, 2.95, uz - 0.7, ux + vx + 0.1, 3.08, uz - 0.3, P.GLASS)
+	c.mbox(ux - 0.45, 2.78, uz - 0.75, ux - 0.05, 3.08, uz - 0.45, P.PAINT_DARK)  # gun ports
+	c.mbox(ux - 0.32, 2.86, uz - 1.3, ux - 0.16, 3.0, uz - 0.7, P.GUN)  # Mk19
+	c.mbox(ux - 0.3, 2.88, uz - 1.36, ux - 0.18, 2.98, uz - 1.28, P.GUN)
+	c.mbox(ux + 0.1, 2.88, uz - 1.85, ux + 0.15, 2.93, uz - 0.6, P.GUN)  # M2
+	c.mbox(ux + 0.07, 2.86, uz - 1.9, ux + 0.18, 2.95, uz - 1.82, P.GUN)
+	c.mbox(ux - 0.15, 3.2, uz - 0.2, ux + 0.25, 3.28, uz + 0.25, P.PAINT_DARK)  # hatch
+	# Driver's cupola and the taller commander's cupola behind it, both with vision blocks.
+	c.mdisc(-0.95, 2.05, 0.36, 2.62, 2.85, P.PAINT)
+	c.mskin(-1.3, 2.7, 1.65, -0.6, 2.8, 2.45, P.GLASS)
+	c.mdisc(-0.95, 2.05, 0.28, 2.85, 2.9, P.PAINT_DARK)
+	c.mdisc(-0.95, 3.1, 0.38, 2.62, 3.0, P.PAINT)
+	c.mskin(-1.35, 2.82, 2.7, -0.55, 2.94, 3.5, P.GLASS)
+	c.mdisc(-0.95, 3.1, 0.3, 3.0, 3.05, P.PAINT_DARK)
+	c.mbar(Vector3(-1.4, 2.62, 3.6), Vector3(-1.4, 3.6, 3.65), 0.03, P.METAL)
+	c.mbar(Vector3(1.4, 2.62, 6.8), Vector3(1.4, 3.5, 6.85), 0.03, P.METAL)
 	return c
 
 
