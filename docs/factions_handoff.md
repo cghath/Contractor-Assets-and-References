@@ -78,7 +78,7 @@ The Contractor design doc (Claude Doc) is the source of truth for game design. W
 
 ## Status at this snapshot
 
-- **Factions done (42 of 76):** every faction in the Five Eyes, Western Europe, eastern flank, Russia/CSTO and Asia-Pacific blocs, plus `player`.
+- **Factions done (41 of 76):** every faction in the Five Eyes, Western Europe, eastern flank, Russia/CSTO and Asia-Pacific blocs, plus `player`.
 - **Factions still generating:** the Middle East states, the terrorist bloc, and the neutrals/others bloc.
 - **Vehicle catalogue:** 198 vehicles (34 high, 58 medium, 106 low priority).
 - **Worldspaces:** not started. They run after all the factions are done.
