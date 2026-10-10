@@ -1,8 +1,32 @@
 # Contractor faction pack: handoff
 
-Snapshot as of 2026-10-10 09:06 UTC. **The cloud run is PAUSED** (Captain moved the work to the local desktop). The pack is still being generated on branch `factions-worldspaces` (draft PR #2). Finished files push automatically every 10 minutes, so the folders on the branch are the live state. Check them against the "Status" section below.
+Snapshot as of 2026-10-10 09:50 UTC. **PAUSED by Captain.** The pack lives on branch `factions-worldspaces` (draft PR #2), and the folders on the branch are the live state.
 
 The Contractor design doc (Claude Doc) is the source of truth for game design. Where it disagrees with this pack, the design doc wins. Anything this pack invents for gameplay is listed under `proposed` in each file, so it can be tuned.
+
+## Handoffs (start here)
+
+**Status (09:50 UTC):** PAUSED. 49 of 76 factions are done, with 200 vehicles in the catalogue. No agents or auto-push are running.
+
+Each job has a sheet in this repo and a matching Claude Doc:
+
+| Job | Repo sheet | Claude Doc |
+|---|---|---|
+| Terrorist bloc (me_terror) | [me_terror_handoff.md](me_terror_handoff.md) | https://claude.ai/code/artifact/24090dda-b337-4f8b-bc34-6985e097e689 |
+| Neutrals bloc (others) | [others_handoff.md](others_handoff.md) | https://claude.ai/code/artifact/37654e72-a033-4f2f-9417-008a5e36fed7 |
+| Alliances | [alliances_handoff.md](alliances_handoff.md) | https://claude.ai/code/artifact/45389ec6-ee49-40e9-b15a-df9704aadb94 |
+| Worldspaces | [worldspaces_handoff.md](worldspaces_handoff.md) | https://claude.ai/code/artifact/721887fe-5ac7-4eac-b048-0195fd684304 |
+| Loadouts (owned by the "Faction loadout questions" thread) | [loadouts_handoff.md](loadouts_handoff.md) | n/a |
+
+**Resume here.** Run one job at a time, in this order. Details are under "How to resume" at the end of this file.
+
+1. Finish syr, irq and pse_pa, and cross-check the 8 new Middle East files (irn, isr, tur, sau, are, qat, egy, jor).
+2. me_terror.
+3. others.
+4. alliances.
+5. worldspaces.
+
+The loadouts are owned by the "Faction loadout questions" thread. Don't touch `loadouts/`.
 
 ## What Captain asked for (2026-10-10)
 
