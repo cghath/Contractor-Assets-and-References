@@ -39,16 +39,35 @@ is a Voxel Tools class) and press F5. Or render screenshots from the command lin
 
 Shots: `helicopters`, `ah1z`, `armor`, `mraps`, `technicals`. Each saves `vehicles_<shot>.png`.
 
+To check one model against reference photos, render it from six angles (left side, front, rear,
+two three-quarter views and top) into one contact sheet, `<model>_views.png`:
+
+```
+<voxel godot editor> --path . res://showcase/model_views.tscn -- <output folder> <model> [scheme]
+```
+
+Both scenes need a window. On a headless Linux box, `xvfb-run` with `--rendering-driver opengl3`
+works (the Voxel Tools release `godot.linuxbsd.editor.x86_64` from
+https://github.com/Zylann/godot_voxel/releases/tag/v1.7 is the matching 4.7.2 editor).
+
 ## Adding a model
 
 1. Add the id and its schemes to `MODELS`.
 2. Write a `_name() -> Canvas` function. Create the canvas in voxels at 5 cm
    (`Canvas.new(Vector3i(w, h, l), 0.05)`), then draw in metres: x is centred (negative is left),
    y is up from the ground, z runs back from the nose.
-   - `mloft(z0, z1, profile, colour, squareness, shell)` for rounded bodies; `profile(z)` returns
-     `Vector4(centre_x, centre_y, half_width, half_height)`. Use a `shell` for big hulls.
-   - `mbox`, `mbar` (struts, barrels), `mwheel`, and `mskin` (repaints only the outer skin:
-     windows, seams, markings).
+   - `mhull(z0, z1, section, colour, shell)` for aircraft and vehicle bodies; `section(z)` returns
+     a `Section`: flat bottom and top, a bottom and top half width (so sides can lean in), and
+     rounded lower and upper corners. `Section.scaled()` rounds off noses and tails.
+   - `mloft(z0, z1, profile, colour, squareness, shell)` for round bodies (pods, barrels, nacelles);
+     `profile(z)` returns `Vector4(centre_x, centre_y, half_width, half_height)`. Use a `shell`
+     for big hulls.
+   - `mbox`, `mbar` (struts, barrels), `mdisc` (upright cylinders: masts, hatches, rings),
+     `mwheel` (also carves wheel arches when drawn in `P.EMPTY`), and `mskin` (repaints only the
+     outer skin: windows, seams, markings).
+   - Shared parts: `_mtracks` (road wheels, sprocket teeth, return rollers, track shoes),
+     `_mtire` (military tyre with tread and hub bolts), `_turret` (O-GPK gun shield with an M2),
+     `_pickup` (Hilux or Land Cruiser 79 base for the technicals).
    - `c.rotor(name, position, radius, chord, blades, axis)` for rotors.
 3. Add it to `_canvas_for()` and to the showcase line-up.
 
@@ -63,11 +82,12 @@ Colours come from the palette enum `P` and the scheme table `SCHEMES`.
 
 ## Next steps
 
-- **Black Hawk:** refine it against Captain's reference images (UH-60M). They live locally in
+- **Black Hawk:** rebuilt against Captain's reference images (UH-60M), which live locally in
   `C:\Users\noahg\Downloads\Reference folder for UH 60`; they aren't committed here because they're
   third-party photos. A local `references/` folder is ignored by git if you want copies next to the
   project.
-- Raise the other models to the same standard against references.
+- The other models had a detail pass from public dimensions and drawings. Reference photos for any
+  of them (dropped in `references/`) would let the next pass match them as closely as the UH-60.
 - Gameplay that will use these models (planned in the game, not built yet):
   - Vehicle armour: small calibre does nothing; 7.62x54R and up can penetrate or disable.
   - Anti-armour launchers: AT4, RPG-7 (PG-7V HEAT, OG-7V frag), Javelin, MAAWS, NLAW and SMAW,

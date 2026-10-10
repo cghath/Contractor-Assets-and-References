@@ -1321,62 +1321,105 @@ static func _mtire(c: Canvas, side: float, x0: float, x1: float, cy: float, cz: 
 
 # --- Technicals -------------------------------------------------------------------------
 
-## The pickups technicals are built on: "hilux" (Toyota Hilux, 5.3 m) or "lc79" (Land
-## Cruiser 79 pickup, 5.2 m, boxier and taller with a flat dropside bed). Returns the bed
-## floor height.
+## The pickups technicals are built on: "hilux" (Toyota Hilux, 5.25 m, low with a raked
+## windscreen and a pressed-steel bed) or "lc79" (Land Cruiser 79 pickup, 5.2 m, taller and
+## boxier with flared arches, the snorkel up the right pillar and a flat dropside tray behind a
+## headboard rack). Both carry bumpers, lights, mirrors, door seams and handles, cut wheel
+## arches, rust and a panel or two in a mismatched colour. Returns the bed floor height.
 static func _pickup(c: Canvas, base: String) -> float:
 	var lc := base == "lc79"
-	var hood_end := 1.85 if lc else 1.7
-	var cab_end := 3.15 if lc else 3.0
+	var hood_end := 1.95 if lc else 1.7
+	var cab_end := 3.25 if lc else 3.0
 	var length := 5.2 if lc else 5.25
 	var roof := 1.95 if lc else 1.68
-	var hood_top := 1.22 if lc else 1.05
-	var bed := 0.95 if lc else 0.8
+	var hood_top := 1.25 if lc else 1.05
+	var bed := 1.0 if lc else 0.8
 	var r := 0.4 if lc else 0.37
 	var hw := 0.88
-	# Lower body along the whole length.
-	c.mbox(-hw, 0.45, 0.05, hw, bed, length, P.PAINT)
-	# Bonnet (sloping on the Hilux, flat on the Land Cruiser) and grille.
-	var z := 0.05
-	while z < hood_end:
-		var top := hood_top if lc else lerpf(0.95, hood_top, clampf(z / 0.8, 0.0, 1.0))
-		c.mbox(-hw + 0.03, bed, z, hw - 0.03, top, z + c.vs, P.PAINT)
-		z += c.vs
-	c.mbox(-0.7, 0.62, 0.0, 0.7, hood_top - 0.08, 0.06, P.BLACK)
-	if lc:
-		var gx := -0.65
-		while gx < 0.7:
-			c.mbox(gx, 0.65, -0.01, gx + 0.04, hood_top - 0.1, 0.05, P.METAL)
-			gx += 0.1
-	c.mbox(-0.85, 0.75, 0.0, -0.6, 0.9, 0.06, P.PAINT_LIGHT)
-	c.mbox(0.6, 0.75, 0.0, 0.85, 0.9, 0.06, P.PAINT_LIGHT)
-	c.mbox(-0.9, 0.4, -0.02, 0.9, 0.6, 0.12, P.METAL)  # bumper
-	# Cab with the windscreen raked (Hilux) or upright (Land Cruiser).
-	z = hood_end
-	var rake := 0.12 if lc else 0.42
-	while z < cab_end:
-		var top := lerpf(hood_top, roof, clampf((z - hood_end) / rake, 0.0, 1.0))
-		c.mbox(-hw, bed, z, hw, top, z + c.vs, P.PAINT)
-		z += c.vs
-	c.mskin(-0.8, hood_top + 0.05, hood_end - 0.01, 0.8, roof - 0.06, hood_end + rake + 0.05, P.GLASS)
-	c.mskin(-0.92, hood_top + 0.08, hood_end + rake + 0.1, 0.92, roof - 0.08, cab_end - 0.12, P.GLASS)
-	c.mskin(-0.92, bed + 0.05, hood_end + 0.62, 0.92, roof - 0.05, hood_end + 0.66, P.PAINT_DARK, P.PAINT)
-	c.mskin(-0.6, hood_top + 0.08, cab_end - 0.02, 0.6, roof - 0.12, cab_end + 0.02, P.GLASS)
-	# Bed: dropsides and tailgate.
-	var wall := bed + (0.5 if lc else 0.45)
-	c.mbox(-hw, bed, cab_end + 0.05, -hw + 0.05, wall, length, P.PAINT)
-	c.mbox(hw - 0.05, bed, cab_end + 0.05, hw, wall, length, P.PAINT)
-	c.mbox(-hw, bed, length - 0.05, hw, wall, length, P.PAINT)
-	c.mbox(-hw + 0.05, bed - 0.03, cab_end + 0.05, hw - 0.05, bed, length - 0.05, P.PAINT_DARK)
-	# Wheels, arches, mirrors, rust and dents.
 	var wb := 3.18 if lc else 3.08
-	for wz: float in [0.95, 0.95 + wb]:
-		for side: float in [-1.0, 1.0]:
-			c.mwheel(minf(side * 0.68, side * 0.92), maxf(side * 0.68, side * 0.92), r, wz, r)
+	var axles := [0.95, 0.95 + wb]
+	# Lower body, then the bonnet with its rounded edges.
+	c.mbox(-hw, 0.48, 0.12, hw, 0.85 if lc else 0.75, cab_end, P.PAINT)
+	var bonnet := func(z: float) -> Section:
+		var top := hood_top if lc else lerpf(0.93, hood_top, clampf(z / 0.9, 0.0, 1.0))
+		return Section.new(0.48, top, hw, hw - (0.02 if lc else 0.06), 0.06, 0.08 if lc else 0.12)
+	c.mhull(0.12, hood_end, bonnet, P.PAINT)
+	# Cab: the windscreen raked (Hilux) or nearly upright (Land Cruiser), roof edges rounded.
+	var rake := 0.18 if lc else 0.5
+	var cab := func(z: float) -> Section:
+		var top := lerpf(hood_top, roof, clampf((z - hood_end) / rake, 0.0, 1.0))
+		return Section.new(0.48, top, hw, hw - 0.1, 0.06, 0.12)
+	c.mhull(hood_end, cab_end, cab, P.PAINT)
+	c.mskin(-0.78, hood_top + 0.04, hood_end - 0.02, 0.78, roof - 0.07, hood_end + rake + 0.05, P.GLASS)
+	c.mskin(-0.04, hood_top + 0.04, hood_end - 0.02, 0.04, roof, hood_end + rake + 0.05, P.PAINT, P.GLASS)
+	c.mskin(-0.95, hood_top + 0.08, hood_end + rake + 0.08, 0.95, roof - 0.09, cab_end - 0.14, P.GLASS)
+	c.mskin(-0.55, hood_top + 0.12, cab_end - 0.03, 0.55, roof - 0.14, cab_end + 0.02, P.GLASS)
 	for side: float in [-1.0, 1.0]:
-		c.mbox(minf(side * 0.9, side * 1.02), hood_top + 0.1, hood_end + 0.05, maxf(side * 0.9, side * 1.02), hood_top + 0.22, hood_end + 0.15, P.BLACK)
-	c.mskin(-1.0, 0.45, 1.6, 1.0, 0.6, length - 0.6, P.RUST, P.PAINT)
-	c.mskin(-1.0, 0.7, 3.6, 1.0, 0.85, 4.1, P.PAINT_DARK, P.PAINT)
+		var ox := minf(side * 0.8, side * 0.95)
+		var ix := maxf(side * 0.8, side * 0.95)
+		var door := hood_end + 0.05
+		c.mskin(ox, 0.55, door, ix, roof - 0.05, door + 0.05, P.PAINT_DARK, P.PAINT)
+		c.mskin(ox, 0.55, cab_end - 0.1, ix, roof - 0.05, cab_end - 0.05, P.PAINT_DARK, P.PAINT)
+		c.mbox(minf(side * 0.86, side * 0.92), hood_top - 0.05, cab_end - 0.35, maxf(side * 0.86, side * 0.92), hood_top, cab_end - 0.2, P.METAL)  # handle
+		# Mirrors, headlights and indicators, tail lights.
+		c.mbox(minf(side * 0.88, side * 1.03), hood_top + 0.1, hood_end + 0.05, maxf(side * 0.88, side * 1.03), hood_top + 0.24, hood_end + 0.14, P.BLACK)
+		var lx := side * (0.66 if lc else 0.68)
+		c.mbox(lx - 0.17, hood_top - (0.32 if lc else 0.22), 0.09, lx + 0.17, hood_top - 0.08, 0.14, P.PAINT_LIGHT)
+		c.mbox(side * 0.84 - 0.05, hood_top - (0.32 if lc else 0.22), 0.1, side * 0.84 + 0.05, hood_top - 0.18, 0.15, P.RUST)
+		c.mbox(minf(side * 0.82, side * hw), bed + 0.1, length - 0.04, maxf(side * 0.82, side * hw), bed + 0.38, length + 0.01, P.LIGHT_RED)
+	# Grille: horizontal bars on the Hilux, vertical slats on the Land Cruiser.
+	c.mbox(-0.48, 0.62, 0.08, 0.48, hood_top - 0.08, 0.13, P.BLACK)
+	if lc:
+		var gx := -0.45
+		while gx < 0.48:
+			c.mbox(gx, 0.64, 0.07, gx + 0.04, hood_top - 0.1, 0.12, P.METAL)
+			gx += 0.09
+	else:
+		for gy: float in [0.7, 0.8, 0.9]:
+			c.mbox(-0.46, gy, 0.07, 0.46, gy + 0.04, 0.12, P.METAL)
+	c.mbox(-0.92, 0.4, 0.0, 0.92, 0.6, 0.14, P.METAL)  # front bumper
+	# Bed: pressed-steel tub on the Hilux, a flat tray with dropsides on the Land Cruiser.
+	var wall := bed + (0.38 if lc else 0.45)
+	var bw := 0.93 if lc else hw
+	c.mbox(-bw, bed - 0.08, cab_end + 0.05, bw, bed, length, P.PAINT_DARK if lc else P.PAINT)
+	c.mbox(-bw, bed, cab_end + 0.05, -bw + 0.05, wall, length, P.PAINT)
+	c.mbox(bw - 0.05, bed, cab_end + 0.05, bw, wall, length, P.PAINT)
+	c.mbox(-bw, bed, length - 0.05, bw, wall, length, P.PAINT)
+	c.mbox(-bw, bed, cab_end + 0.05, bw, wall, cab_end + 0.1, P.PAINT)
+	c.mskin(-bw - 0.01, wall - 0.04, cab_end + 0.05, bw + 0.01, wall + 0.01, length + 0.01, P.PAINT_LIGHT, P.PAINT)  # top rails
+	var rz := cab_end + 0.3
+	while rz < length - 0.1:  # floor ribs
+		c.mbox(-bw + 0.08, bed, rz, bw - 0.08, bed + 0.03, rz + 0.05, P.PAINT_DARK)
+		rz += 0.25
+	if lc:
+		c.mbox(-0.95, 0.55, cab_end, 0.95, 1.0, length, P.PAINT_DARK)  # tray chassis
+		for hx: float in [-0.85, 0.85]:  # headboard rack posts
+			c.mbar(Vector3(hx, bed, cab_end + 0.08), Vector3(hx, roof + 0.05, cab_end + 0.08), 0.05, P.METAL)
+		c.mbar(Vector3(-0.85, roof + 0.05, cab_end + 0.08), Vector3(0.85, roof + 0.05, cab_end + 0.08), 0.05, P.METAL)
+		c.mbar(Vector3(-0.85, roof - 0.35, cab_end + 0.08), Vector3(0.85, roof - 0.35, cab_end + 0.08), 0.04, P.METAL)
+		# Snorkel up the right windscreen pillar, intake facing forward.
+		c.mbar(Vector3(0.93, hood_top - 0.1, hood_end - 0.3), Vector3(0.93, hood_top + 0.05, hood_end - 0.05), 0.1, P.BLACK)
+		c.mbar(Vector3(0.93, hood_top + 0.05, hood_end - 0.05), Vector3(0.93, roof + 0.1, hood_end + rake), 0.1, P.BLACK)
+		c.mbox(0.86, roof + 0.05, hood_end + rake - 0.15, 1.0, roof + 0.2, hood_end + rake + 0.05, P.BLACK)
+		for side: float in [-1.0, 1.0]:  # flares on the arches
+			for az: float in axles:
+				c.mbox(minf(side * 0.86, side * 0.97), r * 2.0 + 0.08, az - r - 0.1, maxf(side * 0.86, side * 0.97), r * 2.0 + 0.16, az + r + 0.1, P.BLACK)
+	c.mbox(-0.9, 0.55, length - 0.05, 0.9, 0.7, length + 0.08, P.METAL)  # rear step bumper
+	# Wheel arches cut out of the body, then the wheels with their rims.
+	for az: float in axles:
+		c.mwheel(-1.0, 1.0, r, az, r + 0.08, P.EMPTY, P.EMPTY)
+		for side: float in [-1.0, 1.0]:
+			c.mwheel(minf(side * 0.66, side * 0.9), maxf(side * 0.66, side * 0.9), r, az, r, P.TIRE, P.METAL)
+			c.mbox(minf(side * 0.86, side * 0.91), r - 0.06, az - 0.06, maxf(side * 0.86, side * 0.91), r + 0.06, az + 0.06, P.PAINT_DARK)
+			for t in 16:
+				var a := TAU * t / 16.0
+				c.mskin(minf(side * 0.66, side * 0.91), r + sin(a) * r - 0.03, az + cos(a) * r - 0.03, maxf(side * 0.66, side * 0.91), r + sin(a) * r + 0.03, az + cos(a) * r + 0.03, P.BLACK, P.TIRE)
+	c.mbox(-0.6, 0.4, 0.9, 0.6, 0.48, 4.3, P.BLACK)  # chassis rails seen under the body
+	# Hard use: rust along the sills and on the bonnet, a door in another truck's paint.
+	c.mskin(-1.0, 0.48, 1.6, 1.0, 0.62, length - 0.6, P.RUST, P.PAINT)
+	c.mskin(-1.0, 0.62, hood_end + 0.1, -0.8, roof - 0.12, cab_end - 0.12, P.PAINT_LIGHT, P.PAINT)
+	c.mskin(-0.45, hood_top - 0.03, 0.35, -0.25, hood_top + 0.03, 0.5, P.RUST, P.PAINT)
+	c.mskin(0.3, hood_top - 0.03, 1.1, 0.42, hood_top + 0.03, 1.2, P.RUST, P.PAINT)
 	return bed
 
 
@@ -1425,15 +1468,22 @@ static func _technical(weapon: String) -> Canvas:
 			c.mbox(-0.025, bed + 0.98, mid - 1.0, 0.025, bed + 1.03, mid + 0.2, P.GUN)  # spotting rifle
 			c.mbox(0.12, bed + 0.85, mid - 0.1, 0.2, bed + 1.0, mid + 0.1, P.BLACK)  # sight
 		"rockets":
-			c.mbox(-0.4, bed, mid - 0.2, 0.4, bed + 0.45, mid + 0.4, P.PAINT_DARK)  # mount
-			# Twelve 107 mm tubes in three rows, tilted up 12 degrees.
+			# Pedestal raised so the launcher clears the cab, twelve 107 mm tubes in three rows of
+			# four tilted up 12 degrees, inside a frame with a hand-crank for elevation.
+			c.mbox(-0.4, bed, mid - 0.2, 0.4, bed + 0.15, mid + 0.4, P.PAINT_DARK)
+			c.mbar(Vector3(0, bed + 0.15, mid + 0.1), Vector3(0, bed + 0.85, mid + 0.1), 0.14, P.METAL)
 			var tilt := tan(deg_to_rad(12.0))
+			var base_y := bed + 0.95
+			c.mbox(-0.4, base_y - 0.1, mid - 0.3, 0.4, base_y - 0.04, mid + 0.5, P.METAL)
 			for row in 3:
 				for col in 4:
 					var x := -0.27 + col * 0.18
-					var y0 := bed + 0.55 + row * 0.15
-					c.mbar(Vector3(x, y0 + 0.5 * tilt, mid - 0.6), Vector3(x, y0 - 0.5 * tilt, mid + 0.45), 0.13, P.PAINT_DARK)
+					var y0 := base_y + row * 0.15
+					c.mbar(Vector3(x, y0 + 0.5 * tilt, mid - 0.6), Vector3(x, y0 - 0.5 * tilt, mid + 0.45), 0.13, P.GUN)
 					c.mbox(x - 0.04, y0 + 0.5 * tilt - 0.04, mid - 0.62, x + 0.04, y0 + 0.5 * tilt + 0.04, mid - 0.58, P.BLACK)
+			for fx: float in [-0.4, 0.38]:
+				c.mbox(fx, base_y - 0.08, mid - 0.4, fx + 0.03, base_y + 0.45, mid + 0.4, P.METAL)
+			c.mwheel(0.41, 0.45, base_y + 0.1, mid + 0.25, 0.1, P.METAL, P.GUN)
 		"zpu":
 			c.mbox(-0.6, bed, mid - 0.5, 0.6, bed + 0.35, mid + 0.6, P.PAINT_DARK)
 			c.mbox(-0.3, bed + 0.35, mid - 0.25, 0.3, bed + 0.7, mid + 0.35, P.GUN)
