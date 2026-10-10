@@ -23,7 +23,7 @@ func _ready() -> void:
 	env.background_color = Color("c9cdd1")
 	env.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
 	env.ambient_light_color = Color("aab0b8")
-	env.ambient_light_energy = 0.7
+	env.ambient_light_energy = 0.45
 	env.tonemap_mode = Environment.TONE_MAPPER_FILMIC
 	var world_env := WorldEnvironment.new()
 	world_env.environment = env
@@ -31,10 +31,11 @@ func _ready() -> void:
 	var sun := DirectionalLight3D.new()
 	sun.rotation_degrees = Vector3(-55, -35, 0)
 	sun.shadow_enabled = true
+	sun.light_energy = 0.75
 	add_child(sun)
 	var fill := DirectionalLight3D.new()
 	fill.rotation_degrees = Vector3(-20, 150, 0)
-	fill.light_energy = 0.35
+	fill.light_energy = 0.25
 	add_child(fill)
 	var ground := MeshInstance3D.new()
 	var plane := PlaneMesh.new()
