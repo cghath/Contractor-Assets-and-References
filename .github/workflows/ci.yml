@@ -1,0 +1,85 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  data:
+    name: Faction pack data
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate factions, vehicles and worldspaces
+        run: python3 tools/validate_pack.py
+
+  godot:
+    name: Godot import, parse check and uh60 render
+    runs-on: ubuntu-latest
+    env:
+      # Voxel Tools build of Godot 4.7.2 (stock Godot lacks the voxel classes).
+      GODOT_URL: https://github.com/Zylann/godot_voxel/releases/download/v1.7/godot.linuxbsd.editor.x86_64.zip
+      GODOT: ${{ github.workspace }}/../godot/godot.linuxbsd.editor.x86_64
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install xvfb and Mesa (opengl3 without a GPU)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends xvfb libgl1-mesa-dri libglx-mesa0 libxcursor1 libxinerama1 libxrandr2 libxi6
+
+      - name: Cache the Voxel Tools editor
+        uses: actions/cache@v4
+        with:
+          path: ${{ github.workspace }}/../godot
+          key: voxel-tools-godot-4.7.2-v1.7
+
+      - name: Download the Voxel Tools editor
+        run: |
+          mkdir -p "$(dirname "$GODOT")"
+          if [ ! -x "$GODOT" ]; then
+            cd "$(dirname "$GODOT")"
+            curl -sSLf -o godot.zip "$GODOT_URL"
+            unzip -o godot.zip
+            chmod +x godot.linuxbsd.editor.x86_64
+          fi
+          "$GODOT" --version
+
+      - name: Import the project
+        run: timeout 300 "$GODOT" --headless --path . --import 2>&1 | tee import.log
+
+      - name: Parse-check GDScript
+        run: |
+          fail=0
+          for f in $(git ls-files '*.gd'); do
+            out=$(timeout 120 "$GODOT" --headless --path . --check-only --script "res://$f" 2>&1) || { echo "$out"; echo "FAILED: $f"; fail=1; continue; }
+            if echo "$out" | grep -qE "SCRIPT ERROR|Parse Error"; then
+              echo "$out"; echo "FAILED: $f"; fail=1
+            else
+              echo "ok: $f"
+            fi
+          done
+          exit $fail
+
+      - name: Render uh60 (xvfb + opengl3)
+        run: |
+          mkdir -p renders
+          timeout 300 xvfb-run -a -s "-screen 0 1600x900x24" "$GODOT" --rendering-driver opengl3 --path . \
+            res://showcase/model_views.tscn -- "$PWD/renders" uh60 2>&1 | tee render.log
+          grep -q "saved" render.log
+          test -f renders/uh60_views.png
+
+      - name: Upload the render
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: uh60-render
+          path: |
+            renders/
+            render.log
+            import.log
+          if-no-files-found: warn
