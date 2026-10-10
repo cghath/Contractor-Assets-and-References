@@ -1,0 +1,60 @@
+{
+  "id": "namer",
+  "name": "Namer heavy APC / IFV",
+  "aliases": [
+    "Namer",
+    "Nemmera"
+  ],
+  "origin": "Israel",
+  "type": "apc",
+  "operators": [
+    "isr"
+  ],
+  "crew": 3,
+  "passengers": 9,
+  "dimensions_m": {
+    "length": 7.6,
+    "width": 3.75,
+    "height": 2.7
+  },
+  "weight_t": 60,
+  "armament": [
+    "Samson RCWS with 12.7 mm M2 or 40 mm Mk 19",
+    "7.62 mm FN MAG",
+    "60 mm mortar",
+    "IFV: unmanned 30 mm turret with Spike-MR pod"
+  ],
+  "protection": "Merkava Mk 4 chassis with heavy modular composite armour, V belly pack, Trophy APS. Game rule: immune to small-calibre; 7.62x54R and 12.7/14.5 mm only damage optics, tracks and exposed crew; penetration needs launchers (RPG-7 PG-7V, AT4, MAAWS, SMAW, NLAW, Javelin) or cannon, best against side, rear and engine deck.",
+  "visual_notes": [
+    "Merkava Mk 4 hull and running gear (6 road wheels, side skirts) with no turret",
+    "Raised flat-roof troop compartment, two roof hatches, Samson RCWS on the left",
+    "Wide rear ramp door with sniper port",
+    "Trophy radar panels on the hull sides; anti-drone mesh common"
+  ],
+  "colour_schemes": [
+    {
+      "name": "IDF Sinai grey",
+      "palette": [
+        "#8E8B7A",
+        "#6E6B5C",
+        "#3E3C34"
+      ]
+    }
+  ],
+  "variants": [
+    "Namer APC",
+    "Namer IFV (30 mm, Spike-MR)",
+    "Namer CEV (engineering)",
+    "Namerbulance (medevac)"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Namer",
+    "https://commons.wikimedia.org/wiki/Category:Namer"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Namer",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Israel_Defense_Forces"
+  ]
+}

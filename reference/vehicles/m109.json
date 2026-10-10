@@ -11,7 +11,10 @@
     "grc",
     "lva",
     "pak",
-    "twn"
+    "twn",
+    "isr",
+    "egy",
+    "jor"
   ],
   "crew": 6,
   "passengers": 0,
@@ -44,7 +47,8 @@
   "variants": [
     "M109A5E (ESP)",
     "M109A5O (LVA, ex-AUT)",
-    "M109A2/A5 (PAK, TWN)"
+    "M109A2/A5 (PAK, TWN)",
+    "M109 Doher (ISR)"
   ],
   "existing_model": null,
   "model_priority": "low",

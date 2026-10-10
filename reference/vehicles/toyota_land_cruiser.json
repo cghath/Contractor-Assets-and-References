@@ -1,0 +1,76 @@
+{
+  "id": "toyota_land_cruiser",
+  "name": "Toyota Land Cruiser (70/200/300 series, unarmed or armoured SUV)",
+  "aliases": [
+    "Land Cruiser",
+    "LC79",
+    "LC200",
+    "armoured SUV"
+  ],
+  "origin": "Japan",
+  "type": "light",
+  "operators": [
+    "pse_pa",
+    "syr",
+    "irn",
+    "jor"
+  ],
+  "crew": 2,
+  "passengers": 5,
+  "dimensions_m": {
+    "length": 4.95,
+    "width": 1.98,
+    "height": 1.95
+  },
+  "weight_t": 2.7,
+  "armament": [
+    "None fitted (armed pickups are the technical_* entries)"
+  ],
+  "protection": "Unarmoured. Game rule still treats the vehicle body as immune to small-calibre, but 7.62x54R and up penetrate; occupants, glass and tyres are exposed to all fire. Armoured SUV variants (VIP, convoy) count as light armour: immune to small-calibre, 7.62x54R and up penetrate.",
+  "visual_notes": [
+    "70-series: boxy hardtop/troop carrier with flat panels, round headlights, external spare wheel",
+    "200/300-series: large modern SUV, used for VIP and convoy work, often armoured (thicker glass, heavier stance)",
+    "Very common with security forces, the UN, NGOs and civilians"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Civilian white",
+      "palette": [
+        "#EDEDEA",
+        "#BFC2C4",
+        "#2A2A2A"
+      ]
+    },
+    {
+      "name": "Security black",
+      "palette": [
+        "#1B1C1E",
+        "#3A3C40"
+      ]
+    },
+    {
+      "name": "Security olive",
+      "palette": [
+        "#5A5E3C",
+        "#44482E",
+        "#1F1F1A"
+      ]
+    }
+  ],
+  "variants": [
+    "LC76/78 hardtop and troop carrier",
+    "LC200/300 SUV",
+    "B6 armoured SUV (VIP)"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Toyota_Land_Cruiser",
+    "https://commons.wikimedia.org/wiki/Category:Toyota_Land_Cruiser_70"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Toyota_Land_Cruiser",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Syrian_Armed_Forces",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Royal_Jordanian_Army"
+  ]
+}

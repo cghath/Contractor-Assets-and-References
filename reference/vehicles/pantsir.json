@@ -1,0 +1,67 @@
+{
+  "id": "pantsir",
+  "name": "Pantsir-S1",
+  "aliases": [
+    "SA-22 Greyhound",
+    "96K6"
+  ],
+  "origin": "Russia",
+  "type": "air_defense",
+  "operators": [
+    "rus",
+    "are",
+    "irq",
+    "srb"
+  ],
+  "crew": 3,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 10.0,
+    "width": 3.2,
+    "height": 3.6
+  },
+  "weight_t": 30,
+  "armament": [
+    "2 x 30 mm 2A38M autocannons",
+    "12 x 57E6 surface-to-air missiles"
+  ],
+  "protection": "Lightly armoured cab on some versions. Unarmoured. Game rule still treats the vehicle body as immune to small-calibre, but 7.62x54R and up penetrate; occupants, glass and tyres are exposed to all fire. Its 30 mm guns can engage ground targets (game proposal).",
+  "visual_notes": [
+    "Truck-mounted (UAE: MAN SX 8x8; Russia: KamAZ 8x8) combat module at the rear",
+    "Turret with two missile banks of six tubes either side and twin 30 mm guns",
+    "Rotating search radar on top and tracking radar dish on the front"
+  ],
+  "colour_schemes": [
+    {
+      "name": "UAE sand",
+      "palette": [
+        "#D2BE96",
+        "#A88F68",
+        "#6E5D45"
+      ]
+    },
+    {
+      "name": "Russian green",
+      "palette": [
+        "#4A5530",
+        "#3B4428",
+        "#2A2E22"
+      ]
+    }
+  ],
+  "variants": [
+    "Pantsir-S1 (UAE, MAN chassis)",
+    "Pantsir-S1 (KamAZ)",
+    "Pantsir-SM"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Pantsir_missile_system",
+    "https://commons.wikimedia.org/wiki/Category:Pantsir-S1"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Pantsir_missile_system",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_United_Arab_Emirates_Army"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "g6",
+  "name": "Denel G6 Rhino",
+  "aliases": [
+    "G6",
+    "G6 Rhino"
+  ],
+  "origin": "South Africa",
+  "type": "artillery",
+  "operators": [
+    "are"
+  ],
+  "crew": 6,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 10.2,
+    "width": 3.4,
+    "height": 3.3
+  },
+  "weight_t": 47,
+  "armament": [
+    "155 mm L45 howitzer",
+    "12.7 mm AA MG"
+  ],
+  "protection": "Welded steel, protects against small arms and shell fragments, mine-resistant hull. Game rule: immune to small-calibre (5.56/5.45/7.62x39/7.62x51); 7.62x54R AP and 12.7/14.5 mm can penetrate side/rear and disable tyres, engine and optics; every launcher in the game list penetrates.",
+  "visual_notes": [
+    "Large 6x6 wheeled hull with 3 evenly spaced axles",
+    "Sharply wedged front with driver centred, engine behind",
+    "Big boxy turret at the rear with long 155 mm barrel",
+    "Stabiliser legs at the rear"
+  ],
+  "colour_schemes": [
+    {
+      "name": "UAE sand",
+      "palette": [
+        "#D2BE96",
+        "#A88F68",
+        "#6E5D45"
+      ]
+    }
+  ],
+  "variants": [
+    "G6",
+    "G6-52"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/G6_Rhino",
+    "https://commons.wikimedia.org/wiki/Category:G6_(howitzer)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/G6_Rhino",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_United_Arab_Emirates_Army"
+  ]
+}

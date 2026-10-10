@@ -1,0 +1,63 @@
+{
+  "id": "nimr",
+  "name": "NIMR Ajban / Hafeet / Jais",
+  "aliases": [
+    "Nimr",
+    "Ajban 440",
+    "Hafeet",
+    "Jais"
+  ],
+  "origin": "United Arab Emirates",
+  "type": "light",
+  "operators": [
+    "are",
+    "jor",
+    "sau",
+    "srb"
+  ],
+  "crew": 2,
+  "passengers": 6,
+  "dimensions_m": {
+    "length": 5.6,
+    "width": 2.4,
+    "height": 2.3
+  },
+  "weight_t": 10,
+  "armament": [
+    "12.7 mm M2 or 7.62 mm MG on ring mount or RWS",
+    "Ajban 440A: ATGM launcher"
+  ],
+  "protection": "STANAG 4569 Level 1 base, add-on armour to Level 3-4. Game rule: immune to small-calibre; 7.62x54R AP and 12.7/14.5 mm can disable tyres, optics and an exposed gunner; launchers penetrate.",
+  "visual_notes": [
+    "Large 4x4 with long bonnet and boxy armoured cab; independent suspension and big tyres",
+    "Tall flat windscreen, side doors with small armoured windows",
+    "Roof ring or RWS; spare wheel on the rear door",
+    "Dimensions approximate (Ajban 440)"
+  ],
+  "colour_schemes": [
+    {
+      "name": "UAE sand",
+      "palette": [
+        "#D2BE96",
+        "#A88F68",
+        "#6E5D45"
+      ]
+    }
+  ],
+  "variants": [
+    "Ajban 420/440/440A/447/450",
+    "Ajban LRSOV (special forces)",
+    "Hafeet 620/640A",
+    "Jais 4x4 and 6x6 (MRAP)"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Nimr_(armored_personnel_carrier)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Nimr_(armored_personnel_carrier)",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_United_Arab_Emirates_Army",
+    "https://webfiles.edgegroup.ae/s3fs-public/2025-02/nimr-ajban-440ae-flyer-en.pdf"
+  ]
+}

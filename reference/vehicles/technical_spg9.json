@@ -1,0 +1,52 @@
+{
+  "id": "technical_spg9",
+  "name": "Toyota technical with SPG-9",
+  "aliases": [
+    "SPG-9 technical"
+  ],
+  "origin": "Japan / Soviet Union (weapon)",
+  "type": "technical",
+  "operators": [
+    "syr"
+  ],
+  "crew": 3,
+  "passengers": 2,
+  "dimensions_m": {
+    "length": 5.3,
+    "width": 1.9,
+    "height": 2.2
+  },
+  "weight_t": 2.6,
+  "armament": [
+    "SPG-9 73 mm recoilless gun"
+  ],
+  "protection": "Unarmoured. Game rule still treats the vehicle body as immune to small-calibre, but 7.62x54R and up penetrate; occupants, glass and tyres are exposed to all fire. SPG-9 HEAT counts as a launcher hit against vehicles (game proposal).",
+  "visual_notes": [
+    "Pickup with SPG-9 tripod or pedestal mounted in the bed, barrel pointing forward over the cab",
+    "Backblast area kept clear; ammo tubes stacked in the bed"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Sand overpaint",
+      "palette": [
+        "#C8B48A",
+        "#9B8562",
+        "#5E513A"
+      ]
+    }
+  ],
+  "variants": [
+    "Hilux",
+    "Land Cruiser 79"
+  ],
+  "existing_model": "technical_spg9",
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Technical_(vehicle)",
+    "https://en.wikipedia.org/wiki/SPG-9"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Technical_(vehicle)",
+    "https://en.wikipedia.org/wiki/SPG-9"
+  ]
+}

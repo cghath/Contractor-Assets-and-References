@@ -1,0 +1,65 @@
+{
+  "id": "ejder_yalcin",
+  "name": "Nurol Ejder Yalçın 4x4",
+  "aliases": [
+    "Ejder Yalcin",
+    "Gidrán (Hungary)"
+  ],
+  "origin": "Turkey",
+  "type": "mrap",
+  "operators": [
+    "qat",
+    "tur"
+  ],
+  "crew": 2,
+  "passengers": 9,
+  "dimensions_m": {
+    "length": 5.42,
+    "width": 2.48,
+    "height": 2.3
+  },
+  "weight_t": 14,
+  "armament": [
+    "7.62 or 12.7 mm MG or 40 mm AGL in remote or manual station"
+  ],
+  "protection": "V-shaped hull with floating floor and blast seats; optional cage armour. Game rule: immune to small-calibre; 7.62x54R AP and 12.7/14.5 mm can disable tyres, optics and an exposed gunner; launchers penetrate.",
+  "visual_notes": [
+    "Compact, wedge-nosed armoured 4x4 with sharply angled sides",
+    "Large windscreen with two panes, two roof gun ports",
+    "Rear ramp/door, easy-entry crew doors",
+    "Qatari vehicles in sand with RWS"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Desert tan (QAT)",
+      "palette": [
+        "#C8B48A",
+        "#9B8562",
+        "#5E513A"
+      ]
+    },
+    {
+      "name": "Turkish three-tone",
+      "palette": [
+        "#5A6140",
+        "#7B6B4C",
+        "#2E2E28"
+      ]
+    }
+  ],
+  "variants": [
+    "Ejder Yalçın",
+    "Ejder Yalçın 2",
+    "Gidrán (Hungarian licence)"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Nurol_Ejder",
+    "https://www.army-technology.com/projects/ejder-yalcin-tactical-armoured-combat-vehicle/"
+  ],
+  "sources": [
+    "https://www.army-technology.com/projects/ejder-yalcin-tactical-armoured-combat-vehicle/",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Qatar_Armed_Forces"
+  ]
+}

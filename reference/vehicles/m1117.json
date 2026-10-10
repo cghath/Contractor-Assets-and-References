@@ -9,7 +9,8 @@
   "operators": [
     "grc",
     "usa",
-    "afg_taliban"
+    "afg_taliban",
+    "irq"
   ],
   "crew": 3,
   "passengers": 1,

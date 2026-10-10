@@ -7,7 +7,8 @@
   "origin": "Russia",
   "type": "attack_heli",
   "operators": [
-    "rus"
+    "rus",
+    "egy"
   ],
   "crew": 2,
   "passengers": 0,

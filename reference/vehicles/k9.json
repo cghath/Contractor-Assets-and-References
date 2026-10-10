@@ -15,7 +15,9 @@
     "est",
     "rou",
     "ind",
-    "vnm"
+    "vnm",
+    "egy",
+    "tur"
   ],
   "crew": 5,
   "passengers": 0,
@@ -62,7 +64,9 @@
     "K9 Tunet (ROU)",
     "K9EST Kou (EST)",
     "K9 Vajra-T (IND, L&T licence)",
-    "K9 (VNM, 20 ordered 2025)"
+    "K9 (VNM, 20 ordered 2025)",
+    "T-155 Fırtına / Fırtına II (TUR, K9-derived)",
+    "K9A1EGY (EGY)"
   ],
   "existing_model": null,
   "model_priority": "low",

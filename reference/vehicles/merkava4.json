@@ -1,0 +1,63 @@
+{
+  "id": "merkava4",
+  "name": "Merkava Mk 4 / 4M / Barak",
+  "aliases": [
+    "Merkava IV",
+    "Merkava 4M Windbreaker",
+    "Merkava Barak"
+  ],
+  "origin": "Israel",
+  "type": "mbt",
+  "operators": [
+    "isr"
+  ],
+  "crew": 4,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 9.04,
+    "width": 3.72,
+    "height": 2.66
+  },
+  "weight_t": 65,
+  "armament": [
+    "120 mm MG253 smoothbore (APAM, LAHAT ATGM)",
+    "7.62 mm coaxial MG",
+    "12.7 mm MG / remote weapon station",
+    "60 mm internal mortar"
+  ],
+  "protection": "Modular composite armour, front-mounted engine adds protection; Trophy active protection on Mk 4M and Barak. Game rule: immune to small-calibre; 7.62x54R and 12.7/14.5 mm only damage optics, tracks and exposed crew; penetration needs launchers (RPG-7 PG-7V, AT4, MAAWS, SMAW, NLAW, Javelin) or cannon, best against side, rear and engine deck. Trophy (proposal): defeats the first RPG/AT4/NLAW per facing, not top-attack Javelin.",
+  "visual_notes": [
+    "Front-engine hull with a rear clamshell door into a small crew/stretcher bay",
+    "Very long, low wedge turret with a sharply pointed nose and large rear bustle",
+    "Chain-and-ball curtain hanging under the turret rear",
+    "6 road wheels per side behind heavy side skirts",
+    "Trophy radar panels and launchers on turret sides (4M/Barak)",
+    "Often with roof cope cage / anti-drone screens in 2024-2026"
+  ],
+  "colour_schemes": [
+    {
+      "name": "IDF Sinai grey",
+      "palette": [
+        "#8E8B7A",
+        "#6E6B5C",
+        "#3E3C34"
+      ]
+    }
+  ],
+  "variants": [
+    "Merkava Mk 3 (storage/reserve)",
+    "Merkava Mk 4",
+    "Merkava Mk 4M Windbreaker (Trophy)",
+    "Merkava Mk 4 Barak (2023+)"
+  ],
+  "existing_model": null,
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Merkava",
+    "https://commons.wikimedia.org/wiki/Category:Merkava_Mark_IV"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Merkava",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Israel_Defense_Forces"
+  ]
+}

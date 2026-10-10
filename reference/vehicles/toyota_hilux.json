@@ -1,0 +1,77 @@
+{
+  "id": "toyota_hilux",
+  "name": "Toyota Hilux pickup (unarmed)",
+  "aliases": [
+    "Hilux",
+    "patrol pickup"
+  ],
+  "origin": "Japan",
+  "type": "light",
+  "operators": [
+    "pse_pa",
+    "syr",
+    "irq",
+    "egy"
+  ],
+  "crew": 2,
+  "passengers": 3,
+  "dimensions_m": {
+    "length": 5.3,
+    "width": 1.85,
+    "height": 1.8
+  },
+  "weight_t": 2.1,
+  "armament": [
+    "None fitted; crews fire from the cab and bed (armed versions are the technical_* entries)"
+  ],
+  "protection": "Unarmoured. Game rule still treats the vehicle body as immune to small-calibre, but 7.62x54R and up penetrate; occupants, glass and tyres are exposed to all fire.",
+  "visual_notes": [
+    "Double-cab 4x4 pickup (7th/8th generation styling) with open bed",
+    "Security versions: roll bar, roof light bar, sirens, unit markings and bench seats in the bed",
+    "Also the most common civilian vehicle on Middle East maps (white, silver, red)",
+    "Shares the chassis of the technical_* voxel models: model as an unarmed variant"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Civilian white",
+      "palette": [
+        "#EDEDEA",
+        "#BFC2C4",
+        "#2A2A2A"
+      ]
+    },
+    {
+      "name": "Security olive",
+      "palette": [
+        "#5A5E3C",
+        "#44482E",
+        "#1F1F1A"
+      ]
+    },
+    {
+      "name": "Police blue/white",
+      "palette": [
+        "#1F2A44",
+        "#EDEDEA",
+        "#2F6FB5"
+      ]
+    }
+  ],
+  "variants": [
+    "single cab",
+    "double cab",
+    "police / security patrol",
+    "civilian"
+  ],
+  "existing_model": null,
+  "model_priority": "high",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Toyota_Hilux",
+    "https://commons.wikimedia.org/wiki/Category:Toyota_Hilux"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Toyota_Hilux",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Syrian_Armed_Forces",
+    "https://en.wikipedia.org/wiki/2024%E2%80%932025_Palestinian_Authority_operation_in_Jenin"
+  ]
+}

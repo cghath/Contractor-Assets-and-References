@@ -12,7 +12,8 @@
     "nld",
     "gbr",
     "aus",
-    "ltu"
+    "ltu",
+    "qat"
   ],
   "crew": 3,
   "passengers": 8,
@@ -65,7 +66,8 @@
     "RCH 155",
     "Skyranger 30",
     "Boxer RCT30 (NLD)",
-    "Vilkas (LTU)"
+    "Vilkas (LTU)",
+    "Boxer RCT30 (QAT)"
   ],
   "existing_model": null,
   "model_priority": "high",

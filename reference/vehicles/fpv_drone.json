@@ -10,7 +10,8 @@
   "type": "uav",
   "operators": [
     "ukr",
-    "rus"
+    "rus",
+    "syr"
   ],
   "crew": 0,
   "passengers": 0,

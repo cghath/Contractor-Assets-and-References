@@ -18,7 +18,12 @@
     "jpn",
     "kor",
     "twn",
-    "phl"
+    "phl",
+    "isr",
+    "tur",
+    "sau",
+    "are",
+    "jor"
   ],
   "crew": 4,
   "passengers": 11,
@@ -61,7 +66,9 @@
     "UH-60JA (JPN)",
     "UH-60P (KOR, licence-built)",
     "UH-60M (TWN)",
-    "S-70i (PHL Air Force)"
+    "S-70i (PHL Air Force)",
+    "S-70A Yanshuf (ISR)",
+    "S-70A-28 / T-70 (TUR)"
   ],
   "existing_model": "uh60",
   "model_priority": "high",

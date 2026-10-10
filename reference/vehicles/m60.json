@@ -8,7 +8,12 @@
   "origin": "United States",
   "type": "mbt",
   "operators": [
-    "twn"
+    "twn",
+    "irn",
+    "tur",
+    "sau",
+    "egy",
+    "jor"
   ],
   "crew": 4,
   "passengers": 0,
@@ -41,7 +46,10 @@
     }
   ],
   "variants": [
-    "M60A3 TTS (ROC)"
+    "M60A3 TTS (ROC)",
+    "M60A1 Samsam (IRN)",
+    "M60T Sabra / M60TM (TUR, IAI upgrade)",
+    "M60A3 (EGY, SAU, JOR, TUR)"
   ],
   "existing_model": null,
   "model_priority": "low",

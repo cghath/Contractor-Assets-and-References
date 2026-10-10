@@ -19,7 +19,8 @@
     "aze",
     "ukr",
     "pol",
-    "geo"
+    "geo",
+    "irq"
   ],
   "crew": 2,
   "passengers": 8,
@@ -65,7 +66,8 @@
     "Mi-24P",
     "Mi-35M",
     "Mi-24PU1 (UKR)",
-    "Mi-24W (POL)"
+    "Mi-24W (POL)",
+    "Mi-35M (IRQ)"
   ],
   "existing_model": null,
   "model_priority": "medium",

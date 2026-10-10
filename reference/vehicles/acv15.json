@@ -1,0 +1,72 @@
+{
+  "id": "acv15",
+  "name": "FNSS ACV-15 (AIFV/AAPC)",
+  "aliases": [
+    "ACV-15",
+    "ACV-300 (UAE)"
+  ],
+  "origin": "Turkey (from US AIFV)",
+  "type": "ifv",
+  "operators": [
+    "tur",
+    "jor",
+    "are"
+  ],
+  "crew": 3,
+  "passengers": 7,
+  "dimensions_m": {
+    "length": 5.26,
+    "width": 2.82,
+    "height": 2.62
+  },
+  "weight_t": 13.3,
+  "armament": [
+    "25 mm Oerlikon cannon in one-man turret (AIFV)",
+    "12.7 mm M2 (AAPC)",
+    "7.62 mm MG",
+    "TOW ATGM variant"
+  ],
+  "protection": "Aluminium hull with spaced laminate steel appliqué. Game rule: immune to small-calibre (5.56/5.45/7.62x39/7.62x51); 7.62x54R AP and 12.7/14.5 mm can penetrate side/rear and disable tyres, engine and optics; every launcher in the game list penetrates.",
+  "visual_notes": [
+    "M113-like box hull with sloped upper sides and bolted spaced armour panels",
+    "5 road wheels per side, front drive sprocket",
+    "Small turret offset to the right; rear power ramp with door",
+    "Firing ports with vision blocks along the sides"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Turkish three-tone",
+      "palette": [
+        "#5A6140",
+        "#7B6B4C",
+        "#2E2E28"
+      ]
+    },
+    {
+      "name": "Desert sand (JOR, UAE)",
+      "palette": [
+        "#C2A878",
+        "#A68D60",
+        "#5E513A"
+      ]
+    }
+  ],
+  "variants": [
+    "ACV-15 AIFV (25 mm)",
+    "ACV-15 AAPC (12.7 mm)",
+    "ACV-15 T1 upgrade",
+    "ACV-15 TOW",
+    "ACV-300 (UAE)"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/FNSS_ACV-15"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/FNSS_ACV-15",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Turkish_Land_Forces",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Royal_Jordanian_Army",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_United_Arab_Emirates_Army"
+  ]
+}

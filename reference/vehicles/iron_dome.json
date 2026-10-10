@@ -1,0 +1,56 @@
+{
+  "id": "iron_dome",
+  "name": "Iron Dome battery",
+  "aliases": [
+    "Kipat Barzel",
+    "Tamir interceptor"
+  ],
+  "origin": "Israel",
+  "type": "air_defense",
+  "operators": [
+    "isr",
+    "usa"
+  ],
+  "crew": 3,
+  "passengers": 0,
+  "dimensions_m": {
+    "length": 9.0,
+    "width": 2.5,
+    "height": 3.3
+  },
+  "weight_t": 20,
+  "armament": [
+    "20 Tamir interceptors per launcher"
+  ],
+  "protection": "Unarmoured launcher trailer and radar. Unarmoured. Game rule still treats the vehicle body as immune to small-calibre, but 7.62x54R and up penetrate; occupants, glass and tyres are exposed to all fire. Game: background map set piece and sky effects (interceptions), not a combat vehicle.",
+  "visual_notes": [
+    "Box launcher holding 20 vertical-angled tubes on a tracked trailer or truck",
+    "Separate EL/M-2084 flat-panel radar on a trailer",
+    "Dirt revetments and camouflage nets around sites"
+  ],
+  "colour_schemes": [
+    {
+      "name": "IDF Sinai grey",
+      "palette": [
+        "#8E8B7A",
+        "#6E6B5C",
+        "#3E3C34"
+      ]
+    }
+  ],
+  "variants": [
+    "Iron Dome launcher",
+    "C-Dome (naval)",
+    "Iron Beam (laser, 2025+)"
+  ],
+  "existing_model": null,
+  "model_priority": "low",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Iron_Dome",
+    "https://commons.wikimedia.org/wiki/Category:Iron_Dome"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Iron_Dome",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Israel_Defense_Forces"
+  ]
+}

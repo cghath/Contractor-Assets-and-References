@@ -11,7 +11,8 @@
   "origin": "Soviet Union",
   "type": "mbt",
   "operators": [
-    "vnm"
+    "vnm",
+    "syr"
   ],
   "crew": 4,
   "passengers": 0,
@@ -46,7 +47,8 @@
     "T-54",
     "T-54B",
     "T-55",
-    "T-54M3 (VNM upgrade)"
+    "T-54M3 (VNM upgrade)",
+    "T-55 / T-55A (SYR, ex-Assad stock)"
   ],
   "existing_model": null,
   "model_priority": "medium",

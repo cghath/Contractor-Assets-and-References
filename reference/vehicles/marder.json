@@ -11,7 +11,8 @@
   "operators": [
     "deu",
     "grc",
-    "ukr"
+    "ukr",
+    "jor"
   ],
   "crew": 3,
   "passengers": 6,
@@ -53,7 +54,8 @@
   ],
   "variants": [
     "Marder 1A3",
-    "Marder 1A5"
+    "Marder 1A5",
+    "Marder 1A3 (JOR)"
   ],
   "existing_model": null,
   "model_priority": "low",

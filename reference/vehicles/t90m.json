@@ -13,7 +13,8 @@
     "rus",
     "aze",
     "ind",
-    "vnm"
+    "vnm",
+    "irq"
   ],
   "crew": 3,
   "passengers": 0,
@@ -70,7 +71,8 @@
     "T-90S export (AZE, IND, ALG)",
     "T-90M Proryv-3 (RUS signature)",
     "T-90S/SK Bhishma (IND)",
-    "T-90S/SK (VNM)"
+    "T-90S/SK (VNM)",
+    "T-90S (IRQ, 2018)"
   ],
   "existing_model": null,
   "model_priority": "high",

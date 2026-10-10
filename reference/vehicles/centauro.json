@@ -9,7 +9,8 @@
   "type": "light",
   "operators": [
     "ita",
-    "esp"
+    "esp",
+    "jor"
   ],
   "crew": 4,
   "passengers": 0,
@@ -49,7 +50,8 @@
   "variants": [
     "B1 Centauro (105 mm)",
     "Centauro II (120 mm)",
-    "VRCC-105 (Spain)"
+    "VRCC-105 (Spain)",
+    "B1 Centauro (JOR, ex-Italian)"
   ],
   "existing_model": null,
   "model_priority": "medium",

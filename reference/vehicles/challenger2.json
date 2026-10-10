@@ -11,7 +11,8 @@
   "type": "mbt",
   "operators": [
     "gbr",
-    "ukr"
+    "ukr",
+    "jor"
   ],
   "crew": 4,
   "passengers": 0,
@@ -53,7 +54,8 @@
   "variants": [
     "Challenger 2",
     "Challenger 2 TES ('Megatron')",
-    "Challenger 3 (IOC ~2027)"
+    "Challenger 3 (IOC ~2027)",
+    "Challenger 1 / Al-Hussein (JOR, legacy, being replaced)"
   ],
   "existing_model": null,
   "model_priority": "medium",

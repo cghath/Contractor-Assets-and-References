@@ -60,7 +60,8 @@
     "M2A4",
     "M3A3 CFV",
     "M7 BFIST",
-    "M2A2 ODS-SA (Ukraine)"
+    "M2A2 ODS-SA (Ukraine)",
+    "M2A2 ODS (SAU)"
   ],
   "existing_model": "bradley",
   "model_priority": "high",

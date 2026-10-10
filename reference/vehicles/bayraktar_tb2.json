@@ -7,7 +7,8 @@
   "origin": "Turkey",
   "type": "uav",
   "operators": [
-    "aze"
+    "aze",
+    "tur"
   ],
   "crew": 0,
   "passengers": 0,

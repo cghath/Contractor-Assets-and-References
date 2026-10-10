@@ -23,7 +23,10 @@
     "aze",
     "ukr",
     "geo",
-    "ind"
+    "ind",
+    "irn",
+    "syr",
+    "irq"
   ],
   "crew": 3,
   "passengers": 0,
@@ -102,7 +105,10 @@
     "T-72M1 / T-72 Aslan (AZE)",
     "T-72AMT / T-72AV / T-72EA (UKR)",
     "T-72SIM-1 (GEO)",
-    "T-72M1 Ajeya (IND)"
+    "T-72M1 Ajeya (IND)",
+    "T-72S / T-72Z Safir-74 (IRN)",
+    "T-72AV / T-72 Adra (SYR, ex-Assad stock)",
+    "T-72M1 (IRQ)"
   ],
   "existing_model": null,
   "model_priority": "high",

@@ -1,0 +1,73 @@
+{
+  "id": "safir_jeep",
+  "name": "Safir light jeep",
+  "aliases": [
+    "Safir",
+    "Safir 4x4",
+    "Karaba VTG01 (Sudan licence)"
+  ],
+  "origin": "Iran",
+  "type": "light",
+  "operators": [
+    "irn",
+    "iraqi_militias",
+    "krg_peshmerga"
+  ],
+  "crew": 2,
+  "passengers": 2,
+  "dimensions_m": {
+    "length": 3.6,
+    "width": 1.6,
+    "height": 1.8
+  },
+  "weight_t": 1.5,
+  "armament": [
+    "M40-type 106 mm recoilless rifle",
+    "Toophan or Ra'ad ATGM launcher",
+    "12-tube Fajr-1 107 mm rocket pack",
+    "PKM or DShK machine gun",
+    "automatic grenade launcher"
+  ],
+  "protection": "Unarmoured. Game rule still treats the vehicle body as immune to small-calibre, but 7.62x54R and up penetrate; occupants, glass and tyres are exposed to all fire.",
+  "visual_notes": [
+    "Small open-top jeep derived from the M38 jeep but with flat, sharply angled body panels",
+    "Squared bonnet with flat slatted grille, folding windscreen, no doors",
+    "Weapon post in the rear bed (106 mm RR barrel over the windscreen, or ATGM rail, or rocket box)",
+    "Spare wheel on the rear; dimensions here are approximate (source gives only weight)"
+  ],
+  "colour_schemes": [
+    {
+      "name": "Iranian sand",
+      "palette": [
+        "#C2A878",
+        "#A68D60",
+        "#5E513A"
+      ]
+    },
+    {
+      "name": "IRGC olive",
+      "palette": [
+        "#5B5E3D",
+        "#44482E",
+        "#2E2F22"
+      ]
+    }
+  ],
+  "variants": [
+    "Safir 106 mm recoilless rifle",
+    "Safir Toophan ATGM",
+    "Safir Fajr-1 107 mm rocket launcher",
+    "Safir command",
+    "Safir ambulance",
+    "Safir-4 (long chassis)"
+  ],
+  "existing_model": null,
+  "model_priority": "medium",
+  "reference_pages": [
+    "https://en.wikipedia.org/wiki/Safir_(vehicle)"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Safir_(vehicle)",
+    "https://en.wikipedia.org/wiki/List_of_equipment_of_the_Iranian_Army"
+  ]
+}

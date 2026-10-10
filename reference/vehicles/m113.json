@@ -17,7 +17,13 @@
     "ltu",
     "ukr",
     "pak",
-    "phl"
+    "phl",
+    "isr",
+    "sau",
+    "egy",
+    "jor",
+    "syr",
+    "irq"
   ],
   "crew": 2,
   "passengers": 11,
@@ -66,7 +72,10 @@
     "M577 (command)",
     "M113 FSV (PHL, 76 mm Scorpion turret)",
     "M113A2+ with Elbit ORCWS (PHL)",
-    "Talha / Saad (PAK, HIT)"
+    "Talha / Saad (PAK, HIT)",
+    "YPR-765 AIFV/APC (EGY, JOR)",
+    "M113 Zelda / Nagmash (ISR, being phased out)",
+    "M113 (Turkish-donated, SYR 2025)"
   ],
   "existing_model": null,
   "model_priority": "high",

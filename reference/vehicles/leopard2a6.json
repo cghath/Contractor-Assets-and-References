@@ -22,7 +22,9 @@
     "can",
     "pol",
     "ukr",
-    "ltu"
+    "ltu",
+    "tur",
+    "qat"
   ],
   "crew": 4,
   "passengers": 0,
@@ -97,7 +99,9 @@
     "2A6HEL (GRC)",
     "2A7 / 2A7V / 2A7DK (DEU, DNK)",
     "2A8 / 2A8NOR / Strv 123 (DEU, NOR, SWE, NLD on order)",
-    "2PL (POL)"
+    "2PL (POL)",
+    "Leopard 2A4 / 2A4T1 (TUR)",
+    "Leopard 2A7+ (QAT)"
   ],
   "existing_model": null,
   "model_priority": "high",

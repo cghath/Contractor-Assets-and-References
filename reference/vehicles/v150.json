@@ -11,7 +11,8 @@
   "operators": [
     "phl",
     "vnm",
-    "twn"
+    "twn",
+    "syr"
   ],
   "crew": 3,
   "passengers": 9,
@@ -52,7 +53,8 @@
   "variants": [
     "V-150",
     "V-150S",
-    "LAV-150"
+    "LAV-150",
+    "V-150 Commando (Turkish-donated, SYR 2025)"
   ],
   "existing_model": null,
   "model_priority": "low",

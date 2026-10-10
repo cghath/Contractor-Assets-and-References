@@ -12,7 +12,9 @@
     "aze",
     "rou",
     "ukr",
-    "geo"
+    "geo",
+    "tur",
+    "syr"
   ],
   "crew": 1,
   "passengers": 8,
@@ -56,7 +58,8 @@
     "Cobra II",
     "Cobra II ATGM (AZE, Skif)",
     "Cobra II ambulance",
-    "Cobra II pickup / Spike ATGM / mortar (ROU, licence-built at Medias)"
+    "Cobra II pickup / Spike ATGM / mortar (ROU, licence-built at Medias)",
+    "Cobra I/II (Turkish-donated, SYR 2025)"
   ],
   "existing_model": null,
   "model_priority": "medium",

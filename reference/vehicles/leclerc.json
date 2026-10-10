@@ -9,7 +9,8 @@
   "type": "mbt",
   "operators": [
     "fra",
-    "are"
+    "are",
+    "jor"
   ],
   "crew": 3,
   "passengers": 0,
@@ -60,7 +61,8 @@
     "Leclerc Serie 2",
     "Leclerc XLR (upgrade in progress)",
     "Leclerc DCL (recovery)",
-    "Leclerc EAU (UAE)"
+    "Leclerc EAU (UAE)",
+    "Leclerc (ex-UAE, JOR)"
   ],
   "existing_model": null,
   "model_priority": "high",
